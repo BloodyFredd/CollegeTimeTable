@@ -15,22 +15,28 @@ namespace PRPJECT4NEW
         public Form1()
         {
             InitializeComponent();
+            Buttons_view.Visible = false;
+        
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Celender_Click(object sender, EventArgs e)
         {
+            Buttons_view.Visible = true;
+            Calendar frm = new Calendar();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            frm.Show();
 
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
 
         }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -47,5 +53,20 @@ namespace PRPJECT4NEW
             this.WindowState = FormWindowState.Minimized;
 
         }
+
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+            Calendar frm = new Calendar();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            frm.Show();
+
+        }
+
+
     }
 }

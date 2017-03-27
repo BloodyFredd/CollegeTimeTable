@@ -50,6 +50,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Celender_button = new System.Windows.Forms.Button();
+            this.Buttons_view = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -379,6 +380,7 @@
             // 
             // Celender_button
             // 
+            this.Celender_button.AccessibleName = "Celender_button";
             this.Celender_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.Celender_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Celender_button.Dock = System.Windows.Forms.DockStyle.Top;
@@ -399,7 +401,18 @@
             this.Celender_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Celender_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Celender_button.UseVisualStyleBackColor = false;
-            this.Celender_button.Click += new System.EventHandler(this.button1_Click_1);
+            this.Celender_button.Click += new System.EventHandler(this.Celender_Click);
+            // 
+            // Buttons_view
+            // 
+            this.Buttons_view.AccessibleName = "Buttons_view";
+            this.Buttons_view.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.Buttons_view.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Buttons_view.Location = new System.Drawing.Point(418, 103);
+            this.Buttons_view.Name = "Buttons_view";
+            this.Buttons_view.Size = new System.Drawing.Size(1874, 944);
+            this.Buttons_view.TabIndex = 2;
+            this.Buttons_view.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // Form1
             // 
@@ -407,6 +420,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(2292, 1047);
+            this.Controls.Add(this.Buttons_view);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -449,6 +463,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel Buttons_view;
     }
 }
 
