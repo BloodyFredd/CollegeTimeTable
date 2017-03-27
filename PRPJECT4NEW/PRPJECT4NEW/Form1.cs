@@ -21,14 +21,62 @@ namespace PRPJECT4NEW
 
         private void Celender_Click(object sender, EventArgs e)
         {
-            Buttons_view.Visible = true;
+        
             Calendar frm = new Calendar();
             frm.TopLevel = false;
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.WindowState = FormWindowState.Maximized;
+            //frm.FormBorderStyle = FormBorderStyle.None;
+            //frm.WindowState = FormWindowState.Maximized;
             Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
             frm.Show();
 
+        }
+
+
+        private void Update_Calendar_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Update Calendar");
+        }
+
+        private void Messages_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Messages panel");
+        }
+
+        private void Exams_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Exams calendar");
+        }
+
+        private void Holidays_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Holidays calendar");
+        }
+    
+        private void Fees_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tuition fees report");
+        }
+
+        private void Requests_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Requests panel");
+        }
+
+        private void Exam_Res_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Exams results");
+        }
+
+        private void Alerts_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Alerts!");
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Move to login panel");
+            this.Close();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -58,12 +106,12 @@ namespace PRPJECT4NEW
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
-            Calendar frm = new Calendar();
-            frm.TopLevel = false;
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.WindowState = FormWindowState.Maximized;
-            Buttons_view.Controls.Add(frm);
-            frm.Show();
+            //Calendar frm = new Calendar();
+            //frm.TopLevel = false;
+            //frm.FormBorderStyle = FormBorderStyle.None;
+            //frm.WindowState = FormWindowState.Maximized;
+            //Buttons_view.Controls.Add(frm);
+            //frm.Show();
 
         }
 
