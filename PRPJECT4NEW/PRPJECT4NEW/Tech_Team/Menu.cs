@@ -88,7 +88,7 @@ namespace PRPJECT4NEW.Tech_Team
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

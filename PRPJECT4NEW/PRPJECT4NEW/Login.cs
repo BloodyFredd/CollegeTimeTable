@@ -13,9 +13,16 @@ namespace PRPJECT4NEW
 {
     public partial class Login : Form
     {
+        private string connetionString = null;
+        private SqlConnection sqlcon;
+
+
         public Login()
         {
             InitializeComponent();
+            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            this.sqlcon = new SqlConnection(connetionString);
+            this.sqlcon.Open();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -25,27 +32,70 @@ namespace PRPJECT4NEW
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlcon = new SqlConnection(@"Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
-            sqlcon.Open();
-            SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read() == true)
-            {
-                MessageBox.Show("Login Successful");
+            // SqlConnection sqlcon = new SqlConnection(@"Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
+            // sqlcon.Open();
+//            try
+ //           {
+                SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
+                SqlDataReader dr = cmd.ExecuteReader();
+               
+                if (dr.Read() == true)
+                {
+                    // MessageBox.Show("Login Successful");
+                    if (dr[6].ToString() == "Student")
+                    {
+                        //MessageBox.Show("Login student");
+                        this.Hide();
+                        Form1 Connect = new Form1();
+                        Connect.Show();
+                    }
+                    else if (dr[6].ToString() == "Exam_Section")
+                    {
+                        //MessageBox.Show("Login Exam_Section");
+                        this.Hide();
+                        Exams_Section.Menu Connect = new Exams_Section.Menu();
+                        Connect.Show();
+                    }
+                    else if (dr[6].ToString() == "Tech_Team")
+                    {
+                        // MessageBox.Show("Login Tech_Team");
+                        this.Hide();
+                        Tech_Team.Menu Connect = new Tech_Team.Menu();
+                        Connect.Show();
+                    }
+                    else
+                    {
+                        // MessageBox.Show("Login Dean_of_Faculty");
+                        this.Hide();
+                        Dean_of_Faculty.Menu Connect = new Dean_of_Faculty.Menu();
+                        Connect.Show();
+                    }
+                }
+                else
+                {
+                MessageBox.Show("error");
+                txtpassword.Clear();
+                txtuser.Clear();
+                cmd = null;
+                
+                
             }
-            else
-            {
-                MessageBox.Show("Invalid Credentials, Please Re-Enter");
-            }
-
-
-
+               
+ //           }
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Exception");
+            //}
         }
 
+// button quit
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("bye bye");
-            this.Close();
+            //if (this.sqlcon==true)
+            // {
+            this.sqlcon.Close();
+            //}
+            Application.Exit();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

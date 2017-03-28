@@ -93,7 +93,11 @@ namespace PRPJECT4NEW
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+
+            //this.Hide();
+            //Login some = new Login();
+            //some.Show();
+            Application.Exit();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

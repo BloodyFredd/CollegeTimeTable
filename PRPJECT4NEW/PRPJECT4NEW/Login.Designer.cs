@@ -63,7 +63,7 @@
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(163, 20);
             this.txtuser.TabIndex = 2;
-            this.txtuser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            txtuser.TextChanged += new System.EventHandler(textBox1_TextChanged);
             // 
             // txtpassword
             // 
