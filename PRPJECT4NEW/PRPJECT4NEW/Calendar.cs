@@ -16,6 +16,11 @@ namespace PRPJECT4NEW
         {
             InitializeComponent();
         }
+        public Calendar(String User, int Password)
+        {
+            InitializeComponent();
+            MessageBox.Show("           User info\n         ------------\nName: " + User + "\nPassword: " + Password);
+        }
 
         private void Calendar_Load(object sender, EventArgs e)
         {

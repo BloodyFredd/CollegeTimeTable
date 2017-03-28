@@ -51,6 +51,7 @@
             this.Update_Calendar_Button = new System.Windows.Forms.Button();
             this.Celender_button = new System.Windows.Forms.Button();
             this.Buttons_view = new System.Windows.Forms.Panel();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -483,6 +484,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel Buttons_view;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
 
