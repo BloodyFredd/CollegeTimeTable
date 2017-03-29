@@ -37,5 +37,15 @@ namespace BranchA_MazalPlus
             Password = PASS;
             Permission = PERM;
         }
+        
+    
+
+
+
+
+
+
     }
+
+
 }
