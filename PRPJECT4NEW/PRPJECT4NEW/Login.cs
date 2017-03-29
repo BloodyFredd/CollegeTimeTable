@@ -20,9 +20,6 @@ namespace PRPJECT4NEW
         public Login()
         {
             InitializeComponent();
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-            this.sqlcon.Open();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,9 +31,12 @@ namespace PRPJECT4NEW
         {
             // SqlConnection sqlcon = new SqlConnection(@"Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
             // sqlcon.Open();
-//            try
- //           {
-                SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
+            //            try
+            //           {
+            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            this.sqlcon = new SqlConnection(connetionString);
+            this.sqlcon.Open();
+            SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
                
                 if (dr.Read() == true)
@@ -48,28 +48,33 @@ namespace PRPJECT4NEW
                         this.Hide();
                         Form1 Connect = new Form1();
                         Connect.Show();
-                    }
+                        Connect.Student_Name.Text = dr[1].ToString();
+                }
                     else if (dr[6].ToString() == "Exam_Section")
                     {
                         //MessageBox.Show("Login Exam_Section");
                         this.Hide();
                         Exams_Section.Menu Connect = new Exams_Section.Menu();
                         Connect.Show();
-                    }
+                        Connect.Student_Name.Text = dr[1].ToString();
+                }
                     else if (dr[6].ToString() == "Tech_Team")
                     {
                         // MessageBox.Show("Login Tech_Team");
                         this.Hide();
                         Tech_Team.Menu Connect = new Tech_Team.Menu();
                         Connect.Show();
-                    }
+                        Connect.Student_Name.Text = dr[1].ToString();
+                }
                     else
                     {
                         // MessageBox.Show("Login Dean_of_Faculty");
                         this.Hide();
                         Dean_of_Faculty.Menu Connect = new Dean_of_Faculty.Menu();
                         Connect.Show();
-                    }
+                        Connect.Student_Name.Text = dr[1].ToString();
+                }
+
                 }
                 else
                 {
