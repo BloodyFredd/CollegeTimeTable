@@ -54,7 +54,7 @@
       <DependentUpon>Admin Panel.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin.cs" />
-    <Compile Include="Classes.cs" />
+    <Compile Include="Class.cs" />
     <Compile Include="Courses.cs" />
     <Compile Include="Lecturer.cs" />
     <Compile Include="NewUser.cs">
