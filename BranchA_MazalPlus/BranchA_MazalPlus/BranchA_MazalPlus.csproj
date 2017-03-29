@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Admin.cs" />
     <Compile Include="Classes.cs" />
+    <Compile Include="Courses.cs" />
     <Compile Include="Lecturer.cs" />
     <Compile Include="NewUser.cs">
       <SubType>Form</SubType>

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BranchA_MazalPlus
 {
-    class Person
+     abstract class  Person
     {
-        private string id;
+        protected string id;
         private string F_name;
         private string L_name;
         private string Telephone;

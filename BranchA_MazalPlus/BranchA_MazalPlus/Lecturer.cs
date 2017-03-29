@@ -42,6 +42,7 @@ namespace BranchA_MazalPlus
             this.receptionDay = day;
             this.receptionStart = start;
             this.receptionEnd = end;
+            
         }
     }
 }
