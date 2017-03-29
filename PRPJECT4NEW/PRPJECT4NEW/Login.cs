@@ -78,7 +78,7 @@ namespace PRPJECT4NEW
                 }
                 else
                 {
-                MessageBox.Show("error");
+                MessageBox.Show("Invalid Username or Password ");
                 this.sqlcon.Close();
                 txtpassword.Clear();
                 txtuser.Clear();
@@ -86,12 +86,6 @@ namespace PRPJECT4NEW
                 
                 
             }
-               
- //           }
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Exception");
-            //}
         }
 
 // button quit
