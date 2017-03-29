@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace BranchA_MazalPlus
 {
-    class Secretary
+    class Secretary:Person
     {
+        public Secretary() : base() {; }
+
+        public Secretary(string id) : base(id)
+
+
+
     }
+
+    gfghfghgfh fffffcvxcv
 }
+
+
+
