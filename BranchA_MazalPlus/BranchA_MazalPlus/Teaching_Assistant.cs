@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BranchA_MazalPlus
 {
-    class Teaching_Assistantcs
+    class Teaching_Assistant
     {
     }
 }

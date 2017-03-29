@@ -53,12 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lecture.cs" />
-    <Compile Include="Peson.cs" />
+    <Compile Include="Lecturer.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Secretary.cs" />
-    <Compile Include="Teaching_Assistantcs.cs" />
+    <Compile Include="Teaching_Assistant.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
