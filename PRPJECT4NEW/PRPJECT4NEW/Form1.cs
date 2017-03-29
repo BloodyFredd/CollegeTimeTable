@@ -16,5 +16,16 @@ namespace PRPJECT4NEW
         {
             InitializeComponent();
         }
+
+        private void Login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           MessageBox.Show("MAzallllll");
+            this.BackColor = System.Drawing.Color.Blue;
+        }
     }
 }
