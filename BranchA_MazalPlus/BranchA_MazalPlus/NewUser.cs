@@ -16,5 +16,7 @@ namespace BranchA_MazalPlus
         {
             InitializeComponent();
         }
+
+        
     }
 }

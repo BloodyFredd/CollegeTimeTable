@@ -14,6 +14,7 @@ namespace BranchA_MazalPlus
         [STAThread]
         static void Main()
         {
+            Application.Run(new Admin_Panel());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
         }
