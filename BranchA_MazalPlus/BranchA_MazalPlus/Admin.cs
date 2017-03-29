@@ -20,10 +20,5 @@ namespace BranchA_MazalPlus
                 else System.Windows.Forms.MessageBox.Show("ERROR:\nThere is only one Admin possible\n");
             }
 
-
-
-
         }
-
-    }
 }
