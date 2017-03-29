@@ -10,13 +10,12 @@ namespace BranchA_MazalPlus
     {
         public Secretary() : base() {; }
 
-        public Secretary(string id) : base(id)
+        public Secretary(string id) : base(){; }
 
 
 
     }
 
-    gfghfghgfh fffffcvxcv
 }
 
 

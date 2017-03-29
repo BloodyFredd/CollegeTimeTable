@@ -21,5 +21,10 @@ namespace BranchA_MazalPlus
         {
            
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
