@@ -17,8 +17,11 @@ namespace BranchA_MazalPlus
             {
                 only_one = true;
             }
-            else System.Windows.Forms.MessageBox.Show("There is only one Secretary possible");
+            else System.Windows.Forms.MessageBox.Show("ERROR:\nThere is only one Secretary possible\n");
         }
+
+
+
 
 
     }
