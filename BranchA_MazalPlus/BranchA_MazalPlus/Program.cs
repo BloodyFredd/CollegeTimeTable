@@ -16,7 +16,6 @@ namespace BranchA_MazalPlus
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
         }
     }
 }
