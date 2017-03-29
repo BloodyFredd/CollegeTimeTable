@@ -48,7 +48,7 @@ namespace PRPJECT4NEW
                         this.Hide();
                         Form1 Connect = new Form1();
                         Connect.Show();
-                        Connect.Student_Name.Text = dr[1].ToString();
+                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
                     else if (dr[6].ToString() == "Exam_Section")
                     {
@@ -56,7 +56,7 @@ namespace PRPJECT4NEW
                         this.Hide();
                         Exams_Section.Menu Connect = new Exams_Section.Menu();
                         Connect.Show();
-                        Connect.Student_Name.Text = dr[1].ToString();
+                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
                     else if (dr[6].ToString() == "Tech_Team")
                     {
@@ -64,7 +64,7 @@ namespace PRPJECT4NEW
                         this.Hide();
                         Tech_Team.Menu Connect = new Tech_Team.Menu();
                         Connect.Show();
-                        Connect.Student_Name.Text = dr[1].ToString();
+                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
                     else
                     {
@@ -72,13 +72,14 @@ namespace PRPJECT4NEW
                         this.Hide();
                         Dean_of_Faculty.Menu Connect = new Dean_of_Faculty.Menu();
                         Connect.Show();
-                        Connect.Student_Name.Text = dr[1].ToString();
+                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
 
                 }
                 else
                 {
                 MessageBox.Show("error");
+                this.sqlcon.Close();
                 txtpassword.Clear();
                 txtuser.Clear();
                 cmd = null;
@@ -111,7 +112,9 @@ namespace PRPJECT4NEW
 
         private void txtpassword_Click(object sender, EventArgs e)
         {
+            txtpassword.UseSystemPasswordChar = true;
             txtpassword.Text = "";
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -121,10 +124,6 @@ namespace PRPJECT4NEW
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //if (this.sqlcon==true)
-            // {
-            this.sqlcon.Close();
-            //}
             Application.Exit();
         }
 
@@ -136,6 +135,11 @@ namespace PRPJECT4NEW
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+            txtpassword.UseSystemPasswordChar = true;
         }
     }
 }

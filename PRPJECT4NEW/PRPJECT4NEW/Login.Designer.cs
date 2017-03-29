@@ -93,6 +93,7 @@
             this.txtpassword.TabIndex = 3;
             this.txtpassword.Text = "Password";
             this.txtpassword.Click += new System.EventHandler(this.txtpassword_Click);
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
             // panel1
             // 
