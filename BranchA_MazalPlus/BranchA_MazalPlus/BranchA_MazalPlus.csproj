@@ -75,9 +75,7 @@
     <Compile Include="Classes.cs" />
     <Compile Include="Courses.cs" />
     <Compile Include="Lecturer.cs" />
-    <Compile Include="MAIN.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="MAIN.cs" />
     <Compile Include="MAIN.Designer.cs">
       <DependentUpon>MAIN.cs</DependentUpon>
     </Compile>
