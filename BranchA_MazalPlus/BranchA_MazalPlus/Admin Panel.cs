@@ -19,7 +19,16 @@ namespace BranchA_MazalPlus
 
         private void createUser_Click(object sender, EventArgs e)
         {
-           
+            NewUser frm = new NewUser();
+            frm.Show();
+        }
+        // Create NewUser.
+        public class NewUser : Form
+        {
+            public NewUser()
+            {
+                Text = "NewUser";
+            }
         }
     }
 }

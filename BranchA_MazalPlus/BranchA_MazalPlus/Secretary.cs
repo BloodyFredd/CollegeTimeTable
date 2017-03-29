@@ -1,23 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
-namespace BranchA_MazalPlus
-{
-    class Secretary:Person
-    {
-        public Secretary() : base() {; }
+//namespace BranchA_MazalPlus
+//{
+//    class Secretary:Person
+//    {
+//        public Secretary() : base() {; }
 
-        public Secretary(string id) : base(id)
+//        public Secretary(string id) : base(id)
 
 
 
-    }
+//    }
 
-    gfghfghgfh fffffcvxcv
-}
+//    gfghfghgfh fffffcvxcv
+//}
 
 
 
