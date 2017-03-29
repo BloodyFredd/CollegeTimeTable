@@ -17,9 +17,5 @@ namespace PRPJECT4NEW
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.BackColor = System.Drawing.Color.DarkGreen;
-        }
     }
 }
