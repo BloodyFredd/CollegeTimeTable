@@ -14,18 +14,22 @@ namespace PRPJECT4NEW
     {
         public Form1()
         {
-            InitializeComponent();
+            
         }
 
-        private void Login_Click(object sender, EventArgs e)
+        private void InitializeComponent()
         {
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-           MessageBox.Show("MAzallllll");
-            this.BackColor = System.Drawing.Color.Blue;
-        }
+       
     }
 }
