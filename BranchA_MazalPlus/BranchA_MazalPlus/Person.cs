@@ -9,12 +9,12 @@ namespace BranchA_MazalPlus
      abstract class  Person
     {
         protected string id;
-        private string F_name;
-        private string L_name;
-        private string Telephone;
-        private string Email;
-        private string Password;
-        private string Permission;
+        protected string F_name;
+        protected string L_name;
+        protected string Telephone;
+        protected string Email;
+        protected string Password;
+        protected string Permission;
 
         public Person()
         {
