@@ -8,7 +8,7 @@ namespace BranchA_MazalPlus
 {
     class Person
     {
-        private int id;
+        private string id;
         private string F_name;
         private string L_name;
         private string Telephone;
@@ -18,9 +18,16 @@ namespace BranchA_MazalPlus
 
         public Person()
         {
-            
-        }
-        public Person(int ID,string FIRname,string LAname,string TELE,string EMA,string PASS,string PERM)
+            id=null;
+            F_name = null;
+            L_name = null;
+            Telephone = null;
+            Email = null;
+            Password = null;
+            Permission = null;
+
+    }
+        public Person(string ID,string FIRname,string LAname,string TELE,string EMA,string PASS,string PERM)
         {
             id = ID;
             F_name = FIRname;
