@@ -15,7 +15,7 @@ namespace BranchA_MazalPlus
         private string receptionStart;
         private string receptionEnd;
 
-        public Lecturer() : Person()
+        public Lecturer() : base()
         {
 
             this.type = "Lecturer";
@@ -25,14 +25,23 @@ namespace BranchA_MazalPlus
                 this.courseID[i] = -1;
             }
             this.office = null;
-            receptionDay = null;
-            receptionStart = null;
-            receptionEnd = null;
+            this.receptionDay = null;
+            this.receptionStart = null;
+            this.receptionEnd = null;
         }
 
-        public Lecturer()
+        public Lecturer(string ID, string FIRname, string LAname, string TELE, string EMA, string PASS, string PERM, int[] courses, string off, string day, string start, string end) : base(ID, FIRname,LAname, TELE, EMA, PASS, PERM)
         {
-
+            this.type = "Lecturer";
+            this.courseID = new int[courses.Length];
+            for (int i = 0; i < courseID.Length; i++)
+            {
+                this.courseID[i] = courses[i];
+            }
+            this.office = off;
+            this.receptionDay = day;
+            this.receptionStart = start;
+            this.receptionEnd = end;
         }
     }
 }
