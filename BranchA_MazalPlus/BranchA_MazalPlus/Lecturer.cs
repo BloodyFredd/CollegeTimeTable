@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BranchA_MazalPlus
 {
-    class Lecturer: Person
+    class Lecturer : Person
     {
         private string type;
         private int[] courseID;
@@ -20,7 +20,7 @@ namespace BranchA_MazalPlus
 
             this.type = "Lecturer";
             this.courseID = new int[10];
-            for(int i = 0; i < courseID.Length; i++)
+            for (int i = 0; i < courseID.Length; i++)
             {
                 this.courseID[i] = -1;
             }
