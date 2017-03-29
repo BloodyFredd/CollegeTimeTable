@@ -91,6 +91,31 @@ namespace PRPJECT4NEW
 // button quit
         private void button2_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtuser_Click(object sender, EventArgs e)
+        {
+            txtuser.Text = "";
+        }
+
+        private void txtpassword_Click(object sender, EventArgs e)
+        {
+            txtpassword.Text = "";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
             //if (this.sqlcon==true)
             // {
             this.sqlcon.Close();
@@ -98,12 +123,12 @@ namespace PRPJECT4NEW
             Application.Exit();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }
