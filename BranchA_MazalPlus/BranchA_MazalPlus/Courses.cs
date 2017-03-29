@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BranchA_MazalPlus
 {
-    class Courses1
+    class Courses
     {
         private string id;
         private string courseName;
@@ -15,7 +15,7 @@ namespace BranchA_MazalPlus
         private char semester;
         private string blockingCourse;
 
-        public Courses1()
+        public Courses()
         {
             id = null;
             courseName = null;
@@ -25,7 +25,7 @@ namespace BranchA_MazalPlus
             blockingCourse = null;
         }
 
-        public Courses1(string ID, string name, double nz, char y, char s, string block)
+        public Courses(string ID, string name, double nz, char y, char s, string block)
         {
             id = ID;
             courseName = name;
