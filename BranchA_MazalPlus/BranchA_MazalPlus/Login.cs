@@ -135,5 +135,10 @@ namespace BranchA_MazalPlus
         {
             txtpassword.UseSystemPasswordChar = true;
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
