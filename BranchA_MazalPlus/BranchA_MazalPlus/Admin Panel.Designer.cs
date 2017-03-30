@@ -4,6 +4,7 @@
     {
         /// <summary>
         /// Required designer variable.
+        ///rtgu
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
