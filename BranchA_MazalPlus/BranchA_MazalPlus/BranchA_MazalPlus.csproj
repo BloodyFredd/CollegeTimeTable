@@ -74,6 +74,7 @@
     <Compile Include="Admin.cs" />
     <Compile Include="Class.cs" />
     <Compile Include="Courses.cs" />
+    <Compile Include="DatabaseClass.cs" />
     <Compile Include="Lecturer.cs" />
     <Compile Include="NewUser.cs">
       <SubType>Form</SubType>
