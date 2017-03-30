@@ -47,7 +47,7 @@
             // createUser
             // 
             this.createUser.Location = new System.Drawing.Point(81, 149);
-            this.createUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.createUser.Margin = new System.Windows.Forms.Padding(2);
             this.createUser.Name = "createUser";
             this.createUser.Size = new System.Drawing.Size(111, 43);
             this.createUser.TabIndex = 1;
@@ -64,9 +64,10 @@
             this.Controls.Add(this.createUser);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Admin_Panel";
             this.Text = "Admin_Panel";
+            this.Load += new System.EventHandler(this.Admin_Panel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
