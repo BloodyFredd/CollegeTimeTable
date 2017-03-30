@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BranchA_MazalPlus
 {
     public partial class Admin_Panel : Form
@@ -19,8 +20,27 @@ namespace BranchA_MazalPlus
 
         private void createUser_Click(object sender, EventArgs e)
         {
+
             NewUser frm = new NewUser();
             frm.Show();
+        }
+        // Create NewUser.
+        public class NewUser : Form
+        {
+            public NewUser()
+            {
+                Text = "NewUser";
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Admin_Panel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
