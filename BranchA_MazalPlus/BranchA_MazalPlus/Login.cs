@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace BranchA_MazalPlus
+namespace PRPJECT4NEW
 {
     public partial class Login : Form
     {
@@ -37,61 +37,61 @@ namespace BranchA_MazalPlus
             this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
             SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            if (dr.Read() == true)
-            {
-                // MessageBox.Show("Login Successful");
-                if (dr[6].ToString() == "Student")
+                SqlDataReader dr = cmd.ExecuteReader();
+               
+                if (dr.Read() == true)
                 {
-                    //MessageBox.Show("Login student");
-                    this.Hide();
-                    Form1 Connect = new Form1();
-                    Connect.Show();
-                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    // MessageBox.Show("Login Successful");
+                    if (dr[6].ToString() == "Student")
+                    {
+                        //MessageBox.Show("Login student");
+                        this.Hide();
+                        Form1 Connect = new Form1();
+                        Connect.Show();
+                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
-                //else if (dr[6].ToString() == "Exam_Section")
-                //{
-                //    //MessageBox.Show("Login Exam_Section");
-                //    this.Hide();
-                //    //Exams_Section.Menu Connect = new Exams_Section.Menu();
-                //    Connect.Show();
-                //    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                //}
-                //else if (dr[6].ToString() == "Tech_Team")
-                //{
-                //    // MessageBox.Show("Login Tech_Team");
-                //    this.Hide();
-                //    Tech_Team.Menu Connect = new Tech_Team.Menu();
-                //    Connect.Show();
-                //    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                //}
-                //else
-                //{
-                //    // MessageBox.Show("Login Dean_of_Faculty");
-                //    this.Hide();
-                //    Dean_of_Faculty.Menu Connect = new Dean_of_Faculty.Menu();
-                //    Connect.Show();
-                //    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                //}
+                    else if (dr[6].ToString() == "Exam_Section")
+                    {
+                        //MessageBox.Show("Login Exam_Section");
+                        this.Hide();
+                        Exams_Section.Menu Connect = new Exams_Section.Menu();
+                        Connect.Show();
+                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                }
+                    else if (dr[6].ToString() == "Tech_Team")
+                    {
+                        // MessageBox.Show("Login Tech_Team");
+                        this.Hide();
+                        Tech_Team.Menu Connect = new Tech_Team.Menu();
+                        Connect.Show();
+                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                }
+                    else
+                    {
+                        // MessageBox.Show("Login Dean_of_Faculty");
+                        this.Hide();
+                        Dean_of_Faculty.Menu Connect = new Dean_of_Faculty.Menu();
+                        Connect.Show();
+                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                }
 
-            }
-            else
-            {
+                }
+                else
+                {
                 MessageBox.Show("Invalid Username or Password ");
                 this.sqlcon.Close();
                 txtpassword.Clear();
                 txtuser.Clear();
                 cmd = null;
-
-
+                
+                
             }
         }
 
-        // button quit
+// button quit
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace BranchA_MazalPlus
         {
             txtpassword.UseSystemPasswordChar = true;
             txtpassword.Text = "";
-
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -134,11 +134,6 @@ namespace BranchA_MazalPlus
         private void txtpassword_TextChanged(object sender, EventArgs e)
         {
             txtpassword.UseSystemPasswordChar = true;
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

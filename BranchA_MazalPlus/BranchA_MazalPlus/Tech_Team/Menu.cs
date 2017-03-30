@@ -8,21 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PRPJECT4NEW
+namespace PRPJECT4NEW.Tech_Team
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
             Buttons_view.Visible = false;
-        
+
         }
 
-        private void Celender_Click(object sender, EventArgs e)
+        private void Exams_report_button_Click(object sender, EventArgs e)
         {
-        
-            Calendar frm = new Calendar("Matan",123456);
+
+            Calendar frm = new Calendar("Matan", 123456);
             frm.TopLevel = false;
             //frm.FormBorderStyle = FormBorderStyle.None;
             //frm.WindowState = FormWindowState.Maximized;
@@ -33,44 +33,39 @@ namespace PRPJECT4NEW
         }
 
 
-        private void Update_Calendar_Button_Click(object sender, EventArgs e)
+        private void Exams_Assignment_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Update Calendar");
+            MessageBox.Show("Exams Assignment");
         }
 
-        private void Messages_Button_Click(object sender, EventArgs e)
+        private void Supervisors_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Messages panel");
+            MessageBox.Show("Supervisors Assignment");
         }
 
-        private void Exams_Button_Click(object sender, EventArgs e)
+        private void Supervisors_List_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams calendar");
+            MessageBox.Show("Supervisors List");
         }
 
-        private void Holidays_Button_Click(object sender, EventArgs e)
+        private void Available_Classes_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Holidays calendar");
-        }
-    
-        private void Fees_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Tuition fees report");
+            MessageBox.Show("Available Classes");
         }
 
-        private void Requests_Button_Click(object sender, EventArgs e)
+        private void Special_Stud_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Requests panel");
+            MessageBox.Show("Special Students");
         }
 
-        private void Exam_Res_Button_Click(object sender, EventArgs e)
+        private void Supervisor_Tut_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams results");
+            MessageBox.Show("Supervisor Tutorial");
         }
 
-        private void Alerts_Button_Click(object sender, EventArgs e)
+        private void Special_Exams_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Alerts!");
+            MessageBox.Show("Special Exams");
         }
 
         private void Logout_Click(object sender, EventArgs e)
@@ -93,10 +88,6 @@ namespace PRPJECT4NEW
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-            //this.Hide();
-            //Login some = new Login();
-            //some.Show();
             Application.Exit();
         }
 
