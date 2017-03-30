@@ -22,6 +22,7 @@ namespace BranchA_MazalPlus
         public void makeUser()
         {
             System.Windows.Forms.MessageBox.Show("Hello " + this.F_name + "! Please enter which user you would like to add:\n");
+            //System.Windows.Forms.MessageBox.Show();
             // Add here a box for adding a new person.
         }
 
