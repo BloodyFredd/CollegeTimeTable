@@ -181,7 +181,9 @@ namespace PRPJECT4NEW
         private void txtpassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                button1.PerformClick();
+            {
+                button1_Click(this, (EventArgs)e);
+            }
         }
     }
 }
