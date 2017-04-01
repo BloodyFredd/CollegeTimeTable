@@ -42,12 +42,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            //this.mazalDataSet = new BranchA_MazalPlus.MazalDataSet();
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.personTableAdapter = new BranchA_MazalPlus.MazalDataSetTableAdapters.personTableAdapter();
-            //((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -173,17 +169,17 @@
             // 
             // mazalDataSet
             // 
-            //this.mazalDataSet.DataSetName = "MazalDataSet";
-            //this.mazalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.mazalDataSet.DataSetName = "MazalDataSet";
+            this.mazalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // personBindingSource
             // 
-            //this.personBindingSource.DataMember = "person";
-            //this.personBindingSource.DataSource = this.mazalDataSet;
+            this.personBindingSource.DataMember = "person";
+            this.personBindingSource.DataSource = this.mazalDataSet;
             // 
             // personTableAdapter
             // 
-            //this.personTableAdapter.ClearBeforeFill = true;
+            this.personTableAdapter.ClearBeforeFill = true;
             // 
             // NewUser
             // 
@@ -207,7 +203,7 @@
             this.Text = "NewUser";
             this.Load += new System.EventHandler(this.NewUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -228,8 +224,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        //private MazalDataSet mazalDataSet;
+        
         private System.Windows.Forms.BindingSource personBindingSource;
-        //private MazalDataSetTableAdapters.personTableAdapter personTableAdapter;
     }
 }
