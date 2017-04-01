@@ -56,7 +56,7 @@ namespace BranchA_MazalPlus
                     this.Hide();
                     Lecturer.Menu Connect = new Lecturer.Menu();
                     Connect.Show();
-                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.Lecturer_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
                 else if (dr[6].ToString() == "Teaching_Assistant")
                 {
@@ -64,7 +64,7 @@ namespace BranchA_MazalPlus
                     this.Hide();
                     Teaching_Assistant.Menu Connect = new Teaching_Assistant.Menu();
                     Connect.Show();
-                    Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.Teaching_Assistant_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
                 else if (dr[6].ToString() == "Secretary")
                 {
@@ -72,7 +72,7 @@ namespace BranchA_MazalPlus
                     this.Hide();
                     Secretary.Menu Connect = new Secretary.Menu();
                     Connect.Show();
-                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.Secretary_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
 
             }

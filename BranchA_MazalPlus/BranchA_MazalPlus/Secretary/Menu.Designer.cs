@@ -34,7 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Student_Name = new System.Windows.Forms.Label();
+            this.Secretary_Name = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -66,7 +66,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.Student_Name);
+            this.panel1.Controls.Add(this.Secretary_Name);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -103,23 +103,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Student_Name
+            // Secretary_Name
             // 
-            this.Student_Name.AutoSize = true;
-            this.Student_Name.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Student_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Student_Name.ForeColor = System.Drawing.Color.White;
-            this.Student_Name.Image = ((System.Drawing.Image)(resources.GetObject("Student_Name.Image")));
-            this.Student_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Student_Name.Location = new System.Drawing.Point(291, 0);
-            this.Student_Name.Margin = new System.Windows.Forms.Padding(1, 11, 5, 0);
-            this.Student_Name.Name = "Student_Name";
-            this.Student_Name.Padding = new System.Windows.Forms.Padding(15, 20, 0, 0);
-            this.Student_Name.Size = new System.Drawing.Size(233, 43);
-            this.Student_Name.TabIndex = 2;
-            this.Student_Name.Text = "     Tech Team person";
-            this.Student_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Student_Name.Click += new System.EventHandler(this.label2_Click);
+            this.Secretary_Name.AutoSize = true;
+            this.Secretary_Name.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Secretary_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Secretary_Name.ForeColor = System.Drawing.Color.White;
+            this.Secretary_Name.Image = ((System.Drawing.Image)(resources.GetObject("Secretary_Name.Image")));
+            this.Secretary_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Secretary_Name.Location = new System.Drawing.Point(291, 0);
+            this.Secretary_Name.Margin = new System.Windows.Forms.Padding(1, 11, 5, 0);
+            this.Secretary_Name.Name = "Secretary_Name";
+            this.Secretary_Name.Padding = new System.Windows.Forms.Padding(15, 20, 0, 0);
+            this.Secretary_Name.Size = new System.Drawing.Size(233, 43);
+            this.Secretary_Name.TabIndex = 2;
+            this.Secretary_Name.Text = "     Tech Team person";
+            this.Secretary_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Secretary_Name.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -475,6 +475,6 @@
         private System.Windows.Forms.Panel Buttons_view;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        public System.Windows.Forms.Label Student_Name;
+        public System.Windows.Forms.Label Secretary_Name;
     }
 }

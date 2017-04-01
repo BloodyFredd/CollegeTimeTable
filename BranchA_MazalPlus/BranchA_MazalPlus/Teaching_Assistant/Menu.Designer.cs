@@ -35,7 +35,7 @@
             this.Buttons_view = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Admin_name = new System.Windows.Forms.Label();
+            this.Teaching_Assistant_Name = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.Buttons_view);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.Admin_name);
+            this.panel1.Controls.Add(this.Teaching_Assistant_Name);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -111,23 +111,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Admin_name
+            // Teaching_Assistant_Name
             // 
-            this.Admin_name.AutoSize = true;
-            this.Admin_name.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Admin_name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin_name.ForeColor = System.Drawing.Color.White;
-            this.Admin_name.Image = ((System.Drawing.Image)(resources.GetObject("Admin_name.Image")));
-            this.Admin_name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Admin_name.Location = new System.Drawing.Point(291, 0);
-            this.Admin_name.Margin = new System.Windows.Forms.Padding(1, 11, 5, 0);
-            this.Admin_name.Name = "Admin_name";
-            this.Admin_name.Padding = new System.Windows.Forms.Padding(15, 20, 0, 0);
-            this.Admin_name.Size = new System.Drawing.Size(88, 43);
-            this.Admin_name.TabIndex = 2;
-            this.Admin_name.Text = "Admin";
-            this.Admin_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Admin_name.Click += new System.EventHandler(this.label2_Click);
+            this.Teaching_Assistant_Name.AutoSize = true;
+            this.Teaching_Assistant_Name.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Teaching_Assistant_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Teaching_Assistant_Name.ForeColor = System.Drawing.Color.White;
+            this.Teaching_Assistant_Name.Image = ((System.Drawing.Image)(resources.GetObject("Teaching_Assistant_Name.Image")));
+            this.Teaching_Assistant_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Teaching_Assistant_Name.Location = new System.Drawing.Point(291, 0);
+            this.Teaching_Assistant_Name.Margin = new System.Windows.Forms.Padding(1, 11, 5, 0);
+            this.Teaching_Assistant_Name.Name = "Teaching_Assistant_Name";
+            this.Teaching_Assistant_Name.Padding = new System.Windows.Forms.Padding(15, 20, 0, 0);
+            this.Teaching_Assistant_Name.Size = new System.Drawing.Size(88, 43);
+            this.Teaching_Assistant_Name.TabIndex = 2;
+            this.Teaching_Assistant_Name.Text = "Admin";
+            this.Teaching_Assistant_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Teaching_Assistant_Name.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -474,7 +474,7 @@
         private System.Windows.Forms.Panel Buttons_view;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        public System.Windows.Forms.Label Admin_name;
+        public System.Windows.Forms.Label Teaching_Assistant_Name;
         private System.Windows.Forms.Button Logout_Button;
     }
 }

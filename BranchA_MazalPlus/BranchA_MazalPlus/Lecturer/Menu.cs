@@ -70,7 +70,15 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Move to login panel");
+            MessageBox.Show("Have a good day!");
+            // hide main form
+            this.Hide();
+
+            // show other form
+            Login form2 = new Login();
+            form2.Show();
+
+            // close application
             this.Close();
         }
 
