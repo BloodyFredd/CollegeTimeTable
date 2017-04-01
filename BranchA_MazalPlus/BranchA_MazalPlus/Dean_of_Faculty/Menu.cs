@@ -110,6 +110,14 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         }
 
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }

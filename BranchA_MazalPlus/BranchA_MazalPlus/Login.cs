@@ -72,7 +72,7 @@ namespace PRPJECT4NEW
                         this.Hide();
                         Dean_of_Faculty.Menu Connect = new Dean_of_Faculty.Menu();
                         Connect.Show();
-                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                        Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
 
                 }
