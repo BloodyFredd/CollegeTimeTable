@@ -42,8 +42,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mazalDataSet = new BranchA_MazalPlus.MazalDataSet();
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personTableAdapter = new BranchA_MazalPlus.MazalDataSetTableAdapters.personTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -224,7 +228,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        
+        private MazalDataSet mazalDataSet;
         private System.Windows.Forms.BindingSource personBindingSource;
+        private MazalDataSetTableAdapters.personTableAdapter personTableAdapter;
     }
 }
