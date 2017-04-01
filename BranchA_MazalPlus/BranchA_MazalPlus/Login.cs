@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace PRPJECT4NEW
+namespace BranchA_MazalPlus
 {
     public partial class Login : Form
     {
@@ -46,34 +46,34 @@ namespace PRPJECT4NEW
                 {
                     //MessageBox.Show("Login Admin");
                     this.Hide();
-                    Form1 Connect = new Form1();
+                    Admin.Menu Connect = new Admin.Menu();
+                    Connect.Show();
+                    Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                }
+                else if (dr[6].ToString() == "Lecturer")
+                {
+                    //MessageBox.Show("Login Lecturer");
+                    this.Hide();
+                    Lecturer.Menu Connect = new Lecturer.Menu();
                     Connect.Show();
                     Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
-                //else if (dr[6].ToString() == "Lecturer")
-                //{
-                //    //MessageBox.Show("Login Lecturer");
-                //    this.Hide();
-                //    Lecturer.Menu Connect = new Lecturer.Menu();
-                //    Connect.Show();
-                //    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                //}
-                //else if (dr[6].ToString() == "Teaching_Assistant")
-                //{
-                //    // MessageBox.Show("Login Teaching_Assistant");
-                //    this.Hide();
-                //    Teaching_Assistant.Menu Connect = new Teaching_Assistant.Menu();
-                //    Connect.Show();
-                //    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                //}
-                //else if (dr[6].ToString() == "Secretary")
-                //{
-                //    // MessageBox.Show("Login Secretary");
-                //    this.Hide();
-                //    Secretary.Menu Connect = new Secretary.Menu();
-                //    Connect.Show();
-                //    Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                //}
+                else if (dr[6].ToString() == "Teaching_Assistant")
+                {
+                    // MessageBox.Show("Login Teaching_Assistant");
+                    this.Hide();
+                    Teaching_Assistant.Menu Connect = new Teaching_Assistant.Menu();
+                    Connect.Show();
+                    Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                }
+                else if (dr[6].ToString() == "Secretary")
+                {
+                    // MessageBox.Show("Login Secretary");
+                    this.Hide();
+                    Secretary.Menu Connect = new Secretary.Menu();
+                    Connect.Show();
+                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                }
 
                 }
                 else
@@ -134,11 +134,6 @@ namespace PRPJECT4NEW
         private void txtpassword_TextChanged(object sender, EventArgs e)
         {
             txtpassword.UseSystemPasswordChar = true;
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
