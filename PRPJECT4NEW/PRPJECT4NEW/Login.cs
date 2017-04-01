@@ -47,40 +47,69 @@ namespace PRPJECT4NEW
                     //MessageBox.ShowDialog("Login student");
                     this.Hide();
                     Form1 Connect = new Form1();
-
-                    // Connect.Show();
-                    Connect.ShowDialog();
+                    // Connect.ShowDialog();
                     Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.ShowDialog();
+                    //after logout
                     this.Show();
                     this.sqlcon.Close();
                     txtuser.Text = "User Name";
                     txtpassword.Text = "Password";
                     txtpassword.UseSystemPasswordChar = false;
-                    
+
                 }
                 else if (dr[6].ToString() == "Exam_Section")
                 {
                     //MessageBox.Show("Login Exam_Section");
                     this.Hide();
                     Exams_Section.Menu Connect = new Exams_Section.Menu();
-                    Connect.Show();
+                    // Connect.ShowDialog();
                     Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.ShowDialog();
+                    //after logout
+                    this.Show();
+                    this.sqlcon.Close();
+                    txtuser.Text = "User Name";
+                    txtpassword.Text = "Password";
+                    txtpassword.UseSystemPasswordChar = false;
                 }
                 else if (dr[6].ToString() == "Tech_Team")
                 {
                     // MessageBox.Show("Login Tech_Team");
                     this.Hide();
                     Tech_Team.Menu Connect = new Tech_Team.Menu();
-                    Connect.Show();
+                    // Connect.ShowDialog();
                     Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.ShowDialog();
+                    //after logout
+                    this.Show();
+                    this.sqlcon.Close();
+                    txtuser.Text = "User Name";
+                    txtpassword.Text = "Password";
+                    txtpassword.UseSystemPasswordChar = false;
                 }
-                else
+                else if (dr[6].ToString() == "Dean_of_Faculty")
                 {
                     // MessageBox.Show("Login Dean_of_Faculty");
                     this.Hide();
                     Dean_of_Faculty.Menu Connect = new Dean_of_Faculty.Menu();
-                    Connect.Show();
+                    // Connect.ShowDialog();
                     Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.ShowDialog();
+                    //after logout
+                    this.Show();
+                    this.sqlcon.Close();
+                    txtuser.Text = "User Name";
+                    txtpassword.Text = "Password";
+                    txtpassword.UseSystemPasswordChar = false;
+                }
+                else
+                {
+                    MessageBox.Show("The user is not have permisions in your branch ");
+                    this.sqlcon.Close();
+                    txtuser.Text = "User Name";
+                    txtpassword.Text = "Password";
+                    txtpassword.UseSystemPasswordChar = false;
                 }
 
             }
@@ -88,8 +117,9 @@ namespace PRPJECT4NEW
             {
                 MessageBox.Show("Invalid Username or Password ");
                 this.sqlcon.Close();
-                txtpassword.Clear();
-                txtuser.Clear();
+                txtuser.Text = "User Name";
+                txtpassword.Text = "Password";
+                txtpassword.UseSystemPasswordChar = false;
             }
         }
 
