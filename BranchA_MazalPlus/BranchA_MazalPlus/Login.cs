@@ -64,7 +64,7 @@ namespace BranchA_MazalPlus
                     this.Hide();
                     Teaching_Assistant.Menu Connect = new Teaching_Assistant.Menu();
                     Connect.Show();
-                    Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
                 else if (dr[6].ToString() == "Secretary")
                 {
@@ -72,7 +72,7 @@ namespace BranchA_MazalPlus
                     this.Hide();
                     Secretary.Menu Connect = new Secretary.Menu();
                     Connect.Show();
-                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
 
                 }
@@ -134,6 +134,11 @@ namespace BranchA_MazalPlus
         private void txtpassword_TextChanged(object sender, EventArgs e)
         {
             txtpassword.UseSystemPasswordChar = true;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

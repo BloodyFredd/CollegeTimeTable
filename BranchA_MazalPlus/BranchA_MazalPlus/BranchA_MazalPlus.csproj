@@ -95,6 +95,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MazalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MazalDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +147,17 @@
     <EmbeddedResource Include="Teaching_Assistant\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="MazalDataSet.xsc">
+      <DependentUpon>MazalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MazalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MazalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MazalDataSet.xss">
+      <DependentUpon>MazalDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
