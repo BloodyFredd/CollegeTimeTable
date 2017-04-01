@@ -1877,10 +1877,10 @@ namespace BranchA_MazalPlus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public personRow AddpersonRow(string ID, string F_name, string L_name, string Telephone, string Email, string Password, string Permission) {
+            public personRow AddpersonRow(string F_name, string L_name, string Telephone, string Email, string Password, string Permission) {
                 personRow rowpersonRow = ((personRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
+                        null,
                         F_name,
                         L_name,
                         Telephone,
@@ -1894,7 +1894,7 @@ namespace BranchA_MazalPlus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public personRow FindByID(string ID) {
+            public personRow FindByID(int ID) {
                 return ((personRow)(this.Rows.Find(new object[] {
                             ID})));
             }
@@ -1928,7 +1928,7 @@ namespace BranchA_MazalPlus {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
                 this.columnF_name = new global::System.Data.DataColumn("F_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnF_name);
@@ -1944,9 +1944,10 @@ namespace BranchA_MazalPlus {
                 base.Columns.Add(this.columnPermission);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = 1;
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
-                this.columnID.MaxLength = 50;
                 this.columnF_name.AllowDBNull = false;
                 this.columnF_name.MaxLength = 50;
                 this.columnL_name.AllowDBNull = false;
@@ -3961,9 +3962,9 @@ namespace BranchA_MazalPlus {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ID {
+            public int ID {
                 get {
-                    return ((string)(this[this.tableperson.IDColumn]));
+                    return ((int)(this[this.tableperson.IDColumn]));
                 }
                 set {
                     this[this.tableperson.IDColumn] = value;
