@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-// new updates ver 1
+
 namespace BranchA_MazalPlus
 {
     public partial class Login : Form
@@ -37,10 +37,10 @@ namespace BranchA_MazalPlus
             this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
             SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            if (dr.Read() == true)
-            {
+                SqlDataReader dr = cmd.ExecuteReader();
+               
+                if (dr.Read() == true)
+                {
                 // MessageBox.Show("Login Successful");
                 if (dr[6].ToString() == "Admin")
                 {
@@ -64,7 +64,7 @@ namespace BranchA_MazalPlus
                     this.Hide();
                     Teaching_Assistant.Menu Connect = new Teaching_Assistant.Menu();
                     Connect.Show();
-                    //  Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
                 else if (dr[6].ToString() == "Secretary")
                 {
@@ -72,26 +72,26 @@ namespace BranchA_MazalPlus
                     this.Hide();
                     Secretary.Menu Connect = new Secretary.Menu();
                     Connect.Show();
-                    //  Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
 
-            }
-            else
-            {
+                }
+                else
+                {
                 MessageBox.Show("Invalid Username or Password ");
                 this.sqlcon.Close();
                 txtpassword.Clear();
                 txtuser.Clear();
                 cmd = null;
-
-
+                
+                
             }
         }
 
-        // button quit
+// button quit
         private void button2_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace BranchA_MazalPlus
         {
             txtpassword.UseSystemPasswordChar = true;
             txtpassword.Text = "";
-
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
