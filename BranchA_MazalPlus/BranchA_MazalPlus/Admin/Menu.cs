@@ -21,14 +21,15 @@ namespace BranchA_MazalPlus.Admin
 
         private void Exams_report_button_Click(object sender, EventArgs e)
         {
-
-            Calendar frm = new Calendar("Matan", 123456);
-            frm.TopLevel = false;
-            //frm.FormBorderStyle = FormBorderStyle.None;
-            //frm.WindowState = FormWindowState.Maximized;
-            Buttons_view.Controls.Add(frm);
-            Buttons_view.Visible = true;
-            frm.Show();
+            NewUser Connect = new NewUser();
+            Connect.Show();
+            //Calendar frm = new Calendar("Matan", 123456);
+            //frm.TopLevel = false;
+            ////frm.FormBorderStyle = FormBorderStyle.None;
+            ////frm.WindowState = FormWindowState.Maximized;
+            //Buttons_view.Controls.Add(frm);
+            //Buttons_view.Visible = true;
+            //frm.Show();
 
         }
 
@@ -88,7 +89,7 @@ namespace BranchA_MazalPlus.Admin
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -138,8 +139,15 @@ namespace BranchA_MazalPlus.Admin
         private void Logout_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Move to login panel");
-            this.Close();
+            // hide main form
+            this.Hide();
 
+            // show other form
+            Login form2 = new Login();
+            form2.Show();
+
+            // close application
+            this.Close();
         }
     }
 }
