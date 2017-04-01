@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-// new updates ver 1
+// new updates ver 1, once more
 namespace BranchA_MazalPlus
 {
     public partial class Login : Form
