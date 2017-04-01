@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BranchA_MazalPlus
 {
     public partial class NewUser : Form
     {
+        private string connetionString = null;
+        private SqlConnection sqlcon;
+
+
         public NewUser()
         {
             InitializeComponent();

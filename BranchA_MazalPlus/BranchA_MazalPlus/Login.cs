@@ -41,38 +41,38 @@ namespace PRPJECT4NEW
                
                 if (dr.Read() == true)
                 {
-                    // MessageBox.Show("Login Successful");
-                    if (dr[6].ToString() == "Student")
-                    {
-                        //MessageBox.Show("Login student");
-                        this.Hide();
-                        Form1 Connect = new Form1();
-                        Connect.Show();
-                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                // MessageBox.Show("Login Successful");
+                if (dr[6].ToString() == "Admin")
+                {
+                    //MessageBox.Show("Login Admin");
+                    this.Hide();
+                    Form1 Connect = new Form1();
+                    Connect.Show();
+                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
-                    else if (dr[6].ToString() == "Exam_Section")
-                    {
-                        //MessageBox.Show("Login Exam_Section");
-                        this.Hide();
-                        Exams_Section.Menu Connect = new Exams_Section.Menu();
-                        Connect.Show();
-                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                else if (dr[6].ToString() == "Lecturer")
+                {
+                    //MessageBox.Show("Login Lecturer");
+                    this.Hide();
+                    Lecturer.Menu Connect = new Lecturer.Menu();
+                    Connect.Show();
+                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
-                    else if (dr[6].ToString() == "Tech_Team")
-                    {
-                        // MessageBox.Show("Login Tech_Team");
-                        this.Hide();
-                        Tech_Team.Menu Connect = new Tech_Team.Menu();
-                        Connect.Show();
-                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                else if (dr[6].ToString() == "Teaching_Assistant")
+                {
+                    // MessageBox.Show("Login Teaching_Assistant");
+                    this.Hide();
+                    Teaching_Assistant.Menu Connect = new Teaching_Assistant.Menu();
+                    Connect.Show();
+                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
-                    else
-                    {
-                        // MessageBox.Show("Login Dean_of_Faculty");
-                        this.Hide();
-                        Dean_of_Faculty.Menu Connect = new Dean_of_Faculty.Menu();
-                        Connect.Show();
-                        Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                else if (dr[6].ToString() == "Secretary")
+                {
+                    // MessageBox.Show("Login Secretary");
+                    this.Hide();
+                    Secretary.Menu Connect = new Secretary.Menu();
+                    Connect.Show();
+                    Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                 }
 
                 }
