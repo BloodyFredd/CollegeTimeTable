@@ -65,13 +65,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin Panel.cs">
+    <Compile Include="Personality\Admin Panel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin Panel.Designer.cs">
+    <Compile Include="Personality\Admin Panel.Designer.cs">
       <DependentUpon>Admin Panel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin.cs" />
+    <Compile Include="Personality\Admin.cs" />
     <Compile Include="Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,7 +122,7 @@
     <Compile Include="Tech_Team\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin Panel.resx">
+    <EmbeddedResource Include="Personality\Admin Panel.resx">
       <DependentUpon>Admin Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calendar.resx">
