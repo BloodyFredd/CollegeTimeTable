@@ -65,6 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MazalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MazalDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Personality\Admin Panel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +161,17 @@
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="MazalDataSet.xsc">
+      <DependentUpon>MazalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MazalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MazalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MazalDataSet.xss">
+      <DependentUpon>MazalDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
