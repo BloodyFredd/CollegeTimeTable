@@ -56,10 +56,10 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(107, 718);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btnLogin.Location = new System.Drawing.Point(94, 672);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(7);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(536, 74);
+            this.btnLogin.Size = new System.Drawing.Size(469, 69);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -71,10 +71,10 @@
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtuser.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.ForeColor = System.Drawing.Color.White;
-            this.txtuser.Location = new System.Drawing.Point(167, 518);
-            this.txtuser.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtuser.Location = new System.Drawing.Point(146, 485);
+            this.txtuser.Margin = new System.Windows.Forms.Padding(7);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(488, 41);
+            this.txtuser.Size = new System.Drawing.Size(427, 37);
             this.txtuser.TabIndex = 2;
             this.txtuser.Text = "User Name";
             this.txtuser.Click += new System.EventHandler(this.txtuser_Click);
@@ -86,10 +86,10 @@
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpassword.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.ForeColor = System.Drawing.Color.White;
-            this.txtpassword.Location = new System.Drawing.Point(167, 614);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtpassword.Location = new System.Drawing.Point(146, 574);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(7);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(489, 41);
+            this.txtpassword.Size = new System.Drawing.Size(428, 37);
             this.txtpassword.TabIndex = 3;
             this.txtpassword.Text = "Password";
             this.txtpassword.Click += new System.EventHandler(this.txtpassword_Click);
@@ -103,19 +103,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(11, 27, 23, 11);
-            this.panel1.Size = new System.Drawing.Size(742, 77);
+            this.panel1.Padding = new System.Windows.Forms.Padding(10, 25, 20, 10);
+            this.panel1.Size = new System.Drawing.Size(649, 72);
             this.panel1.TabIndex = 9;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(561, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(490, 25);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 31, 90, 0);
-            this.pictureBox2.Size = new System.Drawing.Size(83, 39);
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 29, 79, 0);
+            this.pictureBox2.Size = new System.Drawing.Size(73, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -125,11 +125,11 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(644, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 24, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(563, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 21, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 31, 90, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(75, 39);
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 29, 79, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(66, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -146,10 +146,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button1.Location = new System.Drawing.Point(104, 668);
-            this.button1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.button1.Location = new System.Drawing.Point(91, 625);
+            this.button1.Margin = new System.Windows.Forms.Padding(7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(539, 2);
+            this.button1.Size = new System.Drawing.Size(472, 2);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -157,9 +157,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(99, 515);
+            this.pictureBox3.Location = new System.Drawing.Point(87, 482);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 53);
+            this.pictureBox3.Size = new System.Drawing.Size(44, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
@@ -167,9 +167,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(98, 614);
+            this.pictureBox4.Location = new System.Drawing.Point(86, 574);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 53);
+            this.pictureBox4.Size = new System.Drawing.Size(44, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
@@ -185,30 +185,30 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.button3.Location = new System.Drawing.Point(107, 570);
-            this.button3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.button3.Location = new System.Drawing.Point(94, 533);
+            this.button3.Margin = new System.Windows.Forms.Padding(7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(539, 2);
+            this.button3.Size = new System.Drawing.Size(472, 2);
             this.button3.TabIndex = 15;
             this.button3.UseVisualStyleBackColor = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(149, 69);
+            this.pictureBox5.Location = new System.Drawing.Point(130, 65);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(477, 438);
+            this.pictureBox5.Size = new System.Drawing.Size(417, 410);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
-            //this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.ClientSize = new System.Drawing.Size(742, 882);
+            this.ClientSize = new System.Drawing.Size(649, 825);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox4);
@@ -219,7 +219,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
