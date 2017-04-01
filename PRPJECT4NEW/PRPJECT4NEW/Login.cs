@@ -41,14 +41,24 @@ namespace PRPJECT4NEW
                
                 if (dr.Read() == true)
                 {
-                    // MessageBox.Show("Login Successful");
-                    if (dr[6].ToString() == "Student")
+                
+                // MessageBox.Show("Login Successful");
+                if (dr[6].ToString() == "Student")
                     {
                         //MessageBox.Show("Login student");
                         this.Hide();
                         Form1 Connect = new Form1();
-                        Connect.Show();
-                        Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                        
+                       // Connect.Show();
+                    Connect.ShowDialog();
+                       Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                    this.Show();
+                    this.sqlcon.Close();
+                    txtpassword.Clear();
+                    txtuser.Clear();
+                    cmd = null;
+
+
                 }
                     else if (dr[6].ToString() == "Exam_Section")
                     {
