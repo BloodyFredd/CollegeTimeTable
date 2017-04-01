@@ -21,14 +21,15 @@ namespace BranchA_MazalPlus.Admin
 
         private void Exams_report_button_Click(object sender, EventArgs e)
         {
-
-            Calendar frm = new Calendar("Matan", 123456);
-            frm.TopLevel = false;
-            //frm.FormBorderStyle = FormBorderStyle.None;
-            //frm.WindowState = FormWindowState.Maximized;
-            Buttons_view.Controls.Add(frm);
-            Buttons_view.Visible = true;
-            frm.Show();
+            NewUser Connect = new NewUser();
+            Connect.Show();
+            //Calendar frm = new Calendar("Matan", 123456);
+            //frm.TopLevel = false;
+            ////frm.FormBorderStyle = FormBorderStyle.None;
+            ////frm.WindowState = FormWindowState.Maximized;
+            //Buttons_view.Controls.Add(frm);
+            //Buttons_view.Visible = true;
+            //frm.Show();
 
         }
 
