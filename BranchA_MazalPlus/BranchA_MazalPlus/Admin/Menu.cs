@@ -88,7 +88,7 @@ namespace BranchA_MazalPlus.Admin
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -138,8 +138,15 @@ namespace BranchA_MazalPlus.Admin
         private void Logout_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Move to login panel");
-            this.Close();
+            // hide main form
+            this.Hide();
 
+            // show other form
+            Login form2 = new Login();
+            form2.Show();
+
+            // close application
+            this.Close();
         }
     }
 }
