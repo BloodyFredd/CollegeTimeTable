@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -41,7 +42,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mazalDataSet = new BranchA_MazalPlus.MazalDataSet();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personTableAdapter = new BranchA_MazalPlus.MazalDataSetTableAdapters.personTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,39 +67,43 @@
             this.button1.Location = new System.Drawing.Point(1156, 833);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 69);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "F_name", true));
             this.textBox1.Location = new System.Drawing.Point(295, 292);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(347, 38);
-            this.textBox1.TabIndex = 3;
+            this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "L_name", true));
             this.textBox2.Location = new System.Drawing.Point(295, 369);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(347, 38);
-            this.textBox2.TabIndex = 4;
+            this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "ID", true));
             this.textBox3.Location = new System.Drawing.Point(295, 442);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(347, 38);
-            this.textBox3.TabIndex = 5;
+            this.textBox3.TabIndex = 3;
             // 
             // textBox4
             // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Telephone", true));
             this.textBox4.Location = new System.Drawing.Point(295, 514);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(347, 38);
-            this.textBox4.TabIndex = 6;
+            this.textBox4.TabIndex = 4;
             // 
             // label2
             // 
@@ -143,10 +153,11 @@
             // 
             // textBox5
             // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Email", true));
             this.textBox5.Location = new System.Drawing.Point(295, 577);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(347, 38);
-            this.textBox5.TabIndex = 11;
+            this.textBox5.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -159,6 +170,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(607, 344);
             this.dataGridView1.TabIndex = 13;
             this.dataGridView1.Visible = false;
+            // 
+            // mazalDataSet
+            // 
+            this.mazalDataSet.DataSetName = "MazalDataSet";
+            this.mazalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataMember = "person";
+            this.personBindingSource.DataSource = this.mazalDataSet;
+            // 
+            // personTableAdapter
+            // 
+            this.personTableAdapter.ClearBeforeFill = true;
             // 
             // NewUser
             // 
@@ -180,7 +205,10 @@
             this.Controls.Add(this.label1);
             this.Name = "NewUser";
             this.Text = "NewUser";
+            this.Load += new System.EventHandler(this.NewUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +228,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private MazalDataSet mazalDataSet;
+        private System.Windows.Forms.BindingSource personBindingSource;
+        private MazalDataSetTableAdapters.personTableAdapter personTableAdapter;
     }
 }
