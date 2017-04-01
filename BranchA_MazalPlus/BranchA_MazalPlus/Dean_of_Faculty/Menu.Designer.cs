@@ -40,7 +40,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Logout_Button = new System.Windows.Forms.Button();
             this.Special_Exams_Button = new System.Windows.Forms.Button();
             this.Supervisor_Tut_Button = new System.Windows.Forms.Button();
             this.Special_Stud_Button = new System.Windows.Forms.Button();
@@ -51,6 +50,8 @@
             this.Sign_person_button = new System.Windows.Forms.Button();
             this.Buttons_view = new System.Windows.Forms.Panel();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.Logout_Button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -171,6 +172,7 @@
             // 
             this.panel2.AccessibleName = "Buttons_place";
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.Logout_Button);
             this.panel2.Controls.Add(this.Special_Exams_Button);
             this.panel2.Controls.Add(this.Supervisor_Tut_Button);
@@ -187,31 +189,6 @@
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
             this.panel2.Size = new System.Drawing.Size(218, 449);
             this.panel2.TabIndex = 1;
-            // 
-            // Logout_Button
-            // 
-            this.Logout_Button.AccessibleName = "Logout_Button";
-            this.Logout_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Logout_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Logout_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Logout_Button.FlatAppearance.BorderSize = 0;
-            this.Logout_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Logout_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout_Button.ForeColor = System.Drawing.Color.White;
-            this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
-            this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_Button.Location = new System.Drawing.Point(0, 364);
-            this.Logout_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Logout_Button.Name = "Logout_Button";
-            this.Logout_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Logout_Button.Size = new System.Drawing.Size(218, 41);
-            this.Logout_Button.TabIndex = 10;
-            this.Logout_Button.Text = " Logout";
-            this.Logout_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Logout_Button.UseVisualStyleBackColor = false;
-            this.Logout_Button.Click += new System.EventHandler(this.Logout_Click);
             // 
             // Special_Exams_Button
             // 
@@ -430,6 +407,54 @@
             // 
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             // 
+            // Logout_Button
+            // 
+            this.Logout_Button.AccessibleName = "Logout_Button";
+            this.Logout_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Logout_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Logout_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Logout_Button.FlatAppearance.BorderSize = 0;
+            this.Logout_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Logout_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout_Button.ForeColor = System.Drawing.Color.White;
+            this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
+            this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Logout_Button.Location = new System.Drawing.Point(0, 364);
+            this.Logout_Button.Margin = new System.Windows.Forms.Padding(1);
+            this.Logout_Button.Name = "Logout_Button";
+            this.Logout_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Logout_Button.Size = new System.Drawing.Size(218, 41);
+            this.Logout_Button.TabIndex = 11;
+            this.Logout_Button.Text = "Merge auditoriums";
+            this.Logout_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Logout_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Logout_Button.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.AccessibleName = "Logout_Button";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 405);
+            this.button1.Margin = new System.Windows.Forms.Padding(1);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(218, 41);
+            this.button1.TabIndex = 12;
+            this.button1.Text = " Logout";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,7 +487,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button Logout_Button;
         private System.Windows.Forms.Button Special_Exams_Button;
         private System.Windows.Forms.Button Supervisor_Tut_Button;
         private System.Windows.Forms.Button Special_Stud_Button;
@@ -479,5 +503,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.Label Admin_name;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Logout_Button;
     }
 }
