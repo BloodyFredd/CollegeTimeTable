@@ -24,7 +24,11 @@ namespace BranchA_MazalPlus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.personTableAdapter.Fill(this.mazalDataSet.person);
+            //this.personTableAdapter.Fill(this.mazalDataSet.person);
+            this.mazalDataSet.person.AddpersonRow(this.mazalDataSet.person.NewpersonRow());
+            personBindingSource.MoveLast();
+            personBindingSource.EndEdit();
+            personTableAdapter.Update(this.mazalDataSet.person);
             MessageBox.Show("daniel");
         }
 
@@ -42,6 +46,12 @@ namespace BranchA_MazalPlus
         {
             // TODO: This line of code loads data into the 'mazalDataSet.person' table. You can move, or remove it, as needed.
             this.personTableAdapter.Fill(this.mazalDataSet.person);
+            this.personBindingSource.DataSource = this.mazalDataSet.person;
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

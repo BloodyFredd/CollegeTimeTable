@@ -42,12 +42,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mazalDataSet = new BranchA_MazalPlus.MazalDataSet();
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mazalDataSet = new BranchA_MazalPlus.MazalDataSet();
             this.personTableAdapter = new BranchA_MazalPlus.MazalDataSetTableAdapters.personTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,6 +88,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(347, 38);
             this.textBox2.TabIndex = 2;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -163,23 +164,23 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.personBindingSource, "ID", true));
             this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(340, 738);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(607, 344);
+            this.dataGridView1.Size = new System.Drawing.Size(685, 344);
             this.dataGridView1.TabIndex = 13;
-            this.dataGridView1.Visible = false;
-            // 
-            // mazalDataSet
-            // 
-            this.mazalDataSet.DataSetName = "MazalDataSet";
-            this.mazalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // personBindingSource
             // 
             this.personBindingSource.DataMember = "person";
             this.personBindingSource.DataSource = this.mazalDataSet;
+            // 
+            // mazalDataSet
+            // 
+            this.mazalDataSet.DataSetName = "MazalDataSet";
+            this.mazalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // personTableAdapter
             // 
@@ -207,8 +208,8 @@
             this.Text = "NewUser";
             this.Load += new System.EventHandler(this.NewUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mazalDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
