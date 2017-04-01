@@ -14,7 +14,7 @@ namespace BranchA_MazalPlus
         [STAThread]
         static void Main()
         {
-            Application.Run(new NewUser());
+            Application.Run(new Login());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
         }
@@ -35,7 +35,7 @@ namespace BranchA_MazalPlus
 //using System.Threading.Tasks;
 //using System.Windows.Forms;
 
-//namespace PRPJECT4NEW
+//namespace BranchA_MazalPlus
 //{
 //    static class Program
 //    {
@@ -49,7 +49,7 @@ namespace BranchA_MazalPlus
 //            Application.SetCompatibleTextRenderingDefault(false);
 //            //Application.Run(new Form1());
 //            Application.Run(new Login());
-//            // Application.Run(new Exams_Section.Menu());
+//            // Application.Run(new Lecturer.Menu());
 //        }
 //    }
 //}
