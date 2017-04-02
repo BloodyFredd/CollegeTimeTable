@@ -114,9 +114,9 @@
             this.Secretary_Name.Margin = new System.Windows.Forms.Padding(1, 11, 5, 0);
             this.Secretary_Name.Name = "Secretary_Name";
             this.Secretary_Name.Padding = new System.Windows.Forms.Padding(15, 20, 0, 0);
-            this.Secretary_Name.Size = new System.Drawing.Size(233, 43);
+            this.Secretary_Name.Size = new System.Drawing.Size(148, 43);
             this.Secretary_Name.TabIndex = 2;
-            this.Secretary_Name.Text = "     Tech Team person";
+            this.Secretary_Name.Text = "    Secretary ";
             this.Secretary_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Secretary_Name.Click += new System.EventHandler(this.label2_Click);
             // 

@@ -61,7 +61,7 @@ namespace BranchA_MazalPlus.Secretary
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
 
-            SqlCommand cmd = new SqlCommand("select * from person where Permission='Teaching_Assistent' OR Permission='Lecturer' ", sqlcon);
+            SqlCommand cmd = new SqlCommand("select * from person where Permission='Teaching_Assistant' OR Permission='Lecturer' ", sqlcon);
 
 
             try
