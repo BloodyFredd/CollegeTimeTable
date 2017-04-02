@@ -90,7 +90,8 @@ namespace BranchA_MazalPlus.Admin
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             // close application
-            this.Close();
+            System.Windows.Forms.Application.Exit();
+            //this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
