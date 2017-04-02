@@ -41,9 +41,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Logout_Button = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.Special_Exams_Button = new System.Windows.Forms.Button();
             this.Supervisor_Tut_Button = new System.Windows.Forms.Button();
             this.Special_Stud_Button = new System.Windows.Forms.Button();
@@ -53,6 +51,7 @@
             this.Exams_Assignment_Button = new System.Windows.Forms.Button();
             this.Sign_person_button = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.Logout_Button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,14 +74,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(658, 46);
+            this.panel1.Size = new System.Drawing.Size(655, 46);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Buttons_view
             // 
             this.Buttons_view.Location = new System.Drawing.Point(0, 46);
-            this.Buttons_view.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Buttons_view.Margin = new System.Windows.Forms.Padding(2);
             this.Buttons_view.Name = "Buttons_view";
             this.Buttons_view.Size = new System.Drawing.Size(95, 35);
             this.Buttons_view.TabIndex = 0;
@@ -91,7 +90,7 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(573, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(570, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 13, 34, 0);
@@ -104,7 +103,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(602, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(599, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 9, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 13, 34, 0);
@@ -184,7 +183,6 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.panel2.Controls.Add(this.Logout_Button);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.Special_Exams_Button);
             this.panel2.Controls.Add(this.Supervisor_Tut_Button);
             this.panel2.Controls.Add(this.Special_Stud_Button);
@@ -198,34 +196,9 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(218, 449);
+            this.panel2.Size = new System.Drawing.Size(218, 493);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // Logout_Button
-            // 
-            this.Logout_Button.AccessibleName = "Logout_Button";
-            this.Logout_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Logout_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Logout_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Logout_Button.FlatAppearance.BorderSize = 0;
-            this.Logout_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Logout_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout_Button.ForeColor = System.Drawing.Color.White;
-            this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
-            this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_Button.Location = new System.Drawing.Point(0, 404);
-            this.Logout_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Logout_Button.Name = "Logout_Button";
-            this.Logout_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Logout_Button.Size = new System.Drawing.Size(218, 41);
-            this.Logout_Button.TabIndex = 11;
-            this.Logout_Button.Text = " Logout";
-            this.Logout_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Logout_Button.UseVisualStyleBackColor = false;
-            this.Logout_Button.Click += new System.EventHandler(this.Logout_Button_Click);
             // 
             // button2
             // 
@@ -247,21 +220,11 @@
             this.button2.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(218, 40);
             this.button2.TabIndex = 10;
-            this.button2.Text = " Special Exams";
+            this.button2.Text = "Merge the Auditorium";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(70, 390);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Merge_Auditorium_Button_Click);
             // 
             // Special_Exams_Button
             // 
@@ -287,7 +250,7 @@
             this.Special_Exams_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Special_Exams_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Special_Exams_Button.UseVisualStyleBackColor = false;
-            this.Special_Exams_Button.Click += new System.EventHandler(this.Special_Exams_Button_Click);
+            this.Special_Exams_Button.Click += new System.EventHandler(this.Occupied_Classes_Button_Click);
             // 
             // Supervisor_Tut_Button
             // 
@@ -312,7 +275,7 @@
             this.Supervisor_Tut_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supervisor_Tut_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Supervisor_Tut_Button.UseVisualStyleBackColor = false;
-            this.Supervisor_Tut_Button.Click += new System.EventHandler(this.Supervisor_Tut_Button_Click);
+            this.Supervisor_Tut_Button.Click += new System.EventHandler(this.Excellent_Students_Button_Click);
             // 
             // Special_Stud_Button
             // 
@@ -337,7 +300,7 @@
             this.Special_Stud_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Special_Stud_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Special_Stud_Button.UseVisualStyleBackColor = false;
-            this.Special_Stud_Button.Click += new System.EventHandler(this.Special_Stud_Button_Click);
+            this.Special_Stud_Button.Click += new System.EventHandler(this.Exemption_Stud_Button_Click);
             // 
             // Available_Classes_Button
             // 
@@ -362,7 +325,7 @@
             this.Available_Classes_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Available_Classes_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Available_Classes_Button.UseVisualStyleBackColor = false;
-            this.Available_Classes_Button.Click += new System.EventHandler(this.Available_Classes_Button_Click);
+            this.Available_Classes_Button.Click += new System.EventHandler(this.Remove_Teaching_Assistant_Button_Click);
             // 
             // Supervisors_List_Button
             // 
@@ -387,7 +350,7 @@
             this.Supervisors_List_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supervisors_List_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Supervisors_List_Button.UseVisualStyleBackColor = false;
-            this.Supervisors_List_Button.Click += new System.EventHandler(this.Supervisors_List_Button_Click);
+            this.Supervisors_List_Button.Click += new System.EventHandler(this.Remove_Student_Button_Click);
             // 
             // Supervisors_Button
             // 
@@ -412,7 +375,7 @@
             this.Supervisors_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supervisors_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Supervisors_Button.UseVisualStyleBackColor = false;
-            this.Supervisors_Button.Click += new System.EventHandler(this.Supervisors_Button_Click);
+            this.Supervisors_Button.Click += new System.EventHandler(this.Failing_Students_Button_Click);
             // 
             // Exams_Assignment_Button
             // 
@@ -437,7 +400,7 @@
             this.Exams_Assignment_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exams_Assignment_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Exams_Assignment_Button.UseVisualStyleBackColor = false;
-            this.Exams_Assignment_Button.Click += new System.EventHandler(this.Exams_Assignment_Button_Click);
+            this.Exams_Assignment_Button.Click += new System.EventHandler(this.Sign_Student_Course_Button_Click);
             // 
             // Sign_person_button
             // 
@@ -463,22 +426,47 @@
             this.Sign_person_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Sign_person_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Sign_person_button.UseVisualStyleBackColor = false;
-            this.Sign_person_button.Click += new System.EventHandler(this.Exams_report_button_Click);
+            this.Sign_person_button.Click += new System.EventHandler(this.Sign_new_user_button_Click);
             // 
             // backgroundWorker2
             // 
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
+            // 
+            // Logout_Button
+            // 
+            this.Logout_Button.AccessibleName = "Logout_Button";
+            this.Logout_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Logout_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Logout_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Logout_Button.FlatAppearance.BorderSize = 0;
+            this.Logout_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Logout_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout_Button.ForeColor = System.Drawing.Color.White;
+            this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
+            this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Logout_Button.Location = new System.Drawing.Point(0, 404);
+            this.Logout_Button.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Logout_Button.Name = "Logout_Button";
+            this.Logout_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Logout_Button.Size = new System.Drawing.Size(218, 41);
+            this.Logout_Button.TabIndex = 11;
+            this.Logout_Button.Text = " Logout";
+            this.Logout_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Logout_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Logout_Button.UseVisualStyleBackColor = false;
+            this.Logout_Button.Click += new System.EventHandler(this.Logout_Button_Click_1);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(658, 495);
+            this.ClientSize = new System.Drawing.Size(655, 539);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -517,7 +505,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.Label Admin_name;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Logout_Button;
     }

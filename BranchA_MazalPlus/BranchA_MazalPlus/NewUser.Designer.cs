@@ -188,9 +188,9 @@
             this.perm1.Items.AddRange(new object[] {
             "Lecturer",
             "Student",
-            "Teaching_Assistent"});
+            "Teaching_Assistant"});
             this.perm1.Location = new System.Drawing.Point(327, 131);
-            this.perm1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.perm1.Margin = new System.Windows.Forms.Padding(2);
             this.perm1.Name = "perm1";
             this.perm1.Size = new System.Drawing.Size(133, 21);
             this.perm1.TabIndex = 16;

@@ -19,7 +19,7 @@ namespace BranchA_MazalPlus.Admin
 
         }
 
-        private void Exams_report_button_Click(object sender, EventArgs e)
+        private void Sign_new_user_button_Click(object sender, EventArgs e)
         {
             NewUser Connect = new NewUser();
             Connect.Show();
@@ -34,37 +34,37 @@ namespace BranchA_MazalPlus.Admin
         }
 
 
-        private void Exams_Assignment_Button_Click(object sender, EventArgs e)
+        private void Sign_Student_Course_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams Assignment");
+            MessageBox.Show("Sign a new student to a course.");
         }
 
-        private void Supervisors_Button_Click(object sender, EventArgs e)
+        private void Failing_Students_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Supervisors Assignment");
         }
 
-        private void Supervisors_List_Button_Click(object sender, EventArgs e)
+        private void Remove_Student_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Supervisors List");
         }
 
-        private void Available_Classes_Button_Click(object sender, EventArgs e)
+        private void Remove_Teaching_Assistant_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Available Classes");
         }
 
-        private void Special_Stud_Button_Click(object sender, EventArgs e)
+        private void Exemption_Stud_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Special Students");
         }
 
-        private void Supervisor_Tut_Button_Click(object sender, EventArgs e)
+        private void Excellent_Students_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Supervisor Tutorial");
         }
 
-        private void Special_Exams_Button_Click(object sender, EventArgs e)
+        private void Occupied_Classes_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Special Exams");
         }
@@ -134,12 +134,32 @@ namespace BranchA_MazalPlus.Admin
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Merge_Auditorium_Button_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Logout_Button_Click(object sender, EventArgs e)
+
+        //private void Logout_Button_Click(object sender, EventArgs e)
+        //{
+        //    MessageBox.Show("Have a good day!");
+        //    // hide main form
+        //    this.Hide();
+
+        //    // show other form
+        //    Login form2 = new Login();
+        //    form2.Show();
+
+        //    // close application
+        //    this.Close();
+        //}
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("hiygi");
+        }
+
+        private void Logout_Button_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Have a good day!");
             // hide main form
