@@ -41,27 +41,27 @@ namespace BranchA_MazalPlus.Admin
 
         private void Failing_Students_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors Assignment");
+            MessageBox.Show("Failing Students");
         }
 
         private void Remove_Student_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors List");
+            MessageBox.Show("Remove student");
         }
 
         private void Remove_Teaching_Assistant_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Available Classes");
+            MessageBox.Show("Remove teaching assistant");
         }
 
         private void Exemption_Stud_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Special Students");
+            MessageBox.Show("Exemption students");
         }
 
         private void Excellent_Students_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisor Tutorial");
+            MessageBox.Show("Excellent students");
         }
 
         private void Occupied_Classes_Button_Click(object sender, EventArgs e)
@@ -136,30 +136,10 @@ namespace BranchA_MazalPlus.Admin
 
         private void Merge_Auditorium_Button_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Merge Auditorium");
         }
 
-
-        //private void Logout_Button_Click(object sender, EventArgs e)
-        //{
-        //    MessageBox.Show("Have a good day!");
-        //    // hide main form
-        //    this.Hide();
-
-        //    // show other form
-        //    Login form2 = new Login();
-        //    form2.Show();
-
-        //    // close application
-        //    this.Close();
-        //}
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("hiygi");
-        }
-
-        private void Logout_Button_Click_1(object sender, EventArgs e)
+        private void Logout_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Have a good day!");
             // hide main form
