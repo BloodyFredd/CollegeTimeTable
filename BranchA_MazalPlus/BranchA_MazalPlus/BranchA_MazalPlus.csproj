@@ -109,6 +109,12 @@
     <Compile Include="Secretary\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Secretary\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teaching_Assistant\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </Compile>
     <EmbeddedResource Include="Secretary\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teaching_Assistant\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
