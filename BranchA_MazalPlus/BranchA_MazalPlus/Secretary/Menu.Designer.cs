@@ -109,7 +109,6 @@
             this.Secretary_Name.Dock = System.Windows.Forms.DockStyle.Left;
             this.Secretary_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Secretary_Name.ForeColor = System.Drawing.Color.White;
-            this.Secretary_Name.Image = ((System.Drawing.Image)(resources.GetObject("Secretary_Name.Image")));
             this.Secretary_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Secretary_Name.Location = new System.Drawing.Point(291, 0);
             this.Secretary_Name.Margin = new System.Windows.Forms.Padding(1, 11, 5, 0);
@@ -156,7 +155,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -408,7 +406,7 @@
             this.Exams_report_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Exams_report_button.Size = new System.Drawing.Size(291, 50);
             this.Exams_report_button.TabIndex = 0;
-            this.Exams_report_button.Text = " Exams report";
+            this.Exams_report_button.Text = " Reports";
             this.Exams_report_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exams_report_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Exams_report_button.UseVisualStyleBackColor = false;
