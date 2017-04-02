@@ -38,6 +38,7 @@ namespace BranchA_MazalPlus
             this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
             //SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
+            txtuser.Text = txtuser.Text + "@mazal.com";
             SqlCommand cmd = new SqlCommand("select * from person where Email='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
             SqlDataReader dr = cmd.ExecuteReader();
 
