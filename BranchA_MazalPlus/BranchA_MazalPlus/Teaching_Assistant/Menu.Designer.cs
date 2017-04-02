@@ -42,14 +42,10 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Logout_Button = new System.Windows.Forms.Button();
-            this.Special_Exams_Button = new System.Windows.Forms.Button();
-            this.Supervisor_Tut_Button = new System.Windows.Forms.Button();
-            this.Special_Stud_Button = new System.Windows.Forms.Button();
-            this.Available_Classes_Button = new System.Windows.Forms.Button();
-            this.Supervisors_List_Button = new System.Windows.Forms.Button();
-            this.Supervisors_Button = new System.Windows.Forms.Button();
-            this.Exams_Assignment_Button = new System.Windows.Forms.Button();
-            this.Sign_person_button = new System.Windows.Forms.Button();
+            this.Office_Hours_button = new System.Windows.Forms.Button();
+            this.Give_0_Button = new System.Windows.Forms.Button();
+            this.Round_56_Button = new System.Windows.Forms.Button();
+            this.Reports_button = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -180,20 +176,16 @@
             this.panel2.AccessibleName = "Buttons_place";
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.panel2.Controls.Add(this.Logout_Button);
-            this.panel2.Controls.Add(this.Special_Exams_Button);
-            this.panel2.Controls.Add(this.Supervisor_Tut_Button);
-            this.panel2.Controls.Add(this.Special_Stud_Button);
-            this.panel2.Controls.Add(this.Available_Classes_Button);
-            this.panel2.Controls.Add(this.Supervisors_List_Button);
-            this.panel2.Controls.Add(this.Supervisors_Button);
-            this.panel2.Controls.Add(this.Exams_Assignment_Button);
-            this.panel2.Controls.Add(this.Sign_person_button);
+            this.panel2.Controls.Add(this.Office_Hours_button);
+            this.panel2.Controls.Add(this.Give_0_Button);
+            this.panel2.Controls.Add(this.Round_56_Button);
+            this.panel2.Controls.Add(this.Reports_button);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 46);
             this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(218, 449);
+            this.panel2.Size = new System.Drawing.Size(218, 225);
             this.panel2.TabIndex = 1;
             // 
             // Logout_Button
@@ -209,7 +201,7 @@
             this.Logout_Button.ForeColor = System.Drawing.Color.White;
             this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
             this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_Button.Location = new System.Drawing.Point(0, 364);
+            this.Logout_Button.Location = new System.Drawing.Point(0, 171);
             this.Logout_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Logout_Button.Name = "Logout_Button";
             this.Logout_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
@@ -221,207 +213,106 @@
             this.Logout_Button.UseVisualStyleBackColor = false;
             this.Logout_Button.Click += new System.EventHandler(this.Logout_Button_Click);
             // 
-            // Special_Exams_Button
+            // Office_Hours_button
             // 
-            this.Special_Exams_Button.AccessibleName = "Special_Exams_Button";
-            this.Special_Exams_Button.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.Special_Exams_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Special_Exams_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Special_Exams_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Special_Exams_Button.FlatAppearance.BorderSize = 0;
-            this.Special_Exams_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Special_Exams_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Special_Exams_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Special_Exams_Button.ForeColor = System.Drawing.Color.White;
-            this.Special_Exams_Button.Image = ((System.Drawing.Image)(resources.GetObject("Special_Exams_Button.Image")));
-            this.Special_Exams_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Special_Exams_Button.Location = new System.Drawing.Point(0, 316);
-            this.Special_Exams_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Special_Exams_Button.Name = "Special_Exams_Button";
-            this.Special_Exams_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Special_Exams_Button.Size = new System.Drawing.Size(218, 48);
-            this.Special_Exams_Button.TabIndex = 8;
-            this.Special_Exams_Button.Text = "Report of occupied classes";
-            this.Special_Exams_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Special_Exams_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Special_Exams_Button.UseVisualStyleBackColor = false;
-            this.Special_Exams_Button.Click += new System.EventHandler(this.Special_Exams_Button_Click);
+            this.Office_Hours_button.AccessibleName = "Office_Hours_button";
+            this.Office_Hours_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Office_Hours_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Office_Hours_button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Office_Hours_button.FlatAppearance.BorderSize = 0;
+            this.Office_Hours_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Office_Hours_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Office_Hours_button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Office_Hours_button.ForeColor = System.Drawing.Color.White;
+            this.Office_Hours_button.Image = ((System.Drawing.Image)(resources.GetObject("Office_Hours_button.Image")));
+            this.Office_Hours_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Office_Hours_button.Location = new System.Drawing.Point(0, 130);
+            this.Office_Hours_button.Margin = new System.Windows.Forms.Padding(1);
+            this.Office_Hours_button.Name = "Office_Hours_button";
+            this.Office_Hours_button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Office_Hours_button.Size = new System.Drawing.Size(218, 41);
+            this.Office_Hours_button.TabIndex = 4;
+            this.Office_Hours_button.Text = "Add office hours";
+            this.Office_Hours_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Office_Hours_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Office_Hours_button.UseVisualStyleBackColor = false;
+            this.Office_Hours_button.Click += new System.EventHandler(this.Supervisors_List_Button_Click);
             // 
-            // Supervisor_Tut_Button
+            // Give_0_Button
             // 
-            this.Supervisor_Tut_Button.AccessibleName = "Supervisor_Tut_Button";
-            this.Supervisor_Tut_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Supervisor_Tut_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Supervisor_Tut_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Supervisor_Tut_Button.FlatAppearance.BorderSize = 0;
-            this.Supervisor_Tut_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Supervisor_Tut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Supervisor_Tut_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervisor_Tut_Button.ForeColor = System.Drawing.Color.White;
-            this.Supervisor_Tut_Button.Image = ((System.Drawing.Image)(resources.GetObject("Supervisor_Tut_Button.Image")));
-            this.Supervisor_Tut_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Supervisor_Tut_Button.Location = new System.Drawing.Point(0, 263);
-            this.Supervisor_Tut_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Supervisor_Tut_Button.Name = "Supervisor_Tut_Button";
-            this.Supervisor_Tut_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Supervisor_Tut_Button.Size = new System.Drawing.Size(218, 53);
-            this.Supervisor_Tut_Button.TabIndex = 7;
-            this.Supervisor_Tut_Button.Text = "Report of excellent students";
-            this.Supervisor_Tut_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Supervisor_Tut_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Supervisor_Tut_Button.UseVisualStyleBackColor = false;
-            this.Supervisor_Tut_Button.Click += new System.EventHandler(this.Supervisor_Tut_Button_Click);
+            this.Give_0_Button.AccessibleName = "Give_0_Button";
+            this.Give_0_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Give_0_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Give_0_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Give_0_Button.FlatAppearance.BorderSize = 0;
+            this.Give_0_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Give_0_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Give_0_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Give_0_Button.ForeColor = System.Drawing.Color.White;
+            this.Give_0_Button.Image = ((System.Drawing.Image)(resources.GetObject("Give_0_Button.Image")));
+            this.Give_0_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Give_0_Button.Location = new System.Drawing.Point(0, 89);
+            this.Give_0_Button.Margin = new System.Windows.Forms.Padding(1);
+            this.Give_0_Button.Name = "Give_0_Button";
+            this.Give_0_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Give_0_Button.Size = new System.Drawing.Size(218, 41);
+            this.Give_0_Button.TabIndex = 3;
+            this.Give_0_Button.Text = "Give a 0 grade";
+            this.Give_0_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Give_0_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Give_0_Button.UseVisualStyleBackColor = false;
+            this.Give_0_Button.Click += new System.EventHandler(this.Supervisors_Button_Click);
             // 
-            // Special_Stud_Button
+            // Round_56_Button
             // 
-            this.Special_Stud_Button.AccessibleName = "Special_Stud_Button";
-            this.Special_Stud_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Special_Stud_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Special_Stud_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Special_Stud_Button.FlatAppearance.BorderSize = 0;
-            this.Special_Stud_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Special_Stud_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Special_Stud_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Special_Stud_Button.ForeColor = System.Drawing.Color.White;
-            this.Special_Stud_Button.Image = ((System.Drawing.Image)(resources.GetObject("Special_Stud_Button.Image")));
-            this.Special_Stud_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Special_Stud_Button.Location = new System.Drawing.Point(0, 222);
-            this.Special_Stud_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Special_Stud_Button.Name = "Special_Stud_Button";
-            this.Special_Stud_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Special_Stud_Button.Size = new System.Drawing.Size(218, 41);
-            this.Special_Stud_Button.TabIndex = 6;
-            this.Special_Stud_Button.Text = "Exemption for a student";
-            this.Special_Stud_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Special_Stud_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Special_Stud_Button.UseVisualStyleBackColor = false;
-            this.Special_Stud_Button.Click += new System.EventHandler(this.Special_Stud_Button_Click);
+            this.Round_56_Button.AccessibleName = "Round_56_Button";
+            this.Round_56_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Round_56_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Round_56_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Round_56_Button.FlatAppearance.BorderSize = 0;
+            this.Round_56_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Round_56_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Round_56_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Round_56_Button.ForeColor = System.Drawing.Color.White;
+            this.Round_56_Button.Image = ((System.Drawing.Image)(resources.GetObject("Round_56_Button.Image")));
+            this.Round_56_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Round_56_Button.Location = new System.Drawing.Point(0, 48);
+            this.Round_56_Button.Margin = new System.Windows.Forms.Padding(1);
+            this.Round_56_Button.Name = "Round_56_Button";
+            this.Round_56_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Round_56_Button.Size = new System.Drawing.Size(218, 41);
+            this.Round_56_Button.TabIndex = 2;
+            this.Round_56_Button.Text = "Round a grade to 56";
+            this.Round_56_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Round_56_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Round_56_Button.UseVisualStyleBackColor = false;
+            this.Round_56_Button.Click += new System.EventHandler(this.Exams_Assignment_Button_Click);
             // 
-            // Available_Classes_Button
+            // Reports_button
             // 
-            this.Available_Classes_Button.AccessibleName = "Available_Classes_Button";
-            this.Available_Classes_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Available_Classes_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Available_Classes_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Available_Classes_Button.FlatAppearance.BorderSize = 0;
-            this.Available_Classes_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Available_Classes_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Available_Classes_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Available_Classes_Button.ForeColor = System.Drawing.Color.Transparent;
-            this.Available_Classes_Button.Image = ((System.Drawing.Image)(resources.GetObject("Available_Classes_Button.Image")));
-            this.Available_Classes_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Available_Classes_Button.Location = new System.Drawing.Point(0, 171);
-            this.Available_Classes_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Available_Classes_Button.Name = "Available_Classes_Button";
-            this.Available_Classes_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Available_Classes_Button.Size = new System.Drawing.Size(218, 51);
-            this.Available_Classes_Button.TabIndex = 5;
-            this.Available_Classes_Button.Text = "Remove a teaching assistant";
-            this.Available_Classes_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Available_Classes_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Available_Classes_Button.UseVisualStyleBackColor = false;
-            this.Available_Classes_Button.Click += new System.EventHandler(this.Available_Classes_Button_Click);
-            // 
-            // Supervisors_List_Button
-            // 
-            this.Supervisors_List_Button.AccessibleName = "Supervisors_List_Button";
-            this.Supervisors_List_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Supervisors_List_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Supervisors_List_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Supervisors_List_Button.FlatAppearance.BorderSize = 0;
-            this.Supervisors_List_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Supervisors_List_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Supervisors_List_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervisors_List_Button.ForeColor = System.Drawing.Color.White;
-            this.Supervisors_List_Button.Image = ((System.Drawing.Image)(resources.GetObject("Supervisors_List_Button.Image")));
-            this.Supervisors_List_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Supervisors_List_Button.Location = new System.Drawing.Point(0, 130);
-            this.Supervisors_List_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Supervisors_List_Button.Name = "Supervisors_List_Button";
-            this.Supervisors_List_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Supervisors_List_Button.Size = new System.Drawing.Size(218, 41);
-            this.Supervisors_List_Button.TabIndex = 4;
-            this.Supervisors_List_Button.Text = "Remove a student";
-            this.Supervisors_List_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Supervisors_List_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Supervisors_List_Button.UseVisualStyleBackColor = false;
-            this.Supervisors_List_Button.Click += new System.EventHandler(this.Supervisors_List_Button_Click);
-            // 
-            // Supervisors_Button
-            // 
-            this.Supervisors_Button.AccessibleName = "Supervisors_Button";
-            this.Supervisors_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Supervisors_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Supervisors_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Supervisors_Button.FlatAppearance.BorderSize = 0;
-            this.Supervisors_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Supervisors_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Supervisors_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervisors_Button.ForeColor = System.Drawing.Color.White;
-            this.Supervisors_Button.Image = ((System.Drawing.Image)(resources.GetObject("Supervisors_Button.Image")));
-            this.Supervisors_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Supervisors_Button.Location = new System.Drawing.Point(0, 89);
-            this.Supervisors_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Supervisors_Button.Name = "Supervisors_Button";
-            this.Supervisors_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Supervisors_Button.Size = new System.Drawing.Size(218, 41);
-            this.Supervisors_Button.TabIndex = 3;
-            this.Supervisors_Button.Text = "Report of failing students";
-            this.Supervisors_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Supervisors_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Supervisors_Button.UseVisualStyleBackColor = false;
-            this.Supervisors_Button.Click += new System.EventHandler(this.Supervisors_Button_Click);
-            // 
-            // Exams_Assignment_Button
-            // 
-            this.Exams_Assignment_Button.AccessibleName = "Exams_Assignment_Button";
-            this.Exams_Assignment_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Exams_Assignment_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Exams_Assignment_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Exams_Assignment_Button.FlatAppearance.BorderSize = 0;
-            this.Exams_Assignment_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Exams_Assignment_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Exams_Assignment_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Exams_Assignment_Button.ForeColor = System.Drawing.Color.White;
-            this.Exams_Assignment_Button.Image = ((System.Drawing.Image)(resources.GetObject("Exams_Assignment_Button.Image")));
-            this.Exams_Assignment_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exams_Assignment_Button.Location = new System.Drawing.Point(0, 48);
-            this.Exams_Assignment_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Exams_Assignment_Button.Name = "Exams_Assignment_Button";
-            this.Exams_Assignment_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Exams_Assignment_Button.Size = new System.Drawing.Size(218, 41);
-            this.Exams_Assignment_Button.TabIndex = 2;
-            this.Exams_Assignment_Button.Text = "Sign student to a course";
-            this.Exams_Assignment_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exams_Assignment_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Exams_Assignment_Button.UseVisualStyleBackColor = false;
-            this.Exams_Assignment_Button.Click += new System.EventHandler(this.Exams_Assignment_Button_Click);
-            // 
-            // Sign_person_button
-            // 
-            this.Sign_person_button.AccessibleName = "Sign_person_button";
-            this.Sign_person_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Sign_person_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Sign_person_button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Sign_person_button.FlatAppearance.BorderSize = 0;
-            this.Sign_person_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Sign_person_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Sign_person_button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Sign_person_button.ForeColor = System.Drawing.Color.White;
-            this.Sign_person_button.Image = ((System.Drawing.Image)(resources.GetObject("Sign_person_button.Image")));
-            this.Sign_person_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Sign_person_button.Location = new System.Drawing.Point(0, 7);
-            this.Sign_person_button.Margin = new System.Windows.Forms.Padding(1);
-            this.Sign_person_button.Name = "Sign_person_button";
-            this.Sign_person_button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Sign_person_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Sign_person_button.Size = new System.Drawing.Size(218, 41);
-            this.Sign_person_button.TabIndex = 0;
-            this.Sign_person_button.Text = "Sign a new person";
-            this.Sign_person_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Sign_person_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Sign_person_button.UseVisualStyleBackColor = false;
-            this.Sign_person_button.Click += new System.EventHandler(this.Exams_report_button_Click);
+            this.Reports_button.AccessibleName = "Reports_button";
+            this.Reports_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Reports_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Reports_button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Reports_button.FlatAppearance.BorderSize = 0;
+            this.Reports_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Reports_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reports_button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reports_button.ForeColor = System.Drawing.Color.White;
+            this.Reports_button.Image = ((System.Drawing.Image)(resources.GetObject("Reports_button.Image")));
+            this.Reports_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reports_button.Location = new System.Drawing.Point(0, 7);
+            this.Reports_button.Margin = new System.Windows.Forms.Padding(1);
+            this.Reports_button.Name = "Reports_button";
+            this.Reports_button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Reports_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Reports_button.Size = new System.Drawing.Size(218, 41);
+            this.Reports_button.TabIndex = 0;
+            this.Reports_button.Text = "Reports";
+            this.Reports_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reports_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Reports_button.UseVisualStyleBackColor = false;
+            this.Reports_button.Click += new System.EventHandler(this.Exams_report_button_Click);
             // 
             // backgroundWorker2
             // 
@@ -432,7 +323,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(658, 495);
+            this.ClientSize = new System.Drawing.Size(658, 271);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -459,14 +350,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button Special_Exams_Button;
-        private System.Windows.Forms.Button Supervisor_Tut_Button;
-        private System.Windows.Forms.Button Special_Stud_Button;
-        private System.Windows.Forms.Button Available_Classes_Button;
-        private System.Windows.Forms.Button Supervisors_List_Button;
-        private System.Windows.Forms.Button Supervisors_Button;
-        private System.Windows.Forms.Button Exams_Assignment_Button;
-        private System.Windows.Forms.Button Sign_person_button;
+        private System.Windows.Forms.Button Office_Hours_button;
+        private System.Windows.Forms.Button Give_0_Button;
+        private System.Windows.Forms.Button Round_56_Button;
+        private System.Windows.Forms.Button Reports_button;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;

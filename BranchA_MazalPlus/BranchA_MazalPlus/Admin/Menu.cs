@@ -152,5 +152,10 @@ namespace BranchA_MazalPlus.Admin
             // close application
             this.Close();
         }
+
+        private void Cancel_Lectures_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cancel Lectures");
+        }
     }
 }
