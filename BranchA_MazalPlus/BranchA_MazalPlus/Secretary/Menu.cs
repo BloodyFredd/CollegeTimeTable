@@ -60,37 +60,37 @@ namespace BranchA_MazalPlus.Secretary
 
         private void Exams_Assignment_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams Assignment");
+            MessageBox.Show("Add a student to a class with full capacity");
         }
 
         private void Supervisors_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors Assignment");
+            MessageBox.Show("Assign a student for all year ");
         }
 
         private void Supervisors_List_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors List");
+            MessageBox.Show("Access to a schedule of a student");
         }
 
         private void Available_Classes_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Available Classes");
+            MessageBox.Show("Modify courses of a student");
         }
 
         private void Special_Stud_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Special Students");
+            MessageBox.Show("Modify between 2 classrooms lecture  ");
         }
 
         private void Supervisor_Tut_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisor Tutorial");
+            MessageBox.Show("Link between course and his prev course ");
         }
 
         private void Special_Exams_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Special Exams");
+            MessageBox.Show("Temporary button");
         }
 
         private void Logout_Click(object sender, EventArgs e)

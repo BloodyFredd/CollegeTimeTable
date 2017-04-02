@@ -230,7 +230,7 @@
             this.Special_Exams_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Special_Exams_Button.Size = new System.Drawing.Size(291, 50);
             this.Special_Exams_Button.TabIndex = 8;
-            this.Special_Exams_Button.Text = " Special Exams";
+            this.Special_Exams_Button.Text = "Temporary button";
             this.Special_Exams_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Special_Exams_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Special_Exams_Button.UseVisualStyleBackColor = false;
@@ -255,7 +255,7 @@
             this.Supervisor_Tut_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Supervisor_Tut_Button.Size = new System.Drawing.Size(291, 50);
             this.Supervisor_Tut_Button.TabIndex = 7;
-            this.Supervisor_Tut_Button.Text = " Supervisor Tutorial";
+            this.Supervisor_Tut_Button.Text = "Link between course and his prev course ";
             this.Supervisor_Tut_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supervisor_Tut_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Supervisor_Tut_Button.UseVisualStyleBackColor = false;
@@ -280,7 +280,7 @@
             this.Special_Stud_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Special_Stud_Button.Size = new System.Drawing.Size(291, 50);
             this.Special_Stud_Button.TabIndex = 6;
-            this.Special_Stud_Button.Text = " Special Students";
+            this.Special_Stud_Button.Text = "Modify between 2 classrooms lecture  ";
             this.Special_Stud_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Special_Stud_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Special_Stud_Button.UseVisualStyleBackColor = false;
@@ -305,7 +305,7 @@
             this.Available_Classes_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Available_Classes_Button.Size = new System.Drawing.Size(291, 50);
             this.Available_Classes_Button.TabIndex = 5;
-            this.Available_Classes_Button.Text = " Available Classes";
+            this.Available_Classes_Button.Text = "Modify courses of a student";
             this.Available_Classes_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Available_Classes_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Available_Classes_Button.UseVisualStyleBackColor = false;
@@ -330,7 +330,7 @@
             this.Supervisors_List_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Supervisors_List_Button.Size = new System.Drawing.Size(291, 50);
             this.Supervisors_List_Button.TabIndex = 4;
-            this.Supervisors_List_Button.Text = " Supervisors List";
+            this.Supervisors_List_Button.Text = "Access to a schedule of a student";
             this.Supervisors_List_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supervisors_List_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Supervisors_List_Button.UseVisualStyleBackColor = false;
@@ -355,7 +355,7 @@
             this.Supervisors_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Supervisors_Button.Size = new System.Drawing.Size(291, 50);
             this.Supervisors_Button.TabIndex = 3;
-            this.Supervisors_Button.Text = " Supervisors Assignment";
+            this.Supervisors_Button.Text = "Assign a student for all year ";
             this.Supervisors_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supervisors_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Supervisors_Button.UseVisualStyleBackColor = false;
@@ -380,7 +380,7 @@
             this.Exams_Assignment_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Exams_Assignment_Button.Size = new System.Drawing.Size(291, 50);
             this.Exams_Assignment_Button.TabIndex = 2;
-            this.Exams_Assignment_Button.Text = " Exams Assignment";
+            this.Exams_Assignment_Button.Text = "Add a student to a class with full capacity";
             this.Exams_Assignment_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exams_Assignment_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Exams_Assignment_Button.UseVisualStyleBackColor = false;
