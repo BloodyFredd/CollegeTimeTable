@@ -88,7 +88,9 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            // close application
+            System.Windows.Forms.Application.Exit();
+            //this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

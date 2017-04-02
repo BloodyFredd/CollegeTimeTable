@@ -26,12 +26,14 @@ namespace BranchA_MazalPlus
         {
             //this.personTableAdapter.Fill(this.mazalDataSet.person);
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            this.Email.Text = this.Email.Text + "@plus.mazal.com";
             string query = "INSERT INTO person (ID,F_name,L_name,Telephone,Email,Password,Permission) VALUES('" + this.ID.Text + "','" + this.Fname.Text + "','" + this.Lname.Text + "','"+this.Phone.Text + "','"+this.Email.Text+"','"+ this.ID.Text +"','"+this.perm1.Text+"')  ; " ;
            this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
             SqlCommand cmd = new SqlCommand(query, sqlcon);
             SqlDataReader dr = cmd.ExecuteReader();
             MessageBox.Show("Saved");
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

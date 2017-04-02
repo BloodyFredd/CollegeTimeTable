@@ -38,7 +38,7 @@ namespace BranchA_MazalPlus
             this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
             //SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
-            txtuser.Text = txtuser.Text + "@mazal.com";
+            txtuser.Text = txtuser.Text + "@plus.mazal.com";
             SqlCommand cmd = new SqlCommand("select * from person where Email='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -121,7 +121,9 @@ namespace BranchA_MazalPlus
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // close application
+            System.Windows.Forms.Application.Exit();
+            //this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

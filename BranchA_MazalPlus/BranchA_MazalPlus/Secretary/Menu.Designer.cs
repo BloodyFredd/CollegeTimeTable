@@ -51,6 +51,8 @@
             this.Exams_report_button = new System.Windows.Forms.Button();
             this.Buttons_view = new System.Windows.Forms.Panel();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.StudentsReport = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +60,8 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
+            this.Buttons_view.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,7 +113,6 @@
             this.Secretary_Name.Dock = System.Windows.Forms.DockStyle.Left;
             this.Secretary_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Secretary_Name.ForeColor = System.Drawing.Color.White;
-            this.Secretary_Name.Image = ((System.Drawing.Image)(resources.GetObject("Secretary_Name.Image")));
             this.Secretary_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Secretary_Name.Location = new System.Drawing.Point(291, 0);
             this.Secretary_Name.Margin = new System.Windows.Forms.Padding(1, 11, 5, 0);
@@ -418,6 +421,8 @@
             // 
             this.Buttons_view.AccessibleName = "Buttons_view";
             this.Buttons_view.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.Buttons_view.Controls.Add(this.button1);
+            this.Buttons_view.Controls.Add(this.StudentsReport);
             this.Buttons_view.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Buttons_view.Location = new System.Drawing.Point(291, 57);
             this.Buttons_view.Margin = new System.Windows.Forms.Padding(1);
@@ -425,6 +430,25 @@
             this.Buttons_view.Size = new System.Drawing.Size(485, 466);
             this.Buttons_view.TabIndex = 2;
             this.Buttons_view.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // StudentsReport
+            // 
+            this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentsReport.Location = new System.Drawing.Point(118, 46);
+            this.StudentsReport.Name = "StudentsReport";
+            this.StudentsReport.RowTemplate.Height = 24;
+            this.StudentsReport.Size = new System.Drawing.Size(240, 150);
+            this.StudentsReport.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(183, 236);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Load Table";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menu
             // 
@@ -448,6 +472,8 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.Buttons_view.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,5 +502,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.Label Secretary_Name;
+        private System.Windows.Forms.DataGridView StudentsReport;
+        private System.Windows.Forms.Button button1;
     }
 }
