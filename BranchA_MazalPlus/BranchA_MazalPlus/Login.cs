@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 // new updates ver 1, once more
 namespace BranchA_MazalPlus
 {
@@ -38,7 +39,6 @@ namespace BranchA_MazalPlus
             this.sqlcon.Open();
             //SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
             SqlCommand cmd = new SqlCommand("select * from person where Email='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
-
             SqlDataReader dr = cmd.ExecuteReader();
 
             if (dr.Read() == true)

@@ -71,8 +71,9 @@ namespace BranchA_MazalPlus.Admin
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Move to login panel");
-            this.Close();
+            System.Windows.Forms.Application.Exit();
+            //MessageBox.Show("Move to login panel");
+            //this.Close();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
