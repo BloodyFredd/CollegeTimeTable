@@ -37,16 +37,9 @@ namespace BranchA_MazalPlus.Secretary
             this.sqlcon = new SqlConnection(connetionString);
             SqlCommand cmd = new SqlCommand("select * from person where Permission='"+"Student"+"'", sqlcon);
 
-           // SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
             try
             {
-                //if can read the table 
-                // SqlDataReader dr = cmd.ExecuteReader();
-                //if (dr.Read() == true)
-                //{
-                // MessageBox.Show("Login Successful");
-                // if (dr[6].ToString() == "Student")
-                // {
+ 
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
@@ -67,21 +60,13 @@ namespace BranchA_MazalPlus.Secretary
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
-            //SqlCommand cmd = new SqlCommand("select * from person where Permission='" + "Teaching_Assistent " + "'", sqlcon);
-             //SqlCommand cmd = new SqlCommand("select * from person where Permission='"+"Teaching_Assistent"+ "OR"+  "Lecturer"+"'", sqlcon);
-            SqlCommand cmd = new SqlCommand("select * from person where Permission='T'  Permission='L' ", sqlcon);
 
-            //SqlCommand cmd = new SqlCommand("select * from person where Permission='" + "Lecturer "+ "'", sqlcon);
+            SqlCommand cmd = new SqlCommand("select * from person where Permission='Teaching_Assistent' OR Permission='Lecturer' ", sqlcon);
+
 
             try
             {
-                //if can read the table 
-                // SqlDataReader dr = cmd.ExecuteReader();
-                //if (dr.Read() == true)
-                //{
-                // MessageBox.Show("Login Successful");
-                // if (dr[6].ToString() == "Student")
-                // {
+                
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();

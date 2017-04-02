@@ -51,8 +51,6 @@
             this.Exams_report_button = new System.Windows.Forms.Button();
             this.Buttons_view = new System.Windows.Forms.Panel();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.StudentsReport = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,8 +58,6 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            this.Buttons_view.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -411,7 +407,7 @@
             this.Exams_report_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Exams_report_button.Size = new System.Drawing.Size(291, 50);
             this.Exams_report_button.TabIndex = 0;
-            this.Exams_report_button.Text = " Exams report";
+            this.Exams_report_button.Text = " Reports";
             this.Exams_report_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exams_report_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Exams_report_button.UseVisualStyleBackColor = false;
@@ -421,8 +417,6 @@
             // 
             this.Buttons_view.AccessibleName = "Buttons_view";
             this.Buttons_view.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.Buttons_view.Controls.Add(this.button1);
-            this.Buttons_view.Controls.Add(this.StudentsReport);
             this.Buttons_view.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Buttons_view.Location = new System.Drawing.Point(291, 57);
             this.Buttons_view.Margin = new System.Windows.Forms.Padding(1);
@@ -430,25 +424,6 @@
             this.Buttons_view.Size = new System.Drawing.Size(485, 466);
             this.Buttons_view.TabIndex = 2;
             this.Buttons_view.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // StudentsReport
-            // 
-            this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(118, 46);
-            this.StudentsReport.Name = "StudentsReport";
-            this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(240, 150);
-            this.StudentsReport.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(183, 236);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Load Table";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menu
             // 
@@ -472,8 +447,6 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.Buttons_view.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -502,7 +475,5 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.Label Secretary_Name;
-        private System.Windows.Forms.DataGridView StudentsReport;
-        private System.Windows.Forms.Button button1;
     }
 }
