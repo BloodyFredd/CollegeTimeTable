@@ -134,43 +134,10 @@ namespace BranchA_MazalPlus.Secretary
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
-            //Calendar frm = new Calendar();
-            //frm.TopLevel = false;
-            //frm.FormBorderStyle = FormBorderStyle.None;
-            //frm.WindowState = FormWindowState.Maximized;
-            //Buttons_view.Controls.Add(frm);
-            //frm.Show();
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-            this.sqlcon.Open();
-            //SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
-            SqlCommand cmd = new SqlCommand("select * from person ", sqlcon);
-            //if can read the table 
-            SqlDataReader dr = cmd.ExecuteReader();
-            //if (dr.Read() == true)
-            //{
-            // MessageBox.Show("Login Successful");
-            // if (dr[6].ToString() == "Student")
-            // {
-            SqlDataAdapter sda = new SqlDataAdapter();
-            sda.SelectCommand = cmd;
-            DataTable dbdataset = new DataTable();
-            sda.Fill(dbdataset);
-            BindingSource bsource = new BindingSource();
-
-            bsource.DataSource = dbdataset;
-            StudentsReport.DataSource = bsource;
-            sda.Update(dbdataset);
-        }
+     
     }
 }
