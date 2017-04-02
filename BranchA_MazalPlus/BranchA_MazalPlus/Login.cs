@@ -36,7 +36,9 @@ namespace BranchA_MazalPlus
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
-            SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
+            //SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
+            SqlCommand cmd = new SqlCommand("select * from person where Email='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
+
             SqlDataReader dr = cmd.ExecuteReader();
 
             if (dr.Read() == true)
@@ -137,6 +139,11 @@ namespace BranchA_MazalPlus
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
         {
 
         }
