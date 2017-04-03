@@ -19,7 +19,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         }
 
-        private void Exams_report_button_Click(object sender, EventArgs e)
+        private void Students_Requests_Button_Click(object sender, EventArgs e)
         {
 
             Calendar frm = new Calendar("Matan", 123456);
@@ -33,35 +33,22 @@ namespace PRPJECT4NEW.Dean_of_Faculty
         }
 
 
-        private void Exams_Assignment_Button_Click(object sender, EventArgs e)
+        private void Important_messages_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams Assignment");
+            MessageBox.Show("Important messages");
         }
 
-        private void Supervisors_Button_Click(object sender, EventArgs e)
+        private void Scholarships_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors Assignment");
+            MessageBox.Show("Scholarships");
         }
 
-        private void Supervisors_List_Button_Click(object sender, EventArgs e)
+        private void Technical_Support_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors List");
+            MessageBox.Show("Technical Support");
         }
 
-        private void Available_Classes_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Available Classes");
-        }
 
-        private void Special_Stud_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Special Students");
-        }
-
-        private void Supervisor_Tut_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Supervisor Tutorial");
-        }
 
         private void Special_Exams_Button_Click(object sender, EventArgs e)
         {
