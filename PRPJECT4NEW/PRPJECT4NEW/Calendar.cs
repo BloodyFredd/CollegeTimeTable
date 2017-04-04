@@ -36,5 +36,65 @@ namespace PRPJECT4NEW
         {
 
         }
+
+        private void Insert_Click(object sender, EventArgs e)
+        {
+            using (MazalEntities context = new MazalEntities())
+            {
+                Scholarship nachshon = new Scholarship
+                {
+                    Scholership_ID = "4",
+                    Grant_Amount_shekel_ = 10000,
+                    Scholership_Name = "Nachshon",
+                    Intended_for = "Any",
+                    Duration_years_ = 1,
+                    Volunteer_hours = 150
+                };
+
+                context.Scholarships.Add(nachshon);
+                context.SaveChanges();
+            }
+        }
+
+        private void Select_Click(object sender, EventArgs e)
+        {
+            using (MazalEntities context = new MazalEntities())
+            {
+                Scholarship scholarship = context.Scholarships.FirstOrDefault(s => s.Scholership_Name == "Hachvana");
+                MessageBox.Show(scholarship.Grant_Amount_shekel_.ToString());
+            }
+        }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+            using (MazalEntities context = new MazalEntities())
+            {
+                Scholarship scholarship = context.Scholarships.FirstOrDefault(s => s.Scholership_Name == "Perach");
+                scholarship.Volunteer_hours++;
+                context.SaveChanges();
+            }
+        }
+
+        private void Remove_Click(object sender, EventArgs e)
+        {
+            using (MazalEntities context = new MazalEntities())
+            {
+                Scholarship scholarship = context.Scholarships.FirstOrDefault(s => s.Scholership_Name == "Nachshon");
+                context.Scholarships.Remove(scholarship);
+                context.SaveChanges();
+            }
+
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            using (MazalEntities context = new MazalEntities())
+            {
+                var allRows = context.Scholarships.ToList();
+                dataGridView1.DataSource = allRows;
+                dataGridView1.Refresh();
+            }
+                
+        }
     }
 }
