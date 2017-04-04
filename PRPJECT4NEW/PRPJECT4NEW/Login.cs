@@ -15,9 +15,7 @@ namespace PRPJECT4NEW
     {
         private string connetionString = null;
         private SqlConnection sqlcon;
-        int TogMove;
-        int MValX;
-        int MValY;
+
 
         public Login()
         {
@@ -58,7 +56,7 @@ namespace PRPJECT4NEW
                     txtuser.Text = "User Name";
                     txtpassword.Text = "Password";
                     txtpassword.UseSystemPasswordChar = false;
-                    Center(this);
+
                 }
                 else if (dr[6].ToString() == "Exam_Section")
                 {
@@ -74,7 +72,6 @@ namespace PRPJECT4NEW
                     txtuser.Text = "User Name";
                     txtpassword.Text = "Password";
                     txtpassword.UseSystemPasswordChar = false;
-                    Center(this);
                 }
                 else if (dr[6].ToString() == "Tech_Team")
                 {
@@ -90,7 +87,6 @@ namespace PRPJECT4NEW
                     txtuser.Text = "User Name";
                     txtpassword.Text = "Password";
                     txtpassword.UseSystemPasswordChar = false;
-                    Center(this);
                 }
                 else if (dr[6].ToString() == "Dean_of_Faculty")
                 {
@@ -106,7 +102,6 @@ namespace PRPJECT4NEW
                     txtuser.Text = "User Name";
                     txtpassword.Text = "Password";
                     txtpassword.UseSystemPasswordChar = false;
-                    Center(this);
                 }
                 else
                 {
@@ -189,30 +184,6 @@ namespace PRPJECT4NEW
             {
                 button1_Click(this, (EventArgs)e);
             }
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            TogMove = 1;
-            MValX = e.X;
-            MValY = e.Y;
-        }
-
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            TogMove = 0;
-        }
-
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (TogMove == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
-            }
-        }
-        private void Center(Form form)
-        {
-            form.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (form.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (form.Size.Height / 2));
         }
     }
 }
