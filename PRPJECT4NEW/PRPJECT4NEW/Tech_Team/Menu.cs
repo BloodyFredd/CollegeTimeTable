@@ -19,7 +19,7 @@ namespace PRPJECT4NEW.Tech_Team
 
         }
 
-        private void Exams_report_button_Click(object sender, EventArgs e)
+        private void Available_Classes_button_Click(object sender, EventArgs e)
         {
 
             Calendar frm = new Calendar("Matan", 123456);
@@ -33,24 +33,24 @@ namespace PRPJECT4NEW.Tech_Team
         }
 
 
-        private void Exams_Assignment_Button_Click(object sender, EventArgs e)
+        private void classes_with_more_than_10_students_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams Assignment");
+            MessageBox.Show("classes_with_more_than_10_students");
         }
 
-        private void Supervisors_Button_Click(object sender, EventArgs e)
+        private void Recorded_lectures_display_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors Assignment");
+            MessageBox.Show("Recorded_lectures_display");
         }
 
-        private void Supervisors_List_Button_Click(object sender, EventArgs e)
+        private void list_of_conferences_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors List");
+            MessageBox.Show("list of conferences in college in this week");
         }
 
-        private void Available_Classes_Button_Click(object sender, EventArgs e)
+        private void special_request_from_DF_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Available Classes");
+            MessageBox.Show("In this box must be list of special requests from DF(Dean of Faculty)");
         }
 
         private void Special_Stud_Button_Click(object sender, EventArgs e)
