@@ -41,6 +41,14 @@ namespace PRPJECT4NEW.Dean_of_Faculty
         private void Scholarships_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Scholarships");
+
+            ScholarshipForm frm = new ScholarshipForm("Matan", 123456);
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Technical_Support_Button_Click(object sender, EventArgs e)

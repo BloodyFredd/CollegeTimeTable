@@ -87,6 +87,12 @@
     <Compile Include="Dean_of_Faculty\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dean_of_Faculty\ScholarshipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dean_of_Faculty\ScholarshipForm.Designer.cs">
+      <DependentUpon>ScholarshipForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="person.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dean_of_Faculty\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dean_of_Faculty\ScholarshipForm.resx">
+      <DependentUpon>ScholarshipForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tech_Team\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
