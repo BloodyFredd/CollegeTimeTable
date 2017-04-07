@@ -90,6 +90,21 @@
     <Compile Include="Dean_of_Faculty\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dean_of_Faculty\ScholarshipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dean_of_Faculty\ScholarshipForm.Designer.cs">
+      <DependentUpon>ScholarshipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DF_requests.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exams_Section\special_student_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exams_Section\special_student_list.Designer.cs">
+      <DependentUpon>special_student_list.cs</DependentUpon>
+    </Compile>
     <Compile Include="person.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -97,6 +112,15 @@
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="student.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student\TuitionFeesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\TuitionFeesForm.Designer.cs">
+      <DependentUpon>TuitionFeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student_Courses.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagram.cs">
@@ -117,11 +141,11 @@
     <Compile Include="Exams_Section\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Student\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Student\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Calendar.cs">
       <SubType>Form</SubType>
@@ -143,14 +167,23 @@
     <EmbeddedResource Include="Dean_of_Faculty\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dean_of_Faculty\ScholarshipForm.resx">
+      <DependentUpon>ScholarshipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exams_Section\special_student_list.resx">
+      <DependentUpon>special_student_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\TuitionFeesForm.resx">
+      <DependentUpon>TuitionFeesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tech_Team\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Exams_Section\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Student\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

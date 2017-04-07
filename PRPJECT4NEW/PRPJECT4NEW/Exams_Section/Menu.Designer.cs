@@ -60,6 +60,10 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // panel1
             // 
             this.panel1.AccessibleName = "Header";
@@ -72,7 +76,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 46);
+            this.panel1.Size = new System.Drawing.Size(603, 46);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -80,7 +84,7 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(502, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(518, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 13, 34, 0);
@@ -93,7 +97,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(531, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(547, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 9, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 13, 34, 0);
@@ -132,6 +136,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(218, 46);
             this.panel3.TabIndex = 0;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -145,6 +150,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(200, 46);
             this.panel4.TabIndex = 1;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // pictureBox3
             // 
@@ -156,6 +162,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -164,6 +171,7 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(294, 98);
             this.flowLayoutPanel2.TabIndex = 2;
+            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
             // panel2
             // 
@@ -183,8 +191,9 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(218, 300);
+            this.panel2.Size = new System.Drawing.Size(218, 369);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Logout_Button
             // 
@@ -421,23 +430,27 @@
             this.Buttons_view.Location = new System.Drawing.Point(218, 46);
             this.Buttons_view.Margin = new System.Windows.Forms.Padding(1);
             this.Buttons_view.Name = "Buttons_view";
-            this.Buttons_view.Size = new System.Drawing.Size(369, 300);
+            this.Buttons_view.Size = new System.Drawing.Size(385, 369);
             this.Buttons_view.TabIndex = 2;
             this.Buttons_view.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // backgroundWorker2
+            // 
+            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(587, 346);
+            this.ClientSize = new System.Drawing.Size(603, 415);
             this.Controls.Add(this.Buttons_view);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

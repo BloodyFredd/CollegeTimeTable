@@ -48,7 +48,8 @@ namespace PRPJECT4NEW
                 {
                     //MessageBox.ShowDialog("Login student");
                     this.Hide();
-                    Form1 Connect = new Form1();
+                    string Student_ID = dr[0].ToString();
+                    Student.Menu Connect = new Student.Menu(Student_ID);
                     // Connect.ShowDialog();
                     Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                     Connect.ShowDialog();

@@ -16,9 +16,16 @@ namespace PRPJECT4NEW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            //Application.Run(new Menu());
             Application.Run(new Login());
            // Application.Run(new Exams_Section.Menu());
         }
+    }
+
+
+
+    static class Constants
+    {
+        public const float feePerNakaz = 300; 
     }
 }

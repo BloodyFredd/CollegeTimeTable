@@ -53,9 +53,18 @@ namespace PRPJECT4NEW.Exams_Section
             MessageBox.Show("Available Classes");
         }
 
+        // present list of student with Ease of study
         private void Special_Stud_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Special Students");
+            special_student_list frm = new special_student_list();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
+
         }
 
         private void Supervisor_Tut_Button_Click(object sender, EventArgs e)
@@ -110,6 +119,39 @@ namespace PRPJECT4NEW.Exams_Section
 
         }
 
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
 
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }

@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PRPJECT4NEW
+namespace PRPJECT4NEW.Student
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public string Student_ID;
+        public Menu(string ID)
         {
+            Student_ID = ID;
             InitializeComponent();
             Buttons_view.Visible = false;
         
@@ -21,9 +23,10 @@ namespace PRPJECT4NEW
 
         private void Celender_Click(object sender, EventArgs e)
         {
-        
+            MessageBox.Show(Student_ID);
             Calendar frm = new Calendar("Matan",123456);
             frm.TopLevel = false;
+
             //frm.FormBorderStyle = FormBorderStyle.None;
             //frm.WindowState = FormWindowState.Maximized;
             Buttons_view.Controls.Add(frm);
@@ -55,7 +58,11 @@ namespace PRPJECT4NEW
     
         private void Fees_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tuition fees report");
+            TuitionFeesForm frm = new TuitionFeesForm(Student_ID);
+            frm.TopLevel = false;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Requests_Button_Click(object sender, EventArgs e)
