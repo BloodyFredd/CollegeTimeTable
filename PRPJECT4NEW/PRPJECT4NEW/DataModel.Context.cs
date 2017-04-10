@@ -32,7 +32,6 @@ namespace PRPJECT4NEW
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Teaching_Stuff> Teaching_Stuff { get; set; }
         public virtual DbSet<cours> courses { get; set; }
-        public virtual DbSet<database_firewall_rules> database_firewall_rules { get; set; }
         public virtual DbSet<DF_requests> DF_requests { get; set; }
         public virtual DbSet<Student_Courses> Student_Courses { get; set; }
     }
