@@ -16,24 +16,39 @@ namespace PRPJECT4NEW.Student
         string Student_ID;
         float approximatedFee = 0;
 
-
         public TuitionFeesForm(string ID)
         {
             Student_ID = ID;
             InitializeComponent();
+            createGridView();
+            getData();
+        }
 
+        private void createGridView()
+        {
+            //Create columns
             tuitionGridView.Columns.Add("courseID", "Course ID");
             tuitionGridView.Columns.Add("courseName", "Course Name");
             tuitionGridView.Columns.Add("nakaz", "Nakaz");
             tuitionGridView.Columns.Add("price", "Price");
 
+            //Paint Headers
+            tuitionGridView.ColumnHeadersDefaultCellStyle.BackColor = Constants.menuColor;
+            tuitionGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
+
+        private void getData()
+        {
             using (MazalEntities context = new MazalEntities())
             {
                 //Select cources of a student without final grade 
                 var selected =
-                    from c in context.Student_Courses where c.student_id == Student_ID && c.final_grade == null
-                    from i in context.courses where i.Course_id.ToString() == c.course_id select i;
-  
+                    from c in context.Student_Courses
+                    where c.student_id == Student_ID && c.final_grade == null
+                    from i in context.courses
+                    where i.Course_id.ToString() == c.course_id
+                    select i;
+
                 foreach (var s in selected)
                 {
                     float coursePrice = (float)s.Nakaz * Constants.feePerNakaz;

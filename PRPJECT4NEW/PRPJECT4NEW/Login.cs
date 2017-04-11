@@ -24,17 +24,8 @@ namespace PRPJECT4NEW
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            // SqlConnection sqlcon = new SqlConnection(@"Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
-            // sqlcon.Open();
-            //            try
-            //           {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
@@ -42,15 +33,11 @@ namespace PRPJECT4NEW
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read() == true)
             {
-
-                // MessageBox.Show("Login Successful");
                 if (dr[6].ToString() == "Student")
                 {
-                    //MessageBox.ShowDialog("Login student");
                     this.Hide();
                     string Student_ID = dr[0].ToString();
                     Student.Menu Connect = new Student.Menu(Student_ID);
-                    // Connect.ShowDialog();
                     Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                     Connect.ShowDialog();
                     //after logout
@@ -63,10 +50,8 @@ namespace PRPJECT4NEW
                 }
                 else if (dr[6].ToString() == "Exam_Section")
                 {
-                    //MessageBox.Show("Login Exam_Section");
                     this.Hide();
                     Exams_Section.Menu Connect = new Exams_Section.Menu();
-                    // Connect.ShowDialog();
                     Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                     Connect.ShowDialog();
                     //after logout
@@ -79,7 +64,6 @@ namespace PRPJECT4NEW
                 }
                 else if (dr[6].ToString() == "Tech_Team")
                 {
-                    // MessageBox.Show("Login Tech_Team");
                     this.Hide();
                     Tech_Team.Menu Connect = new Tech_Team.Menu();
                     // Connect.ShowDialog();
@@ -130,15 +114,6 @@ namespace PRPJECT4NEW
         }
 
         // button quit
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtuser_Click(object sender, EventArgs e)
         {
@@ -152,11 +127,6 @@ namespace PRPJECT4NEW
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -165,11 +135,6 @@ namespace PRPJECT4NEW
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
@@ -211,6 +176,7 @@ namespace PRPJECT4NEW
                 this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
             }
         }
+
         private void Center(Form form)
         {
             form.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (form.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (form.Size.Height / 2));

@@ -23,8 +23,7 @@ namespace PRPJECT4NEW.Student
 
         private void Celender_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Student_ID);
-            Calendar frm = new Calendar("Matan",123456);
+            Student.Calendar frm = new Student.Calendar(Student_ID);
             frm.TopLevel = false;
 
             //frm.FormBorderStyle = FormBorderStyle.None;

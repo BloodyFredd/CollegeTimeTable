@@ -52,8 +52,10 @@
             this.scholarshipGridView.AllowUserToAddRows = false;
             this.scholarshipGridView.AllowUserToDeleteRows = false;
             this.scholarshipGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.scholarshipGridView.EnableHeadersVisualStyles = false;
             this.scholarshipGridView.Location = new System.Drawing.Point(12, 12);
             this.scholarshipGridView.Name = "scholarshipGridView";
+            this.scholarshipGridView.RowHeadersVisible = false;
             this.scholarshipGridView.Size = new System.Drawing.Size(638, 212);
             this.scholarshipGridView.TabIndex = 0;
             // 
@@ -72,7 +74,7 @@
             this.newScholarshipBtn.Location = new System.Drawing.Point(462, 294);
             this.newScholarshipBtn.Name = "newScholarshipBtn";
             this.newScholarshipBtn.Size = new System.Drawing.Size(189, 23);
-            this.newScholarshipBtn.TabIndex = 2;
+            this.newScholarshipBtn.TabIndex = 13;
             this.newScholarshipBtn.Text = "Add Scholarship";
             this.newScholarshipBtn.UseVisualStyleBackColor = true;
             this.newScholarshipBtn.Click += new System.EventHandler(this.newScholarshipBtn_Click);
@@ -134,7 +136,7 @@
             this.forTextBox.Location = new System.Drawing.Point(336, 268);
             this.forTextBox.Name = "forTextBox";
             this.forTextBox.Size = new System.Drawing.Size(100, 20);
-            this.forTextBox.TabIndex = 10;
+            this.forTextBox.TabIndex = 9;
             // 
             // grantNumeric
             // 
@@ -155,7 +157,7 @@
             this.hoursNumeric.Location = new System.Drawing.Point(551, 268);
             this.hoursNumeric.Name = "hoursNumeric";
             this.hoursNumeric.Size = new System.Drawing.Size(99, 20);
-            this.hoursNumeric.TabIndex = 13;
+            this.hoursNumeric.TabIndex = 10;
             // 
             // ScholarshipForm
             // 

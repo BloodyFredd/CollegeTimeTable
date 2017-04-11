@@ -56,12 +56,14 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         private void CreateGridView()
         {
+            //Create Columns
             scholarshipGridView.Columns.Add("Scholarship_Name", "Scholarship Name");
             scholarshipGridView.Columns.Add("Grant_Amount", "Grant Amount (NIS)");
             scholarshipGridView.Columns.Add("Intended_For", "Intended For");
             scholarshipGridView.Columns.Add("Duration(years)", "Duration (Years)");
             scholarshipGridView.Columns.Add("Volunteer_hours", "Volunteer Hours");
 
+            //Create check box column
             DataGridViewCheckBoxColumn column = new DataGridViewCheckBoxColumn();
             {
                 column.HeaderText = "Check";
@@ -72,8 +74,10 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                 column.IndeterminateValue = false;
                 column.CellTemplate = new DataGridViewCheckBoxCell();
             }
-
+            //Paint headers
             scholarshipGridView.Columns.Insert(scholarshipGridView.Columns.Count, column);
+            scholarshipGridView.ColumnHeadersDefaultCellStyle.BackColor = Constants.menuColor;
+            scholarshipGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void newScholarshipBtn_Click(object sender, EventArgs e)

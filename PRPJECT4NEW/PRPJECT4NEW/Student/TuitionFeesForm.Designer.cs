@@ -35,10 +35,17 @@
             // 
             // tuitionGridView
             // 
+            this.tuitionGridView.AllowUserToAddRows = false;
+            this.tuitionGridView.AllowUserToDeleteRows = false;
+            this.tuitionGridView.AllowUserToResizeColumns = false;
+            this.tuitionGridView.AllowUserToResizeRows = false;
+            this.tuitionGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.tuitionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tuitionGridView.Location = new System.Drawing.Point(12, 184);
+            this.tuitionGridView.EnableHeadersVisualStyles = false;
+            this.tuitionGridView.Location = new System.Drawing.Point(12, 128);
             this.tuitionGridView.Name = "tuitionGridView";
-            this.tuitionGridView.Size = new System.Drawing.Size(854, 150);
+            this.tuitionGridView.RowHeadersVisible = false;
+            this.tuitionGridView.Size = new System.Drawing.Size(854, 206);
             this.tuitionGridView.TabIndex = 0;
             // 
             // totalFeeLabel
