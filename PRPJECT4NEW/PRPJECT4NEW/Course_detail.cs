@@ -20,8 +20,8 @@ namespace PRPJECT4NEW
         public int Year { get; set; }
         public string Teacher { get; set; }
         public string Day { get; set; }
-        public string Start_time { get; set; }
-        public string End_time { get; set; }
+        public int Start_time { get; set; }
+        public int End_time { get; set; }
         public Nullable<int> Class_number { get; set; }
         public Nullable<int> Capacity { get; set; }
     }

@@ -39,7 +39,7 @@
             this.tuitionGridView.AllowUserToDeleteRows = false;
             this.tuitionGridView.AllowUserToResizeColumns = false;
             this.tuitionGridView.AllowUserToResizeRows = false;
-            this.tuitionGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.tuitionGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tuitionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tuitionGridView.EnableHeadersVisualStyles = false;
             this.tuitionGridView.Location = new System.Drawing.Point(12, 128);

@@ -4,29 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MazalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'Mazal.dbo.Classes' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Classes">
-          <Property Name="date" Type="nvarchar" MaxLength="255" />
-          <Property Name="Class_Id" Type="nvarchar" MaxLength="255" />
-          <Property Name="Type" Type="nvarchar" MaxLength="255" />
-          <Property Name="Capacity" Type="float" />
-          <Property Name="08-09" Type="float" />
-          <Property Name="09-10" Type="float" />
-          <Property Name="10-11" Type="float" />
-          <Property Name="11-12" Type="float" />
-          <Property Name="12-13" Type="float" />
-          <Property Name="13-14" Type="float" />
-          <Property Name="14-15" Type="float" />
-          <Property Name="15-16" Type="float" />
-          <Property Name="16-17" Type="float" />
-          <Property Name="17-18" Type="float" />
-          <Property Name="18-19" Type="float" />
-          <Property Name="19-20" Type="float" />
-          <Property Name="20-21" Type="float" />
-          <Property Name="holiday" Type="float" />
-        </EntityType>-->
+    <Schema Namespace="MazalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Course_detail">
           <Key>
             <PropertyRef Name="Course_Serial" />
@@ -37,8 +15,8 @@ warning 6013: The table/view 'Mazal.dbo.Classes' does not have a primary key def
           <Property Name="Year" Type="int" Nullable="false" />
           <Property Name="Teacher" Type="nchar" MaxLength="50" />
           <Property Name="Day" Type="nchar" MaxLength="10" />
-          <Property Name="Start_time" Type="nchar" MaxLength="10" />
-          <Property Name="End_time" Type="nchar" MaxLength="10" />
+          <Property Name="Start_time" Type="int" />
+          <Property Name="End_time" Type="int" />
           <Property Name="Class_number" Type="int" />
           <Property Name="Capacity" Type="int" />
         </EntityType>
@@ -53,7 +31,7 @@ warning 6002: The table/view 'Mazal.dbo.courses' does not have a primary key def
             <PropertyRef Name="Semester" />
           </Key>
           <Property Name="Course_id" Type="int" Nullable="false" />
-          <Property Name="Course_name" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Course_name" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="Nakaz" Type="float" Nullable="false" />
           <Property Name="Year" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Semester" Type="nchar" MaxLength="10" Nullable="false" />
@@ -183,8 +161,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
     FROM [dbo].[Student_Courses] AS [Student_Courses]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MazalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -198,8 +175,8 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
           <Property Name="Year" Type="Int32" Nullable="false" />
           <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Day" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Start_time" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="End_time" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Start_time" Type="Int32" />
+          <Property Name="End_time" Type="Int32" />
           <Property Name="Class_number" Type="Int32" />
           <Property Name="Capacity" Type="Int32" />
         </EntityType>

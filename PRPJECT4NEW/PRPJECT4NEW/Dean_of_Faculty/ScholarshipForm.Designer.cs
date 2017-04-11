@@ -51,6 +51,7 @@
             // 
             this.scholarshipGridView.AllowUserToAddRows = false;
             this.scholarshipGridView.AllowUserToDeleteRows = false;
+            this.scholarshipGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.scholarshipGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.scholarshipGridView.EnableHeadersVisualStyles = false;
             this.scholarshipGridView.Location = new System.Drawing.Point(12, 12);

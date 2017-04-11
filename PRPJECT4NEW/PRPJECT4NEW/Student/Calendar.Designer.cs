@@ -41,14 +41,17 @@
             this.calendarGridView.AllowUserToDeleteRows = false;
             this.calendarGridView.AllowUserToResizeColumns = false;
             this.calendarGridView.AllowUserToResizeRows = false;
+            this.calendarGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.calendarGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.calendarGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.calendarGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarGridView.EnableHeadersVisualStyles = false;
-            this.calendarGridView.Location = new System.Drawing.Point(1, 45);
+            this.calendarGridView.Location = new System.Drawing.Point(0, 45);
+            this.calendarGridView.MinimumSize = new System.Drawing.Size(60, 0);
             this.calendarGridView.Name = "calendarGridView";
             this.calendarGridView.ReadOnly = true;
             this.calendarGridView.RowHeadersVisible = false;
-            this.calendarGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.calendarGridView.RowHeadersWidth = 60;
             this.calendarGridView.Size = new System.Drawing.Size(834, 469);
             this.calendarGridView.TabIndex = 4;
             // 

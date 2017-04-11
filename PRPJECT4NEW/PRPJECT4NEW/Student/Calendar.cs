@@ -36,7 +36,11 @@ namespace PRPJECT4NEW.Student
                 foreach (var s in selected)
                 {
                     cours course = context.courses.FirstOrDefault(c => c.Course_id == s.Course_id);
-                    this.calendarGridView.Rows[Convert.ToInt32(s.Start_time) - 8].Cells[s.Day.Trim()].Value = course.Course_name;
+                    for (int i = s.Start_time; i < s.End_time; i++)
+                    {
+                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Value = course.Course_name;
+                    }
+                    
                 }
             }
         } 
