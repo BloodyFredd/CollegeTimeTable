@@ -35,8 +35,8 @@ namespace PRPJECT4NEW.Student
                 //Place each Course into DataGridView
                 foreach (var s in selected)
                 {
-                    Console.WriteLine(s.Start_time.ToString());
-                    this.calendarGridView.Rows[Convert.ToInt32(s.Start_time) - 8].Cells[s.Day.Trim()].Value = s.Course_Serial;
+                    cours course = context.courses.FirstOrDefault(c => c.Course_id == s.Course_id);
+                    this.calendarGridView.Rows[Convert.ToInt32(s.Start_time) - 8].Cells[s.Day.Trim()].Value = course.Course_name;
                 }
             }
         } 
