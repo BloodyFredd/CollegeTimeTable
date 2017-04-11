@@ -44,7 +44,6 @@
             this.calendarGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.calendarGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.calendarGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.calendarGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarGridView.EnableHeadersVisualStyles = false;
             this.calendarGridView.Location = new System.Drawing.Point(0, 45);
             this.calendarGridView.MinimumSize = new System.Drawing.Size(60, 0);
@@ -54,6 +53,8 @@
             this.calendarGridView.RowHeadersWidth = 60;
             this.calendarGridView.Size = new System.Drawing.Size(834, 469);
             this.calendarGridView.TabIndex = 4;
+            this.calendarGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.calendarGridView_CellFormatting);
+            this.calendarGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.calendarGridView_CellPainting);
             // 
             // panel1
             // 
@@ -91,6 +92,7 @@
             this.Name = "Calendar";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Calendar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).EndInit();
             this.ResumeLayout(false);
 
