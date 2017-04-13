@@ -14,8 +14,6 @@ namespace BranchA_MazalPlus.Secretary
 {
     public partial class Menu : Form
     {
-        private string connetionString = null;
-        private SqlConnection sqlcon;
         public Menu()
         {
             InitializeComponent();
