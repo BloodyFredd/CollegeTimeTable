@@ -41,7 +41,8 @@ namespace BranchA_MazalPlus.Admin
 
         private void Failing_Students_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Failing Students");
+            Reports REPOR = new Reports();
+            REPOR.Show();
         }
 
         private void Remove_Student_Button_Click(object sender, EventArgs e)
