@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ID_Button = new System.Windows.Forms.TextBox();
+            this.IDbutton = new System.Windows.Forms.TextBox();
             this.Id = new System.Windows.Forms.Label();
             this.Delete_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ID_Button
+            // IDbutton
             // 
-            this.ID_Button.Location = new System.Drawing.Point(109, 9);
-            this.ID_Button.Name = "ID_Button";
-            this.ID_Button.Size = new System.Drawing.Size(100, 20);
-            this.ID_Button.TabIndex = 0;
-            this.ID_Button.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.IDbutton.Location = new System.Drawing.Point(109, 9);
+            this.IDbutton.Name = "IDbutton";
+            this.IDbutton.Size = new System.Drawing.Size(100, 20);
+            this.IDbutton.TabIndex = 0;
+            this.IDbutton.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Id
             // 
@@ -68,9 +68,10 @@
             this.ClientSize = new System.Drawing.Size(274, 70);
             this.Controls.Add(this.Delete_Button);
             this.Controls.Add(this.Id);
-            this.Controls.Add(this.ID_Button);
+            this.Controls.Add(this.IDbutton);
             this.Name = "RemoveStudent";
             this.Text = "Remove a Student";
+            this.Load += new System.EventHandler(this.RemoveStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,7 +79,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox ID_Button;
+        private System.Windows.Forms.TextBox IDbutton;
         private System.Windows.Forms.Label Id;
         private System.Windows.Forms.Button Delete_Button;
     }
