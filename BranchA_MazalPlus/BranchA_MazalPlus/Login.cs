@@ -17,7 +17,6 @@ namespace BranchA_MazalPlus
         private string connetionString = null;
         private SqlConnection sqlcon;
 
-
         public Login()
         {
             InitializeComponent();
