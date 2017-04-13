@@ -47,7 +47,8 @@ namespace BranchA_MazalPlus.Admin
 
         private void Remove_Student_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Remove student");
+            RemoveStudent remove = new RemoveStudent();
+            remove.Show();
         }
 
         private void Remove_Teaching_Assistant_Button_Click(object sender, EventArgs e)
