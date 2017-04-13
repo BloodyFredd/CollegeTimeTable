@@ -273,57 +273,7 @@
             this.Merge_Auditorium_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Merge_Auditorium_button.UseVisualStyleBackColor = false;
             this.Merge_Auditorium_button.Click += new System.EventHandler(this.Merge_Auditorium_Button_Click);
-            // 
-            // Occupied_Classes_Button
-            // 
-            this.Occupied_Classes_Button.AccessibleName = "Occupied_Classes_Button";
-            this.Occupied_Classes_Button.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.Occupied_Classes_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Occupied_Classes_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Occupied_Classes_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Occupied_Classes_Button.FlatAppearance.BorderSize = 0;
-            this.Occupied_Classes_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Occupied_Classes_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Occupied_Classes_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Occupied_Classes_Button.ForeColor = System.Drawing.Color.White;
-            this.Occupied_Classes_Button.Image = ((System.Drawing.Image)(resources.GetObject("Occupied_Classes_Button.Image")));
-            this.Occupied_Classes_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Occupied_Classes_Button.Location = new System.Drawing.Point(0, 316);
-            this.Occupied_Classes_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Occupied_Classes_Button.Name = "Occupied_Classes_Button";
-            this.Occupied_Classes_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Occupied_Classes_Button.Size = new System.Drawing.Size(218, 48);
-            this.Occupied_Classes_Button.TabIndex = 8;
-            this.Occupied_Classes_Button.Text = "Report of occupied classes";
-            this.Occupied_Classes_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Occupied_Classes_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Occupied_Classes_Button.UseVisualStyleBackColor = false;
-            this.Occupied_Classes_Button.Click += new System.EventHandler(this.Occupied_Classes_Button_Click);
-            // 
-            // Excellent_students_Button
-            // 
-            this.Excellent_students_Button.AccessibleName = "Excellent_students_Button";
-            this.Excellent_students_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Excellent_students_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Excellent_students_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Excellent_students_Button.FlatAppearance.BorderSize = 0;
-            this.Excellent_students_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Excellent_students_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Excellent_students_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Excellent_students_Button.ForeColor = System.Drawing.Color.White;
-            this.Excellent_students_Button.Image = ((System.Drawing.Image)(resources.GetObject("Excellent_students_Button.Image")));
-            this.Excellent_students_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Excellent_students_Button.Location = new System.Drawing.Point(0, 263);
-            this.Excellent_students_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Excellent_students_Button.Name = "Excellent_students_Button";
-            this.Excellent_students_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Excellent_students_Button.Size = new System.Drawing.Size(218, 53);
-            this.Excellent_students_Button.TabIndex = 7;
-            this.Excellent_students_Button.Text = "Report of excellent students";
-            this.Excellent_students_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Excellent_students_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Excellent_students_Button.UseVisualStyleBackColor = false;
-            this.Excellent_students_Button.Click += new System.EventHandler(this.Excellent_Students_Button_Click);
+ 
             // 
             // Exemption_Student_Button
             // 
@@ -401,29 +351,7 @@
             this.Remove_student.Click += new System.EventHandler(this.Remove_Student_Button_Click);
             // 
             // Reports_Button
-            // 
-            this.Failing_Students_Button.AccessibleName = "Failing_Students_Button";
-            this.Failing_Students_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Failing_Students_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Failing_Students_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Failing_Students_Button.FlatAppearance.BorderSize = 0;
-            this.Failing_Students_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Failing_Students_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Failing_Students_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Failing_Students_Button.ForeColor = System.Drawing.Color.White;
-            this.Failing_Students_Button.Image = ((System.Drawing.Image)(resources.GetObject("Failing_Students_Button.Image")));
-            this.Failing_Students_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Failing_Students_Button.Location = new System.Drawing.Point(0, 89);
-            this.Failing_Students_Button.Margin = new System.Windows.Forms.Padding(1);
-            this.Failing_Students_Button.Name = "Failing_Students_Button";
-            this.Failing_Students_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Failing_Students_Button.Size = new System.Drawing.Size(218, 41);
-            this.Failing_Students_Button.TabIndex = 3;
-            this.Failing_Students_Button.Text = "Report of failing students";
-            this.Failing_Students_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Failing_Students_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Failing_Students_Button.UseVisualStyleBackColor = false;
-            this.Failing_Students_Button.Click += new System.EventHandler(this.Failing_Students_Button_Click);
+
             // 
             // Sign_student_course
             // 

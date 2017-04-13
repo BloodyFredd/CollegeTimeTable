@@ -16,10 +16,13 @@ namespace BranchA_MazalPlus
     {
         private string connetionString = null;
         private SqlConnection sqlcon;
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
 
         public Login()
         {
             InitializeComponent();
+            player.SoundLocation = "mazalmazal.wav";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,6 +36,7 @@ namespace BranchA_MazalPlus
             // sqlcon.Open();
             //            try
             //           {
+            player.Play();
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
