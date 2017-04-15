@@ -39,10 +39,9 @@ namespace BranchA_MazalPlus.Admin
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
-
-            SqlCommand cmd = new SqlCommand("select * from person where Permission='Teaching_Assistant' OR Permission='Lecturer' ", sqlcon);
-
-
+            //MessageBox.Show(toolStripMenuItem2.DropDownItems.ToString());
+            SqlCommand cmd = new SqlCommand("select * from Student_Courses where final_grade <= 56 and course_id=" + courseIDToolStripMenuItem.Selected.ToString(), sqlcon);
+            StudentsReport.Visible = true;
             try
             {
                 
@@ -123,6 +122,21 @@ namespace BranchA_MazalPlus.Admin
         }
 
         private void Semester_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void Reports_Load(object sender, EventArgs e)
         {
 
         }
