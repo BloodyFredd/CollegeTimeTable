@@ -47,7 +47,7 @@ namespace BranchA_MazalPlus.Admin
 
         private void Remove_Student_Button_Click(object sender, EventArgs e)
         {
-            RemoveStudent remove = new RemoveStudent();
+            RemoveAssistant remove = new RemoveAssistant();
             remove.Show();
         }
 
@@ -158,6 +158,40 @@ namespace BranchA_MazalPlus.Admin
         private void Cancel_Lectures_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Cancel Lectures");
+        }
+
+        private void Sign_person_button_Click(object sender, EventArgs e)
+        {
+            NewUser Connect = new NewUser();
+            Connect.Show();
+        }
+
+        private void Logout_Button_Click_1(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void Remove_student_Click(object sender, EventArgs e)
+        {
+            RemoveStudent remove = new RemoveStudent();
+            remove.Show();
+        }
+
+        private void Merge_Auditorium_button_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Reports_button_Click(object sender, EventArgs e)
+        {
+            Reports REPOR = new Reports();
+            REPOR.Show();
+        }
+
+        private void Remove_Teaching_Assistant_Button_Click_1(object sender, EventArgs e)
+        {
+            RemoveAssistant remove = new RemoveAssistant();
+            remove.Show();
         }
     }
 }
