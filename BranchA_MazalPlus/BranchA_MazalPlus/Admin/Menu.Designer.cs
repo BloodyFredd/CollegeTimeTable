@@ -41,8 +41,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.Reports_button = new System.Windows.Forms.Button();
             this.Logout_Button = new System.Windows.Forms.Button();
             this.Cancel_Lectures = new System.Windows.Forms.Button();
             this.Merge_Auditorium_button = new System.Windows.Forms.Button();
@@ -51,6 +49,8 @@
             this.Remove_student = new System.Windows.Forms.Button();
             this.Sign_student_course = new System.Windows.Forms.Button();
             this.Sign_person_button = new System.Windows.Forms.Button();
+            this.Reports_button = new System.Windows.Forms.Button();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,7 +80,7 @@
             // Buttons_view
             // 
             this.Buttons_view.Location = new System.Drawing.Point(0, 46);
-            this.Buttons_view.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Buttons_view.Margin = new System.Windows.Forms.Padding(2);
             this.Buttons_view.Name = "Buttons_view";
             this.Buttons_view.Size = new System.Drawing.Size(95, 35);
             this.Buttons_view.TabIndex = 0;
@@ -197,36 +197,6 @@
             this.panel2.Size = new System.Drawing.Size(218, 398);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // backgroundWorker2
-            // 
-            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
-            // 
-            // Reports_button
-            // 
-            this.Reports_button.AccessibleName = "Reports_button";
-            this.Reports_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Reports_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Reports_button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Reports_button.FlatAppearance.BorderSize = 0;
-            this.Reports_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Reports_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reports_button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reports_button.ForeColor = System.Drawing.Color.White;
-            this.Reports_button.Image = ((System.Drawing.Image)(resources.GetObject("Reports_button.Image")));
-            this.Reports_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reports_button.Location = new System.Drawing.Point(0, 6);
-            this.Reports_button.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.Reports_button.Name = "Reports_button";
-            this.Reports_button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.Reports_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Reports_button.Size = new System.Drawing.Size(218, 41);
-            this.Reports_button.TabIndex = 14;
-            this.Reports_button.Text = "Reports";
-            this.Reports_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reports_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Reports_button.UseVisualStyleBackColor = false;
-            this.Reports_button.Click += new System.EventHandler(this.Reports_button_Click);
             // 
             // Logout_Button
             // 
@@ -427,6 +397,36 @@
             this.Sign_person_button.UseVisualStyleBackColor = false;
             this.Sign_person_button.Click += new System.EventHandler(this.Sign_person_button_Click);
             // 
+            // Reports_button
+            // 
+            this.Reports_button.AccessibleName = "Reports_button";
+            this.Reports_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Reports_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Reports_button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Reports_button.FlatAppearance.BorderSize = 0;
+            this.Reports_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Reports_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reports_button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reports_button.ForeColor = System.Drawing.Color.White;
+            this.Reports_button.Image = ((System.Drawing.Image)(resources.GetObject("Reports_button.Image")));
+            this.Reports_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reports_button.Location = new System.Drawing.Point(0, 6);
+            this.Reports_button.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.Reports_button.Name = "Reports_button";
+            this.Reports_button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Reports_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Reports_button.Size = new System.Drawing.Size(218, 41);
+            this.Reports_button.TabIndex = 14;
+            this.Reports_button.Text = "Reports";
+            this.Reports_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reports_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Reports_button.UseVisualStyleBackColor = false;
+            this.Reports_button.Click += new System.EventHandler(this.Reports_button_Click);
+            // 
+            // backgroundWorker2
+            // 
+            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -436,7 +436,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

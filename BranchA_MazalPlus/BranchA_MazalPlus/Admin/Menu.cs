@@ -141,7 +141,7 @@ namespace BranchA_MazalPlus.Admin
             MessageBox.Show("Merge Auditorium");
         }
 
-        private void Logout_Button_Click(object sender, EventArgs e)
+        private void Logout_Button_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Have a good day!");
             // hide main form
@@ -166,9 +166,9 @@ namespace BranchA_MazalPlus.Admin
             Connect.Show();
         }
 
-        private void Logout_Button_Click_1(object sender, EventArgs e)
+        private void Logout_Button_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+           
         }
 
         private void Remove_student_Click(object sender, EventArgs e)
