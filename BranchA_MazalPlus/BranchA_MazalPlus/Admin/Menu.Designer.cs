@@ -350,6 +350,7 @@
             this.Remove_Teaching_Assistant_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Remove_Teaching_Assistant_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Remove_Teaching_Assistant_Button.UseVisualStyleBackColor = false;
+            this.Remove_Teaching_Assistant_Button.Click += new System.EventHandler(this.Remove_Teaching_Assistant_Button_Click_1);
             // 
             // Remove_student
             // 

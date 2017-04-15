@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace BranchA_MazalPlus.Admin
 {
-    public partial class RemoveStudent : Form
+    public partial class RemoveAssistant : Form
     {
         private string connetionString = null;
         private SqlConnection sqlcon;
-        public RemoveStudent()
+        public RemoveAssistant()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace BranchA_MazalPlus.Admin
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
                 this.sqlcon.Open();
-                SqlCommand command = new SqlCommand("DELETE FROM person WHERE ID = " + this.IDbutton.Text + " Permission = '" + "Teaching_Assistant" + "'", sqlcon);
+                SqlCommand command = new SqlCommand("DELETE FROM person WHERE ID = " + this.IDbutton.Text + " Permission = '" + "Student" + "'", sqlcon);
                 int dr = command.ExecuteNonQuery();
                 if(dr == 1)
                 {
@@ -50,8 +50,6 @@ namespace BranchA_MazalPlus.Admin
             catch (SystemException ex)
             {
                 MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
-                this.sqlcon.Close();
-                this.Close();
             }
         }
 
@@ -60,7 +58,7 @@ namespace BranchA_MazalPlus.Admin
 
         }
 
-        private void RemoveStudent_Load(object sender, EventArgs e)
+        private void RemoveAssistant_Load(object sender, EventArgs e)
         {
 
         }

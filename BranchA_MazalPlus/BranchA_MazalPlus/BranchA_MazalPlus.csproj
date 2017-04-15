@@ -71,6 +71,12 @@
     <Compile Include="Admin\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\RemoveAssistant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\RemoveAssistant.Designer.cs">
+      <DependentUpon>RemoveAssistant.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\RemoveStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="Admin\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\RemoveAssistant.resx">
+      <DependentUpon>RemoveAssistant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\RemoveStudent.resx">
       <DependentUpon>RemoveStudent.cs</DependentUpon>
