@@ -29,14 +29,14 @@ namespace PRPJECT4NEW.Student
             {
                 //Select cources of a student without final grade for current year
                 var selected =
-                    from c in context.Student_Courses where c.student_id == Student_ID && c.final_grade == null
-                    from i in context.Course_detail where i.Course_id.ToString() == c.course_id && i.Year == DateTime.Now.Year select i;
+                    from c in context.Student_Courses where c.stud_Id == Student_ID && c.final_grade == null
+                    from i in context.Course_detail where i.Course_id == c.course_id && i.Year == DateTime.Now.Year select i;
 
                 //Place each Course into DataGridView
                 foreach (var s in selected)
                 {
                     cours course = context.courses.FirstOrDefault(c => c.Course_id == s.Course_id);
-                    for (int i = s.Start_time; i < s.End_time; i++)
+                    for (int i = Convert.ToInt32(s.Start_time); i < Convert.ToInt32(s.End_time); i++)
                     {
                         this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Value = course.Course_name;
                         this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.BackColor = Color.AliceBlue;

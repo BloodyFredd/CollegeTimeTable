@@ -14,13 +14,14 @@ namespace PRPJECT4NEW
     
     public partial class Student_Courses
     {
-        public string student_id { get; set; }
-        public string course_id { get; set; }
-        public Nullable<int> grade_a { get; set; }
-        public Nullable<int> grade_b { get; set; }
-        public Nullable<int> grade_c { get; set; }
-        public Nullable<int> quiz1 { get; set; }
-        public Nullable<int> quiz2 { get; set; }
-        public Nullable<int> final_grade { get; set; }
+        public string stud_Id { get; set; }
+        public Nullable<double> course_id { get; set; }
+        public Nullable<double> grade_a { get; set; }
+        public Nullable<double> grade_b { get; set; }
+        public Nullable<double> grade_c { get; set; }
+        public Nullable<double> quiz1 { get; set; }
+        public Nullable<double> quiz2 { get; set; }
+        public Nullable<double> final_grade { get; set; }
+        public int No { get; set; }
     }
 }

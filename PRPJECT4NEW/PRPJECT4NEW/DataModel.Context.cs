@@ -28,11 +28,11 @@ namespace PRPJECT4NEW
         public virtual DbSet<Course_detail> Course_detail { get; set; }
         public virtual DbSet<person> people { get; set; }
         public virtual DbSet<Scholarship> Scholarships { get; set; }
+        public virtual DbSet<Student_Courses> Student_Courses { get; set; }
         public virtual DbSet<student> students { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Teaching_Stuff> Teaching_Stuff { get; set; }
         public virtual DbSet<cours> courses { get; set; }
         public virtual DbSet<DF_requests> DF_requests { get; set; }
-        public virtual DbSet<Student_Courses> Student_Courses { get; set; }
     }
 }

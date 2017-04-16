@@ -44,9 +44,9 @@ namespace PRPJECT4NEW.Student
                 //Select cources of a student without final grade 
                 var selected =
                     from c in context.Student_Courses
-                    where c.student_id == Student_ID && c.final_grade == null
+                    where c.stud_Id == Student_ID && c.final_grade == null
                     from i in context.courses
-                    where i.Course_id.ToString() == c.course_id
+                    where i.Course_id == c.course_id
                     select i;
 
                 foreach (var s in selected)

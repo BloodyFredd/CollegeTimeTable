@@ -4,7 +4,51 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="MazalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="MazalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Mazal.dbo.Classes_SM1' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Classes_SM1">
+          <Property Name="date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Class_Id" Type="nvarchar" MaxLength="255" />
+          <Property Name="Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Capacity" Type="float" />
+          <Property Name="F5" Type="float" />
+          <Property Name="F6" Type="float" />
+          <Property Name="F7" Type="float" />
+          <Property Name="F8" Type="float" />
+          <Property Name="F9" Type="float" />
+          <Property Name="13-14" Type="float" />
+          <Property Name="14-15" Type="float" />
+          <Property Name="15-16" Type="float" />
+          <Property Name="16-17" Type="float" />
+          <Property Name="17-18" Type="float" />
+          <Property Name="18-19" Type="float" />
+          <Property Name="19-20" Type="float" />
+          <Property Name="20-21" Type="float" />
+          <Property Name="holiday" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Mazal.dbo.Classes_SM2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Classes_SM2">
+          <Property Name="date" Type="nvarchar" MaxLength="50" />
+          <Property Name="Class_Id" Type="nvarchar" MaxLength="255" />
+          <Property Name="Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Capacity" Type="float" />
+          <Property Name="F5" Type="float" />
+          <Property Name="F6" Type="float" />
+          <Property Name="F7" Type="float" />
+          <Property Name="F8" Type="float" />
+          <Property Name="F9" Type="float" />
+          <Property Name="13-14" Type="float" />
+          <Property Name="14-15" Type="float" />
+          <Property Name="15-16" Type="float" />
+          <Property Name="16-17" Type="float" />
+          <Property Name="17-18" Type="float" />
+          <Property Name="18-19" Type="float" />
+          <Property Name="19-20" Type="float" />
+          <Property Name="20-21" Type="float" />
+          <Property Name="holiday" Type="float" />
+        </EntityType>-->
         <EntityType Name="Course_detail">
           <Key>
             <PropertyRef Name="Course_Serial" />
@@ -13,6 +57,7 @@
           <Property Name="Course_Serial" Type="int" Nullable="false" />
           <Property Name="Group_num" Type="int" Nullable="false" />
           <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Prev_course" Type="nchar" MaxLength="50" />
           <Property Name="Teacher" Type="nchar" MaxLength="50" />
           <Property Name="Day" Type="nchar" MaxLength="10" />
           <Property Name="Start_time" Type="int" />
@@ -74,21 +119,19 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
           <Property Name="Duration(years)" Type="int" Nullable="false" />
           <Property Name="Volunteer_hours" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Student_Courses">
           <Key>
-            <PropertyRef Name="student_id" />
-            <PropertyRef Name="course_id" />
+            <PropertyRef Name="No" />
           </Key>
-          <Property Name="student_id" Type="nchar" MaxLength="50" Nullable="false" />
-          <Property Name="course_id" Type="nchar" MaxLength="50" Nullable="false" />
-          <Property Name="grade_a" Type="int" />
-          <Property Name="grade_b" Type="int" />
-          <Property Name="grade_c" Type="int" />
-          <Property Name="quiz1" Type="int" />
-          <Property Name="quiz2" Type="int" />
-          <Property Name="final_grade" Type="int" />
+          <Property Name="stud_Id" Type="nvarchar" MaxLength="15" />
+          <Property Name="course_id" Type="float" />
+          <Property Name="grade_a" Type="float" />
+          <Property Name="grade_b" Type="float" />
+          <Property Name="grade_c" Type="float" />
+          <Property Name="quiz1" Type="float" />
+          <Property Name="quiz2" Type="float" />
+          <Property Name="final_grade" Type="float" />
+          <Property Name="No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="students">
           <Key>
@@ -127,6 +170,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
           <EntitySet Name="Course_detail" EntityType="Self.Course_detail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="person" EntityType="Self.person" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Scholarships" EntityType="Self.Scholarships" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student_Courses" EntityType="Self.Student_Courses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Teaching_Stuff" EntityType="Self.Teaching_Stuff" Schema="dbo" store:Type="Tables" />
@@ -148,20 +192,9 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
     [DF_requests].[Message] AS [Message]
     FROM [dbo].[DF_requests] AS [DF_requests]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="Student_Courses" EntityType="Self.Student_Courses" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Student_Courses].[student_id] AS [student_id], 
-    [Student_Courses].[course_id] AS [course_id], 
-    [Student_Courses].[grade_a] AS [grade_a], 
-    [Student_Courses].[grade_b] AS [grade_b], 
-    [Student_Courses].[grade_c] AS [grade_c], 
-    [Student_Courses].[quiz1] AS [quiz1], 
-    [Student_Courses].[quiz2] AS [quiz2], 
-    [Student_Courses].[final_grade] AS [final_grade]
-    FROM [dbo].[Student_Courses] AS [Student_Courses]</DefiningQuery>
-          </EntitySet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MazalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -173,6 +206,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
           <Property Name="Course_Serial" Type="Int32" Nullable="false" />
           <Property Name="Group_num" Type="Int32" Nullable="false" />
           <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="Prev_course" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Teacher" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Day" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Start_time" Type="Int32" />
@@ -202,6 +236,20 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
           <Property Name="Intended_for" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Duration_years_" Type="Int32" Nullable="false" />
           <Property Name="Volunteer_hours" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Student_Courses">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="stud_Id" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="course_id" Type="Double" />
+          <Property Name="grade_a" Type="Double" />
+          <Property Name="grade_b" Type="Double" />
+          <Property Name="grade_c" Type="Double" />
+          <Property Name="quiz1" Type="Double" />
+          <Property Name="quiz2" Type="Double" />
+          <Property Name="final_grade" Type="Double" />
+          <Property Name="No" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="student">
           <Key>
@@ -263,37 +311,23 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
           <Property Name="Subject" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Message" Type="String" MaxLength="255" FixedLength="true" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="Student_Courses">
-          <Key>
-            <PropertyRef Name="student_id" />
-            <PropertyRef Name="course_id" />
-          </Key>
-          <Property Name="student_id" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="course_id" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="grade_a" Type="Int32" />
-          <Property Name="grade_b" Type="Int32" />
-          <Property Name="grade_c" Type="Int32" />
-          <Property Name="quiz1" Type="Int32" />
-          <Property Name="quiz2" Type="Int32" />
-          <Property Name="final_grade" Type="Int32" />
-        </EntityType>
-        <EntityContainer Name="MazalEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Course_detail" EntityType="Self.Course_detail" />
           <EntitySet Name="people" EntityType="Self.person" />
           <EntitySet Name="Scholarships" EntityType="Self.Scholarship" />
+          <EntitySet Name="Student_Courses" EntityType="Self.Student_Courses" />
           <EntitySet Name="students" EntityType="Self.student" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Teaching_Stuff" EntityType="Self.Teaching_Stuff" />
           <EntitySet Name="courses" EntityType="Self.cours" />
           <EntitySet Name="DF_requests" EntityType="Self.DF_requests" />
-          <EntitySet Name="Student_Courses" EntityType="Self.Student_Courses" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MazalModelStoreContainer" CdmEntityContainer="MazalEntities1">
+        <EntityContainerMapping StorageEntityContainer="MazalModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="Course_detail">
             <EntityTypeMapping TypeName="MazalModel.Course_detail">
               <MappingFragment StoreEntitySet="Course_detail">
@@ -301,6 +335,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
                 <ScalarProperty Name="Course_Serial" ColumnName="Course_Serial" />
                 <ScalarProperty Name="Group_num" ColumnName="Group_num" />
                 <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Prev_course" ColumnName="Prev_course" />
                 <ScalarProperty Name="Teacher" ColumnName="Teacher" />
                 <ScalarProperty Name="Day" ColumnName="Day" />
                 <ScalarProperty Name="Start_time" ColumnName="Start_time" />
@@ -332,6 +367,21 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
                 <ScalarProperty Name="Intended_for" ColumnName="Intended_for" />
                 <ScalarProperty Name="Duration_years_" ColumnName="Duration(years)" />
                 <ScalarProperty Name="Volunteer_hours" ColumnName="Volunteer_hours" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Student_Courses">
+            <EntityTypeMapping TypeName="MazalModel.Student_Courses">
+              <MappingFragment StoreEntitySet="Student_Courses">
+                <ScalarProperty Name="stud_Id" ColumnName="stud_Id" />
+                <ScalarProperty Name="course_id" ColumnName="course_id" />
+                <ScalarProperty Name="grade_a" ColumnName="grade_a" />
+                <ScalarProperty Name="grade_b" ColumnName="grade_b" />
+                <ScalarProperty Name="grade_c" ColumnName="grade_c" />
+                <ScalarProperty Name="quiz1" ColumnName="quiz1" />
+                <ScalarProperty Name="quiz2" ColumnName="quiz2" />
+                <ScalarProperty Name="final_grade" ColumnName="final_grade" />
+                <ScalarProperty Name="No" ColumnName="No" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -390,20 +440,6 @@ warning 6002: The table/view 'Mazal.dbo.Student_Courses' does not have a primary
                 <ScalarProperty Name="Intended_to" ColumnName="Intended_to" />
                 <ScalarProperty Name="Subject" ColumnName="Subject" />
                 <ScalarProperty Name="Message" ColumnName="Message" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Student_Courses">
-            <EntityTypeMapping TypeName="MazalModel.Student_Courses">
-              <MappingFragment StoreEntitySet="Student_Courses">
-                <ScalarProperty Name="student_id" ColumnName="student_id" />
-                <ScalarProperty Name="course_id" ColumnName="course_id" />
-                <ScalarProperty Name="grade_a" ColumnName="grade_a" />
-                <ScalarProperty Name="grade_b" ColumnName="grade_b" />
-                <ScalarProperty Name="grade_c" ColumnName="grade_c" />
-                <ScalarProperty Name="quiz1" ColumnName="quiz1" />
-                <ScalarProperty Name="quiz2" ColumnName="quiz2" />
-                <ScalarProperty Name="final_grade" ColumnName="final_grade" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

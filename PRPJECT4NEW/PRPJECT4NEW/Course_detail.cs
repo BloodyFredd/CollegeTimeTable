@@ -18,10 +18,11 @@ namespace PRPJECT4NEW
         public int Course_Serial { get; set; }
         public int Group_num { get; set; }
         public int Year { get; set; }
+        public string Prev_course { get; set; }
         public string Teacher { get; set; }
         public string Day { get; set; }
-        public int Start_time { get; set; }
-        public int End_time { get; set; }
+        public Nullable<int> Start_time { get; set; }
+        public Nullable<int> End_time { get; set; }
         public Nullable<int> Class_number { get; set; }
         public Nullable<int> Capacity { get; set; }
     }
