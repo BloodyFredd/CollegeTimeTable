@@ -1,6 +1,6 @@
-﻿namespace PRPJECT4NEW
+﻿namespace PRPJECT4NEW.Student
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -68,9 +68,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1624, 103);
+            this.panel1.Size = new System.Drawing.Size(696, 46);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -78,11 +78,11 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1455, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(611, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 29, 79, 0);
-            this.pictureBox2.Size = new System.Drawing.Size(68, 103);
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 13, 34, 0);
+            this.pictureBox2.Size = new System.Drawing.Size(29, 46);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -91,11 +91,11 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1523, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 21, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(640, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 9, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 29, 79, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(101, 103);
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 13, 34, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -109,11 +109,11 @@
             this.Student_Name.ForeColor = System.Drawing.Color.White;
             this.Student_Name.Image = ((System.Drawing.Image)(resources.GetObject("Student_Name.Image")));
             this.Student_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Student_Name.Location = new System.Drawing.Point(418, 0);
-            this.Student_Name.Margin = new System.Windows.Forms.Padding(2, 20, 9, 0);
+            this.Student_Name.Location = new System.Drawing.Point(179, 0);
+            this.Student_Name.Margin = new System.Windows.Forms.Padding(1, 9, 4, 0);
             this.Student_Name.Name = "Student_Name";
-            this.Student_Name.Padding = new System.Windows.Forms.Padding(26, 36, 0, 0);
-            this.Student_Name.Size = new System.Drawing.Size(341, 79);
+            this.Student_Name.Padding = new System.Windows.Forms.Padding(11, 16, 0, 0);
+            this.Student_Name.Size = new System.Drawing.Size(152, 37);
             this.Student_Name.TabIndex = 2;
             this.Student_Name.Text = "     Matan Vaknin";
             this.Student_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,18 +126,18 @@
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(418, 103);
+            this.panel3.Size = new System.Drawing.Size(179, 46);
             this.panel3.TabIndex = 0;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(33, 16);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(14, 7);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(1);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(350, 80);
+            this.pictureBox3.Size = new System.Drawing.Size(150, 36);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -157,11 +157,11 @@
             this.panel2.Controls.Add(this.Update_Calendar_Button);
             this.panel2.Controls.Add(this.Celender_button);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 103);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(0, 46);
+            this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 16, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(418, 1032);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(179, 463);
             this.panel2.TabIndex = 1;
             // 
             // Logout_Button
@@ -177,11 +177,11 @@
             this.Logout_Button.ForeColor = System.Drawing.Color.White;
             this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
             this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_Button.Location = new System.Drawing.Point(0, 835);
-            this.Logout_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Logout_Button.Location = new System.Drawing.Point(0, 376);
+            this.Logout_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Logout_Button.Name = "Logout_Button";
-            this.Logout_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Logout_Button.Size = new System.Drawing.Size(418, 91);
+            this.Logout_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Logout_Button.Size = new System.Drawing.Size(179, 41);
             this.Logout_Button.TabIndex = 10;
             this.Logout_Button.Text = " Logout";
             this.Logout_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -202,11 +202,11 @@
             this.Alerts_Button.ForeColor = System.Drawing.Color.White;
             this.Alerts_Button.Image = ((System.Drawing.Image)(resources.GetObject("Alerts_Button.Image")));
             this.Alerts_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Alerts_Button.Location = new System.Drawing.Point(0, 744);
-            this.Alerts_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Alerts_Button.Location = new System.Drawing.Point(0, 335);
+            this.Alerts_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Alerts_Button.Name = "Alerts_Button";
-            this.Alerts_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Alerts_Button.Size = new System.Drawing.Size(418, 91);
+            this.Alerts_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Alerts_Button.Size = new System.Drawing.Size(179, 41);
             this.Alerts_Button.TabIndex = 9;
             this.Alerts_Button.Text = " Alerts";
             this.Alerts_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,11 +228,11 @@
             this.Exam_Res_Button.ForeColor = System.Drawing.Color.White;
             this.Exam_Res_Button.Image = ((System.Drawing.Image)(resources.GetObject("Exam_Res_Button.Image")));
             this.Exam_Res_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exam_Res_Button.Location = new System.Drawing.Point(0, 653);
-            this.Exam_Res_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Exam_Res_Button.Location = new System.Drawing.Point(0, 294);
+            this.Exam_Res_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Exam_Res_Button.Name = "Exam_Res_Button";
-            this.Exam_Res_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Exam_Res_Button.Size = new System.Drawing.Size(418, 91);
+            this.Exam_Res_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Exam_Res_Button.Size = new System.Drawing.Size(179, 41);
             this.Exam_Res_Button.TabIndex = 8;
             this.Exam_Res_Button.Text = " Exams results";
             this.Exam_Res_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,11 +253,11 @@
             this.Fees_Button.ForeColor = System.Drawing.Color.White;
             this.Fees_Button.Image = ((System.Drawing.Image)(resources.GetObject("Fees_Button.Image")));
             this.Fees_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Fees_Button.Location = new System.Drawing.Point(0, 562);
-            this.Fees_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Fees_Button.Location = new System.Drawing.Point(0, 253);
+            this.Fees_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Fees_Button.Name = "Fees_Button";
-            this.Fees_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Fees_Button.Size = new System.Drawing.Size(418, 91);
+            this.Fees_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Fees_Button.Size = new System.Drawing.Size(179, 41);
             this.Fees_Button.TabIndex = 7;
             this.Fees_Button.Text = " Tuition fees";
             this.Fees_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,11 +278,11 @@
             this.Requests_Button.ForeColor = System.Drawing.Color.White;
             this.Requests_Button.Image = ((System.Drawing.Image)(resources.GetObject("Requests_Button.Image")));
             this.Requests_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Requests_Button.Location = new System.Drawing.Point(0, 471);
-            this.Requests_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Requests_Button.Location = new System.Drawing.Point(0, 212);
+            this.Requests_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Requests_Button.Name = "Requests_Button";
-            this.Requests_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Requests_Button.Size = new System.Drawing.Size(418, 91);
+            this.Requests_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Requests_Button.Size = new System.Drawing.Size(179, 41);
             this.Requests_Button.TabIndex = 6;
             this.Requests_Button.Text = " Requests";
             this.Requests_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,11 +303,11 @@
             this.Holidays_Button.ForeColor = System.Drawing.Color.Transparent;
             this.Holidays_Button.Image = ((System.Drawing.Image)(resources.GetObject("Holidays_Button.Image")));
             this.Holidays_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Holidays_Button.Location = new System.Drawing.Point(0, 380);
-            this.Holidays_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Holidays_Button.Location = new System.Drawing.Point(0, 171);
+            this.Holidays_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Holidays_Button.Name = "Holidays_Button";
-            this.Holidays_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Holidays_Button.Size = new System.Drawing.Size(418, 91);
+            this.Holidays_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Holidays_Button.Size = new System.Drawing.Size(179, 41);
             this.Holidays_Button.TabIndex = 5;
             this.Holidays_Button.Text = " Holidays";
             this.Holidays_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,11 +328,11 @@
             this.Exams_Button.ForeColor = System.Drawing.Color.White;
             this.Exams_Button.Image = ((System.Drawing.Image)(resources.GetObject("Exams_Button.Image")));
             this.Exams_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Exams_Button.Location = new System.Drawing.Point(0, 289);
-            this.Exams_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Exams_Button.Location = new System.Drawing.Point(0, 130);
+            this.Exams_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Exams_Button.Name = "Exams_Button";
-            this.Exams_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Exams_Button.Size = new System.Drawing.Size(418, 91);
+            this.Exams_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Exams_Button.Size = new System.Drawing.Size(179, 41);
             this.Exams_Button.TabIndex = 4;
             this.Exams_Button.Text = " Exams";
             this.Exams_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -353,11 +353,11 @@
             this.Messages_Button.ForeColor = System.Drawing.Color.White;
             this.Messages_Button.Image = ((System.Drawing.Image)(resources.GetObject("Messages_Button.Image")));
             this.Messages_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Messages_Button.Location = new System.Drawing.Point(0, 198);
-            this.Messages_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Messages_Button.Location = new System.Drawing.Point(0, 89);
+            this.Messages_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Messages_Button.Name = "Messages_Button";
-            this.Messages_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Messages_Button.Size = new System.Drawing.Size(418, 91);
+            this.Messages_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Messages_Button.Size = new System.Drawing.Size(179, 41);
             this.Messages_Button.TabIndex = 3;
             this.Messages_Button.Text = " Messages";
             this.Messages_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,11 +378,11 @@
             this.Update_Calendar_Button.ForeColor = System.Drawing.Color.White;
             this.Update_Calendar_Button.Image = ((System.Drawing.Image)(resources.GetObject("Update_Calendar_Button.Image")));
             this.Update_Calendar_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Update_Calendar_Button.Location = new System.Drawing.Point(0, 107);
-            this.Update_Calendar_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Update_Calendar_Button.Location = new System.Drawing.Point(0, 48);
+            this.Update_Calendar_Button.Margin = new System.Windows.Forms.Padding(1);
             this.Update_Calendar_Button.Name = "Update_Calendar_Button";
-            this.Update_Calendar_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Update_Calendar_Button.Size = new System.Drawing.Size(418, 91);
+            this.Update_Calendar_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.Update_Calendar_Button.Size = new System.Drawing.Size(179, 41);
             this.Update_Calendar_Button.TabIndex = 2;
             this.Update_Calendar_Button.Text = " Update Celender";
             this.Update_Calendar_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,12 +403,12 @@
             this.Celender_button.ForeColor = System.Drawing.Color.White;
             this.Celender_button.Image = ((System.Drawing.Image)(resources.GetObject("Celender_button.Image")));
             this.Celender_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Celender_button.Location = new System.Drawing.Point(0, 16);
-            this.Celender_button.Margin = new System.Windows.Forms.Padding(2);
+            this.Celender_button.Location = new System.Drawing.Point(0, 7);
+            this.Celender_button.Margin = new System.Windows.Forms.Padding(1);
             this.Celender_button.Name = "Celender_button";
-            this.Celender_button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.Celender_button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.Celender_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Celender_button.Size = new System.Drawing.Size(418, 91);
+            this.Celender_button.Size = new System.Drawing.Size(179, 41);
             this.Celender_button.TabIndex = 0;
             this.Celender_button.Text = " Celender";
             this.Celender_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -421,26 +421,26 @@
             this.Buttons_view.AccessibleName = "Buttons_view";
             this.Buttons_view.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.Buttons_view.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Buttons_view.Location = new System.Drawing.Point(418, 103);
-            this.Buttons_view.Margin = new System.Windows.Forms.Padding(2);
+            this.Buttons_view.Location = new System.Drawing.Point(179, 46);
+            this.Buttons_view.Margin = new System.Windows.Forms.Padding(1);
             this.Buttons_view.Name = "Buttons_view";
-            this.Buttons_view.Size = new System.Drawing.Size(1206, 1032);
+            this.Buttons_view.Size = new System.Drawing.Size(517, 463);
             this.Buttons_view.TabIndex = 2;
             this.Buttons_view.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // Form1
+            // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1624, 1135);
+            this.ClientSize = new System.Drawing.Size(696, 509);
             this.Controls.Add(this.Buttons_view);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Menu";
+            this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

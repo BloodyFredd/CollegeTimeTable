@@ -12,13 +12,16 @@ namespace PRPJECT4NEW
     using System;
     using System.Collections.Generic;
     
-    public partial class database_firewall_rules
+    public partial class Student_Courses
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string start_ip_address { get; set; }
-        public string end_ip_address { get; set; }
-        public System.DateTime create_date { get; set; }
-        public System.DateTime modify_date { get; set; }
+        public string stud_Id { get; set; }
+        public Nullable<double> course_id { get; set; }
+        public Nullable<double> grade_a { get; set; }
+        public Nullable<double> grade_b { get; set; }
+        public Nullable<double> grade_c { get; set; }
+        public Nullable<double> quiz1 { get; set; }
+        public Nullable<double> quiz2 { get; set; }
+        public Nullable<double> final_grade { get; set; }
+        public int No { get; set; }
     }
 }
