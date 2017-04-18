@@ -22,13 +22,8 @@ namespace PRPJECT4NEW.Tech_Team
         private void Available_Classes_button_Click(object sender, EventArgs e)
         {
 
-            Calendar frm = new Calendar("Matan", 123456);
-            frm.TopLevel = false;
-            //frm.FormBorderStyle = FormBorderStyle.None;
-            //frm.WindowState = FormWindowState.Maximized;
-            Buttons_view.Controls.Add(frm);
-            Buttons_view.Visible = true;
-            frm.Show();
+           
+            MessageBox.Show("available classes");
 
         }
 
@@ -51,6 +46,11 @@ namespace PRPJECT4NEW.Tech_Team
         private void special_request_from_DF_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("In this box must be list of special requests from DF(Dean of Faculty)");
+            DF_requests frm = new DF_requests();
+            frm.TopLevel = false;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Special_Stud_Button_Click(object sender, EventArgs e)

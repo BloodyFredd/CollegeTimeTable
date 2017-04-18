@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="MazalModel.Teaching_Stuff" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MazalModel.cours" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MazalModel.database_firewall_rules" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MazalModel.DF_requests" Width="1.5" PointX="6.125" PointY="6.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

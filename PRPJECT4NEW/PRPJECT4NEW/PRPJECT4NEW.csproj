@@ -87,6 +87,9 @@
     <Compile Include="Dean_of_Faculty\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DF_requests.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Exams_Section\special_student_list.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +110,12 @@
     </Compile>
     <Compile Include="Teaching_Stuff.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tech_Team\DF_requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tech_Team\DF_requests.Designer.cs">
+      <DependentUpon>DF_requests.cs</DependentUpon>
     </Compile>
     <Compile Include="Tech_Team\Menu.cs">
       <SubType>Form</SubType>
@@ -148,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Exams_Section\special_student_list.resx">
       <DependentUpon>special_student_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tech_Team\DF_requests.resx">
+      <DependentUpon>DF_requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tech_Team\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

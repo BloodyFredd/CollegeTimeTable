@@ -4,29 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MazalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'Mazal.dbo.Classes' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Classes">
-          <Property Name="date" Type="nvarchar" MaxLength="255" />
-          <Property Name="Class_Id" Type="nvarchar" MaxLength="255" />
-          <Property Name="Type" Type="nvarchar" MaxLength="255" />
-          <Property Name="Capacity" Type="float" />
-          <Property Name="08-09" Type="float" />
-          <Property Name="09-10" Type="float" />
-          <Property Name="10-11" Type="float" />
-          <Property Name="11-12" Type="float" />
-          <Property Name="12-13" Type="float" />
-          <Property Name="13-14" Type="float" />
-          <Property Name="14-15" Type="float" />
-          <Property Name="15-16" Type="float" />
-          <Property Name="16-17" Type="float" />
-          <Property Name="17-18" Type="float" />
-          <Property Name="18-19" Type="float" />
-          <Property Name="19-20" Type="float" />
-          <Property Name="20-21" Type="float" />
-          <Property Name="holiday" Type="float" />
-        </EntityType>-->
+    <Schema Namespace="MazalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Course_detail">
           <Key>
             <PropertyRef Name="Course_Serial" />
@@ -58,6 +36,20 @@ warning 6002: The table/view 'Mazal.dbo.courses' does not have a primary key def
           <Property Name="Year" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Semester" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Blocking_Cource" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DF_requests">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Intended_to" />
+            <PropertyRef Name="Subject" />
+            <PropertyRef Name="Message" />
+          </Key>
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Intended_to" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Subject" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Message" Type="nchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="person">
           <Key>
@@ -150,6 +142,14 @@ warning 6002: The table/view 'Mazal.sys.database_firewall_rules' does not have a
     [courses].[Blocking_Cource] AS [Blocking_Cource]
     FROM [dbo].[courses] AS [courses]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="DF_requests" EntityType="Self.DF_requests" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [DF_requests].[Date] AS [Date], 
+    [DF_requests].[Intended_to] AS [Intended_to], 
+    [DF_requests].[Subject] AS [Subject], 
+    [DF_requests].[Message] AS [Message]
+    FROM [dbo].[DF_requests] AS [DF_requests]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
             <DefiningQuery>SELECT 
     [database_firewall_rules].[id] AS [id], 
@@ -161,8 +161,7 @@ warning 6002: The table/view 'Mazal.sys.database_firewall_rules' does not have a
     FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MazalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -277,7 +276,20 @@ warning 6002: The table/view 'Mazal.sys.database_firewall_rules' does not have a
           <EntitySet Name="Teaching_Stuff" EntityType="Self.Teaching_Stuff" />
           <EntitySet Name="courses" EntityType="Self.cours" />
           <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+          <EntitySet Name="DF_requests" EntityType="MazalModel.DF_requests" />
         </EntityContainer>
+        <EntityType Name="DF_requests">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Intended_to" />
+            <PropertyRef Name="Subject" />
+            <PropertyRef Name="Message" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Intended_to" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -382,6 +394,16 @@ warning 6002: The table/view 'Mazal.sys.database_firewall_rules' does not have a
                 <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
                 <ScalarProperty Name="create_date" ColumnName="create_date" />
                 <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DF_requests">
+            <EntityTypeMapping TypeName="MazalModel.DF_requests">
+              <MappingFragment StoreEntitySet="DF_requests">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Intended_to" ColumnName="Intended_to" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
