@@ -32,7 +32,7 @@ namespace BranchA_MazalPlus.Admin
 
         private void Load_table_Click_1(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,6 +53,13 @@ namespace BranchA_MazalPlus.Admin
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
             }
+            catch (SqlException ex)
+            {
+                this.Close();
+                MessageBox.Show("Error selecting course id, try again!");
+                Reports form2 = new Reports();
+                form2.Show();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -72,15 +79,14 @@ namespace BranchA_MazalPlus.Admin
         private void Available_Classes_Click(object sender, EventArgs e)
         {
             string str = null;
-            
-           
+
+
             try
             {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
-                SqlCommand cmd=new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
+                SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
                 if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
-
                 {
                     str = toolStripComboBox2.Text;
                     //MessageBox.Show(str);
@@ -97,7 +103,7 @@ namespace BranchA_MazalPlus.Admin
                 else
                 {
                     this.Close();
-                    MessageBox.Show("Error selecting dates,try again!");
+                    MessageBox.Show("Error selecting dates, try again!");
                     Reports form2 = new Reports();
                     form2.Show();
 
@@ -147,6 +153,30 @@ namespace BranchA_MazalPlus.Admin
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void All_Person_Button_Click(object sender, EventArgs e)
+        {
+            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            this.sqlcon = new SqlConnection(connetionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select Email, Password, Permission from person", sqlcon);
+                StudentsReport.Visible = true;
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

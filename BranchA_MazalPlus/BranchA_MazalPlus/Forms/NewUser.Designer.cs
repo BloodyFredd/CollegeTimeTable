@@ -189,7 +189,9 @@
             this.perm1.Items.AddRange(new object[] {
             "Lecturer",
             "Student",
-            "Teaching_Assistant"});
+            "Teaching_Assistant",
+            "Tech_Team",
+            "Exam_Section"});
             this.perm1.Location = new System.Drawing.Point(327, 131);
             this.perm1.Margin = new System.Windows.Forms.Padding(2);
             this.perm1.Name = "perm1";
