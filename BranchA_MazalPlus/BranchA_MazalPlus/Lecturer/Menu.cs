@@ -43,7 +43,8 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void Available_Classes_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Available Classes");
+            NewLecture lec = new NewLecture();
+            lec.Show();
         }
 
         private void Special_Stud_Button_Click(object sender, EventArgs e)
