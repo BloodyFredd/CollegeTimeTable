@@ -38,6 +38,7 @@
             this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.CourseID = new System.Windows.Forms.ComboBox();
+            this.All_Person_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -345,11 +346,22 @@
             this.CourseID.Text = "Course ID";
             this.CourseID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // All_Person_Button
+            // 
+            this.All_Person_Button.Location = new System.Drawing.Point(213, 11);
+            this.All_Person_Button.Name = "All_Person_Button";
+            this.All_Person_Button.Size = new System.Drawing.Size(77, 51);
+            this.All_Person_Button.TabIndex = 12;
+            this.All_Person_Button.Text = "All Persons";
+            this.All_Person_Button.UseVisualStyleBackColor = true;
+            this.All_Person_Button.Click += new System.EventHandler(this.All_Person_Button_Click);
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 422);
+            this.Controls.Add(this.All_Person_Button);
             this.Controls.Add(this.CourseID);
             this.Controls.Add(this.Available_Classes);
             this.Controls.Add(this.menuStrip1);
@@ -378,5 +390,6 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
         private System.Windows.Forms.ComboBox CourseID;
+        private System.Windows.Forms.Button All_Person_Button;
     }
 }
