@@ -33,6 +33,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.CourseID = new System.Windows.Forms.ComboBox();
+            this.Class_Num = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +73,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(502, 69);
+            this.button2.Location = new System.Drawing.Point(502, 52);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(197, 99);
             this.button2.TabIndex = 5;
@@ -123,11 +125,42 @@
             this.CourseID.TabIndex = 6;
             this.CourseID.Text = "Course ID";
             // 
+            // Class_Num
+            // 
+            this.Class_Num.FormattingEnabled = true;
+            this.Class_Num.Items.AddRange(new object[] {
+            "f101",
+            "f102",
+            "f103",
+            "f104",
+            "s101",
+            "s102",
+            "s103",
+            "s104",
+            "a101",
+            "a102"});
+            this.Class_Num.Location = new System.Drawing.Point(564, 235);
+            this.Class_Num.Name = "Class_Num";
+            this.Class_Num.Size = new System.Drawing.Size(121, 24);
+            this.Class_Num.TabIndex = 7;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(537, 265);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(162, 66);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "modify between 2 classrooms lecture ";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 473);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Class_Num);
             this.Controls.Add(this.CourseID);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -136,6 +169,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Reports";
             this.Text = "Reports";
+            this.Load += new System.EventHandler(this.Reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
             this.ResumeLayout(false);
 
@@ -148,5 +182,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox CourseID;
+        private System.Windows.Forms.ComboBox Class_Num;
+        private System.Windows.Forms.Button button3;
     }
 }
