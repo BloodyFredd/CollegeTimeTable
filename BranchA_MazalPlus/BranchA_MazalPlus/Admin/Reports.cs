@@ -53,6 +53,13 @@ namespace BranchA_MazalPlus.Admin
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
             }
+            catch(SqlException ex)
+            {
+                this.Close();
+                MessageBox.Show("Error selecting course id, try again!");
+                Reports form2 = new Reports();
+                form2.Show();
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -97,7 +104,7 @@ namespace BranchA_MazalPlus.Admin
                 else
                 {
                     this.Close();
-                    MessageBox.Show("Error selecting dates,try again!");
+                    MessageBox.Show("Error selecting dates, try again!");
                     Reports form2 = new Reports();
                     form2.Show();
 
