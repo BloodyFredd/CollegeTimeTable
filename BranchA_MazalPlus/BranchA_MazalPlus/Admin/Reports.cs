@@ -39,12 +39,10 @@ namespace BranchA_MazalPlus.Admin
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
-            //MessageBox.Show(toolStripMenuItem2.DropDownItems.ToString());
-            SqlCommand cmd = new SqlCommand("select * from Student_Courses where final_grade <= 56 and course_id=" + courseIDToolStripMenuItem.Selected.ToString(), sqlcon);
-            StudentsReport.Visible = true;
             try
             {
-                
+                SqlCommand cmd = new SqlCommand("select stud_Id, final_grade from Student_Courses where final_grade <= 56 and course_id='" + CourseID.Text + "'", sqlcon);
+                StudentsReport.Visible = true;
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
@@ -137,6 +135,16 @@ namespace BranchA_MazalPlus.Admin
         }
 
         private void Reports_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
