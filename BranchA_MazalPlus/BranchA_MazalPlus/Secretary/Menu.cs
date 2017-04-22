@@ -74,11 +74,14 @@ namespace BranchA_MazalPlus.Secretary
         private void Available_Classes_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Modify courses of a student");
+            
         }
 
         private void Special_Stud_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Modify between 2 classrooms lecture  ");
+            Modifay_2_classes modifay = new Modifay_2_classes();
+            modifay.Show();
         }
 
         private void Supervisor_Tut_Button_Click(object sender, EventArgs e)

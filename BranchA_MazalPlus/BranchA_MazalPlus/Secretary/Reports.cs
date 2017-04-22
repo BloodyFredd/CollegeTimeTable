@@ -136,7 +136,33 @@ namespace BranchA_MazalPlus.Secretary
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            
+        }
+
+        private void SM1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sM1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sEMESTERToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Class_ID_1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
+
+    //private void Class_Num_SelectedIndexChanged(object sender, EventArgs e)
+      //  {
+      //
+        //}
+    //}
 }
