@@ -12,9 +12,9 @@ namespace PRPJECT4NEW
     using System;
     using System.Collections.Generic;
     
-    public partial class person
+    public partial class Person
     {
-        public string ID { get; set; }
+        public double ID { get; set; }
         public string F_name { get; set; }
         public string L_name { get; set; }
         public string Telephone { get; set; }

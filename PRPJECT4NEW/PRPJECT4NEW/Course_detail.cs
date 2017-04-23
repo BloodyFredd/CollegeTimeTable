@@ -24,6 +24,7 @@ namespace PRPJECT4NEW
         public Nullable<int> Start_time { get; set; }
         public Nullable<int> End_time { get; set; }
         public Nullable<int> Class_number { get; set; }
+        public Nullable<int> Student_Count { get; set; }
         public Nullable<int> Capacity { get; set; }
     }
 }

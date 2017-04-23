@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes_SM1.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes_SM2.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="cours.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -102,7 +108,10 @@
     <Compile Include="Exams_Section\special_student_list.Designer.cs">
       <DependentUpon>special_student_list.cs</DependentUpon>
     </Compile>
-    <Compile Include="person.cs">
+    <Compile Include="Lecture_Course.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Scholarship.cs">

@@ -13,11 +13,9 @@ namespace PRPJECT4NEW.Student
     public partial class Calendar : Form
     {
 
-        string Student_ID;
 
-        public Calendar(string Student_ID)
+        public Calendar()
         {
-            this.Student_ID = Student_ID;
             InitializeComponent();
             CreateGridView();
             getData();
@@ -29,7 +27,7 @@ namespace PRPJECT4NEW.Student
             {
                 //Select cources of a student without final grade for current year
                 var selected =
-                    from c in context.Student_Courses where c.stud_Id == Student_ID && c.final_grade == null
+                    from c in context.Student_Courses where c.stud_Id == Utility.User.ID.ToString() && c.final_grade == null
                     from i in context.Course_detail where i.Course_id == c.course_id && i.Year == DateTime.Now.Year select i;
 
                 //Place each Course into DataGridView
@@ -66,9 +64,9 @@ namespace PRPJECT4NEW.Student
             }
 
             //Paint headers
-            calendarGridView.Columns[0].DefaultCellStyle.BackColor = Constants.menuColor;
+            calendarGridView.Columns[0].DefaultCellStyle.BackColor = Utility.menuColor;
             calendarGridView.Columns[0].DefaultCellStyle.ForeColor = Color.White;
-            calendarGridView.ColumnHeadersDefaultCellStyle.BackColor = Constants.menuColor;
+            calendarGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.menuColor;
             calendarGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 

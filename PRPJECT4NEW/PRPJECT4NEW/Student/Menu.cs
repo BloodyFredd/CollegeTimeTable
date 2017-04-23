@@ -12,10 +12,9 @@ namespace PRPJECT4NEW.Student
 {
     public partial class Menu : Form
     {
-        public string Student_ID;
-        public Menu(string ID)
+        public Menu()
         {
-            Student_ID = ID;
+
             InitializeComponent();
             Buttons_view.Visible = false;
         
@@ -23,9 +22,8 @@ namespace PRPJECT4NEW.Student
 
         private void Celender_Click(object sender, EventArgs e)
         {
-            Student.Calendar frm = new Student.Calendar(Student_ID);
+            Student.Calendar frm = new Student.Calendar();
             frm.TopLevel = false;
-
             //frm.FormBorderStyle = FormBorderStyle.None;
             //frm.WindowState = FormWindowState.Maximized;
             Buttons_view.Controls.Add(frm);
@@ -57,7 +55,7 @@ namespace PRPJECT4NEW.Student
     
         private void Fees_Button_Click(object sender, EventArgs e)
         {
-            TuitionFeesForm frm = new TuitionFeesForm(Student_ID);
+            TuitionFeesForm frm = new TuitionFeesForm();
             frm.TopLevel = false;
             Buttons_view.Controls.Add(frm);
             Buttons_view.Visible = true;
