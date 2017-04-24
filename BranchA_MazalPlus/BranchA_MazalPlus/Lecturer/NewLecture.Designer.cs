@@ -166,13 +166,14 @@
             "2016-11-11"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
             this.toolStripComboBox2.Size = new System.Drawing.Size(121, 49);
+            this.toolStripComboBox2.Click += new System.EventHandler(this.toolStripComboBox2_Click);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(327, 46);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
@@ -320,6 +321,7 @@
             this.Hour.Name = "Hour";
             this.Hour.Size = new System.Drawing.Size(280, 39);
             this.Hour.TabIndex = 14;
+            this.Hour.SelectedIndexChanged += new System.EventHandler(this.Hour_SelectedIndexChanged);
             // 
             // Class
             // 
