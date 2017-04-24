@@ -25,8 +25,9 @@ namespace PRPJECT4NEW
 
 
 
-    static class Constants
+    static class Utility
     {
+        public static Person User;
         public const float feePerNakaz = 300;
         public static Color menuColor = Color.FromArgb(255, 37, 90, 180);
     }

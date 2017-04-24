@@ -12,15 +12,16 @@ namespace PRPJECT4NEW
     using System;
     using System.Collections.Generic;
     
-    public partial class Student_Courses
+    public partial class Lecture_Course
     {
-        public string stud_Id { get; set; }
-        public double course_id { get; set; }
-        public Nullable<double> grade_a { get; set; }
-        public Nullable<double> grade_b { get; set; }
-        public Nullable<double> grade_c { get; set; }
-        public Nullable<double> quiz1 { get; set; }
-        public Nullable<double> quiz2 { get; set; }
-        public Nullable<int> final_grade { get; set; }
+        public int Course_ID { get; set; }
+        public int Course_Serial { get; set; }
+        public int Group_num { get; set; }
+        public string Teacher { get; set; }
+        public string Date { get; set; }
+        public Nullable<int> Start_time { get; set; }
+        public Nullable<int> End_time { get; set; }
+        public string Class_number { get; set; }
+        public Nullable<int> Student_Count { get; set; }
     }
 }

@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 namespace PRPJECT4NEW
 {
+    
     public partial class Login : Form
     {
-        private string connetionString = null;
-        private SqlConnection sqlcon;
+        
         int TogMove;
         int MValX;
         int MValY;
@@ -26,94 +26,74 @@ namespace PRPJECT4NEW
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-            this.sqlcon.Open();
-            SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read() == true)
-            {
-                if (dr[6].ToString() == "Student")
-                {
-                    this.Hide();
-                    string Student_ID = dr[0].ToString();
-                    Student.Menu Connect = new Student.Menu(Student_ID);
-                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                    Connect.ShowDialog();
-                    //after logout
-                    this.Show();
-                    this.sqlcon.Close();
-                    txtuser.Text = "User Name";
-                    txtpassword.Text = "Password";
-                    txtpassword.UseSystemPasswordChar = false;
-                    Center(this);
-                }
-                else if (dr[6].ToString() == "Exam_Section")
-                {
-                    this.Hide();
-                    Exams_Section.Menu Connect = new Exams_Section.Menu();
-                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                    Connect.ShowDialog();
-                    //after logout
-                    this.Show();
-                    this.sqlcon.Close();
-                    txtuser.Text = "User Name";
-                    txtpassword.Text = "Password";
-                    txtpassword.UseSystemPasswordChar = false;
-                    Center(this);
-                }
-                else if (dr[6].ToString() == "Tech_Team")
-                {
-                    this.Hide();
-                    Tech_Team.Menu Connect = new Tech_Team.Menu();
-                    // Connect.ShowDialog();
-                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                    Connect.ShowDialog();
-                    //after logout
-                    this.Show();
-                    this.sqlcon.Close();
-                    txtuser.Text = "User Name";
-                    txtpassword.Text = "Password";
-                    txtpassword.UseSystemPasswordChar = false;
-                    Center(this);
-                }
-                else if (dr[6].ToString() == "Dean_of_Faculty")
-                {
-                    // MessageBox.Show("Login Dean_of_Faculty");
-                    this.Hide();
-                    Dean_of_Faculty.Menu Connect = new Dean_of_Faculty.Menu();
-                    // Connect.ShowDialog();
-                    Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
-                    Connect.ShowDialog();
-                    //after logout
-                    this.Show();
-                    this.sqlcon.Close();
-                    txtuser.Text = "User Name";
-                    txtpassword.Text = "Password";
-                    txtpassword.UseSystemPasswordChar = false;
-                    Center(this);
-                }
-                else
-                {
-                    MessageBox.Show("The user is not have permisions in your branch ");
-                    this.sqlcon.Close();
-                    txtuser.Text = "User Name";
-                    txtpassword.Text = "Password";
-                    txtpassword.UseSystemPasswordChar = false;
-                }
+            Double UserID = Convert.ToDouble(txtuser.Text); //Comparison works only after conversion
 
-            }
-            else
+            //Connect to data base
+            using (MazalEntities context = new MazalEntities())
             {
-                MessageBox.Show("Invalid Username or Password ");
-                this.sqlcon.Close();
-                txtuser.Text = "User Name";
-                txtpassword.Text = "Password";
-                txtpassword.UseSystemPasswordChar = false;
+               
+                //Try to connect to database
+                try
+                {
+                    //Chech ID + Password existance
+                    if (context.People.Any(p => p.ID == UserID && p.Password == txtpassword.Text))
+                    {
+                        Utility.User = context.People.SingleOrDefault(p => p.ID == UserID);
+                        this.Hide();
+                        LoadMenu();
+
+                        //After logout....
+                        this.Show();
+                        txtuser.Text = "User Name";
+                        txtpassword.Text = "Password";
+                        txtpassword.UseSystemPasswordChar = false;
+                        Center(this);
+                    }
+                    else
+                    {   //Can't find ID + Password
+                        MessageBox.Show("Invalid Username or Password ");
+                        txtuser.Text = "User Name";
+                        txtpassword.Text = "Password";
+                        txtpassword.UseSystemPasswordChar = false;
+                    }
+                }
+                catch(System.Data.Entity.Core.EntityException exception)
+                {
+                    MessageBox.Show("Can't connect to Database: " + exception.ToString());
+                }
             }
         }
 
-        // button quit
+        private void LoadMenu()
+        {    
+            switch (Utility.User.Permission)
+            {
+                case "Student":
+                    Student.Menu Student_Connect = new Student.Menu();
+                    Student_Connect.Student_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Student_Connect.ShowDialog();
+                    break;
+                case "Exam_Section":
+                    Exams_Section.Menu Exam_Connect = new Exams_Section.Menu();
+                    Exam_Connect.Student_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Exam_Connect.ShowDialog();
+                    break;
+                case "Tech_Team":
+                    Tech_Team.Menu Tech_Connect = new Tech_Team.Menu();
+                    Tech_Connect.Student_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Tech_Connect.ShowDialog();
+                    break;
+                case "Dean_of_Faculty":
+                    Dean_of_Faculty.Menu Dean_Connect = new Dean_of_Faculty.Menu();
+                    Dean_Connect.Student_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Dean_Connect.ShowDialog();
+                    break;
+                default:
+                    Console.WriteLine("Wrong User Permission - Check your Database");
+                    break;
+            }
+
+        }
 
         private void txtuser_Click(object sender, EventArgs e)
         {

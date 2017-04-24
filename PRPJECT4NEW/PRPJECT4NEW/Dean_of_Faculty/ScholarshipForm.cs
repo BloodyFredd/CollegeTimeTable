@@ -76,7 +76,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             }
             //Paint headers
             scholarshipGridView.Columns.Insert(scholarshipGridView.Columns.Count, column);
-            scholarshipGridView.ColumnHeadersDefaultCellStyle.BackColor = Constants.menuColor;
+            scholarshipGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.menuColor;
             scholarshipGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
