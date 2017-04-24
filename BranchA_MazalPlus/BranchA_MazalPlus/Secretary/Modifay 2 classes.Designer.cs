@@ -32,8 +32,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.semesterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateSem1 = new System.Windows.Forms.ToolStripComboBox();
+            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateSem2 = new System.Windows.Forms.ToolStripComboBox();
             this.class1 = new System.Windows.Forms.ComboBox();
             this.class2 = new System.Windows.Forms.ComboBox();
@@ -78,15 +78,6 @@
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.aToolStripMenuItem.Text = "A";
-            // 
-            // bToolStripMenuItem
-            // 
-            this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateSem2});
-            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.bToolStripMenuItem.Text = "B";
-            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
             // 
             // dateSem1
             // 
@@ -177,6 +168,15 @@
             "2016-11-11"});
             this.dateSem1.Name = "dateSem1";
             this.dateSem1.Size = new System.Drawing.Size(121, 28);
+            // 
+            // bToolStripMenuItem
+            // 
+            this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateSem2});
+            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.bToolStripMenuItem.Text = "B";
+            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
             // 
             // dateSem2
             // 
@@ -276,7 +276,6 @@
             "f101",
             "f102",
             "f103",
-            "",
             "f104",
             "s101",
             "s102",
@@ -298,7 +297,6 @@
             "f101",
             "f102",
             "f103",
-            "",
             "f104",
             "s101",
             "s102",

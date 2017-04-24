@@ -43,31 +43,94 @@ namespace BranchA_MazalPlus.Secretary
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string str = null;
-
-
+            
             try
             {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
-                SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
+
                 if (dateSem1.Text.Equals("") && !dateSem2.Text.Equals(""))
                 {
-                    //str = bToolStripMenuItem.Text;
-                    //MessageBox.Show(str);
-                    class2.Text += "hello";
-                    SqlCommand cmd1 = new SqlCommand("update Classes_SM2 SET Class_Id ='" + class2.Text + "' WHERE date = '" + dateSem2.Text + "' and Class_Id = '" + class1.Text + "'", sqlcon);
-                    SqlCommand cmd2 = new SqlCommand("update Classes_SM2 SET Class_Id ='" + class1.Text + "' WHERE date = '" + dateSem2.Text + "' and Class_Id = '" + class2.Text + "'", sqlcon);
+                    try
+                    {
 
-                    // StudentsReport.Visible = true;
+
+                        SqlCommand cmd = new SqlCommand("UPDATE Classes_SM2 SET Class_Id =REPLACE(Class_Id, '" + class2.Text + "', 'tmp') WHERE date='" + dateSem2.Text + "'", sqlcon);
+                        SqlDataAdapter sda = new SqlDataAdapter();
+                        sda.SelectCommand = cmd;
+                        DataTable dbdataset = new DataTable();
+                        sda.Fill(dbdataset);
+                        BindingSource bsource = new BindingSource();
+                        bsource.DataSource = dbdataset;
+                        sda.Update(dbdataset);
+
+                        SqlCommand cmd2 = new SqlCommand("UPDATE Classes_SM2 SET Class_Id =REPLACE(Class_Id, '" + class1.Text + "','" + class2.Text + "') WHERE date='" + dateSem2.Text + "'", sqlcon);
+                        SqlDataAdapter sda2 = new SqlDataAdapter();
+                        sda2.SelectCommand = cmd2;
+                        DataTable dbdataset2 = new DataTable();
+                        sda2.Fill(dbdataset2);
+                        BindingSource bsource2 = new BindingSource();
+                        bsource2.DataSource = dbdataset2;
+                        sda2.Update(dbdataset2);
+
+                        SqlCommand cmd3 = new SqlCommand("UPDATE Classes_SM2 SET Class_Id =REPLACE(Class_Id, 'tmp','" + class1.Text + "') WHERE date='" + dateSem2.Text + "'", sqlcon);
+                        SqlDataAdapter sda3 = new SqlDataAdapter();
+                        sda3.SelectCommand = cmd3;
+                        DataTable dbdataset3 = new DataTable();
+                        sda3.Fill(dbdataset3);
+                        BindingSource bsource3 = new BindingSource();
+                        bsource3.DataSource = dbdataset3;
+                        sda3.Update(dbdataset3);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
+
                 else if (dateSem2.Text.Equals("") && !dateSem1.Text.Equals(""))
                 {
-                    str = aToolStripMenuItem.Text;
-                    //MessageBox.Show(str);
-                    SqlCommand cmd1 = new SqlCommand("update Classes_SM1 SET Class_Id ='" + class2.Text + "' WHERE date = '" + dateSem1.Text + "' and Class_Id = '" + class1.Text + "'", sqlcon);
-                    SqlCommand cmd2 = new SqlCommand("update Classes_SM1 SET Class_Id ='" + class1.Text + "' WHERE date = '" + dateSem1.Text + "' and Class_Id = '" + class2.Text + "'", sqlcon);
-                    //StudentsReport.Visible = true;
+                    try
+                    {
+
+                        SqlCommand cmd = new SqlCommand("UPDATE Classes_SM1 SET Class_Id =REPLACE(Class_Id, '" + class2.Text + "', 'tmp') WHERE date='" + dateSem1.Text + "'", sqlcon);
+                        SqlDataAdapter sda = new SqlDataAdapter();
+                        sda.SelectCommand = cmd;
+                        DataTable dbdataset = new DataTable();
+                        sda.Fill(dbdataset);
+                        BindingSource bsource = new BindingSource();
+                        bsource.DataSource = dbdataset;
+                        sda.Update(dbdataset);
+
+                        SqlCommand cmd2 = new SqlCommand("UPDATE Classes_SM1 SET Class_Id =REPLACE(Class_Id, '" + class1.Text + "','" + class2.Text + "') WHERE date='" + dateSem1.Text + "'", sqlcon);
+                        SqlDataAdapter sda2 = new SqlDataAdapter();
+                        sda2.SelectCommand = cmd2;
+                        DataTable dbdataset2 = new DataTable();
+                        sda2.Fill(dbdataset2);
+                        BindingSource bsource2 = new BindingSource();
+                        bsource2.DataSource = dbdataset2;
+                        sda2.Update(dbdataset2);
+
+                        SqlCommand cmd3 = new SqlCommand("UPDATE Classes_SM1 SET Class_Id =REPLACE(Class_Id, 'tmp','" + class1.Text + "') WHERE date='" + dateSem1.Text + "'", sqlcon);
+                        SqlDataAdapter sda3 = new SqlDataAdapter();
+                        sda3.SelectCommand = cmd3;
+                        DataTable dbdataset3 = new DataTable();
+                        sda3.Fill(dbdataset3);
+                        BindingSource bsource3 = new BindingSource();
+                        bsource3.DataSource = dbdataset3;
+                        sda3.Update(dbdataset3);
+                    }
+                    catch (SqlException ex)
+                    {
+                        this.Close();
+                        MessageBox.Show("Error selecting class id, try again!");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
                 }
                 else
                 {
@@ -80,15 +143,7 @@ namespace BranchA_MazalPlus.Secretary
                 MessageBox.Show("Change completed.");
                 this.sqlcon.Close();
                 this.Close();
-                //SqlDataAdapter sda = new SqlDataAdapter();
-                //sda.SelectCommand = cmd;
-                //DataTable dbdataset = new DataTable();
-                //sda.Fill(dbdataset);
-                //BindingSource bsource = new BindingSource();
-
-                //bsource.DataSource = dbdataset;
-                //StudentsReport.DataSource = bsource;
-                //sda.Update(dbdataset);
+                
             }
             catch (Exception ex)
             {
