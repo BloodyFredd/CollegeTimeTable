@@ -26,6 +26,7 @@ namespace BranchA_MazalPlus.Lecturer
         }
 
 
+
         private void Available_Classes_Click(object sender, EventArgs e)
         {
             string str = null;
@@ -55,7 +56,7 @@ namespace BranchA_MazalPlus.Lecturer
                 {
                     this.Close();
                     MessageBox.Show("Error selecting dates,try again!");
-                    Reports form2 = new Reports();
+                    NewLecture form2 = new NewLecture();
                     form2.Show();
 
                 }
@@ -82,60 +83,79 @@ namespace BranchA_MazalPlus.Lecturer
         {
             string str = null;
 
+            try
+            { 
+                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+                this.sqlcon = new SqlConnection(connetionString);
+            
+           
+                if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
 
-            //try
-            //{
-            //    this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            //    this.sqlcon = new SqlConnection(connetionString);
-            //    SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
-            //    if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
+                {
+                    str = toolStripComboBox2.Text;
+                    SqlCommand cmd = new SqlCommand("UPDATE Classes_SM1 SET [" + Hour.Text + "] = 1 WHERE [date] = '" + str + "' AND [Class_Id] = '" + Class.Text + "'", sqlcon);
+                    MessageBox.Show("Changed!");
+                    Lecture.Visible = true;
 
-            //    {
-            //        str = toolStripComboBox2.Text;
-            //        //MessageBox.Show(str);
-            //        cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
-            //        Lecture.Visible = true;
-            //    }
-            //    else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
-            //    {
-            //        str = toolStripComboBox1.Text;
-            //        //MessageBox.Show(str);
-            //        cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
-            //        Lecture.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        this.Close();
-            //        MessageBox.Show("Error selecting dates,try again!");
-            //        Reports form2 = new Reports();
-            //        form2.Show();
 
-            //    }
+                    SqlDataAdapter sda = new SqlDataAdapter();
+                    sda.SelectCommand = cmd;
+                    DataTable dbdataset = new DataTable();
+                    sda.Fill(dbdataset);
+                    BindingSource bsource = new BindingSource();
 
-            //    SqlDataAdapter sda = new SqlDataAdapter();
-            //    sda.SelectCommand = cmd;
-            //    DataTable dbdataset = new DataTable();
-            //    sda.Fill(dbdataset);
-            //    BindingSource bsource = new BindingSource();
+                    bsource.DataSource = dbdataset;
+                    Lecture.DataSource = bsource;
+                    sda.Update(dbdataset);
+                }
+                else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
+                {
+                    str = toolStripComboBox1.Text;
+                    SqlCommand cmd = new SqlCommand("UPDATE Classes_SM2 SET [" + Hour.Text + "] = 1 WHERE [date] = '" + str + "' AND [Class_Id] = '" + Class.Text + "'", sqlcon);
+                    MessageBox.Show("Changed!");
+                    Lecture.Visible = true;
 
-            //    bsource.DataSource = dbdataset;
-            //    Lecture.DataSource = bsource;
-            //    sda.Update(dbdataset);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-            str = toolStripComboBox2.Text;
-            SqlCommand cmd = new SqlCommand("UPDATE Classes_SM1 set date='"+str+ "',Class_Id='"+Hour.Text + NewLec.Text + "' = 1 where date='" + str + "'and Class_Id='"+Hour.Text+"'and where'" + NewLec.Text +"' = 0", sqlcon);
-            MessageBox.Show("Changed!");
-        }
+
+                    SqlDataAdapter sda = new SqlDataAdapter();
+                    sda.SelectCommand = cmd;
+                    DataTable dbdataset = new DataTable();
+                    sda.Fill(dbdataset);
+                    BindingSource bsource = new BindingSource();
+
+                    bsource.DataSource = dbdataset;
+                    Lecture.DataSource = bsource;
+                    sda.Update(dbdataset);
+                }
+                else
+                {
+                    this.Close();
+                    MessageBox.Show("Error selecting dates,try again!");
+                    NewLecture form2 = new NewLecture();
+                    form2.Show();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+}
 
         private void NewLecture_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void Hour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripComboBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
