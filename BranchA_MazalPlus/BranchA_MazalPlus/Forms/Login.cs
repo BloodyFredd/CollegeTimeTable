@@ -10,10 +10,13 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 // new updates ver 1, once more
+
+
 namespace BranchA_MazalPlus
 {
     public partial class Login : Form
     {
+        public static string ID; //{ get; set; }
         private string connetionString = null;
         private SqlConnection sqlcon;
         //System.Media.SoundPlayer player = new System.Media.SoundPlayer();
@@ -22,6 +25,7 @@ namespace BranchA_MazalPlus
         public Login()
         {
             InitializeComponent();
+           
             //player.SoundLocation = "mazalmazal.wav";
         }
 
@@ -44,13 +48,11 @@ namespace BranchA_MazalPlus
             txtuser.Text = txtuser.Text + "@plus.mazal.com";
             SqlCommand cmd = new SqlCommand("select * from person where Email='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
             SqlDataReader dr = cmd.ExecuteReader();
-
             if (dr.Read() == true)
             {
-                // MessageBox.Show("Login Successful");
+                Forms.UserID.ID = string.Copy(dr[0].ToString());
                 if (dr[6].ToString() == "Admin")
                 {
-                    //MessageBox.Show("Login Admin");
                     this.Hide();
                     Admin.Menu Connect = new Admin.Menu();
                     Connect.Show();
@@ -58,7 +60,6 @@ namespace BranchA_MazalPlus
                 }
                 else if (dr[6].ToString() == "Lecturer")
                 {
-                    //MessageBox.Show("Login Lecturer");
                     this.Hide();
                     Lecturer.Menu Connect = new Lecturer.Menu();
                     Connect.Show();
@@ -66,7 +67,6 @@ namespace BranchA_MazalPlus
                 }
                 else if (dr[6].ToString() == "Teaching_Assistant")
                 {
-                    // MessageBox.Show("Login Teaching_Assistant");
                     this.Hide();
                     Teaching_Assistant.Menu Connect = new Teaching_Assistant.Menu();
                     Connect.Show();
@@ -74,7 +74,6 @@ namespace BranchA_MazalPlus
                 }
                 else if (dr[6].ToString() == "Secretary")
                 {
-                    // MessageBox.Show("Login Secretary");
                     this.Hide();
                     Secretary.Menu Connect = new Secretary.Menu();
                     Connect.Show();

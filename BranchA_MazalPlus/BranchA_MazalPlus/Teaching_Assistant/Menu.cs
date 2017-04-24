@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BranchA_MazalPlus.Teaching_Assistant
 {
     public partial class Menu : Form
-    {
+    { 
         public Menu()
         {
             InitializeComponent();
@@ -38,7 +39,8 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
         private void Supervisors_List_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors List");
+            ReceptionHours rec = new ReceptionHours();
+            rec.Show();
         }
 
         private void Available_Classes_Button_Click(object sender, EventArgs e)

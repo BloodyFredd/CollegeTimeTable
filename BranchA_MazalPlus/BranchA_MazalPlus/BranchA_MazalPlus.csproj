@@ -89,6 +89,7 @@
     <Compile Include="Admin\Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserID.cs" />
     <Compile Include="Lecturer\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +139,12 @@
     </Compile>
     <Compile Include="Teaching_Assistant\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_Assistant\ReceptionHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\ReceptionHours.Designer.cs">
+      <DependentUpon>ReceptionHours.cs</DependentUpon>
     </Compile>
     <Compile Include="Teaching_Assistant\Reports.cs">
       <SubType>Form</SubType>
@@ -189,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teaching_Assistant\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\ReceptionHours.resx">
+      <DependentUpon>ReceptionHours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teaching_Assistant\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>

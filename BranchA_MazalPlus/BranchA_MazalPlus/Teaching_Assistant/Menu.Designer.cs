@@ -119,7 +119,7 @@
             this.Teaching_Assistant_Name.Margin = new System.Windows.Forms.Padding(1, 9, 4, 0);
             this.Teaching_Assistant_Name.Name = "Teaching_Assistant_Name";
             this.Teaching_Assistant_Name.Padding = new System.Windows.Forms.Padding(11, 16, 0, 0);
-            this.Teaching_Assistant_Name.Size = new System.Drawing.Size(195, 39);
+            this.Teaching_Assistant_Name.Size = new System.Drawing.Size(164, 37);
             this.Teaching_Assistant_Name.TabIndex = 2;
             this.Teaching_Assistant_Name.Text = "Teaching assistent";
             this.Teaching_Assistant_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
