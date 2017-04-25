@@ -26,19 +26,19 @@ namespace PRPJECT4NEW
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Double UserID = Convert.ToDouble(txtuser.Text); //Comparison works only after conversion
+            string UserID = txtuser.Text; //Comparison works only after conversion
 
             //Connect to data base
-            using (MazalEntities context = new MazalEntities())
+            using (Entities context = new Entities())
             {
                
                 //Try to connect to database
                 try
                 {
                     //Chech ID + Password existance
-                    if (context.People.Any(p => p.ID == UserID && p.Password == txtpassword.Text))
+                    if (context.Person.Any(p => p.ID == UserID && p.Password == txtpassword.Text))
                     {
-                        Utility.User = context.People.SingleOrDefault(p => p.ID == UserID);
+                        Utility.User = context.Person.SingleOrDefault(p => p.ID == UserID);
                         this.Hide();
                         LoadMenu();
 

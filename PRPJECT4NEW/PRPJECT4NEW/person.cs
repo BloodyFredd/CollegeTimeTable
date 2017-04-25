@@ -14,7 +14,7 @@ namespace PRPJECT4NEW
     
     public partial class Person
     {
-        public double ID { get; set; }
+        public string ID { get; set; }
         public string F_name { get; set; }
         public string L_name { get; set; }
         public string Telephone { get; set; }

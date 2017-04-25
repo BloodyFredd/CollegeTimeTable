@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MazalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MazalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Classes_SM1">
           <Key>
             <PropertyRef Name="date" />
@@ -111,12 +111,14 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
           <Property Name="Class_number" Type="nchar" MaxLength="50" />
           <Property Name="Student_Count" Type="int" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Mazal.dbo.Person' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Person">
           <Key>
             <PropertyRef Name="ID" />
             <PropertyRef Name="Permission" />
           </Key>
-          <Property Name="ID" Type="float" Nullable="false" />
+          <Property Name="ID" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="F_name" Type="nvarchar" MaxLength="255" />
           <Property Name="L_name" Type="nvarchar" MaxLength="255" />
           <Property Name="Telephone" Type="nvarchar" MaxLength="255" />
@@ -173,9 +175,10 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
         </EntityType>
         <EntityType Name="Teaching_Stuff">
           <Key>
+            <PropertyRef Name="ID" />
             <PropertyRef Name="Course_id" />
           </Key>
-          <Property Name="ID" Type="nchar" MaxLength="10" />
+          <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Course_id" Type="int" Nullable="false" />
           <Property Name="Office" Type="nchar" MaxLength="10" />
           <Property Name="Reception_day" Type="nchar" MaxLength="10" />
@@ -188,7 +191,6 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
           <EntitySet Name="Course_detail" EntityType="Self.Course_detail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="courses" EntityType="Self.courses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Lecture_Course" EntityType="Self.Lecture_Course" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Scholarships" EntityType="Self.Scholarships" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Student_Courses" EntityType="Self.Student_Courses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
@@ -202,9 +204,19 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
     [DF_requests].[Message] AS [Message]
     FROM [dbo].[DF_requests] AS [DF_requests]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="Person" EntityType="Self.Person" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Person].[ID] AS [ID], 
+    [Person].[F_name] AS [F_name], 
+    [Person].[L_name] AS [L_name], 
+    [Person].[Telephone] AS [Telephone], 
+    [Person].[Email] AS [Email], 
+    [Person].[Password] AS [Password], 
+    [Person].[Permission] AS [Permission]
+    FROM [dbo].[Person] AS [Person]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MazalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -300,19 +312,6 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
           <Property Name="Class_number" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="Student_Count" Type="Int32" />
         </EntityType>
-        <EntityType Name="Person">
-          <Key>
-            <PropertyRef Name="ID" />
-            <PropertyRef Name="Permission" />
-          </Key>
-          <Property Name="ID" Type="Double" Nullable="false" />
-          <Property Name="F_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="L_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Telephone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Permission" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
         <EntityType Name="Scholarship">
           <Key>
             <PropertyRef Name="Scholership_Name" />
@@ -360,17 +359,6 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <EntityType Name="Teaching_Stuff">
-          <Key>
-            <PropertyRef Name="Course_id" />
-          </Key>
-          <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Course_id" Type="Int32" Nullable="false" />
-          <Property Name="Office" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Reception_day" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Reception_startTime" Type="Double" />
-          <Property Name="Reception_endTime" Type="Double" />
-        </EntityType>
         <EntityType Name="DF_requests">
           <Key>
             <PropertyRef Name="Date" />
@@ -389,14 +377,39 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
           <EntitySet Name="Course_detail" EntityType="Self.Course_detail" />
           <EntitySet Name="courses" EntityType="Self.cours" />
           <EntitySet Name="Lecture_Course" EntityType="Self.Lecture_Course" />
-          <EntitySet Name="People" EntityType="Self.Person" />
           <EntitySet Name="Scholarships" EntityType="Self.Scholarship" />
           <EntitySet Name="Student_Courses" EntityType="Self.Student_Courses" />
           <EntitySet Name="students" EntityType="Self.student" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <EntitySet Name="Teaching_Stuff" EntityType="Self.Teaching_Stuff" />
           <EntitySet Name="DF_requests" EntityType="Self.DF_requests" />
+          <EntitySet Name="People" EntityType="MazalModel.Person" />
+          <EntitySet Name="Teaching_Stuff" EntityType="MazalModel.Teaching_Stuff" />
         </EntityContainer>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Permission" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="9" FixedLength="true" Unicode="false" />
+          <Property Name="F_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="L_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Permission" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Teaching_Stuff">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Course_id" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Course_id" Type="Int32" Nullable="false" />
+          <Property Name="Office" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Reception_day" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Reception_startTime" Type="Double" />
+          <Property Name="Reception_endTime" Type="Double" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -496,19 +509,6 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="People">
-            <EntityTypeMapping TypeName="MazalModel.Person">
-              <MappingFragment StoreEntitySet="Person">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="F_name" ColumnName="F_name" />
-                <ScalarProperty Name="L_name" ColumnName="L_name" />
-                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Permission" ColumnName="Permission" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Scholarships">
             <EntityTypeMapping TypeName="MazalModel.Scholarship">
               <MappingFragment StoreEntitySet="Scholarships">
@@ -559,18 +559,6 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Teaching_Stuff">
-            <EntityTypeMapping TypeName="MazalModel.Teaching_Stuff">
-              <MappingFragment StoreEntitySet="Teaching_Stuff">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Course_id" ColumnName="Course_id" />
-                <ScalarProperty Name="Office" ColumnName="Office" />
-                <ScalarProperty Name="Reception_day" ColumnName="Reception_day" />
-                <ScalarProperty Name="Reception_startTime" ColumnName="Reception_startTime" />
-                <ScalarProperty Name="Reception_endTime" ColumnName="Reception_endTime" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="DF_requests">
             <EntityTypeMapping TypeName="MazalModel.DF_requests">
               <MappingFragment StoreEntitySet="DF_requests">
@@ -578,6 +566,31 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
                 <ScalarProperty Name="Intended_to" ColumnName="Intended_to" />
                 <ScalarProperty Name="Subject" ColumnName="Subject" />
                 <ScalarProperty Name="Message" ColumnName="Message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="MazalModel.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="Permission" ColumnName="Permission" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="L_name" ColumnName="L_name" />
+                <ScalarProperty Name="F_name" ColumnName="F_name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teaching_Stuff">
+            <EntityTypeMapping TypeName="MazalModel.Teaching_Stuff">
+              <MappingFragment StoreEntitySet="Teaching_Stuff">
+                <ScalarProperty Name="Reception_endTime" ColumnName="Reception_endTime" />
+                <ScalarProperty Name="Reception_startTime" ColumnName="Reception_startTime" />
+                <ScalarProperty Name="Reception_day" ColumnName="Reception_day" />
+                <ScalarProperty Name="Office" ColumnName="Office" />
+                <ScalarProperty Name="Course_id" ColumnName="Course_id" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

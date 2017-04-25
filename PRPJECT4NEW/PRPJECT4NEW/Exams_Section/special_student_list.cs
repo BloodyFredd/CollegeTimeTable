@@ -35,7 +35,7 @@ namespace PRPJECT4NEW.Exams_Section
         }
         protected void RefreshTB()
         {
-            using (MazalEntities context = new MazalEntities())
+            using (Entities context = new Entities())
             {
                 var allRows = context.students.ToList();
                 Sview.DataSource = allRows;

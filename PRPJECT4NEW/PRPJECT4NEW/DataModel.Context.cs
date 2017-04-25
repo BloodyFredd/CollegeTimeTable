@@ -13,10 +13,10 @@ namespace PRPJECT4NEW
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MazalEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public MazalEntities()
-            : base("name=MazalEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -30,12 +30,12 @@ namespace PRPJECT4NEW
         public virtual DbSet<Course_detail> Course_detail { get; set; }
         public virtual DbSet<cours> courses { get; set; }
         public virtual DbSet<Lecture_Course> Lecture_Course { get; set; }
-        public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<Scholarship> Scholarships { get; set; }
         public virtual DbSet<Student_Courses> Student_Courses { get; set; }
         public virtual DbSet<student> students { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<Teaching_Stuff> Teaching_Stuff { get; set; }
         public virtual DbSet<DF_requests> DF_requests { get; set; }
+        public virtual DbSet<Person> Person { get; set; }
+        public virtual DbSet<Teaching_Stuff> Teaching_Stuff { get; set; }
     }
 }

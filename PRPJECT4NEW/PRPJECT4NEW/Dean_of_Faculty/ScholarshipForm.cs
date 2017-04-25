@@ -17,7 +17,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             InitializeComponent();
 
             //Create & Load DataGridView
-            using (MazalEntities context = new MazalEntities())
+            using (Entities context = new Entities())
             {
                 CreateGridView();
                 reloadDataGridView(context);
@@ -36,7 +36,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                     checkedScholarships.Add(rw.Cells[0].Value.ToString());          
             }
 
-            using (MazalEntities context = new MazalEntities())
+            using (Entities context = new Entities())
             {
                 //Delete each marked scholarship
                 foreach (string i in checkedScholarships)
@@ -82,7 +82,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         private void newScholarshipBtn_Click(object sender, EventArgs e)
         {
-            using (MazalEntities context = new MazalEntities())
+            using (Entities context = new Entities())
             {
                 Scholarship nachshon = new Scholarship
                 {
@@ -101,7 +101,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             }
         }
 
-        private void reloadDataGridView(MazalEntities context)
+        private void reloadDataGridView(Entities context)
         {
             scholarshipGridView.Rows.Clear();
             foreach (Scholarship s in context.Scholarships)

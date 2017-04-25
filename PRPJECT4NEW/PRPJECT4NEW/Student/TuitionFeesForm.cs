@@ -37,7 +37,7 @@ namespace PRPJECT4NEW.Student
 
         private void getData()
         {
-            using (MazalEntities context = new MazalEntities())
+            using (Entities context = new Entities())
             {
                 //Select cources of a student without final grade 
                 var selected =
