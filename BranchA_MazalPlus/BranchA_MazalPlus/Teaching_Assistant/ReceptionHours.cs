@@ -31,7 +31,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             this.sqlcon = new SqlConnection(connetionString);
             try
             {
-                SqlCommand cmd = new SqlCommand("update Classes_SM1 set [08-09]=[08-09] + 1 where Class_Id ='" + Office_Button.Text + "'", sqlcon);
+                SqlCommand cmd = new SqlCommand("update Classes_SM1 set [08-09]=[08-09] + 1 and [09-10]=[09-10] + 1 and [10-11]=[10-11] + 1 and [11-12]=[11-12] + 1 and [12-13]=[12-13] + 1 and [13-14]=[13-14] + 1 and [14-15]=[14-15] + 1 and [15-16]=[15-16] + 1 and [16-17]=[16-17] + 1 and [17-18]=[17-18] + 1 and [18-19]=[18-19] + 1 and [19-20]=[19-20] + 1 and [20-21]=[20-21] + 1 where Class_Id ='" + Office_Button.Text + "'", sqlcon);
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
