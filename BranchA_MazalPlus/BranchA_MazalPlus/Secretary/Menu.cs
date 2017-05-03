@@ -69,7 +69,8 @@ namespace BranchA_MazalPlus.Secretary
 
         private void Supervisors_List_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Access to a schedule of a student");
+            StudentDetails form2 = new StudentDetails();
+            form2.Show();
         }
 
         private void Available_Classes_Button_Click(object sender, EventArgs e)
