@@ -144,6 +144,9 @@
     <Compile Include="Student_Courses.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Student_special_Exam.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -241,6 +244,8 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PRPJECT4NEW.Exams_Section.special_student_list.datasource" />
+    <None Include="Properties\DataSources\student.datasource" />
+    <None Include="Properties\DataSources\Student_special_Exam.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

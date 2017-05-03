@@ -12,12 +12,11 @@ namespace PRPJECT4NEW
     using System;
     using System.Collections.Generic;
     
-    public partial class DF_requests
+    public partial class Student_special_Exam
     {
+        public string ID { get; set; }
+        public int Course_Serial { get; set; }
         public System.DateTime Date { get; set; }
-        public string Intended_to { get; set; }
-        public string Subject { get; set; }
-        public string Message { get; set; }
-        public string Status { get; set; }
+        public Nullable<bool> Status { get; set; }
     }
 }

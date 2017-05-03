@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Type_of_easements_comboBox = new System.Windows.Forms.ComboBox();
             this.Type_of_easements_label = new System.Windows.Forms.Label();
             this.Sview = new System.Windows.Forms.DataGridView();
             this.Refresh_Button = new System.Windows.Forms.Button();
             this.Save_button = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.save2_button = new System.Windows.Forms.Button();
-            this.save3_button = new System.Windows.Forms.Button();
+            this.save_laptop_button = new System.Windows.Forms.Button();
+            this.save_formulashetts_button = new System.Windows.Forms.Button();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Sview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Type_of_easements_comboBox
@@ -74,6 +77,7 @@
             this.Sview.Name = "Sview";
             this.Sview.Size = new System.Drawing.Size(992, 291);
             this.Sview.TabIndex = 2;
+            this.Sview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Sview_CellContentClick);
             // 
             // Refresh_Button
             // 
@@ -96,33 +100,37 @@
             this.Save_button.UseVisualStyleBackColor = true;
             this.Save_button.Click += new System.EventHandler(this.Save_button_Click);
             // 
-            // save2_button
+            // save_laptop_button
             // 
-            this.save2_button.Location = new System.Drawing.Point(284, 372);
-            this.save2_button.Name = "save2_button";
-            this.save2_button.Size = new System.Drawing.Size(231, 48);
-            this.save2_button.TabIndex = 5;
-            this.save2_button.Text = "Save Laptop student list";
-            this.save2_button.UseVisualStyleBackColor = true;
-            this.save2_button.Click += new System.EventHandler(this.button1_Click);
+            this.save_laptop_button.Location = new System.Drawing.Point(284, 372);
+            this.save_laptop_button.Name = "save_laptop_button";
+            this.save_laptop_button.Size = new System.Drawing.Size(231, 48);
+            this.save_laptop_button.TabIndex = 5;
+            this.save_laptop_button.Text = "Save Laptop student list";
+            this.save_laptop_button.UseVisualStyleBackColor = true;
+            this.save_laptop_button.Click += new System.EventHandler(this.button1_Click);
             // 
-            // save3_button
+            // save_formulashetts_button
             // 
-            this.save3_button.Location = new System.Drawing.Point(562, 372);
-            this.save3_button.Name = "save3_button";
-            this.save3_button.Size = new System.Drawing.Size(235, 48);
-            this.save3_button.TabIndex = 6;
-            this.save3_button.Text = "Save Formula Sheets student list";
-            this.save3_button.UseVisualStyleBackColor = true;
-            this.save3_button.Click += new System.EventHandler(this.save3_button_Click);
+            this.save_formulashetts_button.Location = new System.Drawing.Point(562, 372);
+            this.save_formulashetts_button.Name = "save_formulashetts_button";
+            this.save_formulashetts_button.Size = new System.Drawing.Size(235, 48);
+            this.save_formulashetts_button.TabIndex = 6;
+            this.save_formulashetts_button.Text = "Save Formula Sheets student list";
+            this.save_formulashetts_button.UseVisualStyleBackColor = true;
+            this.save_formulashetts_button.Click += new System.EventHandler(this.save3_button_Click);
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(PRPJECT4NEW.student);
             // 
             // special_student_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 433);
-            this.Controls.Add(this.save3_button);
-            this.Controls.Add(this.save2_button);
+            this.Controls.Add(this.save_formulashetts_button);
+            this.Controls.Add(this.save_laptop_button);
             this.Controls.Add(this.Save_button);
             this.Controls.Add(this.Refresh_Button);
             this.Controls.Add(this.Sview);
@@ -133,6 +141,7 @@
             this.Text = "special_student_list";
             this.Load += new System.EventHandler(this.special_student_list_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Sview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +155,8 @@
         private System.Windows.Forms.Button Refresh_Button;
         private System.Windows.Forms.Button Save_button;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button save2_button;
-        private System.Windows.Forms.Button save3_button;
+        private System.Windows.Forms.Button save_laptop_button;
+        private System.Windows.Forms.Button save_formulashetts_button;
+        private System.Windows.Forms.BindingSource studentBindingSource;
     }
 }
