@@ -43,7 +43,7 @@
             "T102",
             "T103",
             "T104"});
-            this.Office_Button.Location = new System.Drawing.Point(31, 25);
+            this.Office_Button.Location = new System.Drawing.Point(4, 25);
             this.Office_Button.Name = "Office_Button";
             this.Office_Button.Size = new System.Drawing.Size(71, 21);
             this.Office_Button.TabIndex = 0;
@@ -87,7 +87,7 @@
             "404",
             "405",
             "406"});
-            this.CourseID_Button.Location = new System.Drawing.Point(31, 59);
+            this.CourseID_Button.Location = new System.Drawing.Point(90, 25);
             this.CourseID_Button.Name = "CourseID_Button";
             this.CourseID_Button.Size = new System.Drawing.Size(71, 21);
             this.CourseID_Button.TabIndex = 1;
@@ -104,7 +104,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(145, 41);
+            this.button1.Location = new System.Drawing.Point(143, 60);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 25);
             this.button1.TabIndex = 3;
@@ -116,13 +116,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 94);
+            this.ClientSize = new System.Drawing.Size(239, 97);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CourseID_Button);
             this.Controls.Add(this.Office_Button);
             this.Name = "ReceptionHours";
             this.Text = "ReceptionHours";
+            this.Load += new System.EventHandler(this.ReceptionHours_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
