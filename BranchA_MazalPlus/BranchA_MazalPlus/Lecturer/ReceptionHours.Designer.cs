@@ -1,4 +1,4 @@
-﻿namespace BranchA_MazalPlus.Teaching_Assistant
+﻿namespace BranchA_MazalPlus.Lecturer
 {
     partial class ReceptionHours
     {
@@ -38,11 +38,16 @@
             // 
             this.Office_Button.FormattingEnabled = true;
             this.Office_Button.Items.AddRange(new object[] {
-            "T100",
-            "T101",
-            "T102",
-            "T103",
-            "T104"});
+            "TG100",
+            "TG101",
+            "TG102",
+            "TG103",
+            "TG104",
+            "TG105",
+            "TG106",
+            "TG107",
+            "TG108",
+            "TG109"});
             this.Office_Button.Location = new System.Drawing.Point(4, 25);
             this.Office_Button.Name = "Office_Button";
             this.Office_Button.Size = new System.Drawing.Size(71, 21);

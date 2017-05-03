@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace BranchA_MazalPlus.Teaching_Assistant
+namespace BranchA_MazalPlus.Lecturer
 {
     public partial class ReceptionHours : Form
     {
@@ -44,7 +44,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                         dr = cmd15.ExecuteReader();
                         if (dr.Read() == true)
                         {
-                            if (Int32.Parse(dr[0].ToString()) < 3)
+                            if (Int32.Parse(dr[0].ToString()) == -1)
                             {
                                 SqlCommand cmd = new SqlCommand("update Teaching_Stuff set Office ='" + Office_Button.Text + "' where Course_id ='" + CourseID_Button.Text + "' and ID = '" + Forms.UserID.ID + "'", sqlcon);
                                 SqlCommand cmd1 = new SqlCommand("update Classes_SM1 set [08-09]=[08-09] + 1 where Class_Id ='" + Office_Button.Text + "'", sqlcon);
@@ -194,7 +194,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                             else
                             {
                                 this.Close();
-                                MessageBox.Show("Try again, the capacity of this office is already too high.");
+                                MessageBox.Show("Try again, there is a lecturer in this office.");
                                 ReceptionHours form2 = new ReceptionHours();
                                 form2.Show();
                             }
