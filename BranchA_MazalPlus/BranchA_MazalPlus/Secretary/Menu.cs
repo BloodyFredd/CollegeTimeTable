@@ -58,7 +58,8 @@ namespace BranchA_MazalPlus.Secretary
 
         private void Exams_Assignment_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Add a student to a class with full capacity");
+            AddStudent form2 = new AddStudent();
+            form2.Show();
         }
 
         private void Supervisors_Button_Click(object sender, EventArgs e)
