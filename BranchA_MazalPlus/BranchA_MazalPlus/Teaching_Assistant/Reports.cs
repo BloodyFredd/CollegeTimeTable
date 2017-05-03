@@ -82,5 +82,31 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
+            this.sqlcon = new SqlConnection(connetionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id,Lecture_Course.Course_Serial FROM Student_Courses LEFT join Lecture_Course on Student_Courses.course_id=Lecture_Course.Course_ID where Teacher='" + Forms.UserID.ID+"'", sqlcon);
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                this.Close();
+                this.sqlcon.Close();
+            }
+        }
+
     }
 }
