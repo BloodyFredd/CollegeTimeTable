@@ -59,7 +59,8 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void Special_Exams_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Special Exams");
+            ReceptionHours rec = new ReceptionHours();
+            rec.Show();
         }
 
         private void Logout_Click(object sender, EventArgs e)

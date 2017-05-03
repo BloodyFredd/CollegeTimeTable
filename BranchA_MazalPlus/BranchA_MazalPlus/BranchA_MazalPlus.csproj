@@ -121,6 +121,12 @@
     <Compile Include="Lecturer\NewLecture.Designer.cs">
       <DependentUpon>NewLecture.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lecturer\ReceptionHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\ReceptionHours.Designer.cs">
+      <DependentUpon>ReceptionHours.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer\Reports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\NewLecture.resx">
       <DependentUpon>NewLecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\ReceptionHours.resx">
+      <DependentUpon>ReceptionHours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
