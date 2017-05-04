@@ -35,7 +35,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand("select * from person where Permission='"+"Student"+"'", sqlcon);
+            SqlCommand cmd = new SqlCommand("select person.ID,person.F_name,person.Lname,Student_Courses.final_grade from person join Student_Courses on Person.ID=Student_Courses.stud_id where Student_Courses.final_grade <56"+"'", sqlcon);
 
             try
             {
