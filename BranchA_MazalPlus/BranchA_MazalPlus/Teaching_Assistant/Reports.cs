@@ -35,12 +35,8 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
 
-            //SqlCommand cmd = new SqlCommand("select distinct t.Course_id from Teaching_Stuff t where not exists(select ID, Course_id from Teaching_Stuff t2 where t2.Course_id = t.Course_id)", sqlcon);
-            SqlCommand cmd = new SqlCommand("SELECT DISTINCT t.Course_id, t.ID FROM Teaching_Stuff t WHERE EXISTS( SELECT t2.Course_id FROM Teaching_Stuff t2 WHERE t2.ID != '" + Forms.UserID.ID + "')", sqlcon);
-
-            //this.sqlcon.Open();
-            //SqlDataReader dr = cmd.ExecuteReader();
-            //SqlCommand cmd1 = new SqlCommand("select ID from Teaching_Stuff where Course_id ='" + dr[0].ToString() + "'", sqlcon);
+            SqlCommand cmd = new SqlCommand("declare @results varchar(50) select @results = convert(varchar(50),Course_id) from Teaching_Stuff  WHERE Teaching_Stuff.ID = '" + Forms.UserID.ID + "' SELECT Person.F_name,Person.L_name,Teaching_Stuff.ID,Teaching_Stuff.Course_id,Teaching_Stuff.office,Person.Email FROM Teaching_Stuff JOIN Person on Person.ID=Teaching_Stuff.ID WHERE Course_id  = @results AND Teaching_Stuff.ID  != '" + Forms.UserID.ID + "'", sqlcon);
+             
             try
             {
 
