@@ -34,13 +34,8 @@ namespace BranchA_MazalPlus.Teaching_Assistant
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
-
-            //SqlCommand cmd = new SqlCommand("select distinct t.Course_id from Teaching_Stuff t where not exists(select ID, Course_id from Teaching_Stuff t2 where t2.Course_id = t.Course_id)", sqlcon);
-            SqlCommand cmd = new SqlCommand("SELECT DISTINCT t.Course_id, t.ID FROM Teaching_Stuff t WHERE EXISTS( SELECT t2.Course_id FROM Teaching_Stuff t2 WHERE t2.ID != '" + Forms.UserID.ID + "')", sqlcon);
-
-            //this.sqlcon.Open();
-            //SqlDataReader dr = cmd.ExecuteReader();
-            //SqlCommand cmd1 = new SqlCommand("select ID from Teaching_Stuff where Course_id ='" + dr[0].ToString() + "'", sqlcon);
+            //SqlCommand cmd = new SqlCommand("SELECT DISTINCT t.ID, t.Course_id FROM Teaching_Stuff t WHERE not EXISTS( SELECT t2.ID FROM Teaching_Stuff t2 WHERE (t2.ID = '" + Forms.UserID.ID + "' and t.Course_id != t2.Course_id))", sqlcon);
+            SqlCommand cmd = new SqlCommand("select Person.F_name, Person.L_name FROM Person LEFT join (SELECT DISTINCT t.ID, t.Course_id FROM Teaching_Stuff t WHERE not EXISTS( SELECT t2.ID FROM Teaching_Stuff t2 WHERE (t2.ID = '" + Forms.UserID.ID + "' and t.Course_id != t2.Course_id))", sqlcon);
             try
             {
 
