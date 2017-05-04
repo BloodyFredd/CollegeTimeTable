@@ -42,9 +42,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(771, 298);
+            this.button1.Location = new System.Drawing.Point(360, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(223, 127);
+            this.button1.Size = new System.Drawing.Size(178, 115);
             this.button1.TabIndex = 0;
             this.button1.Text = "modify between 2 classrooms lecture ";
             this.button1.UseVisualStyleBackColor = true;
@@ -56,7 +56,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.semesterToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(705, 25);
+            this.menuStrip1.Location = new System.Drawing.Point(34, 39);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(90, 28);
             this.menuStrip1.TabIndex = 1;
@@ -76,7 +76,7 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateSem1});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
             this.aToolStripMenuItem.Text = "A";
             // 
             // dateSem1
@@ -283,7 +283,7 @@
             "s104",
             "a101",
             "a102"});
-            this.class1.Location = new System.Drawing.Point(830, 12);
+            this.class1.Location = new System.Drawing.Point(159, 26);
             this.class1.Name = "class1";
             this.class1.Size = new System.Drawing.Size(164, 24);
             this.class1.TabIndex = 2;
@@ -304,7 +304,7 @@
             "s104",
             "a101",
             "a102"});
-            this.class2.Location = new System.Drawing.Point(830, 57);
+            this.class2.Location = new System.Drawing.Point(159, 71);
             this.class2.Name = "class2";
             this.class2.Size = new System.Drawing.Size(164, 24);
             this.class2.TabIndex = 3;
@@ -314,7 +314,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 494);
+            this.ClientSize = new System.Drawing.Size(632, 148);
             this.Controls.Add(this.class2);
             this.Controls.Add(this.class1);
             this.Controls.Add(this.button1);

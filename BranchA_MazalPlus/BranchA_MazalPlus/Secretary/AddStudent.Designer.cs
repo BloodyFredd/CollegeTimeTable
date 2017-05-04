@@ -41,10 +41,10 @@
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(168, 110);
-            this.Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Add.Location = new System.Drawing.Point(190, 109);
+            this.Add.Margin = new System.Windows.Forms.Padding(2);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(79, 20);
+            this.Add.Size = new System.Drawing.Size(98, 34);
             this.Add.TabIndex = 0;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
@@ -88,7 +88,7 @@
             "403",
             "404"});
             this.CourseID.Location = new System.Drawing.Point(14, 27);
-            this.CourseID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(2);
             this.CourseID.Name = "CourseID";
             this.CourseID.Size = new System.Drawing.Size(188, 24);
             this.CourseID.TabIndex = 1;
@@ -98,8 +98,8 @@
             this.CourseSerial.FormattingEnabled = true;
             this.CourseSerial.Items.AddRange(new object[] {
             "1001"});
-            this.CourseSerial.Location = new System.Drawing.Point(212, 27);
-            this.CourseSerial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CourseSerial.Location = new System.Drawing.Point(274, 27);
+            this.CourseSerial.Margin = new System.Windows.Forms.Padding(2);
             this.CourseSerial.Name = "CourseSerial";
             this.CourseSerial.Size = new System.Drawing.Size(188, 24);
             this.CourseSerial.TabIndex = 2;
@@ -119,7 +119,7 @@
             "s103",
             "s104"});
             this.Class.Location = new System.Drawing.Point(14, 70);
-            this.Class.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Class.Margin = new System.Windows.Forms.Padding(2);
             this.Class.Name = "Class";
             this.Class.Size = new System.Drawing.Size(188, 24);
             this.Class.TabIndex = 3;
@@ -130,8 +130,8 @@
             this.Semester.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.Semester.Location = new System.Drawing.Point(212, 70);
-            this.Semester.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Semester.Location = new System.Drawing.Point(274, 70);
+            this.Semester.Margin = new System.Windows.Forms.Padding(2);
             this.Semester.Name = "Semester";
             this.Semester.Size = new System.Drawing.Size(188, 24);
             this.Semester.TabIndex = 4;
@@ -150,7 +150,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(256, 5);
+            this.label2.Location = new System.Drawing.Point(318, 5);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 17);
@@ -170,7 +170,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(262, 52);
+            this.label4.Location = new System.Drawing.Point(324, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 17);
@@ -181,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 146);
+            this.ClientSize = new System.Drawing.Size(516, 152);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -191,7 +191,7 @@
             this.Controls.Add(this.CourseSerial);
             this.Controls.Add(this.CourseID);
             this.Controls.Add(this.Add);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddStudent";
             this.Text = "AddStudent";
             this.ResumeLayout(false);
