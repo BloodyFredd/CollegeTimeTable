@@ -31,7 +31,6 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             this.sqlcon = new SqlConnection(connetionString);
             try
             {
-
                 SqlCommand cmd14 = new SqlCommand("select * from Teaching_Stuff where ID ='" + Forms.UserID.ID + "' and Course_id='" + CourseID_Button.Text + "'", sqlcon);
                 SqlCommand cmd15 = new SqlCommand("select [08-09] from Classes_SM1 where Class_Id ='" + Office_Button.Text + "'", sqlcon);
                 this.sqlcon.Open();
