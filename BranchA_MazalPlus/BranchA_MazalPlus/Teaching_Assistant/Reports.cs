@@ -34,8 +34,9 @@ namespace BranchA_MazalPlus.Teaching_Assistant
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
-            //SqlCommand cmd = new SqlCommand("SELECT DISTINCT t.ID, t.Course_id FROM Teaching_Stuff t WHERE not EXISTS( SELECT t2.ID FROM Teaching_Stuff t2 WHERE (t2.ID = '" + Forms.UserID.ID + "' and t.Course_id != t2.Course_id))", sqlcon);
-            SqlCommand cmd = new SqlCommand("select Person.F_name, Person.L_name FROM Person LEFT join (SELECT DISTINCT t.ID, t.Course_id FROM Teaching_Stuff t WHERE not EXISTS( SELECT t2.ID FROM Teaching_Stuff t2 WHERE (t2.ID = '" + Forms.UserID.ID + "' and t.Course_id != t2.Course_id))", sqlcon);
+
+            SqlCommand cmd = new SqlCommand("declare @results varchar(50) select @results = convert(varchar(50),Course_id) from Teaching_Stuff  WHERE Teaching_Stuff.ID = '" + Forms.UserID.ID + "' SELECT Person.F_name,Person.L_name,Teaching_Stuff.ID,Teaching_Stuff.Course_id,Teaching_Stuff.office,Person.Email FROM Teaching_Stuff JOIN Person on Person.ID=Teaching_Stuff.ID WHERE Course_id  = @results AND Teaching_Stuff.ID  != '" + Forms.UserID.ID + "'", sqlcon);
+             
             try
             {
 
@@ -105,6 +106,34 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 MessageBox.Show(ex.Message);
                 this.Close();
                 this.sqlcon.Close();
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
+            this.sqlcon = new SqlConnection(connetionString);
+            StudentsReport.Visible = true;
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "'", sqlcon);
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                this.Close();
+                this.sqlcon.Close();
+
             }
         }
     }
