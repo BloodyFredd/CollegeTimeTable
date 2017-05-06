@@ -38,9 +38,9 @@
             // 
             // Link_courses
             // 
-            this.Link_courses.Location = new System.Drawing.Point(254, 134);
+            this.Link_courses.Location = new System.Drawing.Point(76, 53);
             this.Link_courses.Name = "Link_courses";
-            this.Link_courses.Size = new System.Drawing.Size(153, 55);
+            this.Link_courses.Size = new System.Drawing.Size(153, 65);
             this.Link_courses.TabIndex = 2;
             this.Link_courses.Text = "Link";
             this.Link_courses.UseVisualStyleBackColor = true;
@@ -54,7 +54,7 @@
             this.toolStripComboBox1,
             this.Curr_Course,
             this.prev_course});
-            this.menuStrip1.Location = new System.Drawing.Point(152, 65);
+            this.menuStrip1.Location = new System.Drawing.Point(9, 9);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(264, 32);
             this.menuStrip1.TabIndex = 3;
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 497);
+            this.ClientSize = new System.Drawing.Size(369, 153);
             this.Controls.Add(this.Link_courses);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

@@ -51,11 +51,11 @@
             // StudentsReport
             // 
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(12, 199);
+            this.StudentsReport.Location = new System.Drawing.Point(12, 11);
             this.StudentsReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(448, 198);
+            this.StudentsReport.Size = new System.Drawing.Size(448, 386);
             this.StudentsReport.TabIndex = 2;
             this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
             // 
@@ -72,11 +72,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(488, 104);
+            this.button2.Location = new System.Drawing.Point(480, 362);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(197, 99);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Report of students that need to repeat on course ";
+            this.button2.Text = "Failing Students";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -119,7 +119,7 @@
             "404",
             "405",
             "406"});
-            this.CourseID.Location = new System.Drawing.Point(501, 64);
+            this.CourseID.Location = new System.Drawing.Point(529, 332);
             this.CourseID.Name = "CourseID";
             this.CourseID.Size = new System.Drawing.Size(95, 24);
             this.CourseID.TabIndex = 6;

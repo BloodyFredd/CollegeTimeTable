@@ -57,7 +57,7 @@
             // 
             // Failing_Students
             // 
-            this.Failing_Students.Location = new System.Drawing.Point(117, 14);
+            this.Failing_Students.Location = new System.Drawing.Point(341, 14);
             this.Failing_Students.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Failing_Students.Name = "Failing_Students";
             this.Failing_Students.Size = new System.Drawing.Size(160, 63);
@@ -87,7 +87,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(12, 79);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(207, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(92, 28);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -342,8 +342,8 @@
             "404",
             "405",
             "406"});
-            this.CourseID.Location = new System.Drawing.Point(116, 79);
-            this.CourseID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CourseID.Location = new System.Drawing.Point(341, 83);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(4);
             this.CourseID.Name = "CourseID";
             this.CourseID.Size = new System.Drawing.Size(160, 24);
             this.CourseID.TabIndex = 11;
@@ -352,8 +352,8 @@
             // 
             // All_Person_Button
             // 
-            this.All_Person_Button.Location = new System.Drawing.Point(284, 14);
-            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.All_Person_Button.Location = new System.Drawing.Point(704, 14);
+            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(4);
             this.All_Person_Button.Name = "All_Person_Button";
             this.All_Person_Button.Size = new System.Drawing.Size(103, 63);
             this.All_Person_Button.TabIndex = 12;
