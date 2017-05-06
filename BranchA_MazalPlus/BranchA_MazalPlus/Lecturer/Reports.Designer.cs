@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.StudentsReport = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.Available_Classes = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Semester = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +45,7 @@
             // 
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentsReport.Location = new System.Drawing.Point(29, 343);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(5);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
             this.StudentsReport.Size = new System.Drawing.Size(1661, 420);
@@ -54,22 +53,11 @@
             this.StudentsReport.Visible = false;
             this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(99, 184);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(491, 88);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Show Teaching Staff only!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Available_Classes
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
             this.Available_Classes.Location = new System.Drawing.Point(99, 52);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(5);
             this.Available_Classes.Name = "Available_Classes";
             this.Available_Classes.Size = new System.Drawing.Size(395, 88);
             this.Available_Classes.TabIndex = 8;
@@ -300,7 +288,7 @@
             // 
             // LecturerCourses
             // 
-            this.LecturerCourses.Location = new System.Drawing.Point(723, 184);
+            this.LecturerCourses.Location = new System.Drawing.Point(153, 184);
             this.LecturerCourses.Name = "LecturerCourses";
             this.LecturerCourses.Size = new System.Drawing.Size(263, 88);
             this.LecturerCourses.TabIndex = 10;
@@ -316,9 +304,8 @@
             this.Controls.Add(this.LecturerCourses);
             this.Controls.Add(this.Available_Classes);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.StudentsReport);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
@@ -332,7 +319,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView StudentsReport;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Available_Classes;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Semester;
