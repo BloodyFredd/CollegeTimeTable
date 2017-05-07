@@ -46,6 +46,13 @@ namespace PRPJECT4NEW.Tech_Team
         private void list_of_conferences_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("list of conferences in college in this week");
+            Conferences_List frm = new Conferences_List();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void special_request_from_DF_Button_Click(object sender, EventArgs e)
