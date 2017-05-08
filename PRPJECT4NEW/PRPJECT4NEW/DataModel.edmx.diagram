@@ -5,7 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7d9afdc374d44435913a6ae00cce8341" Name="Diagram1" ZoomLevel="64">
+      <Diagram DiagramId="7d9afdc374d44435913a6ae00cce8341" Name="Diagram1" ZoomLevel="65">
+      <Diagram DiagramId="7d9afdc374d44435913a6ae00cce8341" Name="Diagram1" ZoomLevel="64">
       <Diagram DiagramId="7d9afdc374d44435913a6ae00cce8341" Name="Diagram1" ZoomLevel="82">
+      <Diagram DiagramId="7d9afdc374d44435913a6ae00cce8341" Name="Diagram1" ZoomLevel="65">
         <EntityTypeShape EntityType="MazalModel.Classes_SM1" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MazalModel.Classes_SM2" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MazalModel.Course_detail" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />

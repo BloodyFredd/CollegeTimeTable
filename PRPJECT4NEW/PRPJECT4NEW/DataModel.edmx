@@ -440,7 +440,10 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySet Name="Teaching_Stuff" EntityType="MazalModel.Teaching_Stuff" />
           <EntitySet Name="Student_special_Exam" EntityType="MazalModel.Student_special_Exam" />
           <EntitySet Name="Person" EntityType="MazalModel.Person" />
+          <EntitySet Name="Student_special_Exam" EntityType="MazalModel.Student_special_Exam" />
+          <EntitySet Name="DF_requests" EntityType="MazalModel.DF_requests" />
           <EntitySet Name="Conferences" EntityType="MazalModel.Conference" />
+          <EntitySet Name="DF_requests" EntityType="MazalModel.DF_requests" />
         </EntityContainer>
         <EntityType Name="Teaching_Stuff">
           <Key>
