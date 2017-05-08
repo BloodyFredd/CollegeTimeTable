@@ -26,7 +26,6 @@ namespace BranchA_MazalPlus
         {
             try
             {
-                //this.personTableAdapter.Fill(this.mazalDataSet.person);
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
                 this.sqlcon.Open();
@@ -39,6 +38,10 @@ namespace BranchA_MazalPlus
                 string query = "INSERT INTO person (ID,F_name,L_name,Telephone,Email,Password,Permission) VALUES('" + this.ID.Text + "','" + this.Fname.Text + "','" + this.Lname.Text + "','" + this.Phone.Text + "','" + this.Email.Text + "','" + this.ID.Text + "','" + this.perm1.Text + "')  ; ";
                 SqlCommand cmd = new SqlCommand(query, sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
+                if(this.perm1.Text == "Teaching_Assistant" || this.perm1.Text == "Lecturer")
+                {
+                    //לכתוב הוספה לדטא בייס טיצינג סטאפ
+                }
                 MessageBox.Show("Saved");
                 this.sqlcon.Close();
                 this.Close();
@@ -53,15 +56,18 @@ namespace BranchA_MazalPlus
 
         private void checkString(string str, string check)
         {
-            if(check == "ID")
+            if (check == "ID")
             {
                 bool allDigits = str.All(char.IsDigit);
                 if (str.Length != 9 || allDigits == false)
                     throw new ArgumentException("ID should be only digits and with length of 9.");
                 SqlCommand cmd = new SqlCommand("select * from person where ID='" + this.ID.Text + "'", sqlcon);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if(dr.Read() == true)
+                SqlDataReader dr = cmd.ExecuteReader();                
+                if (dr.Read() == true)
                     throw new ArgumentException("There exists such an ID.");
+                this.sqlcon.Close();
+                this.sqlcon = new SqlConnection(connetionString);
+                this.sqlcon.Open();
             }
 
             if (check == "name")
