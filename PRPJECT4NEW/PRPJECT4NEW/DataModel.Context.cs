@@ -38,7 +38,7 @@ namespace PRPJECT4NEW
         public virtual DbSet<Teaching_Stuff> Teaching_Stuff { get; set; }
         public virtual DbSet<Student_special_Exam> Student_special_Exam { get; set; }
         public virtual DbSet<Person> Person { get; set; }
-        public virtual DbSet<Conference> Conferences { get; set; }
         public virtual DbSet<Student_special_Exam> Student_special_Exam { get; set; }
+        public virtual DbSet<Conference> Conferences { get; set; }
     }
 }
