@@ -49,10 +49,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Semester});
-            this.menuStrip1.Location = new System.Drawing.Point(488, 95);
+            this.menuStrip1.Location = new System.Drawing.Point(976, 184);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(92, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 6, 0, 6);
+            this.menuStrip1.Size = new System.Drawing.Size(171, 57);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,7 +64,7 @@
             this.bToolStripMenuItem});
             this.Semester.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(117, 24);
+            this.Semester.Size = new System.Drawing.Size(153, 45);
             this.Semester.Text = "Semester";
             // 
             // aToolStripMenuItem
@@ -72,7 +72,7 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -165,7 +165,7 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 49);
             this.toolStripComboBox2.Click += new System.EventHandler(this.toolStripComboBox2_Click);
             // 
             // bToolStripMenuItem
@@ -173,7 +173,7 @@
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
@@ -264,16 +264,16 @@
             "2017-04-06",
             "2017-04-07"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 49);
             // 
             // Lecture
             // 
             this.Lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Lecture.Location = new System.Drawing.Point(26, 164);
-            this.Lecture.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Lecture.Location = new System.Drawing.Point(52, 318);
+            this.Lecture.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Lecture.Name = "Lecture";
             this.Lecture.RowTemplate.Height = 24;
-            this.Lecture.Size = new System.Drawing.Size(830, 314);
+            this.Lecture.Size = new System.Drawing.Size(1660, 608);
             this.Lecture.TabIndex = 11;
             this.Lecture.Visible = false;
             this.Lecture.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Lecture_CellContentClick);
@@ -281,10 +281,10 @@
             // Available_Classes
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
-            this.Available_Classes.Location = new System.Drawing.Point(488, 17);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Available_Classes.Location = new System.Drawing.Point(976, 33);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(103, 63);
+            this.Available_Classes.Size = new System.Drawing.Size(206, 122);
             this.Available_Classes.TabIndex = 12;
             this.Available_Classes.Text = "Available Classes";
             this.Available_Classes.UseVisualStyleBackColor = true;
@@ -292,12 +292,12 @@
             // 
             // NewLec
             // 
-            this.NewLec.Location = new System.Drawing.Point(26, 16);
-            this.NewLec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NewLec.Location = new System.Drawing.Point(52, 31);
+            this.NewLec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NewLec.Name = "NewLec";
-            this.NewLec.Size = new System.Drawing.Size(103, 64);
+            this.NewLec.Size = new System.Drawing.Size(206, 124);
             this.NewLec.TabIndex = 13;
-            this.NewLec.Text = "NewLec";
+            this.NewLec.Text = "New Lecture";
             this.NewLec.UseVisualStyleBackColor = true;
             this.NewLec.Click += new System.EventHandler(this.NewLec_Click);
             // 
@@ -318,11 +318,12 @@
             "18-19",
             "19-20",
             "20-21"});
-            this.Hour.Location = new System.Drawing.Point(142, 17);
-            this.Hour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Hour.Location = new System.Drawing.Point(284, 33);
+            this.Hour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Hour.Name = "Hour";
-            this.Hour.Size = new System.Drawing.Size(142, 24);
+            this.Hour.Size = new System.Drawing.Size(280, 39);
             this.Hour.TabIndex = 14;
+            this.Hour.Text = "Choose time";
             this.Hour.SelectedIndexChanged += new System.EventHandler(this.Hour_SelectedIndexChanged);
             // 
             // Class
@@ -339,24 +340,25 @@
             "s104",
             "a101",
             "a102"});
-            this.Class.Location = new System.Drawing.Point(142, 56);
-            this.Class.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Class.Location = new System.Drawing.Point(284, 108);
+            this.Class.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Class.Name = "Class";
-            this.Class.Size = new System.Drawing.Size(142, 24);
+            this.Class.Size = new System.Drawing.Size(280, 39);
             this.Class.TabIndex = 15;
+            this.Class.Text = "Choose class";
             // 
             // NewLecture
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 515);
+            this.ClientSize = new System.Drawing.Size(1772, 998);
             this.Controls.Add(this.Class);
             this.Controls.Add(this.Hour);
             this.Controls.Add(this.NewLec);
             this.Controls.Add(this.Available_Classes);
             this.Controls.Add(this.Lecture);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NewLecture";
             this.Text = "NewLecture";
             this.Load += new System.EventHandler(this.NewLecture_Load);

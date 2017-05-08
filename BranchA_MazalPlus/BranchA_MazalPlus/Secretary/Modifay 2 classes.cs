@@ -86,6 +86,7 @@ namespace BranchA_MazalPlus.Secretary
                     {
                         MessageBox.Show(ex.Message);
                     }
+                    MessageBox.Show("Change completed.");
                 }
 
                 else if (dateSem2.Text.Equals("") && !dateSem1.Text.Equals(""))
@@ -130,17 +131,16 @@ namespace BranchA_MazalPlus.Secretary
                     {
                         MessageBox.Show(ex.Message);
                     }
-
+                    MessageBox.Show("Change completed.");
                 }
                 else
                 {
                     this.Close();
                     MessageBox.Show("Error selecting dates, try again!");
-                    Reports form2 = new Reports();
+                    Modifay_2_classes form2 = new Modifay_2_classes();
                     form2.Show();
 
                 }
-                MessageBox.Show("Change completed.");
                 this.sqlcon.Close();
                 this.Close();
                 

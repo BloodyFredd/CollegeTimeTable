@@ -38,7 +38,7 @@ namespace BranchA_MazalPlus.Secretary
             try
             {
                 SqlCommand cmd = new SqlCommand("UPDATE courses SET Blocking_cource = "+this.prev_course.Text+" WHERE Course_id = '" + Curr_Course.Text + "'", sqlcon);
-                MessageBox.Show("Changed!");
+                //MessageBox.Show("Changed!");
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();

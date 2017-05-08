@@ -35,32 +35,7 @@ namespace BranchA_MazalPlus.Lecturer
            
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-
-            SqlCommand cmd = new SqlCommand("select * from person where Permission='Teaching_Assistant' OR Permission='Lecturer' ", sqlcon);
-
-
-            try
-            {
-                
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
-
-                bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
-                sda.Update(dbdataset);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
@@ -129,7 +104,7 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void Reports_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void LecturerCourses_Click(object sender, EventArgs e)
@@ -186,5 +161,10 @@ namespace BranchA_MazalPlus.Lecturer
            
         }
     }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

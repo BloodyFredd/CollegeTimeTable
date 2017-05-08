@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.StudentsReport = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.Available_Classes = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Semester = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,33 +45,23 @@
             // StudentsReport
             // 
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(14, 78);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.StudentsReport.Location = new System.Drawing.Point(99, 394);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(830, 316);
+            this.StudentsReport.Size = new System.Drawing.Size(983, 484);
             this.StudentsReport.TabIndex = 2;
             this.StudentsReport.Visible = false;
             this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(50, 430);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 45);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Show Teaching Staff only!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Available_Classes
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
-            this.Available_Classes.Location = new System.Drawing.Point(50, 27);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Available_Classes.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.1F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Available_Classes.Location = new System.Drawing.Point(101, 52);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(198, 45);
+            this.Available_Classes.Size = new System.Drawing.Size(241, 76);
             this.Available_Classes.TabIndex = 8;
             this.Available_Classes.Text = "Available Classes";
             this.Available_Classes.UseVisualStyleBackColor = true;
@@ -84,12 +73,13 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Semester});
-            this.menuStrip1.Location = new System.Drawing.Point(254, 35);
+            this.menuStrip1.Location = new System.Drawing.Point(376, 52);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(92, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 7, 0, 7);
+            this.menuStrip1.Size = new System.Drawing.Size(171, 59);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // Semester
             // 
@@ -98,7 +88,7 @@
             this.bToolStripMenuItem});
             this.Semester.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(82, 24);
+            this.Semester.Size = new System.Drawing.Size(153, 45);
             this.Semester.Text = "Semester";
             this.Semester.Click += new System.EventHandler(this.Semester_Click);
             // 
@@ -107,7 +97,7 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -198,14 +188,14 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 49);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
@@ -296,15 +286,16 @@
             "2017-04-06",
             "2017-04-07"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 49);
             this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click_1);
             // 
             // LecturerCourses
             // 
-            this.LecturerCourses.Location = new System.Drawing.Point(380, 430);
-            this.LecturerCourses.Margin = new System.Windows.Forms.Padding(2);
+            this.LecturerCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.1F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.LecturerCourses.Location = new System.Drawing.Point(101, 152);
+            this.LecturerCourses.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.LecturerCourses.Name = "LecturerCourses";
-            this.LecturerCourses.Size = new System.Drawing.Size(166, 45);
+            this.LecturerCourses.Size = new System.Drawing.Size(241, 79);
             this.LecturerCourses.TabIndex = 10;
             this.LecturerCourses.Text = "Lecturer_Courses";
             this.LecturerCourses.UseVisualStyleBackColor = true;
@@ -312,9 +303,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(609, 430);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.1F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.button2.Location = new System.Drawing.Point(101, 257);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(181, 45);
+            this.button2.Size = new System.Drawing.Size(241, 79);
             this.button2.TabIndex = 11;
             this.button2.Text = "Students";
             this.button2.UseVisualStyleBackColor = true;
@@ -322,16 +315,17 @@
             // 
             // Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 519);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1580, 894);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.LecturerCourses);
             this.Controls.Add(this.Available_Classes);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.StudentsReport);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
@@ -345,7 +339,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView StudentsReport;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Available_Classes;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Semester;
