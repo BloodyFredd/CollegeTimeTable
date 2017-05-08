@@ -168,6 +168,12 @@
     <Compile Include="Tech_Team\Conferences_List.Designer.cs">
       <DependentUpon>Conferences_List.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tech_Team\DF_requestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tech_Team\DF_requestForm.Designer.cs">
+      <DependentUpon>DF_requestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tech_Team\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tech_Team\Conferences_List.resx">
       <DependentUpon>Conferences_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tech_Team\DF_requestForm.resx">
+      <DependentUpon>DF_requestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tech_Team\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
