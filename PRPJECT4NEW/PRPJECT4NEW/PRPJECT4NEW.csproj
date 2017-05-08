@@ -111,12 +111,6 @@
     <Compile Include="Dean_of_Faculty\ScholarshipForm.Designer.cs">
       <DependentUpon>ScholarshipForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dean_of_Faculty\Special_date.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dean_of_Faculty\Special_date.Designer.cs">
-      <DependentUpon>Special_date.cs</DependentUpon>
-    </Compile>
     <Compile Include="DF_requests.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -197,9 +191,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Dean_of_Faculty\Special_date.resx">
-      <DependentUpon>Special_date.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Exams_Section\Special_Test.resx">
       <DependentUpon>Special_Test.cs</DependentUpon>
     </EmbeddedResource>
