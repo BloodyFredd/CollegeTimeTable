@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="MazalModel.student" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MazalModel.sysdiagram" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="MazalModel.DF_requests" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MazalModel.Teaching_Stuff" Width="1.5" PointX="10.625" PointY="4.25" />
+        <EntityTypeShape EntityType="MazalModel.Teaching_Stuff" Width="1.5" PointX="9.375" PointY="4.75" />
         <EntityTypeShape EntityType="MazalModel.Student_special_Exam" Width="1.5" PointX="11.375" PointY="0.75" />
         <EntityTypeShape EntityType="MazalModel.Person" Width="1.5" PointX="9.375" PointY="10.75" />
         <EntityTypeShape EntityType="MazalModel.Conference" Width="1.5" PointX="0.75" PointY="11.75" />

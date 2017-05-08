@@ -108,7 +108,7 @@
             this.save_laptop_button.TabIndex = 5;
             this.save_laptop_button.Text = "Save Laptop student list";
             this.save_laptop_button.UseVisualStyleBackColor = true;
-//            this.save_laptop_button.Click += new System.EventHandler(this.button1_Click);
+            this.save_laptop_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // save_formulashetts_button
             // 
@@ -118,7 +118,7 @@
             this.save_formulashetts_button.TabIndex = 6;
             this.save_formulashetts_button.Text = "Save Formula Sheets student list";
             this.save_formulashetts_button.UseVisualStyleBackColor = true;
-         //   this.save_formulashetts_button.Click += new System.EventHandler(this.save3_button_Click);
+            this.save_formulashetts_button.Click += new System.EventHandler(this.save3_button_Click);
             // 
             // studentBindingSource
             // 
