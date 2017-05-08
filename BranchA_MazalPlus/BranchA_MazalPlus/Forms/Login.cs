@@ -19,14 +19,14 @@ namespace BranchA_MazalPlus
         public static string ID;//{ get; set; }
         private string connetionString = null;
         private SqlConnection sqlcon;
-        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-
+        // System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer(BranchA_MazalPlus.Properties.Resources.mazalmazal);
 
         public Login()
         {
             InitializeComponent();
            
-            player.SoundLocation = "mazalmazal.wav";
+           // player.SoundLocation = "mazalmazal.wav";
         }
 
         private void label1_Click(object sender, EventArgs e)
