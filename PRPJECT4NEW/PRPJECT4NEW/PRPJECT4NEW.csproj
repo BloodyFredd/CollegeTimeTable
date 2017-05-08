@@ -70,6 +70,9 @@
     <Compile Include="Classes_SM2.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Conference.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="cours.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -91,6 +94,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Dean_of_Faculty\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +111,12 @@
     <Compile Include="Dean_of_Faculty\ScholarshipForm.Designer.cs">
       <DependentUpon>ScholarshipForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dean_of_Faculty\Special_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dean_of_Faculty\Special_date.Designer.cs">
+      <DependentUpon>Special_date.cs</DependentUpon>
+    </Compile>
     <Compile Include="DF_requests.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -111,6 +125,12 @@
     </Compile>
     <Compile Include="Exams_Section\special_student_list.Designer.cs">
       <DependentUpon>special_student_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exams_Section\Special_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exams_Section\Special_Test.Designer.cs">
+      <DependentUpon>Special_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Lecture_Course.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
@@ -142,11 +162,11 @@
     <Compile Include="Teaching_Stuff.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Tech_Team\DF_requestForm.cs">
+    <Compile Include="Tech_Team\Conferences_List.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tech_Team\DF_requestForm.Designer.cs">
-      <DependentUpon>DF_requestForm.cs</DependentUpon>
+    <Compile Include="Tech_Team\Conferences_List.Designer.cs">
+      <DependentUpon>Conferences_List.cs</DependentUpon>
     </Compile>
     <Compile Include="Tech_Team\Menu.cs">
       <SubType>Form</SubType>
@@ -180,6 +200,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dean_of_Faculty\Special_date.resx">
+      <DependentUpon>Special_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exams_Section\Special_Test.resx">
+      <DependentUpon>Special_Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,8 +221,8 @@
     <EmbeddedResource Include="Student\TuitionFeesForm.resx">
       <DependentUpon>TuitionFeesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tech_Team\DF_requestForm.resx">
-      <DependentUpon>DF_requestForm.cs</DependentUpon>
+    <EmbeddedResource Include="Tech_Team\Conferences_List.resx">
+      <DependentUpon>Conferences_List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tech_Team\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -226,11 +252,21 @@
     <None Include="DataModel.edmx.diagram">
       <DependentUpon>DataModel.edmx</DependentUpon>
     </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Course_detail.datasource" />
-    <None Include="Properties\DataSources\DF_requests.datasource" />
-    <None Include="Properties\DataSources\PRPJECT4NEW.Tech_Team.DF_requestsForm.datasource" />
-    <None Include="Properties\DataSources\PRPJECT4NEW.Tech_Team.Menu.datasource" />
+    <None Include="Properties\DataSources\PRPJECT4NEW.Exams_Section.special_student_list.datasource" />
+    <None Include="Properties\DataSources\student.datasource" />
+    <None Include="Properties\DataSources\Student_special_Exam.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -261,6 +297,44 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ACTIVEXLib">
+      <Guid>{012F24C1-35B0-11D0-BF2D-0000E8D0D146}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSXML2">
+      <Guid>{F5078F18-C551-11D3-89B9-0000F81FE221}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
