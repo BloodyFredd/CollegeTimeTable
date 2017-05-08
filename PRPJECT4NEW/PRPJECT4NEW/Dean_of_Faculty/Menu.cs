@@ -61,13 +61,6 @@ namespace PRPJECT4NEW.Dean_of_Faculty
         private void Special_Exams_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Special Exams");
-            Special_date frm = new Special_date();
-            frm.TopLevel = false;
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.WindowState = FormWindowState.Maximized;
-            Buttons_view.Controls.Add(frm);
-            Buttons_view.Visible = true;
-            frm.Show();
         }
 
         private void Logout_Click(object sender, EventArgs e)

@@ -53,19 +53,6 @@
           <Property Name="20-21" Type="float" />
           <Property Name="holiday" Type="float" />
         </EntityType>
-        <EntityType Name="Conferences">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Name" Type="text" Nullable="false" />
-          <Property Name="Class" Type="text" Nullable="false" />
-          <Property Name="Date" Type="date" Nullable="false" />
-          <Property Name="Start_Time" Type="time" Precision="7" Nullable="false" />
-          <Property Name="End_Time" Type="time" Precision="7" Nullable="false" />
-          <Property Name="Microphone" Type="bit" Nullable="false" />
-          <Property Name="Projector" Type="bit" Nullable="false" />
-        </EntityType>
         <EntityType Name="Course_detail">
           <Key>
             <PropertyRef Name="Course_Serial" />
@@ -107,7 +94,7 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
           <Property Name="Date" Type="date" Nullable="false" />
           <Property Name="Intended_to" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="Subject" Type="nchar" MaxLength="30" Nullable="false" />
-          <Property Name="Message" Type="text" Nullable="false" />
+          <Property Name="Message" Type="nchar" MaxLength="255" Nullable="false" />
           <Property Name="Status" Type="nchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="Lecture_Course">
@@ -213,7 +200,6 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
         <EntityContainer Name="MazalModelStoreContainer">
           <EntitySet Name="Classes_SM1" EntityType="Self.Classes_SM1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Classes_SM2" EntityType="Self.Classes_SM2" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Conferences" EntityType="Self.Conferences" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Course_detail" EntityType="Self.Course_detail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="courses" EntityType="Self.courses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Lecture_Course" EntityType="Self.Lecture_Course" Schema="dbo" store:Type="Tables" />
@@ -395,7 +381,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Intended_to" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Subject" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="255" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Status" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
@@ -412,7 +398,6 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySet Name="Teaching_Stuff" EntityType="MazalModel.Teaching_Stuff" />
           <EntitySet Name="Student_special_Exam" EntityType="MazalModel.Student_special_Exam" />
           <EntitySet Name="Person" EntityType="MazalModel.Person" />
-          <EntitySet Name="Conferences" EntityType="MazalModel.Conference" />
         </EntityContainer>
         <EntityType Name="Teaching_Stuff">
           <Key>
@@ -448,19 +433,6 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Permission" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Conference">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Class" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Start_Time" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="End_Time" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="Microphone" Type="Boolean" Nullable="false" />
-          <Property Name="Projector" Type="Boolean" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -654,20 +626,6 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
                 <ScalarProperty Name="L_name" ColumnName="L_name" />
                 <ScalarProperty Name="F_name" ColumnName="F_name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Conferences">
-            <EntityTypeMapping TypeName="MazalModel.Conference">
-              <MappingFragment StoreEntitySet="Conferences">
-                <ScalarProperty Name="Projector" ColumnName="Projector" />
-                <ScalarProperty Name="Microphone" ColumnName="Microphone" />
-                <ScalarProperty Name="End_Time" ColumnName="End_Time" />
-                <ScalarProperty Name="Start_Time" ColumnName="Start_Time" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Class" ColumnName="Class" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
