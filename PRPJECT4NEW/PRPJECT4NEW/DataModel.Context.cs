@@ -34,9 +34,9 @@ namespace PRPJECT4NEW
         public virtual DbSet<Student_Courses> Student_Courses { get; set; }
         public virtual DbSet<student> students { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<DF_requests> DF_requests { get; set; }
         public virtual DbSet<Teaching_Stuff> Teaching_Stuff { get; set; }
         public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<Student_special_Exam> Student_special_Exam { get; set; }
+        public virtual DbSet<DF_requests> DF_requests { get; set; }
     }
 }
