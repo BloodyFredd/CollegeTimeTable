@@ -53,6 +53,19 @@
           <Property Name="20-21" Type="float" />
           <Property Name="holiday" Type="float" />
         </EntityType>
+        <EntityType Name="Conferences">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="text" Nullable="false" />
+          <Property Name="Class" Type="text" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Start_Time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="End_Time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Microphone" Type="bit" Nullable="false" />
+          <Property Name="Projector" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="Course_detail">
           <Key>
             <PropertyRef Name="Course_Serial" />
@@ -81,21 +94,16 @@
           <Property Name="Semester" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Blocking_Cource" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DF_requests">
           <Key>
-            <PropertyRef Name="Date" />
             <PropertyRef Name="Intended_to" />
             <PropertyRef Name="Subject" />
-            <PropertyRef Name="Message" />
-            <PropertyRef Name="Status" />
           </Key>
           <Property Name="Date" Type="date" Nullable="false" />
           <Property Name="Intended_to" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="Subject" Type="nchar" MaxLength="30" Nullable="false" />
-          <Property Name="Message" Type="nchar" MaxLength="255" Nullable="false" />
-          <Property Name="Status" Type="nchar" MaxLength="255" Nullable="false" />
+          <Property Name="Message" Type="text" Nullable="false" />
+          <Property Name="Status" Type="nchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="Lecture_Course">
           <Key>
@@ -200,8 +208,10 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
         <EntityContainer Name="MazalModelStoreContainer">
           <EntitySet Name="Classes_SM1" EntityType="Self.Classes_SM1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Classes_SM2" EntityType="Self.Classes_SM2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Conferences" EntityType="Self.Conferences" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Course_detail" EntityType="Self.Course_detail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="courses" EntityType="Self.courses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DF_requests" EntityType="Self.DF_requests" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Lecture_Course" EntityType="Self.Lecture_Course" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Scholarships" EntityType="Self.Scholarships" Schema="dbo" store:Type="Tables" />
@@ -209,15 +219,6 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Teaching_Stuff" EntityType="Self.Teaching_Stuff" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="DF_requests" EntityType="Self.DF_requests" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [DF_requests].[Date] AS [Date], 
-    [DF_requests].[Intended_to] AS [Intended_to], 
-    [DF_requests].[Subject] AS [Subject], 
-    [DF_requests].[Message] AS [Message], 
-    [DF_requests].[Status] AS [Status]
-    FROM [dbo].[DF_requests] AS [DF_requests]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="Student_special_Exam" EntityType="Self.Student_special_Exam" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Student_special_Exam].[ID] AS [ID], 
@@ -381,8 +382,8 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Intended_to" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Subject" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Message" Type="String" MaxLength="255" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Status" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Classes_SM1" EntityType="Self.Classes_SM1" />
@@ -398,6 +399,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySet Name="Teaching_Stuff" EntityType="MazalModel.Teaching_Stuff" />
           <EntitySet Name="Student_special_Exam" EntityType="MazalModel.Student_special_Exam" />
           <EntitySet Name="Person" EntityType="MazalModel.Person" />
+          <EntitySet Name="Conferences" EntityType="MazalModel.Conference" />
         </EntityContainer>
         <EntityType Name="Teaching_Stuff">
           <Key>
@@ -433,6 +435,19 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Permission" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Conference">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Class" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Start_Time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="End_Time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Microphone" Type="Boolean" Nullable="false" />
+          <Property Name="Projector" Type="Boolean" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -626,6 +641,20 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
                 <ScalarProperty Name="L_name" ColumnName="L_name" />
                 <ScalarProperty Name="F_name" ColumnName="F_name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Conferences">
+            <EntityTypeMapping TypeName="MazalModel.Conference">
+              <MappingFragment StoreEntitySet="Conferences">
+                <ScalarProperty Name="Projector" ColumnName="Projector" />
+                <ScalarProperty Name="Microphone" ColumnName="Microphone" />
+                <ScalarProperty Name="End_Time" ColumnName="End_Time" />
+                <ScalarProperty Name="Start_Time" ColumnName="Start_Time" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
