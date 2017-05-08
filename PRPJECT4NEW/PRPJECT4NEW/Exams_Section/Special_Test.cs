@@ -76,7 +76,6 @@ namespace PRPJECT4NEW.Exams_Section
 
         private void Combo_Course_name_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
             using (Entities context = new Entities())
             {
                 foreach (var s in context.Student_special_Exam)
@@ -92,14 +91,10 @@ namespace PRPJECT4NEW.Exams_Section
                     {
                         foreach (var v in context.courses)
                         {
-                            if (Combo_Course_name.Text == v.Course_name && s.Course_Serial.ToString().Contains(v.Course_id.ToString()))
+                            if (Combo_Course_name.Text == v.Course_name)
                             {
-                                
-                                if (s.Status == true)
-                                {
-                                   // dataGridView1.Rows.Clear();
-                                    dataGridView1.Rows.Add(s.ID, s.Course_Serial, v.Course_name, s.Date);
-                                }
+                                dataGridView1.Rows.Clear();
+                                dataGridView1.Rows.Add(s.ID, s.Course_Serial, v.Course_name, s.Date);
                             }
                         }
                     }
