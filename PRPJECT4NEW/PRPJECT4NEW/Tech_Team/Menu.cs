@@ -57,7 +57,6 @@ namespace PRPJECT4NEW.Tech_Team
 
         private void special_request_from_DF_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Requests from DF(Dean of Faculty)");
 
             DF_requestForm frm = new DF_requestForm();
             frm.TopLevel = false;
