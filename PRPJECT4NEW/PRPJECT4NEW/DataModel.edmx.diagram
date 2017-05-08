@@ -19,6 +19,7 @@
         <EntityTypeShape EntityType="MazalModel.Student_special_Exam" Width="1.5" PointX="11.375" PointY="0.75" />
         <EntityTypeShape EntityType="MazalModel.Person" Width="1.5" PointX="9.375" PointY="10.75" />
         <EntityTypeShape EntityType="MazalModel.Conference" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="MazalModel.Student_special_Exam" Width="1.5" PointX="11.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
