@@ -29,6 +29,16 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             dataGridView1.Columns.Add("Date", "Date");
             dataGridView1.Columns.Add("Status", "Status");
 
+            //Paint headers
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.GridColor = Utility.HeaderBackColor;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.AutoResizeColumns();
+
+            dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             using (Entities context = new Entities())
             {
                 foreach (var s in context.Student_special_Exam)

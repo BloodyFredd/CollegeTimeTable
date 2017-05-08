@@ -40,8 +40,16 @@ namespace PRPJECT4NEW.Exams_Section
             Sview.Columns.Add("ExtraTime", "Extra Time");
             Sview.Columns.Add("Laptop", "Laptop");
             Sview.Columns.Add("FormulaSheet", "Formula Sheet ");
-            Sview.ColumnHeadersDefaultCellStyle.BackColor = Utility.menuColor;
+
+            //Paint headers
+            Sview.EnableHeadersVisualStyles = false;
+            Sview.GridColor = Utility.HeaderBackColor;
+            Sview.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
             Sview.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            Sview.AutoResizeColumns();
+
+            Sview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            Sview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 
         }
 
