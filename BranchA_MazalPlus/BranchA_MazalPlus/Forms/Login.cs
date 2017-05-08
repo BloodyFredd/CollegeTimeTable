@@ -20,7 +20,7 @@ namespace BranchA_MazalPlus
         private string connetionString = null;
         private SqlConnection sqlcon;
 
-        System.Media.SoundPlayer player = new System.Media.SoundPlayer(BranchA_MazalPlus.Properties.Resources.mazalmazal);//music
+        //System.Media.SoundPlayer player = new System.Media.SoundPlayer(BranchA_MazalPlus.Properties.Resources.mazalmazal);//music
 
         public Login()
         {
@@ -44,10 +44,18 @@ namespace BranchA_MazalPlus
 
             ///////////////////
             //player.Play();//music
-
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
+            // Compose a string that consists of three lines.
+            //string lines = "FuckYou.\r\nFuckAll.\r\nThird line.";
+
+            //// Write the string to a file.
+            //System.IO.StreamWriter file = new System.IO.StreamWriter("C:\\Users\\adir1\\Desktop\\test.txt");
+            //file.WriteLine(lines);
+
+            //file.Close();
+
             //SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
             txtuser.Text = txtuser.Text + "@plus.mazal.com";
             SqlCommand cmd = new SqlCommand("select * from person where Email='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
