@@ -42,7 +42,6 @@ namespace PRPJECT4NEW.Exams_Section
             Sview.Columns.Add("FormulaSheet", "Formula Sheet ");
             Sview.ColumnHeadersDefaultCellStyle.BackColor = Utility.menuColor;
             Sview.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-
         }
 
         private void Type_of_easements_label_Click(object sender, EventArgs e)
@@ -195,11 +194,6 @@ namespace PRPJECT4NEW.Exams_Section
                     }
                 }
             }
-        }
-
-        private void Sview_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
