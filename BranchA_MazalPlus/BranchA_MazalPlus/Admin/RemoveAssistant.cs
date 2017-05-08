@@ -27,11 +27,13 @@ namespace BranchA_MazalPlus.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string str = null;
             try {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
                 this.sqlcon.Open();
-                SqlCommand command = new SqlCommand("DELETE FROM person WHERE ID = " + this.IDbutton.Text + " Permission = '" + "Student" + "'", sqlcon);
+                str = "Teaching_Assistant";
+                SqlCommand command = new SqlCommand("DELETE FROM person WHERE ID = '" + this.IDbutton.Text + "'AND Permission = '" + str + "'", sqlcon);
                 int dr = command.ExecuteNonQuery();
                 if(dr == 1)
                 {

@@ -31,7 +31,7 @@ namespace BranchA_MazalPlus.Admin
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
                 this.sqlcon.Open();
-                SqlCommand command = new SqlCommand("DELETE FROM person WHERE ID = " + this.IDbutton.Text + " Permission = '" + "Teaching_Assistant" + "'", sqlcon);
+                SqlCommand command = new SqlCommand("DELETE FROM person WHERE ID = '" + this.IDbutton.Text + "'AND Permission = '" + "Student" + "'", sqlcon);
                 int dr = command.ExecuteNonQuery();
                 if(dr == 1)
                 {
