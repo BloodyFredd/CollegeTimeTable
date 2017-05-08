@@ -395,10 +395,11 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySet Name="Student_Courses" EntityType="Self.Student_Courses" />
           <EntitySet Name="students" EntityType="Self.student" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <EntitySet Name="DF_requests" EntityType="Self.DF_requests" />
           <EntitySet Name="Teaching_Stuff" EntityType="MazalModel.Teaching_Stuff" />
           <EntitySet Name="Student_special_Exam" EntityType="MazalModel.Student_special_Exam" />
           <EntitySet Name="Person" EntityType="MazalModel.Person" />
+          <EntitySet Name="Student_special_Exam" EntityType="MazalModel.Student_special_Exam" />
+          <EntitySet Name="DF_requests" EntityType="MazalModel.DF_requests" />
           <EntitySet Name="Conferences" EntityType="MazalModel.Conference" />
         </EntityContainer>
         <EntityType Name="Teaching_Stuff">
@@ -448,6 +449,17 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="End_Time" Type="Time" Nullable="false" Precision="7" />
           <Property Name="Microphone" Type="Boolean" Nullable="false" />
           <Property Name="Projector" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DF_requests">
+          <Key>
+            <PropertyRef Name="Intended_to" />
+            <PropertyRef Name="Subject" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Intended_to" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -598,17 +610,6 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DF_requests">
-            <EntityTypeMapping TypeName="MazalModel.DF_requests">
-              <MappingFragment StoreEntitySet="DF_requests">
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Intended_to" ColumnName="Intended_to" />
-                <ScalarProperty Name="Subject" ColumnName="Subject" />
-                <ScalarProperty Name="Message" ColumnName="Message" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Teaching_Stuff">
             <EntityTypeMapping TypeName="MazalModel.Teaching_Stuff">
               <MappingFragment StoreEntitySet="Teaching_Stuff">
@@ -655,6 +656,17 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
                 <ScalarProperty Name="Class" ColumnName="Class" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DF_requests">
+            <EntityTypeMapping TypeName="MazalModel.DF_requests">
+              <MappingFragment StoreEntitySet="DF_requests">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Intended_to" ColumnName="Intended_to" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
