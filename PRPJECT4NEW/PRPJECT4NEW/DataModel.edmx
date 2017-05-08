@@ -107,7 +107,7 @@ warning 6002: The table/view 'Mazal.dbo.DF_requests' does not have a primary key
           <Property Name="Date" Type="date" Nullable="false" />
           <Property Name="Intended_to" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="Subject" Type="nchar" MaxLength="30" Nullable="false" />
-          <Property Name="Message" Type="text" Nullable="false" />
+          <Property Name="Message" Type="nchar" MaxLength="255" Nullable="false" />
           <Property Name="Status" Type="nchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="Lecture_Course">
@@ -395,7 +395,35 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Intended_to" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Subject" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="255" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DF_requests">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Intended_to" />
+            <PropertyRef Name="Subject" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Status" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Intended_to" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Subject" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DF_requests">
+          <Key>
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Intended_to" />
+            <PropertyRef Name="Subject" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Status" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Intended_to" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Subject" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="255" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Status" Type="String" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
