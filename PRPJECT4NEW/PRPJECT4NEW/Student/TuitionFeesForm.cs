@@ -30,9 +30,14 @@ namespace PRPJECT4NEW.Student
             tuitionGridView.Columns.Add("nakaz", "Nakaz");
             tuitionGridView.Columns.Add("price", "Price");
 
-            //Paint Headers
-            tuitionGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.menuColor;
+            //Paint headers
+            tuitionGridView.Columns[0].DefaultCellStyle.BackColor = Utility.HeaderBackColor;
+            tuitionGridView.Columns[0].DefaultCellStyle.ForeColor = Color.White;
+            tuitionGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
             tuitionGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            tuitionGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tuitionGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         }
 
         private void getData()
@@ -56,6 +61,16 @@ namespace PRPJECT4NEW.Student
             }
 
             totalFeeLabel.Text = "Approximate total tuition Fee for this semester: " + approximatedFee + " NIS";
+        }
+
+        private void totalFeeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tuitionGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

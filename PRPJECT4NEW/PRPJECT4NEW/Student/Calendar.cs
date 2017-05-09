@@ -37,7 +37,12 @@ namespace PRPJECT4NEW.Student
                     for (int i = Convert.ToInt32(s.Start_time); i < Convert.ToInt32(s.End_time); i++)
                     {
                         this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Value = course.Course_name;
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.BackColor = Color.AliceBlue;
+                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.BackColor = Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(172)))), ((int)(((byte)(228)))));
+                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.ForeColor = Color.White;
+                        this.calendarGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                        this.calendarGridView.GridColor = Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(172)))), ((int)(((byte)(228)))));
+
+
                     }
                     
                 }
@@ -64,10 +69,20 @@ namespace PRPJECT4NEW.Student
             }
 
             //Paint headers
-            calendarGridView.Columns[0].DefaultCellStyle.BackColor = Utility.menuColor;
+            calendarGridView.Columns[0].DefaultCellStyle.BackColor = Utility.HeaderBackColor;
             calendarGridView.Columns[0].DefaultCellStyle.ForeColor = Color.White;
-            calendarGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.menuColor;
+            calendarGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
             calendarGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            calendarGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            calendarGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            foreach (DataGridViewRow row in calendarGridView.Rows)
+            {
+                row.Height = 45;
+            }
+
+
         }
 
         private void calendarGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -110,6 +125,11 @@ namespace PRPJECT4NEW.Student
         private void Calendar_Load(object sender, EventArgs e)
         {
             calendarGridView.AutoGenerateColumns = false;
+        }
+
+        private void calendarGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
