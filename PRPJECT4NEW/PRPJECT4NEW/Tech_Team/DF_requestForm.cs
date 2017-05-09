@@ -32,39 +32,11 @@ namespace PRPJECT4NEW.Tech_Team
         {
             using (Entities db = new Entities())
             {
-                var allRowes = db.DF_requests.ToList();
-                //Create Columns
-                dataGridView.Columns.Add("Date", "Date");
-                dataGridView.Columns.Add("Intended to", "Intended_to");
-                dataGridView.Columns.Add("Subject", "Subject");
-                dataGridView.Columns.Add("Message", "Message");
-                dataGridView.Columns.Add("Status", "Status");
-
-                // Button column
-                DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-                dataGridView.Columns.Add(btn);
-                btn.HeaderText = "Edit status";
-                btn.Text = "update status";
-                btn.Name = "btn";
-                btn.UseColumnTextForButtonValue = true;
-
-
-                dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.menuColor;
-                dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-
                 foreach (DF_requests s in db.DF_requests)
                 {
-                    //if(s.Intended_to.ToString().Contains("Tech_Team"))
                     dataGridView.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
                 }
-                //dataGridView.Columns[0].Width = 90;
-                //dataGridView.Columns[1].Width = 90;
-                //dataGridView.Columns[2].Width = 100;
-                //dataGridView.Columns[3].Width = 350;
-                //dataGridView.Columns[4].Width = 70;
-                dataGridView.AutoResizeColumns();
-                dataGridView.Columns[4].Width = 70;
-                dataGridView.Refresh();
+               
             }
         }
 
@@ -83,27 +55,34 @@ namespace PRPJECT4NEW.Tech_Team
                 // Button column
                 DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
                 dataGridView.Columns.Add(btn);
-                btn.HeaderText = "Edit status";
-                btn.Text = "update status";
+                btn.HeaderText = "Update status";
+                btn.Text = "update";
                 btn.Name = "btn";
                 btn.UseColumnTextForButtonValue = true;
 
 
-                dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.menuColor;
+                //Paint headers
+                dataGridView.EnableHeadersVisualStyles = false;
+                dataGridView.GridColor = Utility.HeaderBackColor;
+                dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
                 dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-                
-                    foreach (DF_requests s in db.DF_requests)
-                    {
-                            //if(s.Intended_to.ToString().Contains("Tech_Team"))
-                            dataGridView.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
-                    }
-                //dataGridView.Columns[0].Width = 90;
-                //dataGridView.Columns[1].Width = 90;
-                //dataGridView.Columns[2].Width = 100;
-                //dataGridView.Columns[3].Width = 350;
-                //dataGridView.Columns[4].Width = 70;
                 dataGridView.AutoResizeColumns();
-                dataGridView.Columns[4].Width = 70;
+
+                dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+                foreach (DF_requests s in db.DF_requests)
+                    {
+                            
+                            dataGridView.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
+                     }
+                dataGridView.AutoResizeColumns();
+                dataGridView.Columns[0].Width = 70;
+                dataGridView.Columns[1].Width = 90;
+                dataGridView.Columns[4].Width = 50;
+                dataGridView.Columns[5].Width = 50;
+                dataGridView.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
                 dataGridView.Refresh();
             }
             
@@ -148,21 +127,6 @@ namespace PRPJECT4NEW.Tech_Team
 
                     }
                     
-                    /*
-                    csv.AppendLine(newLine);
-                   
-                            v1 = dataGridView.Rows[i].Cells[0].Value.ToString();
-                          v2 = dataGridView.Rows[i].Cells[1].Value.ToString();
-                          v3 = dataGridView.Rows[i].Cells[2].Value.ToString();
-                          v4 = dataGridView.Rows[i].Cells[3].Value.ToString();
-                          v5 = dataGridView.Rows[i].Cells[4].Value.ToString();
-                          newLine = string.Format("{0},{1},{2},{3},{4}", v1, v2, v3, v4, v5);
-                         csv.AppendLine(newLine);
-                    }
-                           
-                           
-                        File.WriteAllText(save.FileName, csv.ToString());
-                    */
                         MessageBox.Show("Saved", "mes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -177,12 +141,10 @@ namespace PRPJECT4NEW.Tech_Team
                 {
                     string intendedTo = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
                     string subject = dataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    //DF_requests df_request = db.DF_requests.FirstOrDefault(s => s.Intended_to.Contains(dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString()));
+                    
                     
                     DF_requests df_request = db.DF_requests.FirstOrDefault(s => s.Intended_to == intendedTo && s.Subject == subject);
-                    //DF_requests temp = df_request;
-                    //temp.Status = "closed";
-                    //db.Entry(df_request).CurrentValues.SetValues(temp);
+                    
                     df_request.Status = "Close";
 
                     db.SaveChanges();
