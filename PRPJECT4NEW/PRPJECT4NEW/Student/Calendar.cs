@@ -40,7 +40,7 @@ namespace PRPJECT4NEW.Student
                         this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.BackColor = Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(172)))), ((int)(((byte)(228)))));
                         this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.ForeColor = Color.White;
                         this.calendarGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
-                        this.calendarGridView.GridColor = Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(172)))), ((int)(((byte)(228)))));
+                        this.calendarGridView.GridColor = Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
 
 
                     }
