@@ -51,6 +51,16 @@ namespace PRPJECT4NEW.Exams_Section
             dataGridView1.Columns.Add("Course_Name", "Course_Name");
             dataGridView1.Columns.Add("Date", "Date");
 
+            //Paint headers
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.GridColor = Utility.HeaderBackColor;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.AutoResizeColumns();
+
+            dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
             using (Entities context = new Entities())
             {
                 int i = 0;
