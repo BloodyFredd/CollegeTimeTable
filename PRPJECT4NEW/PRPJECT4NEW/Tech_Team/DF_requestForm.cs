@@ -24,21 +24,14 @@ namespace PRPJECT4NEW.Tech_Team
             using (Entities db = new Entities())
             {
                 foreach (DF_requests s in db.DF_requests)
-                    dataGridView.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
+                {
+                    if (s.Intended_to.ToString().Contains("Tech_Team"))
+                        dataGridView.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
+                }
             }
             dataGridView.Refresh();
         }
-        public void reload()
-        {
-            using (Entities db = new Entities())
-            {
-                foreach (DF_requests s in db.DF_requests)
-                {
-                    dataGridView.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
-                }
-               
-            }
-        }
+
 
         private void DF_requestForm_Load(object sender, EventArgs e)
         {
@@ -70,12 +63,12 @@ namespace PRPJECT4NEW.Tech_Team
 
                 dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
                 foreach (DF_requests s in db.DF_requests)
                     {
-                            
-                            dataGridView.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
-                     }
+                    
+                    if (s.Intended_to.ToString().Contains("Tech_Team"))
+                        dataGridView.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
+                }
                 dataGridView.AutoResizeColumns();
                 dataGridView.Columns[0].Width = 70;
                 dataGridView.Columns[1].Width = 90;
@@ -144,12 +137,16 @@ namespace PRPJECT4NEW.Tech_Team
                     
                     
                     DF_requests df_request = db.DF_requests.FirstOrDefault(s => s.Intended_to == intendedTo && s.Subject == subject);
-                    
-                    df_request.Status = "Close";
+                    if(df_request.Status.Contains("Open"))
+                    {
+                        df_request.Status = "Close";
 
-                    db.SaveChanges();
-                    MessageBox.Show("data updated");
-                    reloadGrid();
+                        db.SaveChanges();
+                        MessageBox.Show("data updated");
+                        reloadGrid();
+
+                    }
+                    
                 }
             }
         }
