@@ -61,20 +61,24 @@ namespace BranchA_MazalPlus
             }
         }
 
-        private void checkString(string str, string check)
+        public bool checkString(string str, string check)
         {
             if (check == "ID")
             {
                 bool allDigits = str.All(char.IsDigit);
                 if (str.Length != 9 || allDigits == false)
+                {
                     throw new ArgumentException("ID should be only digits and with length of 9.");
+                }
                 SqlCommand cmd = new SqlCommand("select * from person where ID='" + this.ID.Text + "'", sqlcon);
-                SqlDataReader dr = cmd.ExecuteReader();                
+                cmd.ExecuteReader();
+                SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read() == true)
                     throw new ArgumentException("There exists such an ID.");
                 this.sqlcon.Close();
                 this.sqlcon = new SqlConnection(connetionString);
                 this.sqlcon.Open();
+                return true;
             }
 
             if (check == "name")
@@ -86,23 +90,27 @@ namespace BranchA_MazalPlus
                 }
                 if(str.Length > 12)
                     throw new ArgumentException("Name should be shorter than the length of 12.");
+                return true;
             }
 
-            if(check == "telephone")
+            if (check == "telephone")
             {
                 bool allDigits = str.All(char.IsDigit);
                 if (str.Length != 10 || allDigits == false)
                     throw new ArgumentException("Telephone should be only digits and with length of 10.");
+                return true;
             }
 
-            if(check == "username")
+            if (check == "username")
             {
                 foreach (char c in str)
                 {
                     if (!Char.IsLetterOrDigit(c) && c != '_')
                         throw new ArgumentException("User name should be only numbers or digits or underscore.");
                 }
+                return true;
             }
+            return false;
         }
 
         private void label1_Click(object sender, EventArgs e)
