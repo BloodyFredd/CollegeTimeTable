@@ -34,7 +34,8 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
         private void Supervisors_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors Assignment");
+            Zero zero = new Zero();
+            zero.Show();
         }
 
         private void Supervisors_List_Button_Click(object sender, EventArgs e)
