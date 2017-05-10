@@ -49,7 +49,8 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void Special_Stud_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Special Students");
+            Factor fac = new Factor();
+            fac.Show();
         }
 
         private void Supervisor_Tut_Button_Click(object sender, EventArgs e)
