@@ -39,7 +39,6 @@
             this.IDbutton.Name = "IDbutton";
             this.IDbutton.Size = new System.Drawing.Size(100, 20);
             this.IDbutton.TabIndex = 0;
-            this.IDbutton.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Id
             // 
