@@ -39,6 +39,7 @@
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.CourseID = new System.Windows.Forms.ComboBox();
             this.All_Person_Button = new System.Windows.Forms.Button();
+            this.ExcellentStudents = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -46,21 +47,21 @@
             // StudentsReport
             // 
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(12, 123);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.StudentsReport.Location = new System.Drawing.Point(24, 238);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(831, 217);
+            this.StudentsReport.Size = new System.Drawing.Size(1662, 420);
             this.StudentsReport.TabIndex = 2;
             this.StudentsReport.Visible = false;
             this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
             // 
             // Failing_Students
             // 
-            this.Failing_Students.Location = new System.Drawing.Point(341, 14);
-            this.Failing_Students.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Failing_Students.Location = new System.Drawing.Point(431, 27);
+            this.Failing_Students.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Failing_Students.Name = "Failing_Students";
-            this.Failing_Students.Size = new System.Drawing.Size(160, 63);
+            this.Failing_Students.Size = new System.Drawing.Size(320, 122);
             this.Failing_Students.TabIndex = 4;
             this.Failing_Students.Text = "Failing Students";
             this.Failing_Students.UseVisualStyleBackColor = true;
@@ -69,10 +70,10 @@
             // Available_Classes
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
-            this.Available_Classes.Location = new System.Drawing.Point(15, 14);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Available_Classes.Location = new System.Drawing.Point(30, 27);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(97, 63);
+            this.Available_Classes.Size = new System.Drawing.Size(194, 122);
             this.Available_Classes.TabIndex = 8;
             this.Available_Classes.Text = "Available Classes";
             this.Available_Classes.UseVisualStyleBackColor = true;
@@ -84,10 +85,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Semester});
-            this.menuStrip1.Location = new System.Drawing.Point(12, 79);
+            this.menuStrip1.Location = new System.Drawing.Point(24, 153);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(92, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(171, 53);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,7 +100,7 @@
             this.bToolStripMenuItem});
             this.Semester.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(82, 24);
+            this.Semester.Size = new System.Drawing.Size(153, 45);
             this.Semester.Text = "Semester";
             this.Semester.Click += new System.EventHandler(this.Semester_Click);
             // 
@@ -108,7 +109,7 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -201,14 +202,14 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 49);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
@@ -299,7 +300,7 @@
             "2017-04-06",
             "2017-04-07"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 49);
             this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click_1);
             // 
             // CourseID
@@ -342,37 +343,49 @@
             "404",
             "405",
             "406"});
-            this.CourseID.Location = new System.Drawing.Point(341, 83);
-            this.CourseID.Margin = new System.Windows.Forms.Padding(4);
+            this.CourseID.Location = new System.Drawing.Point(431, 161);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.CourseID.Name = "CourseID";
-            this.CourseID.Size = new System.Drawing.Size(160, 24);
+            this.CourseID.Size = new System.Drawing.Size(316, 39);
             this.CourseID.TabIndex = 11;
             this.CourseID.Text = "Course ID";
             this.CourseID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // All_Person_Button
             // 
-            this.All_Person_Button.Location = new System.Drawing.Point(704, 14);
-            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(4);
+            this.All_Person_Button.Location = new System.Drawing.Point(949, 27);
+            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.All_Person_Button.Name = "All_Person_Button";
-            this.All_Person_Button.Size = new System.Drawing.Size(103, 63);
+            this.All_Person_Button.Size = new System.Drawing.Size(206, 122);
             this.All_Person_Button.TabIndex = 12;
             this.All_Person_Button.Text = "All Persons";
             this.All_Person_Button.UseVisualStyleBackColor = true;
             this.All_Person_Button.Click += new System.EventHandler(this.All_Person_Button_Click);
             // 
+            // ExcellentStudents
+            // 
+            this.ExcellentStudents.Location = new System.Drawing.Point(1318, 27);
+            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(8);
+            this.ExcellentStudents.Name = "ExcellentStudents";
+            this.ExcellentStudents.Size = new System.Drawing.Size(206, 122);
+            this.ExcellentStudents.TabIndex = 13;
+            this.ExcellentStudents.Text = "Excellent students";
+            this.ExcellentStudents.UseVisualStyleBackColor = true;
+            this.ExcellentStudents.Click += new System.EventHandler(this.ExcellentStudents_Click);
+            // 
             // Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 519);
+            this.ClientSize = new System.Drawing.Size(1750, 1006);
+            this.Controls.Add(this.ExcellentStudents);
             this.Controls.Add(this.All_Person_Button);
             this.Controls.Add(this.CourseID);
             this.Controls.Add(this.Available_Classes);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Failing_Students);
             this.Controls.Add(this.StudentsReport);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
@@ -396,5 +409,6 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
         private System.Windows.Forms.ComboBox CourseID;
         private System.Windows.Forms.Button All_Person_Button;
+        private System.Windows.Forms.Button ExcellentStudents;
     }
 }
