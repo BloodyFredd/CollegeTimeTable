@@ -100,7 +100,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             this.sqlcon = new SqlConnection(connetionString);
             try
             {
-                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id, Student_Courses.grade_a, Student_Courses.grade_b, Student_Courses.grade_c, Student_Courses.quiz1, Student_Courses.quiz2, Student_Courses.final_grade FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "'", sqlcon);
+                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id, Student_Courses.grade_a, Student_Courses.grade_b, Student_Courses.grade_c, Student_Courses.quiz1, Student_Courses.quiz2, Student_Courses.final_grade FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "' and Type = 1", sqlcon);
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
@@ -118,8 +118,6 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 Reports form2 = new Reports();
                 form2.Show();
             }
-            this.sqlcon.Close();
-            this.Close();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -130,7 +128,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
             try
             {
-                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "'", sqlcon);
+                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "' and Type = 1", sqlcon);
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
@@ -149,8 +147,6 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 form2.Show();
 
             }
-            this.sqlcon.Close();
-            this.Close();
         }
 
         private void EmptyClasses_Click(object sender, EventArgs e)
