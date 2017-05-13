@@ -75,6 +75,7 @@
             this.class_num.Size = new System.Drawing.Size(135, 24);
             this.class_num.TabIndex = 0;
             this.class_num.Text = "Choose class";
+            this.class_num.SelectedIndexChanged += new System.EventHandler(this.class_num_SelectedIndexChanged);
             // 
             // button1
             // 
