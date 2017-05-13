@@ -77,6 +77,12 @@
     <Compile Include="Admin\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\MergeAuditorium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MergeAuditorium.Designer.cs">
+      <DependentUpon>MergeAuditorium.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\RemoveAssistant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MergeAuditorium.resx">
+      <DependentUpon>MergeAuditorium.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\RemoveAssistant.resx">
       <DependentUpon>RemoveAssistant.cs</DependentUpon>
