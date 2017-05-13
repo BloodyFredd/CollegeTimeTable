@@ -26,7 +26,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
                 this.sqlcon = new SqlConnection(connetionString);
-                SqlCommand cmd = new SqlCommand("select * from Person where ID ='" + Student_ID.Text + "'", sqlcon);
+                SqlCommand cmd = new SqlCommand("select * from Person where ID ='" + ID_Student.Text + "'", sqlcon);
                 if (!checkString(Student_ID.Text))
                 {
                     this.Close();
@@ -46,7 +46,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                         if (dr.Read() == true)
                         {
                             dr.Close();
-                            cmd = new SqlCommand("update Student_Courses set final_grade = 0 from where final_grade <= 56 and Course_id='" + CourseID_Button.Text + "' and stud_Id = '" + Student_ID.Text + "'" , sqlcon);
+                            cmd = new SqlCommand("update Student_Courses set final_grade = 0 from where final_grade <= 56 and Course_id='" + CourseID_Button.Text + "' and stud_Id = '" + ID_Student.Text + "'" , sqlcon);
                             SqlDataAdapter sda = new SqlDataAdapter();
                             sda.SelectCommand = cmd;
                             DataTable dbdataset = new DataTable();
