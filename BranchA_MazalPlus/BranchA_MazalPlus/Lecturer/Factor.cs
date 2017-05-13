@@ -22,13 +22,13 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
 
-                try
-                {
+                //try
+                //{
                     // select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id = Teaching_Stuff.Course_ID where ID = '" + Forms.UserID.ID + "'"
                     SqlCommand cmd = new SqlCommand("UPDATE Student_Courses set final_grade=(select Teaching_Stuff.ID and Teaching_Stuff.Course_id,Student_Courses.course_id FROM Teaching_Stuff LEFT join Student_Courses on Student_Courses.course_id=Teaching_Stuff.Course_ID where Teaching_Stuff.ID='" + Forms.UserID.ID + "'", sqlcon);
                     //update m
@@ -47,7 +47,7 @@ namespace BranchA_MazalPlus.Lecturer
 
 
                 }
-                
+   
                
                 
                 
