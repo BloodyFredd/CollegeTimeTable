@@ -29,7 +29,8 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
         private void Exams_Assignment_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams Assignment");
+            Grade56 grade = new Grade56();
+            grade.Show();
         }
 
         private void Supervisors_Button_Click(object sender, EventArgs e)

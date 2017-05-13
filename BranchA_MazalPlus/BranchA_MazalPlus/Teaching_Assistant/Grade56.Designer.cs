@@ -128,7 +128,7 @@
             this.Controls.Add(this.CourseIDLbel);
             this.Controls.Add(this.CourseIdLabel);
             this.Name = "Grade56";
-            this.Text = "_56";
+            this.Text = "Grade56";
             this.ResumeLayout(false);
             this.PerformLayout();
 
