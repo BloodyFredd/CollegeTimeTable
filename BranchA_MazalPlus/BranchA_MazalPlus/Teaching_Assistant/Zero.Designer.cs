@@ -103,7 +103,7 @@
             "404",
             "405",
             "406"});
-            this.CourseID_Button.Location = new System.Drawing.Point(130, 24);
+            this.CourseID_Button.Location = new System.Drawing.Point(130, 25);
             this.CourseID_Button.Name = "CourseID_Button";
             this.CourseID_Button.Size = new System.Drawing.Size(54, 21);
             this.CourseID_Button.TabIndex = 3;

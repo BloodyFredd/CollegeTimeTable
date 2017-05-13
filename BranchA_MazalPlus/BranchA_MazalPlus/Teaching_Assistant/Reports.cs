@@ -53,7 +53,12 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                this.Close();
+                Reports form2 = new Reports();
+                form2.Show();
             }
+            this.sqlcon.Close();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -81,7 +86,12 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                this.Close();
+                Reports form2 = new Reports();
+                form2.Show();
             }
+            this.sqlcon.Close();
+            this.Close();
         }
 
         private void Grades_Button_Click(object sender, EventArgs e)
@@ -105,8 +115,11 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             {
                 MessageBox.Show(ex.Message);
                 this.Close();
-                this.sqlcon.Close();
+                Reports form2 = new Reports();
+                form2.Show();
             }
+            this.sqlcon.Close();
+            this.Close();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -132,9 +145,62 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             {
                 MessageBox.Show(ex.Message);
                 this.Close();
-                this.sqlcon.Close();
+                Reports form2 = new Reports();
+                form2.Show();
 
             }
+            this.sqlcon.Close();
+            this.Close();
+        }
+
+        private void EmptyClasses_Click(object sender, EventArgs e)
+        {
+            string str = null;
+
+
+            try
+            {
+                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+                this.sqlcon = new SqlConnection(connetionString);
+                SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
+                if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
+                {
+                    str = toolStripComboBox2.Text;
+                    //MessageBox.Show(str);
+                    cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
+                    StudentsReport.Visible = true;
+                }
+                else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
+                {
+                    str = toolStripComboBox1.Text;
+                    //MessageBox.Show(str);
+                    cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
+                    StudentsReport.Visible = true;
+                }
+                else
+                {
+                    throw new ArgumentException("Error selecting dates, try again!");
+                }
+
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                this.Close();
+                Reports form2 = new Reports();
+                form2.Show();
+            }
+            this.sqlcon.Close();
+            this.Close();
         }
     }
 }
