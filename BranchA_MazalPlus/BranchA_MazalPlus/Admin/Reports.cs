@@ -188,7 +188,6 @@ namespace BranchA_MazalPlus.Admin
 
         private void ExcellentStudents_Click(object sender, EventArgs e)
         {
-            string capacity = null;
 
             try
             {
@@ -197,13 +196,6 @@ namespace BranchA_MazalPlus.Admin
                 this.sqlcon.Open();
                 SqlCommand cmd = new SqlCommand("select AVG(final_grade),stud_ID from Student_Courses GROUP BY stud_Id" , sqlcon);
                 StudentsReport.Visible = true;
-                //SqlDataReader dr = cmd.ExecuteReader();
-                //if (dr.Read())
-                //{
-                //    capacity = dr[0].ToString();
-                //}
-                //dr.Close();
-                //MessageBox.Show(capacity);
 
 
                 SqlDataAdapter sda = new SqlDataAdapter();

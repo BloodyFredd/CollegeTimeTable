@@ -22,39 +22,58 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
 
-                //try
-                //{
-                    // select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id = Teaching_Stuff.Course_ID where ID = '" + Forms.UserID.ID + "'"
-                    SqlCommand cmd = new SqlCommand("UPDATE Student_Courses set final_grade=(select Teaching_Stuff.ID and Teaching_Stuff.Course_id,Student_Courses.course_id FROM Teaching_Stuff LEFT join Student_Courses on Student_Courses.course_id=Teaching_Stuff.Course_ID where Teaching_Stuff.ID='" + Forms.UserID.ID + "'", sqlcon);
-                    //update m
-                    //set m.shoebrandid = sb.shoebrandid
-                    //from main_tbl m
-                    // join temp_tbl t on m.personalid = t.personalid
-                    //join shoebrand sb on t.shoebrand = sb.shoebrand
+                try
+                {
+                    SqlCommand tmp = new SqlCommand("select Course_id from Teaching_Stuff where '" + Forms.UserID + "' = ID");
+                    SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET final_grade =final_grade+10 where '" + class_num.Text + "'", sqlcon);
                     SqlDataAdapter sda = new SqlDataAdapter();
                     sda.SelectCommand = cmd;
                     DataTable dbdataset = new DataTable();
                     sda.Fill(dbdataset);
                     BindingSource bsource = new BindingSource();
                     bsource.DataSource = dbdataset;
-                    // StudentsReport.DataSource = bsource;
                     sda.Update(dbdataset);
 
-
                 }
-   
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
                
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Sql exception");
+            }
+            MessageBox.Show("complate");
+        }
+
+        
+
+
+
+
+
+
                 
-                
-            
-            
+
+
+
+
+
+
 
         private void Factor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void class_num_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
