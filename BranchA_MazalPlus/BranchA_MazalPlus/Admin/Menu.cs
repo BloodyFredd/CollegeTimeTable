@@ -179,7 +179,8 @@ namespace BranchA_MazalPlus.Admin
 
         private void Merge_Auditorium_button_Click_1(object sender, EventArgs e)
         {
-
+            MergeAuditorium form2 = new MergeAuditorium();
+            form2.Show();
         }
 
         private void Reports_button_Click(object sender, EventArgs e)
@@ -199,11 +200,14 @@ namespace BranchA_MazalPlus.Admin
             CancelLectures form2 = new CancelLectures();
             form2.Show();
         }
+        private void Sign_student_course_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void Exemption_Student_Button_Click(object sender, EventArgs e)
         {
-            StudentExemption form2 = new StudentExemption();
-            form2.Show();
+
         }
     }
 }

@@ -230,7 +230,7 @@
             this.Special_Exams_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Special_Exams_Button.Size = new System.Drawing.Size(291, 50);
             this.Special_Exams_Button.TabIndex = 8;
-            this.Special_Exams_Button.Text = "Temporary button";
+            this.Special_Exams_Button.Text = "Temporary button**";
             this.Special_Exams_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Special_Exams_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Special_Exams_Button.UseVisualStyleBackColor = false;
@@ -305,7 +305,7 @@
             this.Available_Classes_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Available_Classes_Button.Size = new System.Drawing.Size(291, 50);
             this.Available_Classes_Button.TabIndex = 5;
-            this.Available_Classes_Button.Text = "Modify courses of a student";
+            this.Available_Classes_Button.Text = "Modify courses of a student**";
             this.Available_Classes_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Available_Classes_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Available_Classes_Button.UseVisualStyleBackColor = false;
@@ -355,7 +355,7 @@
             this.Supervisors_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Supervisors_Button.Size = new System.Drawing.Size(291, 50);
             this.Supervisors_Button.TabIndex = 3;
-            this.Supervisors_Button.Text = "Temp button";
+            this.Supervisors_Button.Text = "Temp button**";
             this.Supervisors_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supervisors_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Supervisors_Button.UseVisualStyleBackColor = false;
