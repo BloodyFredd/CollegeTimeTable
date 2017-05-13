@@ -200,11 +200,14 @@ namespace BranchA_MazalPlus.Admin
             CancelLectures form2 = new CancelLectures();
             form2.Show();
         }
+        private void Sign_student_course_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void Exemption_Student_Button_Click(object sender, EventArgs e)
         {
-            StudentExemption form2 = new StudentExemption();
-            form2.Show();
+
         }
     }
 }
