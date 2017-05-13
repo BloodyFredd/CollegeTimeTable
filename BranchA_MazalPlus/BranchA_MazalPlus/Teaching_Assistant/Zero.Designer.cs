@@ -32,6 +32,7 @@
             this.Student_ID = new System.Windows.Forms.Label();
             this.Apply = new System.Windows.Forms.Button();
             this.CourseID_Button = new System.Windows.Forms.ComboBox();
+            this.CourseIDLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ID_Student
@@ -55,9 +56,9 @@
             // Apply
             // 
             this.Apply.AccessibleName = "Apply";
-            this.Apply.Location = new System.Drawing.Point(157, 67);
+            this.Apply.Location = new System.Drawing.Point(91, 51);
             this.Apply.Name = "Apply";
-            this.Apply.Size = new System.Drawing.Size(84, 24);
+            this.Apply.Size = new System.Drawing.Size(61, 28);
             this.Apply.TabIndex = 2;
             this.Apply.Text = "Apply";
             this.Apply.UseVisualStyleBackColor = true;
@@ -102,16 +103,26 @@
             "404",
             "405",
             "406"});
-            this.CourseID_Button.Location = new System.Drawing.Point(126, 24);
+            this.CourseID_Button.Location = new System.Drawing.Point(130, 24);
             this.CourseID_Button.Name = "CourseID_Button";
-            this.CourseID_Button.Size = new System.Drawing.Size(82, 21);
+            this.CourseID_Button.Size = new System.Drawing.Size(54, 21);
             this.CourseID_Button.TabIndex = 3;
+            // 
+            // CourseIDLabel
+            // 
+            this.CourseIDLabel.AutoSize = true;
+            this.CourseIDLabel.Location = new System.Drawing.Point(127, 9);
+            this.CourseIDLabel.Name = "CourseIDLabel";
+            this.CourseIDLabel.Size = new System.Drawing.Size(57, 13);
+            this.CourseIDLabel.TabIndex = 4;
+            this.CourseIDLabel.Text = "Course ID:";
             // 
             // Zero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 103);
+            this.ClientSize = new System.Drawing.Size(213, 91);
+            this.Controls.Add(this.CourseIDLabel);
             this.Controls.Add(this.CourseID_Button);
             this.Controls.Add(this.Apply);
             this.Controls.Add(this.Student_ID);
@@ -129,5 +140,6 @@
         private System.Windows.Forms.Label Student_ID;
         private System.Windows.Forms.Button Apply;
         private System.Windows.Forms.ComboBox CourseID_Button;
+        private System.Windows.Forms.Label CourseIDLabel;
     }
 }
