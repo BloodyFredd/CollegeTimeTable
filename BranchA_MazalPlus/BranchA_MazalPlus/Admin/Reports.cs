@@ -190,13 +190,6 @@ namespace BranchA_MazalPlus.Admin
                 this.sqlcon.Open(); 
                 SqlCommand cmd = new SqlCommand("select AVG(final_grade) AS Average,stud_ID from Student_Courses GROUP BY stud_Id HAVING AVG(final_grade) >=85", sqlcon);
                 StudentsReport.Visible = true;
-                //SqlDataReader dr = cmd.ExecuteReader();
-                //if (dr.Read())
-                //{
-                //    capacity = dr[0].ToString();
-                //}
-                //dr.Close();
-                //MessageBox.Show(capacity);
 
 
                 SqlDataAdapter sda = new SqlDataAdapter();

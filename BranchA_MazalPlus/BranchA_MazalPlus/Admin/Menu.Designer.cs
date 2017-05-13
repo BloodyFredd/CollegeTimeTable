@@ -297,6 +297,7 @@
             this.Exemption_Student_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exemption_Student_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Exemption_Student_Button.UseVisualStyleBackColor = false;
+            this.Exemption_Student_Button.Click += new System.EventHandler(this.Exemption_Student_Button_Click);
             // 
             // Remove_Teaching_Assistant_Button
             // 
