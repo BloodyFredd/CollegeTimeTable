@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\CancelLectures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CancelLectures.Designer.cs">
+      <DependentUpon>CancelLectures.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     <Compile Include="Teaching_Assistant\Zero.Designer.cs">
       <DependentUpon>Zero.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\CancelLectures.resx">
+      <DependentUpon>CancelLectures.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>

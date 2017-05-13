@@ -246,6 +246,7 @@
             this.Cancel_Lectures.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Cancel_Lectures.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Cancel_Lectures.UseVisualStyleBackColor = false;
+            this.Cancel_Lectures.Click += new System.EventHandler(this.Cancel_Lectures_Click_1);
             // 
             // Merge_Auditorium_button
             // 
