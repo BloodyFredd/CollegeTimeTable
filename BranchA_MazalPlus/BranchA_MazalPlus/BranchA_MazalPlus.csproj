@@ -101,6 +101,12 @@
     <Compile Include="Admin\Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\SignStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\SignStudent.Designer.cs">
+      <DependentUpon>SignStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\StudentExemption.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\SignStudent.resx">
+      <DependentUpon>SignStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\StudentExemption.resx">
       <DependentUpon>StudentExemption.cs</DependentUpon>

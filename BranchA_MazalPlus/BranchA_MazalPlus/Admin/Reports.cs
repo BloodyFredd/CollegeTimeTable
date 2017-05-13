@@ -194,8 +194,8 @@ namespace BranchA_MazalPlus.Admin
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
                 this.sqlcon.Open();
-                SqlCommand cmd = new SqlCommand("select AVG(final_grade),stud_ID from Student_Courses GROUP BY stud_Id" , sqlcon);
-                StudentsReport.Visible = true;
+                SqlCommand cmd = new SqlCommand("select AVG(final_grade) AS Average,stud_ID from Student_Courses GROUP BY stud_Id HAVING AVG(final_grade) >=85", sqlcon);
+                StudentsReport.Visible = true; StudentsReport.Visible = true;
 
 
                 SqlDataAdapter sda = new SqlDataAdapter();
@@ -217,6 +217,10 @@ namespace BranchA_MazalPlus.Admin
         private void button1_Click_1(object sender, EventArgs e)
         {
             string str = null;
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            path=path.Replace(@"\",@"\\");
+            path += "\\";
+
             try
             {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
@@ -225,8 +229,12 @@ namespace BranchA_MazalPlus.Admin
                 if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
                 {
                     str = toolStripComboBox2.Text;
-                    //MessageBox.Show(str);
-                    StreamWriter myFile = new StreamWriter(@"c:\users\adir1\desktop\'" + str + "'.xls");
+
+
+                   // MessageBox.Show(path);
+
+
+                    StreamWriter myFile = new StreamWriter(@""+path+"'" + str + "'.xls");
 
                     using (SqlConnection connection = new SqlConnection(connetionString))
                     {
@@ -243,6 +251,8 @@ namespace BranchA_MazalPlus.Admin
                                 myFile.WriteLine(String.Format("{0}\t {1}\t {2}\t {3}\t {4}\t {5}\t {6}\t {7}\t {8}\t {9}\t {10}\t {11}\t {12}\t {13}\t {14}\t {15}\t {16}\t {17}",
                                 reader["date"], reader["Class_Id"], reader["Type"], reader["Capacity"], reader["08-09"], reader["09-10"], reader["10-11"], reader["11-12"], reader["12-13"], reader["13-14"], reader["14-15"], reader["15-16"], reader["16-17"], reader["17-18"], reader["18-19"], reader["19-20"], reader["20-21"], reader["holiday"]));
                             }
+                            MessageBox.Show("The file created");
+
                         }
                         catch (Exception ex)
                         {
@@ -251,7 +261,6 @@ namespace BranchA_MazalPlus.Admin
                         }
                         finally
                         {
-                            MessageBox.Show("The file created");
 
                             reader.Close();
                             myFile.Close();
@@ -263,7 +272,7 @@ namespace BranchA_MazalPlus.Admin
                 //MessageBox.Show(str);
                 {
                     str = toolStripComboBox1.Text;
-                    StreamWriter myFile = new StreamWriter(@"c:\users\adir1\desktop\'" + str + "'.xls");
+                    StreamWriter myFile = new StreamWriter(@"" + path + "'" + str + "'.xls");
 
                     using (SqlConnection connection = new SqlConnection(connetionString))
                     {
@@ -282,6 +291,8 @@ namespace BranchA_MazalPlus.Admin
                                 myFile.WriteLine(String.Format("{0}\t {1}\t {2}\t {3}\t {4}\t {5}\t {6}\t {7}\t {8}\t {9}\t {10}\t {11}\t {12}\t {13}\t {14}\t {15}\t {16}\t {17}",
                                 reader["date"], reader["Class_Id"], reader["Type"], reader["Capacity"], reader["08-09"], reader["09-10"], reader["10-11"], reader["11-12"], reader["12-13"], reader["13-14"], reader["14-15"], reader["15-16"], reader["16-17"], reader["17-18"], reader["18-19"], reader["19-20"], reader["20-21"], reader["holiday"]));
                             }
+                            MessageBox.Show("The file created");
+
                         }
                         catch (Exception ex)
                         {
@@ -292,16 +303,15 @@ namespace BranchA_MazalPlus.Admin
                         {
                             reader.Close();
                             myFile.Close();
-                            MessageBox.Show("The file created");
 
                         }
                     }
 
                 }
-                    FileInfo fi = new FileInfo(@"c:\users\adir1\desktop\'" + str + "'.xls");
+                    FileInfo fi = new FileInfo(@"" + path + "'" + str + "'.xls");
                     if (fi.Exists)
                     {
-                        System.Diagnostics.Process.Start(@"c:\users\adir1\desktop\'" + str + "'.xls");
+                        System.Diagnostics.Process.Start(@"" + path + "'" + str + "'.xls");
 
                     }
                     else

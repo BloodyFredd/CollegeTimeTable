@@ -43,7 +43,6 @@ namespace BranchA_MazalPlus
                     this.sqlcon.Close();
                     this.sqlcon = new SqlConnection(connetionString);
                     this.sqlcon.Open();
-                    //string query1 = "INSERT INTO Teaching_Stuff (ID,Course_id,Office,Reception_day,Reception_startTime,Reception_endTime) VALUES('" + this.ID.Text + "', 0,'" + DBNull.Value + "','" + DBNull.Value + "','" + DBNull.Value + "','" + DBNull.Value + "')  ; ";
                     string query1 = "INSERT INTO Teaching_Stuff (ID,Course_id) VALUES('" + this.ID.Text + "', 0)  ; ";
 
                     SqlCommand cmd1 = new SqlCommand(query1, sqlcon);
