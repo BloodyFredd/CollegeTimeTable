@@ -192,49 +192,30 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                             }
                             else
                             {
-                                this.Close();
-                                MessageBox.Show("Try again, the capacity of this office is already too high.");
-                                ReceptionHours form2 = new ReceptionHours();
-                                form2.Show();
+                                throw new ArgumentException("Try again, the capacity of this office is already too high.");
                             }
                         }
                         else
                         {
-                            this.Close();
-                            MessageBox.Show("Try again, there's no such class.");
-                            ReceptionHours form2 = new ReceptionHours();
-                            form2.Show();
+                            throw new ArgumentException("Try again, there's no such class.");
                         }
                     }
                     else
                     {
-                        this.Close();
-                        MessageBox.Show("No need to add reception hours, you have already an office: " + dr[2].ToString());
-                        Menu form = new Menu();
-                        form.Show();
+                        throw new ArgumentException("No need to add reception hours, you have already an office: " + dr[2].ToString());
                     }
                 }
                 else
                 {
-                    this.Close();
-                    MessageBox.Show("Try again, you're not teaching this class yet.");
-                    ReceptionHours form2 = new ReceptionHours();
-                    form2.Show();
+                    throw new ArgumentException("Try again, you're not teaching this class yet.");
                 }
             }
-            //catch (SqlException ex)
-            //{
-            //    this.Close();
-            //    this.sqlcon.Close();
-            //    MessageBox.Show("Try again, you're not teaching this class yet.");
-            //    ReceptionHours form2 = new ReceptionHours();
-            //    form2.Show();
-            //}
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 this.Close();
-                this.sqlcon.Close();
+                ReceptionHours form2 = new ReceptionHours();
+                form2.Show();
             }
         }
 
