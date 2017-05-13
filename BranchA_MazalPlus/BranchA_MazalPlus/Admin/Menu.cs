@@ -179,7 +179,8 @@ namespace BranchA_MazalPlus.Admin
 
         private void Merge_Auditorium_button_Click_1(object sender, EventArgs e)
         {
-
+            MergeAuditorium form2 = new MergeAuditorium();
+            form2.Show();
         }
 
         private void Reports_button_Click(object sender, EventArgs e)

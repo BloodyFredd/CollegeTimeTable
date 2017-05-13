@@ -24,13 +24,14 @@ namespace BranchA_MazalPlus.Lecturer
         {
             try
             {
+                
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
-
+               
                 try
                 {
-                    SqlCommand tmp = new SqlCommand("select Course_id from Teaching_Stuff where '" + Forms.UserID + "' = ID");
-                    SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET final_grade =final_grade+10 where '" + class_num.Text + "'", sqlcon);
+                    
+                    SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET final_grade = final_grade+10 where '" + class_num.Text + "'", sqlcon);
                     SqlDataAdapter sda = new SqlDataAdapter();
                     sda.SelectCommand = cmd;
                     DataTable dbdataset = new DataTable();
