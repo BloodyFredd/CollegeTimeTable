@@ -176,6 +176,12 @@
     <Compile Include="Secretary\StudentDetails.Designer.cs">
       <DependentUpon>StudentDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teaching_Assistant\Grade56.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\Grade56.Designer.cs">
+      <DependentUpon>Grade56.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teaching_Assistant\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secretary\StudentDetails.resx">
       <DependentUpon>StudentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\Grade56.resx">
+      <DependentUpon>Grade56.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teaching_Assistant\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

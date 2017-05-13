@@ -46,7 +46,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                         if (dr.Read() == true)
                         {
                             dr.Close();
-                            cmd = new SqlCommand("update Student_Courses set final_grade = 0 from where final_grade <= 56 and Course_id='" + CourseID_Button.Text + "' and stud_Id = '" + ID_Student.Text + "'" , sqlcon);
+                            cmd = new SqlCommand("update Student_Courses set final_grade = 0 where Course_id='" + CourseID_Button.Text + "' and stud_Id = '" + ID_Student.Text + "'", sqlcon);
                             SqlDataAdapter sda = new SqlDataAdapter();
                             sda.SelectCommand = cmd;
                             DataTable dbdataset = new DataTable();
