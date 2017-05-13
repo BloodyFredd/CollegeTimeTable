@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\CancelLectures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CancelLectures.Designer.cs">
+      <DependentUpon>CancelLectures.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="Admin\Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\StudentExemption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\StudentExemption.Designer.cs">
+      <DependentUpon>StudentExemption.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserID.cs" />
     <Compile Include="Lecturer\Factor.cs">
@@ -206,6 +218,9 @@
     <Compile Include="Teaching_Assistant\Zero.Designer.cs">
       <DependentUpon>Zero.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\CancelLectures.resx">
+      <DependentUpon>CancelLectures.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\StudentExemption.resx">
+      <DependentUpon>StudentExemption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace BranchA_MazalPlus.Admin
 {
-    partial class Reports
+    partial class CancelLectures
     {
         /// <summary>
         /// Required designer variable.
@@ -28,69 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.StudentsReport = new System.Windows.Forms.DataGridView();
-            this.Failing_Students = new System.Windows.Forms.Button();
+            this.Class = new System.Windows.Forms.ComboBox();
+            this.Cancel_Lecture = new System.Windows.Forms.Button();
             this.Available_Classes = new System.Windows.Forms.Button();
+            this.Lecture = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Semester = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
             this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.CourseID = new System.Windows.Forms.ComboBox();
-            this.All_Person_Button = new System.Windows.Forms.Button();
-            this.ExcellentStudents = new System.Windows.Forms.Button();
-            this.Print = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Lecture)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // StudentsReport
+            // Class
             // 
-            this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(12, 227);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.StudentsReport.Name = "StudentsReport";
-            this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(831, 217);
-            this.StudentsReport.TabIndex = 2;
-            this.StudentsReport.Visible = false;
-            this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
+            this.Class.FormattingEnabled = true;
+            this.Class.Items.AddRange(new object[] {
+            "f101",
+            "f102",
+            "f103",
+            "f104",
+            "s101",
+            "s102",
+            "s103",
+            "s104",
+            "a101",
+            "a102"});
+            this.Class.Location = new System.Drawing.Point(281, 47);
+            this.Class.Margin = new System.Windows.Forms.Padding(4);
+            this.Class.Name = "Class";
+            this.Class.Size = new System.Drawing.Size(280, 39);
+            this.Class.TabIndex = 21;
+            this.Class.Text = "Choose class";
             // 
-            // Failing_Students
+            // Cancel_Lecture
             // 
-            this.Failing_Students.Location = new System.Drawing.Point(216, 14);
-            this.Failing_Students.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Failing_Students.Name = "Failing_Students";
-            this.Failing_Students.Size = new System.Drawing.Size(160, 63);
-            this.Failing_Students.TabIndex = 4;
-            this.Failing_Students.Text = "Failing Students";
-            this.Failing_Students.UseVisualStyleBackColor = true;
-            this.Failing_Students.Click += new System.EventHandler(this.button1_Click);
+            this.Cancel_Lecture.Location = new System.Drawing.Point(51, 47);
+            this.Cancel_Lecture.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancel_Lecture.Name = "Cancel_Lecture";
+            this.Cancel_Lecture.Size = new System.Drawing.Size(206, 124);
+            this.Cancel_Lecture.TabIndex = 19;
+            this.Cancel_Lecture.Text = "Cancel Lecture";
+            this.Cancel_Lecture.UseVisualStyleBackColor = true;
+            this.Cancel_Lecture.Click += new System.EventHandler(this.Cancel_Lecture_Click);
             // 
             // Available_Classes
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
-            this.Available_Classes.Location = new System.Drawing.Point(15, 14);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Available_Classes.Location = new System.Drawing.Point(691, 46);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(97, 63);
-            this.Available_Classes.TabIndex = 8;
+            this.Available_Classes.Size = new System.Drawing.Size(206, 122);
+            this.Available_Classes.TabIndex = 18;
             this.Available_Classes.Text = "Available Classes";
             this.Available_Classes.UseVisualStyleBackColor = true;
             this.Available_Classes.Click += new System.EventHandler(this.Available_Classes_Click);
             // 
+            // Lecture
+            // 
+            this.Lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Lecture.Location = new System.Drawing.Point(38, 283);
+            this.Lecture.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Lecture.Name = "Lecture";
+            this.Lecture.RowTemplate.Height = 24;
+            this.Lecture.Size = new System.Drawing.Size(1660, 608);
+            this.Lecture.TabIndex = 17;
+            this.Lecture.Visible = false;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Semester});
-            this.menuStrip1.Location = new System.Drawing.Point(12, 79);
+            this.menuStrip1.Location = new System.Drawing.Point(281, 111);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(92, 28);
-            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 6, 0, 6);
+            this.menuStrip1.Size = new System.Drawing.Size(171, 57);
+            this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // Semester
@@ -101,16 +118,15 @@
             this.bToolStripMenuItem});
             this.Semester.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(82, 24);
+            this.Semester.Size = new System.Drawing.Size(153, 45);
             this.Semester.Text = "Semester";
-            this.Semester.Click += new System.EventHandler(this.Semester_Click);
             // 
             // aToolStripMenuItem
             // 
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(327, 46);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -203,14 +219,14 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 49);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(327, 46);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
@@ -301,108 +317,21 @@
             "2017-04-06",
             "2017-04-07"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
-            this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click_1);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 49);
             // 
-            // CourseID
+            // CancelLectures
             // 
-            this.CourseID.AccessibleDescription = "Course ID";
-            this.CourseID.FormattingEnabled = true;
-            this.CourseID.Items.AddRange(new object[] {
-            "100",
-            "101",
-            "102",
-            "103",
-            "104",
-            "105",
-            "106",
-            "107",
-            "108",
-            "200",
-            "201",
-            "202",
-            "203",
-            "204",
-            "205",
-            "206",
-            "207",
-            "208",
-            "209",
-            "300",
-            "301",
-            "302",
-            "303",
-            "304",
-            "305",
-            "306",
-            "307",
-            "308",
-            "400",
-            "401",
-            "402",
-            "403",
-            "404",
-            "405",
-            "406"});
-            this.CourseID.Location = new System.Drawing.Point(216, 83);
-            this.CourseID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CourseID.Name = "CourseID";
-            this.CourseID.Size = new System.Drawing.Size(160, 24);
-            this.CourseID.TabIndex = 11;
-            this.CourseID.Text = "Course ID";
-            this.CourseID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // All_Person_Button
-            // 
-            this.All_Person_Button.Location = new System.Drawing.Point(474, 14);
-            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.All_Person_Button.Name = "All_Person_Button";
-            this.All_Person_Button.Size = new System.Drawing.Size(103, 63);
-            this.All_Person_Button.TabIndex = 12;
-            this.All_Person_Button.Text = "All Persons";
-            this.All_Person_Button.UseVisualStyleBackColor = true;
-            this.All_Person_Button.Click += new System.EventHandler(this.All_Person_Button_Click);
-            // 
-            // ExcellentStudents
-            // 
-            this.ExcellentStudents.Location = new System.Drawing.Point(659, 14);
-            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ExcellentStudents.Name = "ExcellentStudents";
-            this.ExcellentStudents.Size = new System.Drawing.Size(103, 63);
-            this.ExcellentStudents.TabIndex = 13;
-            this.ExcellentStudents.Text = "Excellent students";
-            this.ExcellentStudents.UseVisualStyleBackColor = true;
-            this.ExcellentStudents.Click += new System.EventHandler(this.ExcellentStudents_Click);
-            // 
-            // Print
-            // 
-            this.Print.Location = new System.Drawing.Point(15, 125);
-            this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(89, 29);
-            this.Print.TabIndex = 14;
-            this.Print.Text = "Print";
-            this.Print.UseVisualStyleBackColor = true;
-            this.Print.Visible = false;
-            this.Print.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // Reports
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 519);
-            this.Controls.Add(this.Print);
-            this.Controls.Add(this.ExcellentStudents);
-            this.Controls.Add(this.All_Person_Button);
-            this.Controls.Add(this.CourseID);
+            this.ClientSize = new System.Drawing.Size(1760, 977);
+            this.Controls.Add(this.Class);
+            this.Controls.Add(this.Cancel_Lecture);
             this.Controls.Add(this.Available_Classes);
+            this.Controls.Add(this.Lecture);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.Failing_Students);
-            this.Controls.Add(this.StudentsReport);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Reports";
-            this.Text = "Reports";
-            this.Load += new System.EventHandler(this.Reports_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
+            this.Name = "CancelLectures";
+            this.Text = "CancelLectures";
+            ((System.ComponentModel.ISupportInitialize)(this.Lecture)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -411,18 +340,16 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView StudentsReport;
-        private System.Windows.Forms.Button Failing_Students;
+
+        private System.Windows.Forms.ComboBox Class;
+        private System.Windows.Forms.Button Cancel_Lecture;
         private System.Windows.Forms.Button Available_Classes;
+        private System.Windows.Forms.DataGridView Lecture;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Semester;
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
-        private System.Windows.Forms.ComboBox CourseID;
-        private System.Windows.Forms.Button All_Person_Button;
-        private System.Windows.Forms.Button ExcellentStudents;
-        private System.Windows.Forms.Button Print;
     }
 }
