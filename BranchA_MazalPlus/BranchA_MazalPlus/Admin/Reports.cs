@@ -178,5 +178,41 @@ namespace BranchA_MazalPlus.Admin
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void ExcellentStudents_Click(object sender, EventArgs e)
+        {
+            string capacity = null;
+
+            try
+            {
+                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+                this.sqlcon = new SqlConnection(connetionString);
+                this.sqlcon.Open();
+                SqlCommand cmd = new SqlCommand("select AVG(final_grade),stud_ID from Student_Courses GROUP BY stud_Id" , sqlcon);
+                StudentsReport.Visible = true;
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    capacity = dr[0].ToString();
+                }
+                dr.Close();
+                MessageBox.Show(capacity);
+
+
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
