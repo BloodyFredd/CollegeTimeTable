@@ -193,5 +193,11 @@ namespace BranchA_MazalPlus.Admin
             RemoveAssistant remove = new RemoveAssistant();
             remove.Show();
         }
+
+        private void Cancel_Lectures_Click_1(object sender, EventArgs e)
+        {
+            CancelLectures form2 = new CancelLectures();
+            form2.Show();
+        }
     }
 }

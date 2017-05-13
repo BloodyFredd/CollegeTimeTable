@@ -11,27 +11,27 @@ using System.Data.SqlClient;
 
 namespace BranchA_MazalPlus.Teaching_Assistant
 {
-    public partial class Zero : Form
+    public partial class Grade56 : Form
     {
         private string connetionString = null;
         private SqlConnection sqlcon;
-        public Zero()
+        public Grade56()
         {
             InitializeComponent();
         }
 
-        private void Apply_Click(object sender, EventArgs e)
+        private void Apply_Button_Click(object sender, EventArgs e)
         {
             try
             {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
                 this.sqlcon = new SqlConnection(connetionString);
-                SqlCommand cmd = new SqlCommand("select * from Person where ID ='" + ID_Student.Text + "' and Permission = 'Student'", sqlcon);
-                if (!checkString(ID_Student.Text, "ID") || !checkString(CourseID_Button.Text, "Course"))
+                SqlCommand cmd = new SqlCommand("select * from Person where ID ='" + StudentID.Text + "' and Permission = 'Student'", sqlcon);
+                if (!checkString(StudentID.Text, "ID") || !checkString(CourseID.Text, "Course"))
                 {
                     this.Close();
                     MessageBox.Show("Try again, this is not a correct ID!");
-                    Zero form2 = new Zero();
+                    Grade56 form2 = new Grade56();
                     form2.Show();
                 }
                 else
@@ -41,22 +41,32 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                     if (dr.Read() == true)
                     {
                         dr.Close();
-                        cmd = new SqlCommand("select * from Teaching_Stuff where ID ='" + Forms.UserID.ID + "' and Course_id='" + CourseID_Button.Text + "'", sqlcon);
+                        cmd = new SqlCommand("select * from Teaching_Stuff where ID ='" + Forms.UserID.ID + "' and Course_id='" + CourseID.Text + "'", sqlcon);
                         dr = cmd.ExecuteReader();
                         if (dr.Read() == true)
                         {
                             dr.Close();
-                            cmd = new SqlCommand("update Student_Courses set final_grade = 0 where Course_id='" + CourseID_Button.Text + "' and stud_Id = '" + ID_Student.Text + "' and Type = 1", sqlcon);
-                            SqlDataAdapter sda = new SqlDataAdapter();
-                            sda.SelectCommand = cmd;
-                            DataTable dbdataset = new DataTable();
-                            sda.Fill(dbdataset);
-                            BindingSource bsource = new BindingSource();
-                            bsource.DataSource = dbdataset;
-                            sda.Update(dbdataset);
-                            MessageBox.Show("Changed grade succesfully!");
-                            this.sqlcon.Close();
-                            this.Close();
+                            cmd = new SqlCommand("select * from Student_Courses where stud_Id ='" + StudentID.Text + "' and course_id='" + CourseID.Text + "' and final_grade < 56", sqlcon);
+                            dr = cmd.ExecuteReader();
+                            if (dr.Read() == true)
+                            {
+                                dr.Close();
+                                cmd = new SqlCommand("update Student_Courses set final_grade = 56 where course_id='" + CourseID.Text + "' and stud_Id = '" + StudentID.Text + "' and Type = 1", sqlcon);
+                                SqlDataAdapter sda = new SqlDataAdapter();
+                                sda.SelectCommand = cmd;
+                                DataTable dbdataset = new DataTable();
+                                sda.Fill(dbdataset);
+                                BindingSource bsource = new BindingSource();
+                                bsource.DataSource = dbdataset;
+                                sda.Update(dbdataset);
+                                MessageBox.Show("Changed grade succesfully!");
+                                this.sqlcon.Close();
+                                this.Close();
+                            }
+                            else
+                            {
+                                throw new ArgumentException("This student have a grade greater than 56!");
+                            }
                         }
                         else
                         {
@@ -73,7 +83,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             {
                 MessageBox.Show(ex.Message);
                 this.Close();
-                Zero form2 = new Zero();
+                Grade56 form2 = new Grade56();
                 form2.Show();
             }
             this.sqlcon.Close();
@@ -90,7 +100,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                     throw new ArgumentException("ID should be only digits and with length of 9.");
                 }
             }
-            if (check == "Course")
+            if(check == "Course")
             {
                 bool allDigits = id.All(char.IsDigit);
                 if (id.Length != 3 || allDigits == false)
