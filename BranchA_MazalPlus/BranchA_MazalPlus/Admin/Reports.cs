@@ -188,7 +188,6 @@ namespace BranchA_MazalPlus.Admin
 
         private void ExcellentStudents_Click(object sender, EventArgs e)
         {
-            string capacity = null;
 
             try
             {
