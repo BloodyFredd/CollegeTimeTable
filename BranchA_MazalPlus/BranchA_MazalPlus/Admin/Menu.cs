@@ -168,7 +168,7 @@ namespace BranchA_MazalPlus.Admin
 
         private void Logout_Button_Click(object sender, EventArgs e)
         {
-           
+            this.Close();
         }
 
         private void Remove_student_Click(object sender, EventArgs e)
@@ -202,12 +202,14 @@ namespace BranchA_MazalPlus.Admin
         }
         private void Sign_student_course_Click(object sender, EventArgs e)
         {
-
+            SignStudent form2 = new SignStudent();
+            form2.Show();
         }
 
         private void Exemption_Student_Button_Click(object sender, EventArgs e)
         {
-
+            StudentExemption form2 = new StudentExemption();
+            form2.Show();
         }
     }
 }

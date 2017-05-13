@@ -48,6 +48,7 @@
             this.Students.Size = new System.Drawing.Size(1660, 608);
             this.Students.TabIndex = 12;
             this.Students.Visible = false;
+            this.Students.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Students_CellContentClick);
             // 
             // ShowStudents
             // 

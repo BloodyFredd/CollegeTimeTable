@@ -194,8 +194,8 @@ namespace BranchA_MazalPlus.Admin
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
                 this.sqlcon.Open();
-                SqlCommand cmd = new SqlCommand("select AVG(final_grade),stud_ID from Student_Courses GROUP BY stud_Id" , sqlcon);
-                StudentsReport.Visible = true;
+                SqlCommand cmd = new SqlCommand("select AVG(final_grade) AS Average,stud_ID from Student_Courses GROUP BY stud_Id HAVING AVG(final_grade) >=85", sqlcon);
+                StudentsReport.Visible = true; StudentsReport.Visible = true;
 
 
                 SqlDataAdapter sda = new SqlDataAdapter();
