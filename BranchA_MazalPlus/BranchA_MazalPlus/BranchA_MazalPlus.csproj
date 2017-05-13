@@ -95,6 +95,12 @@
     <Compile Include="Admin\Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\StudentExemption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\StudentExemption.Designer.cs">
+      <DependentUpon>StudentExemption.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserID.cs" />
     <Compile Include="Lecturer\Factor.cs">
       <SubType>Form</SubType>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\StudentExemption.resx">
+      <DependentUpon>StudentExemption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
