@@ -71,7 +71,7 @@
             // Available_Classes
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
-            this.Available_Classes.Location = new System.Drawing.Point(15, 14);
+            this.Available_Classes.Location = new System.Drawing.Point(55, 14);
             this.Available_Classes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Available_Classes.Name = "Available_Classes";
             this.Available_Classes.Size = new System.Drawing.Size(97, 63);
@@ -110,7 +110,7 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -210,7 +210,7 @@
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
@@ -345,7 +345,7 @@
             "405",
             "406"});
             this.CourseID.Location = new System.Drawing.Point(216, 83);
-            this.CourseID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(4);
             this.CourseID.Name = "CourseID";
             this.CourseID.Size = new System.Drawing.Size(160, 24);
             this.CourseID.TabIndex = 11;
@@ -355,7 +355,7 @@
             // All_Person_Button
             // 
             this.All_Person_Button.Location = new System.Drawing.Point(474, 14);
-            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(4);
             this.All_Person_Button.Name = "All_Person_Button";
             this.All_Person_Button.Size = new System.Drawing.Size(103, 63);
             this.All_Person_Button.TabIndex = 12;
@@ -366,7 +366,7 @@
             // ExcellentStudents
             // 
             this.ExcellentStudents.Location = new System.Drawing.Point(659, 14);
-            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(4);
             this.ExcellentStudents.Name = "ExcellentStudents";
             this.ExcellentStudents.Size = new System.Drawing.Size(103, 63);
             this.ExcellentStudents.TabIndex = 13;
@@ -378,9 +378,9 @@
             // 
             this.Print.Location = new System.Drawing.Point(15, 125);
             this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(89, 29);
+            this.Print.Size = new System.Drawing.Size(151, 29);
             this.Print.TabIndex = 14;
-            this.Print.Text = "Print";
+            this.Print.Text = "Export to Excel";
             this.Print.UseVisualStyleBackColor = true;
             this.Print.Visible = false;
             this.Print.Click += new System.EventHandler(this.button1_Click_1);
