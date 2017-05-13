@@ -256,7 +256,7 @@
             this.Add_office_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Add_office_Button.Size = new System.Drawing.Size(290, 44);
             this.Add_office_Button.TabIndex = 7;
-            this.Add_office_Button.Text = "Add an office";
+            this.Add_office_Button.Text = "Add an office**";
             this.Add_office_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Add_office_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Add_office_Button.UseVisualStyleBackColor = false;
@@ -331,7 +331,7 @@
             this.Add_Assistants_Exam_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Add_Assistants_Exam_Button.Size = new System.Drawing.Size(290, 61);
             this.Add_Assistants_Exam_Button.TabIndex = 4;
-            this.Add_Assistants_Exam_Button.Text = "Add assistants for an exam";
+            this.Add_Assistants_Exam_Button.Text = "Add assistants for an exam**";
             this.Add_Assistants_Exam_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Add_Assistants_Exam_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Add_Assistants_Exam_Button.UseVisualStyleBackColor = false;
@@ -356,7 +356,7 @@
             this.Add_Grade_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Add_Grade_Button.Size = new System.Drawing.Size(290, 51);
             this.Add_Grade_Button.TabIndex = 3;
-            this.Add_Grade_Button.Text = "Add grades for a student";
+            this.Add_Grade_Button.Text = "Add grades for a student**";
             this.Add_Grade_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Add_Grade_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Add_Grade_Button.UseVisualStyleBackColor = false;
@@ -381,7 +381,7 @@
             this.Exams_Assignment_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Exams_Assignment_Button.Size = new System.Drawing.Size(290, 51);
             this.Exams_Assignment_Button.TabIndex = 2;
-            this.Exams_Assignment_Button.Text = " Exams Assignment";
+            this.Exams_Assignment_Button.Text = " Exams Assignment**";
             this.Exams_Assignment_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exams_Assignment_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Exams_Assignment_Button.UseVisualStyleBackColor = false;
