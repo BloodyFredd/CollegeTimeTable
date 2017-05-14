@@ -12,7 +12,7 @@ namespace PRPJECT4NEW.Student
 {
     public partial class Calendar : Form
     {
-
+        List<int> courseList = new List<int>();
 
         public Calendar()
         {
@@ -34,6 +34,9 @@ namespace PRPJECT4NEW.Student
                 foreach (var s in selected)
                 {
                     cours course = context.courses.FirstOrDefault(c => c.Course_id == s.Course_id);
+
+                    if (!courseList.Contains(course.Course_id)) courseList.Add(course.Course_id);    //Add course id to list if necessary
+
                     for (int i = Convert.ToInt32(s.Start_time); i < Convert.ToInt32(s.End_time); i++)
                     {
                         this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Value = course.Course_name;
@@ -43,6 +46,8 @@ namespace PRPJECT4NEW.Student
                         this.calendarGridView.GridColor = Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
 
 
+                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Value = course.Course_name.Trim() + " Room:" + s.Class_number;   //Print data to cell
+                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.BackColor = Utility.getColorByID(courseList.IndexOf(course.Course_id)); //Paint cell
                     }
                     
                 }
@@ -65,6 +70,7 @@ namespace PRPJECT4NEW.Student
             //Preent Sorting
             foreach (DataGridViewColumn column in calendarGridView.Columns)
             {
+                column.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
@@ -130,6 +136,12 @@ namespace PRPJECT4NEW.Student
         private void calendarGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        //Check if course already in list
+        private void findCourse(cours course)
+        {
+            
         }
     }
 }
