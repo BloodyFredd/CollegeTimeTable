@@ -44,7 +44,7 @@ namespace BranchA_MazalPlus.Lecturer
                         dr = cmd15.ExecuteReader();
                         if (dr.Read() == true)
                         {
-                            if (Int32.Parse(dr[0].ToString()) == -1)
+                            if (Int32.Parse(dr[0].ToString()) == 0)
                             {
                                 SqlCommand cmd = new SqlCommand("update Teaching_Stuff set Office ='" + Office_Button.Text + "' where Course_id ='" + CourseID_Button.Text + "' and ID = '" + Forms.UserID.ID + "'", sqlcon);
                                 SqlCommand cmd1 = new SqlCommand("update Classes_SM1 set [08-09]=[08-09] + 1 where Class_Id ='" + Office_Button.Text + "'", sqlcon);
@@ -193,49 +193,30 @@ namespace BranchA_MazalPlus.Lecturer
                             }
                             else
                             {
-                                this.Close();
-                                MessageBox.Show("Try again, there is a lecturer in this office.");
-                                ReceptionHours form2 = new ReceptionHours();
-                                form2.Show();
+                                throw new ArgumentException("Try again, there is a lecturer in this office.");
                             }
                         }
                         else
                         {
-                            this.Close();
-                            MessageBox.Show("Try again, there's no such class.");
-                            ReceptionHours form2 = new ReceptionHours();
-                            form2.Show();
+                            throw new ArgumentException("Try again, there's no such class.");
                         }
                     }
                     else
                     {
-                        this.Close();
-                        MessageBox.Show("No need to add reception hours, you have already an office: " + dr[2].ToString());
-                        Menu form = new Menu();
-                        form.Show();
+                        throw new ArgumentException("No need to add reception hours, you have already an office: " + dr[2].ToString());
                     }
                 }
                 else
                 {
-                    this.Close();
-                    MessageBox.Show("Try again, you're not teaching this class yet.");
-                    ReceptionHours form2 = new ReceptionHours();
-                    form2.Show();
+                    throw new ArgumentException("Try again, you're not teaching this class yet.");
                 }
             }
-            //catch (SqlException ex)
-            //{
-            //    this.Close();
-            //    this.sqlcon.Close();
-            //    MessageBox.Show("Try again, you're not teaching this class yet.");
-            //    ReceptionHours form2 = new ReceptionHours();
-            //    form2.Show();
-            //}
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 this.Close();
-                this.sqlcon.Close();
+                ReceptionHours form2 = new ReceptionHours();
+                form2.Show();
             }
         }
 
