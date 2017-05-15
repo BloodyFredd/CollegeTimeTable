@@ -24,14 +24,20 @@ namespace BranchA_MazalPlus.Lecturer
         {
             try
             {
-                
+
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
-               
-                try
+                //check which courses this lecturer is teaching
+                SqlCommand cmd = new SqlCommand("select course_serial from lecture_course where Teacher ='" + Forms.UserID.ID + "' and Course_id='" + class_num.Text + "'", sqlcon);
+                this.sqlcon.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read() == true)
                 {
-                    
-                    SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET final_grade = final_grade+10 where '" + class_num.Text + "'", sqlcon);
+                   // dr.Close();
+                  //  dr = cmd.ExecuteReader();
+                    cmd = new SqlCommand("update Student_Courses set final_grade =final_grade+10  where course_id='" + class_num.Text + "' and course_serial = '" + dr[0].ToString() + "' and Type = 1", sqlcon);
+                    MessageBox.Show("lalalalal");
+                    dr.Close();
                     SqlDataAdapter sda = new SqlDataAdapter();
                     sda.SelectCommand = cmd;
                     DataTable dbdataset = new DataTable();
@@ -39,37 +45,25 @@ namespace BranchA_MazalPlus.Lecturer
                     BindingSource bsource = new BindingSource();
                     bsource.DataSource = dbdataset;
                     sda.Update(dbdataset);
+                    MessageBox.Show("Changed grade succesfully!");
+                    this.sqlcon.Close();
+                    this.Close();
+                    //dr.Close();
+                }
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-               
+
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Sql exception");
+                MessageBox.Show(ex.Message);
+                this.Close();
             }
-            MessageBox.Show("complate");
         }
-
-        
-
+    
 
 
 
-
-
-                
-
-
-
-
-
-
-
-        private void Factor_Load(object sender, EventArgs e)
+    private void Factor_Load(object sender, EventArgs e)
         {
 
         }

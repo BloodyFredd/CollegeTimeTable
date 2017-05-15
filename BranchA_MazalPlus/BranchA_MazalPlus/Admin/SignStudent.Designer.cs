@@ -34,7 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Stud_ID = new System.Windows.Forms.TextBox();
             this.Sign_student = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.serial = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Course = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Students)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,21 +101,52 @@
             this.Sign_student.TabIndex = 21;
             this.Sign_student.Text = "Sign student";
             this.Sign_student.UseVisualStyleBackColor = true;
+            this.Sign_student.Click += new System.EventHandler(this.Sign_student_Click);
             // 
-            // comboBox1
+            // serial
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(966, 161);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(331, 39);
-            this.comboBox1.TabIndex = 26;
+            this.serial.FormattingEnabled = true;
+            this.serial.Items.AddRange(new object[] {
+            "1003",
+            "1004",
+            "1005",
+            "1006",
+            "1007"});
+            this.serial.Location = new System.Drawing.Point(966, 161);
+            this.serial.Name = "serial";
+            this.serial.Size = new System.Drawing.Size(331, 39);
+            this.serial.TabIndex = 26;
+            this.serial.Text = "Course serial";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(759, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 32);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Course:";
+            // 
+            // Course
+            // 
+            this.Course.BackColor = System.Drawing.Color.White;
+            this.Course.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Course.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Course.ForeColor = System.Drawing.Color.Black;
+            this.Course.Location = new System.Drawing.Point(966, 226);
+            this.Course.Margin = new System.Windows.Forms.Padding(8);
+            this.Course.Name = "Course";
+            this.Course.Size = new System.Drawing.Size(331, 38);
+            this.Course.TabIndex = 27;
             // 
             // SignStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2031, 1029);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Course);
+            this.Controls.Add(this.serial);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Stud_ID);
@@ -136,6 +169,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Stud_ID;
         private System.Windows.Forms.Button Sign_student;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox serial;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Course;
     }
 }
