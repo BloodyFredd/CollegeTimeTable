@@ -38,7 +38,8 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void Supervisors_List_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors List");
+            modifay_grade modifay_grade = new modifay_grade();
+            modifay_grade.Show();
         }
 
         private void Available_Classes_Button_Click(object sender, EventArgs e)

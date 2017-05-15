@@ -331,7 +331,7 @@
             this.Add_Assistants_Exam_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Add_Assistants_Exam_Button.Size = new System.Drawing.Size(290, 61);
             this.Add_Assistants_Exam_Button.TabIndex = 4;
-            this.Add_Assistants_Exam_Button.Text = "Add assistants for an exam**";
+            this.Add_Assistants_Exam_Button.Text = "Modifay a grade for a student";
             this.Add_Assistants_Exam_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Add_Assistants_Exam_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Add_Assistants_Exam_Button.UseVisualStyleBackColor = false;

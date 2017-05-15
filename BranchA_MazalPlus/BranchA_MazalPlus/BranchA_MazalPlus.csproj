@@ -145,6 +145,12 @@
       <DependentUpon>NewUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Program.cs" />
+    <Compile Include="Lecturer\modifay_grade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\modifay_grade.Designer.cs">
+      <DependentUpon>modifay_grade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer\NewLecture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewUser.resx">
       <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\modifay_grade.resx">
+      <DependentUpon>modifay_grade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\NewLecture.resx">
       <DependentUpon>NewLecture.cs</DependentUpon>
