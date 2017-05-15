@@ -100,7 +100,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             this.sqlcon = new SqlConnection(connetionString);
             try
             {
-                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id, Student_Courses.grade_a, Student_Courses.grade_b, Student_Courses.grade_c, Student_Courses.quiz1, Student_Courses.quiz2, Student_Courses.final_grade FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "' and Type = 1", sqlcon);
+                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id, Student_Courses.grade_a, Student_Courses.grade_b, Student_Courses.grade_c, Student_Courses.quiz1, Student_Courses.quiz2, Student_Courses.final_grade FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "' and Type != 1", sqlcon);
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
@@ -197,6 +197,32 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             }
             this.sqlcon.Close();
             this.Close();
+        }
+
+        private void My_Lectures_Click(object sender, EventArgs e)
+        {
+            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            this.sqlcon = new SqlConnection(connetionString);
+            SqlCommand cmd = new SqlCommand("select Lecture_Course.Course_ID,Lecture_Course.Course_Serial,courses.Course_Name from Lecture_Course LEFT join courses on Lecture_Course.Course_ID=courses.Course_id where Teacher='" + Forms.UserID.ID + "'", sqlcon);
+            StudentsReport.Visible = true;
+
+            try
+            {
+
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

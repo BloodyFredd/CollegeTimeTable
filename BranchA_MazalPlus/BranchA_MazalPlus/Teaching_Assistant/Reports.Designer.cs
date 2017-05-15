@@ -36,9 +36,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.semesterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
+            this.My_Lectures = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +47,7 @@
             // Load_table
             // 
             this.Load_table.Location = new System.Drawing.Point(11, 11);
-            this.Load_table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Load_table.Margin = new System.Windows.Forms.Padding(2);
             this.Load_table.Name = "Load_table";
             this.Load_table.Size = new System.Drawing.Size(91, 22);
             this.Load_table.TabIndex = 3;
@@ -58,7 +59,7 @@
             // 
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentsReport.Location = new System.Drawing.Point(11, 100);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(2);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
             this.StudentsReport.Size = new System.Drawing.Size(715, 191);
@@ -122,16 +123,8 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
             this.aToolStripMenuItem.Text = "A";
-            // 
-            // bToolStripMenuItem
-            // 
-            this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBox2});
-            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
             // 
@@ -223,6 +216,14 @@
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
             // 
+            // bToolStripMenuItem
+            // 
+            this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox2});
+            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
+            this.bToolStripMenuItem.Text = "B";
+            // 
             // toolStripComboBox2
             // 
             this.toolStripComboBox2.Items.AddRange(new object[] {
@@ -313,11 +314,23 @@
             this.toolStripComboBox2.Name = "toolStripComboBox2";
             this.toolStripComboBox2.Size = new System.Drawing.Size(121, 23);
             // 
+            // My_Lectures
+            // 
+            this.My_Lectures.AccessibleName = "My_Lectures";
+            this.My_Lectures.Location = new System.Drawing.Point(229, 12);
+            this.My_Lectures.Name = "My_Lectures";
+            this.My_Lectures.Size = new System.Drawing.Size(75, 20);
+            this.My_Lectures.TabIndex = 9;
+            this.My_Lectures.Text = "My Lectures";
+            this.My_Lectures.UseVisualStyleBackColor = true;
+            this.My_Lectures.Click += new System.EventHandler(this.My_Lectures_Click);
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 301);
+            this.Controls.Add(this.My_Lectures);
             this.Controls.Add(this.EmptyClasses);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Grades_Button);
@@ -325,7 +338,7 @@
             this.Controls.Add(this.StudentsReport);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Reports";
             this.Text = "Reports";
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
@@ -349,5 +362,6 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
+        private System.Windows.Forms.Button My_Lectures;
     }
 }
