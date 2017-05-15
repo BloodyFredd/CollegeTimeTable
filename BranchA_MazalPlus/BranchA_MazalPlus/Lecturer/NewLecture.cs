@@ -54,11 +54,7 @@ namespace BranchA_MazalPlus.Lecturer
                 }
                 else
                 {
-                    this.Close();
-                    MessageBox.Show("Error selecting dates,try again!");
-                    NewLecture form2 = new NewLecture();
-                    form2.Show();
-
+                    throw new ArgumentException("Error selecting dates,try again!");
                 }
 
                 SqlDataAdapter sda = new SqlDataAdapter();
@@ -73,7 +69,10 @@ namespace BranchA_MazalPlus.Lecturer
             }
             catch (Exception ex)
             {
+                this.Close();
                 MessageBox.Show(ex.Message);
+                NewLecture form2 = new NewLecture();
+                form2.Show();
             }
         }
 
@@ -128,17 +127,16 @@ namespace BranchA_MazalPlus.Lecturer
                 }
                 else
                 {
-                    this.Close();
-                    MessageBox.Show("Error selecting dates,try again!");
-                    NewLecture form2 = new NewLecture();
-                    form2.Show();
-
+                    throw new ArgumentException("Error selecting dates,try again!");
                 }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                this.Close();
+                NewLecture form2 = new NewLecture();
+                form2.Show();
             }
 
 }

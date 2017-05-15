@@ -35,26 +35,22 @@ namespace BranchA_MazalPlus.Admin
                     this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                     this.sqlcon = new SqlConnection(connetionString);
                     SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
-                    if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
+                if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
 
-                    {
-                        str = toolStripComboBox2.Text;
-                        cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
-                        Lecture.Visible = true;
-                    }
-                    else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
-                    {
-                        str = toolStripComboBox1.Text;
-                        cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
-                        Lecture.Visible = true;
-                    }
-                    else
-                    {
-                        this.Close();
-                        MessageBox.Show("Error selecting dates,try again!");
-                        CancelLectures form2 = new CancelLectures();
-                        form2.Show();
-
+                {
+                    str = toolStripComboBox2.Text;
+                    cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
+                    Lecture.Visible = true;
+                }
+                else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
+                {
+                    str = toolStripComboBox1.Text;
+                    cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
+                    Lecture.Visible = true;
+                }
+                else
+                {
+                    throw new ArgumentException("Error selecting dates,try again!");
                 }
 
                     SqlDataAdapter sda = new SqlDataAdapter();
@@ -68,9 +64,12 @@ namespace BranchA_MazalPlus.Admin
                     sda.Update(dbdataset);
                 }
                 catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                {                   
+                this.Close();
+                MessageBox.Show(ex.Message);
+                CancelLectures form2 = new CancelLectures();
+                form2.Show();
+            }
             
 
 
@@ -242,17 +241,18 @@ namespace BranchA_MazalPlus.Admin
                 }
                 else
                 {
-                    this.Close();
-                    MessageBox.Show("Error selecting dates,try again!");
-                    CancelLectures form2 = new CancelLectures();
-                    form2.Show();
+                    throw new ArgumentException("Error selecting dates,try again!");
 
                 }
 
             }
             catch (Exception ex)
             {
+
+                this.Close();
                 MessageBox.Show(ex.Message);
+                CancelLectures form2 = new CancelLectures();
+                form2.Show();
             }
         }
     }
