@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.StudentsReport = new System.Windows.Forms.DataGridView();
             this.Available_Classes = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -38,18 +40,35 @@
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.LecturerCourses = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Grades_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // StudentsReport
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudentsReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(14, 159);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.StudentsReport.DefaultCellStyle = dataGridViewCellStyle2;
+            this.StudentsReport.Location = new System.Drawing.Point(37, 379);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(13, 17, 13, 17);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(597, 175);
+            this.StudentsReport.Size = new System.Drawing.Size(1592, 417);
             this.StudentsReport.TabIndex = 2;
             this.StudentsReport.Visible = false;
             this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
@@ -58,10 +77,10 @@
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
             this.Available_Classes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Available_Classes.Location = new System.Drawing.Point(14, 16);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.Available_Classes.Location = new System.Drawing.Point(37, 38);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(13, 17, 13, 17);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(114, 33);
+            this.Available_Classes.Size = new System.Drawing.Size(304, 79);
             this.Available_Classes.TabIndex = 8;
             this.Available_Classes.Text = "Available Classes";
             this.Available_Classes.UseVisualStyleBackColor = true;
@@ -73,10 +92,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Semester});
-            this.menuStrip1.Location = new System.Drawing.Point(133, 16);
+            this.menuStrip1.Location = new System.Drawing.Point(355, 38);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 7, 0, 7);
-            this.menuStrip1.Size = new System.Drawing.Size(85, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(43, 17, 0, 17);
+            this.menuStrip1.Size = new System.Drawing.Size(198, 79);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -88,7 +107,7 @@
             this.bToolStripMenuItem});
             this.Semester.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(67, 19);
+            this.Semester.Size = new System.Drawing.Size(153, 45);
             this.Semester.Text = "Semester";
             this.Semester.Click += new System.EventHandler(this.Semester_Click);
             // 
@@ -97,7 +116,7 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -188,14 +207,14 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 49);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
@@ -286,16 +305,16 @@
             "2017-04-06",
             "2017-04-07"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 49);
             this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click_1);
             // 
             // LecturerCourses
             // 
             this.LecturerCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.LecturerCourses.Location = new System.Drawing.Point(14, 61);
-            this.LecturerCourses.Margin = new System.Windows.Forms.Padding(5);
+            this.LecturerCourses.Location = new System.Drawing.Point(37, 145);
+            this.LecturerCourses.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.LecturerCourses.Name = "LecturerCourses";
-            this.LecturerCourses.Size = new System.Drawing.Size(114, 34);
+            this.LecturerCourses.Size = new System.Drawing.Size(304, 81);
             this.LecturerCourses.TabIndex = 10;
             this.LecturerCourses.Text = "Lecturer_Courses";
             this.LecturerCourses.UseVisualStyleBackColor = true;
@@ -304,28 +323,40 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.button2.Location = new System.Drawing.Point(14, 107);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button2.Location = new System.Drawing.Point(37, 255);
+            this.button2.Margin = new System.Windows.Forms.Padding(13, 17, 13, 17);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 38);
+            this.button2.Size = new System.Drawing.Size(304, 91);
             this.button2.TabIndex = 11;
             this.button2.Text = "Students";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // Grades_Button
+            // 
+            this.Grades_Button.Location = new System.Drawing.Point(609, 38);
+            this.Grades_Button.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.Grades_Button.Name = "Grades_Button";
+            this.Grades_Button.Size = new System.Drawing.Size(307, 52);
+            this.Grades_Button.TabIndex = 12;
+            this.Grades_Button.Text = "Grades of Students";
+            this.Grades_Button.UseVisualStyleBackColor = true;
+            this.Grades_Button.Click += new System.EventHandler(this.Grades_Button_Click);
+            // 
             // Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(628, 365);
+            this.ClientSize = new System.Drawing.Size(1675, 870);
+            this.Controls.Add(this.Grades_Button);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.LecturerCourses);
             this.Controls.Add(this.Available_Classes);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.StudentsReport);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.Margin = new System.Windows.Forms.Padding(13, 17, 13, 17);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
@@ -348,5 +379,6 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
         private System.Windows.Forms.Button LecturerCourses;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Grades_Button;
     }
 }
