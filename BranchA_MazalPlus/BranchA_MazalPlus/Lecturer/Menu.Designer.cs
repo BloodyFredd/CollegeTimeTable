@@ -281,7 +281,7 @@
             this.Make_Factor_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Make_Factor_Button.Size = new System.Drawing.Size(290, 51);
             this.Make_Factor_Button.TabIndex = 6;
-            this.Make_Factor_Button.Text = "Make Factor for a course";
+            this.Make_Factor_Button.Text = "Give 10 points bonus";
             this.Make_Factor_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Make_Factor_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Make_Factor_Button.UseVisualStyleBackColor = false;

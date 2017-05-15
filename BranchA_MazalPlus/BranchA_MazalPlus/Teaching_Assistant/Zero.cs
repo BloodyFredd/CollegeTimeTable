@@ -100,5 +100,10 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             }
             return true;
         }
+
+        private void ID_Student_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
