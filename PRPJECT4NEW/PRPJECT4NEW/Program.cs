@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PRPJECT4NEW
+namespace FB_Analyze
 {
     static class Program
     {
@@ -16,7 +15,7 @@ namespace PRPJECT4NEW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FB_Analyze());
         }
     }
 }
