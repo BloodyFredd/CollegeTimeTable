@@ -26,33 +26,7 @@ namespace BranchA_MazalPlus.Secretary
             Reports REPOR = new Reports();
             REPOR.Show();
 
-            // // SqlConnection sqlcon = new SqlConnection(@"Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
-            // // sqlcon.Open();
-            // //            try
-            // //           {
-            // this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            // this.sqlcon = new SqlConnection(connetionString);
-            // this.sqlcon.Open();
-            // //SqlCommand cmd = new SqlCommand("select * from person where ID='" + txtuser.Text + "' and Password='" + txtpassword.Text + "'", sqlcon);
-            // SqlCommand cmd = new SqlCommand("select * from person ", sqlcon);
-            // //if can read the table 
-            // SqlDataReader dr = cmd.ExecuteReader();
-            // //if (dr.Read() == true)
-            // //{
-            //     // MessageBox.Show("Login Successful");
-            //    // if (dr[6].ToString() == "Student")
-            //    // {
-            //         SqlDataAdapter sda = new SqlDataAdapter();
-            //         sda.SelectCommand = cmd;
-            //         DataTable dbdataset = new DataTable();
-            //         sda.Fill(dbdataset);
-            //         BindingSource bsource = new BindingSource();
-
-            //         bsource.DataSource = dbdataset;
-            //         StudentsReport.DataSource = bsource;
-            //         sda.Update(dbdataset);
-            //   //  }
-            //// }
+            
         }
 
 
@@ -99,14 +73,12 @@ namespace BranchA_MazalPlus.Secretary
         private void Logout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Have a good day!");
-            // hide main form
             this.Hide();
-
-            // show other form
+            
             Login form2 = new Login();
             form2.Show();
 
-            // close application
+            
             this.Close();
         }
 
@@ -141,6 +113,6 @@ namespace BranchA_MazalPlus.Secretary
         }
 
 
-     
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace BranchA_MazalPlus.Lecturer
 {
-    partial class Factor
+    partial class bonus_10_points
     {
         /// <summary>
         /// Required designer variable.
