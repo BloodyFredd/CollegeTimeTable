@@ -164,5 +164,11 @@ namespace BranchA_MazalPlus
         {
 
         }
+
+        private void LoginToFacebook_Click(object sender, EventArgs e)
+        {
+            FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
+            facebook.Show();
+        }
     }
 }
