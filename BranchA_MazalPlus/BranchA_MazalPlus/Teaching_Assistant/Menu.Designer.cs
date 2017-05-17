@@ -41,13 +41,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.LogOutButton = new System.Windows.Forms.Button();
             this.Add_Exercise_Lab = new System.Windows.Forms.Button();
             this.Office_Hours_button = new System.Windows.Forms.Button();
             this.Give_0_Button = new System.Windows.Forms.Button();
             this.Round_56_Button = new System.Windows.Forms.Button();
             this.Reports_button = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.LogOutButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,7 +77,7 @@
             // Buttons_view
             // 
             this.Buttons_view.Location = new System.Drawing.Point(0, 46);
-            this.Buttons_view.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Buttons_view.Margin = new System.Windows.Forms.Padding(2);
             this.Buttons_view.Name = "Buttons_view";
             this.Buttons_view.Size = new System.Drawing.Size(95, 35);
             this.Buttons_view.TabIndex = 0;
@@ -189,6 +189,31 @@
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
             this.panel2.Size = new System.Drawing.Size(218, 262);
             this.panel2.TabIndex = 1;
+            // 
+            // LogOutButton
+            // 
+            this.LogOutButton.AccessibleName = "Logout_Button";
+            this.LogOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.LogOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LogOutButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LogOutButton.FlatAppearance.BorderSize = 0;
+            this.LogOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOutButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOutButton.ForeColor = System.Drawing.Color.White;
+            this.LogOutButton.Image = ((System.Drawing.Image)(resources.GetObject("LogOutButton.Image")));
+            this.LogOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogOutButton.Location = new System.Drawing.Point(0, 212);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1);
+            this.LogOutButton.Name = "LogOutButton";
+            this.LogOutButton.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.LogOutButton.Size = new System.Drawing.Size(218, 41);
+            this.LogOutButton.TabIndex = 13;
+            this.LogOutButton.Text = " Logout";
+            this.LogOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.LogOutButton.UseVisualStyleBackColor = false;
+            this.LogOutButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // Add_Exercise_Lab
             // 
@@ -320,31 +345,6 @@
             // 
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             // 
-            // LogOutButton
-            // 
-            this.LogOutButton.AccessibleName = "Logout_Button";
-            this.LogOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.LogOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.LogOutButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LogOutButton.FlatAppearance.BorderSize = 0;
-            this.LogOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.LogOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogOutButton.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogOutButton.ForeColor = System.Drawing.Color.White;
-            this.LogOutButton.Image = ((System.Drawing.Image)(resources.GetObject("LogOutButton.Image")));
-            this.LogOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogOutButton.Location = new System.Drawing.Point(0, 212);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1);
-            this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.LogOutButton.Size = new System.Drawing.Size(218, 41);
-            this.LogOutButton.TabIndex = 13;
-            this.LogOutButton.Text = " Logout";
-            this.LogOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogOutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.LogOutButton.UseVisualStyleBackColor = false;
-            this.LogOutButton.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,7 +354,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Menu";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
