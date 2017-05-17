@@ -200,6 +200,12 @@
     <Compile Include="Secretary\StudentDetails.Designer.cs">
       <DependentUpon>StudentDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teaching_Assistant\AddLabExercises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\AddLabExercises.Designer.cs">
+      <DependentUpon>AddLabExercises.cs</DependentUpon>
+    </Compile>
     <Compile Include="Teaching_Assistant\Grade56.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secretary\StudentDetails.resx">
       <DependentUpon>StudentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\AddLabExercises.resx">
+      <DependentUpon>AddLabExercises.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teaching_Assistant\Grade56.resx">
       <DependentUpon>Grade56.cs</DependentUpon>

@@ -126,6 +126,12 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
         private void Logout_Button_Click(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             MessageBox.Show("Have a good day!");
             // hide main form
             this.Hide();
@@ -136,7 +142,6 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
             // close application
             this.Close();
-
         }
     }
 }
