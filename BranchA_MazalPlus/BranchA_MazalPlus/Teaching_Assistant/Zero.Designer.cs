@@ -38,27 +38,31 @@
             // ID_Student
             // 
             this.ID_Student.AccessibleName = "ID_Student";
-            this.ID_Student.Location = new System.Drawing.Point(19, 25);
+            this.ID_Student.Location = new System.Drawing.Point(25, 31);
+            this.ID_Student.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ID_Student.Name = "ID_Student";
-            this.ID_Student.Size = new System.Drawing.Size(84, 20);
+            this.ID_Student.Size = new System.Drawing.Size(111, 22);
             this.ID_Student.TabIndex = 0;
+            this.ID_Student.TextChanged += new System.EventHandler(this.ID_Student_TextChanged);
             // 
             // Student_ID
             // 
             this.Student_ID.AccessibleName = "Student_ID";
             this.Student_ID.AutoSize = true;
-            this.Student_ID.Location = new System.Drawing.Point(16, 9);
+            this.Student_ID.Location = new System.Drawing.Point(21, 11);
+            this.Student_ID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Student_ID.Name = "Student_ID";
-            this.Student_ID.Size = new System.Drawing.Size(91, 13);
+            this.Student_ID.Size = new System.Drawing.Size(118, 17);
             this.Student_ID.TabIndex = 1;
             this.Student_ID.Text = "ID of the Student:";
             // 
             // Apply
             // 
             this.Apply.AccessibleName = "Apply";
-            this.Apply.Location = new System.Drawing.Point(91, 51);
+            this.Apply.Location = new System.Drawing.Point(121, 63);
+            this.Apply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Apply.Name = "Apply";
-            this.Apply.Size = new System.Drawing.Size(61, 28);
+            this.Apply.Size = new System.Drawing.Size(81, 34);
             this.Apply.TabIndex = 2;
             this.Apply.Text = "Apply";
             this.Apply.UseVisualStyleBackColor = true;
@@ -103,30 +107,33 @@
             "404",
             "405",
             "406"});
-            this.CourseID_Button.Location = new System.Drawing.Point(130, 25);
+            this.CourseID_Button.Location = new System.Drawing.Point(173, 31);
+            this.CourseID_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CourseID_Button.Name = "CourseID_Button";
-            this.CourseID_Button.Size = new System.Drawing.Size(54, 21);
+            this.CourseID_Button.Size = new System.Drawing.Size(71, 24);
             this.CourseID_Button.TabIndex = 3;
             // 
             // CourseIDLabel
             // 
             this.CourseIDLabel.AutoSize = true;
-            this.CourseIDLabel.Location = new System.Drawing.Point(127, 9);
+            this.CourseIDLabel.Location = new System.Drawing.Point(169, 11);
+            this.CourseIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CourseIDLabel.Name = "CourseIDLabel";
-            this.CourseIDLabel.Size = new System.Drawing.Size(57, 13);
+            this.CourseIDLabel.Size = new System.Drawing.Size(74, 17);
             this.CourseIDLabel.TabIndex = 4;
             this.CourseIDLabel.Text = "Course ID:";
             // 
             // Zero
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(213, 91);
+            this.ClientSize = new System.Drawing.Size(284, 112);
             this.Controls.Add(this.CourseIDLabel);
             this.Controls.Add(this.CourseID_Button);
             this.Controls.Add(this.Apply);
             this.Controls.Add(this.Student_ID);
             this.Controls.Add(this.ID_Student);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Zero";
             this.Text = "Zero";
             this.ResumeLayout(false);

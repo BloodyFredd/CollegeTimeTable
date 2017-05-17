@@ -1,0 +1,220 @@
+﻿namespace BranchA_MazalPlus.Teaching_Assistant
+{
+    partial class AddLabExercises
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.CourseIDLabel = new System.Windows.Forms.Label();
+            this.CourseIDButton = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.StartTimeButton = new System.Windows.Forms.ComboBox();
+            this.Day = new System.Windows.Forms.Label();
+            this.DayButton = new System.Windows.Forms.ComboBox();
+            this.Apply_Button = new System.Windows.Forms.Button();
+            this.Semester = new System.Windows.Forms.Label();
+            this.SemesterButton = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // CourseIDLabel
+            // 
+            this.CourseIDLabel.AccessibleName = "CourseLabel";
+            this.CourseIDLabel.AutoSize = true;
+            this.CourseIDLabel.Location = new System.Drawing.Point(12, 9);
+            this.CourseIDLabel.Name = "CourseIDLabel";
+            this.CourseIDLabel.Size = new System.Drawing.Size(57, 13);
+            this.CourseIDLabel.TabIndex = 0;
+            this.CourseIDLabel.Text = "Course ID:";
+            // 
+            // CourseIDButton
+            // 
+            this.CourseIDButton.AccessibleName = "CourseIDButton";
+            this.CourseIDButton.FormattingEnabled = true;
+            this.CourseIDButton.Items.AddRange(new object[] {
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "200",
+            "201",
+            "202",
+            "203",
+            "204",
+            "205",
+            "206",
+            "207",
+            "208",
+            "209",
+            "300",
+            "301",
+            "302",
+            "303",
+            "304",
+            "305",
+            "306",
+            "307",
+            "400",
+            "401",
+            "402",
+            "403",
+            "404",
+            "405",
+            "406"});
+            this.CourseIDButton.Location = new System.Drawing.Point(12, 25);
+            this.CourseIDButton.Name = "CourseIDButton";
+            this.CourseIDButton.Size = new System.Drawing.Size(80, 21);
+            this.CourseIDButton.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AccessibleName = "StartTime";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(95, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Start Time:";
+            // 
+            // StartTimeButton
+            // 
+            this.StartTimeButton.AccessibleName = "StartTime";
+            this.StartTimeButton.FormattingEnabled = true;
+            this.StartTimeButton.Items.AddRange(new object[] {
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19"});
+            this.StartTimeButton.Location = new System.Drawing.Point(98, 25);
+            this.StartTimeButton.Name = "StartTimeButton";
+            this.StartTimeButton.Size = new System.Drawing.Size(74, 21);
+            this.StartTimeButton.TabIndex = 3;
+            // 
+            // Day
+            // 
+            this.Day.AccessibleName = "Day";
+            this.Day.AutoSize = true;
+            this.Day.Location = new System.Drawing.Point(12, 57);
+            this.Day.Name = "Day";
+            this.Day.Size = new System.Drawing.Size(29, 13);
+            this.Day.TabIndex = 4;
+            this.Day.Text = "Day:";
+            // 
+            // DayButton
+            // 
+            this.DayButton.AccessibleName = "DayButton";
+            this.DayButton.FormattingEnabled = true;
+            this.DayButton.Items.AddRange(new object[] {
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.DayButton.Location = new System.Drawing.Point(12, 73);
+            this.DayButton.Name = "DayButton";
+            this.DayButton.Size = new System.Drawing.Size(80, 21);
+            this.DayButton.TabIndex = 5;
+            // 
+            // Apply_Button
+            // 
+            this.Apply_Button.AccessibleName = "Apply_Button";
+            this.Apply_Button.Location = new System.Drawing.Point(57, 109);
+            this.Apply_Button.Name = "Apply_Button";
+            this.Apply_Button.Size = new System.Drawing.Size(69, 25);
+            this.Apply_Button.TabIndex = 6;
+            this.Apply_Button.Text = "Apply";
+            this.Apply_Button.UseVisualStyleBackColor = true;
+            this.Apply_Button.Click += new System.EventHandler(this.Apply_Button_Click);
+            // 
+            // Semester
+            // 
+            this.Semester.AccessibleName = "Semester";
+            this.Semester.AutoSize = true;
+            this.Semester.Location = new System.Drawing.Point(99, 57);
+            this.Semester.Name = "Semester";
+            this.Semester.Size = new System.Drawing.Size(54, 13);
+            this.Semester.TabIndex = 7;
+            this.Semester.Text = "Semester:";
+            // 
+            // SemesterButton
+            // 
+            this.SemesterButton.AccessibleName = "SemesterButton";
+            this.SemesterButton.FormattingEnabled = true;
+            this.SemesterButton.Items.AddRange(new object[] {
+            "A",
+            "B"});
+            this.SemesterButton.Location = new System.Drawing.Point(98, 73);
+            this.SemesterButton.Name = "SemesterButton";
+            this.SemesterButton.Size = new System.Drawing.Size(74, 21);
+            this.SemesterButton.TabIndex = 8;
+            // 
+            // AddLabExercises
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(191, 150);
+            this.Controls.Add(this.SemesterButton);
+            this.Controls.Add(this.Semester);
+            this.Controls.Add(this.Apply_Button);
+            this.Controls.Add(this.DayButton);
+            this.Controls.Add(this.Day);
+            this.Controls.Add(this.StartTimeButton);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CourseIDButton);
+            this.Controls.Add(this.CourseIDLabel);
+            this.Name = "AddLabExercises";
+            this.Text = "AddLabExercises";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label CourseIDLabel;
+        private System.Windows.Forms.ComboBox CourseIDButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox StartTimeButton;
+        private System.Windows.Forms.Label Day;
+        private System.Windows.Forms.ComboBox DayButton;
+        private System.Windows.Forms.Button Apply_Button;
+        private System.Windows.Forms.Label Semester;
+        private System.Windows.Forms.ComboBox SemesterButton;
+    }
+}

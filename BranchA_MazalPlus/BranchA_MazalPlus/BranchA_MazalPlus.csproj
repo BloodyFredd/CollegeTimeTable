@@ -136,11 +136,11 @@
       <DependentUpon>FB_Analyze.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserID.cs" />
-    <Compile Include="Lecturer\Factor.cs">
+    <Compile Include="Lecturer\bonus_10_points.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lecturer\Factor.Designer.cs">
-      <DependentUpon>Factor.cs</DependentUpon>
+    <Compile Include="Lecturer\bonus_10_points.Designer.cs">
+      <DependentUpon>bonus_10_points.cs</DependentUpon>
     </Compile>
     <Compile Include="Lecturer\Menu.cs">
       <SubType>Form</SubType>
@@ -167,6 +167,12 @@
       <DependentUpon>NewUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Program.cs" />
+    <Compile Include="Lecturer\modifay_grade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\modifay_grade.Designer.cs">
+      <DependentUpon>modifay_grade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer\NewLecture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,12 @@
     </Compile>
     <Compile Include="Secretary\StudentDetails.Designer.cs">
       <DependentUpon>StudentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_Assistant\AddLabExercises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\AddLabExercises.Designer.cs">
+      <DependentUpon>AddLabExercises.cs</DependentUpon>
     </Compile>
     <Compile Include="Teaching_Assistant\Grade56.cs">
       <SubType>Form</SubType>
@@ -289,8 +301,8 @@
     <EmbeddedResource Include="Forms\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lecturer\Factor.resx">
-      <DependentUpon>Factor.cs</DependentUpon>
+    <EmbeddedResource Include="Lecturer\bonus_10_points.resx">
+      <DependentUpon>bonus_10_points.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -300,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewUser.resx">
       <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\modifay_grade.resx">
+      <DependentUpon>modifay_grade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\NewLecture.resx">
       <DependentUpon>NewLecture.cs</DependentUpon>
@@ -337,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secretary\StudentDetails.resx">
       <DependentUpon>StudentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\AddLabExercises.resx">
+      <DependentUpon>AddLabExercises.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Teaching_Assistant\Grade56.resx">
       <DependentUpon>Grade56.cs</DependentUpon>

@@ -48,11 +48,7 @@ namespace BranchA_MazalPlus.Admin
                 }
                 else
                 {
-                    this.Close();
-                    MessageBox.Show("Error selecting dates,try again!");
-                    MergeAuditorium form2 = new MergeAuditorium();
-                    form2.Show();
-
+                    throw new ArgumentException("Error selecting dates,try again!");
                 }
 
                 SqlDataAdapter sda = new SqlDataAdapter();
@@ -66,8 +62,11 @@ namespace BranchA_MazalPlus.Admin
                 sda.Update(dbdataset);
             }
             catch (Exception ex)
-            {
+            {                
+                this.Close();
                 MessageBox.Show(ex.Message);
+                MergeAuditorium form2 = new MergeAuditorium();
+                form2.Show();
             }
         }
 
@@ -100,11 +99,7 @@ namespace BranchA_MazalPlus.Admin
                 }
                 else
                 {
-                    this.Close();
-                    MessageBox.Show("Error selecting dates,try again!");
-                    MergeAuditorium form2 = new MergeAuditorium();
-                    form2.Show();
-
+                    throw new ArgumentException("Error selecting dates,try again!");
                 }
 
                 SqlDataAdapter sda = new SqlDataAdapter();
@@ -124,7 +119,10 @@ namespace BranchA_MazalPlus.Admin
             }
             catch (Exception ex)
             {
+                this.Close();
                 MessageBox.Show(ex.Message);
+                MergeAuditorium form2 = new MergeAuditorium();
+                form2.Show();
             }
         }
 
