@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 
 namespace BranchA_MazalPlus.Teaching_Assistant
@@ -224,5 +225,72 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Print_Click(object sender, EventArgs e)
+        {
+            string str = "Student Detailes",string2= Forms.UserID.ID;
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            path = path.Replace(@"\", @"\\");
+            path += "\\";
+
+            try
+            {
+                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+
+                StreamWriter myFile = new StreamWriter(@"" + path + "'" + str + "'.xls");
+
+                using (SqlConnection connection = new SqlConnection(connetionString))
+                {
+                    string query = "select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "'" ;
+
+                    SqlCommand command = new SqlCommand(query, connection);
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    try
+                    {
+                        myFile.WriteLine(String.Format("Stud_ID\tCourse_id\tTeacher_ID\n"));
+                        while (reader.Read())
+                        {
+                            myFile.WriteLine(String.Format("{0}\t {1}\t {2}\t ",
+                            reader["stud_Id"], reader["course_id"], reader[string2]));
+                        }
+                        MessageBox.Show("The file created");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        //Dts.TaskResult = (int)ScriptResults.Failure;
+                    }
+                    finally
+                    {
+
+                        reader.Close();
+                        myFile.Close();
+                    }
+
+                }
+
+                FileInfo fi = new FileInfo(@"" + path + "'" + str + "'.xls");
+                if (fi.Exists)
+                {
+                    System.Diagnostics.Process.Start(@"" + path + "'" + str + "'.xls");
+
+                }
+                else
+                {
+                    MessageBox.Show("File not exsits");
+                }
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
+   
 }
