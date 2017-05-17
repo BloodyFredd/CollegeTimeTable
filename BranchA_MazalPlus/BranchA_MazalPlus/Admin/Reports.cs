@@ -324,7 +324,7 @@ namespace BranchA_MazalPlus.Admin
                 
             }
             catch(Exception ex)
-                        {
+                {
                     MessageBox.Show(ex.ToString());
                 }
             }
