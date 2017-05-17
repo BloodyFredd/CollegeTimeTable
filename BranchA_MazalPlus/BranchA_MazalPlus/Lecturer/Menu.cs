@@ -50,7 +50,7 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void Special_Stud_Button_Click(object sender, EventArgs e)
         {
-            Factor fac = new Factor();
+            bonus_10_points fac = new bonus_10_points();
             fac.Show();
         }
 

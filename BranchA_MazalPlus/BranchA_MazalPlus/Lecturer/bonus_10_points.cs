@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace BranchA_MazalPlus.Lecturer
 {
-    public partial class Factor : Form
+    public partial class bonus_10_points : Form
     {
         private string connetionString = null;
         private SqlConnection sqlcon;
-        public Factor()
+        public bonus_10_points()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace BranchA_MazalPlus.Lecturer
                 {
                     this.Close();
                     MessageBox.Show("Try again, this is not a correct ID!");
-                    Factor form2 = new Factor();
+                    bonus_10_points form2 = new bonus_10_points();
                     form2.Show();
                 }
                 else
@@ -105,7 +105,7 @@ namespace BranchA_MazalPlus.Lecturer
             {
                 MessageBox.Show(ex.Message);
                 this.Close();
-                Factor form2 = new Factor();
+                bonus_10_points form2 = new bonus_10_points();
                 form2.Show();
             }
             this.sqlcon.Close();
