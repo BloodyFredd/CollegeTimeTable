@@ -121,10 +121,10 @@ namespace BranchA_MazalPlus.Admin
 
         }
 
-        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        {
+        //private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
+        //{
 
-        }
+//        }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {

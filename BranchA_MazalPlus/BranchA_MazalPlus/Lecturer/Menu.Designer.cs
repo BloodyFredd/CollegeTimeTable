@@ -327,7 +327,7 @@
             this.Exams_Assignment_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.Exams_Assignment_Button.Size = new System.Drawing.Size(291, 50);
             this.Exams_Assignment_Button.TabIndex = 2;
-            this.Exams_Assignment_Button.Text = " Exams Assignment**";
+            this.Exams_Assignment_Button.Text = " Exams Assignment(SPRINT 4)";
             this.Exams_Assignment_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exams_Assignment_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Exams_Assignment_Button.UseVisualStyleBackColor = false;

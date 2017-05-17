@@ -426,10 +426,6 @@
             this.Reports_button.UseVisualStyleBackColor = false;
             this.Reports_button.Click += new System.EventHandler(this.Reports_button_Click);
             // 
-            // backgroundWorker2
-            // 
-            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
