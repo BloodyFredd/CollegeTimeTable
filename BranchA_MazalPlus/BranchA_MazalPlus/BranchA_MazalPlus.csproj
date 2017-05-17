@@ -114,11 +114,11 @@
       <DependentUpon>StudentExemption.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserID.cs" />
-    <Compile Include="Lecturer\Factor.cs">
+    <Compile Include="Lecturer\bonus_10_points.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lecturer\Factor.Designer.cs">
-      <DependentUpon>Factor.cs</DependentUpon>
+    <Compile Include="Lecturer\bonus_10_points.Designer.cs">
+      <DependentUpon>bonus_10_points.cs</DependentUpon>
     </Compile>
     <Compile Include="Lecturer\Menu.cs">
       <SubType>Form</SubType>
@@ -269,8 +269,8 @@
     <EmbeddedResource Include="Forms\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lecturer\Factor.resx">
-      <DependentUpon>Factor.cs</DependentUpon>
+    <EmbeddedResource Include="Lecturer\bonus_10_points.resx">
+      <DependentUpon>bonus_10_points.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
