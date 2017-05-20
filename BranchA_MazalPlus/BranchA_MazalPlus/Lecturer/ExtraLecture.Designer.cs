@@ -1,6 +1,6 @@
 ﻿namespace BranchA_MazalPlus.Lecturer
 {
-    partial class NewLecture
+    partial class ExtraLecture
     {
         /// <summary>
         /// Required designer variable.
@@ -293,11 +293,11 @@
             // NewLec
             // 
             this.NewLec.Location = new System.Drawing.Point(52, 31);
-            this.NewLec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NewLec.Margin = new System.Windows.Forms.Padding(4);
             this.NewLec.Name = "NewLec";
             this.NewLec.Size = new System.Drawing.Size(206, 124);
             this.NewLec.TabIndex = 13;
-            this.NewLec.Text = "New Lecture";
+            this.NewLec.Text = "Extra Lecture";
             this.NewLec.UseVisualStyleBackColor = true;
             this.NewLec.Click += new System.EventHandler(this.NewLec_Click);
             // 
@@ -319,7 +319,7 @@
             "19-20",
             "20-21"});
             this.Hour.Location = new System.Drawing.Point(284, 33);
-            this.Hour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Hour.Margin = new System.Windows.Forms.Padding(4);
             this.Hour.Name = "Hour";
             this.Hour.Size = new System.Drawing.Size(280, 39);
             this.Hour.TabIndex = 14;
@@ -341,13 +341,13 @@
             "a101",
             "a102"});
             this.Class.Location = new System.Drawing.Point(284, 108);
-            this.Class.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Class.Margin = new System.Windows.Forms.Padding(4);
             this.Class.Name = "Class";
             this.Class.Size = new System.Drawing.Size(280, 39);
             this.Class.TabIndex = 15;
             this.Class.Text = "Choose class";
             // 
-            // NewLecture
+            // ExtraLecture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -358,9 +358,9 @@
             this.Controls.Add(this.Available_Classes);
             this.Controls.Add(this.Lecture);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "NewLecture";
-            this.Text = "NewLecture";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "ExtraLecture";
+            this.Text = "ExtraLecture";
             this.Load += new System.EventHandler(this.NewLecture_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
