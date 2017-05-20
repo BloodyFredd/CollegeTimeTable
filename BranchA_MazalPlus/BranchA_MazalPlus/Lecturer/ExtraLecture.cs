@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace BranchA_MazalPlus.Lecturer
 {
-    public partial class NewLecture : Form
+    public partial class ExtraLecture : Form
     {
             private string connetionString = null;
             private SqlConnection sqlcon;
-            public NewLecture()
+            public ExtraLecture()
         {
             InitializeComponent();
         }
@@ -71,7 +71,7 @@ namespace BranchA_MazalPlus.Lecturer
             {
                 this.Close();
                 MessageBox.Show(ex.Message);
-                NewLecture form2 = new NewLecture();
+                ExtraLecture form2 = new ExtraLecture();
                 form2.Show();
             }
         }
@@ -135,7 +135,7 @@ namespace BranchA_MazalPlus.Lecturer
             {
                 MessageBox.Show(ex.Message);
                 this.Close();
-                NewLecture form2 = new NewLecture();
+                ExtraLecture form2 = new ExtraLecture();
                 form2.Show();
             }
 

@@ -44,7 +44,7 @@ namespace BranchA_MazalPlus.Lecturer
 
         private void Available_Classes_Button_Click(object sender, EventArgs e)
         {
-            NewLecture lec = new NewLecture();
+            ExtraLecture lec = new ExtraLecture();
             lec.Show();
         }
 
