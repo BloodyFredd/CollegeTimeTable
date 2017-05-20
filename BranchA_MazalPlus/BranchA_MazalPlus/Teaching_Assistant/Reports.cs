@@ -251,8 +251,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                         myFile.WriteLine(String.Format("Stud_ID\tCourse_id\tTeacher_ID\n"));
                         while (reader.Read())
                         {
-                            myFile.WriteLine(String.Format("{0}\t {1}\t {2}\t ",
-                            reader["stud_Id"], reader["course_id"], reader[string2]));
+                            myFile.WriteLine(String.Format("{0}\t {1}\t {2}\t", reader["stud_Id"], reader["course_id"], string2));
                         }
                         MessageBox.Show("The file created");
 
