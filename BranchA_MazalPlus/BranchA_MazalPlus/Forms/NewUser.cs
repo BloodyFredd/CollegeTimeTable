@@ -38,7 +38,7 @@ namespace BranchA_MazalPlus
                 string query = "INSERT INTO person (ID,F_name,L_name,Telephone,Email,Password,Permission) VALUES('" + this.ID.Text + "','" + this.Fname.Text + "','" + this.Lname.Text + "','" + this.Phone.Text + "','" + this.Email.Text + "','" + this.ID.Text + "','" + this.perm1.Text + "')  ; ";
                 SqlCommand cmd = new SqlCommand(query, sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
-                if(this.perm1.Text == "Teaching_Assistant" || this.perm1.Text == "Lecturer")
+                if (this.perm1.Text == "Teaching_Assistant" || this.perm1.Text == "Lecturer")
                 {
                     this.sqlcon.Close();
                     this.sqlcon = new SqlConnection(connetionString);
@@ -47,6 +47,19 @@ namespace BranchA_MazalPlus
 
                     SqlCommand cmd1 = new SqlCommand(query1, sqlcon);
                     SqlDataReader dr1 = cmd1.ExecuteReader();
+                    dr1.Close();
+                }
+
+                if (this.perm1.Text == "Student")
+                {
+                    this.sqlcon.Close();
+                    this.sqlcon = new SqlConnection(connetionString);
+                    this.sqlcon.Open();
+                    string query1 = "INSERT INTO students (ID,Department,Year,Average,ExtraTime,Laptop,FormulaSheet) VALUES('" + this.ID.Text + "', 'Computer Science', 1, 0, 0, 0, 0)  ; ";
+
+                    SqlCommand cmd1 = new SqlCommand(query1, sqlcon);
+                    SqlDataReader dr1 = cmd1.ExecuteReader();
+                    dr1.Close();
                 }
                 MessageBox.Show("Saved");
                 this.sqlcon.Close();
@@ -70,13 +83,13 @@ namespace BranchA_MazalPlus
                     throw new ArgumentException("ID should be only digits and with length of 9.");
                 }
                 SqlCommand cmd = new SqlCommand("select * from person where ID='" + this.ID.Text + "'", sqlcon);
-                cmd.ExecuteReader();
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read() == true)
                     throw new ArgumentException("There exists such an ID.");
                 this.sqlcon.Close();
                 this.sqlcon = new SqlConnection(connetionString);
                 this.sqlcon.Open();
+                dr.Close();
                 return true;
             }
 
