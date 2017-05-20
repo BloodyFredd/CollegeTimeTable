@@ -12,12 +12,21 @@ using System.Text.RegularExpressions;
 
 namespace BranchA_MazalPlus.Forms
 {
-    class General
+   public  class General
     {
-        public void ConnectToSql(string str) {            
-             string connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-             SqlConnection sqlcon = new SqlConnection(connetionString);
-            sqlcon.Open(); }
-          
+        public static  bool ConnectToSql(SqlConnection sqlcon)
+        {
+            string connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            sqlcon = new SqlConnection(connetionString);
+            sqlcon.Open();
+            if (sqlcon.State != ConnectionState.Open)
+            {
+                return false;
+
+            }
+            return true;
+        }
+
+
     }
 }
