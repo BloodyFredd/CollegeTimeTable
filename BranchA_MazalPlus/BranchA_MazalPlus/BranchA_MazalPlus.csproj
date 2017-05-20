@@ -117,24 +117,25 @@
     <Compile Include="Admin\StudentExemption.Designer.cs">
       <DependentUpon>StudentExemption.cs</DependentUpon>
     </Compile>
-    <Compile Include="Analyze.cs">
+    <Compile Include="Facebook\Analyze.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Analyze.designer.cs">
+    <Compile Include="Facebook\Analyze.designer.cs">
       <DependentUpon>Analyze.cs</DependentUpon>
     </Compile>
-    <Compile Include="FacebookLoginDialog.cs">
+    <Compile Include="Facebook\FacebookLoginDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FacebookLoginDialog.designer.cs">
+    <Compile Include="Facebook\FacebookLoginDialog.designer.cs">
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="FB_Analyze.cs">
+    <Compile Include="Facebook\FB_Analyze.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FB_Analyze.designer.cs">
+    <Compile Include="Facebook\FB_Analyze.designer.cs">
       <DependentUpon>FB_Analyze.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\General.cs" />
     <Compile Include="Forms\UserID.cs" />
     <Compile Include="Lecturer\bonus_10_points.cs">
       <SubType>Form</SubType>
@@ -191,7 +192,7 @@
     <Compile Include="Lecturer\Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="MiniJson.cs" />
+    <Compile Include="Facebook\MiniJson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Secretary\AddStudent.cs">
       <SubType>Form</SubType>
@@ -289,13 +290,13 @@
     <EmbeddedResource Include="Admin\StudentExemption.resx">
       <DependentUpon>StudentExemption.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Analyze.resx">
+    <EmbeddedResource Include="Facebook\Analyze.resx">
       <DependentUpon>Analyze.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FacebookLoginDialog.resx">
+    <EmbeddedResource Include="Facebook\FacebookLoginDialog.resx">
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FB_Analyze.resx">
+    <EmbeddedResource Include="Facebook\FB_Analyze.resx">
       <DependentUpon>FB_Analyze.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Calendar.resx">
@@ -403,7 +404,6 @@
   <ItemGroup>
     <Folder Include=".nuget\" />
     <Folder Include="bin\Debug\" />
-    <Folder Include="Facebook\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mazalmazal.wav" />
@@ -415,7 +415,7 @@
     <None Include="Resources\facebook1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FB_Analyze.csproj" />
+    <Content Include="Facebook\FB_Analyze.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
