@@ -20,7 +20,7 @@ namespace BranchA_MazalPlus
         private string connetionString = null;
         private SqlConnection sqlcon;
 
-       // System.Media.SoundPlayer player = new System.Media.SoundPlayer(BranchA_MazalPlus.Properties.Resources.mazalmazal);//music
+      // System.Media.SoundPlayer player = new System.Media.SoundPlayer(BranchA_MazalPlus.Properties.Resources.mazalmazal);//music
 
         public Login()
         {
@@ -43,7 +43,7 @@ namespace BranchA_MazalPlus
 
 
             ///////////////////
-           // player.Play();//music
+          // player.Play();//music
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
             this.sqlcon.Open();
@@ -163,6 +163,12 @@ namespace BranchA_MazalPlus
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoginToFacebook_Click(object sender, EventArgs e)
+        {
+            FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
+            facebook.Show();
         }
     }
 }

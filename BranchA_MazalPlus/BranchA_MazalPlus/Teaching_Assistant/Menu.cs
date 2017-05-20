@@ -126,8 +126,8 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
         private void Logout_Button_Click(object sender, EventArgs e)
         {
-
-
+            AddLabExercises rec = new AddLabExercises();
+            rec.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
