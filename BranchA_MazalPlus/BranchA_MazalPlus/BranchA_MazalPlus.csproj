@@ -137,6 +137,12 @@
     </Compile>
     <Compile Include="Forms\General.cs" />
     <Compile Include="Forms\UserID.cs" />
+    <Compile Include="Lecturer\AddLecture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\AddLecture.Designer.cs">
+      <DependentUpon>AddLecture.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer\bonus_10_points.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\AddLecture.resx">
+      <DependentUpon>AddLecture.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\bonus_10_points.resx">
       <DependentUpon>bonus_10_points.cs</DependentUpon>
