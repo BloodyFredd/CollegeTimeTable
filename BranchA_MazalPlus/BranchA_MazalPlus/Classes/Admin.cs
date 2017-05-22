@@ -13,8 +13,10 @@ namespace BranchA_MazalPlus.Classes
     class Admin : Person
     {
 
+        
         public Admin(string id) : base(id)
         {
+
         }
     }
 }
