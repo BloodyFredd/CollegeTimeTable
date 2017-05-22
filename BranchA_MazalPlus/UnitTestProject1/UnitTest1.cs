@@ -52,10 +52,19 @@ namespace UnitTestProject1
         }
 
 
-        //[TestMethod]
-        //public void TestMethod4()
+        // [TestMethod]
+        //public void TestMethod5()
         //{
-        //    Assert.IsFalse(f1.checkString(ID, "ID"));
-        //}
+
+        // }
+
+
+     //   [TestMethod]
+      //  public void TestMethod6()
+       // {
+        //    SqlConnection sqlcon = null;
+        //    sqlcon = General.ConnectToSql();
+        //    Assert.IsNotNull(sqlcon);
+       // }
     }
 }
