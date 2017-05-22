@@ -13,10 +13,10 @@ namespace BranchA_MazalPlus.Classes
     class Admin : Person
     {
 
-        private int adirkaki = 1;
-
+        
         public Admin(string id) : base(id)
         {
+
         }
     }
 }
