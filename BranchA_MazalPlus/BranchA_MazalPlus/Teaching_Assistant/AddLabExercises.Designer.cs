@@ -37,6 +37,10 @@
             this.Apply_Button = new System.Windows.Forms.Button();
             this.Semester = new System.Windows.Forms.Label();
             this.SemesterButton = new System.Windows.Forms.ComboBox();
+            this.Class = new System.Windows.Forms.Label();
+            this.ClassButton = new System.Windows.Forms.ComboBox();
+            this.Lab_Exercise = new System.Windows.Forms.Label();
+            this.LabExercise = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CourseIDLabel
@@ -51,7 +55,7 @@
             // 
             // CourseIDButton
             // 
-            this.CourseIDButton.AccessibleName = "CourseIDButton";
+            this.CourseIDButton.AccessibleName = "CourseID";
             this.CourseIDButton.FormattingEnabled = true;
             this.CourseIDButton.Items.AddRange(new object[] {
             "100",
@@ -154,7 +158,7 @@
             // Apply_Button
             // 
             this.Apply_Button.AccessibleName = "Apply_Button";
-            this.Apply_Button.Location = new System.Drawing.Point(57, 109);
+            this.Apply_Button.Location = new System.Drawing.Point(98, 159);
             this.Apply_Button.Name = "Apply_Button";
             this.Apply_Button.Size = new System.Drawing.Size(69, 25);
             this.Apply_Button.TabIndex = 6;
@@ -184,11 +188,67 @@
             this.SemesterButton.Size = new System.Drawing.Size(74, 21);
             this.SemesterButton.TabIndex = 8;
             // 
+            // Class
+            // 
+            this.Class.AccessibleName = "Class";
+            this.Class.AutoSize = true;
+            this.Class.Location = new System.Drawing.Point(12, 107);
+            this.Class.Name = "Class";
+            this.Class.Size = new System.Drawing.Size(35, 13);
+            this.Class.TabIndex = 9;
+            this.Class.Text = "Class:";
+            // 
+            // ClassButton
+            // 
+            this.ClassButton.AccessibleName = "ClassID";
+            this.ClassButton.FormattingEnabled = true;
+            this.ClassButton.Items.AddRange(new object[] {
+            "a101",
+            "a102",
+            "f101",
+            "f102",
+            "f103",
+            "f104",
+            "s101",
+            "s102",
+            "s103",
+            "s104"});
+            this.ClassButton.Location = new System.Drawing.Point(12, 123);
+            this.ClassButton.Name = "ClassButton";
+            this.ClassButton.Size = new System.Drawing.Size(80, 21);
+            this.ClassButton.TabIndex = 10;
+            // 
+            // Lab_Exercise
+            // 
+            this.Lab_Exercise.AccessibleName = "Lab/Exercise";
+            this.Lab_Exercise.AutoSize = true;
+            this.Lab_Exercise.Location = new System.Drawing.Point(99, 107);
+            this.Lab_Exercise.Name = "Lab_Exercise";
+            this.Lab_Exercise.Size = new System.Drawing.Size(73, 13);
+            this.Lab_Exercise.TabIndex = 11;
+            this.Lab_Exercise.Text = "Lab/Exercise:";
+            // 
+            // LabExercise
+            // 
+            this.LabExercise.AccessibleName = "LabExerciseButton";
+            this.LabExercise.FormattingEnabled = true;
+            this.LabExercise.Items.AddRange(new object[] {
+            "Lab",
+            "Exercise"});
+            this.LabExercise.Location = new System.Drawing.Point(98, 123);
+            this.LabExercise.Name = "LabExercise";
+            this.LabExercise.Size = new System.Drawing.Size(74, 21);
+            this.LabExercise.TabIndex = 12;
+            // 
             // AddLabExercises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(191, 150);
+            this.ClientSize = new System.Drawing.Size(190, 196);
+            this.Controls.Add(this.LabExercise);
+            this.Controls.Add(this.Lab_Exercise);
+            this.Controls.Add(this.ClassButton);
+            this.Controls.Add(this.Class);
             this.Controls.Add(this.SemesterButton);
             this.Controls.Add(this.Semester);
             this.Controls.Add(this.Apply_Button);
@@ -216,5 +276,9 @@
         private System.Windows.Forms.Button Apply_Button;
         private System.Windows.Forms.Label Semester;
         private System.Windows.Forms.ComboBox SemesterButton;
+        private System.Windows.Forms.Label Class;
+        private System.Windows.Forms.ComboBox ClassButton;
+        private System.Windows.Forms.Label Lab_Exercise;
+        private System.Windows.Forms.ComboBox LabExercise;
     }
 }
