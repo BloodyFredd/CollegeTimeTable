@@ -117,6 +117,7 @@
     <Compile Include="Admin\StudentExemption.Designer.cs">
       <DependentUpon>StudentExemption.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Person.cs" />
     <Compile Include="Facebook\Analyze.cs">
       <SubType>Form</SubType>
