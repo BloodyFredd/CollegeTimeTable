@@ -46,7 +46,9 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod4()
         {
-            Assert.IsTrue(General.ConnectToSql(sqlcon));
+            SqlConnection sqlcon = null;
+            sqlcon = General.ConnectToSql();
+            Assert.IsNotNull(sqlcon);
         }
 
 
