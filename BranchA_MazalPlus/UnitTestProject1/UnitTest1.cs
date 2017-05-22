@@ -4,6 +4,7 @@ using BranchA_MazalPlus;
 using System.Data.SqlClient;
 using System.Windows;
 using BranchA_MazalPlus.Forms;
+using BranchA_MazalPlus.Classes;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,8 +47,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod4()
         {
-            SqlConnection sqlcon = null;
-            sqlcon = General.ConnectToSql();
+            this.sqlcon = General.ConnectToSql();
             Assert.IsNotNull(sqlcon);
         }
 
