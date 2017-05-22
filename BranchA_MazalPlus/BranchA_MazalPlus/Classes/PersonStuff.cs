@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace BranchA_MazalPlus.Classes
 {
-     class  PersonStuff
+     class PersonStuff
     {
         private string ID;
         private string Fname;
