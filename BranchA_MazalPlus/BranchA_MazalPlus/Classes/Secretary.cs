@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BranchA_MazalPlus.Classes
 {
-    class Secretary : Person
+    class Secretary : PersonStuff
     {
         public Secretary(string id) : base(id)
         {
