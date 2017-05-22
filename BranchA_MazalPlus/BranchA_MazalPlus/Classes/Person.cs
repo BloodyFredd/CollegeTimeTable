@@ -12,14 +12,15 @@ namespace BranchA_MazalPlus.Classes
 {
     class Person
     {
-        string ID;
-        string Fname;
-        string Lname;
-        string Telephone;
-        string Email;
-        string Password;
-        string Permission;
-        
+        private string ID;
+        private string Fname;
+        private string Lname;
+        private string Telephone;
+        private string Email;
+        private string Password;
+        private string Permission;
+
+
         public Person(string id)
         {
             SqlConnection sqlcon = General.ConnectToSql();
