@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using BranchA_MazalPlus.Forms;
 
 namespace BranchA_MazalPlus.Lecturer
 {
@@ -24,8 +25,8 @@ namespace BranchA_MazalPlus.Lecturer
         {
             try
             {
-                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
-                this.sqlcon = new SqlConnection(connetionString);
+                 this.sqlcon = General.ConnectToSql();
+
                 SqlCommand cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Forms.UserID.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
                 this.sqlcon.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
