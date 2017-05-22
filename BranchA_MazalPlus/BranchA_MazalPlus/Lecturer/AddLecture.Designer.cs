@@ -33,10 +33,10 @@
             this.Day = new System.Windows.Forms.Label();
             this.Semester = new System.Windows.Forms.Label();
             this.Apply = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.CourseIDButton = new System.Windows.Forms.ComboBox();
+            this.StartButton = new System.Windows.Forms.ComboBox();
+            this.DayButton = new System.Windows.Forms.ComboBox();
+            this.SemesterButton = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CourseID
@@ -90,10 +90,11 @@
             this.Apply.UseVisualStyleBackColor = true;
             this.Apply.Click += new System.EventHandler(this.Apply_Click);
             // 
-            // comboBox1
+            // CourseIDButton
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.CourseIDButton.AccessibleName = "CourseID";
+            this.CourseIDButton.FormattingEnabled = true;
+            this.CourseIDButton.Items.AddRange(new object[] {
             "100",
             "101",
             "102",
@@ -128,15 +129,16 @@
             "404",
             "405",
             "406"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(67, 21);
-            this.comboBox1.TabIndex = 5;
+            this.CourseIDButton.Location = new System.Drawing.Point(12, 25);
+            this.CourseIDButton.Name = "CourseIDButton";
+            this.CourseIDButton.Size = new System.Drawing.Size(67, 21);
+            this.CourseIDButton.TabIndex = 5;
             // 
-            // comboBox2
+            // StartButton
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.StartButton.AccessibleName = "StartButton";
+            this.StartButton.FormattingEnabled = true;
+            this.StartButton.Items.AddRange(new object[] {
             "8",
             "9",
             "10",
@@ -148,46 +150,48 @@
             "16",
             "17",
             "18"});
-            this.comboBox2.Location = new System.Drawing.Point(98, 25);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(76, 21);
-            this.comboBox2.TabIndex = 6;
+            this.StartButton.Location = new System.Drawing.Point(98, 25);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(76, 21);
+            this.StartButton.TabIndex = 6;
             // 
-            // comboBox3
+            // DayButton
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.DayButton.AccessibleName = "Day";
+            this.DayButton.FormattingEnabled = true;
+            this.DayButton.Items.AddRange(new object[] {
             "Sunday",
             "Monday",
             "Tuesday",
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.comboBox3.Location = new System.Drawing.Point(12, 65);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(67, 21);
-            this.comboBox3.TabIndex = 7;
+            this.DayButton.Location = new System.Drawing.Point(12, 65);
+            this.DayButton.Name = "DayButton";
+            this.DayButton.Size = new System.Drawing.Size(67, 21);
+            this.DayButton.TabIndex = 7;
             // 
-            // comboBox4
+            // SemesterButton
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.SemesterButton.AccessibleName = "SemesterButton";
+            this.SemesterButton.FormattingEnabled = true;
+            this.SemesterButton.Items.AddRange(new object[] {
             "A",
             "B"});
-            this.comboBox4.Location = new System.Drawing.Point(98, 65);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(76, 21);
-            this.comboBox4.TabIndex = 8;
+            this.SemesterButton.Location = new System.Drawing.Point(98, 65);
+            this.SemesterButton.Name = "SemesterButton";
+            this.SemesterButton.Size = new System.Drawing.Size(76, 21);
+            this.SemesterButton.TabIndex = 8;
             // 
             // AddLecture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(197, 136);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.SemesterButton);
+            this.Controls.Add(this.DayButton);
+            this.Controls.Add(this.StartButton);
+            this.Controls.Add(this.CourseIDButton);
             this.Controls.Add(this.Apply);
             this.Controls.Add(this.Semester);
             this.Controls.Add(this.Day);
@@ -207,9 +211,9 @@
         private System.Windows.Forms.Label Day;
         private System.Windows.Forms.Label Semester;
         private System.Windows.Forms.Button Apply;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox CourseIDButton;
+        private System.Windows.Forms.ComboBox StartButton;
+        private System.Windows.Forms.ComboBox DayButton;
+        private System.Windows.Forms.ComboBox SemesterButton;
     }
 }

@@ -26,7 +26,7 @@ namespace BranchA_MazalPlus.Lecturer
             {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
                 this.sqlcon = new SqlConnection(connetionString);
-                SqlCommand cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Forms.UserID.ID + "' and Course_ID = '" + CourseID.Text + "'", sqlcon);
+                SqlCommand cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Forms.UserID.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
                 this.sqlcon.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -42,7 +42,7 @@ namespace BranchA_MazalPlus.Lecturer
                     secondString = second.ToString();
                     thirdString = third.ToString();
                     fourthString = fourth.ToString();
-                    if (Semester.Text.Equals("A"))
+                    if (SemesterButton.Text.Equals("A"))
                     {
                         if (first == 8)
                         {
@@ -66,15 +66,19 @@ namespace BranchA_MazalPlus.Lecturer
                         sda1.SelectCommand = cmd1;
                         SqlDataAdapter sda2 = new SqlDataAdapter();
                         sda2.SelectCommand = cmd2;
+                        SqlDataAdapter sda3 = new SqlDataAdapter();
+                        sda3.SelectCommand = cmd3;
                         DataTable dbdataset = new DataTable();
                         sda1.Fill(dbdataset);
                         sda2.Fill(dbdataset);
+                        sda3.Fill(dbdataset);
                         BindingSource bsource = new BindingSource();
                         bsource.DataSource = dbdataset;
                         sda1.Update(dbdataset);
                         sda2.Update(dbdataset);
+                        sda3.Update(dbdataset);
                     }
-                    else if (Semester.Text.Equals("B"))
+                    else if (SemesterButton.Text.Equals("B"))
                     {
                         if (first == 8)
                         {
@@ -92,19 +96,23 @@ namespace BranchA_MazalPlus.Lecturer
                         {
                             cmd1 = new SqlCommand("update Classes_SM2 set [" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
                             cmd2 = new SqlCommand("update Classes_SM2 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                            cmd3 = new SqlCommand("update Classes_SM set [" + thirdString + "-" + fourthString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd3 = new SqlCommand("update Classes_SM2 set [" + thirdString + "-" + fourthString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
                         }
                         SqlDataAdapter sda1 = new SqlDataAdapter();
                         sda1.SelectCommand = cmd1;
                         SqlDataAdapter sda2 = new SqlDataAdapter();
                         sda2.SelectCommand = cmd2;
+                        SqlDataAdapter sda3 = new SqlDataAdapter();
+                        sda2.SelectCommand = cmd3;
                         DataTable dbdataset = new DataTable();
                         sda1.Fill(dbdataset);
                         sda2.Fill(dbdataset);
+                        sda3.Fill(dbdataset);
                         BindingSource bsource = new BindingSource();
                         bsource.DataSource = dbdataset;
                         sda1.Update(dbdataset);
                         sda2.Update(dbdataset);
+                        sda3.Update(dbdataset);
                     }
                 }
                 dr.Close();
