@@ -119,7 +119,9 @@
     </Compile>
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\Lecturer.cs" />
-    <Compile Include="Classes\Person.cs" />
+    <Compile Include="Classes\PersonStuff.cs" />
+    <Compile Include="Classes\Secretary.cs" />
+    <Compile Include="Classes\Teaching_Assistant.cs" />
     <Compile Include="Facebook\Analyze.cs">
       <SubType>Form</SubType>
     </Compile>

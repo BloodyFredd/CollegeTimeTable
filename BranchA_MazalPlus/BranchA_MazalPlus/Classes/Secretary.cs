@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BranchA_MazalPlus.Classes
 {
-    class Lecturer : PersonStuff
+    class Secretary : PersonStuff
     {
-        public Lecturer(string id) : base(id)
+        public Secretary(string id) : base(id)
         {
 
         }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BranchA_MazalPlus.Classes
 {
-    class Lecturer : PersonStuff
+    class Teaching_Assistant : PersonStuff
     {
-        public Lecturer(string id) : base(id)
+
+
+        public Teaching_Assistant(string id) : base(id)
         {
-
         }
-
     }
 }
