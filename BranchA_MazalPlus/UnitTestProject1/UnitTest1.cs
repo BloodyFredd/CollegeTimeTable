@@ -4,6 +4,7 @@ using BranchA_MazalPlus;
 using System.Data.SqlClient;
 using System.Windows;
 using BranchA_MazalPlus.Forms;
+using BranchA_MazalPlus.Classes;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

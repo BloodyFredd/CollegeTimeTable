@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using BranchA_MazalPlus.Classes;
 
 
 namespace UnitTestProject1
@@ -20,7 +21,6 @@ namespace UnitTestProject1
     [TestClass]
     public class PersonUnitTest
     {
-        //PersonStuff Pers = new BranchA_MazalPlus.Classes.PersonStuff("123456");
         string NAME = "newName";
         string TELEPHONE = "0525252852";
         string USERNAME = "UserNAME";
