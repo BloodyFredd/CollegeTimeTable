@@ -103,7 +103,7 @@ namespace BranchA_MazalPlus.Lecturer
                         SqlDataAdapter sda2 = new SqlDataAdapter();
                         sda2.SelectCommand = cmd2;
                         SqlDataAdapter sda3 = new SqlDataAdapter();
-                        sda2.SelectCommand = cmd3;
+                        sda3.SelectCommand = cmd3;
                         DataTable dbdataset = new DataTable();
                         sda1.Fill(dbdataset);
                         sda2.Fill(dbdataset);
