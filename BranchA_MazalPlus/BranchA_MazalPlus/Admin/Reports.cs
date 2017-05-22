@@ -59,7 +59,7 @@ namespace BranchA_MazalPlus.Admin
             catch (SqlException ex)
             {
                 this.Close();
-                MessageBox.Show("Error selecting course id, try again!");
+                MessageBox.Show("Error selecting course id, try again!\n"+ex.ToString());
                 Reports form2 = new Reports();
                 form2.Show();
             }
