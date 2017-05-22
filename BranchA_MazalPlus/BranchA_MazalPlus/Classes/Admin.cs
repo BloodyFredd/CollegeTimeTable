@@ -10,7 +10,7 @@ using BranchA_MazalPlus.Forms;
 
 namespace BranchA_MazalPlus.Classes
 {
-    class Admin : Person
+    class Admin : PersonStuff
     {
 
         
