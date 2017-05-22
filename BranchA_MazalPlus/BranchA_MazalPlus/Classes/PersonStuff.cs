@@ -4,7 +4,7 @@ using System.Linq;
 using BranchA_MazalPlus.Forms;
 using System.Globalization;
 using System.Text.RegularExpressions;
-
+using System.Data;
 
 namespace BranchA_MazalPlus.Classes
 {
@@ -36,6 +36,7 @@ namespace BranchA_MazalPlus.Classes
             }
 
         }
+
 
         public string getID() { return ID; }
         public bool setID(string value) {
@@ -134,7 +135,18 @@ namespace BranchA_MazalPlus.Classes
             return false;
 
         }
+        public bool updatesql()
+        {
+            SqlConnection sqlcon = General.ConnectToSql();
+            if (sqlcon == null)
+            {
+                return false;
 
+            }
+
+            
+            return true;
+        }
         private string DomainMapper(Match match)
         {
             // IdnMapping class with default property values.
