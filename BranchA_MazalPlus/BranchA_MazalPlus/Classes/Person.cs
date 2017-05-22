@@ -20,12 +20,9 @@ namespace BranchA_MazalPlus.Classes
         string Password;
         string Permission;
         
-        public void print()
+        public Person()
         {
-            string connetionString = "Data Source  = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-
-            SqlConnection sqlcon = new SqlConnection(connetionString);
-            sqlcon.Open();
+            SqlConnection sqlcon = General.ConnectToSql();
             SqlCommand cmd = new SqlCommand("select * from person where ID='123456789'", sqlcon);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read() == true)
@@ -37,15 +34,6 @@ namespace BranchA_MazalPlus.Classes
                 Email = dr[4].ToString();
                 Password = dr[5].ToString();
                 Permission = dr[6].ToString();
-                System.Console.WriteLine(ID);
-                System.Console.WriteLine(Fname);
-                System.Console.WriteLine(Lname);
-                System.Console.WriteLine(Telephone);
-                System.Console.WriteLine(Email);
-                System.Console.WriteLine(Password);
-                System.Console.WriteLine(Permission);
-
-
             }
 
         }
