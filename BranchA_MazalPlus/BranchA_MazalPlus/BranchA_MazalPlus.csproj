@@ -117,6 +117,12 @@
     <Compile Include="Admin\StudentExemption.Designer.cs">
       <DependentUpon>StudentExemption.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facebook\Analyze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facebook\Analyze.designer.cs">
+      <DependentUpon>Analyze.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facebook\FacebookLoginDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
     </Compile>
     <Compile Include="Forms\General.cs" />
     <Compile Include="Forms\UserID.cs" />
+    <Compile Include="Lecturer\AddLecture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\AddLecture.Designer.cs">
+      <DependentUpon>AddLecture.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturer\bonus_10_points.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,11 +290,17 @@
     <EmbeddedResource Include="Admin\StudentExemption.resx">
       <DependentUpon>StudentExemption.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Facebook\Analyze.resx">
+      <DependentUpon>Analyze.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facebook\FacebookLoginDialog.resx">
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facebook\FB_Analyze.resx">
       <DependentUpon>FB_Analyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\AddLecture.resx">
+      <DependentUpon>AddLecture.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\bonus_10_points.resx">
       <DependentUpon>bonus_10_points.cs</DependentUpon>

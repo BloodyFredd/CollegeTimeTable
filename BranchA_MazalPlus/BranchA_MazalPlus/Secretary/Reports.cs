@@ -226,6 +226,50 @@ namespace BranchA_MazalPlus.Secretary
             }
         }
 
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            double sum_avg = 0;
+            int counter = 0;
+            try
+            {
+                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+                this.sqlcon = new SqlConnection(connetionString);
+                this.sqlcon.Open();
+                SqlCommand cmd = new SqlCommand("select final_grade from Student_Courses where course_id  ='" + CourseID.Text + "'", sqlcon);
+                SqlDataReader dr = cmd.ExecuteReader();
+                
+                while (dr.Read())
+                {
+
+                    sum_avg += Convert.ToInt32(dr[0].ToString());
+                    counter++;
+
+                }
+                
+                MessageBox.Show("The AVG Grades of all students in Course:\t'" + CourseID.Text + "'\nis:\t" + sum_avg / counter);
+                dr.Close();
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+                
+                this.sqlcon.Close();
+                this.Close();
+                
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
+           
+        }
     }
 }
 

@@ -3824,6 +3824,19 @@
         kStEWUc/UAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="AddNewLecture.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
+        TUUH4QMcEhQJBHPonwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE2SURBVDhP
+        nZO9SgNREIWvbPAVAokgCUIgJrWFrY0IFiGQ1i6FfZLSNkVAsBZFxFjoA/gOVqnyA1HRZzCisOab3dkV
+        2eXuTQ58zD0zs2d/YM268n2/AOdQ0tbq4uI8TH4R9Y1S1pG7uLAINXiSIBHnmaGecHiAxwwGsA0TeIc6
+        BGHUW7nDlxib2HmBfZhqS3ofUOfYA0+eSJpzqFjYhTgkEr0LfWMTBY3VJsRMvklayD3F0zV7UEZITtdC
+        6SARZAuBBhzqaigd/gvCb0FayBCO4BuOdT2ULsRB2By+Db7MImGHFI/aV28P4nwKLehCEEa5owQflrNz
+        0CX8gIR1IA4R4d2CsM/4BYxgB7+ho0D0nJ+oSmtTbUJZQa+w58hNahCNTxmsoQONCEVQE64YXK/AGfz9
+        HsaYJR+c8QHhwEJFAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="Add_office_hours_Button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
