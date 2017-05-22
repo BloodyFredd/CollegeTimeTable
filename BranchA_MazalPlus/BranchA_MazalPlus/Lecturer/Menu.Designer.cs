@@ -207,6 +207,7 @@
             this.Logout_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Logout_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Logout_Button.UseVisualStyleBackColor = false;
+            this.Logout_Button.Click += new System.EventHandler(this.Logout_Button_Click);
             // 
             // AddNewLecture
             // 
