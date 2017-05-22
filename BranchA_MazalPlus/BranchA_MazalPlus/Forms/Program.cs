@@ -16,7 +16,7 @@ namespace BranchA_MazalPlus
         static void Main()
         {
             Person ptemp = new Person();
-            ptemp.print();
+
 
             Application.Run(new Login());
             Application.EnableVisualStyles();
