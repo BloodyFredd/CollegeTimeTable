@@ -21,7 +21,7 @@ namespace BranchA_MazalPlus.Forms
             sqlcon.Open();
             if (sqlcon.State != ConnectionState.Open)
             {
-                return sqlcon;
+                return null;
 
             }
             return sqlcon;
