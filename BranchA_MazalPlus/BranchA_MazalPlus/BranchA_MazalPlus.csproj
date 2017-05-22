@@ -117,6 +117,9 @@
     <Compile Include="Admin\StudentExemption.Designer.cs">
       <DependentUpon>StudentExemption.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Lecturer.cs" />
+    <Compile Include="Classes\Person.cs" />
     <Compile Include="Facebook\Analyze.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,7 +375,7 @@
     <EmbeddedResource Include="Teaching_Assistant\Zero.resx">
       <DependentUpon>Zero.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="Facebook\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -384,7 +387,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Facebook\App.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
