@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BranchA_MazalPlus.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,9 @@ namespace BranchA_MazalPlus
         [STAThread]
         static void Main()
         {
+            Person ptemp = new Person();
+            ptemp.print();
+
             Application.Run(new Login());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
