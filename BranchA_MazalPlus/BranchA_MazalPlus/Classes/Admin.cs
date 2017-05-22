@@ -9,10 +9,10 @@ using BranchA_MazalPlus.Forms;
 using System.Windows.Forms;
 using BranchA_MazalPlus.Classes;
 
-namespace BranchA_MazalPlus.Classes
-{
-    class Admin : PersonStuff
-    {
+//namespace BranchA_MazalPlus.Classes
+//{
+   // class Admin : PersonStuff
+   // {
 
 
        // public Admin(string id) : base(id)
