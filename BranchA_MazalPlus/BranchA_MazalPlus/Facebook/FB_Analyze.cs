@@ -82,7 +82,7 @@
                         }
                         else if (dr[6].ToString() == "Secretary")
                         {
-                            this.Hide();
+                            //this.Hide();
                             BranchA_MazalPlus.Secretary.Menu Connect = new BranchA_MazalPlus.Secretary.Menu();
                             Connect.Show();
                             Connect.Secretary_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();

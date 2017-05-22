@@ -155,10 +155,6 @@
     <Compile Include="Lecturer\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Calendar.cs" />
-    <Compile Include="Forms\Calendar.designer.cs">
-      <DependentUpon>Calendar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,9 +298,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facebook\FB_Analyze.resx">
       <DependentUpon>FB_Analyze.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Calendar.resx">
-      <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\AddLecture.resx">
       <DependentUpon>AddLecture.cs</DependentUpon>
