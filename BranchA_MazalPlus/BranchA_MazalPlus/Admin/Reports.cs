@@ -61,7 +61,9 @@ namespace BranchA_MazalPlus.Admin
                 this.Close();
                 MessageBox.Show("Error selecting course id, try again!\n"+ex.ToString());
                 Reports form2 = new Reports();
-                form2.Show();
+                form2.StartPosition = FormStartPosition.Manual;
+                form2.SetDesktopBounds(218, 46, 1320, 820);
+                form2.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -89,16 +91,16 @@ namespace BranchA_MazalPlus.Admin
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
                 SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
-                if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
+                if (toolStripComboBox4.Text.Equals("") && !toolStripComboBox3.Text.Equals(""))
                 {
-                    str = toolStripComboBox2.Text;
+                    str = toolStripComboBox3.Text;
                     //MessageBox.Show(str);
                     cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
                     StudentsReport.Visible = true;
                 }
-                else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
+                else if (toolStripComboBox3.Text.Equals("") && !toolStripComboBox4.Text.Equals(""))
                 {
-                    str = toolStripComboBox1.Text;
+                    str = toolStripComboBox4.Text;
                     //MessageBox.Show(str);
                     cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
                     StudentsReport.Visible = true;
@@ -108,7 +110,9 @@ namespace BranchA_MazalPlus.Admin
                     this.Close();
                     MessageBox.Show("Error selecting dates, try again!");
                     Reports form2 = new Reports();
-                    form2.Show();
+                    form2.StartPosition = FormStartPosition.Manual;
+                    form2.SetDesktopBounds(218, 46, 1320, 820);
+                    form2.ShowDialog();
 
                 }
 
@@ -226,9 +230,9 @@ namespace BranchA_MazalPlus.Admin
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 //this.sqlcon = new SqlConnection(connetionString);
                 string query = "select * from Classes_SM1 where date='" + str + "'";
-                if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
+                if (toolStripComboBox4.Text.Equals("") && !toolStripComboBox3.Text.Equals(""))
                 {
-                    str = toolStripComboBox2.Text;
+                    str = toolStripComboBox3.Text;
 
 
                    // MessageBox.Show(path);
@@ -268,10 +272,10 @@ namespace BranchA_MazalPlus.Admin
 
                     }
                 }
-                else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
+                else if (toolStripComboBox3.Text.Equals("") && !toolStripComboBox4.Text.Equals(""))
                 //MessageBox.Show(str);
                 {
-                    str = toolStripComboBox1.Text;
+                    str = toolStripComboBox4.Text;
                     StreamWriter myFile = new StreamWriter(@"" + path + "'" + str + "'.xls");
 
                     using (SqlConnection connection = new SqlConnection(connetionString))
@@ -328,8 +332,17 @@ namespace BranchA_MazalPlus.Admin
                     MessageBox.Show(ex.ToString());
                 }
             }
-            
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 
 

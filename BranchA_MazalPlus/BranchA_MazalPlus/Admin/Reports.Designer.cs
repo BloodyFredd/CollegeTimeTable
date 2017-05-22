@@ -28,96 +28,232 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
             this.StudentsReport = new System.Windows.Forms.DataGridView();
             this.Failing_Students = new System.Windows.Forms.Button();
             this.Available_Classes = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.Semester = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.CourseID = new System.Windows.Forms.ComboBox();
             this.All_Person_Button = new System.Windows.Forms.Button();
             this.ExcellentStudents = new System.Windows.Forms.Button();
             this.Print = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Report = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // StudentsReport
             // 
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(12, 227);
+            this.StudentsReport.Location = new System.Drawing.Point(292, 64);
             this.StudentsReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(831, 217);
+            this.StudentsReport.Size = new System.Drawing.Size(1461, 937);
             this.StudentsReport.TabIndex = 2;
             this.StudentsReport.Visible = false;
             this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
             // 
             // Failing_Students
             // 
-            this.Failing_Students.Location = new System.Drawing.Point(216, 14);
+            this.Failing_Students.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Failing_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Failing_Students.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Failing_Students.Location = new System.Drawing.Point(0, 289);
             this.Failing_Students.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Failing_Students.Name = "Failing_Students";
-            this.Failing_Students.Size = new System.Drawing.Size(160, 63);
+            this.Failing_Students.Size = new System.Drawing.Size(291, 40);
             this.Failing_Students.TabIndex = 4;
             this.Failing_Students.Text = "Failing Students";
-            this.Failing_Students.UseVisualStyleBackColor = true;
+            this.Failing_Students.UseVisualStyleBackColor = false;
             this.Failing_Students.Click += new System.EventHandler(this.button1_Click);
             // 
             // Available_Classes
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
-            this.Available_Classes.Location = new System.Drawing.Point(55, 14);
+            this.Available_Classes.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Available_Classes.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Available_Classes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Available_Classes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Available_Classes.Location = new System.Drawing.Point(0, 66);
             this.Available_Classes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(97, 63);
+            this.Available_Classes.Size = new System.Drawing.Size(291, 44);
             this.Available_Classes.TabIndex = 8;
             this.Available_Classes.Text = "Available Classes";
-            this.Available_Classes.UseVisualStyleBackColor = true;
+            this.Available_Classes.UseVisualStyleBackColor = false;
             this.Available_Classes.Click += new System.EventHandler(this.Available_Classes_Click);
             // 
-            // menuStrip1
+            // CourseID
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Semester});
-            this.menuStrip1.Location = new System.Drawing.Point(12, 79);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(92, 28);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
+            this.CourseID.AccessibleDescription = "Course ID";
+            this.CourseID.BackColor = System.Drawing.SystemColors.Highlight;
+            this.CourseID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CourseID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CourseID.FormattingEnabled = true;
+            this.CourseID.Items.AddRange(new object[] {
+            "100",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "107",
+            "108",
+            "200",
+            "201",
+            "202",
+            "203",
+            "204",
+            "205",
+            "206",
+            "207",
+            "208",
+            "209",
+            "300",
+            "301",
+            "302",
+            "303",
+            "304",
+            "305",
+            "306",
+            "307",
+            "308",
+            "400",
+            "401",
+            "402",
+            "403",
+            "404",
+            "405",
+            "406"});
+            this.CourseID.Location = new System.Drawing.Point(0, 266);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(4);
+            this.CourseID.Name = "CourseID";
+            this.CourseID.Size = new System.Drawing.Size(291, 24);
+            this.CourseID.TabIndex = 11;
+            this.CourseID.Text = "                         Course ID";
+            this.CourseID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // Semester
+            // All_Person_Button
             // 
-            this.Semester.CheckOnClick = true;
-            this.Semester.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem,
-            this.bToolStripMenuItem});
-            this.Semester.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(82, 24);
-            this.Semester.Text = "Semester";
-            this.Semester.Click += new System.EventHandler(this.Semester_Click);
+            this.All_Person_Button.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.All_Person_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.All_Person_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.All_Person_Button.Location = new System.Drawing.Point(0, 179);
+            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(4);
+            this.All_Person_Button.Name = "All_Person_Button";
+            this.All_Person_Button.Size = new System.Drawing.Size(291, 43);
+            this.All_Person_Button.TabIndex = 12;
+            this.All_Person_Button.Text = "All Persons";
+            this.All_Person_Button.UseVisualStyleBackColor = false;
+            this.All_Person_Button.Click += new System.EventHandler(this.All_Person_Button_Click);
             // 
-            // aToolStripMenuItem
+            // ExcellentStudents
             // 
-            this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBox2});
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.aToolStripMenuItem.Text = "A";
+            this.ExcellentStudents.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.ExcellentStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcellentStudents.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ExcellentStudents.Location = new System.Drawing.Point(0, 221);
+            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(4);
+            this.ExcellentStudents.Name = "ExcellentStudents";
+            this.ExcellentStudents.Size = new System.Drawing.Size(291, 46);
+            this.ExcellentStudents.TabIndex = 13;
+            this.ExcellentStudents.Text = "Excellent students";
+            this.ExcellentStudents.UseVisualStyleBackColor = false;
+            this.ExcellentStudents.Click += new System.EventHandler(this.ExcellentStudents_Click);
             // 
-            // toolStripComboBox2
+            // Print
             // 
-            this.toolStripComboBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
-            this.toolStripComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.toolStripComboBox2.Items.AddRange(new object[] {
+            this.Print.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Print.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Print.Location = new System.Drawing.Point(0, 328);
+            this.Print.Name = "Print";
+            this.Print.Size = new System.Drawing.Size(291, 40);
+            this.Print.TabIndex = 14;
+            this.Print.Text = "Export to Excel";
+            this.Print.UseVisualStyleBackColor = false;
+            this.Print.Visible = false;
+            this.Print.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // panel2
+            // 
+            this.panel2.AccessibleName = "Buttons_place";
+            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.Controls.Add(this.menuStrip2);
+            this.panel2.Controls.Add(this.Available_Classes);
+            this.panel2.Controls.Add(this.Print);
+            this.panel2.Controls.Add(this.All_Person_Button);
+            this.panel2.Controls.Add(this.Failing_Students);
+            this.panel2.Controls.Add(this.CourseID);
+            this.panel2.Controls.Add(this.ExcellentStudents);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 9, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(291, 519);
+            this.panel2.TabIndex = 16;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuStrip2.Location = new System.Drawing.Point(61, 114);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(43, 17, 0, 17);
+            this.menuStrip2.Size = new System.Drawing.Size(125, 60);
+            this.menuStrip2.TabIndex = 15;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3});
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(81, 24);
+            this.toolStripMenuItem1.Text = "Semester";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox3});
+            this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(181, 26);
+            this.toolStripMenuItem2.Text = "A";
+            // 
+            // toolStripComboBox3
+            // 
+            this.toolStripComboBox3.AccessibleName = "toolStripComboBox3";
+            this.toolStripComboBox3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripComboBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripComboBox3.Items.AddRange(new object[] {
             "2016-08-07",
             "2016-08-08",
             "2016-08-09",
@@ -202,20 +338,25 @@
             "2016-11-09",
             "2016-11-10",
             "2016-11-11"});
-            this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 28);
+            this.toolStripComboBox3.Name = "toolStripComboBox3";
+            this.toolStripComboBox3.Size = new System.Drawing.Size(121, 28);
             // 
-            // bToolStripMenuItem
+            // toolStripMenuItem3
             // 
-            this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBox1});
-            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.bToolStripMenuItem.Text = "B";
+            this.toolStripMenuItem3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox4});
+            this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(181, 26);
+            this.toolStripMenuItem3.Text = "B";
             // 
-            // toolStripComboBox1
+            // toolStripComboBox4
             // 
-            this.toolStripComboBox1.Items.AddRange(new object[] {
+            this.toolStripComboBox4.AccessibleName = "toolStripComboBox4";
+            this.toolStripComboBox4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripComboBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripComboBox4.Items.AddRange(new object[] {
             "2017-01-01",
             "2017-01-02",
             "2017-01-03",
@@ -300,113 +441,109 @@
             "2017-04-05",
             "2017-04-06",
             "2017-04-07"});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
-            this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click_1);
+            this.toolStripComboBox4.Name = "toolStripComboBox4";
+            this.toolStripComboBox4.Size = new System.Drawing.Size(121, 28);
             // 
-            // CourseID
+            // panel3
             // 
-            this.CourseID.AccessibleDescription = "Course ID";
-            this.CourseID.FormattingEnabled = true;
-            this.CourseID.Items.AddRange(new object[] {
-            "100",
-            "101",
-            "102",
-            "103",
-            "104",
-            "105",
-            "106",
-            "107",
-            "108",
-            "200",
-            "201",
-            "202",
-            "203",
-            "204",
-            "205",
-            "206",
-            "207",
-            "208",
-            "209",
-            "300",
-            "301",
-            "302",
-            "303",
-            "304",
-            "305",
-            "306",
-            "307",
-            "308",
-            "400",
-            "401",
-            "402",
-            "403",
-            "404",
-            "405",
-            "406"});
-            this.CourseID.Location = new System.Drawing.Point(216, 83);
-            this.CourseID.Margin = new System.Windows.Forms.Padding(4);
-            this.CourseID.Name = "CourseID";
-            this.CourseID.Size = new System.Drawing.Size(160, 24);
-            this.CourseID.TabIndex = 11;
-            this.CourseID.Text = "Course ID";
-            this.CourseID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(291, 63);
+            this.panel3.TabIndex = 0;
             // 
-            // All_Person_Button
+            // panel4
             // 
-            this.All_Person_Button.Location = new System.Drawing.Point(474, 14);
-            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(4);
-            this.All_Person_Button.Name = "All_Person_Button";
-            this.All_Person_Button.Size = new System.Drawing.Size(103, 63);
-            this.All_Person_Button.TabIndex = 12;
-            this.All_Person_Button.Text = "All Persons";
-            this.All_Person_Button.UseVisualStyleBackColor = true;
-            this.All_Person_Button.Click += new System.EventHandler(this.All_Person_Button_Click);
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel4.Controls.Add(this.flowLayoutPanel2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(267, 63);
+            this.panel4.TabIndex = 1;
             // 
-            // ExcellentStudents
+            // flowLayoutPanel2
             // 
-            this.ExcellentStudents.Location = new System.Drawing.Point(659, 14);
-            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(4);
-            this.ExcellentStudents.Name = "ExcellentStudents";
-            this.ExcellentStudents.Size = new System.Drawing.Size(103, 63);
-            this.ExcellentStudents.TabIndex = 13;
-            this.ExcellentStudents.Text = "Excellent students";
-            this.ExcellentStudents.UseVisualStyleBackColor = true;
-            this.ExcellentStudents.Click += new System.EventHandler(this.ExcellentStudents_Click);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(131, 43);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(392, 121);
+            this.flowLayoutPanel2.TabIndex = 2;
             // 
-            // Print
+            // pictureBox1
             // 
-            this.Print.Location = new System.Drawing.Point(15, 125);
-            this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(151, 29);
-            this.Print.TabIndex = 14;
-            this.Print.Text = "Export to Excel";
-            this.Print.UseVisualStyleBackColor = true;
-            this.Print.Visible = false;
-            this.Print.Click += new System.EventHandler(this.button1_Click_1);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1688, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 1, 12, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 16, 45, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(67, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Report
+            // 
+            this.Report.AccessibleName = "Reports";
+            this.Report.AutoSize = true;
+            this.Report.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Report.ForeColor = System.Drawing.Color.White;
+            this.Report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Report.Location = new System.Drawing.Point(291, 0);
+            this.Report.Margin = new System.Windows.Forms.Padding(3, 11, 5, 0);
+            this.Report.Name = "Report";
+            this.Report.Padding = new System.Windows.Forms.Padding(13, 20, 0, 0);
+            this.Report.Size = new System.Drawing.Size(92, 45);
+            this.Report.TabIndex = 4;
+            this.Report.Text = "Reports";
+            this.Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.AccessibleName = "Header";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.panel1.Controls.Add(this.Report);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1755, 63);
+            this.panel1.TabIndex = 15;
             // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 519);
-            this.Controls.Add(this.Print);
-            this.Controls.Add(this.ExcellentStudents);
-            this.Controls.Add(this.All_Person_Button);
-            this.Controls.Add(this.CourseID);
-            this.Controls.Add(this.Available_Classes);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.Failing_Students);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.StudentsReport);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -414,15 +551,22 @@
         private System.Windows.Forms.DataGridView StudentsReport;
         private System.Windows.Forms.Button Failing_Students;
         private System.Windows.Forms.Button Available_Classes;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem Semester;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
         private System.Windows.Forms.ComboBox CourseID;
         private System.Windows.Forms.Button All_Person_Button;
         private System.Windows.Forms.Button ExcellentStudents;
         private System.Windows.Forms.Button Print;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Label Report;
+        private System.Windows.Forms.Panel panel1;
     }
 }
