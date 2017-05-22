@@ -20,10 +20,10 @@ namespace BranchA_MazalPlus.Classes
         string Password;
         string Permission;
         
-        public Person()
+        public Person(string id)
         {
             SqlConnection sqlcon = General.ConnectToSql();
-            SqlCommand cmd = new SqlCommand("select * from person where ID='123456789'", sqlcon);
+            SqlCommand cmd = new SqlCommand("select * from person where ID='"+id+"'", sqlcon);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read() == true)
             {
