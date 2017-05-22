@@ -77,7 +77,9 @@ namespace BranchA_MazalPlus.Lecturer
                     this.Close();
                     MessageBox.Show("Error selecting dates,try again!");
                     Reports form2 = new Reports();
-                    form2.Show();
+                    form2.StartPosition = FormStartPosition.Manual;
+                    form2.SetDesktopBounds(218, 46, 1320, 820);
+                    form2.ShowDialog();
 
                 }
 
@@ -192,6 +194,11 @@ namespace BranchA_MazalPlus.Lecturer
                 Reports form2 = new Reports();
                 form2.Show();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
