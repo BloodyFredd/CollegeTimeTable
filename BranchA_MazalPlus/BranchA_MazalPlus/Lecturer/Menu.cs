@@ -117,6 +117,10 @@ namespace BranchA_MazalPlus.Lecturer
 
         }
 
-
+        private void AddNewLecture_Click(object sender, EventArgs e)
+        {
+            AddLecture lec = new AddLecture();
+            lec.Show();
+        }
     }
 }
