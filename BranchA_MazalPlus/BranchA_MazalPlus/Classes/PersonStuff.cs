@@ -5,10 +5,11 @@ using BranchA_MazalPlus.Forms;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Data;
+using System.Windows.Forms;
 
 namespace BranchA_MazalPlus.Classes
 {
-    class PersonStuff
+     class  PersonStuff
     {
         private string ID;
         private string Fname;
@@ -17,7 +18,6 @@ namespace BranchA_MazalPlus.Classes
         private string Email;
         private string Password;
         private string Permission;
-
 
         public PersonStuff(string id)
         {
@@ -37,9 +37,8 @@ namespace BranchA_MazalPlus.Classes
 
         }
 
-
         public string getID() { return ID; }
-        public bool setID(string value) {
+        private bool setID(string value) {
             bool allDigits = value.All(char.IsDigit);
             if (value.Length != 9 || allDigits == false){
                 return false;
@@ -135,6 +134,7 @@ namespace BranchA_MazalPlus.Classes
             return false;
 
         }
+
         public bool updatesql()
         {
             SqlConnection sqlcon = General.ConnectToSql();
@@ -143,9 +143,21 @@ namespace BranchA_MazalPlus.Classes
                 return false;
 
             }
+            try {
+                SqlCommand cmd = new SqlCommand("UPDATE Person SET F_name='"+Fname+"'and L_name='"+Lname+"'and Telephone='"+Telephone+"'and Email='"+Email+"'and Password='"+Password+"'Permission='"+Permission+"' where ID='"+ID+"'", sqlcon);
+                //SqlDataAdapter sda = new SqlDataAdapter();
+                //sda.SelectCommand = cmd;
+                //DataTable dbdataset = new DataTable();
+                //sda.Fill(dbdataset);
+                return true;
 
-            
-            return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        
+
         }
         private string DomainMapper(Match match)
         {
