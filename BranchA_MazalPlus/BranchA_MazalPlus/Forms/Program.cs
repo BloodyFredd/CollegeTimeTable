@@ -15,7 +15,6 @@ namespace BranchA_MazalPlus
         [STAThread]
         static void Main()
         {
-            Person ptemp = new Person();
 
 
             Application.Run(new Login());
