@@ -21,9 +21,9 @@ namespace UnitTestProject1
     {
         NewUser f1 = new NewUser();
         General G1 = new General();
-        SqlConnection sqlcon;
+        SqlConnection sqlcon=null;
 
-        string ID = "123456789";
+        //string ID = "123456789";
         string NAME = "newName";
         string TELEPHONE = "0525252852";
         string USERNAME = "UserNAME";

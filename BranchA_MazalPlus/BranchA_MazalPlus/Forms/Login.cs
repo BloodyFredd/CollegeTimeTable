@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using BranchA_MazalPlus.Classes;
 // new updates ver 1, once more
 
 
@@ -24,8 +25,9 @@ namespace BranchA_MazalPlus
 
         public Login()
         {
+
             InitializeComponent();
-           
+
 
         }
 
