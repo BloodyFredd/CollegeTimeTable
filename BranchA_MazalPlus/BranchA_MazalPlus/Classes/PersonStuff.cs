@@ -7,9 +7,10 @@ using System.Text.RegularExpressions;
 using System.Data;
 using System.Windows.Forms;
 
+
 namespace BranchA_MazalPlus.Classes
 {
-     class PersonStuff
+     public class PersonStuff
     {
         private string ID;
         private string Fname;
@@ -19,6 +20,26 @@ namespace BranchA_MazalPlus.Classes
         private string Password;
         private string Permission;
 
+
+        public PersonStuff()
+        {
+            //SqlConnection sqlcon = General.ConnectToSql();
+            //SqlCommand cmd = new SqlCommand("select * from person where ID='" + id + "'", sqlcon);
+          //  SqlDataReader dr = cmd.ExecuteReader();
+         //   if (dr.Read() == true)
+           // {
+                ID = "1234567890";
+                Fname = "tempo";
+                Lname = "temporary";
+                Telephone = "0000";
+                Email = "temporary@gmail.com";
+                Password = "1234";
+                Permission = "student";
+            //}
+
+        }
+
+        
         public PersonStuff(string id)
         {
             SqlConnection sqlcon = General.ConnectToSql();

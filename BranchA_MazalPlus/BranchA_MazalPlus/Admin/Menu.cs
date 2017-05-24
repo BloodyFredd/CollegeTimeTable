@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BranchA_MazalPlus.Classes;
 
 namespace BranchA_MazalPlus.Admin
 {
@@ -164,6 +165,7 @@ namespace BranchA_MazalPlus.Admin
         {
             NewUser Connect = new NewUser();
             Connect.Show();
+            
         }
 
         private void Logout_Button_Click(object sender, EventArgs e)

@@ -76,6 +76,8 @@ namespace BranchA_MazalPlus.Admin
 
         }
 
+        
+
         private void Cancel_Lecture_Click(object sender, EventArgs e)
         {
 
