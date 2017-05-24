@@ -22,8 +22,10 @@ namespace BranchA_MazalPlus.Teaching_Assistant
 
         private void Exams_report_button_Click(object sender, EventArgs e)
         {
-            Reports REPOR = new Reports();
-            REPOR.Show();
+            Reports form2 = new Reports();
+            form2.StartPosition = FormStartPosition.Manual;
+            form2.SetDesktopBounds(218, 46, 1520, 820);
+            form2.ShowDialog();
         }
 
 
