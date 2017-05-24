@@ -422,6 +422,9 @@
   <ItemGroup>
     <Content Include="Facebook\FB_Analyze.csproj" />
     <Content Include="Resources\facebook-login.jpg" />
+    <Content Include="Resources\Icon1.ico" />
+    <None Include="Resources\Icon1.png" />
+    <None Include="Resources\facebook-login2.jpg" />
     <None Include="Resources\facebook-login1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
