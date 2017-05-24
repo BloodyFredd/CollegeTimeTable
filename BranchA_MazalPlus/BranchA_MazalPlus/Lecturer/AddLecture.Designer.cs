@@ -37,6 +37,8 @@
             this.StartButton = new System.Windows.Forms.ComboBox();
             this.DayButton = new System.Windows.Forms.ComboBox();
             this.SemesterButton = new System.Windows.Forms.ComboBox();
+            this.Class = new System.Windows.Forms.Label();
+            this.ClassButton = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CourseID
@@ -82,9 +84,9 @@
             // Apply
             // 
             this.Apply.AccessibleName = "Apply";
-            this.Apply.Location = new System.Drawing.Point(69, 96);
+            this.Apply.Location = new System.Drawing.Point(98, 105);
             this.Apply.Name = "Apply";
-            this.Apply.Size = new System.Drawing.Size(57, 22);
+            this.Apply.Size = new System.Drawing.Size(76, 21);
             this.Apply.TabIndex = 4;
             this.Apply.Text = "Apply";
             this.Apply.UseVisualStyleBackColor = true;
@@ -176,18 +178,50 @@
             this.SemesterButton.AccessibleName = "SemesterButton";
             this.SemesterButton.FormattingEnabled = true;
             this.SemesterButton.Items.AddRange(new object[] {
-            "A",
-            "B"});
+            "a",
+            "b"});
             this.SemesterButton.Location = new System.Drawing.Point(98, 65);
             this.SemesterButton.Name = "SemesterButton";
             this.SemesterButton.Size = new System.Drawing.Size(76, 21);
             this.SemesterButton.TabIndex = 8;
             // 
+            // Class
+            // 
+            this.Class.AccessibleName = "Class";
+            this.Class.AutoSize = true;
+            this.Class.Location = new System.Drawing.Point(12, 89);
+            this.Class.Name = "Class";
+            this.Class.Size = new System.Drawing.Size(35, 13);
+            this.Class.TabIndex = 9;
+            this.Class.Text = "Class:";
+            // 
+            // ClassButton
+            // 
+            this.ClassButton.AccessibleName = "ClassID";
+            this.ClassButton.FormattingEnabled = true;
+            this.ClassButton.Items.AddRange(new object[] {
+            "a101",
+            "a102",
+            "f101",
+            "f102",
+            "f103",
+            "f104",
+            "s101",
+            "s102",
+            "s103",
+            "s104"});
+            this.ClassButton.Location = new System.Drawing.Point(12, 105);
+            this.ClassButton.Name = "ClassButton";
+            this.ClassButton.Size = new System.Drawing.Size(67, 21);
+            this.ClassButton.TabIndex = 10;
+            // 
             // AddLecture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(197, 136);
+            this.ClientSize = new System.Drawing.Size(196, 147);
+            this.Controls.Add(this.ClassButton);
+            this.Controls.Add(this.Class);
             this.Controls.Add(this.SemesterButton);
             this.Controls.Add(this.DayButton);
             this.Controls.Add(this.StartButton);
@@ -215,5 +249,7 @@
         private System.Windows.Forms.ComboBox StartButton;
         private System.Windows.Forms.ComboBox DayButton;
         private System.Windows.Forms.ComboBox SemesterButton;
+        private System.Windows.Forms.Label Class;
+        private System.Windows.Forms.ComboBox ClassButton;
     }
 }

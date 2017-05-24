@@ -89,15 +89,12 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                         cmd = new SqlCommand("select * from Classes_SM2 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [" + firstString + "-" + secondString + "]= 1 and [" + secondString + "-" + thirdString + "]= 1", sqlcon);
                     }
                 }
+
                 dre = cmd.ExecuteReader();
                 if (dre.Read() == true)
                 {
                     throw new ArgumentException("The class you have chosen is already occupied!");
                 }
-                dre.Close();
-
-                cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Forms.UserID.ID +  "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
-                dre = cmd.ExecuteReader();
                 dre.Close();
 
                 if (LabExercise.Text.Equals("Lab"))
@@ -133,10 +130,13 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                         dre = cmd4.ExecuteReader();
                         dre.Close();
                     }
-                }
-
+                }            
                 else
                     throw new ArgumentException("Error choosing option!");
+
+                cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Forms.UserID.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
+                dre = cmd.ExecuteReader();
+                dre.Close();
 
                 cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Forms.UserID.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
