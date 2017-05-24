@@ -59,7 +59,7 @@ namespace PRPJECT4NEW
                 }
                 catch(System.Data.Entity.Core.EntityException exception)
                 {
-                    MessageBox.Show("Can't connect to Database: " + exception.ToString());
+                    MessageBox.Show("Can't connect to Database: Try to reconnect");
                 }
             }
         }

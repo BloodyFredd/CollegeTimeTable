@@ -150,6 +150,12 @@
     <Compile Include="Student\TuitionFeesForm.Designer.cs">
       <DependentUpon>TuitionFeesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student\UpdateCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\UpdateCalendar.Designer.cs">
+      <DependentUpon>UpdateCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student_Courses.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student\TuitionFeesForm.resx">
       <DependentUpon>TuitionFeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\UpdateCalendar.resx">
+      <DependentUpon>UpdateCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tech_Team\Conferences_List.resx">
       <DependentUpon>Conferences_List.cs</DependentUpon>

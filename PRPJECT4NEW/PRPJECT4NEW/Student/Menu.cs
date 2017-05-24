@@ -35,7 +35,13 @@ namespace PRPJECT4NEW.Student
 
         private void Update_Calendar_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Update Calendar");
+            Student.UpdateCalendar frm = new Student.UpdateCalendar();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Messages_Button_Click(object sender, EventArgs e)
@@ -79,7 +85,6 @@ namespace PRPJECT4NEW.Student
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Move to login panel");
             this.Close();
         }
 
@@ -97,11 +102,7 @@ namespace PRPJECT4NEW.Student
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-            //this.Hide();
-            //Login some = new Login();
-            //some.Show();
-            Application.Exit();
+            this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
