@@ -181,8 +181,8 @@
             this.SemesterButton.AccessibleName = "SemesterButton";
             this.SemesterButton.FormattingEnabled = true;
             this.SemesterButton.Items.AddRange(new object[] {
-            "A",
-            "B"});
+            "a",
+            "b"});
             this.SemesterButton.Location = new System.Drawing.Point(98, 73);
             this.SemesterButton.Name = "SemesterButton";
             this.SemesterButton.Size = new System.Drawing.Size(74, 21);
