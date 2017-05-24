@@ -155,6 +155,9 @@ namespace BranchA_MazalPlus.Classes
             catch (Exception ex)
             {
                 return false;
+#pragma warning disable CS0162 // Unreachable code detected
+                Console.WriteLine(ex.ToString());
+#pragma warning restore CS0162 // Unreachable code detected
             }
         
 

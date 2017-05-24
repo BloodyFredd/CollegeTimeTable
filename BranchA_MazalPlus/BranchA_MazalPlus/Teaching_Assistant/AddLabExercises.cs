@@ -33,6 +33,14 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 checkString(SemesterButton.Text, "Semester");
                 checkString(ClassButton.Text, "Class");
                 checkString(LabExercise.Text, "Lab_Exercise");
+                int first, second, third;
+                string firstString, secondString, thirdString;
+                first = Convert.ToInt32(StartTimeButton.Text);
+                second = Convert.ToInt32(StartTimeButton.Text) + 1;
+                third = Convert.ToInt32(StartTimeButton.Text) + 2;
+                firstString = first.ToString();
+                secondString = second.ToString();
+                thirdString = third.ToString();
                 int end = Convert.ToInt32(StartTimeButton.Text) + 2;
                 string endString = end.ToString();
                 SqlCommand cmd = new SqlCommand("select * from courses where Course_id = '" + CourseIDButton.Text + "' and Semester = '" + SemesterButton.Text + "'", sqlcon);
@@ -51,7 +59,42 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 }
 
                 dre.Close();
-                // להמשיך לבדוק בכיתות אם הכיתות פנויות באותם ימים וכו
+                if (SemesterButton.Text.Equals("a"))
+                {
+                    if(first == 8)
+                    {
+                        cmd = new SqlCommand("select * from Classes_SM1 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [0" + firstString + "-0" + secondString + "]= 1 and [0" + secondString + "-" + thirdString + "]= 1", sqlcon);
+                    }
+                    else if(first == 9)
+                    {
+                        cmd = new SqlCommand("select * from Classes_SM1 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [0" + firstString + "-" + secondString + "]= 1 and [" + secondString + "-" + thirdString + "]= 1", sqlcon);
+                    }
+                    else
+                    {
+                        cmd = new SqlCommand("select * from Classes_SM1 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [" + firstString + "-" + secondString + "]= 1 and [" + secondString + "-" + thirdString + "]= 1", sqlcon);   
+                    }
+                }
+                else if (SemesterButton.Text.Equals("b"))
+                {
+                    if (first == 8)
+                    {
+                        cmd = new SqlCommand("select * from Classes_SM2 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [0" + firstString + "-0" + secondString + "]= 1 and [0" + secondString + "-" + thirdString + "]= 1", sqlcon);
+                    }
+                    else if (first == 9)
+                    {
+                        cmd = new SqlCommand("select * from Classes_SM2 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [0" + firstString + "-" + secondString + "]= 1 and [" + secondString + "-" + thirdString + "]= 1", sqlcon);
+                    }
+                    else
+                    {
+                        cmd = new SqlCommand("select * from Classes_SM2 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [" + firstString + "-" + secondString + "]= 1 and [" + secondString + "-" + thirdString + "]= 1", sqlcon);
+                    }
+                }
+                dre = cmd.ExecuteReader();
+                if (dre.Read() == true)
+                {
+                    throw new ArgumentException("The class you have chosen is already occupied!");
+                }
+                dre.Close();
 
                 cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Forms.UserID.ID +  "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
                 dre = cmd.ExecuteReader();
@@ -69,8 +112,8 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                     {
                         dre.Close();
                         SqlCommand cmd3 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + CourseIDButton.Text + "1', 3, '" + Forms.UserID.ID + "', '" + DayButton.Text + "', '" + StartTimeButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
-                        SqlDataReader dr = cmd3.ExecuteReader();
-                        dr.Close();
+                        dre = cmd3.ExecuteReader();
+                        dre.Close();
                     }                   
                 }
 
@@ -87,87 +130,79 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                     {
                         dre.Close();
                         SqlCommand cmd4 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + CourseIDButton.Text + "1', 2, '" + Forms.UserID.ID + "', '" + DayButton.Text + "', '" + StartTimeButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
-                        SqlDataReader dr = cmd4.ExecuteReader();
-                        dr.Close();
+                        dre = cmd4.ExecuteReader();
+                        dre.Close();
                     }
                 }
 
                 else
                     throw new ArgumentException("Error choosing option!");
 
-                //cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Forms.UserID.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
-                //SqlDataReader dr = cmd.ExecuteReader();
-                //while (dr.Read())
-                //{
-                //    SqlCommand cmd1, cmd2;
-                //    int first, second, third;
-                //    string firstString, secondString, thirdString;
-                //    first = Convert.ToInt32(dr[1].ToString());
-                //    second = Convert.ToInt32(dr[1].ToString()) + 1;
-                //    third = Convert.ToInt32(dr[1].ToString()) + 2;
-                //    firstString = first.ToString();
-                //    secondString = second.ToString();
-                //    thirdString = third.ToString();
-                //    if (SemesterButton.Text.Equals("a"))
-                //    {
-                //        if (first == 8)
-                //        {
-                //            cmd1 = new SqlCommand("update Classes_SM1 set [0" + firstString + "-0" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //            cmd2 = new SqlCommand("update Classes_SM1 set [0" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //        }
-                //        else if (first == 9)
-                //        {
-                //            cmd1 = new SqlCommand("update Classes_SM1 set [0" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //            cmd2 = new SqlCommand("update Classes_SM1 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //        }
-                //        else
-                //        {
-                //            cmd1 = new SqlCommand("update Classes_SM1 set [" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //            cmd2 = new SqlCommand("update Classes_SM1 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //        }
-                //        SqlDataAdapter sda1 = new SqlDataAdapter();
-                //        sda1.SelectCommand = cmd1;
-                //        SqlDataAdapter sda2 = new SqlDataAdapter();
-                //        sda2.SelectCommand = cmd2;
-                //        DataTable dbdataset = new DataTable();
-                //        sda1.Fill(dbdataset);
-                //        sda2.Fill(dbdataset);
-                //        BindingSource bsource = new BindingSource();
-                //        bsource.DataSource = dbdataset;
-                //        sda1.Update(dbdataset);
-                //        sda2.Update(dbdataset);
-                //    } 
-                //    else if (SemesterButton.Text.Equals("b"))
-                //    {
-                //        if (first == 8)
-                //        {
-                //            cmd1 = new SqlCommand("update Classes_SM1 set [0" + firstString + "-0" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //            cmd2 = new SqlCommand("update Classes_SM1 set [0" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //        }
-                //        else if (first == 9)
-                //        {
-                //            cmd1 = new SqlCommand("update Classes_SM1 set [0" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //            cmd2 = new SqlCommand("update Classes_SM1 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //        }
-                //        else
-                //        {
-                //            cmd1 = new SqlCommand("update Classes_SM1 set [" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //            cmd2 = new SqlCommand("update Classes_SM1 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                //        }
-                //        SqlDataAdapter sda1 = new SqlDataAdapter();
-                //        sda1.SelectCommand = cmd1;
-                //        SqlDataAdapter sda2 = new SqlDataAdapter();
-                //        sda2.SelectCommand = cmd2;
-                //        DataTable dbdataset = new DataTable();
-                //        sda1.Fill(dbdataset);
-                //        sda2.Fill(dbdataset);
-                //        BindingSource bsource = new BindingSource();
-                //        bsource.DataSource = dbdataset;
-                //        sda1.Update(dbdataset);
-                //        sda2.Update(dbdataset);
-                //    }                                    
-                //}
-                //dr.Close();
+                cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Forms.UserID.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    SqlCommand cmd1, cmd2;
+                    if (SemesterButton.Text.Equals("a"))
+                    {
+                        if (first == 8)
+                        {
+                            cmd1 = new SqlCommand("update Classes_SM1 set [0" + firstString + "-0" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd2 = new SqlCommand("update Classes_SM1 set [0" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                        }
+                        else if (first == 9)
+                        {
+                            cmd1 = new SqlCommand("update Classes_SM1 set [0" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd2 = new SqlCommand("update Classes_SM1 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                        }
+                        else
+                        {
+                            cmd1 = new SqlCommand("update Classes_SM1 set [" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd2 = new SqlCommand("update Classes_SM1 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                        }
+                        SqlDataAdapter sda1 = new SqlDataAdapter();
+                        sda1.SelectCommand = cmd1;
+                        SqlDataAdapter sda2 = new SqlDataAdapter();
+                        sda2.SelectCommand = cmd2;
+                        DataTable dbdataset = new DataTable();
+                        sda1.Fill(dbdataset);
+                        sda2.Fill(dbdataset);
+                        BindingSource bsource = new BindingSource();
+                        bsource.DataSource = dbdataset;
+                        sda1.Update(dbdataset);
+                        sda2.Update(dbdataset);
+                    }
+                    else if (SemesterButton.Text.Equals("b"))
+                    {
+                        if (first == 8)
+                        {
+                            cmd1 = new SqlCommand("update Classes_SM2 set [0" + firstString + "-0" + secondString + "]= 0 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd2 = new SqlCommand("update Classes_SM2 set [0" + secondString + "-" + thirdString + "]= 0 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                        }
+                        else if (first == 9)
+                        {
+                            cmd1 = new SqlCommand("update Classes_SM2 set [0" + firstString + "-" + secondString + "]= 0 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd2 = new SqlCommand("update Classes_SM2 set [" + secondString + "-" + thirdString + "]= 0 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                        }
+                        else
+                        {
+                            cmd1 = new SqlCommand("update Classes_SM2 set [" + firstString + "-" + secondString + "]= 0 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd2 = new SqlCommand("update Classes_SM2 set [" + secondString + "-" + thirdString + "]= 0 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                        }
+                        SqlDataAdapter sda1 = new SqlDataAdapter();
+                        sda1.SelectCommand = cmd1;
+                        SqlDataAdapter sda2 = new SqlDataAdapter();
+                        sda2.SelectCommand = cmd2;
+                        DataTable dbdataset = new DataTable();
+                        sda1.Fill(dbdataset);
+                        sda2.Fill(dbdataset);
+                        BindingSource bsource = new BindingSource();
+                        bsource.DataSource = dbdataset;
+                        sda1.Update(dbdataset);
+                        sda2.Update(dbdataset);
+                    }
+                }
+                dr.Close();
             }
 
             catch (Exception ex)
@@ -192,8 +227,8 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             }
             if (check == "Semester")
             {
-                if (!str.Equals("A") && !str.Equals("B"))
-                    throw new ArgumentException("Semester should only be A or B.");
+                if (!str.Equals("a") && !str.Equals("b"))
+                    throw new ArgumentException("Semester should only be a or b.");
             }
             if (check == "Start_Time")
             {
@@ -240,7 +275,7 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             {
                 if(!str.Equals("Lab") && !str.Equals("Exercise"))
                 {
-                    throw new ArgumentException("Not exercise and not a lab.");
+                    throw new ArgumentException("Not exercise and not a lab have been chosen.");
                 }
             }
             return true;

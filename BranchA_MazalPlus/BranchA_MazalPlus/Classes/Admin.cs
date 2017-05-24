@@ -5,7 +5,6 @@ using BranchA_MazalPlus.Forms;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Data;
-using BranchA_MazalPlus.Forms;
 using System.Windows.Forms;
 using BranchA_MazalPlus.Classes;
 

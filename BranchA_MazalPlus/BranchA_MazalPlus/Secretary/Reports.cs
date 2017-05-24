@@ -105,7 +105,7 @@ namespace BranchA_MazalPlus.Secretary
             catch (SqlException ex)
             {
                 this.Close();
-                MessageBox.Show("Error selecting course id, try again!");
+                MessageBox.Show("Error selecting course id, try again!!\n" + ex.ToString());
                 Reports form2 = new Reports();
                 form2.StartPosition = FormStartPosition.Manual;
                 form2.SetDesktopBounds(218, 46, 1520, 820);
