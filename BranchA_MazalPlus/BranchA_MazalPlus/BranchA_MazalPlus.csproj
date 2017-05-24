@@ -421,6 +421,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Facebook\FB_Analyze.csproj" />
+    <Content Include="Resources\facebook-login.jpg" />
+    <None Include="Resources\facebook-login1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
