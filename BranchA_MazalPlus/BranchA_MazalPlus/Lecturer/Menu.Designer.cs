@@ -435,7 +435,7 @@
         private System.Windows.Forms.Button Make_Factor_Button;
         private System.Windows.Forms.Button Add_Lecture_Button;
         private System.Windows.Forms.Button Add_Assistants_Exam_Button;
-        private System.Windows.Forms.Button Add_Grade_Button;
+       // private System.Windows.Forms.Button Add_Grade_Button;
         private System.Windows.Forms.Button Exams_Assignment_Button;
         private System.Windows.Forms.Button Reports_button;
         private System.Windows.Forms.Panel panel4;
