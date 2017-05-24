@@ -124,7 +124,7 @@ namespace BranchA_MazalPlus.Secretary
                     catch (SqlException ex)
                     {
                         this.Close();
-                        MessageBox.Show("Error selecting class id, try again!");
+                        MessageBox.Show("Error selecting class id, try again!\n"+ex.ToString());
 
                     }
                     catch (Exception ex)

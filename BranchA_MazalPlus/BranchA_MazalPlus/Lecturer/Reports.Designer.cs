@@ -113,7 +113,7 @@
             this.toolStripComboBox2});
             this.aToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -216,7 +216,7 @@
             this.toolStripComboBox1});
             this.bToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1

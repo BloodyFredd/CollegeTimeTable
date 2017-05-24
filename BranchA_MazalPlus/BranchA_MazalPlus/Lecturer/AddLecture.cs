@@ -14,7 +14,7 @@ namespace BranchA_MazalPlus.Lecturer
 {
     public partial class AddLecture : Form
     {
-        private string connetionString = null;
+      //  private string connetionString = null;
         private SqlConnection sqlcon;
         public AddLecture()
         {
