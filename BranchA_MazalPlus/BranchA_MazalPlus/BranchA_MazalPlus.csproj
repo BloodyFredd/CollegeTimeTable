@@ -140,6 +140,12 @@
     <Compile Include="Facebook\FB_Analyze.designer.cs">
       <DependentUpon>FB_Analyze.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Encrypt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Encrypt.Designer.cs">
+      <DependentUpon>Encrypt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\General.cs" />
     <Compile Include="Forms\UserID.cs" />
     <Compile Include="Lecturer\AddLecture.cs">
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facebook\FB_Analyze.resx">
       <DependentUpon>FB_Analyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Encrypt.resx">
+      <DependentUpon>Encrypt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer\AddLecture.resx">
       <DependentUpon>AddLecture.cs</DependentUpon>
