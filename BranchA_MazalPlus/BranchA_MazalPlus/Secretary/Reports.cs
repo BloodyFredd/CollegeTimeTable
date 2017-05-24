@@ -107,7 +107,9 @@ namespace BranchA_MazalPlus.Secretary
                 this.Close();
                 MessageBox.Show("Error selecting course id, try again!!\n" + ex.ToString());
                 Reports form2 = new Reports();
-                form2.Show();
+                form2.StartPosition = FormStartPosition.Manual;
+                form2.SetDesktopBounds(218, 46, 1520, 820);
+                form2.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -116,11 +118,6 @@ namespace BranchA_MazalPlus.Secretary
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -260,8 +257,11 @@ namespace BranchA_MazalPlus.Secretary
                 
                 this.sqlcon.Close();
                 this.Close();
-                
-                
+                Reports form2 = new Reports();
+                form2.StartPosition = FormStartPosition.Manual;
+                form2.SetDesktopBounds(218, 46, 1520, 820);
+                form2.ShowDialog();
+
             }
             catch (Exception ex)
             {
@@ -269,6 +269,16 @@ namespace BranchA_MazalPlus.Secretary
                 
             }
            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

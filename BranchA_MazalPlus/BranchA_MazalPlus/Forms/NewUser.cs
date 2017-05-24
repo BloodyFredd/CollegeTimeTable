@@ -183,5 +183,12 @@ namespace BranchA_MazalPlus
         {
 
         }
+
+        
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

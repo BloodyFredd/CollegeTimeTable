@@ -68,29 +68,29 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(877, 57);
+            this.panel1.Size = new System.Drawing.Size(1754, 110);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Buttons_view
             // 
-            this.Buttons_view.Location = new System.Drawing.Point(0, 57);
-            this.Buttons_view.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Buttons_view.Location = new System.Drawing.Point(0, 110);
+            this.Buttons_view.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Buttons_view.Name = "Buttons_view";
-            this.Buttons_view.Size = new System.Drawing.Size(127, 43);
+            this.Buttons_view.Size = new System.Drawing.Size(254, 83);
             this.Buttons_view.TabIndex = 0;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(771, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(1);
+            this.pictureBox2.Location = new System.Drawing.Point(1564, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 16, 45, 0);
-            this.pictureBox2.Size = new System.Drawing.Size(39, 57);
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 31, 90, 0);
+            this.pictureBox2.Size = new System.Drawing.Size(78, 110);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -99,11 +99,11 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(810, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 12, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(1642, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 24, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 16, 45, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(67, 57);
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 31, 90, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(112, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -116,11 +116,11 @@
             this.Teaching_Assistant_Name.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Teaching_Assistant_Name.ForeColor = System.Drawing.Color.White;
             this.Teaching_Assistant_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Teaching_Assistant_Name.Location = new System.Drawing.Point(291, 0);
-            this.Teaching_Assistant_Name.Margin = new System.Windows.Forms.Padding(1, 11, 5, 0);
+            this.Teaching_Assistant_Name.Location = new System.Drawing.Point(582, 0);
+            this.Teaching_Assistant_Name.Margin = new System.Windows.Forms.Padding(2, 21, 10, 0);
             this.Teaching_Assistant_Name.Name = "Teaching_Assistant_Name";
-            this.Teaching_Assistant_Name.Padding = new System.Windows.Forms.Padding(15, 20, 0, 0);
-            this.Teaching_Assistant_Name.Size = new System.Drawing.Size(199, 43);
+            this.Teaching_Assistant_Name.Padding = new System.Windows.Forms.Padding(30, 39, 0, 0);
+            this.Teaching_Assistant_Name.Size = new System.Drawing.Size(404, 88);
             this.Teaching_Assistant_Name.TabIndex = 2;
             this.Teaching_Assistant_Name.Text = "Teaching assistent";
             this.Teaching_Assistant_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,9 +133,9 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(1);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(291, 57);
+            this.panel3.Size = new System.Drawing.Size(582, 110);
             this.panel3.TabIndex = 0;
             // 
             // panel4
@@ -146,19 +146,19 @@
             this.panel4.Controls.Add(this.flowLayoutPanel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(1);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(267, 57);
+            this.panel4.Size = new System.Drawing.Size(534, 110);
             this.panel4.TabIndex = 1;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(33, 9);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(1);
+            this.pictureBox3.Location = new System.Drawing.Point(66, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(400, 85);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -166,10 +166,10 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(131, 43);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(262, 83);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(392, 121);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(784, 234);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // panel2
@@ -183,11 +183,11 @@
             this.panel2.Controls.Add(this.Round_56_Button);
             this.panel2.Controls.Add(this.Reports_button);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 57);
-            this.panel2.Margin = new System.Windows.Forms.Padding(1);
+            this.panel2.Location = new System.Drawing.Point(0, 110);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 9, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(291, 322);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 17, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(582, 624);
             this.panel2.TabIndex = 1;
             // 
             // LogOutButton
@@ -203,11 +203,11 @@
             this.LogOutButton.ForeColor = System.Drawing.Color.White;
             this.LogOutButton.Image = ((System.Drawing.Image)(resources.GetObject("LogOutButton.Image")));
             this.LogOutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogOutButton.Location = new System.Drawing.Point(0, 259);
-            this.LogOutButton.Margin = new System.Windows.Forms.Padding(1);
+            this.LogOutButton.Location = new System.Drawing.Point(0, 502);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.LogOutButton.Size = new System.Drawing.Size(291, 50);
+            this.LogOutButton.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.LogOutButton.Size = new System.Drawing.Size(582, 97);
             this.LogOutButton.TabIndex = 13;
             this.LogOutButton.Text = " Logout";
             this.LogOutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,11 +228,11 @@
             this.Add_Exercise_Lab.ForeColor = System.Drawing.Color.White;
             this.Add_Exercise_Lab.Image = ((System.Drawing.Image)(resources.GetObject("Add_Exercise_Lab.Image")));
             this.Add_Exercise_Lab.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Add_Exercise_Lab.Location = new System.Drawing.Point(0, 209);
-            this.Add_Exercise_Lab.Margin = new System.Windows.Forms.Padding(1);
+            this.Add_Exercise_Lab.Location = new System.Drawing.Point(0, 405);
+            this.Add_Exercise_Lab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Exercise_Lab.Name = "Add_Exercise_Lab";
-            this.Add_Exercise_Lab.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.Add_Exercise_Lab.Size = new System.Drawing.Size(291, 50);
+            this.Add_Exercise_Lab.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.Add_Exercise_Lab.Size = new System.Drawing.Size(582, 97);
             this.Add_Exercise_Lab.TabIndex = 12;
             this.Add_Exercise_Lab.Text = "Add Exercise + Lab";
             this.Add_Exercise_Lab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,11 +253,11 @@
             this.Office_Hours_button.ForeColor = System.Drawing.Color.White;
             this.Office_Hours_button.Image = ((System.Drawing.Image)(resources.GetObject("Office_Hours_button.Image")));
             this.Office_Hours_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Office_Hours_button.Location = new System.Drawing.Point(0, 159);
-            this.Office_Hours_button.Margin = new System.Windows.Forms.Padding(1);
+            this.Office_Hours_button.Location = new System.Drawing.Point(0, 308);
+            this.Office_Hours_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Office_Hours_button.Name = "Office_Hours_button";
-            this.Office_Hours_button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.Office_Hours_button.Size = new System.Drawing.Size(291, 50);
+            this.Office_Hours_button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.Office_Hours_button.Size = new System.Drawing.Size(582, 97);
             this.Office_Hours_button.TabIndex = 4;
             this.Office_Hours_button.Text = "Add office hours";
             this.Office_Hours_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,11 +278,11 @@
             this.Give_0_Button.ForeColor = System.Drawing.Color.White;
             this.Give_0_Button.Image = ((System.Drawing.Image)(resources.GetObject("Give_0_Button.Image")));
             this.Give_0_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Give_0_Button.Location = new System.Drawing.Point(0, 109);
-            this.Give_0_Button.Margin = new System.Windows.Forms.Padding(1);
+            this.Give_0_Button.Location = new System.Drawing.Point(0, 211);
+            this.Give_0_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Give_0_Button.Name = "Give_0_Button";
-            this.Give_0_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.Give_0_Button.Size = new System.Drawing.Size(291, 50);
+            this.Give_0_Button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.Give_0_Button.Size = new System.Drawing.Size(582, 97);
             this.Give_0_Button.TabIndex = 3;
             this.Give_0_Button.Text = "Give a 0 grade";
             this.Give_0_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,11 +303,11 @@
             this.Round_56_Button.ForeColor = System.Drawing.Color.White;
             this.Round_56_Button.Image = ((System.Drawing.Image)(resources.GetObject("Round_56_Button.Image")));
             this.Round_56_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Round_56_Button.Location = new System.Drawing.Point(0, 59);
-            this.Round_56_Button.Margin = new System.Windows.Forms.Padding(1);
+            this.Round_56_Button.Location = new System.Drawing.Point(0, 114);
+            this.Round_56_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Round_56_Button.Name = "Round_56_Button";
-            this.Round_56_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.Round_56_Button.Size = new System.Drawing.Size(291, 50);
+            this.Round_56_Button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
+            this.Round_56_Button.Size = new System.Drawing.Size(582, 97);
             this.Round_56_Button.TabIndex = 2;
             this.Round_56_Button.Text = "Round a grade to 56";
             this.Round_56_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,12 +328,12 @@
             this.Reports_button.ForeColor = System.Drawing.Color.White;
             this.Reports_button.Image = ((System.Drawing.Image)(resources.GetObject("Reports_button.Image")));
             this.Reports_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reports_button.Location = new System.Drawing.Point(0, 9);
-            this.Reports_button.Margin = new System.Windows.Forms.Padding(1);
+            this.Reports_button.Location = new System.Drawing.Point(0, 17);
+            this.Reports_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Reports_button.Name = "Reports_button";
-            this.Reports_button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.Reports_button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.Reports_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Reports_button.Size = new System.Drawing.Size(291, 50);
+            this.Reports_button.Size = new System.Drawing.Size(582, 97);
             this.Reports_button.TabIndex = 0;
             this.Reports_button.Text = "Reports";
             this.Reports_button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -347,14 +347,14 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(877, 379);
+            this.ClientSize = new System.Drawing.Size(1754, 734);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "Menu";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
