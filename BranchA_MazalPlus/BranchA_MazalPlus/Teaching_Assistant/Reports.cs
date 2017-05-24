@@ -56,43 +56,12 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 MessageBox.Show(ex.Message);
                 this.Close();
                 Reports form2 = new Reports();
-                form2.Show();
+                form2.StartPosition = FormStartPosition.Manual;
+                form2.SetDesktopBounds(218, 46, 1520, 820);
+                form2.ShowDialog();
             }
             this.sqlcon.Close();
-            this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-
-            SqlCommand cmd = new SqlCommand("select Course_id from Teaching_Stuff where ID ='" + Forms.UserID.ID + "'", sqlcon);
-            this.sqlcon.Open();
-            SqlDataReader dr = cmd.ExecuteReader();
-            SqlCommand cmd1 = new SqlCommand("select ID from Teaching_Stuff where Course_id ='" + dr[0].ToString() + "'", sqlcon);
-            try
-            {
-                
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd1;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
-
-                bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
-                sda.Update(dbdataset);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                this.Close();
-                Reports form2 = new Reports();
-                form2.Show();
-            }
-            this.sqlcon.Close();
-            this.Close();
+            //this.Close();
         }
 
         private void Grades_Button_Click(object sender, EventArgs e)
@@ -117,7 +86,9 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 MessageBox.Show(ex.Message);
                 this.Close();
                 Reports form2 = new Reports();
-                form2.Show();
+                form2.StartPosition = FormStartPosition.Manual;
+                form2.SetDesktopBounds(218, 46, 1520, 820);
+                form2.ShowDialog();
             }
         }
 
@@ -145,7 +116,9 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 MessageBox.Show(ex.Message);
                 this.Close();
                 Reports form2 = new Reports();
-                form2.Show();
+                form2.StartPosition = FormStartPosition.Manual;
+                form2.SetDesktopBounds(218, 46, 1520, 820);
+                form2.ShowDialog();
 
             }
         }
@@ -194,10 +167,12 @@ namespace BranchA_MazalPlus.Teaching_Assistant
                 MessageBox.Show(ex.Message);
                 this.Close();
                 Reports form2 = new Reports();
-                form2.Show();
+                form2.StartPosition = FormStartPosition.Manual;
+                form2.SetDesktopBounds(218, 46, 1520, 820);
+                form2.ShowDialog();
             }
             this.sqlcon.Close();
-            this.Close();
+            //this.Close();
         }
 
         private void My_Lectures_Click(object sender, EventArgs e)
@@ -289,6 +264,16 @@ namespace BranchA_MazalPlus.Teaching_Assistant
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
    
