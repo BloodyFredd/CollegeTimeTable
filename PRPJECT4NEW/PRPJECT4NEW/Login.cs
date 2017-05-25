@@ -120,7 +120,6 @@ namespace PRPJECT4NEW
         private void txtpassword_TextChanged(object sender, EventArgs e)
         {
             txtpassword.UseSystemPasswordChar = true;
-            
         }
 
         private void txtuser_KeyDown(object sender, KeyEventArgs e)
