@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F1CBE3C-32AD-412D-8116-5D3C04CDF6DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BranchA_MazalPlus</RootNamespace>
+    <AssemblyName>BranchA_MazalPlus</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BranchA_MazalPlus.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\CancelLectures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CancelLectures.Designer.cs">
+      <DependentUpon>CancelLectures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MergeAuditorium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MergeAuditorium.Designer.cs">
+      <DependentUpon>MergeAuditorium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RemoveAssistant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\RemoveAssistant.Designer.cs">
+      <DependentUpon>RemoveAssistant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RemoveStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\RemoveStudent.Designer.cs">
+      <DependentUpon>RemoveStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SignStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\SignStudent.Designer.cs">
+      <DependentUpon>SignStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\StudentExemption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\StudentExemption.Designer.cs">
+      <DependentUpon>StudentExemption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\Lecturer.cs" />
+    <Compile Include="Classes\PersonStuff.cs" />
+    <Compile Include="Classes\Secretary.cs" />
+    <Compile Include="Classes\Teaching_Assistant.cs" />
+    <Compile Include="Facebook\Analyze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facebook\Analyze.designer.cs">
+      <DependentUpon>Analyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facebook\FacebookLoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facebook\FacebookLoginDialog.designer.cs">
+      <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facebook\FB_Analyze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facebook\FB_Analyze.designer.cs">
+      <DependentUpon>FB_Analyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Encrypt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Encrypt.Designer.cs">
+      <DependentUpon>Encrypt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\General.cs" />
+    <Compile Include="Forms\UserID.cs" />
+    <Compile Include="Lecturer\AddLecture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\AddLecture.Designer.cs">
+      <DependentUpon>AddLecture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer\bonus_10_points.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\bonus_10_points.Designer.cs">
+      <DependentUpon>bonus_10_points.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewUser.Designer.cs">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Program.cs" />
+    <Compile Include="Lecturer\modifay_grade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\modifay_grade.Designer.cs">
+      <DependentUpon>modifay_grade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer\ExtraLecture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\ExtraLecture.Designer.cs">
+      <DependentUpon>ExtraLecture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer\ReceptionHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\ReceptionHours.Designer.cs">
+      <DependentUpon>ReceptionHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturer\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facebook\MiniJson.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secretary\AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\Course_And_Prev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\Course_And_Prev.Designer.cs">
+      <DependentUpon>Course_And_Prev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\Modifay 2 classes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\Modifay 2 classes.Designer.cs">
+      <DependentUpon>Modifay 2 classes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\StudentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\StudentDetails.Designer.cs">
+      <DependentUpon>StudentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_Assistant\AddLabExercises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\AddLabExercises.Designer.cs">
+      <DependentUpon>AddLabExercises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_Assistant\Grade56.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\Grade56.Designer.cs">
+      <DependentUpon>Grade56.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_Assistant\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_Assistant\ReceptionHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\ReceptionHours.Designer.cs">
+      <DependentUpon>ReceptionHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_Assistant\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_Assistant\Zero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teaching_Assistant\Zero.Designer.cs">
+      <DependentUpon>Zero.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\CancelLectures.resx">
+      <DependentUpon>CancelLectures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MergeAuditorium.resx">
+      <DependentUpon>MergeAuditorium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\RemoveAssistant.resx">
+      <DependentUpon>RemoveAssistant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\RemoveStudent.resx">
+      <DependentUpon>RemoveStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\SignStudent.resx">
+      <DependentUpon>SignStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\StudentExemption.resx">
+      <DependentUpon>StudentExemption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facebook\Analyze.resx">
+      <DependentUpon>Analyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facebook\FacebookLoginDialog.resx">
+      <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facebook\FB_Analyze.resx">
+      <DependentUpon>FB_Analyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Encrypt.resx">
+      <DependentUpon>Encrypt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\AddLecture.resx">
+      <DependentUpon>AddLecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\bonus_10_points.resx">
+      <DependentUpon>bonus_10_points.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewUser.resx">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\modifay_grade.resx">
+      <DependentUpon>modifay_grade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\ExtraLecture.resx">
+      <DependentUpon>ExtraLecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\ReceptionHours.resx">
+      <DependentUpon>ReceptionHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Secretary\AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\Course_And_Prev.resx">
+      <DependentUpon>Course_And_Prev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\Modifay 2 classes.resx">
+      <DependentUpon>Modifay 2 classes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\StudentDetails.resx">
+      <DependentUpon>StudentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\AddLabExercises.resx">
+      <DependentUpon>AddLabExercises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\Grade56.resx">
+      <DependentUpon>Grade56.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\ReceptionHours.resx">
+      <DependentUpon>ReceptionHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teaching_Assistant\Zero.resx">
+      <DependentUpon>Zero.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Facebook\packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Facebook\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".nuget\" />
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mazalmazal.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Facebook\FB_Analyze.csproj" />
+    <Content Include="Resources\facebook-login.jpg" />
+    <Content Include="Resources\Icon1.ico" />
+    <None Include="Resources\Icon1.png" />
+    <None Include="Resources\facebook-login2.jpg" />
+    <None Include="Resources\facebook-login1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
