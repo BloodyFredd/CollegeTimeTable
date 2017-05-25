@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BranchA_MazalPlus.Classes;
 
 namespace BranchA_MazalPlus.Admin
 {
@@ -163,9 +164,8 @@ namespace BranchA_MazalPlus.Admin
         private void Sign_person_button_Click(object sender, EventArgs e)
         {
             NewUser Connect = new NewUser();
-            Connect.StartPosition = FormStartPosition.Manual;
-            Connect.SetDesktopBounds(218, 46, 250, 420);
-            Connect.ShowDialog();
+            Connect.Show();
+            
         }
 
         private void Logout_Button_Click(object sender, EventArgs e)
