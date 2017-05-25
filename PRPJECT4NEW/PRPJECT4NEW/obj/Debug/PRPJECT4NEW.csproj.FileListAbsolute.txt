@@ -1,0 +1,5 @@
+C:\Users\Eli\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\bin\Debug\PRPJECT4NEW.exe.config
+C:\Users\Eli\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\Eli\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\Interop.Microsoft.Office.Interop.Access.Dao.dll
+C:\Users\Eli\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\Interop.MSXML2.dll
+C:\Users\Eli\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.csproj.ResolveComReference.cache
