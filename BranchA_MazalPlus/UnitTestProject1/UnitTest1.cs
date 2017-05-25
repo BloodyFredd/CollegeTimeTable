@@ -82,8 +82,15 @@ namespace UnitTestProject1
             Assert.IsTrue(p1.setPermission("Lecturer"));
         }
 
+        //#3
         [TestMethod]
         public void TestMethodPerson7()
+        {
+            Assert.IsFalse(p1.setPermission("abu"));
+        }
+
+        [TestMethod]
+        public void TestMethodPerson8()
         {
             Assert.IsTrue(p1.setPhone(TELEPHONE));
         }
