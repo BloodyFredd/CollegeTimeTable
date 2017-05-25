@@ -52,9 +52,8 @@
             // btnLogin
             // 
             this.btnLogin.AccessibleName = "btnLogin";
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(124)))), ((int)(((byte)(201)))));
+            this.btnLogin.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(108, 717);
@@ -148,15 +147,17 @@
             // 
             // LoginToFacebook
             // 
+            this.LoginToFacebook.AutoSize = true;
             this.LoginToFacebook.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.LoginToFacebook.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LoginToFacebook.Image = global::BranchA_MazalPlus.Properties.Resources.facebook_login;
+            this.LoginToFacebook.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LoginToFacebook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LoginToFacebook.Location = new System.Drawing.Point(102, 817);
             this.LoginToFacebook.Margin = new System.Windows.Forms.Padding(6);
             this.LoginToFacebook.Name = "LoginToFacebook";
-            this.LoginToFacebook.Size = new System.Drawing.Size(546, 99);
+            this.LoginToFacebook.Size = new System.Drawing.Size(552, 117);
             this.LoginToFacebook.TabIndex = 17;
+            this.LoginToFacebook.Text = "Login with Facebook";
+            this.LoginToFacebook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.LoginToFacebook.UseVisualStyleBackColor = false;
             this.LoginToFacebook.Click += new System.EventHandler(this.LoginToFacebook_Click);
             // 
@@ -226,8 +227,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.ClientSize = new System.Drawing.Size(742, 949);
+            this.ClientSize = new System.Drawing.Size(742, 1044);
             this.Controls.Add(this.LoginToFacebook);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button3);
