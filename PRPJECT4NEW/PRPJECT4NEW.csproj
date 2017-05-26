@@ -616,6 +616,9 @@
     </Content>
     <Content Include="Facebook\FB_Analyze.csproj" />
     <Content Include="icon.ico" />
+    <None Include="Resources\padlock %28Custom%29.png" />
+    <None Include="Resources\man-user %28Custom%29.png" />
+    <None Include="Resources\facebook_btn.png" />
     <None Include="Resources\mazalmazal.wav" />
   </ItemGroup>
   <ItemGroup>

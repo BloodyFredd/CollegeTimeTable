@@ -19,8 +19,7 @@ namespace PRPJECT4NEW
         // player.Play();//music
 
 
-        //FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
-        //facebook.Show();
+
 
         int TogMove;
         int MValX;
@@ -188,6 +187,22 @@ namespace PRPJECT4NEW
         private void Center(Form form)
         {
             form.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (form.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (form.Size.Height / 2));
+        }
+
+        private void txtuser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facebook_btnLogin_Click(object sender, EventArgs e)
+        {
+            FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
+            facebook.Show();
         }
     }
 }

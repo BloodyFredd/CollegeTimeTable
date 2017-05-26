@@ -61,11 +61,41 @@ namespace PRPJECT4NEW.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap facebook_btn {
+            get {
+                object obj = ResourceManager.GetObject("facebook_btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap man_user__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("man-user (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream mazalmazal {
             get {
                 return ResourceManager.GetStream("mazalmazal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap padlock__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("padlock (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

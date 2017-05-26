@@ -87,6 +87,13 @@
                             Connect.Show();
                             Connect.Secretary_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                         }
+                        else if (dr[6].ToString() == "Student")
+                        {
+                            PRPJECT4NEW.Student.Menu Connect = new PRPJECT4NEW.Student.Menu();
+                            Connect.Show();
+                            Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+
+                        }
 
                     }
                     else
