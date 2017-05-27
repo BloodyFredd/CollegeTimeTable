@@ -584,6 +584,7 @@
     </None>
     <None Include="Facebook\App.config" />
     <None Include="Facebook\packages.config" />
+    <None Include="ignore.gitignore" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PRPJECT4NEW.Exams_Section.special_student_list.datasource" />
     <None Include="Properties\DataSources\student.datasource" />

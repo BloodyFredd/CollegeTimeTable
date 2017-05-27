@@ -12,3 +12,17 @@ C:\Users\adir1\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\EntityFra
 C:\Users\adir1\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\CsvHelper.xml
 C:\Users\adir1\Source\Repos\2017_BS_project4\UnitTestProject\obj\Debug\UnitTestProject.dll
 C:\Users\adir1\Source\Repos\2017_BS_project4\UnitTestProject\obj\Debug\UnitTestProject.pdb
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\UnitTestProject.dll
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\UnitTestProject.pdb
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\PRPJECT4NEW.exe
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\Facebook.dll
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\EntityFramework.dll
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\CsvHelper.dll
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\PRPJECT4NEW.pdb
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\Facebook.xml
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\EntityFramework.xml
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\bin\Debug\CsvHelper.xml
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\obj\Debug\UnitTestProject.dll
+C:\Users\Freddy\Source\Repos\2017_BS_project4\UnitTestProject\obj\Debug\UnitTestProject.pdb
