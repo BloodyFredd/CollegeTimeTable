@@ -275,7 +275,7 @@
             this.classes_with_more_than_10_students_Button.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.classes_with_more_than_10_students_Button.Size = new System.Drawing.Size(307, 50);
             this.classes_with_more_than_10_students_Button.TabIndex = 2;
-            this.classes_with_more_than_10_students_Button.Text = " Classes with more than 10 students";
+            this.classes_with_more_than_10_students_Button.Text = " Classes by capacity";
             this.classes_with_more_than_10_students_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.classes_with_more_than_10_students_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.classes_with_more_than_10_students_Button.UseVisualStyleBackColor = false;
