@@ -21,6 +21,12 @@ build/
 bld/
 [Bb]in
 [Oo]bj
+bin/
+bin/.*
+bin/classes/*
+obj/
+obj/.*
+obj/classes/*
 
 # Visual Studio 2015 cache/options directory
 .vs/
