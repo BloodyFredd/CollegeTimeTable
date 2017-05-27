@@ -43,6 +43,7 @@ namespace PRPJECT4NEW
                 {
                     //Chech ID + Password existance
                     EncryptPass = Encrypt.base64Encode(txtpassword.Text);
+                   // MessageBox.Show(EncryptPass);
                     if (context.Person.Any(p => p.ID == UserID && p.Password == EncryptPass))
                     {
                         Utility.User = context.Person.SingleOrDefault(p => p.ID == UserID);
@@ -203,8 +204,8 @@ namespace PRPJECT4NEW
         private void facebook_btnLogin_Click(object sender, EventArgs e)
         {
             //Encrypt.ConvertPass();
-            FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
-            facebook.Show();
+           FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
+           facebook.Show();
         }
 
 
