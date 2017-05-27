@@ -208,6 +208,11 @@ namespace PRPJECT4NEW.Admin
         private void Sign_student_course_Click(object sender, EventArgs e)
         {
             SignStudent form2 = new SignStudent();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
             form2.Show();
         }
 
