@@ -292,7 +292,6 @@ C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\bin\Debug\CsvHelper.xml
 C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\bin\Debug\EntityFramework.xml
 C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\bin\Debug\Facebook.xml
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.csprojResolveAssemblyReference.cache
 C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.Admin.CancelLectures.resources
 C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.Admin.Menu.resources
 C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.Admin.MergeAuditorium.resources
@@ -341,3 +340,4 @@ C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.S
 C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.Login.resources
 C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.Properties.Resources.resources
 C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.csproj.GenerateResource.Cache
+C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.csprojResolveAssemblyReference.cache

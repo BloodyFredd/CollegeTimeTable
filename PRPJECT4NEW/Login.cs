@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Media;
+using PRPJECT4NEW.Forms;
 
 namespace PRPJECT4NEW
 {
@@ -32,7 +33,7 @@ namespace PRPJECT4NEW
         private void button1_Click(object sender, EventArgs e)
         {
             string UserID = txtuser.Text; //Comparison works only after conversion
-
+            string EncryptPass;
             //Connect to data base
             using (Entities context = new Entities())
             {
@@ -41,7 +42,8 @@ namespace PRPJECT4NEW
                 try
                 {
                     //Chech ID + Password existance
-                    if (context.Person.Any(p => p.ID == UserID && p.Password == txtpassword.Text))
+                    EncryptPass = Encrypt.base64Encode(txtpassword.Text);
+                    if (context.Person.Any(p => p.ID == UserID && p.Password == EncryptPass))
                     {
                         Utility.User = context.Person.SingleOrDefault(p => p.ID == UserID);
                         this.Hide();
@@ -200,8 +202,11 @@ namespace PRPJECT4NEW
 
         private void facebook_btnLogin_Click(object sender, EventArgs e)
         {
+            //Encrypt.ConvertPass();
             FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
             facebook.Show();
         }
+
+
     }
 }

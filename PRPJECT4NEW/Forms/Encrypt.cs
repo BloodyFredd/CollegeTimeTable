@@ -16,47 +16,56 @@ namespace PRPJECT4NEW.Forms
 {
     public partial class Encrypt : Form
     {
-        SqlConnection sqlcon = null;
+       static  SqlConnection  sqlcon = null;
         public Encrypt()
         {
             InitializeComponent();
         }
 
-        public bool ConvertPass(string value)
+        public static bool ConvertPass()
         {
-            sqlcon = General.ConnectToSql();
-            SqlCommand cmd = new SqlCommand("select * from person ", sqlcon);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read() == true)
+            try
             {
-                string PassTemp = string.Copy(dr[5].ToString());
+                sqlcon = General.ConnectToSql();
+                SqlCommand cmd = new SqlCommand("select * from person ", sqlcon);
+                SqlDataReader dr = cmd.ExecuteReader();
+                string IDTemp = "";
+                string Email = "";
+                while (dr.Read() == true&& (!Email.Contains("Tech_Team @plus.mazal.com")))
+                {
+                    string PassTemp = string.Copy(dr[5].ToString());
+                     IDTemp = string.Copy(dr[0].ToString());
+                    Email = string.Copy(dr[5].ToString());
+                   // MessageBox.Show(PassTemp);
+
+                    PassTemp = base64Encode(PassTemp);
+                   // MessageBox.Show(PassTemp);
+                    string connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+                    sqlcon = new SqlConnection(connetionString);
+                    SqlCommand cmd2 = new SqlCommand("UPDATE person SET password='" + PassTemp + "' where ID='"+IDTemp+"' ", sqlcon);
+                   // dr.Close();
+                     SqlDataAdapter sda = new SqlDataAdapter();
+                    sda.SelectCommand = cmd2;
+                     DataTable dbdataset = new DataTable();
+                     sda.Fill(dbdataset);
+                      BindingSource bsource = new BindingSource();
+
+                     bsource.DataSource = dbdataset;
+                    sda.Update(dbdataset);
+
+                }
                 dr.Close();
-                PassTemp = base64Encode(PassTemp);
-                MessageBox.Show(PassTemp);
-                string connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-                this.sqlcon = new SqlConnection(connetionString);
-                SqlCommand cmd2 = new SqlCommand("UPDATE person SET password='" + PassTemp + "'", sqlcon);
 
-                //dr.Close();
-                // SqlDataAdapter sda = new SqlDataAdapter();
-                //sda.SelectCommand = cmd2;
-                // DataTable dbdataset = new DataTable();
-                // sda.Fill(dbdataset);
-                // SqlDataAdapter sda1 = new SqlDataAdapter();
-                //sda1.SelectCommand = cmd1;
-                // DataTable dbdataset1 = new DataTable();
-                //  sda1.Fill(dbdataset1);
-                //  BindingSource bsource = new BindingSource();
-
-                // bsource.DataSource = dbdataset;
-                // Lecture.DataSource = bsource;
-                //sda.Update(dbdataset);
-                // sda1.Update(dbdataset);
                 return true;
 
             }
+            catch (Exception E)
+            {
+                MessageBox.Show(E.ToString());
+                return false;
+            }
+            
 
-            return false;
 
         }
         public bool ConvertPass2(string value)
@@ -71,7 +80,7 @@ namespace PRPJECT4NEW.Forms
                 PassTemp = base64Encode(PassTemp);
                 MessageBox.Show(PassTemp);
                 string connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-                this.sqlcon = new SqlConnection(connetionString);
+                sqlcon = new SqlConnection(connetionString);
                 SqlCommand cmd2 = new SqlCommand("UPDATE person SET password='" + PassTemp + "' where Email='vas123@plus.mazal.com' ", sqlcon);
 
                 //dr.Close();
@@ -105,7 +114,6 @@ namespace PRPJECT4NEW.Forms
                 return;
             }
             textBox2.Text = base64Encode(textBox1.Text);
-            ConvertPass(textBox1.Text);
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -118,7 +126,7 @@ namespace PRPJECT4NEW.Forms
 
         }
 
-        public string base64Encode(string data)
+        public static string base64Encode(string data)
         {
             try
             {
@@ -132,7 +140,7 @@ namespace PRPJECT4NEW.Forms
                 throw new Exception("Error in base64Encode" + e.Message);
             }
         }
-        public string base64Decode2(string sData)
+        public static string base64Decode2(string sData)
         {
             System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();
             System.Text.Decoder utf8Decode = encoder.GetDecoder();
