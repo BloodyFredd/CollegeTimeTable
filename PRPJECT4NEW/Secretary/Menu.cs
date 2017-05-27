@@ -75,12 +75,6 @@ namespace PRPJECT4NEW.Secretary
         private void Logout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Have a good day!");
-            this.Hide();
-            
-            Login form2 = new Login();
-            form2.Show();
-
-            
             this.Close();
         }
 
