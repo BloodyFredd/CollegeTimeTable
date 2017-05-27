@@ -58,7 +58,6 @@ namespace PRPJECT4NEW.Secretary
             SqlCommand cmd = new SqlCommand("UPDATE person SET [F_Name] = '"+Fname.Text+ "',[L_Name] = '" + Lname.Text + "',[Telephone] = '" + Phone.Text + "' WHERE [ID] = '" + IDbutton.Text + "'", sqlcon);
             try
             {
-
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
