@@ -65,7 +65,7 @@ namespace PRPJECT4NEW
                         txtpassword.UseSystemPasswordChar = false;
                     }
                 }
-                catch(System.Data.Entity.Core.EntityException exception)
+                catch(System.Data.Entity.Core.EntityException)
                 {
                     MessageBox.Show("Can't connect to Database: Try to reconnect");
                 }
@@ -98,23 +98,23 @@ namespace PRPJECT4NEW
                     break;
                 case "Admin":
                     Admin.Menu Connect = new Admin.Menu();
-                    Connect.Show();
                     Connect.Admin_name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Connect.ShowDialog();
                     break;
                 case "Lecturer":
                     Lecturer.Menu Connect1 = new Lecturer.Menu();
-                    Connect1.Show();
                     Connect1.Lecturer_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Connect1.ShowDialog();
                     break;
                 case "Teaching_Assistant":
                     Teaching_Assistant.Menu Connect2 = new Teaching_Assistant.Menu();
-                    Connect2.Show();
                     Connect2.Teaching_Assistant_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Connect2.ShowDialog();
                     break;
                 case "Secretary":
                     Secretary.Menu Connect3 = new Secretary.Menu();
-                    Connect3.Show();
                     Connect3.Secretary_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Connect3.ShowDialog();
                     break;
                 default:
                     Console.WriteLine("Wrong User Permission - Check your Database");
