@@ -145,13 +145,6 @@ namespace PRPJECT4NEW.Admin
         private void Logout_Button_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Have a good day!");
-            // hide main form
-            this.Hide();
-
-            // show other form
-            Login form2 = new Login();
-            form2.Show();
-
             // close application
             this.Close();
         }
