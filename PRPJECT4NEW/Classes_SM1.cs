@@ -15,6 +15,7 @@ namespace PRPJECT4NEW
     public partial class Classes_SM1
     {
         public string date { get; set; }
+        public string day { get; set; }
         public string Class_Id { get; set; }
         public string Type { get; set; }
         public Nullable<double> Capacity { get; set; }
@@ -32,5 +33,6 @@ namespace PRPJECT4NEW
         public Nullable<double> C19_20 { get; set; }
         public Nullable<double> C20_21 { get; set; }
         public Nullable<double> holiday { get; set; }
+
     }
 }

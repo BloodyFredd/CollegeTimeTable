@@ -372,6 +372,12 @@
     <Compile Include="Teaching_Stuff.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Tech_Team\Available_Classes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tech_Team\Available_Classes.Designer.cs">
+      <DependentUpon>Available_Classes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tech_Team\Conferences_List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -535,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Teaching_Assistant\Zero.resx">
       <DependentUpon>Zero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tech_Team\Available_Classes.resx">
+      <DependentUpon>Available_Classes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tech_Team\Conferences_List.resx">
       <DependentUpon>Conferences_List.cs</DependentUpon>
