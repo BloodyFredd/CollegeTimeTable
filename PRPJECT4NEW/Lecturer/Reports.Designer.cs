@@ -76,7 +76,7 @@
             this.StudentsReport.Margin = new System.Windows.Forms.Padding(26, 31, 26, 31);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(2050, 1377);
+            this.StudentsReport.Size = new System.Drawing.Size(1390, 1480);
             this.StudentsReport.TabIndex = 2;
             this.StudentsReport.Visible = false;
             this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
@@ -119,6 +119,7 @@
             this.aToolStripMenuItem,
             this.bToolStripMenuItem});
             this.Semester.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Semester.ImageTransparentColor = System.Drawing.Color.BlanchedAlmond;
             this.Semester.Name = "Semester";
             this.Semester.Size = new System.Drawing.Size(152, 45);
             this.Semester.Text = "Semester";
@@ -131,7 +132,7 @@
             this.toolStripComboBox2});
             this.aToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(327, 46);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -234,7 +235,7 @@
             this.toolStripComboBox1});
             this.bToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(327, 46);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1

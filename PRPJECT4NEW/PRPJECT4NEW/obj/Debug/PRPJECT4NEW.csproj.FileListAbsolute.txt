@@ -1,11 +1,1 @@
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\bin\Debug\PRPJECT4NEW.exe.config
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\bin\Debug\PRPJECT4NEW.exe
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\bin\Debug\PRPJECT4NEW.pdb
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.Properties.Resources.resources
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.csproj.GenerateResource.Cache
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.exe
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.pdb
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\PRPJECT4NEW.csprojResolveAssemblyReference.cache
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\FB_Analyze.Analyze.resources
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\FB_Analyze.FB_LoginDialog.resources
-C:\Users\adir1\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\obj\Debug\FB_Analyze.FB_Analyze.resources
+C:\Users\danik\Source\Repos\2017_BS_project4\PRPJECT4NEW\PRPJECT4NEW\bin\Debug\PRPJECT4NEW.exe.config
