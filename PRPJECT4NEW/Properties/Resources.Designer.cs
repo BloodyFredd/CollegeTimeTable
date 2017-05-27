@@ -83,9 +83,18 @@ namespace PRPJECT4NEW.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream mazalmazal {
+        internal static System.IO.UnmanagedMemoryStream mazal {
             get {
-                return ResourceManager.GetStream("mazalmazal", resourceCulture);
+                return ResourceManager.GetStream("mazal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream mazalRing {
+            get {
+                return ResourceManager.GetStream("mazalRing", resourceCulture);
             }
         }
         
@@ -96,6 +105,15 @@ namespace PRPJECT4NEW.Properties {
             get {
                 object obj = ResourceManager.GetObject("padlock (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to mazalmazal.
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
             }
         }
     }

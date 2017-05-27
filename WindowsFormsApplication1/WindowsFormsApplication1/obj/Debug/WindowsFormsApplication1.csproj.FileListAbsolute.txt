@@ -1,0 +1,12 @@
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\FirstFacebookApplication.FacebookLoginDialog.resources
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\FirstFacebookApplication.Form1.resources
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Facebook.dll
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Facebook.xml
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\adir1\Source\Repos\2017_BS_project4\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

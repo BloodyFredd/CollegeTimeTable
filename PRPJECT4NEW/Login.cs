@@ -15,10 +15,7 @@ namespace PRPJECT4NEW
     
     public partial class Login : Form
     {
-        // System.Media.SoundPlayer player = new System.Media.SoundPlayer(PRPJECT4NEW.Properties.Resources.mazalmazal);//music
-        // player.Play();//music
-
-
+         System.Media.SoundPlayer player = new System.Media.SoundPlayer(PRPJECT4NEW.Properties.Resources.mazalRing);//music
 
 
         int TogMove;
@@ -73,7 +70,9 @@ namespace PRPJECT4NEW
         }
 
         private void LoadMenu()
-        {    
+        {
+           // player.Play();//music
+
             switch (Utility.User.Permission)
             {
                 case "Student":
