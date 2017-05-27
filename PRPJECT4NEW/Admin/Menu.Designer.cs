@@ -51,6 +51,7 @@
             this.Sign_person_button = new System.Windows.Forms.Button();
             this.Reports_button = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -426,12 +427,24 @@
             this.Reports_button.UseVisualStyleBackColor = false;
             this.Reports_button.Click += new System.EventHandler(this.Reports_button_Click);
             // 
+            // panel5
+            // 
+            this.panel5.AccessibleName = "Buttons_view";
+            this.panel5.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(582, 110);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(724, 991);
+            this.panel5.TabIndex = 3;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1306, 1101);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -475,5 +488,6 @@
         private System.Windows.Forms.Button Sign_student_course;
         private System.Windows.Forms.Button Sign_person_button;
         private System.Windows.Forms.Button Reports_button;
+        private System.Windows.Forms.Panel panel5;
     }
 }

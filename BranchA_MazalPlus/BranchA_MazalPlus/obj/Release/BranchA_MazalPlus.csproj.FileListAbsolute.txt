@@ -1,0 +1,9 @@
+C:\Users\danik\Source\Repos\2017_BS_project4\BranchA_MazalPlus\BranchA_MazalPlus\bin\Release\BranchA_MazalPlus.exe.config
+C:\Users\danik\Source\Repos\2017_BS_project4\BranchA_MazalPlus\BranchA_MazalPlus\bin\Release\BranchA_MazalPlus.exe
+C:\Users\danik\Source\Repos\2017_BS_project4\BranchA_MazalPlus\BranchA_MazalPlus\bin\Release\BranchA_MazalPlus.pdb
+C:\Users\danik\Source\Repos\2017_BS_project4\BranchA_MazalPlus\BranchA_MazalPlus\obj\Release\BranchA_MazalPlus.Admin_Panel.resources
+C:\Users\danik\Source\Repos\2017_BS_project4\BranchA_MazalPlus\BranchA_MazalPlus\obj\Release\BranchA_MazalPlus.NewUser.resources
+C:\Users\danik\Source\Repos\2017_BS_project4\BranchA_MazalPlus\BranchA_MazalPlus\obj\Release\BranchA_MazalPlus.Properties.Resources.resources
+C:\Users\danik\Source\Repos\2017_BS_project4\BranchA_MazalPlus\BranchA_MazalPlus\obj\Release\BranchA_MazalPlus.csproj.GenerateResource.Cache
+C:\Users\danik\Source\Repos\2017_BS_project4\BranchA_MazalPlus\BranchA_MazalPlus\obj\Release\BranchA_MazalPlus.exe
+C:\Users\danik\Source\Repos\2017_BS_project4\BranchA_MazalPlus\BranchA_MazalPlus\obj\Release\BranchA_MazalPlus.pdb

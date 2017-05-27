@@ -65,7 +65,7 @@
             this.StudentsReport.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(2922, 1815);
+            this.StudentsReport.Size = new System.Drawing.Size(1167, 882);
             this.StudentsReport.TabIndex = 2;
             this.StudentsReport.Visible = false;
             this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
@@ -144,7 +144,7 @@
             "405",
             "406"});
             this.CourseID.Location = new System.Drawing.Point(0, 515);
-            this.CourseID.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(8);
             this.CourseID.Name = "CourseID";
             this.CourseID.Size = new System.Drawing.Size(578, 39);
             this.CourseID.TabIndex = 11;
@@ -157,7 +157,7 @@
             this.All_Person_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.All_Person_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.All_Person_Button.Location = new System.Drawing.Point(0, 347);
-            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(8);
             this.All_Person_Button.Name = "All_Person_Button";
             this.All_Person_Button.Size = new System.Drawing.Size(582, 83);
             this.All_Person_Button.TabIndex = 12;
@@ -171,7 +171,7 @@
             this.ExcellentStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExcellentStudents.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ExcellentStudents.Location = new System.Drawing.Point(0, 428);
-            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(8);
             this.ExcellentStudents.Name = "ExcellentStudents";
             this.ExcellentStudents.Size = new System.Drawing.Size(582, 89);
             this.ExcellentStudents.TabIndex = 13;
@@ -185,7 +185,7 @@
             this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Print.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Print.Location = new System.Drawing.Point(0, 636);
-            this.Print.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Print.Margin = new System.Windows.Forms.Padding(6);
             this.Print.Name = "Print";
             this.Print.Size = new System.Drawing.Size(582, 78);
             this.Print.TabIndex = 14;
@@ -481,7 +481,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3398, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(3639, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 2, 24, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 31, 90, 0);
@@ -519,7 +519,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3510, 122);
+            this.panel1.Size = new System.Drawing.Size(3751, 122);
             this.panel1.TabIndex = 15;
             // 
             // Reports
