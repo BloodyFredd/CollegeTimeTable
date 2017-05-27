@@ -24,19 +24,14 @@ namespace PRPJECT4NEW.Admin
 
 
         private void Available_Classes_Click(object sender, EventArgs e)
-        {
-
-            
+        {            
              string str = null;
-
-
                 try
                 {
                     this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                     this.sqlcon = new SqlConnection(connetionString);
                     SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
                 if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
-
                 {
                     str = toolStripComboBox2.Text;
                     cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
@@ -52,7 +47,6 @@ namespace PRPJECT4NEW.Admin
                 {
                     throw new ArgumentException("Error selecting dates,try again!");
                 }
-
                     SqlDataAdapter sda = new SqlDataAdapter();
                     sda.SelectCommand = cmd;
                     DataTable dbdataset = new DataTable();
@@ -69,18 +63,13 @@ namespace PRPJECT4NEW.Admin
                 MessageBox.Show(ex.Message);
                 CancelLectures form2 = new CancelLectures();
                 form2.Show();
-            }
-            
-
-
-
+            }           
         }
 
         
 
         private void Cancel_Lecture_Click(object sender, EventArgs e)
         {
-
             try
             {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
