@@ -433,7 +433,7 @@
             this.panel5.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(218, 46);
-            this.panel5.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.panel5.Margin = new System.Windows.Forms.Padding(1);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(272, 281);
             this.panel5.TabIndex = 3;
