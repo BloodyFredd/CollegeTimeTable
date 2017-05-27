@@ -185,13 +185,13 @@ namespace PRPJECT4NEW.Admin
 
         private void Reports_button_Click(object sender, EventArgs e)
         {
-            Reports frm = new Reports();
-            frm.TopLevel = false;
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.WindowState = FormWindowState.Maximized;
-            panel5.Controls.Add(frm);
+            Reports form2 = new Reports();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
             panel5.Visible = true;
-            frm.Show();
+            form2.Show();
         }
 
         private void Remove_Teaching_Assistant_Button_Click_1(object sender, EventArgs e)
