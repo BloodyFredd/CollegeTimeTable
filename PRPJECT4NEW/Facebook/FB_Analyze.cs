@@ -46,9 +46,9 @@
                     var cl = fb;
                     dynamic result1 = fb.Get("me?fields=id,name,email");
                     string _currentEmail = result1.email;
-                    MessageBox.Show(_currentEmail);
-                    MessageBox.Show(result1.name);
-                    MessageBox.Show(result1.id);
+                   // MessageBox.Show(_currentEmail);
+                   // MessageBox.Show(result1.name);
+                   // MessageBox.Show(result1.id);
                    // SqlConnection sqlcon=null;
                    // General.ConnectToSql(sqlcon);
                     string connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
@@ -61,21 +61,21 @@
                         PRPJECT4NEW.Forms.UserID.ID = string.Copy(dr[0].ToString());
                         if (dr[6].ToString() == "Admin")
                         {
-                            this.Hide();
+                            //this.Hide();
                             PRPJECT4NEW.Admin.Menu Connect = new PRPJECT4NEW.Admin.Menu();
                             Connect.Show();
                             Connect.Admin_name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                         }
                         else if (dr[6].ToString() == "Lecturer")
                         {
-                            this.Hide();
+                            //this.Hide();
                             PRPJECT4NEW.Lecturer.Menu Connect = new PRPJECT4NEW.Lecturer.Menu();
                             Connect.Show();
                             Connect.Lecturer_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
                         }
                         else if (dr[6].ToString() == "Teaching_Assistant")
                         {
-                            this.Hide();
+                           // this.Hide();
                             PRPJECT4NEW.Teaching_Assistant.Menu Connect = new PRPJECT4NEW.Teaching_Assistant.Menu();
                             Connect.Show();
                             Connect.Teaching_Assistant_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
@@ -86,6 +86,13 @@
                             PRPJECT4NEW.Secretary.Menu Connect = new PRPJECT4NEW.Secretary.Menu();
                             Connect.Show();
                             Connect.Secretary_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+                        }
+                        else if (dr[6].ToString() == "Student")
+                        {
+                            PRPJECT4NEW.Student.Menu Connect = new PRPJECT4NEW.Student.Menu();
+                            Connect.Show();
+                            Connect.Student_Name.Text = "      " + dr[1].ToString() + " " + dr[2].ToString();
+
                         }
 
                     }
@@ -102,14 +109,15 @@
                     string Lname = dict["first_name"].ToString();
                     string Fname = dict["last_name"].ToString();
                     string gender = dict["gender"].ToString();
-                    MessageBox.Show(name);
-                    MessageBox.Show(Lname);
-                    MessageBox.Show(Fname);
-                    MessageBox.Show(gender);
-                    MessageBox.Show(id);
+                    // MessageBox.Show(name);
+                    // MessageBox.Show(Lname);
+                    // MessageBox.Show(Fname);
+                    // MessageBox.Show(gender);
+                    // MessageBox.Show(id);
 
-
+                    
                     btnLogout.Visible = true;
+
                 }
                 else
                 {

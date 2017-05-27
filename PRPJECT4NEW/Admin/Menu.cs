@@ -145,13 +145,6 @@ namespace PRPJECT4NEW.Admin
         private void Logout_Button_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("Have a good day!");
-            // hide main form
-            this.Hide();
-
-            // show other form
-            Login form2 = new Login();
-            form2.Show();
-
             // close application
             this.Close();
         }
@@ -163,9 +156,14 @@ namespace PRPJECT4NEW.Admin
 
         private void Sign_person_button_Click(object sender, EventArgs e)
         {
-            NewUser Connect = new NewUser();
-            Connect.Show();
-            
+            NewUser frm = new NewUser();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(frm);
+            panel5.Visible = true;
+            frm.Show();
+
         }
 
         private void Logout_Button_Click(object sender, EventArgs e)
@@ -187,10 +185,13 @@ namespace PRPJECT4NEW.Admin
 
         private void Reports_button_Click(object sender, EventArgs e)
         {
-            Reports form2 = new Reports();
-            form2.StartPosition = FormStartPosition.Manual;
-            form2.SetDesktopBounds(218,46,1320,820);
-            form2.ShowDialog();
+            Reports frm = new Reports();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(frm);
+            panel5.Visible = true;
+            frm.Show();
         }
 
         private void Remove_Teaching_Assistant_Button_Click_1(object sender, EventArgs e)

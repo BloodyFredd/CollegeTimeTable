@@ -15,12 +15,8 @@ namespace PRPJECT4NEW
     
     public partial class Login : Form
     {
-        // System.Media.SoundPlayer player = new System.Media.SoundPlayer(PRPJECT4NEW.Properties.Resources.mazalmazal);//music
-        // player.Play();//music
+         System.Media.SoundPlayer player = new System.Media.SoundPlayer(PRPJECT4NEW.Properties.Resources.mazalRing);//music
 
-
-        //FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
-        //facebook.Show();
 
         int TogMove;
         int MValX;
@@ -66,7 +62,7 @@ namespace PRPJECT4NEW
                         txtpassword.UseSystemPasswordChar = false;
                     }
                 }
-                catch(System.Data.Entity.Core.EntityException exception)
+                catch(System.Data.Entity.Core.EntityException)
                 {
                     MessageBox.Show("Can't connect to Database: Try to reconnect");
                 }
@@ -74,7 +70,9 @@ namespace PRPJECT4NEW
         }
 
         private void LoadMenu()
-        {    
+        {
+           // player.Play();//music
+
             switch (Utility.User.Permission)
             {
                 case "Student":
@@ -99,23 +97,23 @@ namespace PRPJECT4NEW
                     break;
                 case "Admin":
                     Admin.Menu Connect = new Admin.Menu();
-                    Connect.Show();
                     Connect.Admin_name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Connect.ShowDialog();
                     break;
                 case "Lecturer":
                     Lecturer.Menu Connect1 = new Lecturer.Menu();
-                    Connect1.Show();
                     Connect1.Lecturer_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Connect1.ShowDialog();
                     break;
                 case "Teaching_Assistant":
                     Teaching_Assistant.Menu Connect2 = new Teaching_Assistant.Menu();
-                    Connect2.Show();
                     Connect2.Teaching_Assistant_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Connect2.ShowDialog();
                     break;
                 case "Secretary":
                     Secretary.Menu Connect3 = new Secretary.Menu();
-                    Connect3.Show();
                     Connect3.Secretary_Name.Text = "      " + Utility.User.F_name + " " + Utility.User.L_name;
+                    Connect3.ShowDialog();
                     break;
                 default:
                     Console.WriteLine("Wrong User Permission - Check your Database");
@@ -188,6 +186,22 @@ namespace PRPJECT4NEW
         private void Center(Form form)
         {
             form.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (form.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (form.Size.Height / 2));
+        }
+
+        private void txtuser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void facebook_btnLogin_Click(object sender, EventArgs e)
+        {
+            FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
+            facebook.Show();
         }
     }
 }
