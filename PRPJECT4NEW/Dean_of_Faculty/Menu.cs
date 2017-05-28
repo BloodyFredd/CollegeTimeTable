@@ -22,20 +22,26 @@ namespace PRPJECT4NEW.Dean_of_Faculty
         private void Students_Requests_Button_Click(object sender, EventArgs e)
         {
 
-            //Dean_of_Faculty.Calendar frm = new Dean_of_Faculty.Calendar("Matan", 123456);
-            //frm.TopLevel = false;
-            //frm.FormBorderStyle = FormBorderStyle.None;
-            //frm.WindowState = FormWindowState.Maximized;
-            //Buttons_view.Controls.Add(frm);
-            //Buttons_view.Visible = true;
-            //frm.Show();
+            Dean_of_Faculty.Stu_Request frm = new Dean_of_Faculty.Stu_Request();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
 
         }
 
 
         private void Important_messages_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Important messages");
+            Dean_of_Faculty.Messages frm = new Dean_of_Faculty.Messages();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Scholarships_Button_Click(object sender, EventArgs e)
@@ -53,7 +59,13 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         private void Technical_Support_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Technical Support");
+            Tech_support frm = new Tech_support();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
 
