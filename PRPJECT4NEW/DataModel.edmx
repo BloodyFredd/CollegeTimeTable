@@ -29,6 +29,7 @@
           <Property Name="19-20" Type="float" />
           <Property Name="20-21" Type="float" />
           <Property Name="holiday" Type="float" />
+          <Property Name="record" Type="nchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="Classes_SM2">
           <Key>
@@ -54,6 +55,7 @@
           <Property Name="19-20" Type="float" />
           <Property Name="20-21" Type="float" />
           <Property Name="holiday" Type="float" />
+          <Property Name="record" Type="nchar" MaxLength="3" />
         </EntityType>
         <EntityType Name="Conferences">
           <Key>
@@ -257,6 +259,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="C20_21" Type="Double" />
           <Property Name="holiday" Type="Double" />
           <Property Name="day" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="record" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="Classes_SM2">
           <Key>
@@ -282,6 +285,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="C20_21" Type="Double" />
           <Property Name="holiday" Type="Double" />
           <Property Name="day" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="record" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="Course_detail">
           <Key>
@@ -457,6 +461,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySetMapping Name="Classes_SM1">
             <EntityTypeMapping TypeName="MazalModel.Classes_SM1">
               <MappingFragment StoreEntitySet="Classes_SM1">
+                <ScalarProperty Name="record" ColumnName="record" />
                 <ScalarProperty Name="day" ColumnName="day" />
                 <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="Class_Id" ColumnName="Class_Id" />
@@ -482,6 +487,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySetMapping Name="Classes_SM2">
             <EntityTypeMapping TypeName="MazalModel.Classes_SM2">
               <MappingFragment StoreEntitySet="Classes_SM2">
+                <ScalarProperty Name="record" ColumnName="record" />
                 <ScalarProperty Name="day" ColumnName="day" />
                 <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="Class_Id" ColumnName="Class_Id" />

@@ -45,7 +45,13 @@ namespace PRPJECT4NEW.Tech_Team
 
         private void Recorded_lectures_display_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Recorded_lectures_display");
+            Recorded_lectures frm = new Recorded_lectures();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void list_of_conferences_Button_Click(object sender, EventArgs e)
