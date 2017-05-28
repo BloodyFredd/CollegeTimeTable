@@ -162,12 +162,6 @@
     <Compile Include="Dean_of_Faculty\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dean_of_Faculty\Messages.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dean_of_Faculty\Messages.Designer.cs">
-      <DependentUpon>Messages.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dean_of_Faculty\ScholarshipForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,18 +173,6 @@
     </Compile>
     <Compile Include="Dean_of_Faculty\Special_date.Designer.cs">
       <DependentUpon>Special_date.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dean_of_Faculty\Stu_Request.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dean_of_Faculty\Stu_Request.Designer.cs">
-      <DependentUpon>Stu_Request.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dean_of_Faculty\Tech_support.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dean_of_Faculty\Tech_support.Designer.cs">
-      <DependentUpon>Tech_support.cs</DependentUpon>
     </Compile>
     <Compile Include="DF_requests.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
@@ -476,17 +458,8 @@
     <EmbeddedResource Include="Admin\StudentExemption.resx">
       <DependentUpon>StudentExemption.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dean_of_Faculty\Messages.resx">
-      <DependentUpon>Messages.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Dean_of_Faculty\Special_date.resx">
       <DependentUpon>Special_date.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dean_of_Faculty\Stu_Request.resx">
-      <DependentUpon>Stu_Request.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dean_of_Faculty\Tech_support.resx">
-      <DependentUpon>Tech_support.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Exams_Section\Special_Test.resx">
       <DependentUpon>Special_Test.cs</DependentUpon>
