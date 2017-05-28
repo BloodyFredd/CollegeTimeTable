@@ -16,6 +16,7 @@ namespace PRPJECT4NEW.Tech_Team
         {
             InitializeComponent();
             Buttons_view.Visible = false;
+
         }
 
         private void Available_Classes_button_Click(object sender, EventArgs e)
