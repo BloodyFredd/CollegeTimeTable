@@ -37,7 +37,7 @@ namespace PRPJECT4NEW.Tech_Team
         {
             using (Entities db = new Entities())
             {
-                var allRowes = db.DF_requests.ToList();
+                //var allRowes = db.DF_requests.ToList();
                 //Create Columns
                 dataGridView.Columns.Add("Date", "Date");
                 dataGridView.Columns.Add("Intended to", "Intended_to");
@@ -93,15 +93,6 @@ namespace PRPJECT4NEW.Tech_Team
 
                     var csv = new StringBuilder();
                     DF_requests req = new DF_requests();
-                    
-
-                    string v1 = "Date";
-                    string v2 = "Intendet to";
-                    string v3 = "Subject";
-                    string v4 = "Message";
-                    string v5 = "Status";
-                    var newLine = string.Format("{0},{1},{2},{3},{4}", v1, v2, v3, v4, v5);
-                    //ner.Date = Convert.ToDateTime(v1);
                     
                     using (var sw = new StreamWriter(save.FileName))
                     {

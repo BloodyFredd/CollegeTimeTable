@@ -17,7 +17,7 @@ namespace PRPJECT4NEW
         public int Course_id { get; set; }
         public string Course_name { get; set; }
         public double Nakaz { get; set; }
-        public string Year { get; set; }
+        public int Year { get; set; }
         public string Semester { get; set; }
         public Nullable<int> Blocking_Cource { get; set; }
     }

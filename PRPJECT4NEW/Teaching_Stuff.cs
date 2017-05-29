@@ -17,8 +17,5 @@ namespace PRPJECT4NEW
         public string ID { get; set; }
         public int Course_id { get; set; }
         public string Office { get; set; }
-        public string Reception_day { get; set; }
-        public Nullable<double> Reception_startTime { get; set; }
-        public Nullable<double> Reception_endTime { get; set; }
     }
 }

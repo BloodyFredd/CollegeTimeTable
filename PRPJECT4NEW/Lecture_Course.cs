@@ -16,7 +16,7 @@ namespace PRPJECT4NEW
     {
         public int Course_ID { get; set; }
         public int Course_Serial { get; set; }
-        public int Group_num { get; set; }
+        public int Course_type { get; set; }
         public string Teacher { get; set; }
         public string Date { get; set; }
         public Nullable<int> Start_time { get; set; }

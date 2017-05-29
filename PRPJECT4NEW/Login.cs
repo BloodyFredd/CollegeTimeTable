@@ -57,6 +57,7 @@ namespace PRPJECT4NEW
                         txtpassword.Text = "Password";
                         txtpassword.UseSystemPasswordChar = false;
                         Center(this);
+                        //yes
                     }
                     else
                     {   //Can't find ID + Password

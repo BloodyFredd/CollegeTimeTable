@@ -22,5 +22,7 @@ namespace PRPJECT4NEW
         public Nullable<double> quiz1 { get; set; }
         public Nullable<double> quiz2 { get; set; }
         public Nullable<int> final_grade { get; set; }
+        public Nullable<int> Type { get; set; }
+        public Nullable<int> course_serial { get; set; }
     }
 }

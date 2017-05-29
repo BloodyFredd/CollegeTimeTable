@@ -32,5 +32,7 @@ namespace PRPJECT4NEW
         public Nullable<double> C19_20 { get; set; }
         public Nullable<double> C20_21 { get; set; }
         public Nullable<double> holiday { get; set; }
+        public string day { get; set; }
+        public string record { get; set; }
     }
 }

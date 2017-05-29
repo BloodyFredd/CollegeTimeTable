@@ -21,31 +21,41 @@ namespace PRPJECT4NEW.Tech_Team
 
         private void Available_Classes_button_Click(object sender, EventArgs e)
         {
-
-            //Calendar frm = new Calendar("Matan", 123456);
-            //frm.TopLevel = false;
-            ////frm.FormBorderStyle = FormBorderStyle.None;
-            ////frm.WindowState = FormWindowState.Maximized;
-            //Buttons_view.Controls.Add(frm);
-            //Buttons_view.Visible = true;
-            //frm.Show();
+            Available_Classes frm = new Available_Classes();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
 
         }
 
 
         private void classes_with_more_than_10_students_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("classes_with_more_than_10_students");
+            Classes_with10_stu frm = new Classes_with10_stu();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Recorded_lectures_display_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Recorded_lectures_display");
+            Recorded_lectures frm = new Recorded_lectures();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void list_of_conferences_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("list of conferences in college in this week");
             Conferences_List frm = new Conferences_List();
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;
