@@ -46,6 +46,7 @@ namespace PRPJECT4NEW
                    // MessageBox.Show(EncryptPass);
                     if (context.Person.Any(p => p.ID == UserID && p.Password == EncryptPass))
                     {
+                        //Utility.User.ID = string.Copy(Utility.User.ID.ToString());
                         Utility.User = context.Person.SingleOrDefault(p => p.ID == UserID);
                         this.Hide();
                         LoadMenu();

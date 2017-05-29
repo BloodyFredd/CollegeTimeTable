@@ -36,7 +36,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
 
-            SqlCommand cmd = new SqlCommand("declare @results varchar(50) select @results = convert(varchar(50),Course_id) from Teaching_Stuff  WHERE Teaching_Stuff.ID = '" + Forms.UserID.ID + "' SELECT Person.F_name,Person.L_name,Teaching_Stuff.ID,Teaching_Stuff.Course_id,Teaching_Stuff.office,Person.Email FROM Teaching_Stuff JOIN Person on Person.ID=Teaching_Stuff.ID WHERE Course_id  = @results AND Teaching_Stuff.ID  != '" + Forms.UserID.ID + "'", sqlcon);
+            SqlCommand cmd = new SqlCommand("declare @results varchar(50) select @results = convert(varchar(50),Course_id) from Teaching_Stuff  WHERE Teaching_Stuff.ID = '" + Utility.User.ID + "' SELECT Person.F_name,Person.L_name,Teaching_Stuff.ID,Teaching_Stuff.Course_id,Teaching_Stuff.office,Person.Email FROM Teaching_Stuff JOIN Person on Person.ID=Teaching_Stuff.ID WHERE Course_id  = @results AND Teaching_Stuff.ID  != '" + Utility.User.ID + "'", sqlcon);
              
             try
             {
@@ -70,7 +70,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
             this.sqlcon = new SqlConnection(connetionString);
             try
             {
-                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id, Student_Courses.grade_a, Student_Courses.grade_b, Student_Courses.grade_c, Student_Courses.quiz1, Student_Courses.quiz2, Student_Courses.final_grade FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "' and Type != 1", sqlcon);
+                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id, Student_Courses.grade_a, Student_Courses.grade_b, Student_Courses.grade_c, Student_Courses.quiz1, Student_Courses.quiz2, Student_Courses.final_grade FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Utility.User.ID + "' and Type != 1", sqlcon);
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
@@ -100,7 +100,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
 
             try
             {
-                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "' and Type = 1", sqlcon);
+                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Utility.User.ID + "' and Type = 1", sqlcon);
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
@@ -179,9 +179,9 @@ namespace PRPJECT4NEW.Teaching_Assistant
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand("select Lecture_Course.Course_ID,Lecture_Course.Course_Serial,courses.Course_Name from Lecture_Course LEFT join courses on Lecture_Course.Course_ID=courses.Course_id where Teacher='" + Forms.UserID.ID + "'", sqlcon);
+            SqlCommand cmd = new SqlCommand("select Teaching_Stuff.Course_id, courses.Course_Name from Teaching_Stuff LEFT JOIN courses on Teaching_Stuff.Course_id = courses.Course_id where Teaching_Stuff.ID ='" + Utility.User.ID + "'", sqlcon);
             StudentsReport.Visible = true;
-
+            //Lecture_Course.Course_ID=courses.Course_id where 
             try
             {
 
@@ -203,7 +203,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
 
         private void Print_Click(object sender, EventArgs e)
         {
-            string str = "Student Detailes",string2= Forms.UserID.ID;
+            string str = "Student Detailes",string2= Utility.User.ID;
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             path = path.Replace(@"\", @"\\");
             path += "\\";
@@ -216,7 +216,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
 
                 using (SqlConnection connection = new SqlConnection(connetionString))
                 {
-                    string query = "select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Forms.UserID.ID + "'" ;
+                    string query = "select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Utility.User.ID + "'" ;
 
                     SqlCommand command = new SqlCommand(query, connection);
                     connection.Open();

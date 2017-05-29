@@ -32,7 +32,7 @@ namespace PRPJECT4NEW.Lecturer
             try
             {
 
-                SqlCommand cmd14 = new SqlCommand("select * from Teaching_Stuff where ID ='" + Forms.UserID.ID + "' and Course_id='" + CourseID_Button.Text + "'", sqlcon);
+                SqlCommand cmd14 = new SqlCommand("select * from Teaching_Stuff where ID ='" + Utility.User.ID + "' and Course_id='" + CourseID_Button.Text + "'", sqlcon);
                 SqlCommand cmd15 = new SqlCommand("select [08-09] from Classes_SM1 where Class_Id ='" + Office_Button.Text + "'", sqlcon);
                 this.sqlcon.Open();
                 SqlDataReader dr = cmd14.ExecuteReader();
@@ -46,7 +46,7 @@ namespace PRPJECT4NEW.Lecturer
                         {
                             if (Int32.Parse(dr[0].ToString()) == 0)
                             {
-                                SqlCommand cmd = new SqlCommand("update Teaching_Stuff set Office ='" + Office_Button.Text + "' where Course_id ='" + CourseID_Button.Text + "' and ID = '" + Forms.UserID.ID + "'", sqlcon);
+                                SqlCommand cmd = new SqlCommand("update Teaching_Stuff set Office ='" + Office_Button.Text + "' where Course_id ='" + CourseID_Button.Text + "' and ID = '" + Utility.User.ID + "'", sqlcon);
                                 SqlCommand cmd1 = new SqlCommand("update Classes_SM1 set [08-09]=[08-09] + 1 where Class_Id ='" + Office_Button.Text + "'", sqlcon);
                                 SqlCommand cmd2 = new SqlCommand("update Classes_SM1 set [09-10]=[09-10] + 1 where Class_Id ='" + Office_Button.Text + "'", sqlcon);
                                 SqlCommand cmd3 = new SqlCommand("update Classes_SM1 set [10-11]=[10-11] + 1 where Class_Id ='" + Office_Button.Text + "'", sqlcon);

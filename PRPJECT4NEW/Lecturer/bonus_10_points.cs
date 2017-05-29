@@ -41,13 +41,13 @@ namespace PRPJECT4NEW.Lecturer
                     if (dr.Read() == true)
                     {
                         dr.Close();
-                        cmd = new SqlCommand("select * from Teaching_Stuff where ID ='" + Forms.UserID.ID + "' and Course_id='" + course_id.Text + "'", sqlcon);
+                        cmd = new SqlCommand("select * from Teaching_Stuff where ID ='" + Utility.User.ID + "' and Course_id='" + course_id.Text + "'", sqlcon);
                         dr = cmd.ExecuteReader();
                         if (dr.Read() == true)
                         {
 
                             dr.Close();
-                            cmd = new SqlCommand("select * from Teaching_Stuff where ID ='" + Forms.UserID.ID + "' and Course_id='" + course_id.Text + "'", sqlcon);
+                            cmd = new SqlCommand("select * from Teaching_Stuff where ID ='" + Utility.User.ID + "' and Course_id='" + course_id.Text + "'", sqlcon);
                             dr = cmd.ExecuteReader();
                             if (dr.Read() == true)
                             {

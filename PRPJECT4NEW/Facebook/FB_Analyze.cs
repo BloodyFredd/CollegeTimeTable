@@ -58,7 +58,7 @@
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.Read() == true)
                     {
-                        PRPJECT4NEW.Forms.UserID.ID = string.Copy(dr[0].ToString());
+                        PRPJECT4NEW.Utility.User.ID = string.Copy(dr[0].ToString());
                         if (dr[6].ToString() == "Admin")
                         {
                             //this.Hide();

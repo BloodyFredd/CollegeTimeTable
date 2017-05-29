@@ -41,7 +41,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
                     if (dr.Read() == true)
                     {
                         dr.Close();
-                        cmd = new SqlCommand("select * from Teaching_Stuff where ID ='" + Forms.UserID.ID + "' and Course_id='" + CourseID_Button.Text + "'", sqlcon);
+                        cmd = new SqlCommand("select * from Teaching_Stuff where ID ='" + Utility.User.ID + "' and Course_id='" + CourseID_Button.Text + "'", sqlcon);
                         dr = cmd.ExecuteReader();
                         if (dr.Read() == true)
                         {
