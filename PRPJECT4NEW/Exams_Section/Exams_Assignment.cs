@@ -14,7 +14,6 @@ namespace PRPJECT4NEW.Exams_Section
     {
         public Exams_Assignment()
         {
-            SendMail sender;
             InitializeComponent();
             Exams_List_Load();
             Combo_Course_Load();
@@ -133,9 +132,11 @@ namespace PRPJECT4NEW.Exams_Section
                     context.SaveChanges();
                     reloadDataGridView(context);
 
-                    string mesage = "Dear " + Super1_box.Text + "\nyou have new exam at " + Start_Time_Box.Value + ":00 - " + End_Time_Box.Value + ":00 at class " + Combo_Class_ID.Text;
+                    string mesage1 = "Dear " + Super1_box.Text + "\nyou have new exam at " + Start_Time_Box.Value + ":00 - " + End_Time_Box.Value + ":00 at class " + Combo_Class_ID.Text;
+                    string mesage2 = "Dear " + Super2_box.Text + "\nyou have new exam at " + Start_Time_Box.Value + ":00 - " + End_Time_Box.Value + ":00 at class " + Combo_Class_ID.Text;
                     SendMail senders = new SendMail();
-                    senders.Send(Getmail(Super1_box.Text), "New exam!", mesage);
+                    senders.Send(Getmail(Super1_box.Text), "New exam!", mesage1);
+                    senders.Send(Getmail(Super2_box.Text), "New exam!", mesage2);
 
                 }
             }          
