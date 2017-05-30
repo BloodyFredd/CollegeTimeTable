@@ -39,5 +39,6 @@ namespace PRPJECT4NEW
         public virtual DbSet<cours> courses { get; set; }
         public virtual DbSet<Lecture_Course> Lecture_Course { get; set; }
         public virtual DbSet<Teaching_Stuff> Teaching_Stuff { get; set; }
+        public virtual DbSet<Exam> Exams { get; set; }
     }
 }

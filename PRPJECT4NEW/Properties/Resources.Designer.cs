@@ -63,6 +63,26 @@ namespace PRPJECT4NEW.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg_pattern {
+            get {
+                object obj = ResourceManager.GetObject("bg_pattern", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bg_pattern2 {
+            get {
+                object obj = ResourceManager.GetObject("bg_pattern2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap facebook_btn {
             get {
                 object obj = ResourceManager.GetObject("facebook_btn", resourceCulture);

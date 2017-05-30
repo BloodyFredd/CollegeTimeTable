@@ -12,16 +12,16 @@ namespace PRPJECT4NEW
     using System;
     using System.Collections.Generic;
     
-    public partial class Lecture_Course
+    public partial class Exam
     {
+        public int ID { get; set; }
         public int Course_ID { get; set; }
-        public int Course_Serial { get; set; }
-        public int Course_type { get; set; }
-        public string Teacher { get; set; }
-        public string Date { get; set; }
-        public int Start_time { get; set; }
-        public int End_time { get; set; }
-        public string Class_number { get; set; }
-        public int Student_Count { get; set; }
+        public int Start_Time { get; set; }
+        public int End_Time { get; set; }
+        public string Class { get; set; }
+        public string Superviser1_ID { get; set; }
+        public string Superviser2_ID { get; set; }
+        public int Student_Enrolled { get; set; }
+        public System.DateTime Date { get; set; }
     }
 }

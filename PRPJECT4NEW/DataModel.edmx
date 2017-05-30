@@ -115,12 +115,13 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="Course_ID" Type="int" Nullable="false" />
-          <Property Name="Start_Time" Type="int" />
-          <Property Name="End_Time" Type="int" />
-          <Property Name="Class" Type="nchar" MaxLength="10" />
-          <Property Name="Superviser1_ID" Type="nchar" MaxLength="10" />
-          <Property Name="Superviser2_ID" Type="nchar" MaxLength="10" />
-          <Property Name="Student_Enrolled" Type="int" />
+          <Property Name="Start_Time" Type="int" Nullable="false" />
+          <Property Name="End_Time" Type="int" Nullable="false" />
+          <Property Name="Class" Type="text" Nullable="false" />
+          <Property Name="Superviser1_ID" Type="text" Nullable="false" />
+          <Property Name="Superviser2_ID" Type="text" Nullable="false" />
+          <Property Name="Student_Enrolled" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Lecture_Course">
           <Key>
@@ -473,12 +474,13 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="Course_ID" Type="Int32" Nullable="false" />
-          <Property Name="Start_Time" Type="Int32" />
-          <Property Name="End_Time" Type="Int32" />
-          <Property Name="Class" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Superviser1_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Superviser2_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Student_Enrolled" Type="Int32" />
+          <Property Name="Start_Time" Type="Int32" Nullable="false" />
+          <Property Name="End_Time" Type="Int32" Nullable="false" />
+          <Property Name="Class" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Superviser1_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Superviser2_ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Student_Enrolled" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -695,6 +697,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySetMapping Name="Exams">
             <EntityTypeMapping TypeName="MazalModel.Exam">
               <MappingFragment StoreEntitySet="Exams">
+                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Student_Enrolled" ColumnName="Student_Enrolled" />
                 <ScalarProperty Name="Superviser2_ID" ColumnName="Superviser2_ID" />
                 <ScalarProperty Name="Superviser1_ID" ColumnName="Superviser1_ID" />
