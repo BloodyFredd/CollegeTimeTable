@@ -136,5 +136,15 @@ namespace PRPJECT4NEW.Properties {
                 return ResourceManager.GetString("String", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap test_results__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("test-results (Custom)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
