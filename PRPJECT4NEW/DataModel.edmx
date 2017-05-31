@@ -39,9 +39,9 @@
           <Property Name="date" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="day" Type="nvarchar" MaxLength="255" />
           <Property Name="Class_Id" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="Type" Type="nvarchar" MaxLength="255" />
-          <Property Name="Capacity" Type="float" />
-          <Property Name="08-09" Type="float" />
+          <Property Name="Type" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Capacity" Type="float" Nullable="false" />
+          <Property Name="08-09" Type="float" Nullable="false" />
           <Property Name="09-10" Type="float" />
           <Property Name="10-11" Type="float" />
           <Property Name="11-12" Type="float" />
@@ -166,6 +166,7 @@
           <Key>
             <PropertyRef Name="stud_Id" />
             <PropertyRef Name="course_id" />
+            <PropertyRef Name="Type" />
           </Key>
           <Property Name="stud_Id" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="course_id" Type="float" Nullable="false" />
@@ -175,21 +176,29 @@
           <Property Name="quiz1" Type="float" />
           <Property Name="quiz2" Type="float" />
           <Property Name="final_grade" Type="int" />
-          <Property Name="Type" Type="int" />
+          <Property Name="Type" Type="int" Nullable="false" />
           <Property Name="course_serial" Type="int" />
+          <Property Name="Exam1_ID" Type="int" />
+          <Property Name="Exam2_ID" Type="int" />
+          <Property Name="Exam3_ID" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="student_request">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Subject" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Message" Type="text" />
+          <Property Name="Status" Type="text" Nullable="false" />
+        </EntityType>
         <EntityType Name="Student_special_Exam">
           <Key>
             <PropertyRef Name="ID" />
-            <PropertyRef Name="Course_Serial" />
-            <PropertyRef Name="Date" />
           </Key>
           <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Course_Serial" Type="int" Nullable="false" />
           <Property Name="Date" Type="datetime" Nullable="false" />
-          <Property Name="Status" Type="bit" />
+          <Property Name="Status" Type="text" />
         </EntityType>
         <EntityType Name="students">
           <Key>
@@ -234,49 +243,17 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Scholarships" EntityType="Self.Scholarships" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Student_Courses" EntityType="Self.Student_Courses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="student_request" EntityType="Self.student_request" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student_special_Exam" EntityType="Self.Student_special_Exam" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="students" EntityType="Self.students" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Teaching_Stuff" EntityType="Self.Teaching_Stuff" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Student_special_Exam" EntityType="Self.Student_special_Exam" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Student_special_Exam].[ID] AS [ID], 
-    [Student_special_Exam].[Course_Serial] AS [Course_Serial], 
-    [Student_special_Exam].[Date] AS [Date], 
-    [Student_special_Exam].[Status] AS [Status]
-    FROM [dbo].[Student_special_Exam] AS [Student_special_Exam]</DefiningQuery>
-          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MazalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Classes_SM1">
-          <Key>
-            <PropertyRef Name="date" />
-            <PropertyRef Name="Class_Id" />
-          </Key>
-          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Class_Id" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="Capacity" Type="Double" />
-          <Property Name="C08_09" Type="Double" />
-          <Property Name="C09_10" Type="Double" />
-          <Property Name="C10_11" Type="Double" />
-          <Property Name="C11_12" Type="Double" />
-          <Property Name="C12_13" Type="Double" />
-          <Property Name="C13_14" Type="Double" />
-          <Property Name="C14_15" Type="Double" />
-          <Property Name="C15_16" Type="Double" />
-          <Property Name="C16_17" Type="Double" />
-          <Property Name="C17_18" Type="Double" />
-          <Property Name="C18_19" Type="Double" />
-          <Property Name="C19_20" Type="Double" />
-          <Property Name="C20_21" Type="Double" />
-          <Property Name="holiday" Type="Double" />
-          <Property Name="day" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="record" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
-        </EntityType>
-        <EntityType Name="Classes_SM2">
           <Key>
             <PropertyRef Name="date" />
             <PropertyRef Name="Class_Id" />
@@ -334,6 +311,7 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Key>
             <PropertyRef Name="stud_Id" />
             <PropertyRef Name="course_id" />
+            <PropertyRef Name="Type" />
           </Key>
           <Property Name="stud_Id" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="course_id" Type="Double" Nullable="false" />
@@ -343,8 +321,11 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="quiz1" Type="Double" />
           <Property Name="quiz2" Type="Double" />
           <Property Name="final_grade" Type="Int32" />
-          <Property Name="Type" Type="Int32" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
           <Property Name="course_serial" Type="Int32" />
+          <Property Name="Exam1_ID" Type="Int32" />
+          <Property Name="Exam2_ID" Type="Int32" />
+          <Property Name="Exam3_ID" Type="Int32" />
         </EntityType>
         <EntityType Name="student">
           <Key>
@@ -370,13 +351,11 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
         </EntityType>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Classes_SM1" EntityType="Self.Classes_SM1" />
-          <EntitySet Name="Classes_SM2" EntityType="Self.Classes_SM2" />
           <EntitySet Name="Course_detail" EntityType="Self.Course_detail" />
           <EntitySet Name="Scholarships" EntityType="Self.Scholarship" />
           <EntitySet Name="Student_Courses" EntityType="Self.Student_Courses" />
           <EntitySet Name="students" EntityType="Self.student" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <EntitySet Name="Student_special_Exam" EntityType="MazalModel.Student_special_Exam" />
           <EntitySet Name="Person" EntityType="MazalModel.Person" />
           <EntitySet Name="Conferences" EntityType="MazalModel.Conference" />
           <EntitySet Name="DF_requests" EntityType="MazalModel.DF_requests" />
@@ -384,18 +363,10 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySet Name="Lecture_Course" EntityType="MazalModel.Lecture_Course" />
           <EntitySet Name="Teaching_Stuff" EntityType="MazalModel.Teaching_Stuff" />
           <EntitySet Name="Exams" EntityType="MazalModel.Exam" />
+          <EntitySet Name="Classes_SM2" EntityType="MazalModel.Classes_SM2" />
+          <EntitySet Name="student_request" EntityType="MazalModel.student_request" />
+          <EntitySet Name="Student_special_Exam" EntityType="MazalModel.Student_special_Exam" />
         </EntityContainer>
-        <EntityType Name="Student_special_Exam">
-          <Key>
-            <PropertyRef Name="ID" />
-            <PropertyRef Name="Course_Serial" />
-            <PropertyRef Name="Date" />
-          </Key>
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Course_Serial" Type="Int32" Nullable="false" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Status" Type="Boolean" />
-        </EntityType>
         <EntityType Name="Person">
           <Key>
             <PropertyRef Name="ID" />
@@ -482,6 +453,50 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <Property Name="Student_Enrolled" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
+        <EntityType Name="Classes_SM2">
+          <Key>
+            <PropertyRef Name="date" />
+            <PropertyRef Name="Class_Id" />
+          </Key>
+          <Property Name="date" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="day" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Class_Id" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Capacity" Type="Double" Nullable="false" />
+          <Property Name="C08_09" Type="Double" Nullable="false" />
+          <Property Name="C09_10" Type="Double" />
+          <Property Name="C10_11" Type="Double" />
+          <Property Name="C11_12" Type="Double" />
+          <Property Name="C12_13" Type="Double" />
+          <Property Name="C13_14" Type="Double" />
+          <Property Name="C14_15" Type="Double" />
+          <Property Name="C15_16" Type="Double" />
+          <Property Name="C16_17" Type="Double" />
+          <Property Name="C17_18" Type="Double" />
+          <Property Name="C18_19" Type="Double" />
+          <Property Name="C19_20" Type="Double" />
+          <Property Name="C20_21" Type="Double" />
+          <Property Name="holiday" Type="Double" />
+          <Property Name="record" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="student_request">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Student_special_Exam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Course_Serial" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -491,32 +506,6 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySetMapping Name="Classes_SM1">
             <EntityTypeMapping TypeName="MazalModel.Classes_SM1">
               <MappingFragment StoreEntitySet="Classes_SM1">
-                <ScalarProperty Name="record" ColumnName="record" />
-                <ScalarProperty Name="day" ColumnName="day" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="Class_Id" ColumnName="Class_Id" />
-                <ScalarProperty Name="Type" ColumnName="Type" />
-                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
-                <ScalarProperty Name="C08_09" ColumnName="08-09" />
-                <ScalarProperty Name="C09_10" ColumnName="09-10" />
-                <ScalarProperty Name="C10_11" ColumnName="10-11" />
-                <ScalarProperty Name="C11_12" ColumnName="11-12" />
-                <ScalarProperty Name="C12_13" ColumnName="12-13" />
-                <ScalarProperty Name="C13_14" ColumnName="13-14" />
-                <ScalarProperty Name="C14_15" ColumnName="14-15" />
-                <ScalarProperty Name="C15_16" ColumnName="15-16" />
-                <ScalarProperty Name="C16_17" ColumnName="16-17" />
-                <ScalarProperty Name="C17_18" ColumnName="17-18" />
-                <ScalarProperty Name="C18_19" ColumnName="18-19" />
-                <ScalarProperty Name="C19_20" ColumnName="19-20" />
-                <ScalarProperty Name="C20_21" ColumnName="20-21" />
-                <ScalarProperty Name="holiday" ColumnName="holiday" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Classes_SM2">
-            <EntityTypeMapping TypeName="MazalModel.Classes_SM2">
-              <MappingFragment StoreEntitySet="Classes_SM2">
                 <ScalarProperty Name="record" ColumnName="record" />
                 <ScalarProperty Name="day" ColumnName="day" />
                 <ScalarProperty Name="date" ColumnName="date" />
@@ -573,6 +562,9 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
           <EntitySetMapping Name="Student_Courses">
             <EntityTypeMapping TypeName="MazalModel.Student_Courses">
               <MappingFragment StoreEntitySet="Student_Courses">
+                <ScalarProperty Name="Exam3_ID" ColumnName="Exam3_ID" />
+                <ScalarProperty Name="Exam2_ID" ColumnName="Exam2_ID" />
+                <ScalarProperty Name="Exam1_ID" ColumnName="Exam1_ID" />
                 <ScalarProperty Name="course_serial" ColumnName="course_serial" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="stud_Id" ColumnName="stud_Id" />
@@ -607,16 +599,6 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Student_special_Exam">
-            <EntityTypeMapping TypeName="MazalModel.Student_special_Exam">
-              <MappingFragment StoreEntitySet="Student_special_Exam">
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Course_Serial" ColumnName="Course_Serial" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -705,6 +687,52 @@ warning 6002: The table/view 'Mazal.dbo.Student_special_Exam' does not have a pr
                 <ScalarProperty Name="End_Time" ColumnName="End_Time" />
                 <ScalarProperty Name="Start_Time" ColumnName="Start_Time" />
                 <ScalarProperty Name="Course_ID" ColumnName="Course_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Classes_SM2">
+            <EntityTypeMapping TypeName="MazalModel.Classes_SM2">
+              <MappingFragment StoreEntitySet="Classes_SM2">
+                <ScalarProperty Name="record" ColumnName="record" />
+                <ScalarProperty Name="holiday" ColumnName="holiday" />
+                <ScalarProperty Name="C20_21" ColumnName="20-21" />
+                <ScalarProperty Name="C19_20" ColumnName="19-20" />
+                <ScalarProperty Name="C18_19" ColumnName="18-19" />
+                <ScalarProperty Name="C17_18" ColumnName="17-18" />
+                <ScalarProperty Name="C16_17" ColumnName="16-17" />
+                <ScalarProperty Name="C15_16" ColumnName="15-16" />
+                <ScalarProperty Name="C14_15" ColumnName="14-15" />
+                <ScalarProperty Name="C13_14" ColumnName="13-14" />
+                <ScalarProperty Name="C12_13" ColumnName="12-13" />
+                <ScalarProperty Name="C11_12" ColumnName="11-12" />
+                <ScalarProperty Name="C10_11" ColumnName="10-11" />
+                <ScalarProperty Name="C09_10" ColumnName="09-10" />
+                <ScalarProperty Name="C08_09" ColumnName="08-09" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Class_Id" ColumnName="Class_Id" />
+                <ScalarProperty Name="day" ColumnName="day" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="student_request">
+            <EntityTypeMapping TypeName="MazalModel.student_request">
+              <MappingFragment StoreEntitySet="student_request">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Student_special_Exam">
+            <EntityTypeMapping TypeName="MazalModel.Student_special_Exam">
+              <MappingFragment StoreEntitySet="Student_special_Exam">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Course_Serial" ColumnName="Course_Serial" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

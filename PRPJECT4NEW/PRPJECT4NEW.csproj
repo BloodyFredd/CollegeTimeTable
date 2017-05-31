@@ -367,6 +367,9 @@
     <Compile Include="Student_Courses.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="student_request.cs">
+      <DependentUpon>DataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Student_special_Exam.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
