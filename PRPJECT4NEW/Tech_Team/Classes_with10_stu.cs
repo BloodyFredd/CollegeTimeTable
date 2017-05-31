@@ -136,9 +136,15 @@ namespace PRPJECT4NEW.Tech_Team
         //add dates to date combo box
         private void addDatesToDate_cmb()
         {
-            DateTime today = new DateTime(2017,01,01);
-            for (int i = 0; i < 90; i++)
-                date_cmb.Items.Add(today.AddDays(i).ToShortDateString());
+            DateTime today = new DateTime(2017, 03, 12);
+            DateTime endDay = new DateTime(2017, 06, 30);
+            while (today <= endDay)
+            {
+
+                if (today.DayOfWeek.ToString() != "Saturday")
+                    date_cmb.Items.Add(today.ToShortDateString());
+                today = today.AddDays(1);
+            }
         }
 
         //add capacities to cap combo box
@@ -167,9 +173,9 @@ namespace PRPJECT4NEW.Tech_Team
                             capacity = Convert.ToInt32(cap_cmb.Text.ToString());
                         if (s.date.Length==10)
                         {
-                            if (s.date.ToString().Substring(0, 4) == date_cmb.Text.Substring(6, 4) &&
-                                s.date.ToString().Substring(5, 2) == date_cmb.Text.Substring(3, 2) &&
-                                s.date.ToString().Substring(8, 2) == date_cmb.Text.Substring(0, 2) &&
+                            if (s.date.ToString().Substring(6, 4) == date_cmb.Text.Substring(6, 4) && //year
+                                s.date.ToString().Substring(0, 2) == date_cmb.Text.Substring(3, 2) && //month
+                                s.date.ToString().Substring(3, 2) == date_cmb.Text.Substring(0, 2) && //days
                                 Convert.ToInt32(s.Capacity.Value.ToString()) >= capacity)
                             {
                                 dataGridView.Rows.Add(s.date.ToString(), s.day.ToString(), s.Class_Id.ToString(), s.Type.ToString(),
