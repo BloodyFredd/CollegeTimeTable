@@ -86,9 +86,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 MessageBox.Show(ex.Message);
                 this.Close();
                 Reports form2 = new Reports();
-                form2.StartPosition = FormStartPosition.Manual;
-                form2.SetDesktopBounds(218, 46, 1520, 820);
-                form2.ShowDialog();
+                form2.Show();
             }
         }
 
@@ -274,6 +272,12 @@ namespace PRPJECT4NEW.Teaching_Assistant
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
    

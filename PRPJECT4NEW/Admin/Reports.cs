@@ -58,12 +58,16 @@ namespace PRPJECT4NEW.Admin
             }
             catch (SqlException ex)
             {
-                this.Close();
+                //this.Close();
                 MessageBox.Show("Error selecting course id, try again!\n"+ex.ToString());
+                CourseID.Text = "";
                 Reports form2 = new Reports();
-                form2.StartPosition = FormStartPosition.Manual;
-                form2.SetDesktopBounds(218, 46, 1320, 820);
-                form2.ShowDialog();
+                form2.TopLevel = false;
+                form2.FormBorderStyle = FormBorderStyle.None;
+                form2.WindowState = FormWindowState.Maximized;
+                this.Controls.Add(form2);
+                this.Visible = true;
+                form2.Show();
             }
             catch (Exception ex)
             {
@@ -107,12 +111,17 @@ namespace PRPJECT4NEW.Admin
                 }
                 else
                 {
-                    this.Close();
+                    //this.Close();
+                    toolStripComboBox3.Text = "";
+                    toolStripComboBox4.Text = "";
                     MessageBox.Show("Error selecting dates, try again!");
-                    Reports form2 = new Reports();
-                    form2.StartPosition = FormStartPosition.Manual;
-                    form2.SetDesktopBounds(218, 46, 1320, 820);
-                    form2.ShowDialog();
+                    //Reports form2 = new Reports();
+                    //form2.TopLevel = false;
+                    //form2.FormBorderStyle = FormBorderStyle.None;
+                    //form2.WindowState = FormWindowState.Maximized;
+                    //this.Controls.Add(form2);
+                    //this.Visible = true;
+                    //form2.Show();
 
                 }
 
@@ -342,8 +351,13 @@ namespace PRPJECT4NEW.Admin
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
-    }
+}
 
 
 

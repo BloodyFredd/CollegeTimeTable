@@ -17,17 +17,19 @@ namespace PRPJECT4NEW.Secretary
         public Menu()
         {
             InitializeComponent();
-            Buttons_view.Visible = false;
+            panel5.Visible = false;
 
         }
 
         private void Exams_report_button_Click(object sender, EventArgs e)
         {
             Reports form2 = new Reports();
-            form2.StartPosition = FormStartPosition.Manual;
-            form2.SetDesktopBounds(218, 46, 1520, 820);
-            form2.ShowDialog();
-
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
+            form2.Show();
 
         }
 
