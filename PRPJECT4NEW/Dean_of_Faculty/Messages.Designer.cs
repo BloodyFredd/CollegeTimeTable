@@ -55,7 +55,7 @@
             // 
             this.Add_New_Message_btn.Location = new System.Drawing.Point(12, 411);
             this.Add_New_Message_btn.Name = "Add_New_Message_btn";
-            this.Add_New_Message_btn.Size = new System.Drawing.Size(176, 23);
+            this.Add_New_Message_btn.Size = new System.Drawing.Size(176, 33);
             this.Add_New_Message_btn.TabIndex = 1;
             this.Add_New_Message_btn.Text = "Add New Message";
             this.Add_New_Message_btn.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             // 
             this.Delete_Message_btn.Location = new System.Drawing.Point(793, 411);
             this.Delete_Message_btn.Name = "Delete_Message_btn";
-            this.Delete_Message_btn.Size = new System.Drawing.Size(176, 23);
+            this.Delete_Message_btn.Size = new System.Drawing.Size(176, 50);
             this.Delete_Message_btn.TabIndex = 2;
             this.Delete_Message_btn.Text = "Delete Message";
             this.Delete_Message_btn.UseVisualStyleBackColor = true;
@@ -74,7 +74,7 @@
             // Intended_to_combo
             // 
             this.Intended_to_combo.FormattingEnabled = true;
-            this.Intended_to_combo.Location = new System.Drawing.Point(137, 450);
+            this.Intended_to_combo.Location = new System.Drawing.Point(133, 470);
             this.Intended_to_combo.Name = "Intended_to_combo";
             this.Intended_to_combo.Size = new System.Drawing.Size(121, 24);
             this.Intended_to_combo.TabIndex = 3;
@@ -82,7 +82,7 @@
             // Intended_to_lbl
             // 
             this.Intended_to_lbl.AutoSize = true;
-            this.Intended_to_lbl.Location = new System.Drawing.Point(21, 457);
+            this.Intended_to_lbl.Location = new System.Drawing.Point(44, 473);
             this.Intended_to_lbl.Name = "Intended_to_lbl";
             this.Intended_to_lbl.Size = new System.Drawing.Size(83, 17);
             this.Intended_to_lbl.TabIndex = 4;
@@ -91,7 +91,7 @@
             // Subject_lbl
             // 
             this.Subject_lbl.AutoSize = true;
-            this.Subject_lbl.Location = new System.Drawing.Point(332, 453);
+            this.Subject_lbl.Location = new System.Drawing.Point(332, 473);
             this.Subject_lbl.Name = "Subject_lbl";
             this.Subject_lbl.Size = new System.Drawing.Size(55, 17);
             this.Subject_lbl.TabIndex = 5;
@@ -108,7 +108,7 @@
             // 
             // Subject_textbox
             // 
-            this.Subject_textbox.Location = new System.Drawing.Point(393, 450);
+            this.Subject_textbox.Location = new System.Drawing.Point(393, 470);
             this.Subject_textbox.Name = "Subject_textbox";
             this.Subject_textbox.Size = new System.Drawing.Size(100, 22);
             this.Subject_textbox.TabIndex = 8;
