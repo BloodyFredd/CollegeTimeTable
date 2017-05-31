@@ -66,7 +66,7 @@ namespace PRPJECT4NEW.Exams_Section
                 int i = 0;
                 foreach (var s in context.Student_special_Exam)
                 {
-                    if (s.Status == true)
+                    if (s.Status == "Approved")
                     {
                         studentspecialExamBindingSource.DataSource = s;
 
@@ -92,7 +92,7 @@ namespace PRPJECT4NEW.Exams_Section
                 {
                     if (Combo_Course_name.Text == null)
                     {
-                        if (s.Status == true)
+                        if (s.Status == "Approved")
                         {
                             studentspecialExamBindingSource.DataSource = s;
                         }
