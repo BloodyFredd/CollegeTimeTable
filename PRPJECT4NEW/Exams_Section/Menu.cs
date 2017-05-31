@@ -22,30 +22,37 @@ namespace PRPJECT4NEW.Exams_Section
         private void Exams_report_button_Click(object sender, EventArgs e)
         {
 
-            //Calendar frm = new Calendar("Matan", 123456);
-            //frm.TopLevel = false;
-            ////frm.FormBorderStyle = FormBorderStyle.None;
-            ////frm.WindowState = FormWindowState.Maximized;
-            //Buttons_view.Controls.Add(frm);
-            //Buttons_view.Visible = true;
-            //frm.Show();
+            Exams_List frm = new Exams_List();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
 
         }
 
 
         private void Exams_Assignment_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams Assignment");
-        }
-
-        private void Supervisors_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Supervisors Assignment");
+            Exams_Assignment frm = new Exams_Assignment();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Supervisors_List_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Supervisors List");
+            Supervisor_List frm = new Supervisor_List();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Available_Classes_Button_Click(object sender, EventArgs e)

@@ -22,10 +22,14 @@ namespace PRPJECT4NEW.Teaching_Assistant
 
         private void Exams_report_button_Click(object sender, EventArgs e)
         {
-            Reports form2 = new Reports();
-            form2.StartPosition = FormStartPosition.Manual;
-            form2.SetDesktopBounds(218, 46, 1520, 820);
-            form2.ShowDialog();
+            Reports frm = new Reports();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(frm);
+            panel5.Visible = true;
+            frm.Show();
+
         }
 
 

@@ -51,7 +51,7 @@ namespace PRPJECT4NEW.Lecturer
                 }
 
                 dre.Close();
-                cmd = new SqlCommand("select * from Teaching_Stuff where ID = '" + Forms.UserID.ID + "' and Course_id = '" + CourseIDButton.Text + "'", sqlcon);
+                cmd = new SqlCommand("select * from Teaching_Stuff where ID = '" + Utility.User.ID + "' and Course_id = '" + CourseIDButton.Text + "'", sqlcon);
                 dre = cmd.ExecuteReader();
                 if (dre.Read())
                 {
@@ -105,16 +105,16 @@ namespace PRPJECT4NEW.Lecturer
                 else
                 {
                     dre.Close();
-                    SqlCommand cmd3 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + CourseIDButton.Text + "1', 1, '" + Forms.UserID.ID + "', '" + DayButton.Text + "', '" + StartButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
+                    SqlCommand cmd3 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + CourseIDButton.Text + "1', 1, '" + Utility.User.ID + "', '" + DayButton.Text + "', '" + StartButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
                     dre = cmd3.ExecuteReader();
                     dre.Close();
 
-                    cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Forms.UserID.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
+                    cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Utility.User.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
                     dre = cmd.ExecuteReader();
                     dre.Close();
                 }
 
-                cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Forms.UserID.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
+                cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Utility.User.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
