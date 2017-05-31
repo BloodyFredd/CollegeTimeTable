@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
-            this.StudentsReport = new System.Windows.Forms.DataGridView();
             this.Failing_Students = new System.Windows.Forms.Button();
             this.Available_Classes = new System.Windows.Forms.Button();
             this.CourseID = new System.Windows.Forms.ComboBox();
@@ -43,32 +41,12 @@
             this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Report = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
+            this.button2 = new System.Windows.Forms.Button();
+            this.StudentsReport = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.menuStrip2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.SuspendLayout();
-            // 
-            // StudentsReport
-            // 
-            this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(584, 124);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.StudentsReport.Name = "StudentsReport";
-            this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(1167, 882);
-            this.StudentsReport.TabIndex = 2;
-            this.StudentsReport.Visible = false;
-            this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
             // 
             // Failing_Students
             // 
@@ -198,6 +176,7 @@
             // 
             this.panel2.AccessibleName = "Buttons_place";
             this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.menuStrip2);
             this.panel2.Controls.Add(this.Available_Classes);
             this.panel2.Controls.Add(this.Print);
@@ -445,112 +424,52 @@
             this.toolStripComboBox4.Name = "toolStripComboBox4";
             this.toolStripComboBox4.Size = new System.Drawing.Size(121, 49);
             // 
-            // panel3
+            // button2
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(582, 122);
-            this.panel3.TabIndex = 0;
+            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(-3, 713);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(589, 83);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel4
+            // StudentsReport
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel4.Controls.Add(this.flowLayoutPanel2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(534, 122);
-            this.panel4.TabIndex = 1;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(262, 83);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(784, 234);
-            this.flowLayoutPanel2.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3639, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 2, 24, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 31, 90, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(112, 122);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // Report
-            // 
-            this.Report.AccessibleName = "Reports";
-            this.Report.AutoSize = true;
-            this.Report.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Report.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Report.ForeColor = System.Drawing.Color.White;
-            this.Report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Report.Location = new System.Drawing.Point(582, 0);
-            this.Report.Margin = new System.Windows.Forms.Padding(6, 21, 10, 0);
-            this.Report.Name = "Report";
-            this.Report.Padding = new System.Windows.Forms.Padding(26, 39, 0, 0);
-            this.Report.Size = new System.Drawing.Size(186, 85);
-            this.Report.TabIndex = 4;
-            this.Report.Text = "Reports";
-            this.Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.AccessibleName = "Header";
-            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel1.Controls.Add(this.Report);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3751, 122);
-            this.panel1.TabIndex = 15;
+            this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentsReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StudentsReport.Location = new System.Drawing.Point(582, 0);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(5);
+            this.StudentsReport.Name = "StudentsReport";
+            this.StudentsReport.RowTemplate.Height = 24;
+            this.StudentsReport.Size = new System.Drawing.Size(1168, 1006);
+            this.StudentsReport.TabIndex = 17;
             // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1750, 1006);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.StudentsReport);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView StudentsReport;
         private System.Windows.Forms.Button Failing_Students;
         private System.Windows.Forms.Button Available_Classes;
         private System.Windows.Forms.ComboBox CourseID;
@@ -564,11 +483,7 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Label Report;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView StudentsReport;
     }
 }

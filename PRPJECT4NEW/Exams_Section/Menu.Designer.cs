@@ -41,9 +41,10 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Logout_Button = new System.Windows.Forms.Button();
-            this.Special_Exams_Button = new System.Windows.Forms.Button();
             this.Supervisor_Tut_Button = new System.Windows.Forms.Button();
             this.Special_Stud_Button = new System.Windows.Forms.Button();
+            this.Register_Students_Button = new System.Windows.Forms.Button();
+            this.Special_Exams_Button = new System.Windows.Forms.Button();
             this.Available_Classes_Button = new System.Windows.Forms.Button();
             this.Supervisors_List_Button = new System.Windows.Forms.Button();
             this.Exams_Assignment_Button = new System.Windows.Forms.Button();
@@ -75,7 +76,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1407, 103);
+            this.panel1.Size = new System.Drawing.Size(1657, 103);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -83,7 +84,7 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1238, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(1488, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 29, 79, 0);
@@ -96,7 +97,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1306, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(1556, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 21, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 29, 79, 0);
@@ -178,9 +179,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.panel2.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern;
             this.panel2.Controls.Add(this.Logout_Button);
-            this.panel2.Controls.Add(this.Special_Exams_Button);
             this.panel2.Controls.Add(this.Supervisor_Tut_Button);
             this.panel2.Controls.Add(this.Special_Stud_Button);
+            this.panel2.Controls.Add(this.Register_Students_Button);
+            this.panel2.Controls.Add(this.Special_Exams_Button);
             this.panel2.Controls.Add(this.Available_Classes_Button);
             this.panel2.Controls.Add(this.Supervisors_List_Button);
             this.panel2.Controls.Add(this.Exams_Assignment_Button);
@@ -189,7 +191,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 103);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(509, 823);
+            this.panel2.Size = new System.Drawing.Size(509, 1074);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -206,7 +208,7 @@
             this.Logout_Button.ForeColor = System.Drawing.Color.White;
             this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
             this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_Button.Location = new System.Drawing.Point(0, 637);
+            this.Logout_Button.Location = new System.Drawing.Point(0, 728);
             this.Logout_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Logout_Button.Name = "Logout_Button";
             this.Logout_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
@@ -217,32 +219,6 @@
             this.Logout_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Logout_Button.UseVisualStyleBackColor = false;
             this.Logout_Button.Click += new System.EventHandler(this.Logout_Click);
-            // 
-            // Special_Exams_Button
-            // 
-            this.Special_Exams_Button.AccessibleName = "Special_Exams_Button";
-            this.Special_Exams_Button.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.Special_Exams_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Special_Exams_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Special_Exams_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Special_Exams_Button.FlatAppearance.BorderSize = 0;
-            this.Special_Exams_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Special_Exams_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Special_Exams_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Special_Exams_Button.ForeColor = System.Drawing.Color.White;
-            this.Special_Exams_Button.Image = ((System.Drawing.Image)(resources.GetObject("Special_Exams_Button.Image")));
-            this.Special_Exams_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Special_Exams_Button.Location = new System.Drawing.Point(0, 546);
-            this.Special_Exams_Button.Margin = new System.Windows.Forms.Padding(2);
-            this.Special_Exams_Button.Name = "Special_Exams_Button";
-            this.Special_Exams_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Special_Exams_Button.Size = new System.Drawing.Size(509, 91);
-            this.Special_Exams_Button.TabIndex = 8;
-            this.Special_Exams_Button.Text = " Special Exams";
-            this.Special_Exams_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Special_Exams_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Special_Exams_Button.UseVisualStyleBackColor = false;
-            this.Special_Exams_Button.Click += new System.EventHandler(this.Special_Exams_Button_Click);
             // 
             // Supervisor_Tut_Button
             // 
@@ -257,7 +233,7 @@
             this.Supervisor_Tut_Button.ForeColor = System.Drawing.Color.White;
             this.Supervisor_Tut_Button.Image = ((System.Drawing.Image)(resources.GetObject("Supervisor_Tut_Button.Image")));
             this.Supervisor_Tut_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Supervisor_Tut_Button.Location = new System.Drawing.Point(0, 455);
+            this.Supervisor_Tut_Button.Location = new System.Drawing.Point(0, 637);
             this.Supervisor_Tut_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Supervisor_Tut_Button.Name = "Supervisor_Tut_Button";
             this.Supervisor_Tut_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
@@ -282,7 +258,7 @@
             this.Special_Stud_Button.ForeColor = System.Drawing.Color.White;
             this.Special_Stud_Button.Image = ((System.Drawing.Image)(resources.GetObject("Special_Stud_Button.Image")));
             this.Special_Stud_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Special_Stud_Button.Location = new System.Drawing.Point(0, 364);
+            this.Special_Stud_Button.Location = new System.Drawing.Point(0, 546);
             this.Special_Stud_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Special_Stud_Button.Name = "Special_Stud_Button";
             this.Special_Stud_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
@@ -293,6 +269,57 @@
             this.Special_Stud_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Special_Stud_Button.UseVisualStyleBackColor = false;
             this.Special_Stud_Button.Click += new System.EventHandler(this.Special_Stud_Button_Click);
+            // 
+            // Register_Students_Button
+            // 
+            this.Register_Students_Button.AccessibleName = "Available_Classes_Button";
+            this.Register_Students_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Register_Students_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Register_Students_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Register_Students_Button.FlatAppearance.BorderSize = 0;
+            this.Register_Students_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Register_Students_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Register_Students_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Register_Students_Button.ForeColor = System.Drawing.Color.Transparent;
+            this.Register_Students_Button.Image = global::PRPJECT4NEW.Properties.Resources.test_results__Custom_;
+            this.Register_Students_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Register_Students_Button.Location = new System.Drawing.Point(0, 455);
+            this.Register_Students_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Register_Students_Button.Name = "Register_Students_Button";
+            this.Register_Students_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.Register_Students_Button.Size = new System.Drawing.Size(509, 91);
+            this.Register_Students_Button.TabIndex = 11;
+            this.Register_Students_Button.Text = "Register students";
+            this.Register_Students_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Register_Students_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Register_Students_Button.UseVisualStyleBackColor = false;
+            this.Register_Students_Button.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Special_Exams_Button
+            // 
+            this.Special_Exams_Button.AccessibleName = "Special_Exams_Button";
+            this.Special_Exams_Button.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.Special_Exams_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Special_Exams_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Special_Exams_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Special_Exams_Button.FlatAppearance.BorderSize = 0;
+            this.Special_Exams_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Special_Exams_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Special_Exams_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Special_Exams_Button.ForeColor = System.Drawing.Color.White;
+            this.Special_Exams_Button.Image = ((System.Drawing.Image)(resources.GetObject("Special_Exams_Button.Image")));
+            this.Special_Exams_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Special_Exams_Button.Location = new System.Drawing.Point(0, 364);
+            this.Special_Exams_Button.Margin = new System.Windows.Forms.Padding(2);
+            this.Special_Exams_Button.Name = "Special_Exams_Button";
+            this.Special_Exams_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.Special_Exams_Button.Size = new System.Drawing.Size(509, 91);
+            this.Special_Exams_Button.TabIndex = 8;
+            this.Special_Exams_Button.Text = " Special Exams";
+            this.Special_Exams_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Special_Exams_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Special_Exams_Button.UseVisualStyleBackColor = false;
+            this.Special_Exams_Button.Click += new System.EventHandler(this.Special_Exams_Button_Click);
             // 
             // Available_Classes_Button
             // 
@@ -403,7 +430,7 @@
             this.Buttons_view.Location = new System.Drawing.Point(509, 103);
             this.Buttons_view.Margin = new System.Windows.Forms.Padding(2);
             this.Buttons_view.Name = "Buttons_view";
-            this.Buttons_view.Size = new System.Drawing.Size(898, 823);
+            this.Buttons_view.Size = new System.Drawing.Size(1148, 1074);
             this.Buttons_view.TabIndex = 2;
             this.Buttons_view.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -416,7 +443,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1407, 926);
+            this.ClientSize = new System.Drawing.Size(1657, 1177);
             this.Controls.Add(this.Buttons_view);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -460,5 +487,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.Label Student_Name;
+        private System.Windows.Forms.Button Register_Students_Button;
     }
 }

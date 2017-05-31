@@ -198,6 +198,12 @@
     <Compile Include="Exam.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Exams_Section\Register_Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exams_Section\Register_Students.designer.cs">
+      <DependentUpon>Register_Students.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exams_Section\Exams_Assignment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,7 +266,6 @@
     <Compile Include="Forms\NewUser.Designer.cs">
       <DependentUpon>NewUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserID.cs" />
     <Compile Include="Lecturer\AddLecture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -513,6 +518,9 @@
     <EmbeddedResource Include="Dean_of_Faculty\Tech_support.resx">
       <DependentUpon>Tech_support.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Exams_Section\Register_Students.resx">
+      <DependentUpon>Register_Students.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Exams_Section\Exams_Assignment.resx">
       <DependentUpon>Exams_Assignment.cs</DependentUpon>
     </EmbeddedResource>
@@ -705,6 +713,7 @@
     <Content Include="Facebook\FB_Analyze.csproj" />
     <Content Include="icon.ico" />
     <Content Include="Resources\bg_pattern.jpg" />
+    <None Include="Resources\test-results %28Custom%29.png" />
     <None Include="Resources\bg_pattern21.jpg" />
     <None Include="Resources\bg_pattern1.jpg" />
     <Content Include="Resources\bg_pattern2.jpg" />
