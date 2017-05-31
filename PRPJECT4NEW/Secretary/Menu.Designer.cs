@@ -46,7 +46,7 @@
             this.Supervisors_List_Button = new System.Windows.Forms.Button();
             this.Exams_Assignment_Button = new System.Windows.Forms.Button();
             this.Exams_report_button = new System.Windows.Forms.Button();
-            this.Buttons_view = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1552, 110);
             this.panel1.TabIndex = 0;
@@ -78,7 +78,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(1362, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Padding = new System.Windows.Forms.Padding(0, 31, 90, 0);
             this.pictureBox2.Size = new System.Drawing.Size(78, 110);
@@ -124,7 +124,7 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(582, 110);
             this.panel3.TabIndex = 0;
@@ -137,7 +137,7 @@
             this.panel4.Controls.Add(this.flowLayoutPanel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(534, 110);
             this.panel4.TabIndex = 1;
@@ -146,7 +146,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(64, 14);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(400, 85);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -156,7 +156,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Location = new System.Drawing.Point(262, 83);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(784, 234);
             this.flowLayoutPanel2.TabIndex = 2;
@@ -173,7 +173,7 @@
             this.panel2.Controls.Add(this.Exams_report_button);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 110);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 17, 0, 0);
             this.panel2.Size = new System.Drawing.Size(582, 903);
@@ -193,7 +193,7 @@
             this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
             this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Logout_Button.Location = new System.Drawing.Point(0, 502);
-            this.Logout_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Logout_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Logout_Button.Name = "Logout_Button";
             this.Logout_Button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.Logout_Button.Size = new System.Drawing.Size(582, 97);
@@ -218,7 +218,7 @@
             this.Supervisor_Tut_Button.Image = ((System.Drawing.Image)(resources.GetObject("Supervisor_Tut_Button.Image")));
             this.Supervisor_Tut_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supervisor_Tut_Button.Location = new System.Drawing.Point(0, 405);
-            this.Supervisor_Tut_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Supervisor_Tut_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Supervisor_Tut_Button.Name = "Supervisor_Tut_Button";
             this.Supervisor_Tut_Button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.Supervisor_Tut_Button.Size = new System.Drawing.Size(582, 97);
@@ -243,7 +243,7 @@
             this.Special_Stud_Button.Image = ((System.Drawing.Image)(resources.GetObject("Special_Stud_Button.Image")));
             this.Special_Stud_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Special_Stud_Button.Location = new System.Drawing.Point(0, 308);
-            this.Special_Stud_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Special_Stud_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Special_Stud_Button.Name = "Special_Stud_Button";
             this.Special_Stud_Button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.Special_Stud_Button.Size = new System.Drawing.Size(582, 97);
@@ -268,7 +268,7 @@
             this.Supervisors_List_Button.Image = ((System.Drawing.Image)(resources.GetObject("Supervisors_List_Button.Image")));
             this.Supervisors_List_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Supervisors_List_Button.Location = new System.Drawing.Point(0, 211);
-            this.Supervisors_List_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Supervisors_List_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Supervisors_List_Button.Name = "Supervisors_List_Button";
             this.Supervisors_List_Button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.Supervisors_List_Button.Size = new System.Drawing.Size(582, 97);
@@ -293,7 +293,7 @@
             this.Exams_Assignment_Button.Image = ((System.Drawing.Image)(resources.GetObject("Exams_Assignment_Button.Image")));
             this.Exams_Assignment_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exams_Assignment_Button.Location = new System.Drawing.Point(0, 114);
-            this.Exams_Assignment_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exams_Assignment_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Exams_Assignment_Button.Name = "Exams_Assignment_Button";
             this.Exams_Assignment_Button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.Exams_Assignment_Button.Size = new System.Drawing.Size(582, 97);
@@ -318,7 +318,7 @@
             this.Exams_report_button.Image = ((System.Drawing.Image)(resources.GetObject("Exams_report_button.Image")));
             this.Exams_report_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Exams_report_button.Location = new System.Drawing.Point(0, 17);
-            this.Exams_report_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exams_report_button.Margin = new System.Windows.Forms.Padding(2);
             this.Exams_report_button.Name = "Exams_report_button";
             this.Exams_report_button.Padding = new System.Windows.Forms.Padding(24, 0, 0, 0);
             this.Exams_report_button.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -330,17 +330,17 @@
             this.Exams_report_button.UseVisualStyleBackColor = false;
             this.Exams_report_button.Click += new System.EventHandler(this.Exams_report_button_Click);
             // 
-            // Buttons_view
+            // panel5
             // 
-            this.Buttons_view.AccessibleName = "Buttons_view";
-            this.Buttons_view.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.Buttons_view.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Buttons_view.Location = new System.Drawing.Point(582, 110);
-            this.Buttons_view.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Buttons_view.Name = "Buttons_view";
-            this.Buttons_view.Size = new System.Drawing.Size(970, 903);
-            this.Buttons_view.TabIndex = 2;
-            this.Buttons_view.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.panel5.AccessibleName = "Buttons_view";
+            this.panel5.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(582, 110);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(970, 903);
+            this.panel5.TabIndex = 2;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // Menu
             // 
@@ -348,7 +348,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(235)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1552, 1013);
-            this.Controls.Add(this.Buttons_view);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -385,7 +385,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel Buttons_view;
+        private System.Windows.Forms.Panel panel5;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.Label Secretary_Name;

@@ -36,7 +36,7 @@ namespace PRPJECT4NEW.Secretary
 
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand("select ID,F_name,L_name,Telephone,Email,Password from person where Permission='" + "Student"+"'", sqlcon);
+            SqlCommand cmd = new SqlCommand("select ID,F_name,L_name,Telephone,Email from person where Permission='" + "Student"+"'", sqlcon);
 
             try
             {
@@ -62,7 +62,7 @@ namespace PRPJECT4NEW.Secretary
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
 
-            SqlCommand cmd = new SqlCommand("select ID,F_name,L_name,Telephone,Email,Password from person where Permission='Teaching_Assistant' OR Permission='Lecturer' ", sqlcon);
+            SqlCommand cmd = new SqlCommand("select ID,F_name,L_name,Telephone,Email from person where Permission='Teaching_Assistant' OR Permission='Lecturer' ", sqlcon);
 
 
             try
@@ -104,12 +104,8 @@ namespace PRPJECT4NEW.Secretary
             }
             catch (SqlException ex)
             {
-                this.Close();
+                CourseID.Text = "";
                 MessageBox.Show("Error selecting course id, try again!!\n" + ex.ToString());
-                Reports form2 = new Reports();
-                form2.StartPosition = FormStartPosition.Manual;
-                form2.SetDesktopBounds(218, 46, 1520, 820);
-                form2.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -232,35 +228,37 @@ namespace PRPJECT4NEW.Secretary
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
                 this.sqlcon.Open();
-                SqlCommand cmd = new SqlCommand("select final_grade from Student_Courses where course_id  ='" + CourseID.Text + "'", sqlcon);
-                SqlDataReader dr = cmd.ExecuteReader();
-                
-                while (dr.Read())
+                if (CourseID.Text != "")
+                {
+                    SqlCommand cmd = new SqlCommand("select final_grade from Student_Courses where course_id  ='" + CourseID.Text + "'", sqlcon);
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+
+                        sum_avg += Convert.ToInt32(dr[0].ToString());
+                        counter++;
+
+                    }
+
+                    MessageBox.Show("The AVG Grades of all students in Course:\t'" + CourseID.Text + "'\nis:\t" + sum_avg / counter);
+                    dr.Close();
+                    //SqlDataAdapter sda = new SqlDataAdapter();
+                    //sda.SelectCommand = cmd;
+                    //DataTable dbdataset = new DataTable();
+                    //sda.Fill(dbdataset);
+                    //BindingSource bsource = new BindingSource();
+
+                    //bsource.DataSource = dbdataset;
+                    //StudentsReport.DataSource = bsource;
+                    //sda.Update(dbdataset);
+
+                    this.sqlcon.Close();
+                }
+                else
                 {
 
-                    sum_avg += Convert.ToInt32(dr[0].ToString());
-                    counter++;
-
-                }
-                
-                MessageBox.Show("The AVG Grades of all students in Course:\t'" + CourseID.Text + "'\nis:\t" + sum_avg / counter);
-                dr.Close();
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
-
-                bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
-                sda.Update(dbdataset);
-                
-                this.sqlcon.Close();
-                this.Close();
-                Reports form2 = new Reports();
-                form2.StartPosition = FormStartPosition.Manual;
-                form2.SetDesktopBounds(218, 46, 1520, 820);
-                form2.ShowDialog();
+                } 
 
             }
             catch (Exception ex)
@@ -277,6 +275,11 @@ namespace PRPJECT4NEW.Secretary
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
         }
