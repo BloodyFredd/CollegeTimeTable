@@ -30,11 +30,6 @@ namespace PRPJECT4NEW.Lecturer
 
         }
 
-        private void Load_table_Click_1(object sender, EventArgs e)
-        {
-           
-        }
-
         
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
@@ -49,54 +44,7 @@ namespace PRPJECT4NEW.Lecturer
 
         private void Available_Classes_Click(object sender, EventArgs e)
         {
-            string str = null;
             
-           
-            try
-            {
-                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-                this.sqlcon = new SqlConnection(connetionString);
-                SqlCommand cmd=new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
-                if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
-
-                {
-                    str = toolStripComboBox2.Text;
-                    //MessageBox.Show(str);
-                    cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
-                    StudentsReport.Visible = true;
-                }
-                else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
-                {
-                    str = toolStripComboBox1.Text;
-                    //MessageBox.Show(str);
-                    cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
-                    StudentsReport.Visible = true;
-                }
-                else
-                {
-                    this.Close();
-                    MessageBox.Show("Error selecting dates,try again!");
-                    Reports form2 = new Reports();
-                    form2.StartPosition = FormStartPosition.Manual;
-                    form2.SetDesktopBounds(218, 46, 1320, 820);
-                    form2.ShowDialog();
-
-                }
-
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
-
-                bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
-                sda.Update(dbdataset);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void Semester_Click(object sender, EventArgs e)
@@ -111,33 +59,32 @@ namespace PRPJECT4NEW.Lecturer
 
         private void LecturerCourses_Click(object sender, EventArgs e)
         {
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand("select Lecture_Course.Course_ID,Lecture_Course.Course_Serial,courses.Course_Name from Lecture_Course LEFT join courses on Lecture_Course.Course_ID=courses.Course_id where Teacher='" + Utility.User.ID + "'", sqlcon);
-            StudentsReport.Visible = true;
-
-            try
-            {
-
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
-
-                bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
-                sda.Update(dbdataset);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
         
+            
+    }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void Grades_Button_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Students_Click(object sender, EventArgs e)
+        {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
             this.sqlcon = new SqlConnection(connetionString);
             StudentsReport.Visible = true;
@@ -160,16 +107,63 @@ namespace PRPJECT4NEW.Lecturer
                 MessageBox.Show(ex.Message);
                 this.Close();
                 this.sqlcon.Close();
-           
-        }
-    }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
+            string str = null;
 
+
+            try
+            {
+                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+                this.sqlcon = new SqlConnection(connetionString);
+                SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
+                if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
+
+                {
+                    str = toolStripComboBox2.Text;
+                    //MessageBox.Show(str);
+                    cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
+                    StudentsReport.Visible = true;
+                }
+                else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
+                {
+                    str = toolStripComboBox1.Text;
+                    //MessageBox.Show(str);
+                    cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
+                    StudentsReport.Visible = true;
+                }
+                else
+                {
+                    //this.Close();
+                    toolStripComboBox1.Text = "";
+                    toolStripComboBox2.Text = "";
+                    MessageBox.Show("Error selecting dates,try again!");
+                    //Reports form2 = new Reports();
+                    //form2.Show();
+
+                }
+
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void Grades_Button_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
             this.sqlcon = new SqlConnection(connetionString);
@@ -196,7 +190,33 @@ namespace PRPJECT4NEW.Lecturer
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void My_Lectures_Click(object sender, EventArgs e)
+        {
+            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            this.sqlcon = new SqlConnection(connetionString);
+            SqlCommand cmd = new SqlCommand("select Lecture_Course.Course_ID,Lecture_Course.Course_Serial,courses.Course_Name from Lecture_Course LEFT join courses on Lecture_Course.Course_ID=courses.Course_id where Teacher='" + Utility.User.ID + "'", sqlcon);
+            StudentsReport.Visible = true;
+
+            try
+            {
+
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

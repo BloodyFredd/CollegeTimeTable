@@ -58,7 +58,22 @@ namespace PRPJECT4NEW.Teaching_Assistant
                     throw new ArgumentException("You have already a course with this id!");
                 }
 
+                cmd = new SqlCommand("select * from Lecture_Course where Teacher ='" + Utility.User.ID + "' and Date = '" + DayButton.Text + "' and Start_time = '" + firstString + "'", sqlcon);
+                dre = cmd.ExecuteReader();
+                if (dre.Read() == true)
+                {
+                    throw new ArgumentException("You already teach a class during this time!");
+                }
                 dre.Close();
+
+                cmd = new SqlCommand("select * from Lecture_Course where Teacher ='" + Utility.User.ID + "' and Date = '" + DayButton.Text + "' and Start_time = '" + secondString + "'", sqlcon);
+                dre = cmd.ExecuteReader();
+                if (dre.Read() == true)
+                {
+                    throw new ArgumentException("You already teach a class during this time!");
+                }
+                dre.Close();
+
                 if (SemesterButton.Text.Equals("a"))
                 {
                     if(first == 8)

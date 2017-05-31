@@ -96,6 +96,30 @@ namespace PRPJECT4NEW.Lecturer
                 }
                 dre.Close();
 
+                cmd = new SqlCommand("select * from Lecture_Course where Teacher ='" + Utility.User.ID + "' and Date = '" + DayButton.Text + "' and Start_time = '" + StartButton.Text + "'", sqlcon);
+                dre = cmd.ExecuteReader();
+                if (dre.Read() == true)
+                {
+                    throw new ArgumentException("You already teach a class during this time!");
+                }
+                dre.Close();
+
+                cmd = new SqlCommand("select * from Lecture_Course where Teacher ='" + Utility.User.ID + "' and Date = '" + DayButton.Text + "' and Start_time = '" + secondString + "'", sqlcon);
+                dre = cmd.ExecuteReader();
+                if (dre.Read() == true)
+                {
+                    throw new ArgumentException("You already teach a class during this time!");
+                }
+                dre.Close();
+
+                cmd = new SqlCommand("select * from Lecture_Course where Teacher ='" + Utility.User.ID + "' and Date = '" + DayButton.Text + "' and Start_time = '" + thirdString + "'", sqlcon);
+                dre = cmd.ExecuteReader();
+                if (dre.Read() == true)
+                {
+                    throw new ArgumentException("You already teach a class during this time!");
+                }
+                dre.Close();
+
                 cmd = new SqlCommand("select * from Lecture_Course where Course_ID = '" + CourseIDButton.Text + "' and Course_type = 3", sqlcon);
                 dre = cmd.ExecuteReader();
                 if (dre.Read() == true)
