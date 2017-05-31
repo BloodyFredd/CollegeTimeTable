@@ -147,7 +147,7 @@ namespace PRPJECT4NEW.Exams_Section
         /// <param name="StudID">Student ID</param> 
         /// <param name="CourseID">Course ID</param> 
         /// <value>if student learn at specific course</value>  
-        private bool studentInCourse(String StudID, int CourseID)
+        private bool studentInCourse(string StudID, int CourseID)
         {
             using (Entities context = new Entities())
             {
@@ -166,7 +166,7 @@ namespace PRPJECT4NEW.Exams_Section
         /// return course ID that match to Course Name</summary>
         /// <param name="name">Course name</param> 
         /// <value>Course ID</value>  
-        private int getCourseId(String name)
+        private int getCourseId(string name)
         {
             using (Entities context = new Entities())
             {

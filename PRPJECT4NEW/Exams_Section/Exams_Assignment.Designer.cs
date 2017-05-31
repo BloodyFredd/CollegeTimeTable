@@ -190,9 +190,12 @@
             this.datePicker.CalendarTrailingForeColor = System.Drawing.Color.White;
             this.datePicker.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePicker.Location = new System.Drawing.Point(1960, 159);
+            this.datePicker.MaxDate = new System.DateTime(2017, 8, 15, 0, 0, 0, 0);
+            this.datePicker.MinDate = new System.DateTime(2017, 6, 1, 0, 0, 0, 0);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(338, 44);
             this.datePicker.TabIndex = 34;
+            this.datePicker.Value = new System.DateTime(2017, 6, 1, 0, 0, 0, 0);
             this.datePicker.ValueChanged += new System.EventHandler(this.datePicker_ValueChanged);
             // 
             // Combo_Class_ID
