@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
-            this.StudentsReport = new System.Windows.Forms.DataGridView();
             this.Failing_Students = new System.Windows.Forms.Button();
             this.Available_Classes = new System.Windows.Forms.Button();
             this.CourseID = new System.Windows.Forms.ComboBox();
@@ -43,42 +41,22 @@
             this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox4 = new System.Windows.Forms.ToolStripComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Report = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
+            this.StudentsReport = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.menuStrip2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.SuspendLayout();
-            // 
-            // StudentsReport
-            // 
-            this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(219, 52);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(2);
-            this.StudentsReport.Name = "StudentsReport";
-            this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(438, 370);
-            this.StudentsReport.TabIndex = 2;
-            this.StudentsReport.Visible = false;
-            this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
             // 
             // Failing_Students
             // 
             this.Failing_Students.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Failing_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Failing_Students.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Failing_Students.Location = new System.Drawing.Point(0, 235);
-            this.Failing_Students.Margin = new System.Windows.Forms.Padding(2);
+            this.Failing_Students.Location = new System.Drawing.Point(0, 525);
+            this.Failing_Students.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Failing_Students.Name = "Failing_Students";
-            this.Failing_Students.Size = new System.Drawing.Size(218, 33);
+            this.Failing_Students.Size = new System.Drawing.Size(581, 79);
             this.Failing_Students.TabIndex = 4;
             this.Failing_Students.Text = "Failing Students";
             this.Failing_Students.UseVisualStyleBackColor = false;
@@ -91,10 +69,10 @@
             this.Available_Classes.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.Available_Classes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Available_Classes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Available_Classes.Location = new System.Drawing.Point(0, 54);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(2);
+            this.Available_Classes.Location = new System.Drawing.Point(0, 94);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(218, 36);
+            this.Available_Classes.Size = new System.Drawing.Size(581, 86);
             this.Available_Classes.TabIndex = 8;
             this.Available_Classes.Text = "Available Classes";
             this.Available_Classes.UseVisualStyleBackColor = false;
@@ -143,9 +121,10 @@
             "404",
             "405",
             "406"});
-            this.CourseID.Location = new System.Drawing.Point(0, 216);
+            this.CourseID.Location = new System.Drawing.Point(0, 480);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.CourseID.Name = "CourseID";
-            this.CourseID.Size = new System.Drawing.Size(219, 21);
+            this.CourseID.Size = new System.Drawing.Size(577, 39);
             this.CourseID.TabIndex = 11;
             this.CourseID.Text = "                         Course ID";
             this.CourseID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -155,9 +134,10 @@
             this.All_Person_Button.BackColor = System.Drawing.SystemColors.HotTrack;
             this.All_Person_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.All_Person_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.All_Person_Button.Location = new System.Drawing.Point(0, 146);
+            this.All_Person_Button.Location = new System.Drawing.Point(0, 313);
+            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.All_Person_Button.Name = "All_Person_Button";
-            this.All_Person_Button.Size = new System.Drawing.Size(218, 35);
+            this.All_Person_Button.Size = new System.Drawing.Size(581, 83);
             this.All_Person_Button.TabIndex = 12;
             this.All_Person_Button.Text = "All Persons";
             this.All_Person_Button.UseVisualStyleBackColor = false;
@@ -168,9 +148,10 @@
             this.ExcellentStudents.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ExcellentStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExcellentStudents.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ExcellentStudents.Location = new System.Drawing.Point(0, 179);
+            this.ExcellentStudents.Location = new System.Drawing.Point(0, 392);
+            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.ExcellentStudents.Name = "ExcellentStudents";
-            this.ExcellentStudents.Size = new System.Drawing.Size(218, 37);
+            this.ExcellentStudents.Size = new System.Drawing.Size(581, 88);
             this.ExcellentStudents.TabIndex = 13;
             this.ExcellentStudents.Text = "Excellent students";
             this.ExcellentStudents.UseVisualStyleBackColor = false;
@@ -181,10 +162,10 @@
             this.Print.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Print.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Print.Location = new System.Drawing.Point(0, 267);
-            this.Print.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Print.Location = new System.Drawing.Point(0, 602);
+            this.Print.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(218, 33);
+            this.Print.Size = new System.Drawing.Size(581, 79);
             this.Print.TabIndex = 14;
             this.Print.Text = "Export to Excel";
             this.Print.UseVisualStyleBackColor = false;
@@ -195,6 +176,7 @@
             // 
             this.panel2.AccessibleName = "Buttons_place";
             this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.menuStrip2);
             this.panel2.Controls.Add(this.Available_Classes);
             this.panel2.Controls.Add(this.Print);
@@ -204,10 +186,10 @@
             this.panel2.Controls.Add(this.ExcellentStudents);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(218, 327);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 17, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(581, 780);
             this.panel2.TabIndex = 16;
             // 
             // menuStrip2
@@ -218,10 +200,10 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip2.Location = new System.Drawing.Point(46, 93);
+            this.menuStrip2.Location = new System.Drawing.Point(123, 187);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(32, 14, 0, 14);
-            this.menuStrip2.Size = new System.Drawing.Size(99, 49);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(85, 33, 0, 33);
+            this.menuStrip2.Size = new System.Drawing.Size(238, 113);
             this.menuStrip2.TabIndex = 15;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -232,7 +214,7 @@
             this.toolStripMenuItem3});
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(66, 19);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 45);
             this.toolStripMenuItem1.Text = "Semester";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -243,7 +225,7 @@
             this.toolStripComboBox3});
             this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(82, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 46);
             this.toolStripMenuItem2.Text = "A";
             // 
             // toolStripComboBox3
@@ -337,7 +319,7 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox3.Name = "toolStripComboBox3";
-            this.toolStripComboBox3.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox3.Size = new System.Drawing.Size(121, 49);
             // 
             // toolStripMenuItem3
             // 
@@ -346,7 +328,7 @@
             this.toolStripComboBox4});
             this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(82, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 46);
             this.toolStripMenuItem3.Text = "B";
             // 
             // toolStripComboBox4
@@ -426,114 +408,54 @@
             "05/30/2017",
             "05/31/2017"});
             this.toolStripComboBox4.Name = "toolStripComboBox4";
-            this.toolStripComboBox4.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox4.Size = new System.Drawing.Size(121, 49);
             // 
-            // panel3
+            // StudentsReport
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(218, 51);
-            this.panel3.TabIndex = 0;
+            this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentsReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StudentsReport.Location = new System.Drawing.Point(581, 0);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(5);
+            this.StudentsReport.Name = "StudentsReport";
+            this.StudentsReport.RowTemplate.Height = 24;
+            this.StudentsReport.Size = new System.Drawing.Size(798, 780);
+            this.StudentsReport.TabIndex = 20;
             // 
-            // panel4
+            // button4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel4.Controls.Add(this.flowLayoutPanel2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 51);
-            this.panel4.TabIndex = 1;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(98, 35);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(294, 98);
-            this.flowLayoutPanel2.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1351, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 9, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 13, 34, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(56, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // Report
-            // 
-            this.Report.AccessibleName = "Reports";
-            this.Report.AutoSize = true;
-            this.Report.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Report.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Report.ForeColor = System.Drawing.Color.White;
-            this.Report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Report.Location = new System.Drawing.Point(218, 0);
-            this.Report.Margin = new System.Windows.Forms.Padding(2, 9, 4, 0);
-            this.Report.Name = "Report";
-            this.Report.Padding = new System.Windows.Forms.Padding(10, 16, 0, 0);
-            this.Report.Size = new System.Drawing.Size(76, 36);
-            this.Report.TabIndex = 4;
-            this.Report.Text = "Reports";
-            this.Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.AccessibleName = "Header";
-            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel1.Controls.Add(this.Report);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1407, 51);
-            this.panel1.TabIndex = 15;
+            this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(0, 680);
+            this.button4.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(581, 83);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "Close";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 327);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1379, 780);
             this.Controls.Add(this.StudentsReport);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView StudentsReport;
         private System.Windows.Forms.Button Failing_Students;
         private System.Windows.Forms.Button Available_Classes;
         private System.Windows.Forms.ComboBox CourseID;
@@ -547,11 +469,7 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Label Report;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView StudentsReport;
+        private System.Windows.Forms.Button button4;
     }
 }
