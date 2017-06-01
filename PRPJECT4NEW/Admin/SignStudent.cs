@@ -51,24 +51,31 @@ namespace PRPJECT4NEW.Admin
             return false;
         }
 
+        public string select(SqlCommand cmd)
+        {
+            string value=null;
+            
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                value = dr[0].ToString();
+            }
+            dr.Close();
+            this.sqlcon.Close();
+
+            return value;
+        }
+            
         private void Sign_student_Click(object sender, EventArgs e)
         {
-            string value = null;
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
             try
             {
                 SqlCommand cmd1 = new SqlCommand("SELECT course_serial FROM Student_Courses where stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text + "'", sqlcon);
                 this.sqlcon.Open();
-                SqlDataReader dr = cmd1.ExecuteReader();
-                if (dr.Read())
-                {
-                    value = dr[0].ToString();
-                }
-                dr.Close();
-                this.sqlcon.Close();
 
-                if (CheckCourse(value,serial.Text)) MessageBox.Show("It is the same course, try again!");
+                if (CheckCourse(select(cmd1), serial.Text)) MessageBox.Show("It is the same course, try again!");
                 else
                 {
                     SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET course_serial = '" + serial.Text + "' WHERE stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text +"'", sqlcon);
