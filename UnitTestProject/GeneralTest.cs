@@ -14,36 +14,50 @@ namespace UnitTestProject
         NewUser f1 = new NewUser();
         General G1 = new General();
         SqlConnection sqlcon = null;
+        //Encrypt e1 = new Encrypt();
         string USERNAME = "UserNAME";
         string TELEPHONE = "0525252852";
         string f_name = "newName";
+        string EncryptTest = "CheckBase64";
 
 
 
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethodCheckS1()
         {
             Assert.IsTrue(f1.checkString(f_name, "name"));
         }
         [TestMethod]
-        public void TestMethod2()
+        public void TestMethodCheckS2()
         {
             Assert.IsTrue(f1.checkString(USERNAME, "username"));
         }
         [TestMethod]
-        public void TestMethod3()
+        public void TestMethodCheckS3()
         {
             Assert.IsTrue(f1.checkString(TELEPHONE, "telephone"));
         }
         [TestMethod]
-        public void TestMethod4()
+        public void TestMethodSQL()
         {
             this.sqlcon = General.ConnectToSql();
             Assert.IsNotNull(sqlcon);
         }
+        [TestMethod]
+        public void TestMethodEncrypt()
+        {
+            string encrypt = Encrypt.base64Encode(EncryptTest);
+            encrypt = Encrypt.base64Decode2(encrypt);
+            Assert.IsTrue(encrypt== EncryptTest);
+        }
+        [TestMethod]
+        public void TestMethodEncryptNotNULL()
+        {
+            string encrypt = Encrypt.base64Encode(EncryptTest);
+            Assert.IsNotNull(encrypt);
+        }
 
-       
     }
 }
 
