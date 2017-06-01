@@ -12,13 +12,13 @@ namespace PRPJECT4NEW.Classes
 {
      public class PersonStuff
     {
-        private string ID;
-        private string Fname;
-        private string Lname;
-        private string Telephone;
-        private string Email;
-        private string Password;
-        private string Permission;
+        protected string ID;
+        protected string Fname;
+        protected string Lname;
+        protected string Telephone;
+        protected string Email;
+        protected string Password;
+        protected string Permission;
 
 
         public PersonStuff()
