@@ -134,7 +134,7 @@ namespace PRPJECT4NEW.Tech_Team
             i++;
         }
         //add dates to date combo box
-        private void addDatesToDate_cmb()
+        public DateTime addDatesToDate_cmb()
         {
             DateTime today = new DateTime(2017,03,12);
             DateTime endDay = new DateTime(2017, 06, 30);
@@ -145,21 +145,36 @@ namespace PRPJECT4NEW.Tech_Team
                     date_cmb.Items.Add(today.ToShortDateString());
                 today = today.AddDays(1);
             }
+            return today;
         }
 
         //add types to type combo box
-        private void addTypesToType_cmb()
+        public Boolean addTypesToType_cmb()
         {
             type_cmb.Items.Add("normal");
             type_cmb.Items.Add("lab");
             type_cmb.Items.Add("auditorium");
             type_cmb.Items.Add("all");
+            return true;
         }
-
+        //check date combobox
+        public Boolean checkDateCmbText(string text)
+        {
+            if (text == "")
+                return false;
+            return true;
+        }
+        //check type
+        public Boolean returnType(string text)
+        {
+            if (text == "all")
+                return false;
+            return true;
+        }
         private void refresh_btn_Click(object sender, EventArgs e)
         {
             dataGridView.Rows.Clear();
-            if (date_cmb.Text.ToString() == "")
+            if (!checkDateCmbText(date_cmb.Text.ToString()))
             {
                 MessageBox.Show("Please select date");
                 return;
@@ -168,7 +183,7 @@ namespace PRPJECT4NEW.Tech_Team
             {
                 int i = 0;
                 String type = type_cmb.Text.ToString();
-                if (type == "all")
+                if (!returnType(type))
                     type = "";
                 if (System.DateTime.Now.Month > 0 && System.DateTime.Now.Month < 7)
                     foreach (Classes_SM2 s in db.Classes_SM2)
