@@ -49,10 +49,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Semester});
-            this.menuStrip1.Location = new System.Drawing.Point(976, 184);
+            this.menuStrip1.Location = new System.Drawing.Point(366, 77);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 6, 0, 6);
-            this.menuStrip1.Size = new System.Drawing.Size(171, 57);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(167, 25);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,7 +64,7 @@
             this.bToolStripMenuItem});
             this.Semester.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(153, 45);
+            this.Semester.Size = new System.Drawing.Size(67, 19);
             this.Semester.Text = "Semester";
             // 
             // aToolStripMenuItem
@@ -72,7 +72,7 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -165,7 +165,7 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 49);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 23);
             this.toolStripComboBox2.Click += new System.EventHandler(this.toolStripComboBox2_Click);
             // 
             // bToolStripMenuItem
@@ -173,107 +173,93 @@
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 46);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
             // 
             this.toolStripComboBox1.Items.AddRange(new object[] {
-            "2017-01-01",
-            "2017-01-02",
-            "2017-01-03",
-            "2017-01-04",
-            "2017-01-05",
-            "2017-01-06",
-            "2017-01-08",
-            "2017-01-09",
-            "2017-01-10",
-            "2017-01-11",
-            "2017-01-12",
-            "2017-01-13",
-            "2017-01-15",
-            "2017-01-16",
-            "2017-01-17",
-            "2017-01-18",
-            "2017-01-19",
-            "2017-01-20",
-            "2017-01-22",
-            "2017-01-23",
-            "2017-01-24",
-            "2017-01-25",
-            "2017-01-26",
-            "2017-01-27",
-            "2017-01-29",
-            "2017-01-30",
-            "2017-01-31",
-            "2017-02-01",
-            "2017-02-02",
-            "2017-02-03",
-            "2017-02-05",
-            "2017-02-06",
-            "2017-02-07",
-            "2017-02-08",
-            "2017-02-09",
-            "2017-02-10",
-            "2017-02-12",
-            "2017-02-13",
-            "2017-02-14",
-            "2017-02-15",
-            "2017-02-16",
-            "2017-02-17",
-            "2017-02-19",
-            "2017-02-20",
-            "2017-02-21",
-            "2017-02-22",
-            "2017-02-23",
-            "2017-02-24",
-            "2017-02-26",
-            "2017-02-27",
-            "2017-02-28",
-            "2017-03-01",
-            "2017-03-02",
-            "2017-03-03",
-            "2017-03-05",
-            "2017-03-06",
-            "2017-03-07",
-            "2017-03-08",
-            "2017-03-09",
-            "2017-03-10",
-            "2017-03-12",
-            "2017-03-13",
-            "2017-03-14",
-            "2017-03-15",
-            "2017-03-16",
-            "2017-03-17",
-            "2017-03-19",
-            "2017-03-20",
-            "2017-03-21",
-            "2017-03-22",
-            "2017-03-23",
-            "2017-03-24",
-            "2017-03-26",
-            "2017-03-27",
-            "2017-03-28",
-            "2017-03-29",
-            "2017-03-30",
-            "2017-03-31",
-            "2017-04-02",
-            "2017-04-03",
-            "2017-04-04",
-            "2017-04-05",
-            "2017-04-06",
-            "2017-04-07"});
+            "03/12/2017",
+            "03/13/2017",
+            "03/14/2017",
+            "03/15/2017",
+            "03/16/2017",
+            "03/17/2017",
+            "03/19/2017",
+            "03/20/2017",
+            "03/21/2017",
+            "03/22/2017",
+            "03/23/2017",
+            "03/24/2017",
+            "03/26/2017",
+            "03/27/2017",
+            "03/28/2017",
+            "03/29/2017",
+            "03/30/2017",
+            "03/31/2017",
+            "04/02/2017",
+            "04/03/2017",
+            "04/04/2017",
+            "04/05/2017",
+            "04/06/2017",
+            "04/07/2017",
+            "04/09/2017",
+            "04/10/2017",
+            "04/11/2017",
+            "04/12/2017",
+            "04/13/2017",
+            "04/14/2017",
+            "04/16/2017",
+            "04/17/2017",
+            "04/18/2017",
+            "04/19/2017",
+            "04/20/2017",
+            "04/21/2017",
+            "04/23/2017",
+            "04/24/2017",
+            "04/25/2017",
+            "04/26/2017",
+            "04/27/2017",
+            "04/28/2017",
+            "04/30/2017",
+            "05/01/2017",
+            "05/02/2017",
+            "05/03/2017",
+            "05/04/2017",
+            "05/05/2017",
+            "05/07/2017",
+            "05/08/2017",
+            "05/09/2017",
+            "05/10/2017",
+            "05/11/2017",
+            "05/12/2017",
+            "05/14/2017",
+            "05/15/2017",
+            "05/16/2017",
+            "05/17/2017",
+            "05/18/2017",
+            "05/19/2017",
+            "05/21/2017",
+            "05/22/2017",
+            "05/23/2017",
+            "05/24/2017",
+            "05/25/2017",
+            "05/26/2017",
+            "05/28/2017",
+            "05/29/2017",
+            "05/30/2017",
+            "05/31/2017"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 49);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
             // 
             // Lecture
             // 
             this.Lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Lecture.Location = new System.Drawing.Point(52, 318);
-            this.Lecture.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Lecture.Location = new System.Drawing.Point(20, 133);
+            this.Lecture.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Lecture.Name = "Lecture";
             this.Lecture.RowTemplate.Height = 24;
-            this.Lecture.Size = new System.Drawing.Size(1660, 608);
+            this.Lecture.Size = new System.Drawing.Size(622, 255);
             this.Lecture.TabIndex = 11;
             this.Lecture.Visible = false;
             this.Lecture.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Lecture_CellContentClick);
@@ -281,10 +267,10 @@
             // Available_Classes
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
-            this.Available_Classes.Location = new System.Drawing.Point(976, 33);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.Available_Classes.Location = new System.Drawing.Point(366, 14);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(206, 122);
+            this.Available_Classes.Size = new System.Drawing.Size(77, 51);
             this.Available_Classes.TabIndex = 12;
             this.Available_Classes.Text = "Available Classes";
             this.Available_Classes.UseVisualStyleBackColor = true;
@@ -292,10 +278,10 @@
             // 
             // NewLec
             // 
-            this.NewLec.Location = new System.Drawing.Point(52, 31);
-            this.NewLec.Margin = new System.Windows.Forms.Padding(4);
+            this.NewLec.Location = new System.Drawing.Point(20, 13);
+            this.NewLec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NewLec.Name = "NewLec";
-            this.NewLec.Size = new System.Drawing.Size(206, 124);
+            this.NewLec.Size = new System.Drawing.Size(77, 52);
             this.NewLec.TabIndex = 13;
             this.NewLec.Text = "Extra Lecture";
             this.NewLec.UseVisualStyleBackColor = true;
@@ -318,10 +304,10 @@
             "18-19",
             "19-20",
             "20-21"});
-            this.Hour.Location = new System.Drawing.Point(284, 33);
-            this.Hour.Margin = new System.Windows.Forms.Padding(4);
+            this.Hour.Location = new System.Drawing.Point(106, 14);
+            this.Hour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Hour.Name = "Hour";
-            this.Hour.Size = new System.Drawing.Size(280, 39);
+            this.Hour.Size = new System.Drawing.Size(108, 21);
             this.Hour.TabIndex = 14;
             this.Hour.Text = "Choose time";
             this.Hour.SelectedIndexChanged += new System.EventHandler(this.Hour_SelectedIndexChanged);
@@ -340,25 +326,25 @@
             "s104",
             "a101",
             "a102"});
-            this.Class.Location = new System.Drawing.Point(284, 108);
-            this.Class.Margin = new System.Windows.Forms.Padding(4);
+            this.Class.Location = new System.Drawing.Point(106, 45);
+            this.Class.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Class.Name = "Class";
-            this.Class.Size = new System.Drawing.Size(280, 39);
+            this.Class.Size = new System.Drawing.Size(108, 21);
             this.Class.TabIndex = 15;
             this.Class.Text = "Choose class";
             // 
             // ExtraLecture
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1772, 998);
+            this.ClientSize = new System.Drawing.Size(511, 311);
             this.Controls.Add(this.Class);
             this.Controls.Add(this.Hour);
             this.Controls.Add(this.NewLec);
             this.Controls.Add(this.Available_Classes);
             this.Controls.Add(this.Lecture);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ExtraLecture";
             this.Text = "ExtraLecture";
             this.Load += new System.EventHandler(this.NewLecture_Load);
