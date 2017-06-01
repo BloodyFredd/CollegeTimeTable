@@ -11,9 +11,9 @@ namespace UnitTestProject
     [TestClass]
     public class AdminTest1
     {
-        
-        
-       
+
+
+        Admin a1 = new Admin();
         SignStudent s1 = new SignStudent();
         MergeAuditorium m1 = new MergeAuditorium();
         string value1 = "1001";
@@ -41,6 +41,34 @@ namespace UnitTestProject
             Assert.IsTrue(m1.checkChoice("", value1));
         }
 
-            
+        [TestMethod]
+        public void DisplayStuff()
+        {
+            Assert.IsNotNull(a1.SelectStuff());
+        }
+
+        [TestMethod]
+        public void DisplayClassesBYDate()
+        {
+            Assert.IsNull(a1.classesByDate("03/40/2018"));
+        }
+
+
+        [TestMethod]
+        public void DisplayClassesBYDateTrue()
+        {
+            Assert.IsNotNull(a1.classesByDate("03/13/2017"));
+        }
+
+        [TestMethod]
+        public void TestMethodLecture()
+        {
+            Assert.IsNotNull(a1.FindLecturer("204892749"));
+        }
+        [TestMethod]
+        public void TestMethodLecture2()
+        {
+            Assert.IsNull(a1.FindLecturer("333333333"));
+        }
     }
 }
