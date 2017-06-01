@@ -74,37 +74,37 @@ namespace UnitTestProject
         [TestMethod]
         public void date_test()
         {
-            Assert.IsTrue(lec.checker_dates_sql());
+            Assert.IsFalse(lec.checker_dates_sql());
         }
 
         [TestMethod]
         public void date_test_of_start_sm1()
         {
-            DateTime d = new DateTime(2016 - 08 - 07);
+            string d = "2016-08-07";
             Assert.IsTrue(lec.report_dates_from_sm1(d));
         }
 
-        // [TestMethod]
-        //  public void date_test_of_start_sm1_false()
-        //  {
-        //      DateTime d = new DateTime(2019 - 08 - 07);
-        //      Assert.IsFalse(lec.report_dates_from_sm1(d));
-        //  }
+         [TestMethod]
+          public void date_test_of_start_sm1_false()
+         {
+            string d = "2019 - 08 - 07";
+              Assert.IsFalse(lec.report_dates_from_sm1(d));
+          }
 
         [TestMethod]
         public void date_test_of_start_sm2()
         {
-            DateTime d = new DateTime(03 / 12 / 2017);
+            string d = "03/12/2017";
             Assert.IsTrue(lec.report_dates_from_sm2(d));
         }
 
-        //[TestMethod]
-        //public void date_test_of_start_sm2_false()
-        // {
-        //   DateTime d = new DateTime(03 / 12 / 2020);
-        // Assert.IsFalse(lec.report_dates_from_sm2(d));
+        [TestMethod]
+        public void date_test_of_start_sm2_false()
+         {
+           string d =  "03 / 12 / 2020";
+         Assert.IsFalse(lec.report_dates_from_sm2(d));
 
-        //}
+        }
     }
 }
 
