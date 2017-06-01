@@ -2,8 +2,8 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PRPJECT4NEW.Lecturer;
 using PRPJECT4NEW.Classes;
-
 
 namespace UnitTestProject
 {
@@ -13,8 +13,8 @@ namespace UnitTestProject
     [TestClass]
     public class LecturerTest
     {
-        
-        
+        Lecturer lec = new PRPJECT4NEW.Classes.Lecturer();
+
         public LecturerTest()
         {
             //
@@ -30,6 +30,7 @@ namespace UnitTestProject
         ///</summary>
         public TestContext TestContext
         {
+            
             
             get
             {
@@ -66,7 +67,20 @@ namespace UnitTestProject
         [TestMethod]
         public void TestMethod1()
         {
-           
+            modifay_grade modi = new modifay_grade();
+
+        }
+
+        [TestMethod]
+        public void date_test()
+        {
+            Assert.IsTrue(lec.checker_dates_sql());
+        }
+
+        [TestMethod]
+        public void date_test1()
+        {
+            Assert.IsTrue(lec.checker_dates_sql());
         }
     }
 }
