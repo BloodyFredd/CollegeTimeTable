@@ -205,9 +205,8 @@ namespace PRPJECT4NEW
 
         private void facebook_btnLogin_Click(object sender, EventArgs e)
         {
-            //Encrypt.ConvertPass();
            FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
-           facebook.Show();
+           //facebook.Show();
         }
 
 
