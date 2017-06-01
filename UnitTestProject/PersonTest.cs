@@ -1,49 +1,22 @@
-﻿using PRPJECT4NEW.Admin;
-using PRPJECT4NEW;
-using System.Data.SqlClient;
-using PRPJECT4NEW.Forms;
-using PRPJECT4NEW.Classes;
-using System;
+﻿using System;
+using System.Text;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PRPJECT4NEW.Classes;
 
 namespace UnitTestProject
 {
+ 
     [TestClass]
-    public class UnitTest1
+    public class PersonTest
     {
         PersonStuff p1 = new PersonStuff();
-        NewUser f1 = new NewUser();
-        General G1 = new General();
-        SqlConnection sqlcon = null;
-
         string f_name = "newName";
         string l_name = "newlname";
-        string TELEPHONE = "0525252852";
-        string USERNAME = "UserNAME";
         string email = "temp@gmail.com";
         string password = "fred123";
+        string TELEPHONE = "0525252852";
 
-        [TestMethod]
-        public void TestMethod1()
-        {
-            Assert.IsTrue(f1.checkString(f_name, "name"));
-        }
-        [TestMethod]
-        public void TestMethod2()
-        {
-            Assert.IsTrue(f1.checkString(USERNAME, "username"));
-        }
-        [TestMethod]
-        public void TestMethod3()
-        {
-            Assert.IsTrue(f1.checkString(TELEPHONE, "telephone"));
-        }
-        [TestMethod]
-        public void TestMethod4()
-        {
-            this.sqlcon = General.ConnectToSql();
-            Assert.IsNotNull(sqlcon);
-        }
 
         [TestMethod]
         public void TestMethodPerson1()
@@ -68,6 +41,7 @@ namespace UnitTestProject
         {
             Assert.IsTrue(p1.setPassword(password));
         }
+
         //#1
         [TestMethod]
         public void TestMethodPerson5()
@@ -93,6 +67,8 @@ namespace UnitTestProject
         {
             Assert.IsTrue(p1.setPhone(TELEPHONE));
         }
+
+
+
     }
 }
-

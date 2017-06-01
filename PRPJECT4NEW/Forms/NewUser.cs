@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Facebook;
+using PRPJECT4NEW.Forms;
 
 namespace PRPJECT4NEW
 {
@@ -15,6 +17,8 @@ namespace PRPJECT4NEW
     {
         private string connetionString = null;
         private SqlConnection sqlcon;
+        public static string  FnameF,LnameF, EmaillF;
+
 
 
         public NewUser()
@@ -33,9 +37,14 @@ namespace PRPJECT4NEW
                 checkString(this.Fname.Text, "name");
                 checkString(this.Lname.Text, "name");
                 checkString(this.Phone.Text, "telephone");
-                checkString(this.Email.Text, "username");
-                this.Email.Text = this.Email.Text + "@plus.mazal.com";
-                string query = "INSERT INTO person (ID,F_name,L_name,Telephone,Email,Password,Permission) VALUES('" + this.ID.Text + "','" + this.Fname.Text + "','" + this.Lname.Text + "','" + this.Phone.Text + "','" + this.Email.Text + "','" + this.ID.Text + "','" + this.perm1.Text + "')  ; ";
+                if (!this.Email.Text.Contains("@"))
+                {
+                    checkString(this.Email.Text, "username");
+                    this.Email.Text = this.Email.Text + "@plus.mazal.com";
+                }
+                string Encod = Forms.Encrypt.base64Encode(this.ID.Text);
+                MessageBox.Show(Encod);
+                string query = "INSERT INTO person (ID,F_name,L_name,Telephone,Email,Password,Permission) VALUES('" + this.ID.Text + "','" + this.Fname.Text + "','" + this.Lname.Text + "','" + this.Phone.Text + "','" + this.Email.Text + "','" + Encod + "','" + this.perm1.Text + "')  ; ";
                 SqlCommand cmd = new SqlCommand(query, sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (this.perm1.Text == "Teaching_Assistant" || this.perm1.Text == "Lecturer")
@@ -72,6 +81,7 @@ namespace PRPJECT4NEW
                 this.Close();
             }
         }
+
 
         public bool checkString(string str, string check)
         {
@@ -190,5 +200,24 @@ namespace PRPJECT4NEW
         {
             this.Close();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void facebook_btnLogin_Click(object sender, EventArgs e)
+        {
+            FB_Analyze.FB_Analyze_Register facebook = new FB_Analyze.FB_Analyze_Register();
+            //facebook.Show();
+            this.Email.Text = facebook.EmailReg;
+            this.Lname.Text = facebook.LnameReg;
+            this.Fname.Text = facebook.FnameReg;
+
+
+
+        }
+
+
     }
 }

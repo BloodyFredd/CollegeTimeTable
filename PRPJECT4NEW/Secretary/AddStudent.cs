@@ -23,6 +23,13 @@ namespace PRPJECT4NEW.Secretary
             InitializeComponent();
         }
 
+        public int semester(string text)
+        {
+            if (text == "1") return 1;
+            else if (text == "2") return 2;
+            return 0;
+        }
+
         private void Add_Click(object sender, EventArgs e)
         {
             string capacity = null;
@@ -43,7 +50,7 @@ namespace PRPJECT4NEW.Secretary
                 }
                 dr.Close();
 
-                SqlCommand cmd1 = new SqlCommand("select Capacity from Classes_SM2 where date='" + "2017-01-01" + "'AND Class_Id='" + Class.Text + "'", sqlcon);
+                SqlCommand cmd1 = new SqlCommand("select Capacity from Classes_SM2 where date='" + "03/12/2017" + "'AND Class_Id='" + Class.Text + "'", sqlcon);
                 SqlDataReader dr1 = cmd1.ExecuteReader();
                 if (dr1.Read())
                 {
@@ -62,7 +69,7 @@ namespace PRPJECT4NEW.Secretary
                 dr2.Close();
 
 
-                if(Semester.Text=="1")
+                if(semester(Semester.Text)==1)
                 {
                     if (x >= y)
                     {
@@ -95,7 +102,7 @@ namespace PRPJECT4NEW.Secretary
                     }
                 }
 
-                if (Semester.Text == "2")
+                if (semester(Semester.Text) == 2)
                 {
                     if (x >= z)
                     {
