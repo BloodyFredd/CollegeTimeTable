@@ -73,7 +73,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                         {
                             if (special_date_combobox.Text == "Open")
                             {
-                                if (s.Status == null)
+                                if (s.Status == "Open")
                                 {
                                     studentspecialExamBindingSource.DataSource = s;
                                     dataGridView1.Rows.Add(s.ID, s.Course_Serial, v.Course_name, s.Date, s.Status);
@@ -81,7 +81,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                             }
                             else if (special_date_combobox.Text == "Postponed")
                             {
-                                if (s.Status == false)
+                                if (s.Status == "Denied")
                                 {
                                     studentspecialExamBindingSource.DataSource = s;
                                     dataGridView1.Rows.Add(s.ID, s.Course_Serial, v.Course_name, s.Date, s.Status);
@@ -89,7 +89,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                             }
                             else
                             {
-                                if (s.Status == true)
+                                if (s.Status == "Approved")
                                 {
                                     studentspecialExamBindingSource.DataSource = s;
                                     dataGridView1.Rows.Add(s.ID, s.Course_Serial, v.Course_name, s.Date, s.Status);

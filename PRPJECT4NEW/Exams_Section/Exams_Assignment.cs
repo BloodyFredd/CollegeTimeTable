@@ -111,7 +111,7 @@ namespace PRPJECT4NEW.Exams_Section
                 && SuperviserAvailable(Super1_box.Text)
                 && SuperviserAvailable(Super2_box.Text)
                 && !SameSuperviser(Super1_box.Text, Super2_box.Text)
-                && checkDifference())
+                && checkDifference() && CheckClassDB())
             {
                 using (Entities context = new Entities())
                 {
@@ -131,6 +131,8 @@ namespace PRPJECT4NEW.Exams_Section
                     context.Exams.Add(new_Exam);
                     context.SaveChanges();
                     reloadDataGridView(context);
+                    markClasses();
+
 
                     string mesage1 = "Dear " + Super1_box.Text + "\nyou have new exam at " + Start_Time_Box.Value + ":00 - " + End_Time_Box.Value + ":00 at class " + Combo_Class_ID.Text;
                     string mesage2 = "Dear " + Super2_box.Text + "\nyou have new exam at " + Start_Time_Box.Value + ":00 - " + End_Time_Box.Value + ":00 at class " + Combo_Class_ID.Text;
@@ -157,6 +159,138 @@ namespace PRPJECT4NEW.Exams_Section
             }
             return 0;
         }
+
+        private bool CheckClassDB()
+        {
+            using (Entities context = new Entities())
+            {
+
+                foreach (var s in context.Classes_SM2)
+                    if(s.Class_Id == Combo_Class_ID.Text && s.date== datePicker.Value.ToShortDateString().Substring(3,3)+ datePicker.Value.ToShortDateString().Substring(0, 3)+ datePicker.Value.ToShortDateString().Substring(6, 4))
+                        switch (Convert.ToInt32(Start_Time_Box.Value))
+                        {
+                            case 8:
+                                if(s.C08_09==0 && s.C09_10 == 0 && s.C10_11 == 0 && s.C11_12 == 0)
+                                    return true;
+                                break;
+                            case 9:
+                                if ( s.C09_10 == 0 && s.C10_11 == 0 && s.C11_12 == 0 && s.C12_13 == 0)
+                                    return true;
+                                break;
+                            case 10:
+                                if (s.C10_11 == 0 && s.C11_12 == 0 && s.C12_13 == 0 && s.C13_14 == 0)
+                                    return true;
+                                break;
+                            case 11:
+                                if (s.C11_12 == 0 && s.C12_13 == 0 && s.C13_14 == 0 && s.C14_15 == 0)
+                                    return true;
+                                break;
+                            case 12:
+                                if (s.C12_13 == 0 && s.C13_14 == 0 && s.C14_15 == 0 && s.C15_16 == 0)
+                                    return true;
+                                break;
+                            case 13:
+                                if (s.C13_14 == 0 && s.C14_15 == 0 && s.C15_16 == 0 && s.C16_17 == 0)
+                                    return true;
+                                break;
+                            case 14:
+                                if (s.C14_15 == 0 && s.C15_16 == 0 && s.C16_17 == 0 && s.C17_18 == 0)
+                                    return true;
+                                break;
+                            case 15:
+                                if (s.C15_16 == 0 && s.C16_17 == 0 && s.C17_18 == 0 && s.C18_19 == 0)
+                                    return true;
+                                break;
+                            case 16:
+                                if (s.C16_17 == 0 && s.C17_18 == 0 && s.C18_19 == 0 && s.C19_20 ==0)
+                                    return true;
+                                break;
+                            case 17:
+                                if (s.C17_18 == 0 && s.C18_19 == 0 && s.C19_20 == 0 && s.C20_21 == 0)
+                                    return true;
+                                break;
+                        }             
+            }
+            MessageBox.Show("There is a Exam at this Time at the same class!", "Error!");
+            return false;
+        }
+
+
+
+        private void markClasses()
+        {
+            using (Entities context = new Entities())
+            {
+
+                foreach (var s in context.Classes_SM2)
+                    if (s.Class_Id == Combo_Class_ID.Text && s.date == datePicker.Value.ToShortDateString().Substring(3, 3) + datePicker.Value.ToShortDateString().Substring(0, 3) + datePicker.Value.ToShortDateString().Substring(6, 4))
+                        switch (Convert.ToInt32(Start_Time_Box.Value))
+                        {
+                            case 8:
+                                s.C08_09 = 1;
+                                s.C09_10 = 1;
+                                s.C10_11 = 1;
+                                s.C11_12 = 1;
+                                break;
+                            case 9:
+                                s.C09_10 = 1;
+                                s.C10_11 = 1;
+                                s.C11_12 = 1;
+                                s.C12_13 = 1;
+                                break;
+                            case 10:
+                                s.C10_11 = 1;
+                                s.C11_12 = 1;
+                                s.C12_13 = 1;
+                                s.C13_14 = 1;
+                                break;
+                            case 11:
+                                s.C11_12 = 1;
+                                s.C12_13 = 1;
+                                s.C13_14 = 1;
+                                s.C14_15 = 1;
+                                break;
+                            case 12:
+                                s.C12_13 = 1;
+                                s.C13_14 = 1;
+                                s.C14_15 = 1;
+                                s.C15_16 = 1;
+                                break;
+                            case 13:
+                                s.C13_14 = 1;
+                                s.C14_15 = 1;
+                                s.C15_16 = 1;
+                                s.C16_17 = 1;
+                                break;
+                            case 14:
+                                s.C14_15 = 1;
+                                s.C15_16 = 1;
+                                s.C16_17 = 1;
+                                s.C17_18 = 1;
+                                break;
+                            case 15:
+                                s.C15_16 = 1;
+                                s.C16_17 = 1;
+                                s.C17_18 = 1;
+                                s.C18_19 = 1;
+                                break;
+                            case 16:
+                                s.C16_17 = 1;
+                                s.C17_18 = 1;
+                                s.C18_19 = 1;
+                                s.C19_20 = 1;
+                                break;
+                            case 17:
+                                s.C17_18 = 1;
+                                s.C18_19 = 1;
+                                s.C19_20 = 1;
+                                s.C20_21 = 1;
+                                break;
+                        }
+                context.SaveChanges();
+            }
+        }
+
 
         /// <summary>
         /// return course Name that match to Course ID</summary>

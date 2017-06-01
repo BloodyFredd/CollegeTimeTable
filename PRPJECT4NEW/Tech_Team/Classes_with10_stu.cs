@@ -105,40 +105,46 @@ namespace PRPJECT4NEW.Tech_Team
         {
             for (int j = 5; j < 18; j++)
                 dataGridView.Rows[i].Cells[j].Style.BackColor = Color.Red;
-            if (s.C08_09.Value == 0)
+            if (s.C08_09 == 0)
                 dataGridView.Rows[i].Cells[5].Style.BackColor = Color.LawnGreen;
-            if (s.C09_10.Value == 0)
+            if (s.C09_10 == 0)
                 dataGridView.Rows[i].Cells[6].Style.BackColor = Color.LawnGreen;
-            if (s.C10_11.Value == 0)
+            if (s.C10_11 == 0)
                 dataGridView.Rows[i].Cells[7].Style.BackColor = Color.LawnGreen;
-            if (s.C11_12.Value == 0)
+            if (s.C11_12 == 0)
                 dataGridView.Rows[i].Cells[8].Style.BackColor = Color.LawnGreen;
-            if (s.C12_13.Value == 0)
+            if (s.C12_13 == 0)
                 dataGridView.Rows[i].Cells[9].Style.BackColor = Color.LawnGreen;
-            if (s.C13_14.Value == 0)
+            if (s.C13_14 == 0)
                 dataGridView.Rows[i].Cells[10].Style.BackColor = Color.LawnGreen;
-            if (s.C14_15.Value == 0)
+            if (s.C14_15 == 0)
                 dataGridView.Rows[i].Cells[11].Style.BackColor = Color.LawnGreen;
-            if (s.C15_16.Value == 0)
+            if (s.C15_16 == 0)
                 dataGridView.Rows[i].Cells[12].Style.BackColor = Color.LawnGreen;
-            if (s.C16_17.Value == 0)
+            if (s.C16_17 == 0)
                 dataGridView.Rows[i].Cells[13].Style.BackColor = Color.LawnGreen;
-            if (s.C17_18.Value == 0)
+            if (s.C17_18 == 0)
                 dataGridView.Rows[i].Cells[14].Style.BackColor = Color.LawnGreen;
-            if (s.C18_19.Value == 0)
+            if (s.C18_19 == 0)
                 dataGridView.Rows[i].Cells[15].Style.BackColor = Color.LawnGreen;
-            if (s.C19_20.Value == 0)
+            if (s.C19_20 == 0)
                 dataGridView.Rows[i].Cells[16].Style.BackColor = Color.LawnGreen;
-            if (s.C20_21.Value == 0)
+            if (s.C20_21 == 0)
                 dataGridView.Rows[i].Cells[17].Style.BackColor = Color.LawnGreen;
             i++;
         }
         //add dates to date combo box
         private void addDatesToDate_cmb()
         {
-            DateTime today = new DateTime(2017,01,01);
-            for (int i = 0; i < 90; i++)
-                date_cmb.Items.Add(today.AddDays(i).ToShortDateString());
+            DateTime today = new DateTime(2017, 03, 12);
+            DateTime endDay = new DateTime(2017, 06, 30);
+            while (today <= endDay)
+            {
+
+                if (today.DayOfWeek.ToString() != "Saturday")
+                    date_cmb.Items.Add(today.ToShortDateString());
+                today = today.AddDays(1);
+            }
         }
 
         //add capacities to cap combo box
@@ -167,10 +173,10 @@ namespace PRPJECT4NEW.Tech_Team
                             capacity = Convert.ToInt32(cap_cmb.Text.ToString());
                         if (s.date.Length==10)
                         {
-                            if (s.date.ToString().Substring(0, 4) == date_cmb.Text.Substring(6, 4) &&
-                                s.date.ToString().Substring(5, 2) == date_cmb.Text.Substring(3, 2) &&
-                                s.date.ToString().Substring(8, 2) == date_cmb.Text.Substring(0, 2) &&
-                                Convert.ToInt32(s.Capacity.Value.ToString()) >= capacity)
+                            if (s.date.ToString().Substring(6, 4) == date_cmb.Text.Substring(6, 4) && //year
+                                s.date.ToString().Substring(0, 2) == date_cmb.Text.Substring(3, 2) && //month
+                                s.date.ToString().Substring(3, 2) == date_cmb.Text.Substring(0, 2) && //days
+                                Convert.ToInt32(s.Capacity.ToString()) >= capacity)
                             {
                                 dataGridView.Rows.Add(s.date.ToString(), s.day.ToString(), s.Class_Id.ToString(), s.Type.ToString(),
                                 s.Capacity.ToString());

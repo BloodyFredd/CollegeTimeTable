@@ -55,6 +55,18 @@ namespace PRPJECT4NEW.Exams_Section
             frm.Show();
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Register_Students frm = new Register_Students();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
+        }
+
         private void Available_Classes_Button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Available Classes");
@@ -167,5 +179,7 @@ namespace PRPJECT4NEW.Exams_Section
         {
 
         }
+
+
     }
 }

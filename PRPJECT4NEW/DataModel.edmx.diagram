@@ -4,22 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7d9afdc374d44435913a6ae00cce8341" Name="Diagram1" ZoomLevel="75">
-        <EntityTypeShape EntityType="MazalModel.Classes_SM1" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MazalModel.Classes_SM2" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MazalModel.Course_detail" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MazalModel.Scholarship" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MazalModel.Student_Courses" Width="1.5" PointX="6.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MazalModel.student" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MazalModel.sysdiagram" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MazalModel.Student_special_Exam" Width="1.5" PointX="11.375" PointY="0.75" />
-        <EntityTypeShape EntityType="MazalModel.Person" Width="1.5" PointX="9.375" PointY="10.75" />
-        <EntityTypeShape EntityType="MazalModel.Conference" Width="1.5" PointX="0.75" PointY="11.75" />
-        <EntityTypeShape EntityType="MazalModel.DF_requests" Width="1.5" PointX="9.375" PointY="7.75" />
-        <EntityTypeShape EntityType="MazalModel.cours" Width="1.5" PointX="11.375" PointY="3.75" />
-        <EntityTypeShape EntityType="MazalModel.Lecture_Course" Width="1.5" PointX="3.375" PointY="11.75" />
-        <EntityTypeShape EntityType="MazalModel.Teaching_Stuff" Width="1.5" PointX="5.375" PointY="11.75" />
-        <EntityTypeShape EntityType="MazalModel.Exam" Width="1.5" PointX="11.375" PointY="6.75" />
+      <Diagram DiagramId="7d9afdc374d44435913a6ae00cce8341" Name="Diagram1" ZoomLevel="69">
+        <EntityTypeShape EntityType="MazalModel.Classes_SM1" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MazalModel.Classes_SM2" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MazalModel.Conference" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MazalModel.Course_detail" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MazalModel.cours" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MazalModel.DF_requests" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="MazalModel.Exam" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MazalModel.Lecture_Course" Width="1.5" PointX="6.75" PointY="7.75" />
+        <EntityTypeShape EntityType="MazalModel.Person" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MazalModel.Scholarship" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MazalModel.Student_Courses" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="MazalModel.student_request" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="MazalModel.Student_special_Exam" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="MazalModel.student" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MazalModel.sysdiagram" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MazalModel.Teaching_Stuff" Width="1.5" PointX="10.75" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -62,7 +62,7 @@
             // 
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentsReport.Location = new System.Drawing.Point(219, 52);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(2);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
             this.StudentsReport.Size = new System.Drawing.Size(438, 370);
@@ -76,7 +76,7 @@
             this.Failing_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Failing_Students.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Failing_Students.Location = new System.Drawing.Point(0, 235);
-            this.Failing_Students.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Failing_Students.Margin = new System.Windows.Forms.Padding(2);
             this.Failing_Students.Name = "Failing_Students";
             this.Failing_Students.Size = new System.Drawing.Size(218, 33);
             this.Failing_Students.TabIndex = 4;
@@ -92,7 +92,7 @@
             this.Available_Classes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Available_Classes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Available_Classes.Location = new System.Drawing.Point(0, 54);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(2);
             this.Available_Classes.Name = "Available_Classes";
             this.Available_Classes.Size = new System.Drawing.Size(218, 36);
             this.Available_Classes.TabIndex = 8;
@@ -221,7 +221,7 @@
             this.menuStrip2.Location = new System.Drawing.Point(46, 93);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(32, 14, 0, 14);
-            this.menuStrip2.Size = new System.Drawing.Size(124, 68);
+            this.menuStrip2.Size = new System.Drawing.Size(99, 49);
             this.menuStrip2.TabIndex = 15;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -232,7 +232,7 @@
             this.toolStripMenuItem3});
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(91, 19);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(66, 19);
             this.toolStripMenuItem1.Text = "Semester";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -243,7 +243,7 @@
             this.toolStripComboBox3});
             this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(82, 22);
             this.toolStripMenuItem2.Text = "A";
             // 
             // toolStripComboBox3
@@ -346,7 +346,7 @@
             this.toolStripComboBox4});
             this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(82, 22);
             this.toolStripMenuItem3.Text = "B";
             // 
             // toolStripComboBox4
@@ -514,7 +514,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.StudentsReport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);

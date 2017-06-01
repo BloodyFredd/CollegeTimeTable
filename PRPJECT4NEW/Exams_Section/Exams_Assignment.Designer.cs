@@ -36,9 +36,12 @@
             this.Exams_Grid = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Super2_box = new System.Windows.Forms.ComboBox();
+            this.Super1_box = new System.Windows.Forms.ComboBox();
             this.newScholarshipBtn = new System.Windows.Forms.Button();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.Combo_Class_ID = new System.Windows.Forms.ComboBox();
+            this.classesSM1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Combo_Course_name = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,14 +52,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Super1_box = new System.Windows.Forms.ComboBox();
-            this.Super2_box = new System.Windows.Forms.ComboBox();
-            this.classesSM1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Exams_Grid)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classesSM1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.End_Time_Box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Start_Time_Box)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classesSM1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Exams_Grid
@@ -136,6 +136,31 @@
             this.panel2.Size = new System.Drawing.Size(3051, 472);
             this.panel2.TabIndex = 5;
             // 
+            // Super2_box
+            // 
+            this.Super2_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Super2_box.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Super2_box.ForeColor = System.Drawing.Color.White;
+            this.Super2_box.FormattingEnabled = true;
+            this.Super2_box.Location = new System.Drawing.Point(1960, 248);
+            this.Super2_box.Margin = new System.Windows.Forms.Padding(5);
+            this.Super2_box.Name = "Super2_box";
+            this.Super2_box.Size = new System.Drawing.Size(364, 37);
+            this.Super2_box.TabIndex = 36;
+            this.Super2_box.SelectedIndexChanged += new System.EventHandler(this.Super2_box_SelectedIndexChanged);
+            // 
+            // Super1_box
+            // 
+            this.Super1_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Super1_box.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Super1_box.ForeColor = System.Drawing.Color.White;
+            this.Super1_box.FormattingEnabled = true;
+            this.Super1_box.Location = new System.Drawing.Point(1198, 248);
+            this.Super1_box.Margin = new System.Windows.Forms.Padding(5);
+            this.Super1_box.Name = "Super1_box";
+            this.Super1_box.Size = new System.Drawing.Size(364, 37);
+            this.Super1_box.TabIndex = 35;
+            // 
             // newScholarshipBtn
             // 
             this.newScholarshipBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -165,9 +190,12 @@
             this.datePicker.CalendarTrailingForeColor = System.Drawing.Color.White;
             this.datePicker.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePicker.Location = new System.Drawing.Point(1960, 159);
+            this.datePicker.MaxDate = new System.DateTime(2017, 8, 15, 0, 0, 0, 0);
+            this.datePicker.MinDate = new System.DateTime(2017, 6, 1, 0, 0, 0, 0);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(338, 44);
             this.datePicker.TabIndex = 34;
+            this.datePicker.Value = new System.DateTime(2017, 6, 1, 0, 0, 0, 0);
             this.datePicker.ValueChanged += new System.EventHandler(this.datePicker_ValueChanged);
             // 
             // Combo_Class_ID
@@ -183,6 +211,10 @@
             this.Combo_Class_ID.Size = new System.Drawing.Size(338, 37);
             this.Combo_Class_ID.TabIndex = 32;
             this.Combo_Class_ID.SelectedIndexChanged += new System.EventHandler(this.Combo_Class_ID_SelectedIndexChanged);
+            // 
+            // classesSM1BindingSource
+            // 
+            this.classesSM1BindingSource.DataSource = typeof(PRPJECT4NEW.Classes_SM1);
             // 
             // Combo_Course_name
             // 
@@ -330,35 +362,6 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "End Time:";
             // 
-            // Super1_box
-            // 
-            this.Super1_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Super1_box.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Super1_box.ForeColor = System.Drawing.Color.White;
-            this.Super1_box.FormattingEnabled = true;
-            this.Super1_box.Location = new System.Drawing.Point(1198, 248);
-            this.Super1_box.Margin = new System.Windows.Forms.Padding(5);
-            this.Super1_box.Name = "Super1_box";
-            this.Super1_box.Size = new System.Drawing.Size(364, 37);
-            this.Super1_box.TabIndex = 35;
-            // 
-            // Super2_box
-            // 
-            this.Super2_box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Super2_box.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Super2_box.ForeColor = System.Drawing.Color.White;
-            this.Super2_box.FormattingEnabled = true;
-            this.Super2_box.Location = new System.Drawing.Point(1960, 248);
-            this.Super2_box.Margin = new System.Windows.Forms.Padding(5);
-            this.Super2_box.Name = "Super2_box";
-            this.Super2_box.Size = new System.Drawing.Size(364, 37);
-            this.Super2_box.TabIndex = 36;
-            this.Super2_box.SelectedIndexChanged += new System.EventHandler(this.Super2_box_SelectedIndexChanged);
-            // 
-            // classesSM1BindingSource
-            // 
-            this.classesSM1BindingSource.DataSource = typeof(PRPJECT4NEW.Classes_SM1);
-            // 
             // Exams_Assignment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -372,9 +375,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Exams_Grid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.classesSM1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.End_Time_Box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Start_Time_Box)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.classesSM1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -53,6 +53,7 @@
             this.Approve_btn.TabIndex = 1;
             this.Approve_btn.Text = "Approve";
             this.Approve_btn.UseVisualStyleBackColor = true;
+            this.Approve_btn.Click += new System.EventHandler(this.Approve_btn_Click);
             // 
             // Reject_btn
             // 
@@ -62,6 +63,7 @@
             this.Reject_btn.TabIndex = 2;
             this.Reject_btn.Text = "Reject";
             this.Reject_btn.UseVisualStyleBackColor = true;
+            this.Reject_btn.Click += new System.EventHandler(this.Reject_btn_Click);
             // 
             // title_lbl
             // 
