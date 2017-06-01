@@ -5,6 +5,9 @@ using PRPJECT4NEW.Forms;
 using PRPJECT4NEW.Classes;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Windows.Forms;
+using System.Linq;
+
 
 namespace UnitTestProject
 {
