@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PRPJECT4NEW.Teaching_Assistant;
 
 namespace PRPJECT4NEW.Teaching_Assistant
 {
@@ -27,7 +28,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
                 this.sqlcon = new SqlConnection(connetionString);
                 SqlCommand cmd = new SqlCommand("select * from Person where ID ='" + ID_Student.Text + "' and Permission = 'Student'", sqlcon);
-                if (!checkString(ID_Student.Text, "ID") || !checkString(CourseID_Button.Text, "Course"))
+                if (!Grade56.checkString(ID_Student.Text, "ID") || !Grade56.checkString(CourseID_Button.Text, "Course"))
                 {
                     this.Close();
                     MessageBox.Show("Try again, this is not a correct ID!");
@@ -80,26 +81,6 @@ namespace PRPJECT4NEW.Teaching_Assistant
             this.Close();
         }
 
-        private bool checkString(string id, string check)
-        {
-            if (check == "ID")
-            {
-                bool allDigits = id.All(char.IsDigit);
-                if (id.Length != 9 || allDigits == false)
-                {
-                    throw new ArgumentException("ID should be only digits and with length of 9.");
-                }
-            }
-            if (check == "Course")
-            {
-                bool allDigits = id.All(char.IsDigit);
-                if (id.Length != 3 || allDigits == false)
-                {
-                    throw new ArgumentException("Course ID should be only digits and with length of 3.");
-                }
-            }
-            return true;
-        }
 
         private void ID_Student_TextChanged(object sender, EventArgs e)
         {
