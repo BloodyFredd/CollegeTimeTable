@@ -78,9 +78,10 @@ namespace UnitTestProject
         }
 
         [TestMethod]
-        public void date_test1()
+        public void date_test_of_start()
         {
-            Assert.IsTrue(lec.checker_dates_sql());
+            DateTime d = new DateTime(2016 - 08 - 07);
+            Assert.IsTrue(lec.report_dates_from(d));
         }
     }
 }
