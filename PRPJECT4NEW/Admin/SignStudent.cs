@@ -45,6 +45,12 @@ namespace PRPJECT4NEW.Admin
             }
         }
 
+        public bool CheckCourse(string value,string other)
+        {
+            if (other == value) return true;
+            return false;
+        }
+
         private void Sign_student_Click(object sender, EventArgs e)
         {
             string value = null;
@@ -62,7 +68,7 @@ namespace PRPJECT4NEW.Admin
                 dr.Close();
                 this.sqlcon.Close();
 
-                if (serial.Text == value) MessageBox.Show("It is the same course, try again!");
+                if (CheckCourse(value,serial.Text)) MessageBox.Show("It is the same course, try again!");
                 else
                 {
                     SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET course_serial = '" + serial.Text + "' WHERE stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text +"'", sqlcon);
