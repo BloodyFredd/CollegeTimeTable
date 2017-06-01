@@ -77,6 +77,7 @@ namespace PRPJECT4NEW.Exams_Section
             Exams_Grid.Columns.Add("Supervisor2_ID", "Second Supervisor ID");
             Exams_Grid.Columns.Add("Students_Enrolled", "Students Enrolled");
             Exams_Grid.Columns.Add("Date", "Date");
+            Exams_Grid.Columns.Add("DueIn", "Due In");
 
             //Paint headers
             Exams_Grid.EnableHeadersVisualStyles = false;
@@ -93,7 +94,7 @@ namespace PRPJECT4NEW.Exams_Section
                 Exams_Grid.Rows.Clear();
                 foreach (Exam s in context.Exams)
                 {
-                    Exams_Grid.Rows.Add(s.ID, getCourseName(s.Course_ID), s.Start_Time + ":00", s.End_Time + ":00", s.Class, s.Superviser1_ID, s.Superviser2_ID, s.Student_Enrolled, s.Date.ToShortDateString());
+                    Exams_Grid.Rows.Add(s.ID, getCourseName(s.Course_ID), s.Start_Time + ":00", s.End_Time + ":00", s.Class, s.Superviser1_ID, s.Superviser2_ID, s.Student_Enrolled, s.Date.ToShortDateString(),s.Due_in);
                 }             
             }
             Exams_Grid.Refresh();
@@ -108,8 +109,8 @@ namespace PRPJECT4NEW.Exams_Section
         private void newScholarshipBtn_Click(object sender, EventArgs e)
         {
             if (CheckDateTime(datePicker.Value, Convert.ToInt32(Start_Time_Box.Value), Convert.ToInt32(End_Time_Box.Value), Combo_Class_ID.Text) 
-                && SuperviserAvailable(Super1_box.Text)
-                && SuperviserAvailable(Super2_box.Text)
+                && SuperviserAvailable(getSupereId(Super1_box.Text))
+                && SuperviserAvailable(getSupereId(Super2_box.Text))
                 && !SameSuperviser(Super1_box.Text, Super2_box.Text)
                 && checkDifference() && CheckClassDB())
             {
@@ -315,7 +316,7 @@ namespace PRPJECT4NEW.Exams_Section
             Exams_Grid.Rows.Clear();
             foreach (Exam s in context.Exams)
             {
-                Exams_Grid.Rows.Add(s.ID, getCourseName(s.Course_ID), s.Start_Time+":00", s.End_Time + ":00", s.Class, s.Superviser1_ID, s.Superviser2_ID, s.Student_Enrolled, s.Date.ToShortDateString());
+                Exams_Grid.Rows.Add(s.ID, getCourseName(s.Course_ID), s.Start_Time+":00", s.End_Time + ":00", s.Class, s.Superviser1_ID, s.Superviser2_ID, s.Student_Enrolled, s.Date.ToShortDateString(),s.Due_in);
             }
             Exams_Grid.Refresh();
         }
@@ -341,6 +342,7 @@ namespace PRPJECT4NEW.Exams_Section
             }
             return true;
         }
+
 
         /// <summary>
         /// Check if 2 exams times are overlapping</summary>
@@ -379,7 +381,7 @@ namespace PRPJECT4NEW.Exams_Section
             {
 
                 foreach (var s in context.Exams)
-                    if (CheckDateTime(datePicker.Value, Convert.ToInt32(Start_Time_Box.Value), Convert.ToInt32(End_Time_Box.Value), Combo_Class_ID.Text) && (s.Superviser1_ID == SupID || s.Superviser2_ID == SupID ))
+                    if (s.Date.ToShortDateString()==datePicker.Value.ToShortDateString() && s.Start_Time == Convert.ToInt32(Start_Time_Box.Value) && s.End_Time == Convert.ToInt32(End_Time_Box.Value) && (s.Superviser1_ID.Contains(SupID) || s.Superviser2_ID.Contains(SupID)))
                     {
                         MessageBox.Show(SupID+" at the exam of "+ getCourseName(s.Course_ID) + " at this time!", "Error!");
                         return false;                      
@@ -485,5 +487,14 @@ namespace PRPJECT4NEW.Exams_Section
         {
         }
 
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Due_In_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

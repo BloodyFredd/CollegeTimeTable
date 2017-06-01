@@ -110,5 +110,10 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             }
             scholarshipGridView.Refresh();
         }
+
+        private void scholarshipGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

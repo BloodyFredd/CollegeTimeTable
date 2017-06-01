@@ -122,6 +122,7 @@
           <Property Name="Superviser2_ID" Type="text" Nullable="false" />
           <Property Name="Student_Enrolled" Type="int" Nullable="false" />
           <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Due_in" Type="int" />
         </EntityType>
         <EntityType Name="Lecture_Course">
           <Key>
@@ -388,6 +389,7 @@
           <Property Name="Superviser2_ID" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Student_Enrolled" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Due_in" Type="Int32" />
         </EntityType>
         <EntityType Name="Lecture_Course">
           <Key>
@@ -613,6 +615,7 @@
           <EntitySetMapping Name="Exams">
             <EntityTypeMapping TypeName="MazalModel.Exam">
               <MappingFragment StoreEntitySet="Exams">
+                <ScalarProperty Name="Due_in" ColumnName="Due_in" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Student_Enrolled" ColumnName="Student_Enrolled" />
                 <ScalarProperty Name="Superviser2_ID" ColumnName="Superviser2_ID" />

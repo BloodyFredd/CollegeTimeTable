@@ -23,5 +23,6 @@ namespace PRPJECT4NEW
         public string Superviser2_ID { get; set; }
         public int Student_Enrolled { get; set; }
         public System.DateTime Date { get; set; }
+        public Nullable<int> Due_in { get; set; }
     }
 }

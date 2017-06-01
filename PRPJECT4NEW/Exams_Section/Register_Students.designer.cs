@@ -41,16 +41,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.newScholarshipBtn = new System.Windows.Forms.Button();
-            this.Combo_Class_ID = new System.Windows.Forms.ComboBox();
+            this.Combo_Stud_Type = new System.Windows.Forms.ComboBox();
+            this.classesSM1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Combo_Course_name = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Students_List = new System.Windows.Forms.DataGridView();
-            this.classesSM1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Exams_Grid)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Students_List)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesSM1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Students_List)).BeginInit();
             this.SuspendLayout();
             // 
             // Exams_Grid
@@ -110,7 +110,7 @@
             // 
             this.panel2.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
             this.panel2.Controls.Add(this.newScholarshipBtn);
-            this.panel2.Controls.Add(this.Combo_Class_ID);
+            this.panel2.Controls.Add(this.Combo_Stud_Type);
             this.panel2.Controls.Add(this.Combo_Course_name);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
@@ -135,24 +135,32 @@
             this.newScholarshipBtn.Name = "newScholarshipBtn";
             this.newScholarshipBtn.Size = new System.Drawing.Size(1689, 66);
             this.newScholarshipBtn.TabIndex = 24;
-            this.newScholarshipBtn.Text = "Add Exam";
+            this.newScholarshipBtn.Text = "Register Students";
             this.newScholarshipBtn.UseVisualStyleBackColor = false;
-           // this.newScholarshipBtn.Click += new System.EventHandler(this.newScholarshipBtn_Click);
+            this.newScholarshipBtn.Click += new System.EventHandler(this.newScholarshipBtn_Click);
             // 
-            // Combo_Class_ID
+            // Combo_Stud_Type
             // 
-            this.Combo_Class_ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Combo_Class_ID.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.classesSM1BindingSource, "Class_Id", true));
-            this.Combo_Class_ID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Combo_Class_ID.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Combo_Class_ID.ForeColor = System.Drawing.Color.White;
-            this.Combo_Class_ID.FormattingEnabled = true;
-            this.Combo_Class_ID.Location = new System.Drawing.Point(2195, 160);
-            this.Combo_Class_ID.Margin = new System.Windows.Forms.Padding(5);
-            this.Combo_Class_ID.Name = "Combo_Class_ID";
-            this.Combo_Class_ID.Size = new System.Drawing.Size(338, 48);
-            this.Combo_Class_ID.TabIndex = 32;
-            this.Combo_Class_ID.SelectedIndexChanged += new System.EventHandler(this.Combo_Class_ID_SelectedIndexChanged);
+            this.Combo_Stud_Type.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Combo_Stud_Type.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.classesSM1BindingSource, "Class_Id", true));
+            this.Combo_Stud_Type.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Combo_Stud_Type.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Combo_Stud_Type.ForeColor = System.Drawing.Color.White;
+            this.Combo_Stud_Type.FormattingEnabled = true;
+            this.Combo_Stud_Type.Items.AddRange(new object[] {
+            "All Students",
+            "Have easement",
+            "Without easement"});
+            this.Combo_Stud_Type.Location = new System.Drawing.Point(2195, 160);
+            this.Combo_Stud_Type.Margin = new System.Windows.Forms.Padding(5);
+            this.Combo_Stud_Type.Name = "Combo_Stud_Type";
+            this.Combo_Stud_Type.Size = new System.Drawing.Size(338, 48);
+            this.Combo_Stud_Type.TabIndex = 32;
+            this.Combo_Stud_Type.SelectedIndexChanged += new System.EventHandler(this.Combo_Class_ID_SelectedIndexChanged);
+            // 
+            // classesSM1BindingSource
+            // 
+            this.classesSM1BindingSource.DataSource = typeof(PRPJECT4NEW.Classes_SM1);
             // 
             // Combo_Course_name
             // 
@@ -235,10 +243,6 @@
             this.Students_List.TabIndex = 6;
             this.Students_List.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // classesSM1BindingSource
-            // 
-            this.classesSM1BindingSource.DataSource = typeof(PRPJECT4NEW.Classes_SM1);
-            // 
             // Register_Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -253,8 +257,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Exams_Grid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Students_List)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.classesSM1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Students_List)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,7 +270,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox Combo_Class_ID;
+        private System.Windows.Forms.ComboBox Combo_Stud_Type;
         private System.Windows.Forms.ComboBox Combo_Course_name;
         private System.Windows.Forms.Button newScholarshipBtn;
         private System.Windows.Forms.BindingSource classesSM1BindingSource;
