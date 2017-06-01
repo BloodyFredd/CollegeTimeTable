@@ -43,7 +43,7 @@ namespace PRPJECT4NEW.Secretary
                 }
                 dr.Close();
 
-                SqlCommand cmd1 = new SqlCommand("select Capacity from Classes_SM2 where date='" + "2017-01-01" + "'AND Class_Id='" + Class.Text + "'", sqlcon);
+                SqlCommand cmd1 = new SqlCommand("select Capacity from Classes_SM2 where date='" + "03/12/2017" + "'AND Class_Id='" + Class.Text + "'", sqlcon);
                 SqlDataReader dr1 = cmd1.ExecuteReader();
                 if (dr1.Read())
                 {
