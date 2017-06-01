@@ -40,7 +40,36 @@ namespace UnitTestProject
             bool flag = false;
             Assert.IsFalse(s.checkIfTrue(flag));
         }
-        
 
+        [TestMethod]
+        public void CheckForID()
+        {
+            bool flag = true;
+            Assert.IsTrue(s.checkIfTrue(flag));
+        }
+
+        [TestMethod]
+        public void CheckTeacherTrue()
+        {
+            Assert.IsTrue(s.checkForTeacher("203396809"));
+        }
+
+        [TestMethod]
+        public void CheckTeacherFalse()
+        {
+            Assert.IsFalse(s.checkForTeacher("123456789"));
+        }
+
+        [TestMethod]
+        public void CheckStudentTrue()
+        {
+            Assert.IsTrue(s.checkForStudent("321201121"));
+        }
+
+        [TestMethod]
+        public void CheckStudentFalse()
+        {
+            Assert.IsFalse(s.checkForStudent("999999999"));
+        }
     }
 }
