@@ -148,10 +148,12 @@ namespace PRPJECT4NEW.Tech_Team
         }
 
         //add capacities to cap combo box
-        private void addCapacitiesToCap_cmb()
+        public int addCapacitiesToCap_cmb()
         {
-            for(int i=1;i<=10;i++)
+            int i;
+            for (i=1;i<=10;i++)
                 cap_cmb.Items.Add(i);
+            return i;
         }
 
         private void refresh_btn_Click(object sender, EventArgs e)

@@ -42,9 +42,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(360, 12);
+            this.button1.Location = new System.Drawing.Point(270, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 115);
+            this.button1.Size = new System.Drawing.Size(134, 93);
             this.button1.TabIndex = 0;
             this.button1.Text = "modify between 2 classrooms lecture ";
             this.button1.UseVisualStyleBackColor = true;
@@ -56,9 +57,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.semesterToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(34, 39);
+            this.menuStrip1.Location = new System.Drawing.Point(26, 32);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(90, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(165, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -68,7 +70,7 @@
             this.aToolStripMenuItem,
             this.bToolStripMenuItem});
             this.semesterToolStripMenuItem.Name = "semesterToolStripMenuItem";
-            this.semesterToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.semesterToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.semesterToolStripMenuItem.Text = "Semester";
             // 
             // aToolStripMenuItem
@@ -76,7 +78,7 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateSem1});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aToolStripMenuItem.Text = "A";
             // 
             // dateSem1
@@ -167,106 +169,92 @@
             "2016-11-10",
             "2016-11-11"});
             this.dateSem1.Name = "dateSem1";
-            this.dateSem1.Size = new System.Drawing.Size(121, 28);
+            this.dateSem1.Size = new System.Drawing.Size(121, 23);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateSem2});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bToolStripMenuItem.Text = "B";
             this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
             // 
             // dateSem2
             // 
             this.dateSem2.Items.AddRange(new object[] {
-            "2017-01-01",
-            "2017-01-02",
-            "2017-01-03",
-            "2017-01-04",
-            "2017-01-05",
-            "2017-01-06",
-            "2017-01-08",
-            "2017-01-09",
-            "2017-01-10",
-            "2017-01-11",
-            "2017-01-12",
-            "2017-01-13",
-            "2017-01-15",
-            "2017-01-16",
-            "2017-01-17",
-            "2017-01-18",
-            "2017-01-19",
-            "2017-01-20",
-            "2017-01-22",
-            "2017-01-23",
-            "2017-01-24",
-            "2017-01-25",
-            "2017-01-26",
-            "2017-01-27",
-            "2017-01-29",
-            "2017-01-30",
-            "2017-01-31",
-            "2017-02-01",
-            "2017-02-02",
-            "2017-02-03",
-            "2017-02-05",
-            "2017-02-06",
-            "2017-02-07",
-            "2017-02-08",
-            "2017-02-09",
-            "2017-02-10",
-            "2017-02-12",
-            "2017-02-13",
-            "2017-02-14",
-            "2017-02-15",
-            "2017-02-16",
-            "2017-02-17",
-            "2017-02-19",
-            "2017-02-20",
-            "2017-02-21",
-            "2017-02-22",
-            "2017-02-23",
-            "2017-02-24",
-            "2017-02-26",
-            "2017-02-27",
-            "2017-02-28",
-            "2017-03-01",
-            "2017-03-02",
-            "2017-03-03",
-            "2017-03-05",
-            "2017-03-06",
-            "2017-03-07",
-            "2017-03-08",
-            "2017-03-09",
-            "2017-03-10",
-            "2017-03-12",
-            "2017-03-13",
-            "2017-03-14",
-            "2017-03-15",
-            "2017-03-16",
-            "2017-03-17",
-            "2017-03-19",
-            "2017-03-20",
-            "2017-03-21",
-            "2017-03-22",
-            "2017-03-23",
-            "2017-03-24",
-            "2017-03-26",
-            "2017-03-27",
-            "2017-03-28",
-            "2017-03-29",
-            "2017-03-30",
-            "2017-03-31",
-            "2017-04-02",
-            "2017-04-03",
-            "2017-04-04",
-            "2017-04-05",
-            "2017-04-06",
-            "2017-04-07"});
+            "03/12/2017",
+            "03/13/2017",
+            "03/14/2017",
+            "03/15/2017",
+            "03/16/2017",
+            "03/17/2017",
+            "03/19/2017",
+            "03/20/2017",
+            "03/21/2017",
+            "03/22/2017",
+            "03/23/2017",
+            "03/24/2017",
+            "03/26/2017",
+            "03/27/2017",
+            "03/28/2017",
+            "03/29/2017",
+            "03/30/2017",
+            "03/31/2017",
+            "04/02/2017",
+            "04/03/2017",
+            "04/04/2017",
+            "04/05/2017",
+            "04/06/2017",
+            "04/07/2017",
+            "04/09/2017",
+            "04/10/2017",
+            "04/11/2017",
+            "04/12/2017",
+            "04/13/2017",
+            "04/14/2017",
+            "04/16/2017",
+            "04/17/2017",
+            "04/18/2017",
+            "04/19/2017",
+            "04/20/2017",
+            "04/21/2017",
+            "04/23/2017",
+            "04/24/2017",
+            "04/25/2017",
+            "04/26/2017",
+            "04/27/2017",
+            "04/28/2017",
+            "04/30/2017",
+            "05/01/2017",
+            "05/02/2017",
+            "05/03/2017",
+            "05/04/2017",
+            "05/05/2017",
+            "05/07/2017",
+            "05/08/2017",
+            "05/09/2017",
+            "05/10/2017",
+            "05/11/2017",
+            "05/12/2017",
+            "05/14/2017",
+            "05/15/2017",
+            "05/16/2017",
+            "05/17/2017",
+            "05/18/2017",
+            "05/19/2017",
+            "05/21/2017",
+            "05/22/2017",
+            "05/23/2017",
+            "05/24/2017",
+            "05/25/2017",
+            "05/26/2017",
+            "05/28/2017",
+            "05/29/2017",
+            "05/30/2017",
+            "05/31/2017"});
             this.dateSem2.Name = "dateSem2";
-            this.dateSem2.Size = new System.Drawing.Size(121, 28);
+            this.dateSem2.Size = new System.Drawing.Size(121, 23);
             this.dateSem2.Click += new System.EventHandler(this.toolStripComboBox2_Click);
             // 
             // class1
@@ -283,9 +271,10 @@
             "s104",
             "a101",
             "a102"});
-            this.class1.Location = new System.Drawing.Point(159, 26);
+            this.class1.Location = new System.Drawing.Point(119, 21);
+            this.class1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.class1.Name = "class1";
-            this.class1.Size = new System.Drawing.Size(164, 24);
+            this.class1.Size = new System.Drawing.Size(124, 21);
             this.class1.TabIndex = 2;
             this.class1.Text = "Choose first class";
             this.class1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -304,22 +293,24 @@
             "s104",
             "a101",
             "a102"});
-            this.class2.Location = new System.Drawing.Point(159, 71);
+            this.class2.Location = new System.Drawing.Point(119, 58);
+            this.class2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.class2.Name = "class2";
-            this.class2.Size = new System.Drawing.Size(164, 24);
+            this.class2.Size = new System.Drawing.Size(124, 21);
             this.class2.TabIndex = 3;
             this.class2.Text = "Choose second class";
             // 
             // Modifay_2_classes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 148);
+            this.ClientSize = new System.Drawing.Size(474, 120);
             this.Controls.Add(this.class2);
             this.Controls.Add(this.class1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Modifay_2_classes";
             this.Text = "Modifay_2_classes";
             this.Load += new System.EventHandler(this.Modifay_2_classes_Load);

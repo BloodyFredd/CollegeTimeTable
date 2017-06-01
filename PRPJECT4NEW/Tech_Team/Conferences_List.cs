@@ -18,31 +18,46 @@ namespace PRPJECT4NEW.Tech_Team
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public Boolean SaveFILE()
         {
-            //SAVE FILE
-            using (Entities context = new Entities())
+            try
             {
-                var allRowes = context.Conferences.ToList();
-
-                using (SaveFileDialog sdf = new SaveFileDialog() { Filter = "Csv|*.csv", ValidateNames = true })
+                //SAVE FILE
+                using (Entities context = new Entities())
                 {
-                    if (sdf.ShowDialog() == DialogResult.OK)
+                    var allRowes = context.Conferences.ToList();
+
+                    using (SaveFileDialog sdf = new SaveFileDialog() { Filter = "Csv|*.csv", ValidateNames = true })
                     {
-                        using (var sw = new StreamWriter(sdf.FileName))
+                        if (sdf.ShowDialog() == DialogResult.OK)
                         {
-                            var writer = new CsvWriter(sw);
-                            writer.WriteHeader(typeof(Conference));
-                            foreach (var s in context.Conferences)
+                            using (var sw = new StreamWriter(sdf.FileName))
                             {
+                                var writer = new CsvWriter(sw);
+                                writer.WriteHeader(typeof(Conference));
+                                foreach (var s in context.Conferences)
+                                {
                                     writer.WriteRecord(s);
+                                }
                             }
+                            return true;
+
                         }
-                        MessageBox.Show("Saved", "mes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
+            catch(Exception e)
+            {
+                return false;
+            }
+            return false;
+            
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+          if (SaveFILE())
+                MessageBox.Show("Saved", "mes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void Conferences_Grid_CellContentClick(object sender, DataGridViewCellEventArgs e)

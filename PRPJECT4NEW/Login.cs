@@ -16,7 +16,7 @@ namespace PRPJECT4NEW
     
     public partial class Login : Form
     {
-         System.Media.SoundPlayer player = new System.Media.SoundPlayer(PRPJECT4NEW.Properties.Resources.mazalRing);//music
+         //System.Media.SoundPlayer player = new System.Media.SoundPlayer(PRPJECT4NEW.Properties.Resources.mazalRing);//music
 
 
         int TogMove;
@@ -205,9 +205,8 @@ namespace PRPJECT4NEW
 
         private void facebook_btnLogin_Click(object sender, EventArgs e)
         {
-            //Encrypt.ConvertPass();
            FB_Analyze.FB_Analyze facebook = new FB_Analyze.FB_Analyze();
-           facebook.Show();
+           //facebook.Show();
         }
 
 

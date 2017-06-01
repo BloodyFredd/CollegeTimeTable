@@ -20,7 +20,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
             InitializeComponent();
         }
 
-        private void Apply_Button_Click(object sender, EventArgs e)
+        public void Apply_Button_Click(object sender, EventArgs e)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
             this.Close();
         }
 
-        private bool checkString(string id, string check)
+        public static bool checkString(string id, string check)
         {
             if (check == "ID")
             {

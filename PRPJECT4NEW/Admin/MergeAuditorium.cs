@@ -70,6 +70,13 @@ namespace PRPJECT4NEW.Admin
             }
         }
 
+        public bool checkChoice(string value1,string value2)
+        {
+            if (value1.Equals("") && !value2.Equals(""))
+                return true;
+            return false;
+        }
+
         private void Merge_Click(object sender, EventArgs e)
         {
             string str = null;
@@ -81,7 +88,7 @@ namespace PRPJECT4NEW.Admin
                 this.sqlcon = new SqlConnection(connetionString);
                 SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
                 SqlCommand cmd1 = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
-                if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
+                if (checkChoice(toolStripComboBox1.Text,toolStripComboBox2.Text))
 
                 {
                     str = toolStripComboBox2.Text;
@@ -90,7 +97,7 @@ namespace PRPJECT4NEW.Admin
 
                     Lecture.Visible = true;
                 }
-                else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
+                else if (checkChoice(toolStripComboBox2.Text, toolStripComboBox1.Text))
                 {
                     str = toolStripComboBox1.Text;
                     cmd = new SqlCommand("UPDATE Classes_SM2 SET Capacity= 20 where class_Id='" + "a101" + "'AND date='" + str + "'", sqlcon);

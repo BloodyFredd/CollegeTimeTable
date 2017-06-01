@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
@@ -64,7 +61,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 17, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(581, 1586);
+            this.panel1.Size = new System.Drawing.Size(581, 741);
             this.panel1.TabIndex = 19;
             // 
             // button1
@@ -91,7 +88,7 @@
             this.menuStrip2.Location = new System.Drawing.Point(123, 225);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(85, 33, 0, 33);
-            this.menuStrip2.Size = new System.Drawing.Size(238, 113);
+            this.menuStrip2.Size = new System.Drawing.Size(152, 87);
             this.menuStrip2.TabIndex = 15;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -102,7 +99,7 @@
             this.toolStripMenuItem3});
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 45);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(66, 19);
             this.toolStripMenuItem1.Text = "Semester";
             // 
             // toolStripMenuItem2
@@ -112,7 +109,7 @@
             this.toolStripComboBox2});
             this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 46);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem2.Text = "A";
             // 
             // toolStripComboBox2
@@ -206,7 +203,7 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 49);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 23);
             // 
             // toolStripMenuItem3
             // 
@@ -215,7 +212,7 @@
             this.toolStripComboBox1});
             this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 46);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem3.Text = "B";
             // 
             // toolStripComboBox1
@@ -224,92 +221,78 @@
             this.toolStripComboBox1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.toolStripComboBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripComboBox1.Items.AddRange(new object[] {
-            "2017-01-01",
-            "2017-01-02",
-            "2017-01-03",
-            "2017-01-04",
-            "2017-01-05",
-            "2017-01-06",
-            "2017-01-08",
-            "2017-01-09",
-            "2017-01-10",
-            "2017-01-11",
-            "2017-01-12",
-            "2017-01-13",
-            "2017-01-15",
-            "2017-01-16",
-            "2017-01-17",
-            "2017-01-18",
-            "2017-01-19",
-            "2017-01-20",
-            "2017-01-22",
-            "2017-01-23",
-            "2017-01-24",
-            "2017-01-25",
-            "2017-01-26",
-            "2017-01-27",
-            "2017-01-29",
-            "2017-01-30",
-            "2017-01-31",
-            "2017-02-01",
-            "2017-02-02",
-            "2017-02-03",
-            "2017-02-05",
-            "2017-02-06",
-            "2017-02-07",
-            "2017-02-08",
-            "2017-02-09",
-            "2017-02-10",
-            "2017-02-12",
-            "2017-02-13",
-            "2017-02-14",
-            "2017-02-15",
-            "2017-02-16",
-            "2017-02-17",
-            "2017-02-19",
-            "2017-02-20",
-            "2017-02-21",
-            "2017-02-22",
-            "2017-02-23",
-            "2017-02-24",
-            "2017-02-26",
-            "2017-02-27",
-            "2017-02-28",
-            "2017-03-01",
-            "2017-03-02",
-            "2017-03-03",
-            "2017-03-05",
-            "2017-03-06",
-            "2017-03-07",
-            "2017-03-08",
-            "2017-03-09",
-            "2017-03-10",
-            "2017-03-12",
-            "2017-03-13",
-            "2017-03-14",
-            "2017-03-15",
-            "2017-03-16",
-            "2017-03-17",
-            "2017-03-19",
-            "2017-03-20",
-            "2017-03-21",
-            "2017-03-22",
-            "2017-03-23",
-            "2017-03-24",
-            "2017-03-26",
-            "2017-03-27",
-            "2017-03-28",
-            "2017-03-29",
-            "2017-03-30",
-            "2017-03-31",
-            "2017-04-02",
-            "2017-04-03",
-            "2017-04-04",
-            "2017-04-05",
-            "2017-04-06",
-            "2017-04-07"});
+            "03/12/2017",
+            "03/13/2017",
+            "03/14/2017",
+            "03/15/2017",
+            "03/16/2017",
+            "03/17/2017",
+            "03/19/2017",
+            "03/20/2017",
+            "03/21/2017",
+            "03/22/2017",
+            "03/23/2017",
+            "03/24/2017",
+            "03/26/2017",
+            "03/27/2017",
+            "03/28/2017",
+            "03/29/2017",
+            "03/30/2017",
+            "03/31/2017",
+            "04/02/2017",
+            "04/03/2017",
+            "04/04/2017",
+            "04/05/2017",
+            "04/06/2017",
+            "04/07/2017",
+            "04/09/2017",
+            "04/10/2017",
+            "04/11/2017",
+            "04/12/2017",
+            "04/13/2017",
+            "04/14/2017",
+            "04/16/2017",
+            "04/17/2017",
+            "04/18/2017",
+            "04/19/2017",
+            "04/20/2017",
+            "04/21/2017",
+            "04/23/2017",
+            "04/24/2017",
+            "04/25/2017",
+            "04/26/2017",
+            "04/27/2017",
+            "04/28/2017",
+            "04/30/2017",
+            "05/01/2017",
+            "05/02/2017",
+            "05/03/2017",
+            "05/04/2017",
+            "05/05/2017",
+            "05/07/2017",
+            "05/08/2017",
+            "05/09/2017",
+            "05/10/2017",
+            "05/11/2017",
+            "05/12/2017",
+            "05/14/2017",
+            "05/15/2017",
+            "05/16/2017",
+            "05/17/2017",
+            "05/18/2017",
+            "05/19/2017",
+            "05/21/2017",
+            "05/22/2017",
+            "05/23/2017",
+            "05/24/2017",
+            "05/25/2017",
+            "05/26/2017",
+            "05/28/2017",
+            "05/29/2017",
+            "05/30/2017",
+            "05/31/2017"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 49);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
             // 
             // button3
             // 
@@ -367,45 +350,21 @@
             // 
             // StudentsReport
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.StudentsReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.StudentsReport.DefaultCellStyle = dataGridViewCellStyle2;
             this.StudentsReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StudentsReport.Location = new System.Drawing.Point(581, 0);
             this.StudentsReport.Margin = new System.Windows.Forms.Padding(5);
             this.StudentsReport.Name = "StudentsReport";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.StudentsReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(1393, 1586);
+            this.StudentsReport.Size = new System.Drawing.Size(781, 741);
             this.StudentsReport.TabIndex = 20;
             // 
             // Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1974, 1586);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.StudentsReport);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));

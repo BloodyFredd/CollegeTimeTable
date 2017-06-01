@@ -52,6 +52,10 @@
       <HintPath>..\packages\Facebook.7.0.6\lib\net45\Facebook.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="nunit.framework, Version=3.7.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.7.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -234,17 +238,17 @@
     <Compile Include="Exams_Section\Supervisor_List.designer.cs">
       <DependentUpon>Supervisor_List.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facebook\Analyze.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Facebook\Analyze.designer.cs">
-      <DependentUpon>Analyze.cs</DependentUpon>
-    </Compile>
     <Compile Include="Facebook\FacebookLoginDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Facebook\FacebookLoginDialog.designer.cs">
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facebook\FB_Analyze_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facebook\FB_Analyze_Register.designer.cs">
+      <DependentUpon>FB_Analyze_Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Facebook\FB_Analyze.cs">
       <SubType>Form</SubType>
@@ -533,11 +537,11 @@
     <EmbeddedResource Include="Exams_Section\Supervisor_List.resx">
       <DependentUpon>Supervisor_List.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Facebook\Analyze.resx">
-      <DependentUpon>Analyze.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Facebook\FacebookLoginDialog.resx">
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facebook\FB_Analyze_Register.resx">
+      <DependentUpon>FB_Analyze_Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facebook\FB_Analyze.resx">
       <DependentUpon>FB_Analyze.cs</DependentUpon>

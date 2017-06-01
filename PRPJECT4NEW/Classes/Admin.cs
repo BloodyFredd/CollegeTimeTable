@@ -1,69 +1,91 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using PRPJECT4NEW.Forms;
-using System.Globalization;
-using System.Text.RegularExpressions;
-using System.Data;
-using System.Windows.Forms;
-using PRPJECT4NEW.Classes;
-
-//namespace PRPJECT4NEW.Classes
-//{
-   // class Admin : PersonStuff
-   // {
+using System.Text;
+using System.Threading.Tasks;
 
 
-       // public Admin(string id) : base(id)
-      //  {
-            // try try try 
-       //     public void grade56() {
-         //   try
-         //   {
-         //       General.ConnectToSql();
-         //   }
-         //   catch (Exception ex)
-         //   {
-         //       MessageBox.Show(ex.Message);
-         //   }
-         //   string value = null;
-          //  try
-           // {
-              //  PersonStuff B = new PersonStuff("123456789");
-                //SqlCommand cmd1 = new SqlCommand("SELECT course_serial FROM Student_Courses where stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text + "'", sqlcon);
-             //   this.sqlcon.Open();
-               // SqlDataReader dr = cmd1.ExecuteReader();
-               // if (dr.Read())
-              //  {
-                 //   value = dr[0].ToString();
-              //  }
-             //   dr.Close();
-              //  this.sqlcon.Close();
+namespace PRPJECT4NEW.Classes
+{
+    public class Admin : PersonStuff
+    {
 
-             //   if (serial.Text == value) MessageBox.Show("It is the same course, try again!");
-              //  else
-              //  {
-                  //  SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET course_serial = '" + serial.Text + "' WHERE stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text + "'", sqlcon);
-                //    Students.Visible = true;
-                  //  SqlDataAdapter sda = new SqlDataAdapter();
-                   // sda.SelectCommand = cmd;
-                 //   DataTable dbdataset = new DataTable();
-                 //   sda.Fill(dbdataset);
-                 //   BindingSource bsource = new BindingSource();
+        public Admin(string id) : base(id) { }
 
-                 //   bsource.DataSource = dbdataset;
-                 //   Students.DataSource = bsource;
-                //    sda.Update(dbdataset);
-                 //   MessageBox.Show("The student was assigned!");
-             //   }
-          //  }
-          //  catch (Exception ex)
-         //   {
-               // MessageBox.Show(ex.Message);
-         //   }
-    //    }
-  //  }
-//}
+        public Admin() : base() { }
+
+        public SqlDataReader SelectStuff()
+        {
+            try
+            {
+                string connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
+                SqlConnection sqlcon = new SqlConnection(connetionString);
+                sqlcon.Open();
+                SqlCommand cmd = new SqlCommand("select * from Teaching_Stuff ", sqlcon);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read() == true)
+                {
+                    dr.Close();
+                    sqlcon.Close();
+                    return dr;
+                }
+                else
+                {
+                    throw new ArgumentException("Try again, the person isnt in the teaching stuff!");
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        public SqlConnection classesByDate(string date)
+        {
+
+            string connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
+            SqlConnection sqlcon = new SqlConnection(connetionString);
+            sqlcon.Open();
+            SqlCommand cmd = new SqlCommand("select * from Classes_SM2 Where date='" + date + "'", sqlcon);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                dr.Close();
+                sqlcon.Close();
+                return sqlcon;
+            }
+            sqlcon.Close();
+            dr.Close();
+
+            return null;
+
+        }
+
+        public SqlConnection FindLecturer(string ID)
+        {
+
+            string connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
+            SqlConnection sqlcon = new SqlConnection(connetionString);
+            sqlcon.Open();
+            SqlCommand cmd = new SqlCommand("select * from Lecture_Course Where Teacher='" + ID + "'", sqlcon);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                dr.Close();
+                sqlcon.Close();
+                return sqlcon;
+            }
+            sqlcon.Close();
+            dr.Close();
+
+            return null;
+
+        }
+    }
+}
 
 
 
@@ -71,4 +93,3 @@ using PRPJECT4NEW.Classes;
 
 
 
-    
