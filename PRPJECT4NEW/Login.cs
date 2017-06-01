@@ -16,7 +16,7 @@ namespace PRPJECT4NEW
     
     public partial class Login : Form
     {
-         System.Media.SoundPlayer player = new System.Media.SoundPlayer(PRPJECT4NEW.Properties.Resources.mazalRing);//music
+         //System.Media.SoundPlayer player = new System.Media.SoundPlayer(PRPJECT4NEW.Properties.Resources.mazalRing);//music
 
 
         int TogMove;
