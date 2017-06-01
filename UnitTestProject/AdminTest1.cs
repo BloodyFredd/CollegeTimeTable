@@ -11,7 +11,9 @@ namespace UnitTestProject
     [TestClass]
     public class AdminTest1
     {
-
+        
+        
+       
         SignStudent s1 = new SignStudent();
         MergeAuditorium m1 = new MergeAuditorium();
         string value1 = "1001";
@@ -32,13 +34,13 @@ namespace UnitTestProject
             Assert.IsFalse(s1.CheckCourse(value2, value1));
         }
 
-        //checkss if the values are the same
+        //checkss if the values are equal
         [TestMethod]
         public void checkForEqual()
         {
             Assert.IsTrue(m1.checkChoice("", value1));
         }
 
-        
+            
     }
 }
