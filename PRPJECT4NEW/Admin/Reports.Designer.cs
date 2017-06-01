@@ -61,11 +61,11 @@
             // StudentsReport
             // 
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Location = new System.Drawing.Point(584, 124);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.StudentsReport.Location = new System.Drawing.Point(219, 52);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(1167, 882);
+            this.StudentsReport.Size = new System.Drawing.Size(438, 370);
             this.StudentsReport.TabIndex = 2;
             this.StudentsReport.Visible = false;
             this.StudentsReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentsReport_CellContentClick);
@@ -75,10 +75,10 @@
             this.Failing_Students.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Failing_Students.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Failing_Students.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Failing_Students.Location = new System.Drawing.Point(0, 560);
-            this.Failing_Students.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.Failing_Students.Location = new System.Drawing.Point(0, 235);
+            this.Failing_Students.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Failing_Students.Name = "Failing_Students";
-            this.Failing_Students.Size = new System.Drawing.Size(582, 78);
+            this.Failing_Students.Size = new System.Drawing.Size(218, 33);
             this.Failing_Students.TabIndex = 4;
             this.Failing_Students.Text = "Failing Students";
             this.Failing_Students.UseVisualStyleBackColor = false;
@@ -91,10 +91,10 @@
             this.Available_Classes.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
             this.Available_Classes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Available_Classes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Available_Classes.Location = new System.Drawing.Point(0, 128);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.Available_Classes.Location = new System.Drawing.Point(0, 54);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(582, 85);
+            this.Available_Classes.Size = new System.Drawing.Size(218, 36);
             this.Available_Classes.TabIndex = 8;
             this.Available_Classes.Text = "Available Classes";
             this.Available_Classes.UseVisualStyleBackColor = false;
@@ -143,10 +143,9 @@
             "404",
             "405",
             "406"});
-            this.CourseID.Location = new System.Drawing.Point(0, 515);
-            this.CourseID.Margin = new System.Windows.Forms.Padding(8);
+            this.CourseID.Location = new System.Drawing.Point(0, 216);
             this.CourseID.Name = "CourseID";
-            this.CourseID.Size = new System.Drawing.Size(578, 39);
+            this.CourseID.Size = new System.Drawing.Size(219, 21);
             this.CourseID.TabIndex = 11;
             this.CourseID.Text = "                         Course ID";
             this.CourseID.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -156,10 +155,9 @@
             this.All_Person_Button.BackColor = System.Drawing.SystemColors.HotTrack;
             this.All_Person_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.All_Person_Button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.All_Person_Button.Location = new System.Drawing.Point(0, 347);
-            this.All_Person_Button.Margin = new System.Windows.Forms.Padding(8);
+            this.All_Person_Button.Location = new System.Drawing.Point(0, 146);
             this.All_Person_Button.Name = "All_Person_Button";
-            this.All_Person_Button.Size = new System.Drawing.Size(582, 83);
+            this.All_Person_Button.Size = new System.Drawing.Size(218, 35);
             this.All_Person_Button.TabIndex = 12;
             this.All_Person_Button.Text = "All Persons";
             this.All_Person_Button.UseVisualStyleBackColor = false;
@@ -170,10 +168,9 @@
             this.ExcellentStudents.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ExcellentStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExcellentStudents.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ExcellentStudents.Location = new System.Drawing.Point(0, 428);
-            this.ExcellentStudents.Margin = new System.Windows.Forms.Padding(8);
+            this.ExcellentStudents.Location = new System.Drawing.Point(0, 179);
             this.ExcellentStudents.Name = "ExcellentStudents";
-            this.ExcellentStudents.Size = new System.Drawing.Size(582, 89);
+            this.ExcellentStudents.Size = new System.Drawing.Size(218, 37);
             this.ExcellentStudents.TabIndex = 13;
             this.ExcellentStudents.Text = "Excellent students";
             this.ExcellentStudents.UseVisualStyleBackColor = false;
@@ -184,10 +181,10 @@
             this.Print.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Print.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Print.Location = new System.Drawing.Point(0, 636);
-            this.Print.Margin = new System.Windows.Forms.Padding(6);
+            this.Print.Location = new System.Drawing.Point(0, 267);
+            this.Print.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(582, 78);
+            this.Print.Size = new System.Drawing.Size(218, 33);
             this.Print.TabIndex = 14;
             this.Print.Text = "Export to Excel";
             this.Print.UseVisualStyleBackColor = false;
@@ -207,10 +204,10 @@
             this.panel2.Controls.Add(this.ExcellentStudents);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 17, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(582, 1006);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(218, 327);
             this.panel2.TabIndex = 16;
             // 
             // menuStrip2
@@ -221,10 +218,10 @@
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip2.Location = new System.Drawing.Point(122, 221);
+            this.menuStrip2.Location = new System.Drawing.Point(46, 93);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(86, 33, 0, 33);
-            this.menuStrip2.Size = new System.Drawing.Size(239, 113);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(32, 14, 0, 14);
+            this.menuStrip2.Size = new System.Drawing.Size(124, 68);
             this.menuStrip2.TabIndex = 15;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -235,7 +232,7 @@
             this.toolStripMenuItem3});
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 45);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(91, 19);
             this.toolStripMenuItem1.Text = "Semester";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -246,7 +243,7 @@
             this.toolStripComboBox3});
             this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 46);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem2.Text = "A";
             // 
             // toolStripComboBox3
@@ -340,7 +337,7 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox3.Name = "toolStripComboBox3";
-            this.toolStripComboBox3.Size = new System.Drawing.Size(121, 49);
+            this.toolStripComboBox3.Size = new System.Drawing.Size(121, 23);
             // 
             // toolStripMenuItem3
             // 
@@ -349,7 +346,7 @@
             this.toolStripComboBox4});
             this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 46);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem3.Text = "B";
             // 
             // toolStripComboBox4
@@ -358,92 +355,78 @@
             this.toolStripComboBox4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.toolStripComboBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripComboBox4.Items.AddRange(new object[] {
-            "2017-01-01",
-            "2017-01-02",
-            "2017-01-03",
-            "2017-01-04",
-            "2017-01-05",
-            "2017-01-06",
-            "2017-01-08",
-            "2017-01-09",
-            "2017-01-10",
-            "2017-01-11",
-            "2017-01-12",
-            "2017-01-13",
-            "2017-01-15",
-            "2017-01-16",
-            "2017-01-17",
-            "2017-01-18",
-            "2017-01-19",
-            "2017-01-20",
-            "2017-01-22",
-            "2017-01-23",
-            "2017-01-24",
-            "2017-01-25",
-            "2017-01-26",
-            "2017-01-27",
-            "2017-01-29",
-            "2017-01-30",
-            "2017-01-31",
-            "2017-02-01",
-            "2017-02-02",
-            "2017-02-03",
-            "2017-02-05",
-            "2017-02-06",
-            "2017-02-07",
-            "2017-02-08",
-            "2017-02-09",
-            "2017-02-10",
-            "2017-02-12",
-            "2017-02-13",
-            "2017-02-14",
-            "2017-02-15",
-            "2017-02-16",
-            "2017-02-17",
-            "2017-02-19",
-            "2017-02-20",
-            "2017-02-21",
-            "2017-02-22",
-            "2017-02-23",
-            "2017-02-24",
-            "2017-02-26",
-            "2017-02-27",
-            "2017-02-28",
-            "2017-03-01",
-            "2017-03-02",
-            "2017-03-03",
-            "2017-03-05",
-            "2017-03-06",
-            "2017-03-07",
-            "2017-03-08",
-            "2017-03-09",
-            "2017-03-10",
-            "2017-03-12",
-            "2017-03-13",
-            "2017-03-14",
-            "2017-03-15",
-            "2017-03-16",
-            "2017-03-17",
-            "2017-03-19",
-            "2017-03-20",
-            "2017-03-21",
-            "2017-03-22",
-            "2017-03-23",
-            "2017-03-24",
-            "2017-03-26",
-            "2017-03-27",
-            "2017-03-28",
-            "2017-03-29",
-            "2017-03-30",
-            "2017-03-31",
-            "2017-04-02",
-            "2017-04-03",
-            "2017-04-04",
-            "2017-04-05",
-            "2017-04-06",
-            "2017-04-07"});
+            "03/12/2017",
+            "03/13/2017",
+            "03/14/2017",
+            "03/15/2017",
+            "03/16/2017",
+            "03/17/2017",
+            "03/19/2017",
+            "03/20/2017",
+            "03/21/2017",
+            "03/22/2017",
+            "03/23/2017",
+            "03/24/2017",
+            "03/26/2017",
+            "03/27/2017",
+            "03/28/2017",
+            "03/29/2017",
+            "03/30/2017",
+            "03/31/2017",
+            "04/02/2017",
+            "04/03/2017",
+            "04/04/2017",
+            "04/05/2017",
+            "04/06/2017",
+            "04/07/2017",
+            "04/09/2017",
+            "04/10/2017",
+            "04/11/2017",
+            "04/12/2017",
+            "04/13/2017",
+            "04/14/2017",
+            "04/16/2017",
+            "04/17/2017",
+            "04/18/2017",
+            "04/19/2017",
+            "04/20/2017",
+            "04/21/2017",
+            "04/23/2017",
+            "04/24/2017",
+            "04/25/2017",
+            "04/26/2017",
+            "04/27/2017",
+            "04/28/2017",
+            "04/30/2017",
+            "05/01/2017",
+            "05/02/2017",
+            "05/03/2017",
+            "05/04/2017",
+            "05/05/2017",
+            "05/07/2017",
+            "05/08/2017",
+            "05/09/2017",
+            "05/10/2017",
+            "05/11/2017",
+            "05/12/2017",
+            "05/14/2017",
+            "05/15/2017",
+            "05/16/2017",
+            "05/17/2017",
+            "05/18/2017",
+            "05/19/2017",
+            "05/21/2017",
+            "05/22/2017",
+            "05/23/2017",
+            "05/24/2017",
+            "05/25/2017",
+            "05/26/2017",
+            "05/28/2017",
+            "05/29/2017",
+            "05/30/2017",
+            "05/31/2017"});
             this.toolStripComboBox4.Name = "toolStripComboBox4";
-            this.toolStripComboBox4.Size = new System.Drawing.Size(121, 49);
+            this.toolStripComboBox4.Size = new System.Drawing.Size(121, 23);
             // 
             // panel3
             // 
@@ -452,9 +435,9 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(582, 122);
+            this.panel3.Size = new System.Drawing.Size(218, 51);
             this.panel3.TabIndex = 0;
             // 
             // panel4
@@ -464,28 +447,28 @@
             this.panel4.Controls.Add(this.flowLayoutPanel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(534, 122);
+            this.panel4.Size = new System.Drawing.Size(200, 51);
             this.panel4.TabIndex = 1;
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(262, 83);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(98, 35);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(784, 234);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(294, 98);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3639, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 2, 24, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(1351, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 9, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 31, 90, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(112, 122);
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 13, 34, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -500,11 +483,11 @@
             this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Report.ForeColor = System.Drawing.Color.White;
             this.Report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Report.Location = new System.Drawing.Point(582, 0);
-            this.Report.Margin = new System.Windows.Forms.Padding(6, 21, 10, 0);
+            this.Report.Location = new System.Drawing.Point(218, 0);
+            this.Report.Margin = new System.Windows.Forms.Padding(2, 9, 4, 0);
             this.Report.Name = "Report";
-            this.Report.Padding = new System.Windows.Forms.Padding(26, 39, 0, 0);
-            this.Report.Size = new System.Drawing.Size(186, 85);
+            this.Report.Padding = new System.Windows.Forms.Padding(10, 16, 0, 0);
+            this.Report.Size = new System.Drawing.Size(76, 36);
             this.Report.TabIndex = 4;
             this.Report.Text = "Reports";
             this.Report.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -517,21 +500,21 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 2, 6, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3751, 122);
+            this.panel1.Size = new System.Drawing.Size(1407, 51);
             this.panel1.TabIndex = 15;
             // 
             // Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1750, 1006);
+            this.ClientSize = new System.Drawing.Size(517, 327);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.StudentsReport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
