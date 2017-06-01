@@ -14,14 +14,8 @@ namespace UnitTestProject
         {
 
         }
-        Grade56 g56 = new Grade56();
 
-        [TestMethod]
-        public void TestMethodGrade56()
-        {
-            g56.Apply_Button_Click(new object(), new EventArgs());
-            Assert.IsTrue(Grade56.checkString("123456789", "ID"));
-        }
+
 
 
         [TestMethod]
@@ -32,7 +26,7 @@ namespace UnitTestProject
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException),
-    "Exception.")]
+    "ID should be only digits and with length of 9.")]
         public void TestMethodCheckIDFalse()
         {
             Assert.IsFalse(Grade56.checkString("12345", "ID"));
