@@ -356,6 +356,11 @@ namespace PRPJECT4NEW.Admin
         {
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 
