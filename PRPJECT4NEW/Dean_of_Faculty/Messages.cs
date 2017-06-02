@@ -86,31 +86,43 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             }
             dataGridView1.Refresh();
         }
-        private void reloadDataGridView(Entities context)
-        {
-            dataGridView1.Rows.Clear();
-            foreach (DF_requests s in context.DF_requests)
+        public bool reloadDataGridView(Entities context)
+        {try
             {
-                if (s.Intended_to.ToString().Contains("All_students"))
-                    dataGridView1.Rows.Add(s.Date, s.Intended_to, s.Subject, s.Message);//,s.Status);
+                dataGridView1.Rows.Clear();
+                foreach (DF_requests s in context.DF_requests)
+                {
+                    if (s.Intended_to.ToString().Contains("All_students"))
+                        dataGridView1.Rows.Add(s.Date, s.Intended_to, s.Subject, s.Message);//,s.Status);
+                }
+                dataGridView1.Refresh();
+                return true;
             }
-            dataGridView1.Refresh();
+            catch(Exception e)
+            { throw new Exception(); }
+        }
+
+        public DF_requests newrequsettoall()
+        {
+            using (Entities context = new Entities())
+            {
+                DF_requests msg = new DF_requests
+                {
+                    Date = DateTime.Today,
+                    Intended_to = Intended_to_combo.Text,
+                    Subject = Subject_textbox.Text,
+                    Message = Message_textbox.Text,
+                    Status = "Open"
+                };
+                return msg;
+            }
         }
 
         private void Add_New_Message_btn_Click(object sender, EventArgs e)
         {
             using (Entities context = new Entities())
             {
-                DF_requests msg = new DF_requests
-                {
-                    Date=DateTime.Today,
-                    Intended_to = Intended_to_combo.Text,
-                    Subject = Subject_textbox.Text,
-                    Message = Message_textbox.Text,
-                    Status="Open"
-                };
-
-                context.DF_requests.Add(msg);
+                context.DF_requests.Add(newrequsettoall());
                 context.SaveChanges();
 
                 reloadDataGridView(context);

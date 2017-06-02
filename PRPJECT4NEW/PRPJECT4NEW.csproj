@@ -361,6 +361,12 @@
     <Compile Include="student.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Student\ExamResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\ExamResults.designer.cs">
+      <DependentUpon>ExamResults.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\TuitionFeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -602,6 +608,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Exams_Section\special_student_list.resx">
       <DependentUpon>special_student_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\ExamResults.resx">
+      <DependentUpon>ExamResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\TuitionFeesForm.resx">
       <DependentUpon>TuitionFeesForm.cs</DependentUpon>
