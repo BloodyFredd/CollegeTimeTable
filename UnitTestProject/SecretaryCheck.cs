@@ -77,7 +77,7 @@ namespace UnitTestProject
         [TestMethod]
         public void checkTeacherFalse()
         {
-            Assert.IsFalse(s.checkForTeacher("999999999"));
+            Assert.IsFalse(s.checkForTeacher("999949999"));
         }
 
         [TestMethod]

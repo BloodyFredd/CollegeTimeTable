@@ -18,5 +18,20 @@ namespace PRPJECT4NEW
         public int Course_Serial { get; set; }
         public System.DateTime Date { get; set; }
         public string Status { get; set; }
+
+        public Student_special_Exam() { }
+
+        public Student_special_Exam(string id,int serial,string status ) {
+            this.ID = id;
+            this.Status = status;
+            this.Course_Serial = serial;
+            this.Date = DateTime.Today.Date;
+
+        }
+
     }
+
+
+
+
 }
