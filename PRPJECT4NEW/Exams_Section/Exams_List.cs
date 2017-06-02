@@ -31,6 +31,7 @@ namespace PRPJECT4NEW.Exams_Section
             Exams_Grid.Columns.Add("Superviser2_ID", "Second Superviser ID");
             Exams_Grid.Columns.Add("Students_Enrolled", "Students Enrolled");
             Exams_Grid.Columns.Add("Date", "Date");
+            Exams_Grid.Columns.Add("DueIn", "Due In");
 
             //Paint headers
             Exams_Grid.EnableHeadersVisualStyles = false;
@@ -48,7 +49,7 @@ namespace PRPJECT4NEW.Exams_Section
                 Exams_Grid.Rows.Clear();
                 foreach (Exam s in context.Exams)
                 {
-                    Exams_Grid.Rows.Add(s.ID, getCourseName(s.Course_ID), s.Start_Time + ":00", s.End_Time + ":00", s.Class, s.Superviser1_ID, s.Superviser2_ID, s.Student_Enrolled, s.Date.ToShortDateString());
+                    Exams_Grid.Rows.Add(s.ID, getCourseName(s.Course_ID), s.Start_Time + ":00", s.End_Time + ":00", s.Class, s.Superviser1_ID, s.Superviser2_ID, s.Student_Enrolled, s.Date.ToShortDateString(),s.Due_in);
                 }
 
                 //Conferences_Grid.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));

@@ -12,12 +12,28 @@ namespace PRPJECT4NEW.Student
 {
     public partial class Menu : Form
     {
+        public student studentUsr;
+
         public Menu()
         {
 
             InitializeComponent();
             Buttons_view.Visible = false;
-        
+
+            //Connect to data base and get student info
+            using (Entities context = new Entities())
+            {
+                //Try to connect to database
+                //TODO check if no student with person id exists
+                try
+                {
+                    studentUsr = context.students.SingleOrDefault(s => s.ID == Utility.User.ID);
+                }
+                catch (System.Data.Entity.Core.EntityException)
+                {
+                    MessageBox.Show("Can't connect to Database: Try to reconnect");
+                }
+            }
         }
 
         private void Celender_Click(object sender, EventArgs e)
@@ -75,7 +91,13 @@ namespace PRPJECT4NEW.Student
 
         private void Exam_Res_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams results");
+            Student.ExamResults frm = new Student.ExamResults(studentUsr);
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Alerts_Button_Click(object sender, EventArgs e)

@@ -63,6 +63,7 @@
     <Compile Include="PersonTest.cs" />
     <Compile Include="Teaching_Assistant.cs" />
     <Compile Include="SecretaryCheck.cs" />
+    <Compile Include="TechTeamTester.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PRPJECT4NEW\PRPJECT4NEW.csproj">

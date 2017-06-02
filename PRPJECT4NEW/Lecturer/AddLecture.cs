@@ -43,22 +43,26 @@ namespace PRPJECT4NEW.Lecturer
                 fourthString = fourth.ToString();
                 int end = Convert.ToInt32(StartButton.Text) + 2;
                 string endString = end.ToString();
+
+                // check if the course and semester are as needed.
                 SqlCommand cmd = new SqlCommand("select * from courses where Course_id = '" + CourseIDButton.Text + "' and Semester = '" + SemesterButton.Text + "'", sqlcon);
                 SqlDataReader dre = cmd.ExecuteReader();
                 if (dre.Read() == false)
                 {
                     throw new ArgumentException("The course and the semester are not good!");
                 }
-
                 dre.Close();
+
+                // check if the lecturer already teaches this class.
                 cmd = new SqlCommand("select * from Teaching_Stuff where ID = '" + Utility.User.ID + "' and Course_id = '" + CourseIDButton.Text + "'", sqlcon);
                 dre = cmd.ExecuteReader();
                 if (dre.Read())
                 {
                     throw new ArgumentException("You have already a course with this id!");
                 }
-
                 dre.Close();
+
+                // check if the class is already occupied in this time and class.
                 if (SemesterButton.Text.Equals("a"))
                 {
                     if (first == 8)
@@ -96,6 +100,7 @@ namespace PRPJECT4NEW.Lecturer
                 }
                 dre.Close();
 
+                // check if the teacher is already occupied during this time.
                 cmd = new SqlCommand("select * from Lecture_Course where Teacher ='" + Utility.User.ID + "' and Date = '" + DayButton.Text + "' and Start_time = '" + StartButton.Text + "'", sqlcon);
                 dre = cmd.ExecuteReader();
                 if (dre.Read() == true)
@@ -104,6 +109,7 @@ namespace PRPJECT4NEW.Lecturer
                 }
                 dre.Close();
 
+                // check if the teacher is already occupied during this time.
                 cmd = new SqlCommand("select * from Lecture_Course where Teacher ='" + Utility.User.ID + "' and Date = '" + DayButton.Text + "' and Start_time = '" + secondString + "'", sqlcon);
                 dre = cmd.ExecuteReader();
                 if (dre.Read() == true)
@@ -112,6 +118,7 @@ namespace PRPJECT4NEW.Lecturer
                 }
                 dre.Close();
 
+                // check if the teacher is already occupied during this time.
                 cmd = new SqlCommand("select * from Lecture_Course where Teacher ='" + Utility.User.ID + "' and Date = '" + DayButton.Text + "' and Start_time = '" + thirdString + "'", sqlcon);
                 dre = cmd.ExecuteReader();
                 if (dre.Read() == true)
@@ -120,28 +127,32 @@ namespace PRPJECT4NEW.Lecturer
                 }
                 dre.Close();
 
-                cmd = new SqlCommand("select * from Lecture_Course where Course_ID = '" + CourseIDButton.Text + "' and Course_type = 3", sqlcon);
+                // check if someone is already teaching this lecture.
+                cmd = new SqlCommand("select * from Lecture_Course where Course_ID = '" + CourseIDButton.Text + "' and Course_type = 1", sqlcon);
                 dre = cmd.ExecuteReader();
                 if (dre.Read() == true)
                 {
-                    throw new ArgumentException("Someone is already teaching this lab!");
+                    throw new ArgumentException("Someone is already teaching this lecture!");
                 }
                 else
-                {
+                { // if no one teaches this lecture, insert it to lecture course.
                     dre.Close();
                     SqlCommand cmd3 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + CourseIDButton.Text + "1', 1, '" + Utility.User.ID + "', '" + DayButton.Text + "', '" + StartButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
                     dre = cmd3.ExecuteReader();
                     dre.Close();
 
+                    // insert your course to data base teaching stuff
                     cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Utility.User.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
                     dre = cmd.ExecuteReader();
                     dre.Close();
                 }
 
+                // take specific date, start time and class number from lecture course. 
                 cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Utility.User.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
+                    // update the database of the classes according to the course.
                     SqlCommand cmd1, cmd2, cmd3;
                     if (SemesterButton.Text.Equals("a"))
                     {
@@ -183,21 +194,21 @@ namespace PRPJECT4NEW.Lecturer
                     {
                         if (first == 8)
                         {
-                            cmd1 = new SqlCommand("update Classes_SM2 set [0" + firstString + "-0" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                            cmd2 = new SqlCommand("update Classes_SM2 set [0" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                            cmd3 = new SqlCommand("update Classes_SM2 set [" + thirdString + "-" + fourthString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd1 = new SqlCommand("update Classes_SM2 set [0" + firstString + "-0" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
+                            cmd2 = new SqlCommand("update Classes_SM2 set [0" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
+                            cmd3 = new SqlCommand("update Classes_SM2 set [" + thirdString + "-" + fourthString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
                         }
                         else if (first == 9)
                         {
-                            cmd1 = new SqlCommand("update Classes_SM2 set [0" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                            cmd2 = new SqlCommand("update Classes_SM2 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                            cmd3 = new SqlCommand("update Classes_SM2 set [" + thirdString + "-" + fourthString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd1 = new SqlCommand("update Classes_SM2 set [0" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
+                            cmd2 = new SqlCommand("update Classes_SM2 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
+                            cmd3 = new SqlCommand("update Classes_SM2 set [" + thirdString + "-" + fourthString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
                         }
                         else
                         {
-                            cmd1 = new SqlCommand("update Classes_SM2 set [" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                            cmd2 = new SqlCommand("update Classes_SM2 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
-                            cmd3 = new SqlCommand("update Classes_SM2 set [" + thirdString + "-" + fourthString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "'", sqlcon);
+                            cmd1 = new SqlCommand("update Classes_SM2 set [" + firstString + "-" + secondString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
+                            cmd2 = new SqlCommand("update Classes_SM2 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
+                            cmd3 = new SqlCommand("update Classes_SM2 set [" + thirdString + "-" + fourthString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
                         }
                         SqlDataAdapter sda1 = new SqlDataAdapter();
                         sda1.SelectCommand = cmd1;
@@ -229,6 +240,7 @@ namespace PRPJECT4NEW.Lecturer
             this.Close();
         }
 
+        // this function checks all the strings.
         private bool checkString(string str, string check)
         {
             if (check == "Day")
