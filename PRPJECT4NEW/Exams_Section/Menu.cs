@@ -69,13 +69,19 @@ namespace PRPJECT4NEW.Exams_Section
 
         private void Available_Classes_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Available Classes");
+            Tech_Team.Available_Classes frm = new Tech_Team.Available_Classes();
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         // present list of student with Ease of study
         private void Special_Stud_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Special Students");
+            
             special_student_list frm = new special_student_list();
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;

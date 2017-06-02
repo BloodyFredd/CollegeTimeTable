@@ -83,23 +83,14 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                             s.Status = "Approved";
                         }
                     }
-                   // context.SaveChanges();
-                   // reloadDataGridView(context);
+
                     foreach (var k in context.Student_special_Exam)
                     {
                         if (k.ID.Equals(s.ID))
                         {
                             k.Status = "Approved";
                         }
-                        // studentspecialExamBindingSource.DataSource = s;
 
-                        //foreach (var v in context.courses)
-                        //{
-                        //    if (s.Course_Serial.ToString().Contains(v.Course_id.ToString()))
-                        //    {
-                        //        dataGridView1.Rows.Add(s.ID, s.Course_Serial, v.Course_name, s.Date, s.Status);
-                        //    }
-                        //}
 
                     }
 
@@ -135,11 +126,13 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
             using (Entities context = new Entities())
             {
+               
+
                 // change status
                 foreach (student_request s in context.student_request)
                 {
                     foreach (string j in student_request)
-                    { 
+                    {
                         if (j.Equals(s.ID))
                         {
                             s.Status = "Denied";
@@ -161,5 +154,6 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             }
             dataGridView1.Refresh();
         }
+       
     }
 }
