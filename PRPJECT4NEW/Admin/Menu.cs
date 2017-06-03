@@ -203,6 +203,11 @@ namespace PRPJECT4NEW.Admin
         private void Cancel_Lectures_Click_1(object sender, EventArgs e)
         {
             CancelLectures form2 = new CancelLectures();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
             form2.Show();
         }
         private void Sign_student_course_Click(object sender, EventArgs e)
