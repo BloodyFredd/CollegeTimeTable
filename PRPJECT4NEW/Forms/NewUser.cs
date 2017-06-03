@@ -70,9 +70,12 @@ namespace PRPJECT4NEW
                     SqlDataReader dr1 = cmd1.ExecuteReader();
                     dr1.Close();
                 }
+                SendMail Send = new SendMail();
+                Send.Send(this.Email.Text, "Welcome to MazalPlus", "We're glad you joined us,<br />Your username is:" + this.ID.Text + "<br />Password: " + this.ID.Text);
                 MessageBox.Show("Saved");
                 this.sqlcon.Close();
                 this.Close();
+
             }
             catch (ArgumentException ex)
             {

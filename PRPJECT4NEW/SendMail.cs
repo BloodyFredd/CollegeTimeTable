@@ -53,5 +53,27 @@ namespace PRPJECT4NEW
                 MessageBox.Show("Your Message Has been successfully Sent", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        public string Getmail(string name)
+        {
+            using (Entities context = new Entities())
+            {
+                foreach (var s in context.People)
+                    if (s.F_name + " " + s.L_name == name)
+                        return s.Email;
+            }
+            return "NULL";
+        }
+
+        public string GetmailByID(string ID)
+        {
+            using (Entities context = new Entities())
+            {
+                foreach (var s in context.People)
+                    if (s.ID == ID)
+                        return s.Email;
+            }
+            return "NULL";
+        }
     }
 }
