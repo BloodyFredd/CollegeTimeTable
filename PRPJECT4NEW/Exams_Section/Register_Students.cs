@@ -247,7 +247,7 @@ namespace PRPJECT4NEW.Exams_Section
         {
             using (Entities context = new Entities())
             {
-                foreach (var s in context.Person)
+                foreach (var s in context.People)
                     if (s.F_name + " " + s.L_name == name)
                         return s.Email;
             }

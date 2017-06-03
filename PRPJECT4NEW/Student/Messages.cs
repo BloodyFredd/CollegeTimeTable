@@ -61,7 +61,12 @@ namespace PRPJECT4NEW.Student
 
             messagesGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             messagesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-   
+
+            foreach (DataGridViewColumn column in messagesGridView.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
         }
 
         //Insert message to grid
@@ -76,8 +81,7 @@ namespace PRPJECT4NEW.Student
         //Show message on row click
         private void messagesGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            messagesGridView.ClearSelection();
-            messageTextBox.Text = messages[e.RowIndex].Message;
+            if (e.RowIndex >= 0) messageTextBox.Text = messages[e.RowIndex].Message;
         }
 
 

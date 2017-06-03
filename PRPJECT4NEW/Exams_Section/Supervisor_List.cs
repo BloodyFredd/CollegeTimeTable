@@ -47,7 +47,7 @@ namespace PRPJECT4NEW.Exams_Section
             using (Entities context = new Entities())
             {
                 Superviser_Grid.Rows.Clear();
-                foreach (Person p in context.Person)
+                foreach (Person p in context.People)
                 {
                     if(p.Permission == "Supervisor")
                         Superviser_Grid.Rows.Add(p.ID,p.F_name,p.L_name,p.Email,p.Telephone);

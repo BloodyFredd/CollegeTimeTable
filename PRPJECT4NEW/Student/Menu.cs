@@ -73,7 +73,13 @@ namespace PRPJECT4NEW.Student
 
         private void Exams_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Exams calendar");
+            Student.Exams frm = new Student.Exams(studentUsr);
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Holidays_Button_Click(object sender, EventArgs e)
@@ -92,7 +98,13 @@ namespace PRPJECT4NEW.Student
 
         private void Requests_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Requests panel");
+            Student.Requests frm = new Student.Requests(studentUsr);
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Exam_Res_Button_Click(object sender, EventArgs e)

@@ -75,8 +75,8 @@
                         string ID = string.Copy(dr[0].ToString());
                         using (Entities context = new Entities())
                         {
-                            if (context.Person.Any(p => p.ID == ID ))
-                                Utility.User = context.Person.SingleOrDefault(p => p.ID == ID);
+                            if (context.People.Any(p => p.ID == ID ))
+                                Utility.User = context.People.SingleOrDefault(p => p.ID == ID);
 
                             switch (Utility.User.Permission)
                             {
