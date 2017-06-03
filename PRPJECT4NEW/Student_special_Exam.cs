@@ -19,4 +19,7 @@ namespace PRPJECT4NEW
         public Nullable<System.DateTime> Date { get; set; }
         public string Status { get; set; }
     }
+
+
+
 }

@@ -13,7 +13,8 @@ namespace UnitTestProject
     {
         Tech_support T1 = new Tech_support();
         Messages M1 = new Messages();
-        Student_special_Exam S = new Student_special_Exam("205774094",1001,"Approved");
+        // Student_special_Exam S = new Student_special_Exam("205774094",1001,"Approved");
+        Student_special_Exam S = new Student_special_Exam();
         Stu_Request SS = new Stu_Request();
         List<string> stu_list = new List<string>();
         
