@@ -53,7 +53,7 @@ namespace PRPJECT4NEW.Student
             }
         }
 
-        //Get all Specia Exams intended to student
+        //Get all Special Exams intended to student
         private List<Student_special_Exam> getSpecialExams(Entities context)
         {
             var selected =
@@ -115,27 +115,33 @@ namespace PRPJECT4NEW.Student
             {
                 double courseID = courses.First(c => c.course_serial == exam.Course_Serial).course_id;
                 string courseName = courseDetails.First(course => course.Course_id == courseID).Course_name.ToString();
-                // string courseName = courseDetails.First(course => course.Course_id == courses.First(c => c.course_serial == exam.Course_Serial).course_id).Course_name.ToString();
                 specialExamGridView.Rows.Add(courseName, exam.Course_Serial ,exam.Date, exam.Status);
             }
+        }
+
+
+        public Student_special_Exam newRequest()
+        {
+            int courseID = courseDetails.First(c => examsComboBox.Text == c.Course_name).Course_id;
+            int courseSerial = courses.First(c => c.course_id == courseID && c.Type == 1).course_serial.Value;
+
+            Student_special_Exam request = new Student_special_Exam
+            {
+                ID = studentUsr.ID,
+                Course_Serial = courseSerial,
+                Date = null,
+                Status = "Pending"
+            };
+
+            return request;
         }
 
         //Send Special exam request
         private void sendRequestBtn_Click(object sender, EventArgs e)
         {
-            int courseID = courseDetails.First(c => examsComboBox.Text == c.Course_name).Course_id;
-            int courseSerial = courses.First(c => c.course_id == courseID && c.Type == 1).course_serial.Value;
-
             using (Entities context = new Entities())
             {
-                Student_special_Exam newRequest = new Student_special_Exam
-                {
-                    ID = studentUsr.ID,
-                    Course_Serial = courseSerial,
-                    Date = null,
-                    Status = "Pending"
-                };
-                context.Student_special_Exam.Add(newRequest);
+                context.Student_special_Exam.Add(newRequest());
                 context.SaveChanges();
                 specialExams = getSpecialExams(context);
             }

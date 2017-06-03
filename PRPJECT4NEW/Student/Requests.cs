@@ -68,6 +68,18 @@ namespace PRPJECT4NEW.Student
             }
         }
 
+        public student_request newRequest()
+        {
+            student_request newRequest = new student_request
+            {
+                ID = studentUsr.ID,
+                Subject = subjectTextBox.Text,
+                Message = messageTextBox.Text,
+                Status = "Pending"
+            };
+
+            return newRequest;
+        }
 
         //Send request
         private void sendRequestBtn_Click(object sender, EventArgs e)
@@ -84,14 +96,7 @@ namespace PRPJECT4NEW.Student
             {
                 using (Entities context = new Entities())
                 {
-                    student_request newRequest = new student_request
-                    {
-                        ID = studentUsr.ID,
-                        Subject = subjectTextBox.Text,
-                        Message = messageTextBox.Text,
-                        Status = "Pending"
-                    };
-                    context.student_request.Add(newRequest);
+                    context.student_request.Add(newRequest());
                     context.SaveChanges();
                 }
 

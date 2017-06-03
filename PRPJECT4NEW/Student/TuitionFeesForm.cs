@@ -60,12 +60,14 @@ namespace PRPJECT4NEW.Student
                 }
             }
 
-            totalFeeLabel.Text = "Approximate total tuition Fee for this semester: " + approximatedFee + " NIS";
+            if (wrongFee(Utility.feePerNakaz)) totalFeeLabel.Text = "Check fee in Office";
+            else totalFeeLabel.Text = "Approximate total tuition Fee for this semester: " + approximatedFee + " NIS";
         }
 
-        private void totalFeeLabel_Click(object sender, EventArgs e)
+        public bool wrongFee(float fee)
         {
-
+            if (fee < 0) return false;
+            else return true;
         }
 
         private void tuitionGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

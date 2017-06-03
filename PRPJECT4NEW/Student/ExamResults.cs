@@ -112,6 +112,7 @@ namespace PRPJECT4NEW.Student
                 from c in context.courses where c.Course_id == sl.course_id
                 select c;
 
+            //Inser year only Once
             foreach (cours c in selected)
             {
                 if (!courseComboBox.Items.Contains(c.Year)) courseComboBox.Items.Add(c.Year);
