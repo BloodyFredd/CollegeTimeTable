@@ -48,6 +48,8 @@ namespace PRPJECT4NEW.Tech_Team
             }
             catch(Exception e)
             {
+                Console.WriteLine(e.ToString());
+
                 return false;
             }
             return false;

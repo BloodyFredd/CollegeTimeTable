@@ -39,7 +39,8 @@ namespace PRPJECT4NEW.Classes
 
             }
             catch (Exception ex)
-            { 
+            {
+                Console.WriteLine(ex.ToString());
                 return null;
             }
         }
