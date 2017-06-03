@@ -105,7 +105,10 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
             }
             catch(Exception e)
-            { throw new Exception();
+            {
+                Console.WriteLine(e.ToString());
+
+                throw new Exception();
             }
 
 

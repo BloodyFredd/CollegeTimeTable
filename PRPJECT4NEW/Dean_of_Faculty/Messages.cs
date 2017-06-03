@@ -99,7 +99,9 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                 return true;
             }
             catch(Exception e)
-            { throw new Exception(); }
+            {
+                Console.WriteLine(e.ToString());
+                throw new Exception(); }
         }
 
         public DF_requests newrequsettoall()
