@@ -45,9 +45,11 @@
             // 
             this.CourseID.AccessibleName = "CourseID";
             this.CourseID.AutoSize = true;
-            this.CourseID.Location = new System.Drawing.Point(12, 9);
+            this.CourseID.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseID.Location = new System.Drawing.Point(16, 11);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CourseID.Name = "CourseID";
-            this.CourseID.Size = new System.Drawing.Size(57, 13);
+            this.CourseID.Size = new System.Drawing.Size(77, 19);
             this.CourseID.TabIndex = 0;
             this.CourseID.Text = "Course ID:";
             // 
@@ -55,9 +57,11 @@
             // 
             this.StartTime.AccessibleName = "StartTime";
             this.StartTime.AutoSize = true;
-            this.StartTime.Location = new System.Drawing.Point(95, 9);
+            this.StartTime.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartTime.Location = new System.Drawing.Point(127, 11);
+            this.StartTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StartTime.Name = "StartTime";
-            this.StartTime.Size = new System.Drawing.Size(58, 13);
+            this.StartTime.Size = new System.Drawing.Size(78, 19);
             this.StartTime.TabIndex = 1;
             this.StartTime.Text = "Start Time:";
             // 
@@ -65,9 +69,11 @@
             // 
             this.Day.AccessibleName = "Day";
             this.Day.AutoSize = true;
-            this.Day.Location = new System.Drawing.Point(12, 49);
+            this.Day.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Day.Location = new System.Drawing.Point(16, 60);
+            this.Day.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Day.Name = "Day";
-            this.Day.Size = new System.Drawing.Size(29, 13);
+            this.Day.Size = new System.Drawing.Size(41, 19);
             this.Day.TabIndex = 2;
             this.Day.Text = "Day:";
             // 
@@ -75,21 +81,29 @@
             // 
             this.Semester.AccessibleName = "Semester";
             this.Semester.AutoSize = true;
-            this.Semester.Location = new System.Drawing.Point(99, 49);
+            this.Semester.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Semester.Location = new System.Drawing.Point(132, 60);
+            this.Semester.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(54, 13);
+            this.Semester.Size = new System.Drawing.Size(74, 19);
             this.Semester.TabIndex = 3;
             this.Semester.Text = "Semester:";
             // 
             // Apply
             // 
             this.Apply.AccessibleName = "Apply";
-            this.Apply.Location = new System.Drawing.Point(98, 105);
+            this.Apply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Apply.FlatAppearance.BorderSize = 0;
+            this.Apply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Apply.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apply.ForeColor = System.Drawing.Color.White;
+            this.Apply.Location = new System.Drawing.Point(131, 129);
+            this.Apply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Apply.Name = "Apply";
-            this.Apply.Size = new System.Drawing.Size(76, 21);
+            this.Apply.Size = new System.Drawing.Size(101, 26);
             this.Apply.TabIndex = 4;
             this.Apply.Text = "Apply";
-            this.Apply.UseVisualStyleBackColor = true;
+            this.Apply.UseVisualStyleBackColor = false;
             this.Apply.Click += new System.EventHandler(this.Apply_Click);
             // 
             // CourseIDButton
@@ -131,9 +145,10 @@
             "404",
             "405",
             "406"});
-            this.CourseIDButton.Location = new System.Drawing.Point(12, 25);
+            this.CourseIDButton.Location = new System.Drawing.Point(16, 31);
+            this.CourseIDButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CourseIDButton.Name = "CourseIDButton";
-            this.CourseIDButton.Size = new System.Drawing.Size(67, 21);
+            this.CourseIDButton.Size = new System.Drawing.Size(88, 24);
             this.CourseIDButton.TabIndex = 5;
             // 
             // StartButton
@@ -152,9 +167,10 @@
             "16",
             "17",
             "18"});
-            this.StartButton.Location = new System.Drawing.Point(98, 25);
+            this.StartButton.Location = new System.Drawing.Point(131, 31);
+            this.StartButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(76, 21);
+            this.StartButton.Size = new System.Drawing.Size(100, 24);
             this.StartButton.TabIndex = 6;
             // 
             // DayButton
@@ -168,9 +184,10 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.DayButton.Location = new System.Drawing.Point(12, 65);
+            this.DayButton.Location = new System.Drawing.Point(16, 80);
+            this.DayButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DayButton.Name = "DayButton";
-            this.DayButton.Size = new System.Drawing.Size(67, 21);
+            this.DayButton.Size = new System.Drawing.Size(88, 24);
             this.DayButton.TabIndex = 7;
             // 
             // SemesterButton
@@ -180,18 +197,21 @@
             this.SemesterButton.Items.AddRange(new object[] {
             "a",
             "b"});
-            this.SemesterButton.Location = new System.Drawing.Point(98, 65);
+            this.SemesterButton.Location = new System.Drawing.Point(131, 80);
+            this.SemesterButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SemesterButton.Name = "SemesterButton";
-            this.SemesterButton.Size = new System.Drawing.Size(76, 21);
+            this.SemesterButton.Size = new System.Drawing.Size(100, 24);
             this.SemesterButton.TabIndex = 8;
             // 
             // Class
             // 
             this.Class.AccessibleName = "Class";
             this.Class.AutoSize = true;
-            this.Class.Location = new System.Drawing.Point(12, 89);
+            this.Class.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Class.Location = new System.Drawing.Point(16, 110);
+            this.Class.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Class.Name = "Class";
-            this.Class.Size = new System.Drawing.Size(35, 13);
+            this.Class.Size = new System.Drawing.Size(47, 19);
             this.Class.TabIndex = 9;
             this.Class.Text = "Class:";
             // 
@@ -210,16 +230,19 @@
             "s102",
             "s103",
             "s104"});
-            this.ClassButton.Location = new System.Drawing.Point(12, 105);
+            this.ClassButton.Location = new System.Drawing.Point(16, 129);
+            this.ClassButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ClassButton.Name = "ClassButton";
-            this.ClassButton.Size = new System.Drawing.Size(67, 21);
+            this.ClassButton.Size = new System.Drawing.Size(88, 24);
             this.ClassButton.TabIndex = 10;
             // 
             // AddLecture
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(196, 147);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.ClientSize = new System.Drawing.Size(261, 181);
             this.Controls.Add(this.ClassButton);
             this.Controls.Add(this.Class);
             this.Controls.Add(this.SemesterButton);
@@ -231,6 +254,8 @@
             this.Controls.Add(this.Day);
             this.Controls.Add(this.StartTime);
             this.Controls.Add(this.CourseID);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddLecture";
             this.Text = "AddLecture";
             this.ResumeLayout(false);

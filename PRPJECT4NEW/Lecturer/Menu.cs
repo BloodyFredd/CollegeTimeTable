@@ -50,6 +50,13 @@ namespace PRPJECT4NEW.Lecturer
         private void Available_Classes_Button_Click(object sender, EventArgs e)
         {
             ExtraLecture lec = new ExtraLecture();
+
+            lec.TopLevel = false;
+            lec.FormBorderStyle = FormBorderStyle.None;
+            lec.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(lec);
+            panel5.Visible = true;
+
             lec.Show();
         }
 

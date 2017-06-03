@@ -25,12 +25,24 @@ namespace PRPJECT4NEW.Admin
 
         private void Available_Classes_Click(object sender, EventArgs e)
         {            
-             string str = null;
-                try
-                {
-                    this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-                    this.sqlcon = new SqlConnection(connetionString);
-                    SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
+                      
+        }
+
+        
+
+        private void Cancel_Lecture_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string str = null;
+            try
+            {
+                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+                this.sqlcon = new SqlConnection(connetionString);
+                SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
                 if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
                 {
                     str = toolStripComboBox2.Text;
@@ -47,33 +59,70 @@ namespace PRPJECT4NEW.Admin
                 {
                     throw new ArgumentException("Error selecting dates,try again!");
                 }
-                    SqlDataAdapter sda = new SqlDataAdapter();
-                    sda.SelectCommand = cmd;
-                    DataTable dbdataset = new DataTable();
-                    sda.Fill(dbdataset);
-                    BindingSource bsource = new BindingSource();
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
 
-                    bsource.DataSource = dbdataset;
-                    Lecture.DataSource = bsource;
-                    sda.Update(dbdataset);
+                //Paint headers
+                Lecture.EnableHeadersVisualStyles = false;
+                Lecture.GridColor = Utility.HeaderBackColor;
+                Lecture.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                Lecture.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                Lecture.AutoResizeColumns();
+                Lecture.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                Lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
+                bsource.DataSource = dbdataset;
+                Lecture.DataSource = bsource;
+                sda.Update(dbdataset);
+
+                int i = 0;
+                for (int j = 0; j <= 9; j++)
+                {
+                    paintCells2(i);
+                    i++;
                 }
-                catch (Exception ex)
-                {                   
+            }
+            catch (Exception ex)
+            {
                 this.Close();
                 MessageBox.Show(ex.Message);
                 CancelLectures form2 = new CancelLectures();
                 form2.Show();
-            }           
+            }
         }
 
-        
+        private void paintCells2(int i)
+        {
+            for (int j = 5; j < 18; j++)
+            {
+                if (Convert.ToInt32(Lecture.Rows[i].Cells[j].Value) == 1)
+                {
+                    Lecture.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                    Lecture.Rows[i].Cells[j].Style.ForeColor = Color.Red;
+                }
 
-        private void Cancel_Lecture_Click(object sender, EventArgs e)
+                else
+                {
+                    Lecture.Rows[i].Cells[j].Style.BackColor = Color.LawnGreen;
+                    Lecture.Rows[i].Cells[j].Style.ForeColor = Color.LawnGreen;
+                }
+
+
+            }
+
+        }
+
+        private void My_Lectures_Click(object sender, EventArgs e)
         {
             try
             {
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 this.sqlcon = new SqlConnection(connetionString);
+
 
 
                 if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
@@ -94,7 +143,7 @@ namespace PRPJECT4NEW.Admin
                     SqlCommand cmd11 = new SqlCommand("update Classes_SM1 set [18-19]=[18-19] * 0 where Class_Id ='" + Class.Text + "'", sqlcon);
                     SqlCommand cmd12 = new SqlCommand("update Classes_SM1 set [19-20]=[19-20] * 0 where Class_Id ='" + Class.Text + "'", sqlcon);
                     SqlCommand cmd13 = new SqlCommand("update Classes_SM1 set [20-21]=[20-21] * 0 where Class_Id ='" + Class.Text + "'", sqlcon);
-                    
+
                     SqlDataAdapter sda1 = new SqlDataAdapter();
                     sda1.SelectCommand = cmd1;
                     SqlDataAdapter sda2 = new SqlDataAdapter();
@@ -122,7 +171,7 @@ namespace PRPJECT4NEW.Admin
                     SqlDataAdapter sda13 = new SqlDataAdapter();
                     sda13.SelectCommand = cmd13;
                     DataTable dbdataset = new DataTable();
-                    
+
                     sda1.Fill(dbdataset);
                     sda2.Fill(dbdataset);
                     sda3.Fill(dbdataset);
@@ -138,7 +187,7 @@ namespace PRPJECT4NEW.Admin
                     sda13.Fill(dbdataset);
                     BindingSource bsource = new BindingSource();
                     bsource.DataSource = dbdataset;
-                    
+
                     sda1.Update(dbdataset);
                     sda2.Update(dbdataset);
                     sda3.Update(dbdataset);

@@ -39,20 +39,24 @@
             this.NewLec = new System.Windows.Forms.Button();
             this.Hour = new System.Windows.Forms.ComboBox();
             this.Class = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Lecture)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Semester});
-            this.menuStrip1.Location = new System.Drawing.Point(366, 77);
+            this.menuStrip1.Location = new System.Drawing.Point(215, 59);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(167, 25);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(92, 31);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,9 +66,9 @@
             this.Semester.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aToolStripMenuItem,
             this.bToolStripMenuItem});
-            this.Semester.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.Semester.ForeColor = System.Drawing.Color.White;
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(67, 19);
+            this.Semester.Size = new System.Drawing.Size(82, 23);
             this.Semester.Text = "Semester";
             // 
             // aToolStripMenuItem
@@ -72,7 +76,7 @@
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.aToolStripMenuItem.Text = "A";
             // 
             // toolStripComboBox2
@@ -165,7 +169,7 @@
             "2016-11-10",
             "2016-11-11"});
             this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 28);
             this.toolStripComboBox2.Click += new System.EventHandler(this.toolStripComboBox2_Click);
             // 
             // bToolStripMenuItem
@@ -173,7 +177,7 @@
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
@@ -250,16 +254,18 @@
             "05/30/2017",
             "05/31/2017"});
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 28);
             // 
             // Lecture
             // 
+            this.Lecture.BackgroundColor = System.Drawing.SystemColors.Control;
             this.Lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Lecture.Location = new System.Drawing.Point(20, 133);
-            this.Lecture.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Lecture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lecture.Location = new System.Drawing.Point(0, 121);
+            this.Lecture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Lecture.Name = "Lecture";
             this.Lecture.RowTemplate.Height = 24;
-            this.Lecture.Size = new System.Drawing.Size(622, 255);
+            this.Lecture.Size = new System.Drawing.Size(917, 380);
             this.Lecture.TabIndex = 11;
             this.Lecture.Visible = false;
             this.Lecture.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Lecture_CellContentClick);
@@ -267,28 +273,37 @@
             // Available_Classes
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
-            this.Available_Classes.Location = new System.Drawing.Point(366, 14);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Available_Classes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Available_Classes.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Available_Classes.ForeColor = System.Drawing.Color.White;
+            this.Available_Classes.Location = new System.Drawing.Point(458, 29);
+            this.Available_Classes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(77, 51);
+            this.Available_Classes.Size = new System.Drawing.Size(103, 63);
             this.Available_Classes.TabIndex = 12;
             this.Available_Classes.Text = "Available Classes";
-            this.Available_Classes.UseVisualStyleBackColor = true;
+            this.Available_Classes.UseVisualStyleBackColor = false;
             this.Available_Classes.Click += new System.EventHandler(this.Available_Classes_Click);
             // 
             // NewLec
             // 
-            this.NewLec.Location = new System.Drawing.Point(20, 13);
-            this.NewLec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NewLec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.NewLec.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewLec.ForeColor = System.Drawing.Color.White;
+            this.NewLec.Location = new System.Drawing.Point(581, 29);
+            this.NewLec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NewLec.Name = "NewLec";
-            this.NewLec.Size = new System.Drawing.Size(77, 52);
+            this.NewLec.Size = new System.Drawing.Size(103, 64);
             this.NewLec.TabIndex = 13;
             this.NewLec.Text = "Extra Lecture";
-            this.NewLec.UseVisualStyleBackColor = true;
+            this.NewLec.UseVisualStyleBackColor = false;
             this.NewLec.Click += new System.EventHandler(this.NewLec_Click);
             // 
             // Hour
             // 
+            this.Hour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Hour.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hour.ForeColor = System.Drawing.Color.White;
             this.Hour.FormattingEnabled = true;
             this.Hour.Items.AddRange(new object[] {
             "08-09",
@@ -304,16 +319,19 @@
             "18-19",
             "19-20",
             "20-21"});
-            this.Hour.Location = new System.Drawing.Point(106, 14);
-            this.Hour.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Hour.Location = new System.Drawing.Point(42, 28);
+            this.Hour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Hour.Name = "Hour";
-            this.Hour.Size = new System.Drawing.Size(108, 21);
+            this.Hour.Size = new System.Drawing.Size(143, 25);
             this.Hour.TabIndex = 14;
             this.Hour.Text = "Choose time";
             this.Hour.SelectedIndexChanged += new System.EventHandler(this.Hour_SelectedIndexChanged);
             // 
             // Class
             // 
+            this.Class.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Class.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Class.ForeColor = System.Drawing.Color.White;
             this.Class.FormattingEnabled = true;
             this.Class.Items.AddRange(new object[] {
             "f101",
@@ -326,33 +344,46 @@
             "s104",
             "a101",
             "a102"});
-            this.Class.Location = new System.Drawing.Point(106, 45);
-            this.Class.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Class.Location = new System.Drawing.Point(42, 66);
+            this.Class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Class.Name = "Class";
-            this.Class.Size = new System.Drawing.Size(108, 21);
+            this.Class.Size = new System.Drawing.Size(143, 25);
             this.Class.TabIndex = 15;
             this.Class.Text = "Choose class";
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.panel1.Controls.Add(this.Class);
+            this.panel1.Controls.Add(this.menuStrip1);
+            this.panel1.Controls.Add(this.Hour);
+            this.panel1.Controls.Add(this.Available_Classes);
+            this.panel1.Controls.Add(this.NewLec);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(917, 121);
+            this.panel1.TabIndex = 16;
+            // 
             // ExtraLecture
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 311);
-            this.Controls.Add(this.Class);
-            this.Controls.Add(this.Hour);
-            this.Controls.Add(this.NewLec);
-            this.Controls.Add(this.Available_Classes);
+            this.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.ClientSize = new System.Drawing.Size(917, 501);
             this.Controls.Add(this.Lecture);
-            this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ExtraLecture";
             this.Text = "ExtraLecture";
             this.Load += new System.EventHandler(this.NewLecture_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Lecture)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -369,5 +400,6 @@
         private System.Windows.Forms.Button NewLec;
         private System.Windows.Forms.ComboBox Hour;
         private System.Windows.Forms.ComboBox Class;
+        private System.Windows.Forms.Panel panel1;
     }
 }

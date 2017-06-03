@@ -28,22 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Class = new System.Windows.Forms.ComboBox();
-            this.Cancel_Lecture = new System.Windows.Forms.Button();
-            this.Available_Classes = new System.Windows.Forms.Button();
             this.Lecture = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.Semester = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.My_Lectures = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Lecture)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Class
             // 
+            this.Class.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Class.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Class.FormattingEnabled = true;
             this.Class.Items.AddRange(new object[] {
             "f101",
@@ -56,83 +66,113 @@
             "s104",
             "a101",
             "a102"});
-            this.Class.Location = new System.Drawing.Point(105, 20);
-            this.Class.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Class.Location = new System.Drawing.Point(22, 79);
+            this.Class.Margin = new System.Windows.Forms.Padding(2);
             this.Class.Name = "Class";
-            this.Class.Size = new System.Drawing.Size(108, 21);
+            this.Class.Size = new System.Drawing.Size(129, 21);
             this.Class.TabIndex = 21;
             this.Class.Text = "Choose class";
             // 
-            // Cancel_Lecture
-            // 
-            this.Cancel_Lecture.Location = new System.Drawing.Point(19, 20);
-            this.Cancel_Lecture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Cancel_Lecture.Name = "Cancel_Lecture";
-            this.Cancel_Lecture.Size = new System.Drawing.Size(77, 52);
-            this.Cancel_Lecture.TabIndex = 19;
-            this.Cancel_Lecture.Text = "Cancel Lecture";
-            this.Cancel_Lecture.UseVisualStyleBackColor = true;
-            this.Cancel_Lecture.Click += new System.EventHandler(this.Cancel_Lecture_Click);
-            // 
-            // Available_Classes
-            // 
-            this.Available_Classes.AccessibleDescription = "Available_Classes";
-            this.Available_Classes.Location = new System.Drawing.Point(259, 19);
-            this.Available_Classes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Available_Classes.Name = "Available_Classes";
-            this.Available_Classes.Size = new System.Drawing.Size(77, 51);
-            this.Available_Classes.TabIndex = 18;
-            this.Available_Classes.Text = "Available Classes";
-            this.Available_Classes.UseVisualStyleBackColor = true;
-            this.Available_Classes.Click += new System.EventHandler(this.Available_Classes_Click);
-            // 
             // Lecture
             // 
+            this.Lecture.AllowUserToAddRows = false;
+            this.Lecture.AllowUserToDeleteRows = false;
+            this.Lecture.AllowUserToResizeColumns = false;
+            this.Lecture.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.Lecture.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Lecture.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.Lecture.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Lecture.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Lecture.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Lecture.Location = new System.Drawing.Point(14, 119);
-            this.Lecture.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Lecture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lecture.Location = new System.Drawing.Point(0, 0);
+            this.Lecture.Margin = new System.Windows.Forms.Padding(5);
+            this.Lecture.MultiSelect = false;
             this.Lecture.Name = "Lecture";
+            this.Lecture.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Lecture.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Lecture.RowHeadersVisible = false;
+            this.Lecture.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.Lecture.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Lecture.RowTemplate.Height = 24;
-            this.Lecture.Size = new System.Drawing.Size(622, 255);
-            this.Lecture.TabIndex = 17;
-            this.Lecture.Visible = false;
+            this.Lecture.Size = new System.Drawing.Size(833, 154);
+            this.Lecture.TabIndex = 23;
             // 
-            // menuStrip1
+            // panel1
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Semester});
-            this.menuStrip1.Location = new System.Drawing.Point(105, 47);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(167, 25);
-            this.menuStrip1.TabIndex = 16;
-            this.menuStrip1.Text = "menuStrip1";
+            this.panel1.AccessibleName = "Buttons_place";
+            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.panel1.Controls.Add(this.menuStrip2);
+            this.panel1.Controls.Add(this.Class);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.My_Lectures);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 154);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(833, 183);
+            this.panel1.TabIndex = 22;
             // 
-            // Semester
+            // menuStrip2
             // 
-            this.Semester.CheckOnClick = true;
-            this.Semester.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem,
-            this.bToolStripMenuItem});
-            this.Semester.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(67, 19);
-            this.Semester.Text = "Semester";
+            this.menuStrip2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuStrip2.Location = new System.Drawing.Point(683, 78);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(0);
+            this.menuStrip2.Size = new System.Drawing.Size(82, 25);
+            this.menuStrip2.TabIndex = 15;
+            this.menuStrip2.Text = "menuStrip2";
             // 
-            // aToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(81, 23);
+            this.toolStripMenuItem1.Text = "Semester";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aToolStripMenuItem.Text = "A";
+            this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 24);
+            this.toolStripMenuItem2.Text = "A";
             // 
             // toolStripComboBox2
             // 
-            this.toolStripComboBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
-            this.toolStripComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBox2.AccessibleName = "";
+            this.toolStripComboBox2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripComboBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripComboBox2.Items.AddRange(new object[] {
             "2016-08-07",
             "2016-08-08",
@@ -221,16 +261,21 @@
             this.toolStripComboBox2.Name = "toolStripComboBox2";
             this.toolStripComboBox2.Size = new System.Drawing.Size(121, 23);
             // 
-            // bToolStripMenuItem
+            // toolStripMenuItem3
             // 
-            this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
-            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.bToolStripMenuItem.Text = "B";
+            this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 24);
+            this.toolStripMenuItem3.Text = "B";
             // 
             // toolStripComboBox1
             // 
+            this.toolStripComboBox1.AccessibleName = "toolStripComboBox2";
+            this.toolStripComboBox1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripComboBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripComboBox1.Items.AddRange(new object[] {
             "03/12/2017",
             "03/13/2017",
@@ -305,38 +350,83 @@
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(0, 590);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(581, 83);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(409, 59);
+            this.button3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(234, 70);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Available Classes";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // My_Lectures
+            // 
+            this.My_Lectures.AccessibleName = "My_Lectures";
+            this.My_Lectures.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.My_Lectures.FlatAppearance.BorderSize = 0;
+            this.My_Lectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.My_Lectures.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.My_Lectures.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.My_Lectures.Location = new System.Drawing.Point(178, 59);
+            this.My_Lectures.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.My_Lectures.Name = "My_Lectures";
+            this.My_Lectures.Size = new System.Drawing.Size(221, 70);
+            this.My_Lectures.TabIndex = 9;
+            this.My_Lectures.Text = "Cancel Lecture";
+            this.My_Lectures.UseVisualStyleBackColor = false;
+            this.My_Lectures.Click += new System.EventHandler(this.My_Lectures_Click);
+            // 
             // CancelLectures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 311);
-            this.Controls.Add(this.Class);
-            this.Controls.Add(this.Cancel_Lecture);
-            this.Controls.Add(this.Available_Classes);
+            this.ClientSize = new System.Drawing.Size(833, 337);
             this.Controls.Add(this.Lecture);
-            this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "CancelLectures";
             this.Text = "CancelLectures";
             ((System.ComponentModel.ISupportInitialize)(this.Lecture)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ComboBox Class;
-        private System.Windows.Forms.Button Cancel_Lecture;
-        private System.Windows.Forms.Button Available_Classes;
         private System.Windows.Forms.DataGridView Lecture;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem Semester;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
-        private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button My_Lectures;
     }
 }
