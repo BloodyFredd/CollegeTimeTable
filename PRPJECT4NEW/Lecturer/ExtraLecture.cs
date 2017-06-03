@@ -66,6 +66,28 @@ namespace PRPJECT4NEW.Lecturer
                 bsource.DataSource = dbdataset;
                 Lecture.DataSource = bsource;
                 sda.Update(dbdataset);
+
+                Lecture.EnableHeadersVisualStyles = false;
+                Lecture.GridColor = Utility.HeaderBackColor;
+                Lecture.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                Lecture.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                Lecture.AutoResizeColumns();
+                Lecture.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                Lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+                // this design loop for chart
+                int i = 0;
+                for (int j = 0; j <= 9; j++)
+                {
+                    // the def of this function located below
+                    paintCells2(i);
+                    i++;
+                }
+
+                foreach (DataGridViewRow row in Lecture.Rows)
+                {
+                    row.Height = 45;
+                }
             }
             catch (Exception ex)
             {
@@ -140,6 +162,28 @@ namespace PRPJECT4NEW.Lecturer
             }
 
 }
+
+        // function paint the chart according to 0 or 1
+        private void paintCells2(int i)
+        {
+            for (int j = 5; j < 18; j++)
+            {
+                if (Convert.ToInt32(Lecture.Rows[i].Cells[j].Value) == 1)
+                {
+                    Lecture.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                    Lecture.Rows[i].Cells[j].Style.ForeColor = Color.Red;
+                }
+
+                else
+                {
+                    Lecture.Rows[i].Cells[j].Style.BackColor = Color.LawnGreen;
+                    Lecture.Rows[i].Cells[j].Style.ForeColor = Color.LawnGreen;
+                }
+
+
+            }
+
+        }
 
         private void NewLecture_Load(object sender, EventArgs e)
         {
