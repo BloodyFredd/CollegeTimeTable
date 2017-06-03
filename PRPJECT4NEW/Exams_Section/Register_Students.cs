@@ -275,6 +275,18 @@ namespace PRPJECT4NEW.Exams_Section
                 row.Cells["Choose_Course"].Value = false;
             }
 
+            //clean al rows
+            foreach (DataGridViewRow row in Students_List.Rows)
+            {
+                row.Cells["Check"].Value = false;
+                cnt = 0;
+            }
+
+            foreach (DataGridViewRow srow in Students_List.Rows)
+            {
+                    srow.ReadOnly = false;
+            }
+
             //check select row
             Exams_Grid.CurrentRow.Cells["Choose_Course"].Value = true;
 
@@ -357,6 +369,22 @@ namespace PRPJECT4NEW.Exams_Section
                     if (Convert.ToBoolean(row.Cells["Choose_Course"].Value) == true)
                     {
                         size = classCapacity(Convert.ToString(row.Cells["Class"].Value).Substring(0, 4)) - Convert.ToInt32(row.Cells["Students_Enrolled"].Value);
+                        if (size < cnt + 1)
+                        {
+                            foreach (DataGridViewRow srow in Students_List.Rows)
+                            {
+                                if (Convert.ToBoolean(srow.Cells["Check"].Value) != true)
+                                    srow.ReadOnly = true;
+                                else
+                                    srow.ReadOnly = false;
+                            }
+                            foreach (DataGridViewRow rowy in Students_List.Rows)
+                            {
+                                rowy.Cells["Check"].Value = false;
+                                cnt = 0;
+                            }
+                            MessageBox.Show("You cant add more students\nthe class is full.", "Warning!");
+                        }
                         if ( size == cnt + 1)
                         {
 
