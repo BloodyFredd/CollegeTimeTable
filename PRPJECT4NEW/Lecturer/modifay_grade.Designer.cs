@@ -108,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 449);
+            this.ClientSize = new System.Drawing.Size(932, 312);
             this.Controls.Add(this.stud_grade);
             this.Controls.Add(this.stud_id);
             this.Controls.Add(this.course_id);
