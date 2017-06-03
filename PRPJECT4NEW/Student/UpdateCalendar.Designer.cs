@@ -50,6 +50,7 @@
             // 
             // courseComboBox
             // 
+            this.courseComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.courseComboBox.FormattingEnabled = true;
             this.courseComboBox.Location = new System.Drawing.Point(742, 12);
             this.courseComboBox.Name = "courseComboBox";

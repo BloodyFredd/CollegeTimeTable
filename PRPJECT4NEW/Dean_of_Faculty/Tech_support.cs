@@ -16,10 +16,8 @@ namespace PRPJECT4NEW.Dean_of_Faculty
         {
             InitializeComponent();
         }
-
-        private void new_Request_btn_Click(object sender, EventArgs e)
+        public DF_requests newrequset()
         {
-
             using (Entities context = new Entities())
             {
                 DF_requests msg = new DF_requests
@@ -30,8 +28,16 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                     Message = message_textbox.Text,
                     Status = "Open"
                 };
+                return msg;
+            }
+           }
+        private void new_Request_btn_Click(object sender, EventArgs e)
+        {
 
-                context.DF_requests.Add(msg);
+            using (Entities context = new Entities())
+            {
+
+                context.DF_requests.Add(newrequset());
                 context.SaveChanges();
 
                 reloadDataGridView(context);
@@ -80,15 +86,33 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
 
 
-        private void reloadDataGridView(Entities context)
+        public bool reloadDataGridView(Entities context)
         {
-            dataGridView1.Rows.Clear();
-            foreach (DF_requests s in context.DF_requests)
+            try
             {
-                if (s.Intended_to.ToString().Contains("Tech_Team"))
-                    dataGridView1.Rows.Add(s.Date, s.Intended_to, s.Subject, s.Message, s.Status);
+
+                dataGridView1.Rows.Clear();
+                foreach (DF_requests s in context.DF_requests)
+                {
+                    if (s.Intended_to.ToString().Contains("Tech_Team"))
+                    {
+                        dataGridView1.Rows.Add(s.Date, s.Intended_to, s.Subject, s.Message, s.Status);
+                    }
+                }
+
+                dataGridView1.Refresh();
+                return true;
+
             }
-            dataGridView1.Refresh();
+            catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
+
+                throw new Exception();
+            }
+
+
+
         }
     }
 }

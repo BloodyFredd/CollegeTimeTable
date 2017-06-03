@@ -88,7 +88,6 @@
             this.totalFeeLabel.Size = new System.Drawing.Size(960, 49);
             this.totalFeeLabel.TabIndex = 1;
             this.totalFeeLabel.Text = "Approximate total tuition Fee for this semester:";
-            this.totalFeeLabel.Click += new System.EventHandler(this.totalFeeLabel_Click);
             // 
             // flowLayoutPanel1
             // 

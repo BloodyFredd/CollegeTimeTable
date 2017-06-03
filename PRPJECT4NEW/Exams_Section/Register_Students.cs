@@ -52,7 +52,7 @@ namespace PRPJECT4NEW.Exams_Section
             Exams_Grid.Columns.Add("Date", "Date");
 
             //Create check box column
-            
+
             DataGridViewCheckBoxColumn column = new DataGridViewCheckBoxColumn();
             {
                 column.HeaderText = "Choose Course";
@@ -71,7 +71,6 @@ namespace PRPJECT4NEW.Exams_Section
             Exams_Grid.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
             Exams_Grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             Exams_Grid.AutoResizeColumns();
-
             Exams_Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             Exams_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
        
@@ -183,13 +182,9 @@ namespace PRPJECT4NEW.Exams_Section
         {
             using (Entities context = new Entities())
             {
-
-                foreach (var s in context.Student_Courses)
-                    if(s.stud_Id == StudID)
-                       foreach (var courseDet in context.Course_detail)
-                           if (courseDet.Course_id == CourseID
-                              && courseDet.Year == DateTime.Now.Year)
-                                return true;
+                Student_Courses ss = context.Student_Courses.FirstOrDefault(s => s.stud_Id == StudID && s.course_id == CourseID);
+                if (ss != null)
+                    return true;
             }
             return false;
         }
@@ -218,7 +213,6 @@ namespace PRPJECT4NEW.Exams_Section
         {
             using (Entities context = new Entities())
             {
-
                 foreach (var s in context.courses)
                     if (s.Course_id == ID)
                         return s.Course_name;
@@ -253,7 +247,7 @@ namespace PRPJECT4NEW.Exams_Section
         {
             using (Entities context = new Entities())
             {
-                foreach (var s in context.Person)
+                foreach (var s in context.People)
                     if (s.F_name + " " + s.L_name == name)
                         return s.Email;
             }
@@ -279,6 +273,18 @@ namespace PRPJECT4NEW.Exams_Section
             foreach (DataGridViewRow row in Exams_Grid.Rows)
             {
                 row.Cells["Choose_Course"].Value = false;
+            }
+
+            //clean al rows
+            foreach (DataGridViewRow row in Students_List.Rows)
+            {
+                row.Cells["Check"].Value = false;
+                cnt = 0;
+            }
+
+            foreach (DataGridViewRow srow in Students_List.Rows)
+            {
+                    srow.ReadOnly = false;
             }
 
             //check select row
@@ -363,6 +369,22 @@ namespace PRPJECT4NEW.Exams_Section
                     if (Convert.ToBoolean(row.Cells["Choose_Course"].Value) == true)
                     {
                         size = classCapacity(Convert.ToString(row.Cells["Class"].Value).Substring(0, 4)) - Convert.ToInt32(row.Cells["Students_Enrolled"].Value);
+                        if (size < cnt + 1)
+                        {
+                            foreach (DataGridViewRow srow in Students_List.Rows)
+                            {
+                                if (Convert.ToBoolean(srow.Cells["Check"].Value) != true)
+                                    srow.ReadOnly = true;
+                                else
+                                    srow.ReadOnly = false;
+                            }
+                            foreach (DataGridViewRow rowy in Students_List.Rows)
+                            {
+                                rowy.Cells["Check"].Value = false;
+                                cnt = 0;
+                            }
+                            MessageBox.Show("You cant add more students\nthe class is full.", "Warning!");
+                        }
                         if ( size == cnt + 1)
                         {
 
@@ -381,7 +403,7 @@ namespace PRPJECT4NEW.Exams_Section
                             cnt++;
                             //Students_List.Rows[e.RowIndex].Cells[2].Value = true;
                             Students_List.Rows[e.RowIndex].Cells[2].ReadOnly = false;
-                            MessageBox.Show(cnt.ToString());
+                            //MessageBox.Show(cnt.ToString());
 
                             return;
                         }
@@ -394,7 +416,7 @@ namespace PRPJECT4NEW.Exams_Section
                     //Students_List.Rows[e.RowIndex].Cells[2].Value = true;
                     cnt++;
                 }
-                MessageBox.Show(cnt.ToString());
+                //MessageBox.Show(cnt.ToString());
                 return;
             }
             Students_List.Rows[e.RowIndex].Cells[2].Value = false;
@@ -408,17 +430,18 @@ namespace PRPJECT4NEW.Exams_Section
                     srow.ReadOnly = false;
                 }
             }
-            MessageBox.Show(cnt.ToString());
+            //MessageBox.Show(cnt.ToString());
 
         }
 
         private void newScholarshipBtn_Click(object sender, EventArgs e)
         {
             int ExamID=0;
+            int cnt_Add=0;
 
             foreach (DataGridViewRow row in Exams_Grid.Rows)
             {
-                MessageBox.Show(Convert.ToBoolean(row.Cells["Choose_Course"].Value).ToString());
+                //MessageBox.Show(Convert.ToBoolean(row.Cells["Choose_Course"].Value).ToString());
                 if (Convert.ToBoolean(row.Cells["Choose_Course"].Value).ToString() == "True")
                 {
                     ExamID = Convert.ToInt32(row.Cells["ID"].Value);
@@ -432,105 +455,125 @@ namespace PRPJECT4NEW.Exams_Section
                     using (Entities context = new Entities())
                     {
                         foreach (var s in context.Student_Courses)
-                            if (s.stud_Id.Contains( row.Cells["ID"].Value.ToString()))
+                        {
+                            if (s.stud_Id.Contains(row.Cells["ID"].Value.ToString()))
                             {
                                 AddExamToStudents(row.Cells["ID"].Value.ToString(), ExamID);
-                                
+                                cnt_Add++;
+                                break;
                             }
-                        context.SaveChanges();
+                        }                         
                     }
-
-                
+                if (cnt == cnt_Add)
+                    break;
             }
-            
-            MessageBox.Show("The students added!");
+
+            using (Entities context = new Entities())
+            {
+                Exam ss = context.Exams.FirstOrDefault(s => s.ID == ExamID);
+                if (ss != null)
+                    ss.Student_Enrolled = cnt_Add+ ss.Student_Enrolled;
+                context.SaveChanges();
+            }
+
+            Exam_List_Reload();
+            MessageBox.Show("Done!");
             return;
         }
 
         private bool AddExamToStudents(string StudID, int ExamID)
         {
-            using (Entities context = new Entities())
+            using (Entities contexts = new Entities())
             {
-                foreach (var s in context.Student_Courses)
-                    if(s.stud_Id == StudID && s.course_id== courseByExam(ExamID) 
-                        && s.course_serial == serialByCourse(courseByExam(ExamID))
-                        && checkEmptyExam(StudID, ExamID))
-                    {
-                        switch (returnDueIn(ExamID))
+                double a = courseByExam(ExamID);
+                Student_Courses ss = contexts.Student_Courses.FirstOrDefault(s => s.stud_Id == StudID && s.course_id == a && s.Type==1);
+                switch (returnDueIn(ExamID))
+                {
+                    case 1:
+                        if(ss.Exam1_ID==null)
                         {
-                            case 1:
-                                s.Exam1_ID = ExamID;
-                                break;
-                            case 2:
-                                s.Exam2_ID = ExamID;
-                                break;
-                            case 3:
-                                s.Exam3_ID = ExamID;
-                                break;
+                            ss.Exam1_ID = ExamID;
+                            contexts.SaveChanges();
+                            return true;
                         }
-                        break;
-                    }
+                        else
+                        {
+                            MessageBox.Show(ss.stud_Id+" already registered to exam");
+                            return false;
+                        }
+                    case 2:
+                            ss.Exam2_ID = ExamID;
+                            contexts.SaveChanges();
+                            return true;
+                    case 3:
+                            ss.Exam3_ID = ExamID;
+                            contexts.SaveChanges();
+                            return true;
+                }
             }
             return false;
         }
 
-        private int courseByExam(int ExamID)
+        private double courseByExam(int ExamID)
         {
+
             using (Entities context = new Entities())
             {
-                foreach (var s in context.Exams)
-                    if (s.ID == ExamID)
-                        return s.Course_ID;
+                Exam ss = context.Exams.FirstOrDefault(s => s.ID == ExamID);
+                if (ss != null)
+                    return ss.Course_ID;
+
             }
-            return 0;
+            return 0.0;
+
         }
 
-        private int serialByCourse(int CourseID)
-        {
-            using (Entities context = new Entities())
-            {
-                foreach (var s in context.Student_Courses)
-                    if (s.course_id == CourseID)
-                        return Convert.ToInt32(s.course_serial);
-            }
-            return 0;
-        }
+        //private int serialByCourse(int CourseID)
+        //{
+        //    using (Entities context = new Entities())
+        //    {
+        //        foreach (var s in context.Student_Courses)
+        //            if (s.course_id == CourseID)
+        //                return Convert.ToInt32(s.course_serial);
+        //    }
+        //    return 0;
+        //}
 
-        private bool checkEmptyExam(string StudID, int ExamID)
-        {
-            using (Entities context = new Entities())
-            {
-                foreach (var s in context.Student_Courses)
-                    if (s.stud_Id == StudID)
-                    {
-                        switch (returnDueIn(ExamID))
-                        {
-                            case 1:
-                                if (s.Exam1_ID == null)
-                                    return true;
-                                break;
-                            case 2:
-                                if (s.Exam2_ID == null)
-                                    return true;
-                                break;
-                            case 3:
-                                if (s.Exam3_ID == null)
-                                    return true;
-                                break;
-                        }
-                        break;
-                    }
+        //private bool checkEmptyExam(string StudID, int ExamID)
+        //{
+        //    using (Entities context = new Entities())
+        //    {
+        //        foreach (var s in context.Student_Courses)
+        //            if (s.stud_Id == StudID)
+        //            {
+        //                switch (returnDueIn(ExamID))
+        //                {
+        //                    case 1:
+        //                        if (s.Exam1_ID == null)
+        //                            return true;
+        //                        break;
+        //                    case 2:
+        //                        if (s.Exam2_ID == null)
+        //                            return true;
+        //                        break;
+        //                    case 3:
+        //                        if (s.Exam3_ID == null)
+        //                            return true;
+        //                        break;
+        //                }
+        //                break;
+        //            }
                         
-            }
-            return false;
-        }
+        //    }
+        //    return false;
+        //}
         private int returnDueIn(int ExamID)
         {
             using (Entities context = new Entities())
             {
-                foreach (var s in context.Exams)
-                    if (s.ID == ExamID)
-                        return Convert.ToInt32(s.Due_in);
+                Exam ss = context.Exams.FirstOrDefault(s => s.ID == ExamID);
+                if (ss != null)
+                    return Convert.ToInt32(ss.Due_in);
             }
            return 0;
         }

@@ -361,6 +361,30 @@
     <Compile Include="student.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Student\ExamResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\ExamResults.designer.cs">
+      <DependentUpon>ExamResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Exams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Exams.Designer.cs">
+      <DependentUpon>Exams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Requests.Designer.cs">
+      <DependentUpon>Requests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\TuitionFeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -602,6 +626,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Exams_Section\special_student_list.resx">
       <DependentUpon>special_student_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\ExamResults.resx">
+      <DependentUpon>ExamResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Exams.resx">
+      <DependentUpon>Exams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Requests.resx">
+      <DependentUpon>Requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\TuitionFeesForm.resx">
       <DependentUpon>TuitionFeesForm.cs</DependentUpon>

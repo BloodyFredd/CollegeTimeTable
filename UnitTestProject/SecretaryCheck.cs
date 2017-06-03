@@ -12,7 +12,7 @@ namespace UnitTestProject
     [TestClass]
     public class SecretaryCheck
     {
-        private SqlConnection sqlcon;
+       // private SqlConnection sqlcon;
         Secretary s = new Secretary("123456789");
         AddStudent a1 = new AddStudent();
 
@@ -77,7 +77,7 @@ namespace UnitTestProject
         [TestMethod]
         public void checkTeacherFalse()
         {
-            Assert.IsFalse(s.checkForTeacher("999999999"));
+            Assert.IsFalse(s.checkForTeacher("999949999"));
         }
 
         [TestMethod]

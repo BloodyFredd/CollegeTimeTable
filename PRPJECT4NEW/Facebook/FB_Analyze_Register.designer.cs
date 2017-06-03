@@ -70,8 +70,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnFacebookLogin;
-        private System.Windows.Forms.Button btnLogout;
+        //private System.Windows.Forms.Button btnFacebookLogin;
+       // private System.Windows.Forms.Button btnLogout;
     }
 }
 

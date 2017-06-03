@@ -16,7 +16,10 @@ namespace PRPJECT4NEW
     {
         public string ID { get; set; }
         public int Course_Serial { get; set; }
-        public System.DateTime Date { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
         public string Status { get; set; }
     }
+
+
+
 }

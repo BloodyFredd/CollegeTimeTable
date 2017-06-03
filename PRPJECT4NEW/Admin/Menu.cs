@@ -221,5 +221,10 @@ namespace PRPJECT4NEW.Admin
             StudentExemption form2 = new StudentExemption();
             form2.Show();
         }
+
+        private void Student_Name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

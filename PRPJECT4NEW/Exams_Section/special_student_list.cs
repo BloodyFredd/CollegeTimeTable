@@ -27,7 +27,8 @@ namespace PRPJECT4NEW.Exams_Section
             Type_of_easements_comboBox.Items.Add("Extra Time");
             Type_of_easements_comboBox.Items.Add("Formula Sheet");
             Type_of_easements_comboBox.Items.Add("Laptop");
-
+            Type_of_easements_comboBox.Items.Add("Whithout any easments");
+           
         }
 
         private void special_student_list_Load(object sender, EventArgs e)
@@ -103,6 +104,15 @@ namespace PRPJECT4NEW.Exams_Section
                 foreach (student s in context.students)
                 {
                     if (s.FormulaSheet == true)
+                        Sview.Rows.Add(s.ID, s.Department, s.Year, s.Average, s.ExtraTime, s.Laptop, s.FormulaSheet);
+                }
+            }
+            else if(Type_of_easements_comboBox.Text == "Whithout any easments")
+            {
+                Sview.Rows.Clear();
+                foreach (student s in context.students)
+                {
+                    if (s.Laptop == false && s.FormulaSheet == false && s.ExtraTime == false)
                         Sview.Rows.Add(s.ID, s.Department, s.Year, s.Average, s.ExtraTime, s.Laptop, s.FormulaSheet);
                 }
             }
@@ -208,6 +218,35 @@ namespace PRPJECT4NEW.Exams_Section
         private void Sview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void save_regular_stu_btn_Click(object sender, EventArgs e)
+        {
+            //SAVE FILE
+            using (Entities context = new Entities())
+            {
+                var allRowes = context.students.ToList();
+
+                using (SaveFileDialog sdf = new SaveFileDialog() { Filter = "Csv|*.csv", ValidateNames = true })
+                {
+                    if (sdf.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var sw = new StreamWriter(sdf.FileName))
+                        {
+                            var writer = new CsvWriter(sw);
+                            writer.WriteHeader(typeof(student));
+                            foreach (var s in context.students)
+                            {
+                                if (s.Laptop == false &&s.FormulaSheet==false &&s.ExtraTime==false)
+                                {
+                                    writer.WriteRecord(s);
+                                }
+                            }
+                        }
+                        MessageBox.Show("Saved", "mes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
     }
 }
