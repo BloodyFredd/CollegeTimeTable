@@ -62,7 +62,13 @@ namespace PRPJECT4NEW.Student
 
         private void Messages_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Messages panel");
+            Student.Messages frm = new Student.Messages(studentUsr);
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.WindowState = FormWindowState.Maximized;
+            Buttons_view.Controls.Add(frm);
+            Buttons_view.Visible = true;
+            frm.Show();
         }
 
         private void Exams_Button_Click(object sender, EventArgs e)

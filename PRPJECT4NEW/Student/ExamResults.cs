@@ -77,7 +77,6 @@ namespace PRPJECT4NEW.Student
 
             ExamResultDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ExamResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
         }
 
         private void insertCourseExamResults()

@@ -367,6 +367,12 @@
     <Compile Include="Student\ExamResults.designer.cs">
       <DependentUpon>ExamResults.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student\Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\TuitionFeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -611,6 +617,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student\ExamResults.resx">
       <DependentUpon>ExamResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\TuitionFeesForm.resx">
       <DependentUpon>TuitionFeesForm.cs</DependentUpon>
