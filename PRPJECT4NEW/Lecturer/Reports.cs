@@ -87,6 +87,16 @@ namespace PRPJECT4NEW.Lecturer
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; MultipleActiveResultSets=true";
             this.sqlcon = new SqlConnection(connetionString);
+            //Paint headers
+            StudentsReport.EnableHeadersVisualStyles = false;
+            StudentsReport.GridColor = Utility.HeaderBackColor;
+            StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+            StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            StudentsReport.AutoResizeColumns();
+            StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
             StudentsReport.Visible = true;
 
             try
@@ -101,6 +111,7 @@ namespace PRPJECT4NEW.Lecturer
                 bsource.DataSource = dbdataset;
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
+                
             }
             catch (Exception ex)
             {
@@ -125,8 +136,8 @@ namespace PRPJECT4NEW.Lecturer
 
                 {
                     str = toolStripComboBox2.Text;
-                    //MessageBox.Show(str);
                     cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
+                    //MessageBox.Show(str);
                     StudentsReport.Visible = true;
                 }
                 else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
@@ -146,22 +157,76 @@ namespace PRPJECT4NEW.Lecturer
                     //form2.Show();
 
                 }
-
+                
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
 
+                //Preent Sorting
+                foreach (DataGridViewColumn column in StudentsReport.Columns)
+                {
+                    column.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
                 bsource.DataSource = dbdataset;
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
+
+                int i = 0;
+                for (int j = 0; j <= 9; j++)
+                {
+                    paintCells2(i);
+                    i++;
+                }
+
+                foreach (DataGridViewRow row in StudentsReport.Rows)
+                {
+                    row.Height = 45;
+                }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void paintCells2(int i)
+        {
+            for (int j = 5; j < 18; j++)
+            {
+                if (Convert.ToInt32(StudentsReport.Rows[i].Cells[j].Value) == 1)
+                {
+                    StudentsReport.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                    StudentsReport.Rows[i].Cells[j].Style.ForeColor = Color.Red;
+                }
+                    
+                else
+                {
+                    StudentsReport.Rows[i].Cells[j].Style.BackColor = Color.LawnGreen;
+                    StudentsReport.Rows[i].Cells[j].Style.ForeColor = Color.LawnGreen;
+                }
+                    
+
+            }
+                
+      }
+
+       
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -219,6 +284,21 @@ namespace PRPJECT4NEW.Lecturer
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void StudentsReport_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void True(object sender, DataGridViewAutoSizeColumnsModeEventArgs e)
+        {
+
+        }
+
+        private void True(object sender, DataGridViewAutoSizeColumnModeEventArgs e)
+        {
+
         }
     }
 }
