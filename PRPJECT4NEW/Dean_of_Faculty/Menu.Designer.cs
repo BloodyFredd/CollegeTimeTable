@@ -58,6 +58,7 @@
             // 
             this.panel1.AccessibleName = "Header";
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Student_Name);
@@ -118,6 +119,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.panel3.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
@@ -142,6 +144,7 @@
             // 
             this.panel2.AccessibleName = "Buttons_place";
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.panel2.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern;
             this.panel2.Controls.Add(this.Logout_Button);
             this.panel2.Controls.Add(this.Special_Exams_Button);
             this.panel2.Controls.Add(this.Technical_Support_Button);

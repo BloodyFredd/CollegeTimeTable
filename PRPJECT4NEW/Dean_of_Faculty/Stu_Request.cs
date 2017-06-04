@@ -25,7 +25,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
         private void Stu_Request_Load(object sender, EventArgs e)
         {
             dataGridView1.Columns.Add("ID", "ID");
-            //   dataGridView1.Columns.Add("Intended to", "Intended_to");
+            dataGridView1.Columns.Add("Course_ID to", "Course_ID");
             dataGridView1.Columns.Add("Subject", "Subject");
             dataGridView1.Columns.Add("Message", "Message");
             dataGridView1.Columns.Add("Status", "Status");
@@ -53,7 +53,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             {
                 foreach (student_request s in db.student_request)
                 {
-                    dataGridView1.Rows.Add(s.ID, s.Subject, s.Message, s.Status);
+                    dataGridView1.Rows.Add(s.ID, s.Course_ID, s.Subject, s.Message, s.Status);
                 }
             }
 
@@ -61,14 +61,21 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         private void Approve_btn_Click(object sender, EventArgs e)
         {
-            List<string> student_request1 = new List<string>();
+            int counter = 0;
+            List<string> student_request1 = new List<string>();//id
+            List<string> student_request2 = new List<string>();//subject
             int checkBoxColumn = dataGridView1.Columns.Count - 1;
 
             //List marked scholarships
             foreach (DataGridViewRow rw in this.dataGridView1.Rows)
             {
                 if (rw.Cells[checkBoxColumn].Value != null && Convert.ToBoolean(rw.Cells[checkBoxColumn].Value) == true)
+                {
                     student_request1.Add(rw.Cells[0].Value.ToString());
+                    student_request2.Add(rw.Cells[1].Value.ToString());
+                    counter++;
+                }
+
             }
 
             using (Entities context = new Entities())
@@ -76,24 +83,14 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                 // change status
                 foreach (student_request s in context.student_request)
                 {
-                    foreach (string j in student_request1)
+
+                    for (int i =0; i < counter; i++)
                     {
-                        if (j.Equals(s.ID))
+                        if (student_request1[i].Equals(s.ID) && student_request2[i].Equals(s.Course_ID.ToString()))
                         {
                             s.Status = "Approved";
                         }
                     }
-
-                    foreach (var k in context.Student_special_Exam)
-                    {
-                        if (k.ID.Equals(s.ID))
-                        {
-                            k.Status = "Approved";
-                        }
-
-
-                    }
-
                 }
 
                 //Save changes and reload grid
@@ -107,45 +104,44 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             dataGridView1.Rows.Clear();
             foreach (student_request s in context.student_request)
             {
-                dataGridView1.Rows.Add(s.ID, s.Subject, s.Message, s.Status);
+                dataGridView1.Rows.Add(s.ID, s.Course_ID, s.Subject, s.Message, s.Status);
             }
             dataGridView1.Refresh();
         }
 
         private void Reject_btn_Click(object sender, EventArgs e)
         {
-            List<string> student_request = new List<string>();
+            int counter = 0;
+            List<string> student_request = new List<string>();//id
+            List<string> student_request2 = new List<string>();//subject
             int checkBoxColumn = dataGridView1.Columns.Count - 1;
 
             //List marked scholarships
             foreach (DataGridViewRow rw in this.dataGridView1.Rows)
             {
                 if (rw.Cells[checkBoxColumn].Value != null && Convert.ToBoolean(rw.Cells[checkBoxColumn].Value) == true)
+                {
                     student_request.Add(rw.Cells[0].Value.ToString());
+                    student_request2.Add(rw.Cells[1].Value.ToString());
+                    counter++;
+                }
             }
 
             using (Entities context = new Entities())
             {
-               
+
 
                 // change status
                 foreach (student_request s in context.student_request)
                 {
-                    foreach (string j in student_request)
+                    for (int i = 0; i < counter; i++)
                     {
-                        if (j.Equals(s.ID))
+                        if (student_request[i].Equals(s.ID) && student_request2[i].Equals(s.Course_ID.ToString()))
                         {
                             s.Status = "Denied";
                         }
                     }
-                    foreach (Student_special_Exam k in context.Student_special_Exam)
-                    {
-                        if (k.ID.Equals(s.ID))
-                        {
-                            k.Status = "Denied";
-                            //context.SaveChanges();
-                        }
-                    }
+
                 }
 
                 //Save changes and reload grid
@@ -154,6 +150,6 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             }
             dataGridView1.Refresh();
         }
-       
+
     }
 }

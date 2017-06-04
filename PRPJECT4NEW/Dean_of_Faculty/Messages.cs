@@ -16,9 +16,8 @@ namespace PRPJECT4NEW.Dean_of_Faculty
         {
             InitializeComponent();
             Intended_to_combo.Items.Add("All_students");
-            //Intended_to_combo.Items.Add("Tech_Team");
-           
-            //Intended_to_combo.Items.Add("Approved")
+            Intended_to_combo.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         private void Messages_Load(object sender, EventArgs e)
@@ -93,9 +92,11 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                 foreach (DF_requests s in context.DF_requests)
                 {
                     if (s.Intended_to.ToString().Contains("All_students"))
-                        dataGridView1.Rows.Add(s.Date, s.Intended_to, s.Subject, s.Message);//,s.Status);
+                        dataGridView1.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message);//,s.Status);
                 }
                 dataGridView1.Refresh();
+                Subject_textbox.Clear();
+                Message_textbox.Clear();
                 return true;
             }
             catch(Exception e)
@@ -108,8 +109,10 @@ namespace PRPJECT4NEW.Dean_of_Faculty
         {
             using (Entities context = new Entities())
             {
+               
                 DF_requests msg = new DF_requests
                 {
+                 
                     Date = DateTime.Today,
                     Intended_to = Intended_to_combo.Text,
                     Subject = Subject_textbox.Text,
@@ -122,6 +125,11 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         private void Add_New_Message_btn_Click(object sender, EventArgs e)
         {
+            if (Intended_to_combo.Text.ToString() == "")
+            {
+                MessageBox.Show("Fill 'Intended To' combobox.");
+                return;
+            }
             using (Entities context = new Entities())
             {
                 context.DF_requests.Add(newrequsettoall());
