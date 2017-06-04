@@ -15,12 +15,14 @@ namespace PRPJECT4NEW.Exams_Section
     public partial class Register_Students : Form
     {
         int cnt;
+        Entities context;
         public Register_Students()
         {
             InitializeComponent();
+            context = new Entities();
+            Combo_Course_Load();
             Exams_List_Load();
             Students_List_Load();
-            Combo_Course_Load();
             cnt = 0;
         }
 
@@ -28,12 +30,9 @@ namespace PRPJECT4NEW.Exams_Section
         /// Load a courses list to "Combo_Course_Load" Combo box </summary>
         private void Combo_Course_Load()
         {
-            using (Entities context = new Entities())
-            {
-                foreach (var s in context.Lecture_Course)
+                foreach (Lecture_Course s in context.Lecture_Course)
                     if(s.Course_type==1)
                         Combo_Course_name.Items.Add(getCourseName(s.Course_ID)+" - "+ s.Course_Serial);
-            }
         }
       
         /// <summary>
@@ -81,15 +80,15 @@ namespace PRPJECT4NEW.Exams_Section
         private void Exam_List_Reload()
         {
             Exams_Grid.Rows.Clear();
-            using (Entities context = new Entities())
-            {
-                foreach (Exam s in context.Exams)
+            context = new Entities();
+            foreach (Exam s in context.Exams)
                 {
                     if (s.Course_ID == getCourseId(Combo_Course_name.Text.Substring(0, Combo_Course_name.Text.Length - 7)))
                         Exams_Grid.Rows.Add(s.ID, getCourseName(s.Course_ID), s.Class + " (" + classCapacity(s.Class) + ")", s.Student_Enrolled,s.Due_in,s.Date.ToShortDateString());
+                
                 }
-                Exams_Grid.Refresh();
-            }
+            Exams_Grid.Refresh();
+
         }
 
 
@@ -132,44 +131,39 @@ namespace PRPJECT4NEW.Exams_Section
 
         private void Students_List_Reload()
         {
-            using (Entities context = new Entities())
-            {
-                Students_List.Rows.Clear();
-                foreach (student s in context.students)
+            context = new Entities();
+            foreach (student s in context.students)
                 {
                     if (studentInCourse(s.ID, getCourseId(Combo_Course_name.Text.Substring(0, Combo_Course_name.Text.Length - 7))))
                         Students_List.Rows.Add(s.ID, s.ExtraTime || s.FormulaSheet || s.Laptop);
                 }
-                Students_List.Refresh();
-            }
+            Students_List.Refresh();
+
         }
 
         private void Students_Extra_List_Reload()
         {
-            using (Entities context = new Entities())
-            {
-                Students_List.Rows.Clear();
+            context = new Entities();
+            Students_List.Rows.Clear();
                 foreach (student s in context.students)
                 {
                     if (studentInCourse(s.ID, getCourseId(Combo_Course_name.Text.Substring(0, Combo_Course_name.Text.Length - 7))) && (s.ExtraTime == true || s.FormulaSheet==true || s.Laptop == true))
                         Students_List.Rows.Add(s.ID, s.ExtraTime || s.FormulaSheet || s.Laptop);
                 }
                 Students_List.Refresh();
-            }
         }
 
         private void Students_Not_Extra_List_Reload()
         {
-            using (Entities context = new Entities())
-            {
-                Students_List.Rows.Clear();
+            context = new Entities();
+            Students_List.Rows.Clear();
                 foreach (student s in context.students)
                 {
                     if (studentInCourse(s.ID, getCourseId(Combo_Course_name.Text.Substring(0, Combo_Course_name.Text.Length - 7))) && s.ExtraTime == false && s.FormulaSheet == false && s.Laptop == false)
                         Students_List.Rows.Add(s.ID, s.ExtraTime || s.FormulaSheet || s.Laptop);
-                }
                 Students_List.Refresh();
             }
+                
         }
 
 
@@ -180,12 +174,9 @@ namespace PRPJECT4NEW.Exams_Section
         /// <value>if student learn at specific course</value>  
         private bool studentInCourse(string StudID, int CourseID)
         {
-            using (Entities context = new Entities())
-            {
                 Student_Courses ss = context.Student_Courses.FirstOrDefault(s => s.stud_Id == StudID && s.course_id == CourseID);
                 if (ss != null)
                     return true;
-            }
             return false;
         }
 
@@ -195,14 +186,9 @@ namespace PRPJECT4NEW.Exams_Section
         /// <value>Course ID</value>  
         private int getCourseId(string name)
         {
-            using (Entities context = new Entities())
-            {
+            cours ss = context.courses.First(s => s.Course_name == name);
+            return ss.Course_id;
 
-                foreach (var s in context.courses)
-                    if (s.Course_name == name)
-                        return s.Course_id;
-            }
-            return 0;
         }
 
         /// <summary>
@@ -211,13 +197,9 @@ namespace PRPJECT4NEW.Exams_Section
         /// <value>Course Name</value>  
         private string getCourseName(int ID)
         {
-            using (Entities context = new Entities())
-            {
-                foreach (var s in context.courses)
-                    if (s.Course_id == ID)
-                        return s.Course_name;
-            }
-            return "Null";
+            cours ss = context.courses.First(s => s.Course_id == ID);
+            return ss.Course_name;
+
         }
 
 
@@ -228,13 +210,11 @@ namespace PRPJECT4NEW.Exams_Section
         /// <value>Next ID</value>
         private int nextID()
         {
+            context = new Entities();
             int max = 0;
-            using (Entities context = new Entities())
-            {
-                foreach (var s in context.Exams)
+                foreach (Exam s in context.Exams)
                     if (max < s.ID)
                         max = s.ID;
-            }
             return max+1;
         }
 
@@ -245,24 +225,17 @@ namespace PRPJECT4NEW.Exams_Section
         /// <value>if the diffrence bigger than 1</value>
         private string Getmail(string name)
         {
-            using (Entities context = new Entities())
-            {
-                foreach (var s in context.People)
+                foreach (Person s in context.Person)
                     if (s.F_name + " " + s.L_name == name)
                         return s.Email;
-            }
             return "NULL";
         }
 
         private int classCapacity(string className)
         {
-            using (Entities context = new Entities())
-            {
-                foreach (var s in context.Classes_SM2)
-                    if (s.Class_Id == className)
-                        return Convert.ToInt32(s.Capacity);
-            }
-            return 0;
+            Classes_SM2 ss = context.Classes_SM2.First(s => s.Class_Id == className);
+            return Convert.ToInt32(ss.Capacity);
+
         }
 
 
@@ -321,11 +294,13 @@ namespace PRPJECT4NEW.Exams_Section
         }
 
         private void Combo_Course_name_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Students_List.Rows.Clear();
-            Students_List_Reload();
+        {      
             Exams_Grid.Rows.Clear();
             Exam_List_Reload();
+            Students_List.Rows.Clear();
+            Students_List_Reload();
+            
+            
         }
 
         private void Combo_Class_ID_SelectedIndexChanged(object sender, EventArgs e)
@@ -354,11 +329,11 @@ namespace PRPJECT4NEW.Exams_Section
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+            context = new Entities();
+            int size = 0;
 
             if (Convert.ToBoolean(Students_List.Rows[e.RowIndex].Cells[2].Value) == false )
-            {
-                int size=0;
+            { 
                 foreach (DataGridViewRow row in Exams_Grid.Rows)
                     {
                     
@@ -369,7 +344,7 @@ namespace PRPJECT4NEW.Exams_Section
                     if (Convert.ToBoolean(row.Cells["Choose_Course"].Value) == true)
                     {
                         size = classCapacity(Convert.ToString(row.Cells["Class"].Value).Substring(0, 4)) - Convert.ToInt32(row.Cells["Students_Enrolled"].Value);
-                        if (size < cnt + 1)
+                        if (classCapacity(Convert.ToString(row.Cells["Class"].Value).Substring(0, 4)) == Convert.ToInt32(row.Cells["Students_Enrolled"].Value))
                         {
                             foreach (DataGridViewRow srow in Students_List.Rows)
                             {
@@ -383,7 +358,7 @@ namespace PRPJECT4NEW.Exams_Section
                                 rowy.Cells["Check"].Value = false;
                                 cnt = 0;
                             }
-                            MessageBox.Show("You cant add more students\nthe class is full.", "Warning!");
+                            MessageBox.Show("You cant add more students\nthe class is full.", "Error!");
                         }
                         if ( size == cnt + 1)
                         {
@@ -395,21 +370,12 @@ namespace PRPJECT4NEW.Exams_Section
                                 else
                                     srow.ReadOnly = false;
                             }
-
-                            //Students_List.Refresh();
-                            //Students_List.Rows[e.RowIndex].Cells[2].Value = false;
-                            //Students_List.Refresh();
                             MessageBox.Show("You choose max students\nif you want another student unselect box.", "Warning!");
                             cnt++;
-                            //Students_List.Rows[e.RowIndex].Cells[2].Value = true;
                             Students_List.Rows[e.RowIndex].Cells[2].ReadOnly = false;
-                            //MessageBox.Show(cnt.ToString());
-
                             return;
                         }
                     }
-                    
-                    
                 }
                 if (cnt < size)
                 {
@@ -421,9 +387,8 @@ namespace PRPJECT4NEW.Exams_Section
             }
             Students_List.Rows[e.RowIndex].Cells[2].Value = false;
             cnt--;
-            if (cnt == 4)
+            if (cnt == size-1)
             {
-
                 foreach (DataGridViewRow srow in Students_List.Rows)
                 {
 
@@ -452,29 +417,22 @@ namespace PRPJECT4NEW.Exams_Section
             foreach (DataGridViewRow row in Students_List.Rows)
             {
                 if (Convert.ToBoolean(row.Cells["Check"].Value) == true)
-                    using (Entities context = new Entities())
-                    {
-                        foreach (var s in context.Student_Courses)
+                        foreach (Student_Courses s in context.Student_Courses)
                         {
                             if (s.stud_Id.Contains(row.Cells["ID"].Value.ToString()))
                             {
                                 AddExamToStudents(row.Cells["ID"].Value.ToString(), ExamID);
                                 cnt_Add++;
                                 break;
-                            }
-                        }                         
+                            }                        
                     }
                 if (cnt == cnt_Add)
                     break;
             }
-
-            using (Entities context = new Entities())
-            {
-                Exam ss = context.Exams.FirstOrDefault(s => s.ID == ExamID);
+                Exam ss = context.Exams.First(s => s.ID == ExamID);
                 if (ss != null)
                     ss.Student_Enrolled = cnt_Add+ ss.Student_Enrolled;
                 context.SaveChanges();
-            }
 
             Exam_List_Reload();
             MessageBox.Show("Done!");
@@ -483,17 +441,16 @@ namespace PRPJECT4NEW.Exams_Section
 
         private bool AddExamToStudents(string StudID, int ExamID)
         {
-            using (Entities contexts = new Entities())
-            {
-                double a = courseByExam(ExamID);
-                Student_Courses ss = contexts.Student_Courses.FirstOrDefault(s => s.stud_Id == StudID && s.course_id == a && s.Type==1);
+            context = new Entities();
+            double a = courseByExam(ExamID);
+                Student_Courses ss = context.Student_Courses.FirstOrDefault(s => s.stud_Id == StudID && s.course_id == a && s.Type==1);
                 switch (returnDueIn(ExamID))
                 {
                     case 1:
                         if(ss.Exam1_ID==null)
                         {
                             ss.Exam1_ID = ExamID;
-                            contexts.SaveChanges();
+                            context.SaveChanges();
                             return true;
                         }
                         else
@@ -503,27 +460,24 @@ namespace PRPJECT4NEW.Exams_Section
                         }
                     case 2:
                             ss.Exam2_ID = ExamID;
-                            contexts.SaveChanges();
+                            context.SaveChanges();
                             return true;
                     case 3:
                             ss.Exam3_ID = ExamID;
-                            contexts.SaveChanges();
+                            context.SaveChanges();
                             return true;
                 }
-            }
             return false;
         }
 
         private double courseByExam(int ExamID)
         {
 
-            using (Entities context = new Entities())
-            {
-                Exam ss = context.Exams.FirstOrDefault(s => s.ID == ExamID);
+            
+                Exam ss = context.Exams.First(s => s.ID == ExamID);
                 if (ss != null)
                     return ss.Course_ID;
 
-            }
             return 0.0;
 
         }
@@ -568,13 +522,10 @@ namespace PRPJECT4NEW.Exams_Section
         //    return false;
         //}
         private int returnDueIn(int ExamID)
-        {
-            using (Entities context = new Entities())
-            {
-                Exam ss = context.Exams.FirstOrDefault(s => s.ID == ExamID);
+        {           
+                Exam ss = context.Exams.First(s => s.ID == ExamID);
                 if (ss != null)
                     return Convert.ToInt32(ss.Due_in);
-            }
            return 0;
         }
 

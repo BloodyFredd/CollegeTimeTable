@@ -33,7 +33,7 @@ namespace PRPJECT4NEW
         public virtual DbSet<DF_requests> DF_requests { get; set; }
         public virtual DbSet<Exam> Exams { get; set; }
         public virtual DbSet<Lecture_Course> Lecture_Course { get; set; }
-        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<Person> Person { get; set; }
         public virtual DbSet<Scholarship> Scholarships { get; set; }
         public virtual DbSet<Student_Courses> Student_Courses { get; set; }
         public virtual DbSet<student> students { get; set; }

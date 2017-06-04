@@ -44,10 +44,10 @@ namespace PRPJECT4NEW
                     //Chech ID + Password existance
                     EncryptPass = Encrypt.base64Encode(txtpassword.Text);
                    // MessageBox.Show(EncryptPass);
-                    if (context.People.Any(p => p.ID == UserID && p.Password == EncryptPass))
+                    if (context.Person.Any(p => p.ID == UserID && p.Password == EncryptPass))
                     {
                         //Utility.User.ID = string.Copy(Utility.User.ID.ToString());
-                        Utility.User = context.People.SingleOrDefault(p => p.ID == UserID);
+                        Utility.User = context.Person.SingleOrDefault(p => p.ID == UserID);
                         this.Hide();
                         LoadMenu();
 

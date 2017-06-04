@@ -51,7 +51,7 @@ namespace PRPJECT4NEW.Exams_Section
         {
             using (Entities context = new Entities())
             {
-                foreach (var c in context.People)
+                foreach (var c in context.Person)
                     if(c.Permission == "Supervisor")
                     {
                         Super1_box.Items.Add(c.F_name + " " + c.L_name);
@@ -397,7 +397,7 @@ namespace PRPJECT4NEW.Exams_Section
             using (Entities context = new Entities())
             {
 
-                foreach (var s in context.People)
+                foreach (var s in context.Person)
                     if (s.F_name+" " +s.L_name == name)
                         return s.ID;
             }
@@ -439,7 +439,7 @@ namespace PRPJECT4NEW.Exams_Section
         {
             using (Entities context = new Entities())
             {
-                foreach (var s in context.People)
+                foreach (var s in context.Person)
                     if (s.F_name + " " + s.L_name == name)
                         return s.Email;
             }

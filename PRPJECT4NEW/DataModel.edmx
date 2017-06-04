@@ -265,7 +265,7 @@
           <EntitySet Name="DF_requests" EntityType="MazalModel.DF_requests" />
           <EntitySet Name="Exams" EntityType="MazalModel.Exam" />
           <EntitySet Name="Lecture_Course" EntityType="MazalModel.Lecture_Course" />
-          <EntitySet Name="People" EntityType="MazalModel.Person" />
+          <EntitySet Name="Person" EntityType="MazalModel.Person" />
           <EntitySet Name="Scholarships" EntityType="MazalModel.Scholarship" />
           <EntitySet Name="Student_Courses" EntityType="MazalModel.Student_Courses" />
           <EntitySet Name="students" EntityType="MazalModel.student" />
@@ -647,7 +647,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="People">
+          <EntitySetMapping Name="Person">
             <EntityTypeMapping TypeName="MazalModel.Person">
               <MappingFragment StoreEntitySet="Person">
                 <ScalarProperty Name="Permission" ColumnName="Permission" />

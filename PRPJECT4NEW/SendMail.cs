@@ -58,7 +58,7 @@ namespace PRPJECT4NEW
         {
             using (Entities context = new Entities())
             {
-                foreach (var s in context.People)
+                foreach (var s in context.Person)
                     if (s.F_name + " " + s.L_name == name)
                         return s.Email;
             }
@@ -69,7 +69,7 @@ namespace PRPJECT4NEW
         {
             using (Entities context = new Entities())
             {
-                foreach (var s in context.People)
+                foreach (var s in context.Person)
                     if (s.ID == ID)
                         return s.Email;
             }
