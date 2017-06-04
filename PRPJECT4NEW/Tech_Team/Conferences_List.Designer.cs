@@ -41,6 +41,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -68,6 +69,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 775);
             this.panel1.Name = "panel1";
@@ -79,9 +81,6 @@
             this.Conferences_Grid.AllowUserToAddRows = false;
             this.Conferences_Grid.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Empty;
             this.Conferences_Grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Conferences_Grid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.Conferences_Grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -99,10 +98,8 @@
             this.Conferences_Grid.Location = new System.Drawing.Point(0, 112);
             this.Conferences_Grid.Name = "Conferences_Grid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Conferences_Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;

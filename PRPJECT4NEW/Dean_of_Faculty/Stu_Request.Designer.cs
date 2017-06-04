@@ -66,22 +66,26 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 181);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1055, 349);
+            this.dataGridView1.Size = new System.Drawing.Size(1846, 633);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Approve_btn
             // 
             this.Approve_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Approve_btn.FlatAppearance.BorderSize = 0;
+            this.Approve_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Approve_btn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Approve_btn.ForeColor = System.Drawing.Color.White;
-            this.Approve_btn.Location = new System.Drawing.Point(39, 20);
+            this.Approve_btn.Location = new System.Drawing.Point(68, 36);
+            this.Approve_btn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Approve_btn.Name = "Approve_btn";
-            this.Approve_btn.Size = new System.Drawing.Size(129, 68);
+            this.Approve_btn.Size = new System.Drawing.Size(226, 71);
             this.Approve_btn.TabIndex = 1;
             this.Approve_btn.Text = "Approve";
             this.Approve_btn.UseVisualStyleBackColor = false;
@@ -90,11 +94,14 @@
             // Reject_btn
             // 
             this.Reject_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Reject_btn.FlatAppearance.BorderSize = 0;
+            this.Reject_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reject_btn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reject_btn.ForeColor = System.Drawing.Color.White;
-            this.Reject_btn.Location = new System.Drawing.Point(195, 20);
+            this.Reject_btn.Location = new System.Drawing.Point(341, 36);
+            this.Reject_btn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Reject_btn.Name = "Reject_btn";
-            this.Reject_btn.Size = new System.Drawing.Size(126, 68);
+            this.Reject_btn.Size = new System.Drawing.Size(220, 71);
             this.Reject_btn.TabIndex = 2;
             this.Reject_btn.Text = "Reject";
             this.Reject_btn.UseVisualStyleBackColor = false;
@@ -105,8 +112,9 @@
             this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1055, 100);
+            this.panel1.Size = new System.Drawing.Size(1846, 181);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -115,19 +123,21 @@
             this.panel2.Controls.Add(this.Reject_btn);
             this.panel2.Controls.Add(this.Approve_btn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 449);
+            this.panel2.Location = new System.Drawing.Point(0, 814);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1055, 100);
+            this.panel2.Size = new System.Drawing.Size(1846, 181);
             this.panel2.TabIndex = 4;
             // 
             // Stu_Request
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 549);
+            this.ClientSize = new System.Drawing.Size(1846, 995);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Stu_Request";
             this.Text = "Stu_Request";
             this.Load += new System.EventHandler(this.Stu_Request_Load);

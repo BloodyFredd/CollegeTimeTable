@@ -94,7 +94,7 @@ namespace PRPJECT4NEW.Tech_Team
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Move to login panel");
+            
             this.Close();
         }
 

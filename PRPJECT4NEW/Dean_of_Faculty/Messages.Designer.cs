@@ -72,20 +72,24 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 111);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1157, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(2025, 634);
             this.dataGridView1.TabIndex = 0;
             // 
             // Add_New_Message_btn
             // 
             this.Add_New_Message_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Add_New_Message_btn.FlatAppearance.BorderSize = 0;
+            this.Add_New_Message_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add_New_Message_btn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_New_Message_btn.ForeColor = System.Drawing.Color.White;
-            this.Add_New_Message_btn.Location = new System.Drawing.Point(599, 86);
+            this.Add_New_Message_btn.Location = new System.Drawing.Point(1048, 156);
+            this.Add_New_Message_btn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Add_New_Message_btn.Name = "Add_New_Message_btn";
-            this.Add_New_Message_btn.Size = new System.Drawing.Size(195, 71);
+            this.Add_New_Message_btn.Size = new System.Drawing.Size(341, 129);
             this.Add_New_Message_btn.TabIndex = 1;
             this.Add_New_Message_btn.Text = "Add New Message";
             this.Add_New_Message_btn.UseVisualStyleBackColor = false;
@@ -94,11 +98,14 @@
             // Delete_Message_btn
             // 
             this.Delete_Message_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Delete_Message_btn.FlatAppearance.BorderSize = 0;
+            this.Delete_Message_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete_Message_btn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Delete_Message_btn.ForeColor = System.Drawing.Color.White;
-            this.Delete_Message_btn.Location = new System.Drawing.Point(856, 86);
+            this.Delete_Message_btn.Location = new System.Drawing.Point(1498, 156);
+            this.Delete_Message_btn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Delete_Message_btn.Name = "Delete_Message_btn";
-            this.Delete_Message_btn.Size = new System.Drawing.Size(176, 71);
+            this.Delete_Message_btn.Size = new System.Drawing.Size(308, 129);
             this.Delete_Message_btn.TabIndex = 2;
             this.Delete_Message_btn.Text = "Delete Message";
             this.Delete_Message_btn.UseVisualStyleBackColor = false;
@@ -108,18 +115,20 @@
             // 
             this.Intended_to_combo.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Intended_to_combo.FormattingEnabled = true;
-            this.Intended_to_combo.Location = new System.Drawing.Point(145, 34);
+            this.Intended_to_combo.Location = new System.Drawing.Point(254, 62);
+            this.Intended_to_combo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Intended_to_combo.Name = "Intended_to_combo";
-            this.Intended_to_combo.Size = new System.Drawing.Size(121, 29);
+            this.Intended_to_combo.Size = new System.Drawing.Size(209, 45);
             this.Intended_to_combo.TabIndex = 3;
             // 
             // Intended_to_lbl
             // 
             this.Intended_to_lbl.AutoSize = true;
             this.Intended_to_lbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Intended_to_lbl.Location = new System.Drawing.Point(23, 34);
+            this.Intended_to_lbl.Location = new System.Drawing.Point(40, 62);
+            this.Intended_to_lbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Intended_to_lbl.Name = "Intended_to_lbl";
-            this.Intended_to_lbl.Size = new System.Drawing.Size(116, 21);
+            this.Intended_to_lbl.Size = new System.Drawing.Size(203, 37);
             this.Intended_to_lbl.TabIndex = 4;
             this.Intended_to_lbl.Text = "Intended to:";
             // 
@@ -127,9 +136,10 @@
             // 
             this.Subject_lbl.AutoSize = true;
             this.Subject_lbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subject_lbl.Location = new System.Drawing.Point(282, 37);
+            this.Subject_lbl.Location = new System.Drawing.Point(494, 67);
+            this.Subject_lbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Subject_lbl.Name = "Subject_lbl";
-            this.Subject_lbl.Size = new System.Drawing.Size(77, 21);
+            this.Subject_lbl.Size = new System.Drawing.Size(138, 37);
             this.Subject_lbl.TabIndex = 5;
             this.Subject_lbl.Text = "Subject:";
             // 
@@ -137,27 +147,30 @@
             // 
             this.Message_lbl.AutoSize = true;
             this.Message_lbl.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Message_lbl.Location = new System.Drawing.Point(23, 86);
+            this.Message_lbl.Location = new System.Drawing.Point(40, 156);
+            this.Message_lbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.Message_lbl.Name = "Message_lbl";
-            this.Message_lbl.Size = new System.Drawing.Size(91, 21);
+            this.Message_lbl.Size = new System.Drawing.Size(161, 37);
             this.Message_lbl.TabIndex = 6;
             this.Message_lbl.Text = "Message:";
             // 
             // Subject_textbox
             // 
             this.Subject_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Subject_textbox.Location = new System.Drawing.Point(369, 35);
+            this.Subject_textbox.Location = new System.Drawing.Point(646, 63);
+            this.Subject_textbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Subject_textbox.Name = "Subject_textbox";
-            this.Subject_textbox.Size = new System.Drawing.Size(154, 28);
+            this.Subject_textbox.Size = new System.Drawing.Size(266, 45);
             this.Subject_textbox.TabIndex = 8;
             // 
             // Message_textbox
             // 
             this.Message_textbox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Message_textbox.Location = new System.Drawing.Point(137, 86);
+            this.Message_textbox.Location = new System.Drawing.Point(240, 156);
+            this.Message_textbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Message_textbox.Multiline = true;
             this.Message_textbox.Name = "Message_textbox";
-            this.Message_textbox.Size = new System.Drawing.Size(386, 161);
+            this.Message_textbox.Size = new System.Drawing.Size(672, 289);
             this.Message_textbox.TabIndex = 9;
             // 
             // panel1
@@ -165,8 +178,9 @@
             this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1157, 61);
+            this.panel1.Size = new System.Drawing.Size(2025, 111);
             this.panel1.TabIndex = 10;
             // 
             // panel2
@@ -181,19 +195,21 @@
             this.panel2.Controls.Add(this.Subject_lbl);
             this.panel2.Controls.Add(this.Intended_to_lbl);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 411);
+            this.panel2.Location = new System.Drawing.Point(0, 745);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1157, 259);
+            this.panel2.Size = new System.Drawing.Size(2025, 469);
             this.panel2.TabIndex = 11;
             // 
             // Messages
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 670);
+            this.ClientSize = new System.Drawing.Size(2025, 1214);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Messages";
             this.Text = "Messages";
             this.Load += new System.EventHandler(this.Messages_Load);

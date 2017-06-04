@@ -84,7 +84,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Move to login panel");
+            
             this.Close();
         }
 
