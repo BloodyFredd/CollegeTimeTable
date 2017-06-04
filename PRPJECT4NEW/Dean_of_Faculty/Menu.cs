@@ -46,7 +46,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         private void Scholarships_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Scholarships");
+            //MessageBox.Show("Scholarships");
 
             ScholarshipForm frm = new ScholarshipForm("Matan", 123456);
             frm.TopLevel = false;
@@ -72,7 +72,7 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
         private void Special_Exams_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Special Exams");
+            //MessageBox.Show("Special Exams");
             Special_date frm = new Special_date();
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;
