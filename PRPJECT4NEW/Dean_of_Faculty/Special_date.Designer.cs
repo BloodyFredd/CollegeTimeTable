@@ -39,6 +39,7 @@
             this.Status_lable = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.studentspecialExamBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentspecialExamBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -50,9 +51,6 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -86,7 +84,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(792, 442);
+            this.dataGridView1.Size = new System.Drawing.Size(792, 342);
             this.dataGridView1.TabIndex = 0;
             // 
             // special_date_combobox
@@ -110,6 +108,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -120,15 +119,25 @@
             // 
             this.studentspecialExamBindingSource.DataSource = typeof(PRPJECT4NEW.Student_special_Exam);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 436);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(792, 100);
+            this.panel1.TabIndex = 4;
+            // 
             // Special_date
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 536);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Status_lable);
             this.Controls.Add(this.special_date_combobox);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel1);
             this.Name = "Special_date";
             this.Text = "Special_date";
             this.Load += new System.EventHandler(this.Special_date_Load);
@@ -146,5 +155,6 @@
         private System.Windows.Forms.ComboBox special_date_combobox;
         private System.Windows.Forms.Label Status_lable;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

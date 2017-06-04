@@ -187,11 +187,13 @@
           <Key>
             <PropertyRef Name="ID" />
             <PropertyRef Name="Subject" />
+            <PropertyRef Name="Course_ID" />
           </Key>
           <Property Name="ID" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Subject" Type="nchar" MaxLength="30" Nullable="false" />
           <Property Name="Message" Type="text" />
           <Property Name="Status" Type="text" Nullable="false" />
+          <Property Name="Course_ID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Student_special_Exam">
           <Key>
@@ -271,8 +273,8 @@
           <EntitySet Name="students" EntityType="MazalModel.student" />
           <EntitySet Name="sysdiagrams" EntityType="MazalModel.sysdiagram" />
           <EntitySet Name="Teaching_Stuff" EntityType="MazalModel.Teaching_Stuff" />
-          <EntitySet Name="student_request" EntityType="MazalModel.student_request" />
           <EntitySet Name="Student_special_Exam" EntityType="MazalModel.Student_special_Exam" />
+          <EntitySet Name="student_request" EntityType="MazalModel.student_request" />
         </EntityContainer>
         <EntityType Name="Classes_SM1">
           <Key>
@@ -483,16 +485,6 @@
           <Property Name="Course_id" Type="Int32" Nullable="false" />
           <Property Name="Office" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
-        <EntityType Name="student_request">
-          <Key>
-            <PropertyRef Name="ID" />
-            <PropertyRef Name="Subject" />
-          </Key>
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Subject" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
-          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="Student_special_Exam">
           <Key>
             <PropertyRef Name="ID" />
@@ -502,6 +494,18 @@
           <Property Name="Course_Serial" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="student_request">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Subject" />
+            <PropertyRef Name="Course_ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Course_ID" Type="Int32" Nullable="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -724,22 +728,23 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="student_request">
-            <EntityTypeMapping TypeName="MazalModel.student_request">
-              <MappingFragment StoreEntitySet="student_request">
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Message" ColumnName="Message" />
-                <ScalarProperty Name="Subject" ColumnName="Subject" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Student_special_Exam">
             <EntityTypeMapping TypeName="MazalModel.Student_special_Exam">
               <MappingFragment StoreEntitySet="Student_special_Exam">
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Course_Serial" ColumnName="Course_Serial" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="student_request">
+            <EntityTypeMapping TypeName="MazalModel.student_request">
+              <MappingFragment StoreEntitySet="student_request">
+                <ScalarProperty Name="Course_ID" ColumnName="Course_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
