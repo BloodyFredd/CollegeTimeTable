@@ -41,7 +41,6 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Logout_Button = new System.Windows.Forms.Button();
-            this.Supervisor_Tut_Button = new System.Windows.Forms.Button();
             this.Special_Stud_Button = new System.Windows.Forms.Button();
             this.Register_Students_Button = new System.Windows.Forms.Button();
             this.Special_Exams_Button = new System.Windows.Forms.Button();
@@ -179,7 +178,6 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
             this.panel2.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern;
             this.panel2.Controls.Add(this.Logout_Button);
-            this.panel2.Controls.Add(this.Supervisor_Tut_Button);
             this.panel2.Controls.Add(this.Special_Stud_Button);
             this.panel2.Controls.Add(this.Register_Students_Button);
             this.panel2.Controls.Add(this.Special_Exams_Button);
@@ -208,7 +206,7 @@
             this.Logout_Button.ForeColor = System.Drawing.Color.White;
             this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
             this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_Button.Location = new System.Drawing.Point(0, 728);
+            this.Logout_Button.Location = new System.Drawing.Point(0, 637);
             this.Logout_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Logout_Button.Name = "Logout_Button";
             this.Logout_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
@@ -219,31 +217,6 @@
             this.Logout_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Logout_Button.UseVisualStyleBackColor = false;
             this.Logout_Button.Click += new System.EventHandler(this.Logout_Click);
-            // 
-            // Supervisor_Tut_Button
-            // 
-            this.Supervisor_Tut_Button.AccessibleName = "Supervisor_Tut_Button";
-            this.Supervisor_Tut_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            this.Supervisor_Tut_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Supervisor_Tut_Button.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Supervisor_Tut_Button.FlatAppearance.BorderSize = 0;
-            this.Supervisor_Tut_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
-            this.Supervisor_Tut_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Supervisor_Tut_Button.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Supervisor_Tut_Button.ForeColor = System.Drawing.Color.White;
-            this.Supervisor_Tut_Button.Image = ((System.Drawing.Image)(resources.GetObject("Supervisor_Tut_Button.Image")));
-            this.Supervisor_Tut_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Supervisor_Tut_Button.Location = new System.Drawing.Point(0, 637);
-            this.Supervisor_Tut_Button.Margin = new System.Windows.Forms.Padding(2);
-            this.Supervisor_Tut_Button.Name = "Supervisor_Tut_Button";
-            this.Supervisor_Tut_Button.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
-            this.Supervisor_Tut_Button.Size = new System.Drawing.Size(509, 91);
-            this.Supervisor_Tut_Button.TabIndex = 7;
-            this.Supervisor_Tut_Button.Text = " Supervisor Tutorial";
-            this.Supervisor_Tut_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Supervisor_Tut_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Supervisor_Tut_Button.UseVisualStyleBackColor = false;
-            this.Supervisor_Tut_Button.Click += new System.EventHandler(this.Supervisor_Tut_Button_Click);
             // 
             // Special_Stud_Button
             // 
@@ -473,7 +446,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Logout_Button;
         private System.Windows.Forms.Button Special_Exams_Button;
-        private System.Windows.Forms.Button Supervisor_Tut_Button;
         private System.Windows.Forms.Button Special_Stud_Button;
         private System.Windows.Forms.Button Available_Classes_Button;
         private System.Windows.Forms.Button Supervisors_List_Button;
