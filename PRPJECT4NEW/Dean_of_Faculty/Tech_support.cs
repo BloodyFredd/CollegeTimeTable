@@ -96,11 +96,13 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                 {
                     if (s.Intended_to.ToString().Contains("Tech_Team"))
                     {
-                        dataGridView1.Rows.Add(s.Date, s.Intended_to, s.Subject, s.Message, s.Status);
+                        dataGridView1.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
                     }
                 }
 
                 dataGridView1.Refresh();
+                subject_txtbox.Clear();
+                message_textbox.Clear();
                 return true;
 
             }
