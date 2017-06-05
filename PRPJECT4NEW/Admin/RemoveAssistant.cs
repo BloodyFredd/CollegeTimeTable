@@ -64,47 +64,5 @@ namespace PRPJECT4NEW.Admin
         {
 
         }
-
-        private void My_Lectures_Click(object sender, EventArgs e)
-        {
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-
-            SqlCommand cmd = new SqlCommand("select ID,F_name,L_name,Telephone,Email from person where Permission='Teaching_Assistant' OR Permission='Lecturer' ", sqlcon);
-
-
-            try
-            {
-
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
-
-                //Paint headers
-                StudentsReport.EnableHeadersVisualStyles = false;
-                StudentsReport.GridColor = Utility.HeaderBackColor;
-                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
-                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-                StudentsReport.AutoResizeColumns();
-                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-
-
-                bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
-                sda.Update(dbdataset);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
