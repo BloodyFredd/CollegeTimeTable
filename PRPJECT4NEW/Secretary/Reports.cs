@@ -86,6 +86,7 @@ namespace PRPJECT4NEW.Secretary
 
         private void button2_Click(object sender, EventArgs e)
         {
+           
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
             try
@@ -282,6 +283,11 @@ namespace PRPJECT4NEW.Secretary
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CourseID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

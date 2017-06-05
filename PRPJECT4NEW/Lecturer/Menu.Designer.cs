@@ -46,6 +46,7 @@
             this.Make_Factor_Button = new System.Windows.Forms.Button();
             this.Add_Lecture_Button = new System.Windows.Forms.Button();
             this.Add_Assistants_Exam_Button = new System.Windows.Forms.Button();
+            this.Exams_Assignment_Button = new System.Windows.Forms.Button();
             this.Reports_button = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
@@ -174,6 +175,7 @@
             this.panel2.Controls.Add(this.Make_Factor_Button);
             this.panel2.Controls.Add(this.Add_Lecture_Button);
             this.panel2.Controls.Add(this.Add_Assistants_Exam_Button);
+            this.panel2.Controls.Add(this.Exams_Assignment_Button);
             this.panel2.Controls.Add(this.Reports_button);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 57);
@@ -195,7 +197,7 @@
             this.Logout_Button.ForeColor = System.Drawing.Color.White;
             this.Logout_Button.Image = ((System.Drawing.Image)(resources.GetObject("Logout_Button.Image")));
             this.Logout_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Logout_Button.Location = new System.Drawing.Point(0, 311);
+            this.Logout_Button.Location = new System.Drawing.Point(0, 361);
             this.Logout_Button.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Logout_Button.Name = "Logout_Button";
             this.Logout_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -220,7 +222,7 @@
             this.AddNewLecture.ForeColor = System.Drawing.Color.White;
             this.AddNewLecture.Image = ((System.Drawing.Image)(resources.GetObject("AddNewLecture.Image")));
             this.AddNewLecture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddNewLecture.Location = new System.Drawing.Point(0, 261);
+            this.AddNewLecture.Location = new System.Drawing.Point(0, 311);
             this.AddNewLecture.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.AddNewLecture.Name = "AddNewLecture";
             this.AddNewLecture.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -246,7 +248,7 @@
             this.Add_office_hours_Button.ForeColor = System.Drawing.Color.White;
             this.Add_office_hours_Button.Image = ((System.Drawing.Image)(resources.GetObject("Add_office_hours_Button.Image")));
             this.Add_office_hours_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Add_office_hours_Button.Location = new System.Drawing.Point(0, 212);
+            this.Add_office_hours_Button.Location = new System.Drawing.Point(0, 262);
             this.Add_office_hours_Button.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Add_office_hours_Button.Name = "Add_office_hours_Button";
             this.Add_office_hours_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -271,7 +273,7 @@
             this.Make_Factor_Button.ForeColor = System.Drawing.Color.White;
             this.Make_Factor_Button.Image = ((System.Drawing.Image)(resources.GetObject("Make_Factor_Button.Image")));
             this.Make_Factor_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Make_Factor_Button.Location = new System.Drawing.Point(0, 162);
+            this.Make_Factor_Button.Location = new System.Drawing.Point(0, 212);
             this.Make_Factor_Button.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Make_Factor_Button.Name = "Make_Factor_Button";
             this.Make_Factor_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -296,7 +298,7 @@
             this.Add_Lecture_Button.ForeColor = System.Drawing.Color.Transparent;
             this.Add_Lecture_Button.Image = ((System.Drawing.Image)(resources.GetObject("Add_Lecture_Button.Image")));
             this.Add_Lecture_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Add_Lecture_Button.Location = new System.Drawing.Point(0, 112);
+            this.Add_Lecture_Button.Location = new System.Drawing.Point(0, 162);
             this.Add_Lecture_Button.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Add_Lecture_Button.Name = "Add_Lecture_Button";
             this.Add_Lecture_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -321,7 +323,7 @@
             this.Add_Assistants_Exam_Button.ForeColor = System.Drawing.Color.White;
             this.Add_Assistants_Exam_Button.Image = ((System.Drawing.Image)(resources.GetObject("Add_Assistants_Exam_Button.Image")));
             this.Add_Assistants_Exam_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Add_Assistants_Exam_Button.Location = new System.Drawing.Point(0, 50);
+            this.Add_Assistants_Exam_Button.Location = new System.Drawing.Point(0, 100);
             this.Add_Assistants_Exam_Button.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Add_Assistants_Exam_Button.Name = "Add_Assistants_Exam_Button";
             this.Add_Assistants_Exam_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
@@ -332,6 +334,31 @@
             this.Add_Assistants_Exam_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Add_Assistants_Exam_Button.UseVisualStyleBackColor = false;
             this.Add_Assistants_Exam_Button.Click += new System.EventHandler(this.Supervisors_List_Button_Click);
+            // 
+            // Exams_Assignment_Button
+            // 
+            this.Exams_Assignment_Button.AccessibleName = "Exams_Assignment_Button";
+            this.Exams_Assignment_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Exams_Assignment_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Exams_Assignment_Button.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Exams_Assignment_Button.FlatAppearance.BorderSize = 0;
+            this.Exams_Assignment_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(79)))), ((int)(((byte)(158)))));
+            this.Exams_Assignment_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Exams_Assignment_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exams_Assignment_Button.ForeColor = System.Drawing.Color.White;
+            this.Exams_Assignment_Button.Image = ((System.Drawing.Image)(resources.GetObject("Exams_Assignment_Button.Image")));
+            this.Exams_Assignment_Button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Exams_Assignment_Button.Location = new System.Drawing.Point(0, 50);
+            this.Exams_Assignment_Button.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.Exams_Assignment_Button.Name = "Exams_Assignment_Button";
+            this.Exams_Assignment_Button.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.Exams_Assignment_Button.Size = new System.Drawing.Size(291, 50);
+            this.Exams_Assignment_Button.TabIndex = 2;
+            this.Exams_Assignment_Button.Text = " Exams Assignment(SPRINT 4)";
+            this.Exams_Assignment_Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Exams_Assignment_Button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Exams_Assignment_Button.UseVisualStyleBackColor = false;
+            this.Exams_Assignment_Button.Click += new System.EventHandler(this.Exams_Assignment_Button_Click);
             // 
             // Reports_button
             // 
@@ -408,6 +435,8 @@
         private System.Windows.Forms.Button Make_Factor_Button;
         private System.Windows.Forms.Button Add_Lecture_Button;
         private System.Windows.Forms.Button Add_Assistants_Exam_Button;
+       // private System.Windows.Forms.Button Add_Grade_Button;
+        private System.Windows.Forms.Button Exams_Assignment_Button;
         private System.Windows.Forms.Button Reports_button;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;

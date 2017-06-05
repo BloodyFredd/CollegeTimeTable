@@ -95,7 +95,7 @@ namespace PRPJECT4NEW.Admin
         {
             // close application
             System.Windows.Forms.Application.Exit();
-            //this.Close();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -139,7 +139,7 @@ namespace PRPJECT4NEW.Admin
 
         private void Merge_Auditorium_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Merge Auditorium");
+           // MessageBox.Show("Merge Auditorium");
         }
 
         private void Logout_Button_Click_1(object sender, EventArgs e)
@@ -173,13 +173,25 @@ namespace PRPJECT4NEW.Admin
 
         private void Remove_student_Click(object sender, EventArgs e)
         {
-            RemoveStudent remove = new RemoveStudent();
-            remove.Show();
+            RemoveStudent form2 = new RemoveStudent();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
+            form2.Show();
+
+
         }
 
         private void Merge_Auditorium_button_Click_1(object sender, EventArgs e)
         {
             MergeAuditorium form2 = new MergeAuditorium();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
             form2.Show();
         }
 
@@ -196,8 +208,13 @@ namespace PRPJECT4NEW.Admin
 
         private void Remove_Teaching_Assistant_Button_Click_1(object sender, EventArgs e)
         {
-            RemoveAssistant remove = new RemoveAssistant();
-            remove.Show();
+            RemoveAssistant form2 = new RemoveAssistant();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
+            form2.Show();
         }
 
         private void Cancel_Lectures_Click_1(object sender, EventArgs e)
@@ -213,12 +230,22 @@ namespace PRPJECT4NEW.Admin
         private void Sign_student_course_Click(object sender, EventArgs e)
         {
             SignStudent form2 = new SignStudent();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
             form2.Show();
         }
 
         private void Exemption_Student_Button_Click(object sender, EventArgs e)
         {
             StudentExemption form2 = new StudentExemption();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
             form2.Show();
         }
 

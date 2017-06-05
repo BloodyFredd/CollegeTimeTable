@@ -40,39 +40,7 @@ namespace PRPJECT4NEW.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-            try
-            {
-                SqlCommand cmd = new SqlCommand("select stud_Id, final_grade from Student_Courses where final_grade <= 56 and course_id='" + CourseID.Text + "'", sqlcon);
-                StudentsReport.Visible = true;
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
-
-                bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
-                sda.Update(dbdataset);
-            }
-            catch (SqlException ex)
-            {
-                //this.Close();
-                MessageBox.Show("Error selecting course id, try again!\n"+ex.ToString());
-                CourseID.Text = "";
-                Reports form2 = new Reports();
-                form2.TopLevel = false;
-                form2.FormBorderStyle = FormBorderStyle.None;
-                form2.WindowState = FormWindowState.Maximized;
-                this.Controls.Add(form2);
-                this.Visible = true;
-                form2.Show();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
@@ -87,61 +55,7 @@ namespace PRPJECT4NEW.Admin
 
         private void Available_Classes_Click(object sender, EventArgs e)
         {
-            string str = null;
-
-
-            try
-            {
-                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-                this.sqlcon = new SqlConnection(connetionString);
-                SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
-                if (toolStripComboBox4.Text.Equals("") && !toolStripComboBox3.Text.Equals(""))
-                {
-                    str = toolStripComboBox3.Text;
-                    //MessageBox.Show(str);
-                    cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
-                    StudentsReport.Visible = true;
-                }
-                else if (toolStripComboBox3.Text.Equals("") && !toolStripComboBox4.Text.Equals(""))
-                {
-                    str = toolStripComboBox4.Text;
-                    //MessageBox.Show(str);
-                    cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
-                    StudentsReport.Visible = true;
-                }
-                else
-                {
-                    //this.Close();
-                    toolStripComboBox3.Text = "";
-                    toolStripComboBox4.Text = "";
-                    MessageBox.Show("Error selecting dates, try again!");
-                    //Reports form2 = new Reports();
-                    //form2.TopLevel = false;
-                    //form2.FormBorderStyle = FormBorderStyle.None;
-                    //form2.WindowState = FormWindowState.Maximized;
-                    //this.Controls.Add(form2);
-                    //this.Visible = true;
-                    //form2.Show();
-
-                }
-
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
-
-                bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
-                sda.Update(dbdataset);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            Print.Visible = true;
-            Application.DoEvents();
-
+           
         }
 
         private void Semester_Click(object sender, EventArgs e)
@@ -177,6 +91,141 @@ namespace PRPJECT4NEW.Admin
         private void All_Person_Button_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ExcellentStudents_Click(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            string str = null;
+
+
+            try
+            {
+                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+                this.sqlcon = new SqlConnection(connetionString);
+                SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
+                if (toolStripComboBox3.Text.Equals("") && !toolStripComboBox4.Text.Equals(""))
+                {
+                    str = toolStripComboBox4.Text;
+                    //MessageBox.Show(str);
+                    cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
+                    StudentsReport.Visible = true;
+                }
+                else if (toolStripComboBox4.Text.Equals("") && !toolStripComboBox3.Text.Equals(""))
+                {
+                    str = toolStripComboBox3.Text;
+                    //MessageBox.Show(str);
+                    cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
+                    StudentsReport.Visible = true;
+                }
+                else
+                {
+                    throw new ArgumentException("Error selecting dates,try again!");
+                }
+
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+
+                int i = 0;
+                for (int j = 0; j <= 9; j++)
+                {
+                    paintCells2(i);
+                    i++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                toolStripComboBox4.Text = "";
+                toolStripComboBox3.Text = "";
+            }
+            Print.Visible = true;
+            Application.DoEvents();
+
+        }
+
+        private void paintCells2(int i)
+        {
+            for (int j = 5; j < 18; j++)
+            {
+                if (Convert.ToInt32(StudentsReport.Rows[i].Cells[j].Value) == 1)
+                {
+                    StudentsReport.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                    StudentsReport.Rows[i].Cells[j].Style.ForeColor = Color.Red;
+                }
+
+                else
+                {
+                    StudentsReport.Rows[i].Cells[j].Style.BackColor = Color.LawnGreen;
+                    StudentsReport.Rows[i].Cells[j].Style.ForeColor = Color.LawnGreen;
+                }
+
+
+            }
+
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void All_Person_Button_Click_1(object sender, EventArgs e)
+        {
+
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
             try
@@ -189,33 +238,16 @@ namespace PRPJECT4NEW.Admin
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
 
-                bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
-                sda.Update(dbdataset);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void ExcellentStudents_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-                this.sqlcon = new SqlConnection(connetionString);
-                this.sqlcon.Open();
-                SqlCommand cmd = new SqlCommand("select AVG(final_grade) AS Average,stud_ID from Student_Courses GROUP BY stud_Id HAVING AVG(final_grade) >=85", sqlcon);
-                StudentsReport.Visible = true; StudentsReport.Visible = true;
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 
 
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
 
                 bsource.DataSource = dbdataset;
                 StudentsReport.DataSource = bsource;
@@ -227,11 +259,11 @@ namespace PRPJECT4NEW.Admin
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Print_Click(object sender, EventArgs e)
         {
             string str = null;
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            path=path.Replace(@"\",@"\\");
+            path = path.Replace(@"\", @"\\");
             path += "\\";
 
             try
@@ -239,15 +271,15 @@ namespace PRPJECT4NEW.Admin
                 this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
                 //this.sqlcon = new SqlConnection(connetionString);
                 string query = "select * from Classes_SM1 where date='" + str + "'";
-                if (toolStripComboBox4.Text.Equals("") && !toolStripComboBox3.Text.Equals(""))
+                if (toolStripComboBox3.Text.Equals("") && !toolStripComboBox4.Text.Equals(""))
                 {
-                    str = toolStripComboBox3.Text;
+                    str = toolStripComboBox4.Text;
 
 
-                   // MessageBox.Show(path);
+                    // MessageBox.Show(path);
 
 
-                    StreamWriter myFile = new StreamWriter(@""+path+"'" + str + "'.xls");
+                    StreamWriter myFile = new StreamWriter(@"" + path + "'" + str + "'.xls");
 
                     using (SqlConnection connection = new SqlConnection(connetionString))
                     {
@@ -281,10 +313,10 @@ namespace PRPJECT4NEW.Admin
 
                     }
                 }
-                else if (toolStripComboBox3.Text.Equals("") && !toolStripComboBox4.Text.Equals(""))
+                else if (toolStripComboBox4.Text.Equals("") && !toolStripComboBox3.Text.Equals(""))
                 //MessageBox.Show(str);
                 {
-                    str = toolStripComboBox4.Text;
+                    str = toolStripComboBox3.Text;
                     StreamWriter myFile = new StreamWriter(@"" + path + "'" + str + "'.xls");
 
                     using (SqlConnection connection = new SqlConnection(connetionString))
@@ -321,45 +353,115 @@ namespace PRPJECT4NEW.Admin
                     }
 
                 }
-                    FileInfo fi = new FileInfo(@"" + path + "'" + str + "'.xls");
-                    if (fi.Exists)
-                    {
-                        System.Diagnostics.Process.Start(@"" + path + "'" + str + "'.xls");
+                FileInfo fi = new FileInfo(@"" + path + "'" + str + "'.xls");
+                if (fi.Exists)
+                {
+                    System.Diagnostics.Process.Start(@"" + path + "'" + str + "'.xls");
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("File not exsits");
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("File not exsits");
+                }
 
 
 
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void Failing_Students_Click(object sender, EventArgs e)
+        {
+            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            this.sqlcon = new SqlConnection(connetionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select stud_Id, final_grade from Student_Courses where final_grade <= 56 and course_id='" + CourseID.Text + "'", sqlcon);
+                StudentsReport.Visible = true;
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (SqlException ex)
+            {
+                //this.Close();
+                CourseID.Text = "";
+                MessageBox.Show("Error selecting course id, try again!\n" + ex.ToString());
                 
             }
-            catch(Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void ExcellentStudents_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+                this.sqlcon = new SqlConnection(connetionString);
+                this.sqlcon.Open();
+                SqlCommand cmd = new SqlCommand("select AVG(final_grade) AS Average,stud_ID from Student_Courses GROUP BY stud_Id HAVING AVG(final_grade) >=85", sqlcon);
+                StudentsReport.Visible = true; StudentsReport.Visible = true;
+
+
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
+
+                bsource.DataSource = dbdataset;
+                StudentsReport.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

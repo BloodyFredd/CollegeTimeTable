@@ -753,9 +753,6 @@
     <Content Include="Facebook\FB_Analyze.csproj" />
     <Content Include="icon.ico" />
     <Content Include="Resources\bg_pattern.jpg" />
-    <None Include="Resources\facebook_btn_new1.png" />
-    <None Include="Resources\facebook_btn1.png" />
-    <None Include="Resources\facebook_btn_new.png" />
     <None Include="Resources\test-results %28Custom%29.png" />
     <None Include="Resources\bg_pattern21.jpg" />
     <None Include="Resources\bg_pattern1.jpg" />
@@ -793,7 +790,7 @@
       <VersionMajor>12</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
+      <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
