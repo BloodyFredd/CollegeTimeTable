@@ -180,7 +180,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 // take specific date, start time and class number from lecture course. 
                 cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Utility.User.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                if (dr.Read())
                 {
                     SqlCommand cmd1, cmd2;
                     // update the database of the classes according to the course.
