@@ -73,6 +73,8 @@ namespace PRPJECT4NEW.Dean_of_Faculty
 
             dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             using (Entities db = new Entities())
             {
                 foreach (DF_requests s in db.DF_requests)
@@ -96,11 +98,14 @@ namespace PRPJECT4NEW.Dean_of_Faculty
                 {
                     if (s.Intended_to.ToString().Contains("Tech_Team"))
                     {
-                        dataGridView1.Rows.Add(s.Date, s.Intended_to, s.Subject, s.Message, s.Status);
+                        dataGridView1.Rows.Add(s.Date.ToShortDateString(), s.Intended_to, s.Subject, s.Message, s.Status);
                     }
                 }
-
+                dataGridView1.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
                 dataGridView1.Refresh();
+                subject_txtbox.Clear();
+                message_textbox.Clear();
                 return true;
 
             }
