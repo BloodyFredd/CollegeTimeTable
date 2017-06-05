@@ -88,10 +88,10 @@ namespace PRPJECT4NEW.Admin
             }
             catch (Exception ex)
             {
-                this.Close();
+                
                 MessageBox.Show(ex.Message);
-                CancelLectures form2 = new CancelLectures();
-                form2.Show();
+                toolStripComboBox1.Text = "";
+                toolStripComboBox2.Text = "";
             }
         }
 
@@ -280,7 +280,7 @@ namespace PRPJECT4NEW.Admin
                 }
                 else
                 {
-                    throw new ArgumentException("Error selecting dates,try again!");
+                    throw new ArgumentException("Error selecting Course,try again!");
 
                 }
 
@@ -288,11 +288,16 @@ namespace PRPJECT4NEW.Admin
             catch (Exception ex)
             {
 
-                this.Close();
                 MessageBox.Show(ex.Message);
-                CancelLectures form2 = new CancelLectures();
-                form2.Show();
+                toolStripComboBox1.Text = "";
+                toolStripComboBox2.Text = "";
+                
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
