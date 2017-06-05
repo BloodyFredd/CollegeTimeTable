@@ -31,15 +31,7 @@ namespace PRPJECT4NEW.Lecturer
         }
 
 
-        private void Exams_Assignment_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Exams Assignment");
-        }
 
-        private void Supervisors_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Supervisors Assignment");
-        }
 
         private void Supervisors_List_Button_Click(object sender, EventArgs e)
         {
