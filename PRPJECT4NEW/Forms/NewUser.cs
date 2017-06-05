@@ -47,17 +47,6 @@ namespace PRPJECT4NEW
                 string query = "INSERT INTO person (ID,F_name,L_name,Telephone,Email,Password,Permission) VALUES('" + this.ID.Text + "','" + this.Fname.Text + "','" + this.Lname.Text + "','" + this.Phone.Text + "','" + this.Email.Text + "','" + Encod + "','" + this.perm1.Text + "')  ; ";
                 SqlCommand cmd = new SqlCommand(query, sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
-                if (this.perm1.Text == "Teaching_Assistant" || this.perm1.Text == "Lecturer")
-                {
-                    this.sqlcon.Close();
-                    this.sqlcon = new SqlConnection(connetionString);
-                    this.sqlcon.Open();
-                    string query1 = "INSERT INTO Teaching_Stuff (ID,Course_id) VALUES('" + this.ID.Text + "', 0)  ; ";
-
-                    SqlCommand cmd1 = new SqlCommand(query1, sqlcon);
-                    SqlDataReader dr1 = cmd1.ExecuteReader();
-                    dr1.Close();
-                }
 
                 if (this.perm1.Text == "Student")
                 {
