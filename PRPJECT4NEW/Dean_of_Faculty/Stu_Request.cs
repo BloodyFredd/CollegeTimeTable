@@ -46,7 +46,8 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridView1.AutoResizeColumns();
-
+            dataGridView1.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             using (Entities db = new Entities())
@@ -106,6 +107,8 @@ namespace PRPJECT4NEW.Dean_of_Faculty
             {
                 dataGridView1.Rows.Add(s.ID, s.Course_ID, s.Subject, s.Message, s.Status);
             }
+            dataGridView1.RowsDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             dataGridView1.Refresh();
         }
 
