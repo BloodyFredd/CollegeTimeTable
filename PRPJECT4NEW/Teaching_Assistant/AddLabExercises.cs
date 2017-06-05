@@ -132,7 +132,17 @@ namespace PRPJECT4NEW.Teaching_Assistant
                     dre = cmd.ExecuteReader();
                     if (dre.Read() == true)
                     {
-                        throw new ArgumentException("Someone is already teaching this lab!");
+                        int num = 1;
+                        using (Entities db = new Entities())
+                        {
+                            foreach (Lecture_Course l in db.Lecture_Course)
+                            {
+                                if (l.Course_ID == Convert.ToInt32(CourseIDButton.Text) && l.Course_type == 3)
+                                    num = l.Course_Serial + 1;
+
+                            }
+
+                        }
                     }
                     else
                     { // insert to lecture course the data of the lab.
@@ -151,7 +161,15 @@ namespace PRPJECT4NEW.Teaching_Assistant
                     dre = cmd.ExecuteReader();
                     if (dre.Read() == true)
                     {
-                        throw new ArgumentException("Someone is already teaching this exercise!");
+                        int num = 1;
+                        using (Entities db = new Entities())
+                        {
+                            foreach (Lecture_Course l in db.Lecture_Course)
+                            {
+                                if (l.Course_ID == Convert.ToInt32(CourseIDButton.Text) && l.Course_type == 2)
+                                    num = l.Course_Serial + 1;
+                            }
+                        }
                     }
                     else
                     { // insert to lecture course the data of the exercise.

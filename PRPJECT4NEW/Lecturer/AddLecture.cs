@@ -163,7 +163,6 @@ namespace PRPJECT4NEW.Lecturer
                     dre = cmd.ExecuteReader();
                     dre.Close();
                 }
-                //dre.Close();
 
                 // take specific date, start time and class number from lecture course. 
                 SqlCommand cmd5 = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Utility.User.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
