@@ -23,26 +23,7 @@ namespace PRPJECT4NEW.Admin
 
         private void ShowStudents_Click(object sender, EventArgs e)
         {
-            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-            this.sqlcon = new SqlConnection(connetionString);
-            try
-            {
-                SqlCommand cmd = new SqlCommand("select stud_Id, course_id, course_serial,final_grade from Student_Courses ", sqlcon);
-                Students.Visible = true;
-                SqlDataAdapter sda = new SqlDataAdapter();
-                sda.SelectCommand = cmd;
-                DataTable dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                BindingSource bsource = new BindingSource();
-
-                bsource.DataSource = dbdataset;
-                Students.DataSource = bsource;
-                sda.Update(dbdataset);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         public bool CheckCourse(string value,string other)
@@ -68,6 +49,11 @@ namespace PRPJECT4NEW.Admin
             
         private void Sign_student_Click(object sender, EventArgs e)
         {
+         
+}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
             try
@@ -78,13 +64,23 @@ namespace PRPJECT4NEW.Admin
                 if (CheckCourse(select(cmd1), serial.Text)) MessageBox.Show("It is the same course, try again!");
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET course_serial = '" + serial.Text + "' WHERE stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text +"'", sqlcon);
+                    SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET course_serial = '" + serial.Text + "' WHERE stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text + "'", sqlcon);
                     Students.Visible = true;
                     SqlDataAdapter sda = new SqlDataAdapter();
                     sda.SelectCommand = cmd;
                     DataTable dbdataset = new DataTable();
                     sda.Fill(dbdataset);
                     BindingSource bsource = new BindingSource();
+
+                    //Paint headers
+                    Students.EnableHeadersVisualStyles = false;
+                    Students.GridColor = Utility.HeaderBackColor;
+                    Students.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                    Students.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                    Students.AutoResizeColumns();
+                    Students.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                    Students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
 
                     bsource.DataSource = dbdataset;
                     Students.DataSource = bsource;
@@ -96,6 +92,45 @@ namespace PRPJECT4NEW.Admin
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void My_Lectures_Click(object sender, EventArgs e)
+        {
+            this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            this.sqlcon = new SqlConnection(connetionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("select stud_Id, course_id, course_serial,final_grade from Student_Courses ", sqlcon);
+                Students.Visible = true;
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
+
+                //Paint headers
+                Students.EnableHeadersVisualStyles = false;
+                Students.GridColor = Utility.HeaderBackColor;
+                Students.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                Students.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                Students.AutoResizeColumns();
+                Students.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                Students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
+                bsource.DataSource = dbdataset;
+                Students.DataSource = bsource;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

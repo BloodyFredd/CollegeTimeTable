@@ -23,6 +23,23 @@ namespace PRPJECT4NEW.Admin
 
         private void Available_Classes_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        public bool checkChoice(string value1,string value2)
+        {
+            if (value1.Equals("") && !value2.Equals(""))
+                return true;
+            return false;
+        }
+
+        private void Merge_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
             string str = null;
 
 
@@ -57,27 +74,57 @@ namespace PRPJECT4NEW.Admin
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
 
+                //Paint headers
+                Lecture.EnableHeadersVisualStyles = false;
+                Lecture.GridColor = Utility.HeaderBackColor;
+                Lecture.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                Lecture.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                Lecture.AutoResizeColumns();
+                Lecture.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                Lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
                 bsource.DataSource = dbdataset;
                 Lecture.DataSource = bsource;
                 sda.Update(dbdataset);
+
+                int i = 0;
+                for (int j = 0; j <= 9; j++)
+                {
+                    paintCells2(i);
+                    i++;
+                }
             }
             catch (Exception ex)
-            {                
-                this.Close();
+            {
                 MessageBox.Show(ex.Message);
-                MergeAuditorium form2 = new MergeAuditorium();
-                form2.Show();
+                toolStripComboBox1.Text = "";
+                toolStripComboBox2.Text = "";
             }
         }
 
-        public bool checkChoice(string value1,string value2)
+        private void paintCells2(int i)
         {
-            if (value1.Equals("") && !value2.Equals(""))
-                return true;
-            return false;
+            for (int j = 5; j < 18; j++)
+            {
+                if (Convert.ToInt32(Lecture.Rows[i].Cells[j].Value) == 1)
+                {
+                    Lecture.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                    Lecture.Rows[i].Cells[j].Style.ForeColor = Color.Red;
+                }
+
+                else
+                {
+                    Lecture.Rows[i].Cells[j].Style.BackColor = Color.LawnGreen;
+                    Lecture.Rows[i].Cells[j].Style.ForeColor = Color.LawnGreen;
+                }
+
+
+            }
+
         }
 
-        private void Merge_Click(object sender, EventArgs e)
+        private void My_Lectures_Click(object sender, EventArgs e)
         {
             string str = null;
 
@@ -88,7 +135,7 @@ namespace PRPJECT4NEW.Admin
                 this.sqlcon = new SqlConnection(connetionString);
                 SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
                 SqlCommand cmd1 = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
-                if (checkChoice(toolStripComboBox1.Text,toolStripComboBox2.Text))
+                if (checkChoice(toolStripComboBox1.Text, toolStripComboBox2.Text))
 
                 {
                     str = toolStripComboBox2.Text;
@@ -119,6 +166,16 @@ namespace PRPJECT4NEW.Admin
                 sda1.Fill(dbdataset1);
                 BindingSource bsource = new BindingSource();
 
+                //Paint headers
+                Lecture.EnableHeadersVisualStyles = false;
+                Lecture.GridColor = Utility.HeaderBackColor;
+                Lecture.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                Lecture.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                Lecture.AutoResizeColumns();
+                Lecture.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                Lecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
                 bsource.DataSource = dbdataset;
                 Lecture.DataSource = bsource;
                 sda.Update(dbdataset);
@@ -133,6 +190,10 @@ namespace PRPJECT4NEW.Admin
             }
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
    
 }
