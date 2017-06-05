@@ -36,9 +36,9 @@
             this.Print = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.StudentsReport = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.StudentsReport = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsReport)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +130,7 @@
             this.CourseID.Name = "CourseID";
             this.CourseID.Size = new System.Drawing.Size(350, 39);
             this.CourseID.TabIndex = 6;
+            this.CourseID.SelectedIndexChanged += new System.EventHandler(this.CourseID_SelectedIndexChanged);
             // 
             // menuStrip1
             // 
@@ -188,27 +189,6 @@
             this.panel2.Size = new System.Drawing.Size(582, 1050);
             this.panel2.TabIndex = 18;
             // 
-            // StudentsReport
-            // 
-            this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StudentsReport.Location = new System.Drawing.Point(582, 0);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(5);
-            this.StudentsReport.Name = "StudentsReport";
-            this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(1296, 1050);
-            this.StudentsReport.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(42, 339);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 32);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Course ID:";
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -221,6 +201,27 @@
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(42, 339);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 32);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Course ID:";
+            // 
+            // StudentsReport
+            // 
+            this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentsReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StudentsReport.Location = new System.Drawing.Point(582, 0);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(5);
+            this.StudentsReport.Name = "StudentsReport";
+            this.StudentsReport.RowTemplate.Height = 24;
+            this.StudentsReport.Size = new System.Drawing.Size(1296, 1050);
+            this.StudentsReport.TabIndex = 19;
             // 
             // Reports
             // 
