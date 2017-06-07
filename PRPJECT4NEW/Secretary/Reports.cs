@@ -50,6 +50,16 @@ namespace PRPJECT4NEW.Secretary
                 bsource.DataSource = dbdataset;
                 StudentReport.DataSource = bsource;
                 sda.Update(dbdataset);
+                //Paint headers
+                StudentReport.EnableHeadersVisualStyles = false;
+                StudentReport.GridColor = Utility.HeaderBackColor;
+                StudentReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentReport.AutoResizeColumns();
+                StudentReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
             }
             catch (Exception ex)
             {
@@ -73,6 +83,15 @@ namespace PRPJECT4NEW.Secretary
                 DataTable dbdataset = new DataTable();
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
+                //Paint headers
+                StudentReport.EnableHeadersVisualStyles = false;
+                StudentReport.GridColor = Utility.HeaderBackColor;
+                StudentReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentReport.AutoResizeColumns();
+                StudentReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
 
                 bsource.DataSource = dbdataset;
                 StudentReport.DataSource = bsource;
@@ -98,6 +117,16 @@ namespace PRPJECT4NEW.Secretary
                 DataTable dbdataset = new DataTable();
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
+
+                //Paint headers
+                StudentReport.EnableHeadersVisualStyles = false;
+                StudentReport.GridColor = Utility.HeaderBackColor;
+                StudentReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentReport.AutoResizeColumns();
+                StudentReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
 
                 bsource.DataSource = dbdataset;
                 StudentReport.DataSource = bsource;
