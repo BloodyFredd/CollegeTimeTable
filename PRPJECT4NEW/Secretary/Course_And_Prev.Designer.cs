@@ -52,22 +52,23 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.AutoSize = false;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1,
             this.Curr_Course,
             this.prev_course});
-            this.menuStrip1.Location = new System.Drawing.Point(139, 34);
+            this.menuStrip1.Location = new System.Drawing.Point(48, 30);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(264, 32);
+            this.menuStrip1.Size = new System.Drawing.Size(271, 39);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripComboBox1
             // 
             this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(12, 28);
+            this.toolStripComboBox1.Size = new System.Drawing.Size(12, 35);
             // 
             // Curr_Course
             // 
@@ -111,7 +112,7 @@
             "405",
             "406"});
             this.Curr_Course.Name = "Curr_Course";
-            this.Curr_Course.Size = new System.Drawing.Size(119, 28);
+            this.Curr_Course.Size = new System.Drawing.Size(119, 35);
             this.Curr_Course.Text = "Choose Course";
             // 
             // prev_course
@@ -156,7 +157,7 @@
             "405",
             "406"});
             this.prev_course.Name = "prev_course";
-            this.prev_course.Size = new System.Drawing.Size(121, 28);
+            this.prev_course.Size = new System.Drawing.Size(121, 35);
             this.prev_course.Text = "Previous Course";
             // 
             // Course_And_Prev
@@ -174,7 +175,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
