@@ -174,7 +174,7 @@ namespace PRPJECT4NEW.Admin
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
 
-                int i = 0;
+                int i = 1;
                 for (int j = 0; j <= 9; j++)
                 {
                     paintCells2(i);

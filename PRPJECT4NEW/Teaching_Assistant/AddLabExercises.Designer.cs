@@ -47,10 +47,10 @@
             // 
             this.CourseIDLabel.AccessibleName = "CourseLabel";
             this.CourseIDLabel.AutoSize = true;
-            this.CourseIDLabel.Location = new System.Drawing.Point(16, 11);
-            this.CourseIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CourseIDLabel.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.CourseIDLabel.Location = new System.Drawing.Point(12, 9);
             this.CourseIDLabel.Name = "CourseIDLabel";
-            this.CourseIDLabel.Size = new System.Drawing.Size(74, 17);
+            this.CourseIDLabel.Size = new System.Drawing.Size(62, 16);
             this.CourseIDLabel.TabIndex = 0;
             this.CourseIDLabel.Text = "Course ID:";
             // 
@@ -93,20 +93,19 @@
             "404",
             "405",
             "406"});
-            this.CourseIDButton.Location = new System.Drawing.Point(16, 31);
-            this.CourseIDButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CourseIDButton.Location = new System.Drawing.Point(12, 25);
             this.CourseIDButton.Name = "CourseIDButton";
-            this.CourseIDButton.Size = new System.Drawing.Size(105, 24);
+            this.CourseIDButton.Size = new System.Drawing.Size(80, 21);
             this.CourseIDButton.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AccessibleName = "StartTime";
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.label1.Location = new System.Drawing.Point(95, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Start Time:";
             // 
@@ -127,20 +126,19 @@
             "17",
             "18",
             "19"});
-            this.StartTimeButton.Location = new System.Drawing.Point(131, 31);
-            this.StartTimeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StartTimeButton.Location = new System.Drawing.Point(98, 25);
             this.StartTimeButton.Name = "StartTimeButton";
-            this.StartTimeButton.Size = new System.Drawing.Size(97, 24);
+            this.StartTimeButton.Size = new System.Drawing.Size(74, 21);
             this.StartTimeButton.TabIndex = 3;
             // 
             // Day
             // 
             this.Day.AccessibleName = "Day";
             this.Day.AutoSize = true;
-            this.Day.Location = new System.Drawing.Point(16, 70);
-            this.Day.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Day.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.Day.Location = new System.Drawing.Point(12, 57);
             this.Day.Name = "Day";
-            this.Day.Size = new System.Drawing.Size(37, 17);
+            this.Day.Size = new System.Drawing.Size(33, 16);
             this.Day.TabIndex = 4;
             this.Day.Text = "Day:";
             // 
@@ -155,32 +153,34 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.DayButton.Location = new System.Drawing.Point(16, 90);
-            this.DayButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DayButton.Location = new System.Drawing.Point(12, 73);
             this.DayButton.Name = "DayButton";
-            this.DayButton.Size = new System.Drawing.Size(105, 24);
+            this.DayButton.Size = new System.Drawing.Size(80, 21);
             this.DayButton.TabIndex = 5;
             // 
             // Apply_Button
             // 
             this.Apply_Button.AccessibleName = "Apply_Button";
-            this.Apply_Button.Location = new System.Drawing.Point(131, 196);
-            this.Apply_Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Apply_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Apply_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Apply_Button.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.Apply_Button.ForeColor = System.Drawing.SystemColors.Window;
+            this.Apply_Button.Location = new System.Drawing.Point(98, 159);
             this.Apply_Button.Name = "Apply_Button";
-            this.Apply_Button.Size = new System.Drawing.Size(92, 31);
-            this.Apply_Button.TabIndex = 6;
+            this.Apply_Button.Size = new System.Drawing.Size(80, 25);
+            this.Apply_Button.TabIndex = 4;
             this.Apply_Button.Text = "Apply";
-            this.Apply_Button.UseVisualStyleBackColor = true;
+            this.Apply_Button.UseVisualStyleBackColor = false;
             this.Apply_Button.Click += new System.EventHandler(this.Apply_Button_Click);
             // 
             // Semester
             // 
             this.Semester.AccessibleName = "Semester";
             this.Semester.AutoSize = true;
-            this.Semester.Location = new System.Drawing.Point(132, 70);
-            this.Semester.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Semester.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.Semester.Location = new System.Drawing.Point(99, 57);
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(72, 17);
+            this.Semester.Size = new System.Drawing.Size(59, 16);
             this.Semester.TabIndex = 7;
             this.Semester.Text = "Semester:";
             // 
@@ -191,20 +191,19 @@
             this.SemesterButton.Items.AddRange(new object[] {
             "a",
             "b"});
-            this.SemesterButton.Location = new System.Drawing.Point(131, 90);
-            this.SemesterButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SemesterButton.Location = new System.Drawing.Point(98, 73);
             this.SemesterButton.Name = "SemesterButton";
-            this.SemesterButton.Size = new System.Drawing.Size(97, 24);
+            this.SemesterButton.Size = new System.Drawing.Size(74, 21);
             this.SemesterButton.TabIndex = 8;
             // 
             // Class
             // 
             this.Class.AccessibleName = "Class";
             this.Class.AutoSize = true;
-            this.Class.Location = new System.Drawing.Point(16, 132);
-            this.Class.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Class.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.Class.Location = new System.Drawing.Point(12, 107);
             this.Class.Name = "Class";
-            this.Class.Size = new System.Drawing.Size(46, 17);
+            this.Class.Size = new System.Drawing.Size(38, 16);
             this.Class.TabIndex = 9;
             this.Class.Text = "Class:";
             // 
@@ -223,20 +222,19 @@
             "s102",
             "s103",
             "s104"});
-            this.ClassButton.Location = new System.Drawing.Point(16, 151);
-            this.ClassButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClassButton.Location = new System.Drawing.Point(12, 123);
             this.ClassButton.Name = "ClassButton";
-            this.ClassButton.Size = new System.Drawing.Size(105, 24);
+            this.ClassButton.Size = new System.Drawing.Size(80, 21);
             this.ClassButton.TabIndex = 10;
             // 
             // Lab_Exercise
             // 
             this.Lab_Exercise.AccessibleName = "Lab/Exercise";
             this.Lab_Exercise.AutoSize = true;
-            this.Lab_Exercise.Location = new System.Drawing.Point(132, 132);
-            this.Lab_Exercise.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Lab_Exercise.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.Lab_Exercise.Location = new System.Drawing.Point(99, 107);
             this.Lab_Exercise.Name = "Lab_Exercise";
-            this.Lab_Exercise.Size = new System.Drawing.Size(93, 17);
+            this.Lab_Exercise.Size = new System.Drawing.Size(79, 16);
             this.Lab_Exercise.TabIndex = 11;
             this.Lab_Exercise.Text = "Lab/Exercise:";
             // 
@@ -247,17 +245,17 @@
             this.LabExercise.Items.AddRange(new object[] {
             "Lab",
             "Exercise"});
-            this.LabExercise.Location = new System.Drawing.Point(131, 151);
-            this.LabExercise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LabExercise.Location = new System.Drawing.Point(98, 123);
             this.LabExercise.Name = "LabExercise";
-            this.LabExercise.Size = new System.Drawing.Size(97, 24);
+            this.LabExercise.Size = new System.Drawing.Size(74, 21);
             this.LabExercise.TabIndex = 12;
             // 
             // AddLabExercises
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 241);
+            this.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.ClientSize = new System.Drawing.Size(205, 196);
             this.Controls.Add(this.LabExercise);
             this.Controls.Add(this.Lab_Exercise);
             this.Controls.Add(this.ClassButton);
@@ -271,8 +269,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CourseIDButton);
             this.Controls.Add(this.CourseIDLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AddLabExercises";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddLabExercises";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -47,6 +47,17 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
 
+
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
                 bsource.DataSource = dbdataset;
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
@@ -77,6 +88,17 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
 
+
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
                 bsource.DataSource = dbdataset;
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
@@ -105,6 +127,17 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
 
+
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
                 bsource.DataSource = dbdataset;
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
@@ -132,22 +165,23 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 this.sqlcon = new SqlConnection(connetionString);
                 SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
                 if (toolStripComboBox1.Text.Equals("") && !toolStripComboBox2.Text.Equals(""))
+
                 {
                     str = toolStripComboBox2.Text;
                     //MessageBox.Show(str);
-                    cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
+                    cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
                     StudentsReport.Visible = true;
                 }
                 else if (toolStripComboBox2.Text.Equals("") && !toolStripComboBox1.Text.Equals(""))
                 {
                     str = toolStripComboBox1.Text;
                     //MessageBox.Show(str);
-                    cmd = new SqlCommand("select * from Classes_SM1 where date='" + str + "'", sqlcon);
+                    cmd = new SqlCommand("select * from Classes_SM2 where date='" + str + "'", sqlcon);
                     StudentsReport.Visible = true;
                 }
                 else
                 {
-                    throw new ArgumentException("Error selecting dates, try again!");
+                    throw new ArgumentException("Error selecting dates,try again!");
                 }
 
                 SqlDataAdapter sda = new SqlDataAdapter();
@@ -156,21 +190,54 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
 
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+
                 bsource.DataSource = dbdataset;
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
+
+                int i = 0;
+                for (int j = 0; j <= 9; j++)
+                {
+                    paintCells2(i);
+                    i++;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                this.Close();
-                Reports form2 = new Reports();
-                form2.StartPosition = FormStartPosition.Manual;
-                form2.SetDesktopBounds(218, 46, 1520, 820);
-                form2.ShowDialog();
+                toolStripComboBox1.Text = "";
+                toolStripComboBox2.Text = "";
             }
-            this.sqlcon.Close();
-            //this.Close();
+        }
+
+        private void paintCells2(int i)
+        {
+            for (int j = 5; j < 18; j++)
+            {
+                if (Convert.ToInt32(StudentsReport.Rows[i].Cells[j].Value) == 1)
+                {
+                    StudentsReport.Rows[i].Cells[j].Style.BackColor = Color.Red;
+                    StudentsReport.Rows[i].Cells[j].Style.ForeColor = Color.Red;
+                }
+
+                else
+                {
+                    StudentsReport.Rows[i].Cells[j].Style.BackColor = Color.LawnGreen;
+                    StudentsReport.Rows[i].Cells[j].Style.ForeColor = Color.LawnGreen;
+                }
+
+
+            }
+
         }
 
         private void My_Lectures_Click(object sender, EventArgs e)
@@ -188,6 +255,17 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 DataTable dbdataset = new DataTable();
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
+
+
+                //Paint headers
+                StudentsReport.EnableHeadersVisualStyles = false;
+                StudentsReport.GridColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentsReport.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentsReport.AutoResizeColumns();
+                StudentsReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
 
                 bsource.DataSource = dbdataset;
                 StudentsReport.DataSource = bsource;
@@ -278,6 +356,11 @@ namespace PRPJECT4NEW.Teaching_Assistant
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
    
