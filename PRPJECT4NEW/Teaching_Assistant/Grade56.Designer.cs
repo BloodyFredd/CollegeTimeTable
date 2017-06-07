@@ -38,19 +38,21 @@
             // CourseIdLabel
             // 
             this.CourseIdLabel.AutoSize = true;
+            this.CourseIdLabel.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.CourseIdLabel.Location = new System.Drawing.Point(12, 9);
             this.CourseIdLabel.Name = "CourseIdLabel";
             this.CourseIdLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CourseIdLabel.Size = new System.Drawing.Size(91, 13);
+            this.CourseIdLabel.Size = new System.Drawing.Size(102, 16);
             this.CourseIdLabel.TabIndex = 0;
             this.CourseIdLabel.Text = "ID of the Student:";
             // 
             // CourseIDLbel
             // 
             this.CourseIDLbel.AutoSize = true;
+            this.CourseIDLbel.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.CourseIDLbel.Location = new System.Drawing.Point(122, 9);
             this.CourseIDLbel.Name = "CourseIDLbel";
-            this.CourseIDLbel.Size = new System.Drawing.Size(57, 13);
+            this.CourseIDLbel.Size = new System.Drawing.Size(62, 16);
             this.CourseIDLbel.TabIndex = 1;
             this.CourseIDLbel.Text = "Course ID:";
             // 
@@ -109,25 +111,32 @@
             // Apply_Button
             // 
             this.Apply_Button.AccessibleName = "Apply_Button";
+            this.Apply_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Apply_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Apply_Button.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.Apply_Button.ForeColor = System.Drawing.SystemColors.Control;
             this.Apply_Button.Location = new System.Drawing.Point(89, 62);
             this.Apply_Button.Name = "Apply_Button";
-            this.Apply_Button.Size = new System.Drawing.Size(57, 24);
+            this.Apply_Button.Size = new System.Drawing.Size(63, 24);
             this.Apply_Button.TabIndex = 4;
             this.Apply_Button.Text = "Apply";
-            this.Apply_Button.UseVisualStyleBackColor = true;
+            this.Apply_Button.UseVisualStyleBackColor = false;
             this.Apply_Button.Click += new System.EventHandler(this.Apply_Button_Click);
             // 
             // Grade56
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
             this.ClientSize = new System.Drawing.Size(204, 98);
             this.Controls.Add(this.Apply_Button);
             this.Controls.Add(this.StudentID);
             this.Controls.Add(this.CourseID);
             this.Controls.Add(this.CourseIDLbel);
             this.Controls.Add(this.CourseIdLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Grade56";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grade56";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -139,7 +139,9 @@
                     }
                     else
                     {
-                        MessageBox.Show(facebookOAuthResult.ErrorDescription);
+                        MessageBox.Show("You are not in the system!");
+
+                        // MessageBox.Show(facebookOAuthResult.ErrorDescription);
                     }
                     this.btnLogoutClick();
                 }
