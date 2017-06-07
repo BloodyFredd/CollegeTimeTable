@@ -26,11 +26,11 @@ namespace PRPJECT4NEW.Secretary
 
         }
 
-        private void Search_Click(object sender, EventArgs e)
+        private void Search_Click_1(object sender, EventArgs e)
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand("select ID,F_name,L_name,Telephone,Email,Password from person where ID='" + IDbutton.Text + "'", sqlcon);
+            SqlCommand cmd = new SqlCommand("select ID,F_name,L_name,Telephone,Email from person where ID='" + IDbutton.Text + "'", sqlcon);
             StudentInfo.Visible = true;
             try
             {
@@ -40,6 +40,16 @@ namespace PRPJECT4NEW.Secretary
                 DataTable dbdataset = new DataTable();
                 sda.Fill(dbdataset);
                 BindingSource bsource = new BindingSource();
+
+                //Paint headers
+                StudentInfo.EnableHeadersVisualStyles = false;
+                StudentInfo.GridColor = Utility.HeaderBackColor;
+                StudentInfo.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+                StudentInfo.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                StudentInfo.AutoResizeColumns();
+                StudentInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+                StudentInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
 
                 bsource.DataSource = dbdataset;
                 StudentInfo.DataSource = bsource;
@@ -74,6 +84,21 @@ namespace PRPJECT4NEW.Secretary
                 MessageBox.Show(ex.Message);
             }
             
+        }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Save_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -38,12 +38,16 @@
             // 
             // Link_courses
             // 
-            this.Link_courses.Location = new System.Drawing.Point(76, 53);
+            this.Link_courses.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Link_courses.FlatAppearance.BorderSize = 0;
+            this.Link_courses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Link_courses.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Link_courses.Location = new System.Drawing.Point(158, 118);
             this.Link_courses.Name = "Link_courses";
-            this.Link_courses.Size = new System.Drawing.Size(153, 65);
+            this.Link_courses.Size = new System.Drawing.Size(208, 52);
             this.Link_courses.TabIndex = 2;
             this.Link_courses.Text = "Link";
-            this.Link_courses.UseVisualStyleBackColor = true;
+            this.Link_courses.UseVisualStyleBackColor = false;
             this.Link_courses.Click += new System.EventHandler(this.Link_courses_Click);
             // 
             // menuStrip1
@@ -54,7 +58,7 @@
             this.toolStripComboBox1,
             this.Curr_Course,
             this.prev_course});
-            this.menuStrip1.Location = new System.Drawing.Point(9, 9);
+            this.menuStrip1.Location = new System.Drawing.Point(139, 34);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(264, 32);
             this.menuStrip1.TabIndex = 3;
@@ -67,6 +71,9 @@
             // 
             // Curr_Course
             // 
+            this.Curr_Course.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Curr_Course.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Curr_Course.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Curr_Course.Items.AddRange(new object[] {
             "100",
             "101",
@@ -109,6 +116,9 @@
             // 
             // prev_course
             // 
+            this.prev_course.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.prev_course.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prev_course.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.prev_course.Items.AddRange(new object[] {
             "100",
             "101",
@@ -153,7 +163,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 153);
+            this.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.ClientSize = new System.Drawing.Size(662, 391);
             this.Controls.Add(this.Link_courses);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

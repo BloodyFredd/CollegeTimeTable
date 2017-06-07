@@ -160,6 +160,11 @@ namespace PRPJECT4NEW.Secretary
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     
 }
