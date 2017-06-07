@@ -31,20 +31,17 @@ namespace PRPJECT4NEW.Lecturer
         }
 
 
-        private void Exams_Assignment_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Exams Assignment");
-        }
 
-        private void Supervisors_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Supervisors Assignment");
-        }
 
         private void Supervisors_List_Button_Click(object sender, EventArgs e)
         {
-            modifay_grade modifay_grade = new modifay_grade();
-            modifay_grade.Show();
+            modifay_grade form2 = new modifay_grade();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
+            form2.Show();
         }
 
         private void Available_Classes_Button_Click(object sender, EventArgs e)
@@ -62,8 +59,13 @@ namespace PRPJECT4NEW.Lecturer
 
         private void Special_Stud_Button_Click(object sender, EventArgs e)
         {
-            bonus_10_points fac = new bonus_10_points();
-            fac.Show();
+            bonus_10_points form2 = new bonus_10_points();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
+            form2.Show();
         }
 
         private void Supervisor_Tut_Button_Click(object sender, EventArgs e)
@@ -73,8 +75,13 @@ namespace PRPJECT4NEW.Lecturer
 
         private void Special_Exams_Button_Click(object sender, EventArgs e)
         {
-            ReceptionHours rec = new ReceptionHours();
-            rec.Show();
+            ReceptionHours form2 = new ReceptionHours();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
+            form2.Show();
         }
 
         private void Logout_Click(object sender, EventArgs e)
@@ -122,8 +129,13 @@ namespace PRPJECT4NEW.Lecturer
 
         private void AddNewLecture_Click(object sender, EventArgs e)
         {
-            AddLecture lec = new AddLecture();
-            lec.Show();
+            AddLecture form2 = new AddLecture();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
+            form2.Show();
         }
 
         private void Logout_Button_Click(object sender, EventArgs e)
