@@ -144,5 +144,10 @@ namespace PRPJECT4NEW.Lecturer
             }
             return true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
