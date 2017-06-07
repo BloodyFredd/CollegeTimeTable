@@ -33,25 +33,32 @@
             this.CourseSerial = new System.Windows.Forms.ComboBox();
             this.Class = new System.Windows.Forms.ComboBox();
             this.Semester = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Add
             // 
-            this.Add.Location = new System.Drawing.Point(190, 109);
+            this.Add.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Add.FlatAppearance.BorderSize = 0;
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add.Font = new System.Drawing.Font("Century Gothic", 7.8F);
+            this.Add.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Add.Location = new System.Drawing.Point(365, 520);
             this.Add.Margin = new System.Windows.Forms.Padding(2);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(98, 34);
+            this.Add.Size = new System.Drawing.Size(240, 44);
             this.Add.TabIndex = 0;
             this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
+            this.Add.UseVisualStyleBackColor = false;
             this.Add.Click += new System.EventHandler(this.Add_Click);
             // 
             // CourseID
             // 
+            this.CourseID.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.CourseID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CourseID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CourseID.FormattingEnabled = true;
             this.CourseID.Items.AddRange(new object[] {
             "100",
@@ -87,25 +94,33 @@
             "402",
             "403",
             "404"});
-            this.CourseID.Location = new System.Drawing.Point(14, 27);
+            this.CourseID.Location = new System.Drawing.Point(34, 444);
             this.CourseID.Margin = new System.Windows.Forms.Padding(2);
             this.CourseID.Name = "CourseID";
-            this.CourseID.Size = new System.Drawing.Size(188, 24);
+            this.CourseID.Size = new System.Drawing.Size(179, 24);
             this.CourseID.TabIndex = 1;
+            this.CourseID.Text = "course ID";
             // 
             // CourseSerial
             // 
+            this.CourseSerial.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.CourseSerial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CourseSerial.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CourseSerial.FormattingEnabled = true;
             this.CourseSerial.Items.AddRange(new object[] {
             "1001"});
-            this.CourseSerial.Location = new System.Drawing.Point(274, 27);
+            this.CourseSerial.Location = new System.Drawing.Point(270, 444);
             this.CourseSerial.Margin = new System.Windows.Forms.Padding(2);
             this.CourseSerial.Name = "CourseSerial";
             this.CourseSerial.Size = new System.Drawing.Size(188, 24);
             this.CourseSerial.TabIndex = 2;
+            this.CourseSerial.Text = "course serial";
             // 
             // Class
             // 
+            this.Class.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Class.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Class.FormattingEnabled = true;
             this.Class.Items.AddRange(new object[] {
             "a101",
@@ -118,84 +133,73 @@
             "s102",
             "s103",
             "s104"});
-            this.Class.Location = new System.Drawing.Point(14, 70);
+            this.Class.Location = new System.Drawing.Point(520, 444);
             this.Class.Margin = new System.Windows.Forms.Padding(2);
             this.Class.Name = "Class";
             this.Class.Size = new System.Drawing.Size(188, 24);
             this.Class.TabIndex = 3;
+            this.Class.Text = "class";
             // 
             // Semester
             // 
+            this.Semester.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Semester.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Semester.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Semester.FormattingEnabled = true;
             this.Semester.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.Semester.Location = new System.Drawing.Point(274, 70);
+            this.Semester.Location = new System.Drawing.Point(764, 444);
             this.Semester.Margin = new System.Windows.Forms.Padding(2);
             this.Semester.Name = "Semester";
             this.Semester.Size = new System.Drawing.Size(188, 24);
             this.Semester.TabIndex = 4;
+            this.Semester.Text = "Semester";
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Course_ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.panel1.AccessibleName = "Buttons_place";
+            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.Add);
+            this.panel1.Controls.Add(this.CourseID);
+            this.panel1.Controls.Add(this.Semester);
+            this.panel1.Controls.Add(this.CourseSerial);
+            this.panel1.Controls.Add(this.Class);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1156, 857);
+            this.panel1.TabIndex = 24;
             // 
-            // label2
+            // button4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(318, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Course_Serial";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(82, 52);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Class";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(324, 52);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Semester";
+            this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 8.2F);
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(889, 564);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(229, 49);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Close";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 152);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Semester);
-            this.Controls.Add(this.Class);
-            this.Controls.Add(this.CourseSerial);
-            this.Controls.Add(this.CourseID);
-            this.Controls.Add(this.Add);
+            this.ClientSize = new System.Drawing.Size(1156, 857);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddStudent";
             this.Text = "AddStudent";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -206,9 +210,7 @@
         private System.Windows.Forms.ComboBox CourseSerial;
         private System.Windows.Forms.ComboBox Class;
         private System.Windows.Forms.ComboBox Semester;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button4;
     }
 }

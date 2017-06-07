@@ -37,18 +37,24 @@
             this.dateSem2 = new System.Windows.Forms.ToolStripComboBox();
             this.class1 = new System.Windows.Forms.ComboBox();
             this.class2 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(270, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(35, 139);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 93);
+            this.button1.Size = new System.Drawing.Size(332, 114);
             this.button1.TabIndex = 0;
             this.button1.Text = "modify between 2 classrooms lecture ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menuStrip1
@@ -57,32 +63,38 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.semesterToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(26, 32);
+            this.menuStrip1.Location = new System.Drawing.Point(35, 39);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(165, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(89, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // semesterToolStripMenuItem
             // 
+            this.semesterToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack;
             this.semesterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aToolStripMenuItem,
             this.bToolStripMenuItem});
+            this.semesterToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.semesterToolStripMenuItem.Name = "semesterToolStripMenuItem";
-            this.semesterToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.semesterToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.semesterToolStripMenuItem.Text = "Semester";
             // 
             // aToolStripMenuItem
             // 
+            this.aToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack;
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateSem1});
+            this.aToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.aToolStripMenuItem.Text = "A";
             // 
             // dateSem1
             // 
+            this.dateSem1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.dateSem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dateSem1.Items.AddRange(new object[] {
             "2016-08-07",
             "2016-08-08",
@@ -169,19 +181,23 @@
             "2016-11-10",
             "2016-11-11"});
             this.dateSem1.Name = "dateSem1";
-            this.dateSem1.Size = new System.Drawing.Size(121, 23);
+            this.dateSem1.Size = new System.Drawing.Size(121, 28);
             // 
             // bToolStripMenuItem
             // 
+            this.bToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack;
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateSem2});
+            this.bToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.bToolStripMenuItem.Text = "B";
             this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
             // 
             // dateSem2
             // 
+            this.dateSem2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.dateSem2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dateSem2.Items.AddRange(new object[] {
             "03/12/2017",
             "03/13/2017",
@@ -254,11 +270,15 @@
             "05/30/2017",
             "05/31/2017"});
             this.dateSem2.Name = "dateSem2";
-            this.dateSem2.Size = new System.Drawing.Size(121, 23);
+            this.dateSem2.Size = new System.Drawing.Size(121, 28);
             this.dateSem2.Click += new System.EventHandler(this.toolStripComboBox2_Click);
             // 
             // class1
             // 
+            this.class1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.class1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.class1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.class1.FormattingEnabled = true;
             this.class1.Items.AddRange(new object[] {
             "f101",
@@ -271,16 +291,20 @@
             "s104",
             "a101",
             "a102"});
-            this.class1.Location = new System.Drawing.Point(119, 21);
-            this.class1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.class1.Location = new System.Drawing.Point(159, 26);
+            this.class1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.class1.Name = "class1";
-            this.class1.Size = new System.Drawing.Size(124, 21);
+            this.class1.Size = new System.Drawing.Size(164, 25);
             this.class1.TabIndex = 2;
             this.class1.Text = "Choose first class";
             this.class1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // class2
             // 
+            this.class2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.class2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.class2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.class2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.class2.FormattingEnabled = true;
             this.class2.Items.AddRange(new object[] {
             "f101",
@@ -293,24 +317,42 @@
             "s104",
             "a101",
             "a102"});
-            this.class2.Location = new System.Drawing.Point(119, 58);
-            this.class2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.class2.Location = new System.Drawing.Point(159, 71);
+            this.class2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.class2.Name = "class2";
-            this.class2.Size = new System.Drawing.Size(124, 21);
+            this.class2.Size = new System.Drawing.Size(164, 25);
             this.class2.TabIndex = 3;
             this.class2.Text = "Choose second class";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(546, 45);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(249, 67);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Close";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Modifay_2_classes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 120);
+            this.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.ClientSize = new System.Drawing.Size(1283, 412);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.class2);
             this.Controls.Add(this.class1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Modifay_2_classes";
             this.Text = "Modifay_2_classes";
             this.Load += new System.EventHandler(this.Modifay_2_classes_Load);
@@ -332,5 +374,6 @@
         private System.Windows.Forms.ToolStripComboBox dateSem2;
         private System.Windows.Forms.ComboBox class1;
         private System.Windows.Forms.ComboBox class2;
+        private System.Windows.Forms.Button button2;
     }
 }

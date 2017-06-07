@@ -26,7 +26,7 @@ namespace PRPJECT4NEW.Secretary
         {
         }
 
-        private void StudentsReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void StudentReport_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -48,7 +48,7 @@ namespace PRPJECT4NEW.Secretary
                 BindingSource bsource = new BindingSource();
 
                 bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
+                StudentReport.DataSource = bsource;
                 sda.Update(dbdataset);
             }
             catch (Exception ex)
@@ -75,7 +75,7 @@ namespace PRPJECT4NEW.Secretary
                 BindingSource bsource = new BindingSource();
 
                 bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
+                StudentReport.DataSource = bsource;
                 sda.Update(dbdataset);
             }
             catch (Exception ex)
@@ -92,7 +92,7 @@ namespace PRPJECT4NEW.Secretary
             try
             {
                 SqlCommand cmd = new SqlCommand("select stud_Id, final_grade from Student_Courses where final_grade <= 56 and course_id='" + CourseID.Text + "'", sqlcon);
-                StudentsReport.Visible = true;
+                StudentReport.Visible = true;
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();
@@ -100,7 +100,7 @@ namespace PRPJECT4NEW.Secretary
                 BindingSource bsource = new BindingSource();
 
                 bsource.DataSource = dbdataset;
-                StudentsReport.DataSource = bsource;
+                StudentReport.DataSource = bsource;
                 sda.Update(dbdataset);
             }
             catch (SqlException ex)
@@ -127,11 +127,6 @@ namespace PRPJECT4NEW.Secretary
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            
         }
 
         private void SM1_CheckedChanged(object sender, EventArgs e)
@@ -251,7 +246,7 @@ namespace PRPJECT4NEW.Secretary
                     //BindingSource bsource = new BindingSource();
 
                     //bsource.DataSource = dbdataset;
-                    //StudentsReport.DataSource = bsource;
+                    //StudentReport.DataSource = bsource;
                     //sda.Update(dbdataset);
 
                     this.sqlcon.Close();
@@ -286,6 +281,26 @@ namespace PRPJECT4NEW.Secretary
         }
 
         private void CourseID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Failing_Students_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
