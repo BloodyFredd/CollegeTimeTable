@@ -54,12 +54,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
 
                 // check if the teaching assistant already teaches this class.
                 dre.Close();
-                if (LabExercise.Text.Equals("Lab"))
-                    cmd = new SqlCommand("select * from Lecture_Course where Teacher = '" + Utility.User.ID + "' and Course_ID = '" + CourseIDButton.Text + "' and Course_type = 3", sqlcon);
-                else if (LabExercise.Text.Equals("Exercise"))
-                    cmd = new SqlCommand("select * from Lecture_Course where Teacher = '" + Utility.User.ID + "' and Course_ID = '" + CourseIDButton.Text + "' and Course_type = 2", sqlcon);
-                else
-                    throw new ArgumentException("Error choosing option!");
+                cmd = new SqlCommand("select * from Teaching_Stuff where ID = '" + Utility.User.ID + "' and Course_id = '" + CourseIDButton.Text + "'", sqlcon);
                 dre = cmd.ExecuteReader();
                 if (dre.Read())
                 {
@@ -88,17 +83,17 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 // check if the class is already occupied in this time and class.
                 if (SemesterButton.Text.Equals("a"))
                 {
-                    if(first == 8)
+                    if (first == 8)
                     {
                         cmd = new SqlCommand("select * from Classes_SM1 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [0" + firstString + "-0" + secondString + "]= 1 and [0" + secondString + "-" + thirdString + "]= 1", sqlcon);
                     }
-                    else if(first == 9)
+                    else if (first == 9)
                     {
                         cmd = new SqlCommand("select * from Classes_SM1 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [0" + firstString + "-" + secondString + "]= 1 and [" + secondString + "-" + thirdString + "]= 1", sqlcon);
                     }
                     else
                     {
-                        cmd = new SqlCommand("select * from Classes_SM1 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [" + firstString + "-" + secondString + "]= 1 and [" + secondString + "-" + thirdString + "]= 1", sqlcon);   
+                        cmd = new SqlCommand("select * from Classes_SM1 where day = '" + DayButton.Text + "' and Class_Id = '" + ClassButton.Text + "' and [" + firstString + "-" + secondString + "]= 1 and [" + secondString + "-" + thirdString + "]= 1", sqlcon);
                     }
                 }
                 else if (SemesterButton.Text.Equals("b"))
@@ -132,7 +127,24 @@ namespace PRPJECT4NEW.Teaching_Assistant
                     dre = cmd.ExecuteReader();
                     if (dre.Read() == true)
                     {
-                        throw new ArgumentException("Someone is already teaching this lab!");
+                        int num = 1;
+                        using (Entities db = new Entities())
+                        {
+                            foreach (Lecture_Course l in db.Lecture_Course)
+                            {
+                                if (l.Course_ID == Convert.ToInt32(CourseIDButton.Text) && l.Course_type == 3)
+                                    num = l.Course_Serial + 1;
+                            }
+                            dre.Close();
+                            SqlCommand cmd4 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + num + "', 3, '" + Utility.User.ID + "', '" + DayButton.Text + "', '" + StartTimeButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
+                            dre = cmd4.ExecuteReader();
+                            dre.Close();
+
+                            // insert your course to data base teaching stuff
+                            cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Utility.User.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
+                            dre = cmd.ExecuteReader();
+                            dre.Close();
+                        }
                     }
                     else
                     { // insert to lecture course the data of the lab.
@@ -140,7 +152,12 @@ namespace PRPJECT4NEW.Teaching_Assistant
                         SqlCommand cmd3 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + CourseIDButton.Text + "1', 3, '" + Utility.User.ID + "', '" + DayButton.Text + "', '" + StartTimeButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
                         dre = cmd3.ExecuteReader();
                         dre.Close();
-                    }                   
+
+                        // insert your course to data base teaching stuff
+                        cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Utility.User.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
+                        dre = cmd.ExecuteReader();
+                        dre.Close();
+                    }
                 }
 
                 // check if needed to add exercise.
@@ -151,7 +168,24 @@ namespace PRPJECT4NEW.Teaching_Assistant
                     dre = cmd.ExecuteReader();
                     if (dre.Read() == true)
                     {
-                        throw new ArgumentException("Someone is already teaching this exercise!");
+                        int num = 1;
+                        using (Entities db = new Entities())
+                        {
+                            foreach (Lecture_Course l in db.Lecture_Course)
+                            {
+                                if (l.Course_ID == Convert.ToInt32(CourseIDButton.Text) && l.Course_type == 2)
+                                    num = l.Course_Serial + 1;
+                            }
+                            dre.Close();
+                            SqlCommand cmd4 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + num + "', 2, '" + Utility.User.ID + "', '" + DayButton.Text + "', '" + StartTimeButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
+                            dre = cmd4.ExecuteReader();
+                            dre.Close();
+
+                            // insert your course to data base teaching stuff
+                            cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Utility.User.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
+                            dre = cmd.ExecuteReader();
+                            dre.Close();
+                        }
                     }
                     else
                     { // insert to lecture course the data of the exercise.
@@ -159,28 +193,20 @@ namespace PRPJECT4NEW.Teaching_Assistant
                         SqlCommand cmd4 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + CourseIDButton.Text + "1', 2, '" + Utility.User.ID + "', '" + DayButton.Text + "', '" + StartTimeButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
                         dre = cmd4.ExecuteReader();
                         dre.Close();
+
+                        // insert your course to data base teaching stuff
+                        cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Utility.User.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
+                        dre = cmd.ExecuteReader();
+                        dre.Close();
                     }
-                }            
+                }
                 else
                     throw new ArgumentException("Error choosing option!");
-
-                // check the database before duplicates.
-                cmd = new SqlCommand("select * from Teaching_Stuff where ID = '" + Utility.User.ID + "' and Course_id = '" + CourseIDButton.Text + "'", sqlcon);
-                dre = cmd.ExecuteReader();
-                if (!dre.Read())
-                {
-                    dre.Close();
-                    // insert your course to data base teaching stuff
-                    cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Utility.User.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
-                    dre = cmd.ExecuteReader();
-                    dre.Close();
-                    throw new ArgumentException("You have already a course with this id!");
-                }
 
                 // take specific date, start time and class number from lecture course. 
                 cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Utility.User.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
                 SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                if (dr.Read())
                 {
                     SqlCommand cmd1, cmd2;
                     // update the database of the classes according to the course.
@@ -244,6 +270,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
                     }
                 }
                 dr.Close();
+                MessageBox.Show("Added succesfully!");
             }
 
             catch (Exception ex)
@@ -255,7 +282,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
             }
 
             this.sqlcon.Close();
-            this.Close();       
+            this.Close();
         }
 
         // this function checks all the strings.
@@ -263,7 +290,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
         {
             if (check == "Day")
             {
-                if(!str.Equals("Sunday") && !str.Equals("Monday") && !str.Equals("Tuesday") && !str.Equals("Wednesday") && !str.Equals("Thursday") && !str.Equals("Friday"))
+                if (!str.Equals("Sunday") && !str.Equals("Monday") && !str.Equals("Tuesday") && !str.Equals("Wednesday") && !str.Equals("Thursday") && !str.Equals("Friday"))
                     throw new ArgumentException("Day should only be the day of the week.");
 
             }
@@ -278,7 +305,7 @@ namespace PRPJECT4NEW.Teaching_Assistant
                 int num = Convert.ToInt32(str);
                 if (allDigits == false)
                 {
-                   if(num < 8 || num > 19)
+                    if (num < 8 || num > 19)
                         throw new ArgumentException("Start Time should be between 8-19 and only digits.");
                 }
             }
@@ -312,10 +339,10 @@ namespace PRPJECT4NEW.Teaching_Assistant
                     throw new ArgumentException("This is not a correct class.");
                 }
             }
-   
-            if(check == "Lab_Exercise")
+
+            if (check == "Lab_Exercise")
             {
-                if(!str.Equals("Lab") && !str.Equals("Exercise"))
+                if (!str.Equals("Lab") && !str.Equals("Exercise"))
                 {
                     throw new ArgumentException("Not exercise and not a lab have been chosen.");
                 }

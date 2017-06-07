@@ -14,7 +14,7 @@ namespace PRPJECT4NEW.Lecturer
 {
     public partial class AddLecture : Form
     {
-      //  private string connetionString = null;
+        //  private string connetionString = null;
         private SqlConnection sqlcon;
         public AddLecture()
         {
@@ -41,7 +41,7 @@ namespace PRPJECT4NEW.Lecturer
                 secondString = second.ToString();
                 thirdString = third.ToString();
                 fourthString = fourth.ToString();
-                int end = Convert.ToInt32(StartButton.Text) + 2;
+                int end = Convert.ToInt32(StartButton.Text) + 3;
                 string endString = end.ToString();
 
                 // check if the course and semester are as needed.
@@ -131,14 +131,31 @@ namespace PRPJECT4NEW.Lecturer
                 cmd = new SqlCommand("select * from Lecture_Course where Course_ID = '" + CourseIDButton.Text + "' and Course_type = 1", sqlcon);
                 dre = cmd.ExecuteReader();
                 if (dre.Read() == true)
-                {
-                    throw new ArgumentException("Someone is already teaching this lecture!");
+                { // if someone teaches this lecture, add another one with different serial.
+                    int num = 1;
+                    using (Entities db = new Entities())
+                    {
+                        foreach (Lecture_Course l in db.Lecture_Course)
+                        {
+                            if (l.Course_ID == Convert.ToInt32(CourseIDButton.Text) && l.Course_type == 1)
+                                num = l.Course_Serial + 1;
+                        }
+                    }
+                    dre.Close();
+                    SqlCommand cmd4 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + num + "', 1, '" + Utility.User.ID + "', '" + DayButton.Text + "', '" + StartButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
+                    dre = cmd4.ExecuteReader();
+                    dre.Close();
+
+                    // insert your course to data base teaching stuff
+                    cmd = new SqlCommand("insert into Teaching_Stuff (ID, Course_id) Values ('" + Utility.User.ID + "', '" + CourseIDButton.Text + "' ) ; ", sqlcon);
+                    dre = cmd.ExecuteReader();
+                    dre.Close();
                 }
                 else
                 { // if no one teaches this lecture, insert it to lecture course.
                     dre.Close();
-                    SqlCommand cmd3 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + CourseIDButton.Text + "1', 1, '" + Utility.User.ID + "', '" + DayButton.Text + "', '" + StartButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
-                    dre = cmd3.ExecuteReader();
+                    SqlCommand cmd4 = new SqlCommand("insert into Lecture_Course (Course_ID, Course_Serial, Course_type, Teacher, Date, Start_time, End_time, Class_number, Student_Count) Values('" + CourseIDButton.Text + "', '" + CourseIDButton.Text + "1', 1, '" + Utility.User.ID + "', '" + DayButton.Text + "', '" + StartButton.Text + "', '" + endString + "', '" + ClassButton.Text + "', 0) ; ", sqlcon);
+                    dre = cmd4.ExecuteReader();
                     dre.Close();
 
                     // insert your course to data base teaching stuff
@@ -148,10 +165,11 @@ namespace PRPJECT4NEW.Lecturer
                 }
 
                 // take specific date, start time and class number from lecture course. 
-                cmd = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Utility.User.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
-                SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
+                SqlCommand cmd5 = new SqlCommand("select Date, Start_time, Class_number from Lecture_Course where Teacher = '" + Utility.User.ID + "' and Course_ID = '" + CourseIDButton.Text + "'", sqlcon);
+                SqlDataReader dr = cmd5.ExecuteReader();
+                if (dr.Read())
                 {
+
                     // update the database of the classes according to the course.
                     SqlCommand cmd1, cmd2, cmd3;
                     if (SemesterButton.Text.Equals("a"))
@@ -210,6 +228,8 @@ namespace PRPJECT4NEW.Lecturer
                             cmd2 = new SqlCommand("update Classes_SM2 set [" + secondString + "-" + thirdString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
                             cmd3 = new SqlCommand("update Classes_SM2 set [" + thirdString + "-" + fourthString + "]= 1 where day ='" + dr[0].ToString() + "' and Class_Id = '" + dr[2].ToString() + "' and holiday = 0", sqlcon);
                         }
+                        dr.Close();
+
                         SqlDataAdapter sda1 = new SqlDataAdapter();
                         sda1.SelectCommand = cmd1;
                         SqlDataAdapter sda2 = new SqlDataAdapter();
@@ -227,7 +247,7 @@ namespace PRPJECT4NEW.Lecturer
                         sda3.Update(dbdataset);
                     }
                 }
-                dr.Close();
+                MessageBox.Show("Added succesfully!");
             }
             catch (Exception ex)
             {
