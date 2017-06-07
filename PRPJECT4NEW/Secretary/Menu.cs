@@ -37,6 +37,11 @@ namespace PRPJECT4NEW.Secretary
         private void Exams_Assignment_Button_Click(object sender, EventArgs e)
         {
             AddStudent form2 = new AddStudent();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
             form2.Show();
         }
 
@@ -48,6 +53,11 @@ namespace PRPJECT4NEW.Secretary
         private void Supervisors_List_Button_Click(object sender, EventArgs e)
         {
             StudentDetails form2 = new StudentDetails();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
             form2.Show();
         }
 
@@ -59,14 +69,24 @@ namespace PRPJECT4NEW.Secretary
 
         private void Special_Stud_Button_Click(object sender, EventArgs e)
         {
-            Modifay_2_classes modifay = new Modifay_2_classes();
-            modifay.Show();
+            Modifay_2_classes form2 = new Modifay_2_classes();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
+            form2.Show();
         }
 
         private void Supervisor_Tut_Button_Click(object sender, EventArgs e)
         {
-            Course_And_Prev modifay = new Course_And_Prev();
-            modifay.Show();
+            Course_And_Prev form2 = new Course_And_Prev();
+            form2.TopLevel = false;
+            form2.FormBorderStyle = FormBorderStyle.None;
+            form2.WindowState = FormWindowState.Maximized;
+            panel5.Controls.Add(form2);
+            panel5.Visible = true;
+            form2.Show();
         }
 
         private void Special_Exams_Button_Click(object sender, EventArgs e)

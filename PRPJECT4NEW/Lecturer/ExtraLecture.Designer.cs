@@ -40,6 +40,7 @@
             this.Hour = new System.Windows.Forms.ComboBox();
             this.Class = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Lecture)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,8 +74,10 @@
             // 
             // aToolStripMenuItem
             // 
+            this.aToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack;
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox2});
+            this.aToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.aToolStripMenuItem.Text = "A";
@@ -82,7 +85,9 @@
             // toolStripComboBox2
             // 
             this.toolStripComboBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
+            this.toolStripComboBox2.BackColor = System.Drawing.SystemColors.HotTrack;
             this.toolStripComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripComboBox2.Items.AddRange(new object[] {
             "2016-08-07",
             "2016-08-08",
@@ -174,14 +179,18 @@
             // 
             // bToolStripMenuItem
             // 
+            this.bToolStripMenuItem.BackColor = System.Drawing.SystemColors.HotTrack;
             this.bToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripComboBox1});
+            this.bToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
             this.bToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.bToolStripMenuItem.Text = "B";
             // 
             // toolStripComboBox1
             // 
+            this.toolStripComboBox1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripComboBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripComboBox1.Items.AddRange(new object[] {
             "03/12/2017",
             "03/13/2017",
@@ -274,6 +283,8 @@
             // 
             this.Available_Classes.AccessibleDescription = "Available_Classes";
             this.Available_Classes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Available_Classes.FlatAppearance.BorderSize = 0;
+            this.Available_Classes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Available_Classes.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Available_Classes.ForeColor = System.Drawing.Color.White;
             this.Available_Classes.Location = new System.Drawing.Point(458, 29);
@@ -288,6 +299,8 @@
             // NewLec
             // 
             this.NewLec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.NewLec.FlatAppearance.BorderSize = 0;
+            this.NewLec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewLec.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewLec.ForeColor = System.Drawing.Color.White;
             this.NewLec.Location = new System.Drawing.Point(581, 29);
@@ -302,6 +315,7 @@
             // Hour
             // 
             this.Hour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Hour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Hour.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hour.ForeColor = System.Drawing.Color.White;
             this.Hour.FormattingEnabled = true;
@@ -330,6 +344,7 @@
             // Class
             // 
             this.Class.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.Class.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Class.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Class.ForeColor = System.Drawing.Color.White;
             this.Class.FormattingEnabled = true;
@@ -354,6 +369,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.Class);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.Hour);
@@ -364,6 +380,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(917, 121);
             this.panel1.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.AccessibleName = "Apply";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(783, 67);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 26);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ExtraLecture
             // 
@@ -401,5 +434,6 @@
         private System.Windows.Forms.ComboBox Hour;
         private System.Windows.Forms.ComboBox Class;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -316,5 +316,15 @@ namespace PRPJECT4NEW.Lecturer
             }
             return true;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AddLecture_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
