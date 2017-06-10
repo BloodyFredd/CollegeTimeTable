@@ -39,7 +39,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SignBtn = new System.Windows.Forms.Button();
             this.UnsignBtn = new System.Windows.Forms.Button();
+            this.courseGridView = new System.Windows.Forms.DataGridView();
+            this.lectureGridView = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectureGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // calendarGridView
@@ -54,7 +60,7 @@
             this.calendarGridView.Name = "calendarGridView";
             this.calendarGridView.ReadOnly = true;
             this.calendarGridView.RowHeadersVisible = false;
-            this.calendarGridView.Size = new System.Drawing.Size(706, 448);
+            this.calendarGridView.Size = new System.Drawing.Size(706, 426);
             this.calendarGridView.TabIndex = 0;
             // 
             // courseComboBox
@@ -79,34 +85,34 @@
             // lecturesListBox
             // 
             this.lecturesListBox.FormattingEnabled = true;
-            this.lecturesListBox.Location = new System.Drawing.Point(729, 61);
+            this.lecturesListBox.Location = new System.Drawing.Point(731, 70);
             this.lecturesListBox.Name = "lecturesListBox";
-            this.lecturesListBox.Size = new System.Drawing.Size(120, 95);
+            this.lecturesListBox.Size = new System.Drawing.Size(130, 95);
             this.lecturesListBox.TabIndex = 3;
             this.lecturesListBox.SelectedIndexChanged += new System.EventHandler(this.lecturesListBox_SelectedIndexChanged);
             // 
             // practicesListBox
             // 
             this.practicesListBox.FormattingEnabled = true;
-            this.practicesListBox.Location = new System.Drawing.Point(855, 61);
+            this.practicesListBox.Location = new System.Drawing.Point(867, 70);
             this.practicesListBox.Name = "practicesListBox";
-            this.practicesListBox.Size = new System.Drawing.Size(120, 95);
+            this.practicesListBox.Size = new System.Drawing.Size(146, 95);
             this.practicesListBox.TabIndex = 4;
             this.practicesListBox.SelectedIndexChanged += new System.EventHandler(this.practicesListBox_SelectedIndexChanged);
             // 
             // labsListBox
             // 
             this.labsListBox.FormattingEnabled = true;
-            this.labsListBox.Location = new System.Drawing.Point(981, 61);
+            this.labsListBox.Location = new System.Drawing.Point(1019, 70);
             this.labsListBox.Name = "labsListBox";
-            this.labsListBox.Size = new System.Drawing.Size(120, 95);
+            this.labsListBox.Size = new System.Drawing.Size(130, 95);
             this.labsListBox.TabIndex = 5;
             this.labsListBox.SelectedIndexChanged += new System.EventHandler(this.labsListBox_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(729, 42);
+            this.label2.Location = new System.Drawing.Point(728, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 6;
@@ -115,7 +121,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(855, 41);
+            this.label3.Location = new System.Drawing.Point(864, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 7;
@@ -124,7 +130,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(981, 42);
+            this.label4.Location = new System.Drawing.Point(1016, 51);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 8;
@@ -133,7 +139,7 @@
             // SignBtn
             // 
             this.SignBtn.Enabled = false;
-            this.SignBtn.Location = new System.Drawing.Point(729, 162);
+            this.SignBtn.Location = new System.Drawing.Point(731, 171);
             this.SignBtn.Name = "SignBtn";
             this.SignBtn.Size = new System.Drawing.Size(75, 23);
             this.SignBtn.TabIndex = 9;
@@ -152,11 +158,62 @@
             this.UnsignBtn.UseVisualStyleBackColor = true;
             this.UnsignBtn.Click += new System.EventHandler(this.UnsignBtn_Click);
             // 
+            // courseGridView
+            // 
+            this.courseGridView.AllowUserToAddRows = false;
+            this.courseGridView.AllowUserToDeleteRows = false;
+            this.courseGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.courseGridView.EnableHeadersVisualStyles = false;
+            this.courseGridView.Location = new System.Drawing.Point(943, 243);
+            this.courseGridView.MultiSelect = false;
+            this.courseGridView.Name = "courseGridView";
+            this.courseGridView.ReadOnly = true;
+            this.courseGridView.RowHeadersVisible = false;
+            this.courseGridView.Size = new System.Drawing.Size(206, 126);
+            this.courseGridView.TabIndex = 11;
+            // 
+            // lectureGridView
+            // 
+            this.lectureGridView.AllowUserToAddRows = false;
+            this.lectureGridView.AllowUserToDeleteRows = false;
+            this.lectureGridView.AllowUserToResizeColumns = false;
+            this.lectureGridView.AllowUserToResizeRows = false;
+            this.lectureGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lectureGridView.EnableHeadersVisualStyles = false;
+            this.lectureGridView.Location = new System.Drawing.Point(731, 243);
+            this.lectureGridView.Name = "lectureGridView";
+            this.lectureGridView.ReadOnly = true;
+            this.lectureGridView.RowHeadersVisible = false;
+            this.lectureGridView.Size = new System.Drawing.Size(206, 113);
+            this.lectureGridView.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(943, 227);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Course Info:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(729, 227);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Lecture Info:";
+            // 
             // UpdateCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1108, 502);
+            this.ClientSize = new System.Drawing.Size(1190, 502);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lectureGridView);
+            this.Controls.Add(this.courseGridView);
             this.Controls.Add(this.UnsignBtn);
             this.Controls.Add(this.SignBtn);
             this.Controls.Add(this.label4);
@@ -171,6 +228,8 @@
             this.Name = "UpdateCalendar";
             this.Text = "UpdateCalendar";
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courseGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectureGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +248,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SignBtn;
         private System.Windows.Forms.Button UnsignBtn;
+        private System.Windows.Forms.DataGridView courseGridView;
+        private System.Windows.Forms.DataGridView lectureGridView;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

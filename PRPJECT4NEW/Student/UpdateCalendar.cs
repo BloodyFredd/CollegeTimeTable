@@ -42,6 +42,26 @@ namespace PRPJECT4NEW.Student
             calendarGridView.Columns.Add("Thursday", "Thursday");
             calendarGridView.Columns.Add("Friday", "Friday");
 
+            courseGridView.Columns.Add("Title", "");
+            courseGridView.Columns.Add("Fact", "");
+
+            lectureGridView.Columns.Add("Title", "");
+            lectureGridView.Columns.Add("Fact", "");
+
+            //Course Grid View Rows 
+            courseGridView.Rows.Add("Course ID:");
+            courseGridView.Rows.Add("Nakaz:");
+            courseGridView.Rows.Add("Year:");
+            courseGridView.Rows.Add("Semester:");
+            courseGridView.Rows.Add("Blocking Course:");
+
+            //Lecture Grid View Rows
+            lectureGridView.Rows.Add("Course Serial:");
+            lectureGridView.Rows.Add("Type:");
+            lectureGridView.Rows.Add("Teacher:");
+            lectureGridView.Rows.Add("Time:");
+
+
             clearDataGridView();
         }
 
@@ -49,10 +69,8 @@ namespace PRPJECT4NEW.Student
         private void courseComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selected =
-                from oc in openCourses
-                where oc.Course_name == courseComboBox.Text
-                from sl in openLectures
-                where sl.Course_ID == oc.Course_id
+                from oc in openCourses where oc.Course_name == courseComboBox.Text
+                from sl in openLectures where sl.Course_ID == oc.Course_id
                 select sl;
 
             selectedCourse = selected.ToList();
@@ -65,6 +83,7 @@ namespace PRPJECT4NEW.Student
             fillListBoxes();
 
             clearDataGridView();
+            fillInfoGridView();
             fillGridView(enrolledLectures.Except(selectedCourse).ToList(), Color.Gray);
         }
 
@@ -75,15 +94,13 @@ namespace PRPJECT4NEW.Student
             {
                 cours course = openCourses.FirstOrDefault(c => c.Course_id == s.Course_ID);
 
-             //   if (enrolledLectures.Contains(s) && selectedCourse.Contains(s) && !choosen.Contains(s)) break;    //Hide enrolled lecture when user chooses alternative one
-
                 string overlappingCourse = "";
                 for (int i = s.Start_time; i < s.End_time; i++)
                 {
                     string column = s.Date.Trim();
                     int row = i - 8;
 
-                    calendarGridView.Rows[row].Cells[column].Style.ForeColor = Color.White;    //Font Color
+                    calendarGridView.Rows[row].Cells[column].Style.ForeColor = Color.White; //Font Color
 
                     //Check overlapping courses
                     overlappingCourse = checkForOverlappingCourse(s, i);
@@ -231,7 +248,9 @@ namespace PRPJECT4NEW.Student
         private void clearDataGridView()
         {
             calendarGridView.Rows.Clear();
+            lectureGridView.Rows.Clear();
 
+            //Calendar Grid View
             for (int i = 8; i <= 23; i++)
             {
                 calendarGridView.Rows.Add(i + ":00");
@@ -244,11 +263,23 @@ namespace PRPJECT4NEW.Student
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
-            //Paint headers
+            //Calendar Grid View Paint headers
             calendarGridView.Columns[0].DefaultCellStyle.BackColor = Utility.HeaderBackColor;
             calendarGridView.Columns[0].DefaultCellStyle.ForeColor = Color.White;
             calendarGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
             calendarGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            //Course Grid View Paint headers
+            courseGridView.Columns[0].DefaultCellStyle.BackColor = Utility.HeaderBackColor;
+            courseGridView.Columns[0].DefaultCellStyle.ForeColor = Color.White;
+            courseGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+            courseGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            //Lecture Grid View Paint headers
+            lectureGridView.Columns[0].DefaultCellStyle.BackColor = Utility.HeaderBackColor;
+            lectureGridView.Columns[0].DefaultCellStyle.ForeColor = Color.White;
+            lectureGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
+            lectureGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
             calendarGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             calendarGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -259,6 +290,8 @@ namespace PRPJECT4NEW.Student
             }
 
             calendarGridView.Refresh();
+            courseGridView.Refresh();
+            lectureGridView.Refresh();
         }
 
         //Get Choosen lecture from ListBox
@@ -298,6 +331,8 @@ namespace PRPJECT4NEW.Student
 
             choosen.Add(openLectures.First(c => c.Course_Serial == course_Serial && c.Course_type == course_type));
 
+
+           // fillCourseGridView(course_Serial, course_type);
             fillGridView(enrolledLectures.Except(selectedCourse).ToList(), Color.Gray);
             fillGridView(choosen, Color.Blue);
         }
@@ -377,6 +412,53 @@ namespace PRPJECT4NEW.Student
             labsListBox.Items.Clear();
             reloadData();
             fillGridView(enrolledLectures, Color.Gray);
+        }
+
+        private void fillInfoGridView()
+        {
+            cours selected =
+                (from sc in selectedCourse
+                from oc in openCourses where oc.Course_id == sc.Course_ID
+                select oc).FirstOrDefault();
+
+            courseGridView.Rows[0].Cells["Fact"].Value = selected.Course_id;
+            courseGridView.Rows[1].Cells["Fact"].Value = selected.Nakaz;
+            courseGridView.Rows[2].Cells["Fact"].Value = selected.Year;
+            courseGridView.Rows[3].Cells["Fact"].Value = selected.Semester;
+            courseGridView.Rows[4].Cells["Fact"].Value = selected.Blocking_Cource;
+        }
+
+        private void fillCourseGridView(int course_Serial, int course_type)
+        {
+            Lecture_Course selected =
+            (from sc in selectedCourse
+             from oc in openCourses where oc.Course_id == sc.Course_ID
+             from ol in openLectures where ol.Course_ID == oc.Course_id && ol.Course_Serial == course_Serial && ol.Course_type == course_type
+            select ol).FirstOrDefault();
+
+            string type = "";
+          //  string teacher = .First(c => c.Course_Serial == course_Serial && c.Course_type == course_type))
+
+            switch (course_type) {
+                case 1:
+                    type = "Lecture";
+                    break;
+                case 2:
+                    type = "Practice";
+                    break;
+                case 3:
+                    type = "Lab";
+                    break;
+                default:
+                    Debug.WriteLine("Wrong course_type parameter check Data Base");
+                    break;
+            }
+
+            lectureGridView.Rows[0].Cells["Fact"].Value = course_Serial;
+            lectureGridView.Rows[1].Cells["Fact"].Value = type;
+            // lectureGridView.Rows[2].Cells["Fact"].Value = selected.Year;
+            lectureGridView.Rows[3].Cells["Fact"].Value = selected.Date + " " + selected.Start_time + " - " + selected.End_time;
+         
         }
     }
 }
