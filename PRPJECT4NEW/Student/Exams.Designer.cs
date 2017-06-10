@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.examsComboBox = new System.Windows.Forms.ComboBox();
             this.sendRequestBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.reasonTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.specialExamGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +70,7 @@
             // 
             // sendRequestBtn
             // 
-            this.sendRequestBtn.Location = new System.Drawing.Point(274, 339);
+            this.sendRequestBtn.Location = new System.Drawing.Point(13, 462);
             this.sendRequestBtn.Name = "sendRequestBtn";
             this.sendRequestBtn.Size = new System.Drawing.Size(90, 23);
             this.sendRequestBtn.TabIndex = 3;
@@ -76,11 +78,30 @@
             this.sendRequestBtn.UseVisualStyleBackColor = true;
             this.sendRequestBtn.Click += new System.EventHandler(this.sendRequestBtn_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 366);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Reason:";
+            // 
+            // reasonTextBox
+            // 
+            this.reasonTextBox.Location = new System.Drawing.Point(13, 383);
+            this.reasonTextBox.Multiline = true;
+            this.reasonTextBox.Name = "reasonTextBox";
+            this.reasonTextBox.Size = new System.Drawing.Size(834, 65);
+            this.reasonTextBox.TabIndex = 5;
+            // 
             // Exams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 460);
+            this.ClientSize = new System.Drawing.Size(859, 497);
+            this.Controls.Add(this.reasonTextBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.sendRequestBtn);
             this.Controls.Add(this.examsComboBox);
             this.Controls.Add(this.label1);
@@ -99,5 +120,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox examsComboBox;
         private System.Windows.Forms.Button sendRequestBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox reasonTextBox;
     }
 }

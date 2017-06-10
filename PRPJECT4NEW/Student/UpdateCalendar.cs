@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,17 +14,22 @@ namespace PRPJECT4NEW.Student
     public partial class UpdateCalendar : Form
     {
         List<int> courseList = new List<int>();
-        List<string> openCourses = new List<string>();
+        List<cours> openCourses = new List<cours>();
+        List<Lecture_Course> enrolledLectures = new List<Lecture_Course>();
+        List<Lecture_Course> openLectures = new List<Lecture_Course>();
+        List<Lecture_Course> selectedCourse = new List<Lecture_Course>();
+        List<Lecture_Course> choosen = new List<Lecture_Course>();
+        bool lectureOverlapp = false;
+        bool practiceOverlap = false;
+        bool labOverlap = false;
 
         public UpdateCalendar()
         {
             InitializeComponent();
             CreateGridView();
             reloadData();
-            getOpenCourses();
-       
+            fillGridView(enrolledLectures, Color.Gray);
         }
-
 
         private void CreateGridView()
         {
@@ -35,6 +41,197 @@ namespace PRPJECT4NEW.Student
             calendarGridView.Columns.Add("Wednesday", "Wednesday");
             calendarGridView.Columns.Add("Thursday", "Thursday");
             calendarGridView.Columns.Add("Friday", "Friday");
+
+            clearDataGridView();
+        }
+
+        //Get slected course information and place it into DataGridView and ListBox
+        private void courseComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selected =
+                from oc in openCourses
+                where oc.Course_name == courseComboBox.Text
+                from sl in openLectures
+                where sl.Course_ID == oc.Course_id
+                select sl;
+
+            selectedCourse = selected.ToList();
+
+            SignBtn.Enabled = true;
+            if ( enrolledLectures.Any(item => selectedCourse.Contains(item))) UnsignBtn.Enabled = true;
+            else UnsignBtn.Enabled = false;
+
+            choosen.Clear();
+            fillListBoxes();
+
+            clearDataGridView();
+            fillGridView(enrolledLectures.Except(selectedCourse).ToList(), Color.Gray);
+        }
+
+        //Place each Course into DataGridView
+        private void fillGridView(List<Lecture_Course> courses, Color fillColor)
+        {
+            foreach (var s in courses)
+            {
+                cours course = openCourses.FirstOrDefault(c => c.Course_id == s.Course_ID);
+
+             //   if (enrolledLectures.Contains(s) && selectedCourse.Contains(s) && !choosen.Contains(s)) break;    //Hide enrolled lecture when user chooses alternative one
+
+                string overlappingCourse = "";
+                for (int i = s.Start_time; i < s.End_time; i++)
+                {
+                    string column = s.Date.Trim();
+                    int row = i - 8;
+
+                    calendarGridView.Rows[row].Cells[column].Style.ForeColor = Color.White;    //Font Color
+
+                    //Check overlapping courses
+                    overlappingCourse = checkForOverlappingCourse(s, i);
+
+                    if (overlappingCourse != "")
+                    {
+                        calendarGridView.Rows[row].Cells[column].Style.BackColor = Color.Red; //Paint overlapping cell
+                        calendarGridView.Rows[row].Cells[column].Value = overlappingCourse + "/" + course.Course_name.Trim();   //Print data to cell
+                    }
+                    else
+                    {
+                        //Print name only in first row
+                        calendarGridView.Rows[row].Cells[column].Style.BackColor = fillColor; //Paint cell
+                        if (i - s.Start_time <= 0) calendarGridView.Rows[row].Cells[column].Value = course.Course_name.Trim();   //Print data to cell
+                        else calendarGridView.Rows[row].Cells[column].Value = "";
+                    }                            
+                } 
+            } 
+        }
+
+        //Get name of overlapping Course. Returns "" if don't exists
+        private string checkForOverlappingCourse(Lecture_Course check, int time)
+        {
+            string overlappingCourse = "";
+            foreach (Lecture_Course course in enrolledLectures)
+            {
+                if ((course.Date == check.Date) && !enrolledLectures.Contains(check))
+                {
+                    if (time >= course.Start_time && time < course.End_time)
+                    {
+                        overlappingCourse = (openCourses.First(c => c.Course_id == course.Course_ID)).Course_name.Trim();
+                        //Debug.WriteLine(course.Date + ": " + course.Start_time + " " + course.End_time + " : " + time + " " + overlappingCourse);
+                        switch (check.Course_type)
+                        {
+                            case 1:
+                                lectureOverlapp = true;
+                                break;
+                            case 2:
+                                practiceOverlap = true;
+                                break;
+                            case 3:
+                                labOverlap = true;
+                                break;
+                            default:
+                                Debug.WriteLine("No such Course Type! Check Data Base!");
+                                break;
+                        }
+                        return overlappingCourse;
+                    }
+                } 
+            }
+            switch (check.Course_type)
+            {
+                case 1:
+                    lectureOverlapp = false;
+                    break;
+                case 2:
+                    practiceOverlap = false;
+                    break;
+                case 3:
+                    labOverlap = false;
+                    break;
+                default:
+                    Debug.WriteLine("No such Course Type! Check Data Base!");
+                    break;
+            }
+            return overlappingCourse;
+        }
+
+        private void fillListBoxes()
+        {
+            lecturesListBox.Items.Clear();
+            practicesListBox.Items.Clear();
+            labsListBox.Items.Clear();
+
+            foreach (Lecture_Course lecture in selectedCourse)
+            {
+                switch (lecture.Course_type)
+                {
+                    case 1:
+                        lecturesListBox.Items.Add(lecture.Course_Serial);
+                        break;
+                    case 2:
+                        practicesListBox.Items.Add(lecture.Course_Serial);
+                        break;
+                    case 3:
+                        labsListBox.Items.Add(lecture.Course_Serial);
+                        break;
+                    default:
+                        Debug.WriteLine("No such Course Type! Check Data Base!");
+                        break;
+                }
+            }
+        }
+
+        private void reloadData()
+        {
+            using (Entities context = new Entities())
+            {
+                getOpenCourses(context);
+                getEnrolledLectures(context);
+                getOpenLectures(context);
+            }
+        }
+
+        private void getOpenCourses(Entities context)
+        {
+            //Select open courses to student
+            var selected =
+              (from s in context.students where s.ID == Utility.User.ID.ToString()                                     //Find Student 
+               from sc in context.Student_Courses where sc.final_grade > 55 && sc.stud_Id == s.ID && sc.Type == 1      //Passed Courses
+               from c in context.courses where c.Year <= s.Year && c.Semester == Utility.semester && (c.Blocking_Cource == null || c.Blocking_Cource == sc.course_id) //Get all relevant courses
+               select c).Distinct();
+
+            //Place each Course into List
+            foreach (var s in selected)
+            {
+                courseComboBox.Items.Add(s.Course_name);
+            }
+            openCourses = selected.ToList();
+        }
+
+        private void getEnrolledLectures(Entities context)
+        {
+            //Select cources of a student without final grade for current year
+            var selected =
+                from c in context.Student_Courses where c.stud_Id == Utility.User.ID.ToString() && c.final_grade == null
+                from i in context.Lecture_Course where i.Course_ID == c.course_id
+                select i;
+
+            enrolledLectures = selected.ToList();
+        }
+
+        private void getOpenLectures(Entities context)
+        {
+            //Select Lectures of a student without final grade for current year
+            var selected =
+                from oc in openCourses
+                from ol in context.Lecture_Course where ol.Course_ID == oc.Course_id
+                select ol;
+
+            openLectures = selected.ToList();
+        }
+
+        private void clearDataGridView()
+        {
+            calendarGridView.Rows.Clear();
+
             for (int i = 8; i <= 23; i++)
             {
                 calendarGridView.Rows.Add(i + ":00");
@@ -61,110 +258,125 @@ namespace PRPJECT4NEW.Student
                 row.Height = 25;
             }
 
-
+            calendarGridView.Refresh();
         }
 
-        private void reloadData()
+        //Get Choosen lecture from ListBox
+        private void lecturesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            using (Entities context = new Entities())
+            Debug.WriteLine(lecturesListBox.SelectedIndex);
+            int lecture = Int32.Parse(lecturesListBox.Items[lecturesListBox.SelectedIndex].ToString());
+            refreshChoosen(lecture, 1);
+        }
+
+        //Get Choosen practice from ListBox
+        private void practicesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int practice = Int32.Parse(practicesListBox.Items[practicesListBox.SelectedIndex].ToString());
+            refreshChoosen(practice, 2);
+        }
+
+        //Get Choosen lab from ListBox
+        private void labsListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int lab = Int32.Parse(labsListBox.Items[labsListBox.SelectedIndex].ToString());
+            refreshChoosen(lab, 3);
+        }
+
+        //Refresh and display choosen courses in Data grid view
+        private void refreshChoosen(int course_Serial, int course_type)
+        {
+            //Remove previously choosen course
+            foreach (Lecture_Course lc in choosen.ToList())
             {
-                //Select cources of a student without final grade for current year
-                var selected =
-                    from c in context.Student_Courses
-                    where c.stud_Id == Utility.User.ID.ToString() && c.final_grade == null
-                    from i in context.Course_detail
-                    where i.Course_id == c.course_id && i.Year == DateTime.Now.Year
-                    select i;
-
-                //Place each Course into DataGridView
-                foreach (var s in selected)
+                if (lc.Course_type == course_type)
                 {
-                    cours course = context.courses.FirstOrDefault(c => c.Course_id == s.Course_id);
+                    choosen.Remove(lc);
+                    clearDataGridView();
+                }
+            }
 
-                    if (!courseList.Contains(course.Course_id)) courseList.Add(course.Course_id);    //Add course id to list if necessary
+            choosen.Add(openLectures.First(c => c.Course_Serial == course_Serial && c.Course_type == course_type));
 
-                    for (int i = Convert.ToInt32(s.Start_time); i < Convert.ToInt32(s.End_time); i++)
+            fillGridView(enrolledLectures.Except(selectedCourse).ToList(), Color.Gray);
+            fillGridView(choosen, Color.Blue);
+        }
+
+        private void SignBtn_Click(object sender, EventArgs e)
+        {
+            //Check if necessary items selected
+            if (lecturesListBox.Items.Count > 0 && lecturesListBox.SelectedIndex == -1 || 
+                practicesListBox.Items.Count > 0 && practicesListBox.SelectedIndex == -1 ||
+                labsListBox.Items.Count > 0 && labsListBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Unable to Sign. Select at least one Lecture, Practice, Lab (if available)", "Wrong selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (lectureOverlapp || practiceOverlap || labOverlap)
+            {
+                MessageBox.Show("Overlapping courses!", "Wrong selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+      
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to sign to " + courseComboBox.Text.Trim() + "?", "Sign", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
+            {
+                using (Entities context = new Entities())
+                {
+                    //Delete previous if existed 
+                    foreach (Lecture_Course c in selectedCourse)
                     {
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Value = course.Course_name;
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.BackColor = Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(172)))), ((int)(((byte)(228)))));
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.ForeColor = Color.White;
-                        this.calendarGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
-                        this.calendarGridView.GridColor = Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-
-
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Value = course.Course_name.Trim() + " Room:" + s.Class_number;   //Print data to cell
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.BackColor = Utility.getColorByID(courseList.IndexOf(course.Course_id)); //Paint cell
+                        Student_Courses course = context.Student_Courses.FirstOrDefault(x => x.course_id == c.Course_ID && x.stud_Id == Utility.User.ID);
+                        if (course != null) context.Student_Courses.Remove(course);
                     }
-
+                    //Sign to new one
+                    foreach (Lecture_Course lc in choosen)
+                    {
+                        Student_Courses sc = new Student_Courses
+                        {
+                            stud_Id = Utility.User.ID, course_id = lc.Course_ID,
+                            grade_a = null, grade_b = null, grade_c = null, quiz1 = null, quiz2 = null,
+                            final_grade = null, Type = lc.Course_type, course_serial = lc.Course_Serial,
+                            Exam1_ID = null, Exam2_ID = null, Exam3_ID = null
+                        };
+                        context.Student_Courses.Add(sc);
+                    }
+                    context.SaveChanges();
                 }
+                MessageBox.Show("You signed to " + courseComboBox.Text.Trim() + "!");
+                clearAll();
             }
         }
 
-        private void calendarGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        private void UnsignBtn_Click(object sender, EventArgs e)
         {
-            e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None;
-            if (e.RowIndex < 1 || e.ColumnIndex < 0)
-                return;
-            if (IsTheSameCellValue(e.ColumnIndex, e.RowIndex))
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to unsign from " + courseComboBox.Text.Trim() + "?", "Unsign", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.Yes)
             {
-                e.AdvancedBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.None;
-            }
-            else
-            {
-                e.AdvancedBorderStyle.Top = calendarGridView.AdvancedCellBorderStyle.Top;
-            }
-        }
-
-        bool IsTheSameCellValue(int column, int row)
-        {
-            DataGridViewCell cell1 = calendarGridView[column, row];
-            DataGridViewCell cell2 = calendarGridView[column, row - 1];
-            if (cell1.Value == null || cell2.Value == null)
-            {
-                return false;
-            }
-            return cell1.Value.ToString() == cell2.Value.ToString();
-        }
-
-        private void calendarGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (e.RowIndex == 0)
-                return;
-            if (IsTheSameCellValue(e.ColumnIndex, e.RowIndex))
-            {
-                e.Value = "";
-                e.FormattingApplied = true;
-            }
-        }
-
-        private void UpdateCalendar_Load(object sender, EventArgs e)
-        {
-            calendarGridView.AutoGenerateColumns = false;
-        }
-
-        private void calendarGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void getOpenCourses()
-        {
-            using (Entities context = new Entities())
-            {
-                //Select open courses to student
-                var selected =
-                    from s in context.students
-                    where s.ID == Utility.User.ID.ToString()
-                    select s;
-
-                //Place each Course into List
-                foreach (var s in selected)
+                using (Entities context = new Entities())
                 {
-                    openCourses.Add(s.ID);
+                    foreach (Lecture_Course c in selectedCourse)
+                    {
+                        Debug.WriteLine(c.Course_ID);
+                        Student_Courses course = context.Student_Courses.FirstOrDefault(x => x.course_id == c.Course_ID && x.stud_Id == Utility.User.ID && c.Course_type == x.Type);
+                        context.Student_Courses.Remove(course); 
+                    }
+                    context.SaveChanges();
                 }
-              //  courseComboBox.DataSource = selected;
+                MessageBox.Show("You unsigned from " + courseComboBox.Text.Trim() + "!");
+                clearAll();
             }
+        }
 
+        private void clearAll()
+        {
+            courseComboBox.Items.Clear();
+            lecturesListBox.Items.Clear();
+            practicesListBox.Items.Clear();
+            labsListBox.Items.Clear();
+            reloadData();
+            fillGridView(enrolledLectures, Color.Gray);
         }
     }
 }

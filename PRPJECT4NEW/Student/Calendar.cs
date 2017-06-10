@@ -133,16 +133,5 @@ namespace PRPJECT4NEW.Student
         {
             calendarGridView.AutoGenerateColumns = false;
         }
-
-        private void calendarGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        //Check if course already in list
-        private void findCourse(cours course)
-        {
-            
-        }
     }
 }

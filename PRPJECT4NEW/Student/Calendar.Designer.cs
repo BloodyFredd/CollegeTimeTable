@@ -80,7 +80,6 @@
             this.calendarGridView.RowHeadersWidth = 60;
             this.calendarGridView.Size = new System.Drawing.Size(1762, 895);
             this.calendarGridView.TabIndex = 4;
-            this.calendarGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calendarGridView_CellContentClick);
             this.calendarGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.calendarGridView_CellFormatting);
             this.calendarGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.calendarGridView_CellPainting);
             // 
