@@ -174,7 +174,7 @@ namespace PRPJECT4NEW.Exams_Section
         /// <value>if student learn at specific course</value>  
         private bool studentInCourse(string StudID, int CourseID)
         {
-                Student_Courses ss = context.Student_Courses.FirstOrDefault(s => s.stud_Id == StudID && s.course_id == CourseID);
+                Student_Courses ss = context.Student_Courses.FirstOrDefault(s => s.stud_Id == StudID && s.course_id == CourseID && s.final_grade==null && s.Type==1);
                 if (ss != null)
                     return true;
             return false;

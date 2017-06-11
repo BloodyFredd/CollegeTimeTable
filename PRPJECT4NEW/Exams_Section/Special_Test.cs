@@ -47,9 +47,8 @@ namespace PRPJECT4NEW.Exams_Section
         private void Special_Test_Load(object sender, EventArgs e)
         {
             dataGridView1.Columns.Add("ID", "Student ID");
-            dataGridView1.Columns.Add("Course_Serial", "Course_Serial");
+            dataGridView1.Columns.Add("Course_ID", "Course ID");
             dataGridView1.Columns.Add("Course_Name", "Course_Name");
-            dataGridView1.Columns.Add("Date", "Date");
 
             //Paint headers
             dataGridView1.EnableHeadersVisualStyles = false;
@@ -64,17 +63,17 @@ namespace PRPJECT4NEW.Exams_Section
             using (Entities context = new Entities())
             {
                 int i = 0;
-                foreach (var s in context.Student_special_Exam)
+                foreach (var s in context.student_request)
                 {
-                    if (s.Status == "Approved")
+                    if (s.Status == "Approved" && s.Course_ID!=0)
                     {
                         studentspecialExamBindingSource.DataSource = s;
 
                         foreach (var v in context.courses)
                         {
-                            if (s.Course_Serial.ToString().Contains(v.Course_id.ToString()))
+                            if (s.Course_ID.ToString().Contains(v.Course_id.ToString()))
                             {
-                                dataGridView1.Rows.Add(s.ID, s.Course_Serial, v.Course_name, s.Date);
+                                dataGridView1.Rows.Add(s.ID, s.Course_ID, v.Course_name);
                             }
                         }
                         i++;
@@ -86,9 +85,10 @@ namespace PRPJECT4NEW.Exams_Section
 
         private void Combo_Course_name_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             using (Entities context = new Entities())
             {
-                foreach (var s in context.Student_special_Exam)
+                foreach (var s in context.student_request)
                 {
                     if (Combo_Course_name.Text == null)
                     {
@@ -99,12 +99,13 @@ namespace PRPJECT4NEW.Exams_Section
                     }
                     else
                     {
+                        dataGridView1.Rows.Clear();
                         foreach (var v in context.courses)
                         {
-                            if (Combo_Course_name.Text == v.Course_name)
+                            if (v.Course_name.Contains(Combo_Course_name.Text) && v.Course_id==s.Course_ID)
                             {
-                                dataGridView1.Rows.Clear();
-                                dataGridView1.Rows.Add(s.ID, s.Course_Serial, v.Course_name, s.Date);
+                                
+                                dataGridView1.Rows.Add(s.ID, s.Course_ID, v.Course_name);                                
                             }
                         }
                     }
@@ -112,6 +113,15 @@ namespace PRPJECT4NEW.Exams_Section
                 dataGridView1.Refresh();
             }
         }
+
+        //private bool  check_Course_combo(int courseSerial)
+        //{
+        //    Entities context = new Entities();
+        //    Lecture_Course ss = context.Lecture_Course.FirstOrDefault(s => s.Course_Serial== courseSerial);
+        //    if (ss != null)
+        //        return true;
+        //    return false;
+        //}
     }
 }
 
