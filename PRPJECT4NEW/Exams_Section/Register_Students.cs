@@ -31,7 +31,7 @@ namespace PRPJECT4NEW.Exams_Section
         private void Combo_Course_Load()
         {
                 foreach (Lecture_Course s in context.Lecture_Course)
-                    if(s.Course_type==1)
+                    if(s.Course_type==1 && CourseInExam(s.Course_ID))
                         Combo_Course_name.Items.Add(getCourseName(s.Course_ID)+" - "+ s.Course_Serial);
         }
       
@@ -177,6 +177,19 @@ namespace PRPJECT4NEW.Exams_Section
                 Student_Courses ss = context.Student_Courses.FirstOrDefault(s => s.stud_Id == StudID && s.course_id == CourseID);
                 if (ss != null)
                     return true;
+            return false;
+        }
+
+        /// <summary>
+        /// Check if student learn at course</summary>
+        /// <param name="StudID">Student ID</param> 
+        /// <param name="CourseID">Course ID</param> 
+        /// <value>if student learn at specific course</value>  
+        private bool CourseInExam(int CourseID)
+        {
+            Exam ss = context.Exams.FirstOrDefault(s => s.Course_ID == CourseID);
+            if (ss != null)
+                return true;
             return false;
         }
 
