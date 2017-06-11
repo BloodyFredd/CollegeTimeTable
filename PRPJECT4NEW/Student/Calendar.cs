@@ -28,26 +28,26 @@ namespace PRPJECT4NEW.Student
                 //Select cources of a student without final grade for current year
                 var selected =
                     from c in context.Student_Courses where c.stud_Id == Utility.User.ID.ToString() && c.final_grade == null
-                    from i in context.Course_detail where i.Course_id == c.course_id && i.Year == DateTime.Now.Year select i;
+                    from i in context.Lecture_Course where i.Course_ID == c.course_id select i;
 
                 //Place each Course into DataGridView
                 foreach (var s in selected)
                 {
-                    cours course = context.courses.FirstOrDefault(c => c.Course_id == s.Course_id);
+                    cours course = context.courses.FirstOrDefault(c => c.Course_id == s.Course_ID);
 
                     if (!courseList.Contains(course.Course_id)) courseList.Add(course.Course_id);    //Add course id to list if necessary
 
                     for (int i = Convert.ToInt32(s.Start_time); i < Convert.ToInt32(s.End_time); i++)
                     {
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Value = course.Course_name;
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.BackColor = Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(172)))), ((int)(((byte)(228)))));
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.ForeColor = Color.White;
+                        this.calendarGridView.Rows[i - 8].Cells[s.Date.Trim()].Value = course.Course_name;
+                        this.calendarGridView.Rows[i - 8].Cells[s.Date.Trim()].Style.BackColor = Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(172)))), ((int)(((byte)(228)))));
+                        this.calendarGridView.Rows[i - 8].Cells[s.Date.Trim()].Style.ForeColor = Color.White;
                         this.calendarGridView.ColumnHeadersDefaultCellStyle.BackColor = Utility.HeaderBackColor;
                         this.calendarGridView.GridColor = Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
 
 
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Value = course.Course_name.Trim() + " Room:" + s.Class_number;   //Print data to cell
-                        this.calendarGridView.Rows[i - 8].Cells[s.Day.Trim()].Style.BackColor = Utility.getColorByID(courseList.IndexOf(course.Course_id)); //Paint cell
+                        this.calendarGridView.Rows[i - 8].Cells[s.Date.Trim()].Value = course.Course_name.Trim() + " Room:" + s.Class_number;   //Print data to cell
+                        this.calendarGridView.Rows[i - 8].Cells[s.Date.Trim()].Style.BackColor = Utility.getColorByID(courseList.IndexOf(course.Course_id)); //Paint cell
                     }
                     
                 }
