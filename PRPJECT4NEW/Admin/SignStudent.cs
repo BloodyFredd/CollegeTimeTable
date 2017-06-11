@@ -58,13 +58,13 @@ namespace PRPJECT4NEW.Admin
             this.sqlcon = new SqlConnection(connetionString);
             try
             {
-                SqlCommand cmd1 = new SqlCommand("SELECT course_serial FROM Student_Courses where stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text + "'", sqlcon);
+                SqlCommand cmd1 = new SqlCommand("SELECT course_serial FROM Student_Courses where stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text + "' and Type = 1", sqlcon);
                 this.sqlcon.Open();
 
                 if (CheckCourse(select(cmd1), serial.Text)) MessageBox.Show("It is the same course, try again!");
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET course_serial = '" + serial.Text + "' WHERE stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text + "'", sqlcon);
+                    SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET course_serial = '" + serial.Text + "' WHERE stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text + "' and Type = 1", sqlcon);
                     Students.Visible = true;
                     SqlDataAdapter sda = new SqlDataAdapter();
                     sda.SelectCommand = cmd;
