@@ -45,10 +45,10 @@
             this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Add.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.Add.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Add.Location = new System.Drawing.Point(365, 520);
+            this.Add.Location = new System.Drawing.Point(274, 422);
             this.Add.Margin = new System.Windows.Forms.Padding(2);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(240, 44);
+            this.Add.Size = new System.Drawing.Size(180, 36);
             this.Add.TabIndex = 0;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = false;
@@ -94,10 +94,10 @@
             "402",
             "403",
             "404"});
-            this.CourseID.Location = new System.Drawing.Point(34, 444);
+            this.CourseID.Location = new System.Drawing.Point(26, 361);
             this.CourseID.Margin = new System.Windows.Forms.Padding(2);
             this.CourseID.Name = "CourseID";
-            this.CourseID.Size = new System.Drawing.Size(179, 24);
+            this.CourseID.Size = new System.Drawing.Size(135, 21);
             this.CourseID.TabIndex = 1;
             this.CourseID.Text = "course ID";
             // 
@@ -108,11 +108,43 @@
             this.CourseSerial.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CourseSerial.FormattingEnabled = true;
             this.CourseSerial.Items.AddRange(new object[] {
-            "1001"});
-            this.CourseSerial.Location = new System.Drawing.Point(270, 444);
+            "1001",
+            "1011",
+            "1021",
+            "1031",
+            "1041",
+            "1051",
+            "1061",
+            "1071",
+            "1081",
+            "2001",
+            "2011",
+            "2021",
+            "2031",
+            "2041",
+            "2051",
+            "2061",
+            "2071",
+            "2081",
+            "2091",
+            "3001",
+            "3011",
+            "3021",
+            "3031",
+            "3041",
+            "3051",
+            "3061",
+            "3071",
+            "3081",
+            "4001",
+            "4011",
+            "4021",
+            "4031",
+            "4041"});
+            this.CourseSerial.Location = new System.Drawing.Point(202, 361);
             this.CourseSerial.Margin = new System.Windows.Forms.Padding(2);
             this.CourseSerial.Name = "CourseSerial";
-            this.CourseSerial.Size = new System.Drawing.Size(188, 24);
+            this.CourseSerial.Size = new System.Drawing.Size(142, 21);
             this.CourseSerial.TabIndex = 2;
             this.CourseSerial.Text = "course serial";
             // 
@@ -133,10 +165,10 @@
             "s102",
             "s103",
             "s104"});
-            this.Class.Location = new System.Drawing.Point(520, 444);
+            this.Class.Location = new System.Drawing.Point(390, 361);
             this.Class.Margin = new System.Windows.Forms.Padding(2);
             this.Class.Name = "Class";
-            this.Class.Size = new System.Drawing.Size(188, 24);
+            this.Class.Size = new System.Drawing.Size(142, 21);
             this.Class.TabIndex = 3;
             this.Class.Text = "class";
             // 
@@ -149,10 +181,10 @@
             this.Semester.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.Semester.Location = new System.Drawing.Point(764, 444);
+            this.Semester.Location = new System.Drawing.Point(573, 361);
             this.Semester.Margin = new System.Windows.Forms.Padding(2);
             this.Semester.Name = "Semester";
-            this.Semester.Size = new System.Drawing.Size(188, 24);
+            this.Semester.Size = new System.Drawing.Size(142, 21);
             this.Semester.TabIndex = 4;
             this.Semester.Text = "Semester";
             // 
@@ -171,7 +203,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1156, 857);
+            this.panel1.Size = new System.Drawing.Size(867, 602);
             this.panel1.TabIndex = 24;
             // 
             // button4
@@ -181,19 +213,19 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 8.2F);
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(889, 564);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.button4.Location = new System.Drawing.Point(667, 458);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(229, 49);
+            this.button4.Size = new System.Drawing.Size(172, 40);
             this.button4.TabIndex = 22;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // AddStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 857);
+            this.ClientSize = new System.Drawing.Size(867, 602);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddStudent";

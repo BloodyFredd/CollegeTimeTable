@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Load_table = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -55,10 +55,10 @@
             this.Load_table.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Load_table.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Load_table.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Load_table.Location = new System.Drawing.Point(687, 19);
-            this.Load_table.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Load_table.Location = new System.Drawing.Point(515, 15);
+            this.Load_table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Load_table.Name = "Load_table";
-            this.Load_table.Size = new System.Drawing.Size(291, 53);
+            this.Load_table.Size = new System.Drawing.Size(218, 43);
             this.Load_table.TabIndex = 3;
             this.Load_table.Text = "Show Students only!";
             this.Load_table.UseVisualStyleBackColor = false;
@@ -69,10 +69,10 @@
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(687, 131);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(515, 106);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(291, 57);
+            this.button1.Size = new System.Drawing.Size(218, 46);
             this.button1.TabIndex = 4;
             this.button1.Text = "Show Teaching Staff only!";
             this.button1.UseVisualStyleBackColor = false;
@@ -84,9 +84,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(302, 131);
+            this.button2.Location = new System.Drawing.Point(226, 106);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(291, 57);
+            this.button2.Size = new System.Drawing.Size(218, 46);
             this.button2.TabIndex = 4;
             this.button2.Text = "Failing Students";
             this.button2.UseVisualStyleBackColor = false;
@@ -135,9 +136,10 @@
             "404",
             "405",
             "406"});
-            this.CourseID.Location = new System.Drawing.Point(61, 92);
+            this.CourseID.Location = new System.Drawing.Point(46, 75);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CourseID.Name = "CourseID";
-            this.CourseID.Size = new System.Drawing.Size(223, 24);
+            this.CourseID.Size = new System.Drawing.Size(168, 21);
             this.CourseID.TabIndex = 6;
             this.CourseID.SelectedIndexChanged += new System.EventHandler(this.CourseID_SelectedIndexChanged);
             // 
@@ -145,8 +147,9 @@
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Location = new System.Drawing.Point(12, 104);
+            this.menuStrip1.Location = new System.Drawing.Point(9, 84);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(202, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
@@ -156,9 +159,10 @@
             this.Print.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Print.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Print.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Print.Location = new System.Drawing.Point(1048, 78);
+            this.Print.Location = new System.Drawing.Point(766, 15);
+            this.Print.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Print.Name = "Print";
-            this.Print.Size = new System.Drawing.Size(291, 51);
+            this.Print.Size = new System.Drawing.Size(238, 43);
             this.Print.TabIndex = 15;
             this.Print.Text = "Export to Excel";
             this.Print.UseVisualStyleBackColor = false;
@@ -169,9 +173,10 @@
             this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(302, 19);
+            this.button3.Location = new System.Drawing.Point(226, 15);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(291, 53);
+            this.button3.Size = new System.Drawing.Size(218, 43);
             this.button3.TabIndex = 16;
             this.button3.Text = "General average grades of all students in specific course";
             this.button3.UseVisualStyleBackColor = false;
@@ -182,10 +187,10 @@
             this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(1359, 172);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.button4.Location = new System.Drawing.Point(766, 105);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(290, 48);
+            this.button4.Size = new System.Drawing.Size(238, 46);
             this.button4.TabIndex = 20;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = false;
@@ -196,20 +201,20 @@
             this.StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentsReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StudentsReport.Location = new System.Drawing.Point(0, 0);
-            this.StudentsReport.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.StudentsReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StudentsReport.Name = "StudentsReport";
             this.StudentsReport.RowTemplate.Height = 24;
-            this.StudentsReport.Size = new System.Drawing.Size(1932, 602);
+            this.StudentsReport.Size = new System.Drawing.Size(1449, 489);
             this.StudentsReport.TabIndex = 19;
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(0, 555);
-            this.button5.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button5.Location = new System.Drawing.Point(0, 451);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(581, 78);
+            this.button5.Size = new System.Drawing.Size(436, 63);
             this.button5.TabIndex = 19;
             this.button5.Text = "Close";
             this.button5.UseVisualStyleBackColor = false;
@@ -219,10 +224,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(67, 72);
+            this.label2.Location = new System.Drawing.Point(50, 58);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 22;
             this.label2.Text = "Course ID:";
             // 
@@ -242,10 +247,10 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 369);
+            this.panel1.Location = new System.Drawing.Point(0, 300);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1932, 233);
+            this.panel1.Size = new System.Drawing.Size(1449, 189);
             this.panel1.TabIndex = 28;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -255,54 +260,54 @@
             this.StudentReport.AllowUserToDeleteRows = false;
             this.StudentReport.AllowUserToResizeColumns = false;
             this.StudentReport.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.StudentReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.StudentReport.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.StudentReport.BackgroundColor = System.Drawing.SystemColors.Control;
             this.StudentReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.StudentReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.StudentReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudentReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.StudentReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StudentReport.Location = new System.Drawing.Point(0, 0);
-            this.StudentReport.Margin = new System.Windows.Forms.Padding(6);
+            this.StudentReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.StudentReport.MultiSelect = false;
             this.StudentReport.Name = "StudentReport";
             this.StudentReport.ReadOnly = true;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.StudentReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudentReport.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.StudentReport.RowHeadersVisible = false;
             this.StudentReport.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.StudentReport.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.StudentReport.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.StudentReport.RowTemplate.Height = 24;
-            this.StudentReport.Size = new System.Drawing.Size(1932, 602);
+            this.StudentReport.Size = new System.Drawing.Size(1449, 489);
             this.StudentReport.TabIndex = 27;
             // 
             // Reports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1932, 602);
+            this.ClientSize = new System.Drawing.Size(1449, 489);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.StudentReport);
             this.Controls.Add(this.StudentsReport);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Reports";
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
