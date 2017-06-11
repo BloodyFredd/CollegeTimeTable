@@ -127,6 +127,7 @@ namespace PRPJECT4NEW.Exams_Section
                         Superviser2_ID = getSupereId(Super2_box.Text),
                         Date = datePicker.Value,
                         Student_Enrolled = 0,
+                        Due_in = Convert.ToInt32(Due_In.Value),
                     };
 
                     context.Exams.Add(new_Exam);

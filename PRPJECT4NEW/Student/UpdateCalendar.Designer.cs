@@ -184,7 +184,7 @@
             this.lectureGridView.Name = "lectureGridView";
             this.lectureGridView.ReadOnly = true;
             this.lectureGridView.RowHeadersVisible = false;
-            this.lectureGridView.Size = new System.Drawing.Size(206, 113);
+            this.lectureGridView.Size = new System.Drawing.Size(206, 126);
             this.lectureGridView.TabIndex = 12;
             // 
             // label5
