@@ -69,11 +69,14 @@ namespace PRPJECT4NEW.Student
         private void courseComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selected =
-                from oc in openCourses where oc.Course_name == courseComboBox.Text
+                from oc in openCourses
+                where oc.Course_name == courseComboBox.Text
                 from sl in openLectures where sl.Course_ID == oc.Course_id
                 select sl;
 
             selectedCourse = selected.ToList();
+
+            Debug.WriteLine(selected.ToList().First().Course_ID);
 
             SignBtn.Enabled = true;
             if ( enrolledLectures.Any(item => selectedCourse.Contains(item))) UnsignBtn.Enabled = true;
@@ -211,8 +214,8 @@ namespace PRPJECT4NEW.Student
             //Select open courses to student
             var selected =
               (from s in context.students where s.ID == Utility.User.ID.ToString()                                     //Find Student 
-               from sc in context.Student_Courses where sc.final_grade > 55 && sc.stud_Id == s.ID && sc.Type == 1      //Passed Courses
-               from c in context.courses where c.Year <= s.Year && c.Semester == Utility.semester && (c.Blocking_Cource == null || c.Blocking_Cource == sc.course_id) //Get all relevant courses
+            //   from sc in context.Student_Courses where sc.final_grade > 55 && sc.stud_Id == s.ID && sc.Type == 1      //Passed Courses
+               from c in context.courses where c.Year <= s.Year && c.Semester == Utility.semester && (c.Blocking_Cource == null)// || c.Blocking_Cource == sc.course_id) //Get all relevant courses
                select c).Distinct();
 
             //Place each Course into List
@@ -227,7 +230,7 @@ namespace PRPJECT4NEW.Student
         {
             //Select cources of a student without final grade for current year
             var selected =
-                from c in context.Student_Courses where c.stud_Id == Utility.User.ID.ToString() && c.final_grade == null
+                from c in context.Student_Courses where c.stud_Id == Utility.User.ID.ToString() && c.final_grade == null && c.Type == 1
                 from i in context.Lecture_Course where i.Course_ID == c.course_id
                 select i;
 
@@ -248,7 +251,7 @@ namespace PRPJECT4NEW.Student
         private void clearDataGridView()
         {
             calendarGridView.Rows.Clear();
-            lectureGridView.Rows.Clear();
+            //lectureGridView.Rows.Clear();
 
             //Calendar Grid View
             for (int i = 8; i <= 23; i++)
@@ -297,7 +300,7 @@ namespace PRPJECT4NEW.Student
         //Get Choosen lecture from ListBox
         private void lecturesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Debug.WriteLine(lecturesListBox.SelectedIndex);
+            if (lecturesListBox.SelectedIndex == -1) return;
             int lecture = Int32.Parse(lecturesListBox.Items[lecturesListBox.SelectedIndex].ToString());
             refreshChoosen(lecture, 1);
         }
@@ -305,6 +308,7 @@ namespace PRPJECT4NEW.Student
         //Get Choosen practice from ListBox
         private void practicesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lecturesListBox.SelectedIndex == -1) return;
             int practice = Int32.Parse(practicesListBox.Items[practicesListBox.SelectedIndex].ToString());
             refreshChoosen(practice, 2);
         }
@@ -312,6 +316,7 @@ namespace PRPJECT4NEW.Student
         //Get Choosen lab from ListBox
         private void labsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lecturesListBox.SelectedIndex == -1) return;
             int lab = Int32.Parse(labsListBox.Items[labsListBox.SelectedIndex].ToString());
             refreshChoosen(lab, 3);
         }
@@ -332,7 +337,7 @@ namespace PRPJECT4NEW.Student
             choosen.Add(openLectures.First(c => c.Course_Serial == course_Serial && c.Course_type == course_type));
 
 
-           // fillCourseGridView(course_Serial, course_type);
+            fillCourseGridView(course_Serial, course_type);
             fillGridView(enrolledLectures.Except(selectedCourse).ToList(), Color.Gray);
             fillGridView(choosen, Color.Blue);
         }
