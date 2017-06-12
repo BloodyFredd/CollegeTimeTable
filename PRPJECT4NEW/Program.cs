@@ -31,7 +31,7 @@ namespace PRPJECT4NEW
         public const float feePerNakaz = 300;
         public static Color menuColor = Color.FromArgb(255, 37, 90, 180);
         public static Color HeaderBackColor = Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(90)))), ((int)(((byte)(180)))));
-        public static string semester = "b";
+        public static string semester = "a";
 
 
         //Get Color By ID

@@ -50,9 +50,9 @@ namespace PRPJECT4NEW.Student
             //Select open courses to student
             var selected =
               (from s in context.students where s.ID == Utility.User.ID.ToString()                                   //Find Student 
-               from sc in context.Student_Courses where sc.final_grade > 55 && sc.stud_Id == s.ID && sc.Type == 1    //Passed Courses
+              // from sc in context.Student_Courses where sc.final_grade > 55 && sc.stud_Id == s.ID && sc.Type == 1    //Passed Courses
                from lc in context.Lecture_Course
-               from c in context.courses where c.Year <= s.Year && c.Semester == Utility.semester && lc.Course_ID == c.Course_id && (c.Blocking_Cource == null || c.Blocking_Cource == sc.course_id) //Get all relevant courses
+               from c in context.courses where c.Year <= s.Year && c.Semester == Utility.semester && lc.Course_ID == c.Course_id && (c.Blocking_Cource == null)// || c.Blocking_Cource == sc.course_id) //Get all relevant courses
                select c).Distinct();
 
             //Place each Course into List
