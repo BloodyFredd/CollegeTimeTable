@@ -130,19 +130,19 @@ namespace PRPJECT4NEW.Admin
                 {
                     MessageBox.Show("Changed!");
                     Lecture.Visible = true;
-                    SqlCommand cmd1 = new SqlCommand("update Classes_SM1 set [08-09]=[08-09] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'" , sqlcon);
-                    SqlCommand cmd2 = new SqlCommand("update Classes_SM1 set [09-10]=[09-10] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd3 = new SqlCommand("update Classes_SM1 set [10-11]=[10-11] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd4 = new SqlCommand("update Classes_SM1 set [11-12]=[11-12] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd5 = new SqlCommand("update Classes_SM1 set [12-13]=[12-13] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd6 = new SqlCommand("update Classes_SM1 set [13-14]=[13-14] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd7 = new SqlCommand("update Classes_SM1 set [14-15]=[14-15] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd8 = new SqlCommand("update Classes_SM1 set [15-16]=[15-16] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd9 = new SqlCommand("update Classes_SM1 set [16-17]=[16-17] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd10 = new SqlCommand("update Classes_SM1 set [17-18]=[17-18] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd11 = new SqlCommand("update Classes_SM1 set [18-19]=[18-19] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd12 = new SqlCommand("update Classes_SM1 set [19-20]=[19-20] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox2.Text + "'", sqlcon);
-                    SqlCommand cmd13 = new SqlCommand("update Classes_SM1 set [20-21]=[20-21] * 0 where Class_Id ='" + Class.Text + "'", sqlcon);
+                    SqlCommand cmd1 = new SqlCommand("update Classes_SM1 set [08-09]=[08-09] * 0 where Class_Id ='" + Class.Text + "' AND date = '" + toolStripComboBox2.Text + "'" , sqlcon);
+                    SqlCommand cmd2 = new SqlCommand("update Classes_SM1 set [09-10]=[09-10] * 0 where Class_Id ='" + Class.Text + "' AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd3 = new SqlCommand("update Classes_SM1 set [10-11]=[10-11] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd4 = new SqlCommand("update Classes_SM1 set [11-12]=[11-12] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd5 = new SqlCommand("update Classes_SM1 set [12-13]=[12-13] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd6 = new SqlCommand("update Classes_SM1 set [13-14]=[13-14] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd7 = new SqlCommand("update Classes_SM1 set [14-15]=[14-15] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd8 = new SqlCommand("update Classes_SM1 set [15-16]=[15-16] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd9 = new SqlCommand("update Classes_SM1 set [16-17]=[16-17] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd10 = new SqlCommand("update Classes_SM1 set [17-18]=[17-18] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd11 = new SqlCommand("update Classes_SM1 set [18-19]=[18-19] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd12 = new SqlCommand("update Classes_SM1 set [19-20]=[19-20] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
+                    SqlCommand cmd13 = new SqlCommand("update Classes_SM1 set [20-21]=[20-21] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox2.Text + "'", sqlcon);
 
                     SqlDataAdapter sda1 = new SqlDataAdapter();
                     sda1.SelectCommand = cmd1;
@@ -206,19 +206,19 @@ namespace PRPJECT4NEW.Admin
                 {
                     MessageBox.Show("Changed!");
                     Lecture.Visible = true;
-                    SqlCommand cmd1 = new SqlCommand("update Classes_SM2 set [08-09]=[08-09] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd2 = new SqlCommand("update Classes_SM2 set [09-10]=[09-10] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd3 = new SqlCommand("update Classes_SM2 set [10-11]=[10-11] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd4 = new SqlCommand("update Classes_SM2 set [11-12]=[11-12] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd5 = new SqlCommand("update Classes_SM2 set [12-13]=[12-13] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd6 = new SqlCommand("update Classes_SM2 set [13-14]=[13-14] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd7 = new SqlCommand("update Classes_SM2 set [14-15]=[14-15] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd8 = new SqlCommand("update Classes_SM2 set [15-16]=[15-16] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd9 = new SqlCommand("update Classes_SM2 set [16-17]=[16-17] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd10 = new SqlCommand("update Classes_SM2 set [17-18]=[17-18] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd11 = new SqlCommand("update Classes_SM2 set [18-19]=[18-19] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd12 = new SqlCommand("update Classes_SM2 set [19-20]=[19-20] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
-                    SqlCommand cmd13 = new SqlCommand("update Classes_SM2 set [20-21]=[20-21] * 0 where Class_Id ='" + Class.Text + "' where date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd1 = new SqlCommand("update Classes_SM2 set [08-09]=[08-09] * 0 where Class_Id ='" + Class.Text + "' AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd2 = new SqlCommand("update Classes_SM2 set [09-10]=[09-10] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd3 = new SqlCommand("update Classes_SM2 set [10-11]=[10-11] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd4 = new SqlCommand("update Classes_SM2 set [11-12]=[11-12] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd5 = new SqlCommand("update Classes_SM2 set [12-13]=[12-13] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd6 = new SqlCommand("update Classes_SM2 set [13-14]=[13-14] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd7 = new SqlCommand("update Classes_SM2 set [14-15]=[14-15] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd8 = new SqlCommand("update Classes_SM2 set [15-16]=[15-16] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd9 = new SqlCommand("update Classes_SM2 set [16-17]=[16-17] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd10 = new SqlCommand("update Classes_SM2 set [17-18]=[17-18] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd11 = new SqlCommand("update Classes_SM2 set [18-19]=[18-19] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd12 = new SqlCommand("update Classes_SM2 set [19-20]=[19-20] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
+                    SqlCommand cmd13 = new SqlCommand("update Classes_SM2 set [20-21]=[20-21] * 0 where Class_Id ='" + Class.Text + "'  AND date = '" + toolStripComboBox1.Text + "'", sqlcon);
 
                     SqlDataAdapter sda1 = new SqlDataAdapter();
                     sda1.SelectCommand = cmd1;
