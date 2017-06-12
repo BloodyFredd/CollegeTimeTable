@@ -21,7 +21,6 @@ namespace PRPJECT4NEW.Admin
         public Reports()
         {
             InitializeComponent();
-            // button1_Click_1.Visible = false;
         }
 
         private void Load_table_Click(object sender, EventArgs e)
