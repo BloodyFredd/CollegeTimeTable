@@ -367,11 +367,11 @@
     <Compile Include="Student\ExamResults.designer.cs">
       <DependentUpon>ExamResults.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student\Exams.cs">
+    <Compile Include="Student\StudentExams.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Student\Exams.Designer.cs">
-      <DependentUpon>Exams.cs</DependentUpon>
+    <Compile Include="Student\StudentExams.Designer.cs">
+      <DependentUpon>StudentExams.cs</DependentUpon>
     </Compile>
     <Compile Include="Student\Messages.cs">
       <SubType>Form</SubType>
@@ -630,8 +630,8 @@
     <EmbeddedResource Include="Student\ExamResults.resx">
       <DependentUpon>ExamResults.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Student\Exams.resx">
-      <DependentUpon>Exams.cs</DependentUpon>
+    <EmbeddedResource Include="Student\StudentExams.resx">
+      <DependentUpon>StudentExams.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student\Messages.resx">
       <DependentUpon>Messages.cs</DependentUpon>

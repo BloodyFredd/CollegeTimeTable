@@ -73,7 +73,7 @@ namespace PRPJECT4NEW.Student
 
         private void Exams_Button_Click(object sender, EventArgs e)
         {
-            Student.Exams frm = new Student.Exams(studentUsr);
+            Student.StudentExams frm = new Student.StudentExams(studentUsr);
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.WindowState = FormWindowState.Maximized;
