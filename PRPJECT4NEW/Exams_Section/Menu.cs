@@ -92,14 +92,9 @@ namespace PRPJECT4NEW.Exams_Section
 
         }
 
-        private void Supervisor_Tut_Button_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Supervisor Tutorial");
-        }
 
         private void Special_Exams_Button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Special Exams");
             Special_Test frm = new Special_Test();
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;
@@ -111,7 +106,6 @@ namespace PRPJECT4NEW.Exams_Section
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Move to login panel");
             this.Close();
         }
 
