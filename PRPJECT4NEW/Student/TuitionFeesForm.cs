@@ -46,10 +46,8 @@ namespace PRPJECT4NEW.Student
             {
                 //Select cources of a student without final grade 
                 var selected =
-                    from c in context.Student_Courses
-                    where c.stud_Id == Utility.User.ID.ToString() && c.final_grade == null
-                    from i in context.courses
-                    where i.Course_id == c.course_id
+                    from c in context.Student_Courses where c.stud_Id == Utility.User.ID.ToString() && c.final_grade == null && c.Type == 1
+                    from i in context.courses where i.Course_id == c.course_id 
                     select i;
 
                 foreach (var s in selected)
@@ -60,14 +58,14 @@ namespace PRPJECT4NEW.Student
                 }
             }
 
-            if (wrongFee(Utility.feePerNakaz)) totalFeeLabel.Text = "Check fee in Office";
+            if (wrongFee(Utility.feePerNakaz )) totalFeeLabel.Text = "Check fee in Office";
             else totalFeeLabel.Text = "Approximate total tuition Fee for this semester: " + approximatedFee + " NIS";
         }
 
         public bool wrongFee(float fee)
         {
-            if (fee < 0) return false;
-            else return true;
+            if (fee < 0) return true;
+            else return false;
         }
 
         private void tuitionGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

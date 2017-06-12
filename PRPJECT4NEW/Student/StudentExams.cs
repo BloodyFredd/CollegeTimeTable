@@ -85,7 +85,7 @@ namespace PRPJECT4NEW.Student
             foreach (Exam e in exams)
             {
                 string courseName = courseDetails.First(course => course.Course_id == e.Course_ID).Course_name.ToString();
-                examGridView.Rows.Add(courseName, e.Date, e.Start_Time + "-" + e.End_Time, e.Class);
+                examGridView.Rows.Add(courseName, e.Date.ToShortDateString(), e.Start_Time + "-" + e.End_Time, e.Class);
             }
         }
 

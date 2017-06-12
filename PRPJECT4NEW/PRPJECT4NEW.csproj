@@ -270,6 +270,7 @@
     <Compile Include="Forms\NewUser.Designer.cs">
       <DependentUpon>NewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralTest.cs" />
     <Compile Include="Lecturer\AddLecture.cs">
       <SubType>Form</SubType>
     </Compile>
