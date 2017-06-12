@@ -135,6 +135,7 @@ namespace PRPJECT4NEW.Admin
                 this.sqlcon = new SqlConnection(connetionString);
                 SqlCommand cmd = new SqlCommand("select * from Classes_SM1 where date='" + "1990-01-01" + "'", sqlcon);
                 if (toolStripComboBox3.Text.Equals("") && !toolStripComboBox4.Text.Equals(""))
+
                 {
                     str = toolStripComboBox4.Text;
                     //MessageBox.Show(str);
@@ -169,12 +170,11 @@ namespace PRPJECT4NEW.Admin
                 StudentsReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 
 
-
                 bsource.DataSource = dbdataset;
                 StudentsReport.DataSource = bsource;
                 sda.Update(dbdataset);
 
-                int i = 1;
+                int i = 0;
                 for (int j = 0; j <= 9; j++)
                 {
                     paintCells2(i);
@@ -184,8 +184,8 @@ namespace PRPJECT4NEW.Admin
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                toolStripComboBox4.Text = "";
                 toolStripComboBox3.Text = "";
+                toolStripComboBox4.Text = "";
             }
             Print.Visible = true;
             Application.DoEvents();
