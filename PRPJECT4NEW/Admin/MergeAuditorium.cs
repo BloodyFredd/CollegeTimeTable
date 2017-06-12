@@ -183,10 +183,9 @@ namespace PRPJECT4NEW.Admin
             }
             catch (Exception ex)
             {
-                this.Close();
                 MessageBox.Show(ex.Message);
-                MergeAuditorium form2 = new MergeAuditorium();
-                form2.Show();
+                toolStripComboBox1.Text = "";
+                toolStripComboBox2.Text = "";
             }
         }
 

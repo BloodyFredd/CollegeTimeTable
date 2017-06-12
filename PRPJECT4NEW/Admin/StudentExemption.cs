@@ -41,6 +41,7 @@ namespace PRPJECT4NEW.Admin
         {
             this.connetionString = "Data Source = whitesnow.database.windows.net; Initial Catalog = Mazal; Integrated Security = False; User ID = Grimm; Password = #!7Dwarfs; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             this.sqlcon = new SqlConnection(connetionString);
+            if(Course.Text !="" && Stud_ID.Text!="")
             try
             {
                 SqlCommand cmd = new SqlCommand("UPDATE Student_Courses SET course_serial = -1,final_grade=100 WHERE stud_Id='" + Stud_ID.Text + "'AND course_id='" + Course.Text + "'", sqlcon);
@@ -60,6 +61,9 @@ namespace PRPJECT4NEW.Admin
             {
                 MessageBox.Show(ex.Message);
             }
+            else
+                MessageBox.Show("invalid input!");
+
         }
 
         private void My_Lectures_Click(object sender, EventArgs e)

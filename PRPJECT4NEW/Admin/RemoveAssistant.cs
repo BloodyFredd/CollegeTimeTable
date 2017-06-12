@@ -39,13 +39,13 @@ namespace PRPJECT4NEW.Admin
                 {
                     MessageBox.Show("Deleted!");
                     this.sqlcon.Close();
-                    this.Close();
+                    //this.Close();
                 }
                 else
                 {
                     MessageBox.Show("No such id exists!");
                     this.sqlcon.Close();
-                    this.Close();
+                  //  this.Close();
                 }
                 
             }
