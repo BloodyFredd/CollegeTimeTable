@@ -19,6 +19,7 @@ namespace PRPJECT4NEW.Student
         List<Lecture_Course> openLectures = new List<Lecture_Course>();
         List<Lecture_Course> selectedCourse = new List<Lecture_Course>();
         List<Lecture_Course> choosen = new List<Lecture_Course>();
+        List<Person> teachers = new List<Person>();
         bool lectureOverlapp = false;
         bool practiceOverlap = false;
         bool labOverlap = false;
@@ -31,174 +32,8 @@ namespace PRPJECT4NEW.Student
             fillGridView(enrolledLectures, Color.Gray);
         }
 
-        private void CreateGridView()
-        {
-            //Create headers
-            calendarGridView.Columns.Add("Time", "");
-            calendarGridView.Columns.Add("Sunday", "Sunday");
-            calendarGridView.Columns.Add("Monday", "Monday");
-            calendarGridView.Columns.Add("Tuesday", "Tuesday");
-            calendarGridView.Columns.Add("Wednesday", "Wednesday");
-            calendarGridView.Columns.Add("Thursday", "Thursday");
-            calendarGridView.Columns.Add("Friday", "Friday");
 
-            courseGridView.Columns.Add("Title", "");
-            courseGridView.Columns.Add("Fact", "");
-
-            lectureGridView.Columns.Add("Title", "");
-            lectureGridView.Columns.Add("Fact", "");
-
-            //Course Grid View Rows 
-            courseGridView.Rows.Add("Course ID:");
-            courseGridView.Rows.Add("Nakaz:");
-            courseGridView.Rows.Add("Year:");
-            courseGridView.Rows.Add("Semester:");
-            courseGridView.Rows.Add("Blocking Course:");
-
-            //Lecture Grid View Rows
-            lectureGridView.Rows.Add("Course Serial:");
-            lectureGridView.Rows.Add("Type:");
-            lectureGridView.Rows.Add("Teacher:");
-            lectureGridView.Rows.Add("Time:");
-
-
-            clearDataGridView();
-        }
-
-        //Get slected course information and place it into DataGridView and ListBox
-        private void courseComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selected =
-                from oc in openCourses
-                where oc.Course_name == courseComboBox.Text
-                from sl in openLectures where sl.Course_ID == oc.Course_id
-                select sl;
-
-            selectedCourse = selected.ToList();
-
-            Debug.WriteLine(selected.ToList().First().Course_ID);
-
-            SignBtn.Enabled = true;
-            if ( enrolledLectures.Any(item => selectedCourse.Contains(item))) UnsignBtn.Enabled = true;
-            else UnsignBtn.Enabled = false;
-
-            choosen.Clear();
-            fillListBoxes();
-
-            clearDataGridView();
-            fillInfoGridView();
-            fillGridView(enrolledLectures.Except(selectedCourse).ToList(), Color.Gray);
-        }
-
-        //Place each Course into DataGridView
-        private void fillGridView(List<Lecture_Course> courses, Color fillColor)
-        {
-            foreach (var s in courses)
-            {
-                cours course = openCourses.FirstOrDefault(c => c.Course_id == s.Course_ID);
-
-                string overlappingCourse = "";
-                for (int i = s.Start_time; i < s.End_time; i++)
-                {
-                    string column = s.Date.Trim();
-                    int row = i - 8;
-
-                    calendarGridView.Rows[row].Cells[column].Style.ForeColor = Color.White; //Font Color
-
-                    //Check overlapping courses
-                    overlappingCourse = checkForOverlappingCourse(s, i);
-
-                    if (overlappingCourse != "")
-                    {
-                        calendarGridView.Rows[row].Cells[column].Style.BackColor = Color.Red; //Paint overlapping cell
-                        calendarGridView.Rows[row].Cells[column].Value = overlappingCourse + "/" + course.Course_name.Trim();   //Print data to cell
-                    }
-                    else
-                    {
-                        //Print name only in first row
-                        calendarGridView.Rows[row].Cells[column].Style.BackColor = fillColor; //Paint cell
-                        if (i - s.Start_time <= 0) calendarGridView.Rows[row].Cells[column].Value = course.Course_name.Trim();   //Print data to cell
-                        else calendarGridView.Rows[row].Cells[column].Value = "";
-                    }                            
-                } 
-            } 
-        }
-
-        //Get name of overlapping Course. Returns "" if don't exists
-        private string checkForOverlappingCourse(Lecture_Course check, int time)
-        {
-            string overlappingCourse = "";
-            foreach (Lecture_Course course in enrolledLectures)
-            {
-                if ((course.Date == check.Date) && !enrolledLectures.Contains(check))
-                {
-                    if (time >= course.Start_time && time < course.End_time)
-                    {
-                        overlappingCourse = (openCourses.First(c => c.Course_id == course.Course_ID)).Course_name.Trim();
-                        //Debug.WriteLine(course.Date + ": " + course.Start_time + " " + course.End_time + " : " + time + " " + overlappingCourse);
-                        switch (check.Course_type)
-                        {
-                            case 1:
-                                lectureOverlapp = true;
-                                break;
-                            case 2:
-                                practiceOverlap = true;
-                                break;
-                            case 3:
-                                labOverlap = true;
-                                break;
-                            default:
-                                Debug.WriteLine("No such Course Type! Check Data Base!");
-                                break;
-                        }
-                        return overlappingCourse;
-                    }
-                } 
-            }
-            switch (check.Course_type)
-            {
-                case 1:
-                    lectureOverlapp = false;
-                    break;
-                case 2:
-                    practiceOverlap = false;
-                    break;
-                case 3:
-                    labOverlap = false;
-                    break;
-                default:
-                    Debug.WriteLine("No such Course Type! Check Data Base!");
-                    break;
-            }
-            return overlappingCourse;
-        }
-
-        private void fillListBoxes()
-        {
-            lecturesListBox.Items.Clear();
-            practicesListBox.Items.Clear();
-            labsListBox.Items.Clear();
-
-            foreach (Lecture_Course lecture in selectedCourse)
-            {
-                switch (lecture.Course_type)
-                {
-                    case 1:
-                        lecturesListBox.Items.Add(lecture.Course_Serial);
-                        break;
-                    case 2:
-                        practicesListBox.Items.Add(lecture.Course_Serial);
-                        break;
-                    case 3:
-                        labsListBox.Items.Add(lecture.Course_Serial);
-                        break;
-                    default:
-                        Debug.WriteLine("No such Course Type! Check Data Base!");
-                        break;
-                }
-            }
-        }
-
+        /************************************************Get From DB************************************************/
         private void reloadData()
         {
             using (Entities context = new Entities())
@@ -206,6 +41,7 @@ namespace PRPJECT4NEW.Student
                 getOpenCourses(context);
                 getEnrolledLectures(context);
                 getOpenLectures(context);
+                getTeachers(context);
             }
         }
 
@@ -213,9 +49,10 @@ namespace PRPJECT4NEW.Student
         {
             //Select open courses to student
             var selected =
-              (from s in context.students where s.ID == Utility.User.ID.ToString()                                     //Find Student 
-            //   from sc in context.Student_Courses where sc.final_grade > 55 && sc.stud_Id == s.ID && sc.Type == 1      //Passed Courses
-               from c in context.courses where c.Year <= s.Year && c.Semester == Utility.semester && (c.Blocking_Cource == null)// || c.Blocking_Cource == sc.course_id) //Get all relevant courses
+              (from s in context.students where s.ID == Utility.User.ID.ToString()                                   //Find Student 
+               from sc in context.Student_Courses where sc.final_grade > 55 && sc.stud_Id == s.ID && sc.Type == 1    //Passed Courses
+               from lc in context.Lecture_Course
+               from c in context.courses where c.Year <= s.Year && c.Semester == Utility.semester && lc.Course_ID == c.Course_id && (c.Blocking_Cource == null || c.Blocking_Cource == sc.course_id) //Get all relevant courses
                select c).Distinct();
 
             //Place each Course into List
@@ -248,10 +85,19 @@ namespace PRPJECT4NEW.Student
             openLectures = selected.ToList();
         }
 
+        private void getTeachers(Entities context)
+        {
+            //Select All relevant Teachers
+            var selected =                                
+              from p in context.Person where p.Permission == "Lecturer" || p.Permission == "Teaching_Assistant"
+              select p;
+
+            teachers = selected.ToList();
+        }
+
         private void clearDataGridView()
         {
             calendarGridView.Rows.Clear();
-            //lectureGridView.Rows.Clear();
 
             //Calendar Grid View
             for (int i = 8; i <= 23; i++)
@@ -297,6 +143,34 @@ namespace PRPJECT4NEW.Student
             lectureGridView.Refresh();
         }
 
+
+        /*************************************************On Click**************************************************/
+        //Get slected course information and place it into DataGridView and ListBox
+        private void courseComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selected =
+                from oc in openCourses
+                where oc.Course_name == courseComboBox.Text
+                from sl in openLectures
+                where sl.Course_ID == oc.Course_id
+                select sl;
+
+            selectedCourse = selected.ToList();
+
+            Debug.WriteLine(selected.ToList().First().Course_ID);
+
+            SignBtn.Enabled = true;
+            if (enrolledLectures.Any(item => selectedCourse.Contains(item))) UnsignBtn.Enabled = true;
+            else UnsignBtn.Enabled = false;
+
+            choosen.Clear();
+            fillListBoxes();
+
+            clearDataGridView();
+            fillInfoGridView();
+            fillGridView(enrolledLectures.Except(selectedCourse).ToList(), Color.Gray);
+        }
+
         //Get Choosen lecture from ListBox
         private void lecturesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -308,7 +182,7 @@ namespace PRPJECT4NEW.Student
         //Get Choosen practice from ListBox
         private void practicesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lecturesListBox.SelectedIndex == -1) return;
+            if (practicesListBox.SelectedIndex == -1) return;
             int practice = Int32.Parse(practicesListBox.Items[practicesListBox.SelectedIndex].ToString());
             refreshChoosen(practice, 2);
         }
@@ -316,30 +190,9 @@ namespace PRPJECT4NEW.Student
         //Get Choosen lab from ListBox
         private void labsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lecturesListBox.SelectedIndex == -1) return;
+            if (labsListBox.SelectedIndex == -1) return;
             int lab = Int32.Parse(labsListBox.Items[labsListBox.SelectedIndex].ToString());
             refreshChoosen(lab, 3);
-        }
-
-        //Refresh and display choosen courses in Data grid view
-        private void refreshChoosen(int course_Serial, int course_type)
-        {
-            //Remove previously choosen course
-            foreach (Lecture_Course lc in choosen.ToList())
-            {
-                if (lc.Course_type == course_type)
-                {
-                    choosen.Remove(lc);
-                    clearDataGridView();
-                }
-            }
-
-            choosen.Add(openLectures.First(c => c.Course_Serial == course_Serial && c.Course_type == course_type));
-
-
-            fillCourseGridView(course_Serial, course_type);
-            fillGridView(enrolledLectures.Except(selectedCourse).ToList(), Color.Gray);
-            fillGridView(choosen, Color.Blue);
         }
 
         private void SignBtn_Click(object sender, EventArgs e)
@@ -409,14 +262,100 @@ namespace PRPJECT4NEW.Student
             }
         }
 
-        private void clearAll()
+
+        /*************************************************Fill GUI*************************************************/
+        private void CreateGridView()
         {
-            courseComboBox.Items.Clear();
+            //Create headers
+            calendarGridView.Columns.Add("Time", "");
+            calendarGridView.Columns.Add("Sunday", "Sunday");
+            calendarGridView.Columns.Add("Monday", "Monday");
+            calendarGridView.Columns.Add("Tuesday", "Tuesday");
+            calendarGridView.Columns.Add("Wednesday", "Wednesday");
+            calendarGridView.Columns.Add("Thursday", "Thursday");
+            calendarGridView.Columns.Add("Friday", "Friday");
+
+            courseGridView.Columns.Add("Title", "");
+            courseGridView.Columns.Add("Fact", "");
+
+            lectureGridView.Columns.Add("Title", "");
+            lectureGridView.Columns.Add("Fact", "");
+
+            //Course Grid View Rows 
+            courseGridView.Rows.Add("Course ID:");
+            courseGridView.Rows.Add("Nakaz:");
+            courseGridView.Rows.Add("Year:");
+            courseGridView.Rows.Add("Semester:");
+            courseGridView.Rows.Add("Blocking Course:");
+
+            //Lecture Grid View Rows
+            lectureGridView.Rows.Add("Course Serial:");
+            lectureGridView.Rows.Add("Type:");
+            lectureGridView.Rows.Add("Teacher:");
+            lectureGridView.Rows.Add("Time:");
+
+
+            clearDataGridView();
+        }
+
+        //Place each Course into DataGridView
+        private void fillGridView(List<Lecture_Course> courses, Color fillColor)
+        {
+            foreach (var s in courses)
+            {
+                cours course = openCourses.FirstOrDefault(c => c.Course_id == s.Course_ID);
+
+                string overlappingCourse = "";
+                for (int i = s.Start_time; i < s.End_time; i++)
+                {
+                    string column = s.Date.Trim();
+                    int row = i - 8;
+
+                    calendarGridView.Rows[row].Cells[column].Style.ForeColor = Color.White; //Font Color
+
+                    //Check overlapping courses
+                    overlappingCourse = checkForOverlappingCourse(s, i);
+
+                    if (overlappingCourse != "")
+                    {
+                        calendarGridView.Rows[row].Cells[column].Style.BackColor = Color.Red; //Paint overlapping cell
+                        calendarGridView.Rows[row].Cells[column].Value = overlappingCourse + "/" + course.Course_name.Trim();   //Print data to cell
+                    }
+                    else
+                    {
+                        //Print name only in first row
+                        calendarGridView.Rows[row].Cells[column].Style.BackColor = fillColor; //Paint cell
+                        if (i - s.Start_time <= 0) calendarGridView.Rows[row].Cells[column].Value = course.Course_name.Trim();   //Print data to cell
+                        else calendarGridView.Rows[row].Cells[column].Value = "";
+                    }
+                }
+            }
+        }
+
+        private void fillListBoxes()
+        {
             lecturesListBox.Items.Clear();
             practicesListBox.Items.Clear();
             labsListBox.Items.Clear();
-            reloadData();
-            fillGridView(enrolledLectures, Color.Gray);
+
+            foreach (Lecture_Course lecture in selectedCourse)
+            {
+                switch (lecture.Course_type)
+                {
+                    case 1:
+                        lecturesListBox.Items.Add(lecture.Course_Serial);
+                        break;
+                    case 2:
+                        practicesListBox.Items.Add(lecture.Course_Serial);
+                        break;
+                    case 3:
+                        labsListBox.Items.Add(lecture.Course_Serial);
+                        break;
+                    default:
+                        Debug.WriteLine("No such Course Type! Check Data Base!");
+                        break;
+                }
+            }
         }
 
         private void fillInfoGridView()
@@ -442,7 +381,7 @@ namespace PRPJECT4NEW.Student
             select ol).FirstOrDefault();
 
             string type = "";
-          //  string teacher = .First(c => c.Course_Serial == course_Serial && c.Course_type == course_type))
+            Person teacher = teachers.FirstOrDefault(t => t.ID.Trim() == selected.Teacher.Trim());
 
             switch (course_type) {
                 case 1:
@@ -461,9 +400,91 @@ namespace PRPJECT4NEW.Student
 
             lectureGridView.Rows[0].Cells["Fact"].Value = course_Serial;
             lectureGridView.Rows[1].Cells["Fact"].Value = type;
-            // lectureGridView.Rows[2].Cells["Fact"].Value = selected.Year;
-            lectureGridView.Rows[3].Cells["Fact"].Value = selected.Date + " " + selected.Start_time + " - " + selected.End_time;
-         
+            lectureGridView.Rows[2].Cells["Fact"].Value = teacher.F_name + " " + teacher.L_name;
+            lectureGridView.Rows[3].Cells["Fact"].Value = selected.Date + " " + selected.Start_time + " - " + selected.End_time;    
         }
+
+
+        /************************************************Utility*****************************************************/
+        private void clearAll()
+        {
+            courseComboBox.Items.Clear();
+            lecturesListBox.Items.Clear();
+            practicesListBox.Items.Clear();
+            labsListBox.Items.Clear();
+            reloadData();
+            fillGridView(enrolledLectures, Color.Gray);
+        }
+
+        //Refresh and display choosen courses in Data grid view
+        private void refreshChoosen(int course_Serial, int course_type)
+        {
+            //Remove previously choosen course
+            foreach (Lecture_Course lc in choosen.ToList())
+            {
+                if (lc.Course_type == course_type)
+                {
+                    choosen.Remove(lc);
+                    clearDataGridView();
+                }
+            }
+
+            choosen.Add(openLectures.First(c => c.Course_Serial == course_Serial && c.Course_type == course_type));
+
+
+            fillCourseGridView(course_Serial, course_type);
+            fillGridView(enrolledLectures.Except(selectedCourse).ToList(), Color.Gray);
+            fillGridView(choosen, Color.Blue);
+        }
+
+        //Get name of overlapping Course. Returns "" if don't exists
+        private string checkForOverlappingCourse(Lecture_Course check, int time)
+        {
+            string overlappingCourse = "";
+            foreach (Lecture_Course course in enrolledLectures)
+            {
+                if ((course.Date == check.Date) && !enrolledLectures.Contains(check))
+                {
+                    if (time >= course.Start_time && time < course.End_time)
+                    {
+                        overlappingCourse = (openCourses.First(c => c.Course_id == course.Course_ID)).Course_name.Trim();
+                        //Debug.WriteLine(course.Date + ": " + course.Start_time + " " + course.End_time + " : " + time + " " + overlappingCourse);
+                        switch (check.Course_type)
+                        {
+                            case 1:
+                                lectureOverlapp = true;
+                                break;
+                            case 2:
+                                practiceOverlap = true;
+                                break;
+                            case 3:
+                                labOverlap = true;
+                                break;
+                            default:
+                                Debug.WriteLine("No such Course Type! Check Data Base!");
+                                break;
+                        }
+                        return overlappingCourse;
+                    }
+                }
+            }
+            switch (check.Course_type)
+            {
+                case 1:
+                    lectureOverlapp = false;
+                    break;
+                case 2:
+                    practiceOverlap = false;
+                    break;
+                case 3:
+                    labOverlap = false;
+                    break;
+                default:
+                    Debug.WriteLine("No such Course Type! Check Data Base!");
+                    break;
+            }
+            return overlappingCourse;
+        }
+
     }
 }
