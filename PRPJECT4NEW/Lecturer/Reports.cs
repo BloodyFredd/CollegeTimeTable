@@ -101,7 +101,7 @@ namespace PRPJECT4NEW.Lecturer
 
             try
             {
-                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Utility.User.ID + "'", sqlcon);
+                SqlCommand cmd = new SqlCommand("select Student_Courses.stud_Id,Student_Courses.course_id FROM Student_Courses LEFT join Teaching_Stuff on Student_Courses.course_id=Teaching_Stuff.Course_ID where ID='" + Utility.User.ID + "' and Student_Courses.Type = 1", sqlcon);
                 SqlDataAdapter sda = new SqlDataAdapter();
                 sda.SelectCommand = cmd;
                 DataTable dbdataset = new DataTable();

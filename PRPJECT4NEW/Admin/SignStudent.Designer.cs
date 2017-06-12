@@ -53,9 +53,10 @@
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Image = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
-            this.label1.Location = new System.Drawing.Point(135, 125);
+            this.label1.Location = new System.Drawing.Point(51, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 32);
+            this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 24;
             this.label1.Text = "Student ID:";
             // 
@@ -65,10 +66,9 @@
             this.Stud_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Stud_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Stud_ID.ForeColor = System.Drawing.Color.Black;
-            this.Stud_ID.Location = new System.Drawing.Point(47, 180);
-            this.Stud_ID.Margin = new System.Windows.Forms.Padding(8);
+            this.Stud_ID.Location = new System.Drawing.Point(18, 75);
             this.Stud_ID.Name = "Stud_ID";
-            this.Stud_ID.Size = new System.Drawing.Size(331, 38);
+            this.Stud_ID.Size = new System.Drawing.Size(124, 16);
             this.Stud_ID.TabIndex = 22;
             // 
             // serial
@@ -78,14 +78,43 @@
             this.serial.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.serial.FormattingEnabled = true;
             this.serial.Items.AddRange(new object[] {
-            "1003",
-            "1004",
-            "1005",
-            "1006",
-            "1007"});
-            this.serial.Location = new System.Drawing.Point(47, 66);
+            "1001",
+            "1011",
+            "1021",
+            "1031",
+            "1041",
+            "1051",
+            "1061",
+            "1071",
+            "1081",
+            "2001",
+            "2011",
+            "2021",
+            "2031",
+            "2041",
+            "2051",
+            "2061",
+            "2071",
+            "2081",
+            "2091",
+            "3001",
+            "3011",
+            "3021",
+            "3031",
+            "3041",
+            "3051",
+            "3061",
+            "3071",
+            "3081",
+            "4001",
+            "4011",
+            "4021",
+            "4031",
+            "4041"});
+            this.serial.Location = new System.Drawing.Point(18, 28);
+            this.serial.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.serial.Name = "serial";
-            this.serial.Size = new System.Drawing.Size(331, 39);
+            this.serial.Size = new System.Drawing.Size(127, 21);
             this.serial.TabIndex = 26;
             this.serial.Text = "Course serial";
             // 
@@ -95,9 +124,10 @@
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label3.Image = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
-            this.label3.Location = new System.Drawing.Point(146, 254);
+            this.label3.Location = new System.Drawing.Point(55, 107);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 32);
+            this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 28;
             this.label3.Text = "Course:";
             // 
@@ -107,10 +137,9 @@
             this.Course.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Course.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Course.ForeColor = System.Drawing.Color.Black;
-            this.Course.Location = new System.Drawing.Point(47, 312);
-            this.Course.Margin = new System.Windows.Forms.Padding(8);
+            this.Course.Location = new System.Drawing.Point(18, 131);
             this.Course.Name = "Course";
-            this.Course.Size = new System.Drawing.Size(331, 38);
+            this.Course.Size = new System.Drawing.Size(124, 16);
             this.Course.TabIndex = 27;
             // 
             // Students
@@ -135,7 +164,7 @@
             this.Students.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Students.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Students.Location = new System.Drawing.Point(0, 0);
-            this.Students.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.Students.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Students.MultiSelect = false;
             this.Students.Name = "Students";
             this.Students.ReadOnly = true;
@@ -152,7 +181,7 @@
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.Students.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Students.RowTemplate.Height = 24;
-            this.Students.Size = new System.Drawing.Size(2031, 593);
+            this.Students.Size = new System.Drawing.Size(762, 128);
             this.Students.TabIndex = 30;
             // 
             // panel1
@@ -170,10 +199,10 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.My_Lectures);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 593);
+            this.panel1.Location = new System.Drawing.Point(0, 128);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2031, 436);
+            this.panel1.Size = new System.Drawing.Size(762, 183);
             this.panel1.TabIndex = 29;
             // 
             // button4
@@ -183,10 +212,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 8.2F);
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(1832, 327);
-            this.button4.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.button4.Location = new System.Drawing.Point(687, 137);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(163, 83);
+            this.button4.Size = new System.Drawing.Size(61, 35);
             this.button4.TabIndex = 29;
             this.button4.Text = "Close";
             this.button4.UseVisualStyleBackColor = false;
@@ -196,10 +225,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(0, 1407);
-            this.button1.Margin = new System.Windows.Forms.Padding(13, 17, 13, 17);
+            this.button1.Location = new System.Drawing.Point(0, 590);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(1549, 198);
+            this.button1.Size = new System.Drawing.Size(581, 83);
             this.button1.TabIndex = 19;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = false;
@@ -211,10 +240,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(1091, 141);
-            this.button3.Margin = new System.Windows.Forms.Padding(21, 17, 21, 17);
+            this.button3.Location = new System.Drawing.Point(409, 59);
+            this.button3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(624, 167);
+            this.button3.Size = new System.Drawing.Size(234, 70);
             this.button3.TabIndex = 6;
             this.button3.Text = "Sign student";
             this.button3.UseVisualStyleBackColor = false;
@@ -228,10 +257,10 @@
             this.My_Lectures.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.My_Lectures.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.My_Lectures.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.My_Lectures.Location = new System.Drawing.Point(475, 141);
-            this.My_Lectures.Margin = new System.Windows.Forms.Padding(21, 17, 21, 17);
+            this.My_Lectures.Location = new System.Drawing.Point(178, 59);
+            this.My_Lectures.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.My_Lectures.Name = "My_Lectures";
-            this.My_Lectures.Size = new System.Drawing.Size(589, 167);
+            this.My_Lectures.Size = new System.Drawing.Size(221, 70);
             this.My_Lectures.TabIndex = 9;
             this.My_Lectures.Text = "Show all the students";
             this.My_Lectures.UseVisualStyleBackColor = false;
@@ -239,11 +268,12 @@
             // 
             // SignStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2031, 1029);
+            this.ClientSize = new System.Drawing.Size(762, 311);
             this.Controls.Add(this.Students);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "SignStudent";
             this.Text = "SignStudent";
             ((System.ComponentModel.ISupportInitialize)(this.Students)).EndInit();
