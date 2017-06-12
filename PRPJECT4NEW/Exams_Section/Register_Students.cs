@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace PRPJECT4NEW.Exams_Section
 {
+
     public partial class Register_Students : Form
     {
+        int cnt_Add;
         int cnt;
         Entities context;
         public Register_Students()
@@ -415,7 +417,7 @@ namespace PRPJECT4NEW.Exams_Section
         private void newScholarshipBtn_Click(object sender, EventArgs e)
         {
             int ExamID=0;
-            int cnt_Add=0;
+            cnt_Add=0;
 
             foreach (DataGridViewRow row in Exams_Grid.Rows)
             {
@@ -426,7 +428,11 @@ namespace PRPJECT4NEW.Exams_Section
                     break;
                 }
             }
-
+            if(ExamID==0)
+            {
+                MessageBox.Show("You didnt choose any exam!");
+                return;
+            }
             foreach (DataGridViewRow row in Students_List.Rows)
             {
                 if (Convert.ToBoolean(row.Cells["Check"].Value) == true)
@@ -435,7 +441,7 @@ namespace PRPJECT4NEW.Exams_Section
                             if (s.stud_Id.Contains(row.Cells["ID"].Value.ToString()))
                             {
                                 AddExamToStudents(row.Cells["ID"].Value.ToString(), ExamID);
-                                cnt_Add++;
+                                
                                 break;
                             }                        
                     }
@@ -463,6 +469,7 @@ namespace PRPJECT4NEW.Exams_Section
                         if(ss.Exam1_ID==null)
                         {
                             ss.Exam1_ID = ExamID;
+                            cnt_Add++;
                             context.SaveChanges();
                             return true;
                         }
@@ -474,10 +481,12 @@ namespace PRPJECT4NEW.Exams_Section
                     case 2:
                             ss.Exam2_ID = ExamID;
                             context.SaveChanges();
+                            cnt_Add++;
                             return true;
                     case 3:
                             ss.Exam3_ID = ExamID;
                             context.SaveChanges();
+                            cnt_Add++;
                             return true;
                 }
             return false;

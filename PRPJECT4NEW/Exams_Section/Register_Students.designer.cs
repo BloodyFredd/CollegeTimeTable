@@ -80,7 +80,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Exams_Grid.DefaultCellStyle = dataGridViewCellStyle3;
             this.Exams_Grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Exams_Grid.Location = new System.Drawing.Point(0, 100);
+            this.Exams_Grid.Location = new System.Drawing.Point(0, 45);
+            this.Exams_Grid.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Exams_Grid.Name = "Exams_Grid";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
@@ -93,7 +94,7 @@
             this.Exams_Grid.RowHeadersVisible = false;
             this.Exams_Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Exams_Grid.RowTemplate.Height = 37;
-            this.Exams_Grid.Size = new System.Drawing.Size(1888, 592);
+            this.Exams_Grid.Size = new System.Drawing.Size(457, 174);
             this.Exams_Grid.TabIndex = 3;
             this.Exams_Grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Exams_Grid_CellContentClick);
             // 
@@ -102,8 +103,9 @@
             this.panel1.BackgroundImage = global::PRPJECT4NEW.Properties.Resources.bg_pattern2;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3051, 100);
+            this.panel1.Size = new System.Drawing.Size(955, 45);
             this.panel1.TabIndex = 4;
             // 
             // panel2
@@ -115,9 +117,10 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 692);
+            this.panel2.Location = new System.Drawing.Point(0, 219);
+            this.panel2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(3051, 472);
+            this.panel2.Size = new System.Drawing.Size(955, 212);
             this.panel2.TabIndex = 5;
             // 
             // newScholarshipBtn
@@ -130,10 +133,9 @@
             this.newScholarshipBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newScholarshipBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newScholarshipBtn.ForeColor = System.Drawing.Color.White;
-            this.newScholarshipBtn.Location = new System.Drawing.Point(656, 324);
-            this.newScholarshipBtn.Margin = new System.Windows.Forms.Padding(7);
+            this.newScholarshipBtn.Location = new System.Drawing.Point(281, 145);
             this.newScholarshipBtn.Name = "newScholarshipBtn";
-            this.newScholarshipBtn.Size = new System.Drawing.Size(1689, 66);
+            this.newScholarshipBtn.Size = new System.Drawing.Size(371, 30);
             this.newScholarshipBtn.TabIndex = 24;
             this.newScholarshipBtn.Text = "Register Students";
             this.newScholarshipBtn.UseVisualStyleBackColor = false;
@@ -151,10 +153,10 @@
             "All Students",
             "Have easement",
             "Without easement"});
-            this.Combo_Stud_Type.Location = new System.Drawing.Point(2195, 160);
-            this.Combo_Stud_Type.Margin = new System.Windows.Forms.Padding(5);
+            this.Combo_Stud_Type.Location = new System.Drawing.Point(941, 72);
+            this.Combo_Stud_Type.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Combo_Stud_Type.Name = "Combo_Stud_Type";
-            this.Combo_Stud_Type.Size = new System.Drawing.Size(338, 48);
+            this.Combo_Stud_Type.Size = new System.Drawing.Size(147, 28);
             this.Combo_Stud_Type.TabIndex = 32;
             this.Combo_Stud_Type.SelectedIndexChanged += new System.EventHandler(this.Combo_Class_ID_SelectedIndexChanged);
             // 
@@ -169,10 +171,10 @@
             this.Combo_Course_name.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Combo_Course_name.ForeColor = System.Drawing.Color.White;
             this.Combo_Course_name.FormattingEnabled = true;
-            this.Combo_Course_name.Location = new System.Drawing.Point(948, 157);
-            this.Combo_Course_name.Margin = new System.Windows.Forms.Padding(5);
+            this.Combo_Course_name.Location = new System.Drawing.Point(406, 70);
+            this.Combo_Course_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Combo_Course_name.Name = "Combo_Course_name";
-            this.Combo_Course_name.Size = new System.Drawing.Size(523, 48);
+            this.Combo_Course_name.Size = new System.Drawing.Size(226, 28);
             this.Combo_Course_name.TabIndex = 31;
             this.Combo_Course_name.SelectedIndexChanged += new System.EventHandler(this.Combo_Course_name_SelectedIndexChanged);
             // 
@@ -180,10 +182,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1707, 157);
-            this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label5.Location = new System.Drawing.Point(732, 70);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(394, 40);
+            this.label5.Size = new System.Drawing.Size(182, 20);
             this.label5.TabIndex = 18;
             this.label5.Text = "Student easement type:";
             // 
@@ -191,10 +192,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(713, 158);
-            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label3.Location = new System.Drawing.Point(306, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 40);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 16;
             this.label3.Text = "Course:";
             // 
@@ -226,7 +226,8 @@
             this.Students_List.DefaultCellStyle = dataGridViewCellStyle7;
             this.Students_List.Dock = System.Windows.Forms.DockStyle.Right;
             this.Students_List.GridColor = System.Drawing.Color.White;
-            this.Students_List.Location = new System.Drawing.Point(1888, 100);
+            this.Students_List.Location = new System.Drawing.Point(457, 45);
+            this.Students_List.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Students_List.Name = "Students_List";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -239,19 +240,20 @@
             this.Students_List.RowHeadersVisible = false;
             this.Students_List.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Students_List.RowTemplate.Height = 37;
-            this.Students_List.Size = new System.Drawing.Size(1163, 592);
+            this.Students_List.Size = new System.Drawing.Size(498, 174);
             this.Students_List.TabIndex = 6;
             this.Students_List.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Register_Students
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(3051, 1164);
+            this.ClientSize = new System.Drawing.Size(955, 431);
             this.Controls.Add(this.Exams_Grid);
             this.Controls.Add(this.Students_List);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Register_Students";
             this.Text = "Exams_Assignment";
             ((System.ComponentModel.ISupportInitialize)(this.Exams_Grid)).EndInit();
